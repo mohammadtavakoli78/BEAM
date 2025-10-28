@@ -1,0 +1,815 @@
+{
+    "abstention": [
+        {
+            "question": "What specific jazz trivia questions did Patricia prepare for the game?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific jazz trivia questions Patricia prepared.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Trivia game is mentioned but no actual questions or content are provided.",
+            "plan_reference": "Batch 3, Bullet 9 mentions Patricia preparing questions but no specifics given.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific jazz trivia questions Patricia prepared"
+            ]
+        },
+        {
+            "question": "What was the content and length of Nancy\u2019s toast during the surprise party?",
+            "ideal_response": "Based on the provided chat, there is no information related to the content and length of Nancy\u2019s toast.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Nancy\u2019s toast is mentioned but no details about content or duration are given.",
+            "plan_reference": "Batch 8, Bullet 27 mentions Nancy\u2019s toast but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the content and length of Nancy's toast"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended coffee meetings with Cynthia?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said Cynthia revealed her preferences during a coffee meeting, but you also mentioned that you've never attended any coffee meetings with her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at coffee meetings with Cynthia",
+            "conversation_references": [
+                "Session 1: Cynthia revealed preferences at coffee meeting",
+                "Session 4: Never attended coffee meetings with Cynthia"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    324,
+                    338,
+                    340
+                ],
+                "second_statement": [
+                    530
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said Cynthia revealed her preferences during a coffee meeting",
+                "LLM response should mention: you also mentioned that you've never attended any coffee meetings with her",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever visited Riverside Pavilion to check on the event setup details?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have visited Riverside Pavilion and confirmed details like electricity access and parking, but you also mentioned that you have never visited Riverside Pavilion for any event setup. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Visits to Riverside Pavilion for event setup",
+            "conversation_references": [
+                "chat_id: 556, 562, 568",
+                "chat_id: 754"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    556,
+                    562,
+                    568
+                ],
+                "second_statement": [
+                    754
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have visited Riverside Pavilion and confirmed details like electricity access and parking",
+                "LLM response should mention: you also mentioned that you have never visited Riverside Pavilion for any event setup",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of the party entertainment and related preparations throughout our conversations, in order? Mention ONLY and ONLY eleven items.",
+            "answer": "You mentioned aspects of the party entertainment and related preparations in this order: 1) Considering hiring a live band and their fees, 2) Discussing extending performance time and backup plans for weather, 3) Debating between hiring a DJ or combining DJ with live music, 4) Planning for music breaks and incorporating cultural music, 5) Assigning tasks to friends related to music and RSVPs, 6) Introducing a jazz trivia game and its setup details, 7) Coordinating surprise elements and timing for the party, 8) Finalizing trivia questions and playlist close to the event, 9) Preparing speeches and toasts, 10) Reflecting on the party\u2019s success and guest engagement, 11) Discussing future event collaborations based on this experience.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 11,
+            "conversation_references": [
+                "Session 164-190: Band hiring and performance details",
+                "Session 348-364: Task assignments and RSVPs",
+                "Session 578-596: Jazz trivia game planning",
+                "Session 784-808: Surprise elements and party timing",
+                "Session 1114-1292: Finalizing trivia and playlist",
+                "Session 1664-1678: Toast and party personalization",
+                "Session 1852-1866: Party success and guest interaction",
+                "Session 1986-1996: Future event collaboration"
+            ],
+            "ordering_tested": [
+                "1st: Live band and fees",
+                "2nd: Performance extension and backup plans",
+                "3rd: DJ options and music breaks",
+                "4th: Task assignments and RSVPs",
+                "5th: Jazz trivia game introduction",
+                "6th: Surprise elements coordination",
+                "7th: Finalizing trivia and playlist",
+                "8th: Toast preparation",
+                "9th: Party success reflection",
+                "10th: Guest engagement strategies",
+                "11th: Future collaboration planning"
+            ],
+            "source_chat_ids": [
+                [
+                    164,
+                    166,
+                    168,
+                    176,
+                    178,
+                    180,
+                    190,
+                    192,
+                    194
+                ],
+                [
+                    348,
+                    350,
+                    356,
+                    358,
+                    362,
+                    364
+                ],
+                [
+                    578,
+                    580,
+                    588,
+                    590,
+                    592,
+                    596
+                ],
+                [
+                    784,
+                    792,
+                    794,
+                    796,
+                    806,
+                    808
+                ],
+                [
+                    1114,
+                    1118,
+                    1124,
+                    1276,
+                    1282,
+                    1292
+                ],
+                [
+                    1664,
+                    1668,
+                    1674,
+                    1678
+                ],
+                [
+                    1852,
+                    1856,
+                    1858,
+                    1864,
+                    1866
+                ],
+                [
+                    1986,
+                    1996
+                ]
+            ],
+            "rubric": [
+                "Live band and fees",
+                "Performance extension and backup plans",
+                "DJ options and music breaks",
+                "Task assignments and RSVPs",
+                "Jazz trivia game introduction",
+                "Surprise elements coordination",
+                "Finalizing trivia and playlist",
+                "Toast preparation",
+                "Party success reflection",
+                "Guest engagement strategies",
+                "Future collaboration planning"
+            ]
+        },
+        {
+            "question": "How did my focus on different ways Jacob contributed to the party evolve throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "Your mentions of Jacob's contributions followed this progression: 1) Introducing Jacob as a close friend and inviting him to the party, 2) Discussing his help with setup tasks and coordinating those responsibilities, 3) Planning his role in cleanup and related backup considerations, 4) Confirming his assistance with bringing extra tables and chairs, and 5) Organizing his leadership in cleanup and reflecting on the impact of his efforts on the event's success.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 5,
+            "conversation_references": [
+                "64, 66, 68, 78, 82",
+                "432, 436, 446, 448",
+                "732, 736, 738, 742, 746",
+                "1378, 1384, 1390, 1392",
+                "1802, 2002, 2014, 2022"
+            ],
+            "ordering_tested": [
+                "1st: Friendship and invitation",
+                "2nd: Setup assistance",
+                "3rd: Cleanup planning",
+                "4th: Equipment and furniture logistics",
+                "5th: Cleanup leadership and event impact"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "spans diverse aspects of a single person's involvement",
+                "involves synthesis of evolving roles",
+                "demands sophisticated sequence reconstruction across sessions"
+            ],
+            "source_chat_ids": [
+                64,
+                66,
+                68,
+                78,
+                82,
+                432,
+                436,
+                446,
+                448,
+                732,
+                736,
+                738,
+                742,
+                746,
+                1378,
+                1384,
+                1390,
+                1392,
+                1802,
+                2002,
+                2014,
+                2022
+            ],
+            "rubric": [
+                "Friendship and invitation",
+                "Setup assistance",
+                "Cleanup planning",
+                "Equipment and furniture logistics",
+                "Cleanup leadership and event impact"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What specific types of dishes did I say need to be avoided to keep the food safe for Cynthia?",
+            "answer": "I said to avoid serving any shrimp or crab dishes.",
+            "difficulty": "easy",
+            "question_type": "context_detail",
+            "conversation_reference": "Turn 4: USER: Cynthia is allergic to shellfish, so I definitely need to avoid serving any shrimp or crab dishes. Let's stick with safe options for her.",
+            "key_facts_tested": [
+                "types of dishes to avoid",
+                "shrimp and crab dishes"
+            ],
+            "source_chat_ids": [
+                144
+            ],
+            "rubric": [
+                "LLM response should state: avoid serving any shrimp",
+                "LLM response should state: avoid serving any crab dishes"
+            ]
+        },
+        {
+            "question": "What approach did you recommend to make sure all dietary needs were properly addressed and the event ran smoothly after the tasting session?",
+            "answer": "I recommended a multi-step plan that included providing immediate feedback after the tasting, requesting a detailed quote covering the menu and additional services, sending a follow-up email to confirm details and ask for clarifications, reviewing and confirming the quote to ensure all dietary restrictions and special requests were met, signing the contract and making deposits, and finally scheduling a final check-in before the event to confirm setup, delivery times, guest count, and backup plans.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial discussion of dietary options, planning to confirm details, detailed step-by-step plan after tasting",
+            "key_facts_tested": [
+                "immediate feedback after tasting",
+                "request for detailed quote including menu and services",
+                "follow-up email summarizing tasting and requesting clarifications",
+                "review and confirmation of quote addressing dietary needs",
+                "contract signing and deposit payment",
+                "final check-in call before event to confirm logistics and backup plans"
+            ],
+            "extraction_challenge": "LLM must synthesize the multi-step confirmation plan spread across different conversation turns, integrating timing, content, and purpose of each step to explain the recommended approach for ensuring all catering details and dietary needs are finalized.",
+            "source_chat_ids": [
+                279,
+                281,
+                303
+            ],
+            "rubric": [
+                "LLM response should state: I recommended a multi-step plan that included providing immediate feedback after the tasting",
+                "LLM response should state: I recommended requesting a detailed quote covering the menu and additional services",
+                "LLM response should state: I recommended sending a follow-up email to confirm details and ask for clarifications",
+                "LLM response should state: I recommended reviewing and confirming the quote to ensure all dietary restrictions and special requests were met",
+                "LLM response should state: I recommended signing the contract and making deposits",
+                "LLM response should state: I recommended scheduling a final check-in before the event to confirm setup, delivery times, guest count, and backup plans"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I know about getting to the venue on April 19?",
+            "instruction_being_tested": "Always confirm parking arrangements when I ask about venue logistics.",
+            "expected_compliance": "Response should include confirmation of parking arrangements along with other relevant venue details.",
+            "compliance_indicators": [
+                "mention of parking availability",
+                "confirmation of parking options",
+                "details about where to park"
+            ],
+            "non_compliance_signs": [
+                "no mention of parking",
+                "only general venue information",
+                "ignoring parking details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                1684
+            ],
+            "rubric": [
+                "LLM response should contain: mention of parking availability"
+            ]
+        },
+        {
+            "question": "What options do I have for the food at the event?",
+            "instruction_being_tested": "Always specify dietary restrictions when I ask about catering details.",
+            "expected_compliance": "Response should include information about any dietary considerations or limitations related to the food options.",
+            "compliance_indicators": [
+                "mention of dietary considerations",
+                "noting any food limitations",
+                "information about special food needs"
+            ],
+            "non_compliance_signs": [
+                "only listing food items without any dietary info",
+                "ignoring possible food limitations",
+                "no mention of dietary aspects"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                528
+            ],
+            "rubric": [
+                "LLM response should contain: mention of dietary considerations",
+                "LLM response should contain: information about special food needs"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many guests with vegetarian diets should I plan catering options for?",
+            "answer": "7 guests with vegetarian diets",
+            "difficulty": "easy",
+            "update_type": "dietary_count_increase",
+            "tests_retention_of": "updated number of vegetarian guests",
+            "conversation_references": [
+                "Dietary Restrictions: Confirmed 5 guests with vegetarian diets and 2 with gluten intolerance; catering adjusted accordingly.",
+                "Information Update: The number of vegetarian guests increased to 7 after two more guests confirmed dietary preferences."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original count of 5 vegetarian guests instead of the updated 7",
+            "source_chat_ids": {
+                "original_info": [
+                    344
+                ],
+                "updated_info": [
+                    526
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 guests"
+            ]
+        },
+        {
+            "question": "How many guests have requested plus-ones, and what is the total catering count based on that?",
+            "answer": "7 guests have requested plus-ones, and the catering count is adjusted to 35.",
+            "difficulty": "easy",
+            "update_type": "guest_count_and_catering_adjustment",
+            "tests_retention_of": "the increased number of guests requesting plus-ones and the corresponding catering count",
+            "conversation_references": [
+                "RSVP Online: 5 guests requested plus-ones; adjusted catering count to 33 on April 5.",
+                "Information Update: The number of guests requesting plus-ones increased to 7, prompting a catering adjustment to 35."
+            ],
+            "potential_confusion": "LLM might incorrectly recall 5 guests requesting plus-ones and catering count of 33 instead of the updated 7 guests and 35 catering count.",
+            "source_chat_ids": {
+                "original_info": [
+                    946,
+                    962,
+                    970
+                ],
+                "updated_info": [
+                    1046
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 guests",
+                "LLM response should state: 35"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many guests have special dietary needs between vegetarians and gluten-free attendees combined?",
+            "answer": "9 guests have special dietary needs in total.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "1092",
+                "1098"
+            ],
+            "reasoning_steps": [
+                "Identify the number of vegetarian guests mentioned.",
+                "Identify the number of gluten-free guests mentioned.",
+                "Add the two numbers to find the total guests with special dietary needs."
+            ],
+            "source_chat_ids": [
+                1092,
+                1098
+            ],
+            "rubric": [
+                "LLM response should state: 9 guests"
+            ]
+        },
+        {
+            "question": "Given Cynthia's shellfish allergy, 6 vegetarians, 3 gluten-free guests, and 22 confirmed RSVPs, how should I optimally allocate seating and menu options to ensure safety and satisfaction for all attendees?",
+            "answer": "You should allocate seating by arranging 3-4 round tables seating 4-6 guests each, ensuring vegetarian and gluten-free guests are seated near their designated food stations to avoid cross-contamination. The menu must include clearly labeled, diverse vegetarian and gluten-free options prepared separately to prevent allergen exposure, with a dedicated allergy-free station. This setup balances space for 22 guests, accommodates dietary restrictions, and minimizes risk while maximizing guest comfort and satisfaction.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "chat_id 145 - shellfish allergy and safe menu",
+                "chat_id 345 - vegetarian guest accommodations",
+                "chat_id 353 - gluten intolerance accommodations",
+                "chat_id 751 - managing increased guest count and seating",
+                "chat_id 1109 - handling combined vegetarian and gluten-free needs",
+                "chat_id 1313 - ensuring allergy safety and cross-contamination prevention"
+            ],
+            "reasoning_steps": [
+                "Identify the total number of confirmed guests and their dietary restrictions (22 guests, including 6 vegetarians and 3 gluten-free).",
+                "Determine appropriate seating arrangements that allow comfortable space and easy access to specialized food stations, using round tables seating 4-6 guests.",
+                "Synthesize menu requirements to include diverse vegetarian and gluten-free options, ensuring clear labeling and separate preparation to avoid cross-contamination.",
+                "Plan dedicated allergy-free stations and clear signage to guide guests safely to their food choices.",
+                "Integrate cross-contamination prevention measures in kitchen and serving areas based on shellfish allergy and other restrictions.",
+                "Combine seating and menu planning to optimize guest safety, comfort, and satisfaction while accommodating all dietary needs and the total guest count."
+            ],
+            "source_chat_ids": [
+                145,
+                345,
+                353,
+                751,
+                1109,
+                1313
+            ],
+            "rubric": [
+                "LLM response should state: seating by arranging 3-4 round tables seating 4-6 guests each, ensuring vegetarian and gluten-free guests are seated near their designated food stations",
+                "LLM response should state: The menu must include clearly labeled, diverse vegetarian and gluten-free options prepared separately to prevent allergen exposure",
+                "LLM response should state: a dedicated allergy-free station"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to invite guests to my event soon. What are some effective ways to send invitations and keep track of who\u2019s coming?",
+            "preference_being_tested": "I prefer digital invitations over paper to reduce costs and track RSVPs efficiently.",
+            "expected_compliance": "Response should focus on methods involving digital invitations and tools that facilitate RSVP tracking and cost efficiency, avoiding suggestions centered on paper invitations or less efficient tracking methods.",
+            "compliance_indicators": [
+                "recommends digital invitation platforms or apps",
+                "mentions features for tracking RSVPs digitally",
+                "suggests cost-effective digital solutions",
+                "avoids recommending paper invitations or manual RSVP tracking"
+            ],
+            "non_compliance_signs": [
+                "suggests paper invitations as primary option",
+                "ignores digital tracking tools",
+                "recommends costly or inefficient invitation methods",
+                "does not address RSVP tracking"
+            ],
+            "difficulty": "medium",
+            "preference_type": "format and process preference",
+            "source_chat_ids": [
+                246,
+                258,
+                262
+            ],
+            "rubric": [
+                "LLM response should contain: recommends digital invitation platforms or apps",
+                "LLM response should contain: mentions features for tracking RSVPs digitally",
+                "LLM response should contain: avoids recommending paper invitations or manual RSVP tracking"
+            ]
+        },
+        {
+            "question": "How should I organize the schedule for checking on upcoming deliveries to keep everything on track?",
+            "preference_being_tested": "I prefer confirming all physical deliveries at least 5 days before event to avoid last-minute issues.",
+            "expected_compliance": "Response should include a plan or method that ensures deliveries are confirmed well in advance, ideally around five days before the event, to prevent last-minute problems.",
+            "compliance_indicators": [
+                "suggests confirming deliveries several days ahead",
+                "includes reminders or checkpoints before the event",
+                "addresses timing to avoid last-minute complications",
+                "proposes a tracking system aligned with early confirmation"
+            ],
+            "non_compliance_signs": [
+                "recommends last-minute or day-of-event confirmations",
+                "ignores timing for delivery checks",
+                "focuses only on delivery day without prior confirmation",
+                "does not mention scheduling or advance tracking"
+            ],
+            "difficulty": "medium",
+            "preference_type": "timing and scheduling",
+            "source_chat_ids": [
+                1396,
+                1402,
+                1412
+            ],
+            "rubric": [
+                "LLM response should contain: suggests confirming deliveries several days ahead",
+                "LLM response should contain: addresses timing to avoid last-minute complications"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed summary of how everything came together for the party planning, covering all the key decisions, challenges, and solutions that shaped the final event?",
+            "ideal_summary": "The party planning process involved coordinating multiple aspects including entertainment, venue selection, guest management, budgeting, and conflict resolution. Initially, the user considered hiring a live jazz band but evaluated its cost-effectiveness against local market rates and alternative options like DJs. Discussions explored extending performance times, combining live music with DJ sets, and incorporating cultural music preferences to personalize the experience. Venue choices between the Cultural Hall and Riverside Pavilion were weighed based on cost, amenities, and guest capacity, with a final decision favoring the Riverside Pavilion to optimize budget allocation for catering and decorations. Guest list conflicts were managed by balancing preferences for intimacy and inclusiveness, setting clear RSVP processes, and maintaining a cap on attendees. Budget constraints led to decisions such as foregoing a live saxophonist, reallocating saved funds to decorations and favors, and implementing DIY and interactive entertainment elements to maintain atmosphere without overspending. Conflicts with key contributors like Sylvia and Jacob were addressed through open communication, compromise on timelines and volume levels, and involving them meaningfully in planning to foster collaboration. The cancellation of the professional videographer prompted a backup plan utilizing smartphone recordings by trusted guests, coordinated with the photographer to ensure comprehensive event documentation without altering the schedule significantly. Throughout, strategic negotiation, detailed communication templates, and contingency planning ensured that the event remained on track, balanced quality with budget, and accommodated stakeholder preferences, culminating in a well-organized, memorable celebration.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                164,
+                165,
+                167,
+                169,
+                176,
+                177,
+                179,
+                181,
+                244,
+                245,
+                256,
+                326,
+                327,
+                329,
+                368,
+                369,
+                373,
+                880,
+                881,
+                883,
+                895,
+                902,
+                903,
+                905,
+                1134,
+                1139,
+                1145,
+                622,
+                623,
+                625,
+                686,
+                687,
+                695,
+                697,
+                706,
+                707
+            ],
+            "rubric": [
+                "LLM response should contain: you considered hiring a live jazz band but evaluated its cost-effectiveness against local market rates and alternative options like DJs",
+                "LLM response should contain: Discussions explored extending performance times, combining live music with DJ sets, and incorporating cultural music preferences to personalize the experience",
+                "LLM response should contain: Venue choices between the Cultural Hall and Riverside Pavilion were weighed based on cost, amenities, and guest capacity",
+                "LLM response should contain: Guest list conflicts were managed by balancing preferences for intimacy and inclusiveness, setting clear RSVP processes, and maintaining a cap on attendees",
+                "LLM response should contain: Budget constraints led to decisions such as foregoing a live saxophonist, reallocating saved funds to decorations and favors, and implementing DIY",
+                "LLM response should contain: Conflicts with key contributors like Sylvia and Jacob were addressed through open communication, compromise on timelines and volume levels, and involving them meaningfully in planning",
+                "LLM response should contain: The cancellation of the professional videographer prompted a backup plan utilizing smartphone recordings by trusted guests, coordinated with the photographer"
+            ]
+        },
+        {
+            "question": "Can you give me a complete summary of how the planning and preparations for Cynthia's 30th birthday party have developed over time?",
+            "ideal_summary": "The planning for Cynthia's 30th birthday party began with identifying Sylvia as a key helper due to her event planning skills, leading to detailed guidance on how to approach and involve her, including scheduling meetings and assigning tasks. Concerns about maintaining the surprise element prompted strategies to ensure confidentiality, emphasizing clear communication and trust with Sylvia. Parallel to this, a personalized gift\u2014a custom leather-bound journal\u2014was carefully planned with attention to customization, presentation, and meaningful delivery, including suggestions for a special moment to write the first entry together. The party schedule was thoughtfully designed to include engaging activities such as Cynthia's thank-you speech, jazz karaoke, trivia games, and a traditional Turkish coffee toast led by Amanda, whose comfort and inclusion were also prioritized through seating arrangements and additional roles. Throughout, contingency plans and communication strategies were developed to handle last-minute changes, manage guest behavior, and maintain a smooth, enjoyable event, culminating in a comprehensive approach to ensure the party is memorable and runs seamlessly.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                72,
+                73,
+                80,
+                81,
+                392,
+                393,
+                410,
+                411,
+                412,
+                413,
+                414,
+                415,
+                418,
+                419,
+                688,
+                689,
+                698,
+                699,
+                708,
+                709,
+                1024,
+                1025,
+                1026,
+                1027,
+                1034,
+                1035,
+                1036,
+                1037,
+                1038,
+                1039,
+                1190,
+                1191,
+                1198,
+                1199,
+                1204,
+                1205,
+                1294,
+                1295,
+                1302,
+                1303,
+                1304,
+                1305,
+                1310,
+                1311,
+                1644,
+                1645,
+                1650,
+                1651,
+                1652,
+                1653,
+                1654,
+                1655,
+                1656,
+                1657,
+                1658,
+                1659,
+                1662,
+                1663,
+                1798,
+                1799,
+                1880,
+                1881,
+                1882,
+                1883,
+                1884,
+                1885,
+                1892,
+                1893
+            ],
+            "key_elements_tested": [
+                "event planning progression",
+                "surprise party confidentiality",
+                "personalized gift preparation",
+                "party schedule and activities",
+                "guest and helper management",
+                "contingency and communication strategies"
+            ],
+            "synthesis_required": "Integrating multiple facets of party planning, gift preparation, scheduling, and guest management into a coherent narrative showing development and coordination",
+            "source_chat_ids": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                72,
+                73,
+                80,
+                81,
+                392,
+                393,
+                410,
+                411,
+                412,
+                413,
+                414,
+                415,
+                418,
+                419,
+                688,
+                689,
+                698,
+                699,
+                708,
+                709,
+                1024,
+                1025,
+                1026,
+                1027,
+                1034,
+                1035,
+                1036,
+                1037,
+                1038,
+                1039,
+                1190,
+                1191,
+                1198,
+                1199,
+                1204,
+                1205,
+                1294,
+                1295,
+                1302,
+                1303,
+                1304,
+                1305,
+                1310,
+                1311,
+                1644,
+                1645,
+                1650,
+                1651,
+                1652,
+                1653,
+                1654,
+                1655,
+                1656,
+                1657,
+                1658,
+                1659,
+                1662,
+                1663,
+                1798,
+                1799,
+                1880,
+                1881,
+                1882,
+                1883,
+                1884,
+                1885,
+                1892,
+                1893
+            ],
+            "rubric": [
+                "LLM response should contain: identifying Sylvia as a key helper due to her event planning skills, leading to detailed guidance on how to approach and involve her",
+                "LLM response should contain: Concerns about maintaining the surprise element prompted strategies to ensure confidentiality, emphasizing clear communication and trust with Sylvia",
+                "LLM response should contain: a personalized gift\u2014a custom leather-bound journal\u2014was carefully planned with attention to customization, presentation, and meaningful delivery",
+                "LLM response should contain: The party schedule was thoughtfully designed to include engaging activities such as Cynthia's thank-you speech, jazz karaoke, trivia games, and a traditional Turkish coffee toast led by Amanda"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days before the RSVP deadline is the automated RSVP reminder sent out?",
+            "answer": "The automated RSVP reminder is sent 5 days before the RSVP deadline.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "RSVP deadline (explicit date)",
+                "Automated RSVP reminder (relative timing before deadline)"
+            ],
+            "conversation_references": [
+                "Sessions 484, 490, 500",
+                "Session 484"
+            ],
+            "calculation_required": "RSVP deadline date - reminder date = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    484,
+                    490,
+                    500
+                ],
+                "second_event": [
+                    484
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days"
+            ]
+        },
+        {
+            "question": "How many hours will Jacob and Sylvia be helping with the setup after the decoration delivery scheduled for 2 PM?",
+            "answer": "Jacob and Sylvia will be helping with the setup for 4 hours after the decoration delivery at 2 PM, since they assist until 6 PM.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 19 at 2 PM: decoration delivery",
+                "Setup assistance until 6 PM (4 hours after delivery)"
+            ],
+            "conversation_references": [
+                "Session 1: Decoration delivery scheduling",
+                "Session 2: Setup assistance timing"
+            ],
+            "calculation_required": "6 PM - 2 PM = 4 hours",
+            "source_chat_ids": {
+                "first_event": [
+                    1458
+                ],
+                "second_event": [
+                    1458
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4 hours",
+                "LLM response should state: from 6 PM till 2 PM "
+            ]
+        }
+    ]
+}

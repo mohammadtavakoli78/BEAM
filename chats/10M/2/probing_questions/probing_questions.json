@@ -1,0 +1,775 @@
+{
+    "abstention": [
+        {
+            "question": "What are the detailed steps involved in the debugging strategy for the Unreal Engine setup error code 0x80070005?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed steps of the debugging strategy for the Unreal Engine setup error code 0x80070005.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions the error and its root cause but does not provide detailed debugging steps.",
+            "plan_reference": "Plan 1, Batch 1, Bullets 7 and 21",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed steps of the debugging strategy for the Unreal Engine setup error"
+            ]
+        },
+        {
+            "question": "What are the criteria or considerations that led to the decision to allocate 300MB memory per module in the multi-agent framework?",
+            "ideal_response": "Based on the provided chat, there is no information related to the criteria or considerations behind allocating 300MB memory per module in the multi-agent framework.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Memory allocation is stated but no rationale or decision criteria are given.",
+            "plan_reference": "Plan 5, Batch 7, Bullet 3",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the criteria or considerations behind allocating 300MB memory per module"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever automated build notifications in Jenkins as part of my deployment process?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never automated any build notifications in Jenkins, but you also mentioned integrating multiple Jenkins plugins that reduce manual intervention in deployments. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Automation of build notifications in Jenkins",
+            "conversation_references": [
+                "Session 15451: Never automated build notifications",
+                "Sessions 15437 and 15443: Automated build notifications and plugin integration"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    15451
+                ],
+                "second_statement": [
+                    15437,
+                    15443
+                ]
+            },
+            "plan_reference": "Plan 8",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never automated any build notifications in Jenkins",
+                "LLM response should mention: you also mentioned integrating multiple Jenkins plugins",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I revised my data flow designs for this project?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you've iterated on your data flow designs multiple times, but you also mentioned that you have never revised any data flow designs for this project. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Revision of data flow designs",
+            "conversation_references": [
+                "Session 2144 and 2152: Iterated data flow designs",
+                "Session 2218: Never revised data flow designs"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    2144,
+                    2152
+                ],
+                "second_statement": [
+                    2218
+                ]
+            },
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you've iterated on your data flow designs multiple times",
+                "LLM response should mention: you also mentioned that you have never revised any data flow designs",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different features and version updates of the CARLA Simulator from 2024-07-01 to 2024-07-29? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned the CARLA Simulator features and version updates in this order: 1) Support for Python 3.7 APIs and environment setup, 2) API support for up to 10 sensor types in v0.9.14, 3) Availability of 15 pre-built urban maps in v0.9.15, 4) Lidar support with 128 channels in v0.9.17, 5) GPU requirements for 4K rendering in v0.9.18, 6) RAM requirements for multi-agent scenarios in v0.9.19, 7) Dataset support with 10,000 annotated frames in v0.9.20, 8) Built-in anonymization for data logs in v0.9.21, 9) Reinforcement learning support for 50 concurrent agents in v0.9.22, 10) Enhanced sensor configurations and integration with Unreal Engine in versions v0.9.23 through v0.9.27, including Python 3.8 API and up to 45 sensor data types.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 28",
+                "chat_id: 204",
+                "chat_id: 394, 404",
+                "chat_id: 584, 590",
+                "chat_id: 754",
+                "chat_id: 954",
+                "chat_id: 1132, 1138",
+                "chat_id: 1300",
+                "chat_id: 1534, 1542",
+                "chat_id: 1712, 3384, 3390"
+            ],
+            "ordering_tested": [
+                "1st: Python 3.7 API support and environment setup",
+                "2nd: API support for 10 sensor types in v0.9.14",
+                "3rd: 15 pre-built urban maps in v0.9.15",
+                "4th: Lidar with 128 channels in v0.9.17",
+                "5th: GPU requirements for 4K rendering in v0.9.18",
+                "6th: RAM requirements for multi-agent scenarios in v0.9.19",
+                "7th: Dataset support with 10,000 annotated frames in v0.9.20",
+                "8th: Anonymization for data logs in v0.9.21",
+                "9th: RL support for 50 concurrent agents in v0.9.22",
+                "10th: Enhanced sensor configurations and Unreal Engine integration in v0.9.23 to v0.9.27"
+            ],
+            "source_chat_ids": [
+                [
+                    28
+                ],
+                [
+                    204
+                ],
+                [
+                    394,
+                    404
+                ],
+                [
+                    584,
+                    590
+                ],
+                [
+                    754
+                ],
+                [
+                    954
+                ],
+                [
+                    1132,
+                    1138
+                ],
+                [
+                    1300
+                ],
+                [
+                    1534,
+                    1542
+                ],
+                [
+                    1712,
+                    3384,
+                    3390
+                ]
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "Python 3.7 API support and environment setup",
+                "API support for 10 sensor types in v0.9.14",
+                "15 pre-built urban maps in v0.9.15",
+                "Lidar with 128 channels in v0.9.17",
+                "GPU requirements for 4K rendering in v0.9.18",
+                "RAM requirements for multi-agent scenarios in v0.9.19",
+                "Dataset support with 10,000 annotated frames in v0.9.20",
+                "Anonymization for data logs in v0.9.21",
+                "RL support for 50 concurrent agents in v0.9.22",
+                "Enhanced sensor configurations and Unreal Engine integration in v0.9.23 to v0.9.27"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my deployment and CI/CD pipeline setup from 2025-02-01 to 2025-02-25, in order? Mention ONLY and ONLY twelve items.",
+            "answer": "You mentioned these aspects in this order: 1) Initial Jenkins configuration handling concurrent builds with retry logic, 2) Docker setup and environment variable configuration for deployment, 3) AWS provisioning of instances and CloudFormation template assistance, 4) Load balancing with AWS ELB and related concerns, 5) Enhancements to Jenkins with security scans and monitoring integrations, 6) Backup deployment to AWS S3 and availability improvements, 7) Automation of release management with GitHub Actions workflows, 8) Integration of auth checks in Jenkins pipelines, 9) Optimization of Jenkins pipelines including doc builds and build time reduction, 10) Environment configuration for log aggregation on AWS nodes using Docker and Kubernetes, 11) Incident script integration and error handling improvements in Jenkins, 12) MongoDB integration for storing build logs and related error handling.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 12,
+            "conversation_references": [
+                "chat_id: 15375, 15381",
+                "chat_id: 15537, 15539, 15541",
+                "chat_id: 15737, 15743",
+                "chat_id: 15911, 15913, 15923",
+                "chat_id: 16061, 16487, 16493",
+                "chat_id: 16257, 16259",
+                "chat_id: 16679, 16681, 16683, 16685, 16687",
+                "chat_id: 16871, 16873, 16881",
+                "chat_id: 17045, 17047, 17059",
+                "chat_id: 17437, 17447",
+                "chat_id: 17649, 17651, 17653",
+                "chat_id: 17655, 17657, 17659"
+            ],
+            "ordering_tested": [
+                "1st: Jenkins initial setup with retry logic",
+                "2nd: Docker and environment variable configuration",
+                "3rd: AWS instance provisioning and CloudFormation",
+                "4th: AWS ELB load balancing and scalability",
+                "5th: Jenkins security scans and monitoring",
+                "6th: AWS S3 backup deployment and availability",
+                "7th: GitHub Actions release automation",
+                "8th: Jenkins auth checks integration",
+                "9th: Jenkins pipeline optimization and doc builds",
+                "10th: Log aggregation environment setup with Docker/Kubernetes",
+                "11th: Jenkins incident scripts and error handling",
+                "12th: MongoDB integration for build logs"
+            ],
+            "source_chat_ids": [
+                [
+                    15375,
+                    15381
+                ],
+                [
+                    15537,
+                    15539,
+                    15541
+                ],
+                [
+                    15737,
+                    15743
+                ],
+                [
+                    15911,
+                    15913,
+                    15923
+                ],
+                [
+                    16061,
+                    16487,
+                    16493
+                ],
+                [
+                    16257,
+                    16259
+                ],
+                [
+                    16679,
+                    16681,
+                    16683,
+                    16685,
+                    16687
+                ],
+                [
+                    16871,
+                    16873,
+                    16881
+                ],
+                [
+                    17045,
+                    17047,
+                    17059
+                ],
+                [
+                    17437,
+                    17447
+                ],
+                [
+                    17649,
+                    17651,
+                    17653
+                ],
+                [
+                    17655,
+                    17657,
+                    17659
+                ]
+            ],
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "Jenkins initial setup with retry logic",
+                "Docker and environment variable configuration",
+                "AWS instance provisioning and CloudFormation",
+                "AWS ELB load balancing and scalability",
+                "Jenkins security scans and monitoring",
+                "AWS S3 backup deployment and availability",
+                "GitHub Actions release automation",
+                "Jenkins auth checks integration",
+                "Jenkins pipeline optimization and doc builds",
+                "Log aggregation environment setup with Docker/Kubernetes",
+                "Jenkins incident scripts and error handling",
+                "MongoDB integration for build logs"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What delay did I find in the physics calculations per frame when I profiled the main loop?",
+            "answer": "You found a 380ms delay in physics calculations per frame at 30fps.",
+            "difficulty": "medium",
+            "question_type": "numeric_detail_recall",
+            "conversation_reference": "Turn 1: Initial profiling detail shared by user",
+            "key_facts_tested": [
+                "380ms delay",
+                "physics calculations",
+                "per frame",
+                "30fps"
+            ],
+            "source_chat_ids": [
+                11624
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: 380ms delay"
+            ]
+        },
+        {
+            "question": "How many points did I simulate when mocking the sensor APIs with unittest.mock?",
+            "answer": "You simulated 5,000 points.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message about mocking sensor with unittest.mock and simulating points",
+            "key_facts_tested": [
+                "number of simulated points"
+            ],
+            "source_chat_ids": [
+                14703
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: 5,000 points"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How is the system handling performance when rendering more complex scenes?",
+            "instruction_being_tested": "Always include frame rate data when I ask about rendering performance.",
+            "expected_compliance": "Response should include frame rate information along with any other performance details.",
+            "compliance_indicators": [
+                "mentions fps or frames per second",
+                "provides numerical frame rate values",
+                "includes frame timing data"
+            ],
+            "non_compliance_signs": [
+                "no mention of frame rate",
+                "only qualitative performance description",
+                "general performance discussion without numbers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                6212,
+                6214,
+                6216,
+                6218
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should contain: mentions fps or frames per second",
+                "LLM response should contain: provides numerical frame rate values"
+            ]
+        },
+        {
+            "question": "How well does my algorithm perform?",
+            "instruction_being_tested": "Always specify exact success rates when I ask about algorithm effectiveness.",
+            "expected_compliance": "Response should include precise numerical values representing the algorithm's success rate rather than vague or qualitative descriptions.",
+            "compliance_indicators": [
+                "exact numerical success rate",
+                "specific percentage or ratio",
+                "clear quantification of performance"
+            ],
+            "non_compliance_signs": [
+                "general statements about performance",
+                "no numbers given",
+                "vague or qualitative descriptions only"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1680
+            ],
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should contain: exact numerical success rate",
+                "LLM response should contain: specific percentage or ratio"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What event processing capacity does my log tool support per minute without downtime?",
+            "answer": "1,200 events per minute",
+            "difficulty": "easy",
+            "update_type": "capacity_increase",
+            "tests_retention_of": "increased event processing capacity from 1,000 to 1,200 events per minute",
+            "conversation_references": [
+                "DevOps & Deployment:Release Management: Managing updates, I\u2019ve rolled out log tool v1.0.0, supporting 1,000 events/min with zero downtime.",
+                "The log aggregation rollout now supports 1,200 events per minute, increasing capacity by 20%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original capacity of 1,000 events per minute instead of the updated 1,200 events per minute",
+            "source_chat_ids": {
+                "original_info": [
+                    17449,
+                    17461
+                ],
+                "updated_info": [
+                    17449,
+                    17461
+                ]
+            },
+            "plan_reference": "Plan 9",
+            "rubric": [
+                "LLM response should state: 1,200 events per minute"
+            ]
+        },
+        {
+            "question": "What percentage of the reward function engineering has been completed, and when is the safety metrics integration expected to be finished?",
+            "answer": "The reward function engineering is 20% complete, with safety metrics integration scheduled within the next week.",
+            "difficulty": "moderate",
+            "update_type": "progress_update",
+            "tests_retention_of": "updated completion percentage and integration timeline",
+            "conversation_references": [
+                "Noting progress on reward design, I\u2019ve completed 15% of function engineering, targeting full safety metrics integration soon.",
+                "The reward function engineering has advanced to 20%, with safety metrics integration now scheduled within the next week."
+            ],
+            "potential_confusion": "LLM might incorrectly recall 15% completion and a vague timeline for safety metrics integration instead of the 20% completion and specific upcoming schedule.",
+            "source_chat_ids": {
+                "original_info": [
+                    9632
+                ],
+                "updated_info": [
+                    9890
+                ]
+            },
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should state: 20% complete"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total delay have I noted across the agent updates, pedestrian updates, and camera data sync issues?",
+            "answer": "The total delay is 750ms, combining 300ms from agent updates, 250ms from pedestrian updates, and 200ms from camera data sync.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Pinpointing a bottleneck in agent updates with a 300ms spike",
+                "Analyzing logs with ELK Stack spotting a 250ms delay in pedestrian updates",
+                "Dealing with a threading issue causing a 200ms delay in camera data sync"
+            ],
+            "reasoning_steps": [
+                "Identify the delay noted in agent updates as 300ms",
+                "Identify the delay noted in pedestrian updates as 250ms",
+                "Identify the delay noted in camera data sync as 200ms and sum all delays"
+            ],
+            "source_chat_ids": [
+                11496,
+                11806,
+                11960
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: total delay is 750ms",
+                "LLM response should state: 300ms from agent updates",
+                "LLM response should state: 250ms from pedestrian updates",
+                "LLM response should state: 200ms from camera data sync"
+            ]
+        },
+        {
+            "question": "How many different error types related to sensor data debugging did I mention across my sessions?",
+            "answer": "Seven different sensor data debugging error types were mentioned.",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "PLAN 5 BATCH 1 BULLET 8: Debugging Sensor Data: Point Cloud Misalignment Error",
+                "PLAN 5 BATCH 4 BULLET 8: Debugging Sensor Data: Timestamp Mismatch Error",
+                "PLAN 5 BATCH 5 BULLET 8: Debugging Sensor Data: Transform Drift Error",
+                "PLAN 5 BATCH 6 BULLET 8: Debugging Sensor Data: Message Type Error",
+                "PLAN 5 BATCH 7 BULLET 8: Debugging Sensor Data: Topic Mismatch Error",
+                "PLAN 5 BATCH 9 BULLET 8: Debugging Sensor Data: Render Artifact Error",
+                "PLAN 5 BATCH 10 BULLET 8: Debugging Sensor Data: Assertion Failed Error"
+            ],
+            "reasoning_steps": [
+                "Identify all sensor data debugging error types mentioned in the user messages.",
+                "Count each unique error type related to sensor data debugging.",
+                "Sum the total number of distinct sensor data debugging errors mentioned."
+            ],
+            "source_chat_ids": [
+                7548,
+                8074,
+                8228,
+                8412,
+                8636,
+                9064,
+                9260
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: Seven"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm trying to improve the structure of my code to make it run more smoothly. What changes would you suggest to the way my modules interact?",
+            "preference_being_tested": "Reducing inter-module calls by 10% to boost speed by 20%, as suggested by Deborah",
+            "expected_compliance": "Response should include suggestions that reduce the number of inter-module calls or otherwise optimize module interactions to improve performance, reflecting the user's goal of minimizing inter-module calls",
+            "compliance_indicators": [
+                "recommends reducing calls between modules",
+                "suggests consolidating functionality to limit module interactions",
+                "focuses on optimizing communication between modules"
+            ],
+            "non_compliance_signs": [
+                "ignores inter-module call frequency",
+                "suggests changes that increase module interactions",
+                "focuses solely on other optimizations unrelated to module calls"
+            ],
+            "difficulty": "medium",
+            "preference_type": "performance optimization",
+            "source_chat_ids": [
+                5570,
+                5574
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should contain: recommends reducing calls between modules"
+            ]
+        },
+        {
+            "question": "I'm working on improving my traffic simulation code. How would you suggest I incorporate variability in vehicle speeds?",
+            "preference_being_tested": "Reviewing traffic logic with Mark, a close friend and senior AI dev with 10 years in machine learning, he suggested a 15% speed variance for realism.",
+            "expected_compliance": "Response should incorporate or recommend a speed variance around 15% to reflect the user's prior input from Mark, ensuring the simulation includes realistic speed variability.",
+            "compliance_indicators": [
+                "mentions or suggests a speed variance close to 15%",
+                "recommends implementing speed variability for realism",
+                "refers to a specific percentage variance in speed",
+                "aligns with prior expert advice on speed variance"
+            ],
+            "non_compliance_signs": [
+                "ignores speed variance",
+                "recommends no variability or a vastly different variance",
+                "suggests uniform speeds without variance",
+                "does not address speed variability at all"
+            ],
+            "difficulty": "medium",
+            "preference_type": "parameter_setting",
+            "source_chat_ids": [
+                5760
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should contain: mentions or suggests a speed variance close to 15%"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize the overall progress and key developments in my traffic simulation project, including how I addressed performance issues, optimized agent behaviors, and integrated real-time data from 2024-08-01 to 2024-10-13?",
+            "ideal_summary": "Your traffic simulation project progressed through several important stages. Initially, you focused on managing agent density and spawn rates, implementing grid-based spatial partitioning to reduce agent overlaps and improve performance. As the project evolved, you incorporated advanced collision detection techniques, including quad trees and PhysX integration, to enhance accuracy and reduce false positives. You also integrated real-time data streams and adaptive traffic signal timing using Unreal Engine's timer system and ROS 2 for event-driven communication, ensuring responsive and efficient traffic management. Throughout, you optimized UI responsiveness and logging strategies to maintain high update rates and minimize overhead, while continuously monitoring performance metrics to validate and refine your simulation. These developments collectively improved the simulation's scalability, accuracy, and real-time responsiveness.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                3888,
+                3890,
+                3898,
+                3902,
+                3899,
+                3891,
+                3984,
+                3989,
+                3994,
+                4070,
+                4072,
+                4082,
+                4085,
+                4264,
+                4265,
+                4272,
+                4477,
+                4569,
+                4573,
+                6272,
+                6277,
+                6462,
+                6463,
+                6465,
+                6467,
+                6476,
+                6477,
+                6880,
+                6881,
+                6883,
+                6885,
+                6968,
+                6969,
+                7040,
+                7041,
+                7050,
+                7051,
+                7412,
+                7413,
+                7418,
+                7419,
+                7421,
+                7429,
+                7424,
+                7425,
+                7426,
+                7427,
+                7428,
+                7496,
+                7497,
+                7503
+            ],
+            "key_elements_tested": [
+                "performance optimization",
+                "agent behavior modeling",
+                "collision detection integration",
+                "real-time data handling",
+                "UI and logging optimization"
+            ],
+            "synthesis_required": "Combining technical improvements and integration steps across multiple sessions into a coherent project progression summary",
+            "source_chat_ids": [
+                3888,
+                3890,
+                3898,
+                3902,
+                3899,
+                3891,
+                3984,
+                3989,
+                3994,
+                4070,
+                4072,
+                4082,
+                4085,
+                4264,
+                4265,
+                4272,
+                4569,
+                4573,
+                6272,
+                6277,
+                6462,
+                6463,
+                6465,
+                6467,
+                6476,
+                6477,
+                6880,
+                6881,
+                6883,
+                6885,
+                6968,
+                6969,
+                7040,
+                7041,
+                7050,
+                7051,
+                7412,
+                7413,
+                7418,
+                7419,
+                7421,
+                7429,
+                7424,
+                7425,
+                7426,
+                7427,
+                7428,
+                7496,
+                7497,
+                7503
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: you focused on managing agent density and spawn rates",
+                "LLM response should contain: implemented grid-based spatial partitioning to reduce agent overlaps and improve performance",
+                "LLM response should contain: you incorporated advanced collision detection techniques, including quad trees and PhysX integration",
+                "LLM response should contain: integrated real-time data streams and adaptive traffic signal timing using Unreal Engine's timer system and ROS 2",
+                "LLM response should contain: you optimized UI responsiveness and logging strategies to maintain high update rates and minimize overhead"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how the performance optimization efforts for my self-driving car simulation progressed from 2025-01-16 to 2025-01-31?",
+            "ideal_summary": "The performance optimization of your self-driving car simulation began with identifying key bottlenecks such as high memory usage and long frame times during scenarios with many agents. Early investigations traced memory spikes to unoptimized Lidar data structures and physics calculations that overloaded single threads. You then implemented data structure improvements, including k-d trees for efficient Lidar point management, and introduced parallel processing techniques using joblib and CUDA streams to offload compute-heavy tasks to the GPU. Concurrently, rendering optimizations were pursued by adopting deferred shading and frustum culling to reduce overdraw and unnecessary draw calls, improving frame rates in dense scenes. Throughout this process, profiling tools like Intel VTune and Nsight Compute guided your efforts, revealing delays caused by thread lock contention and synchronization issues, which you addressed by refining threading models and lock granularity. The optimization journey was iterative, involving continuous profiling, code refactoring, and leveraging advanced rendering and parallelization techniques to steadily reduce runtime and improve scalability under increasing agent loads.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                11364,
+                11514,
+                11830,
+                11986,
+                13017,
+                13209,
+                14525,
+                14921,
+                15109
+            ],
+            "key_elements_tested": [
+                "performance bottleneck identification",
+                "data structure optimization",
+                "parallel processing implementation",
+                "rendering pipeline improvements",
+                "profiling-driven iterative optimization"
+            ],
+            "synthesis_required": "Integrating technical problem-solving steps and optimization phases into a coherent narrative showing progression and cause-effect",
+            "source_chat_ids": [
+                11364,
+                11514,
+                11830,
+                11986,
+                13017,
+                13209,
+                14525,
+                14921,
+                15109
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should contain: investigations traced memory spikes to unoptimized Lidar data structures and physics calculations that overloaded single threads",
+                "LLM response should contain: implemented data structure improvements, including k-d trees for efficient Lidar point management, and introduced parallel processing techniques using joblib and CUDA streams to offload compute-heavy tasks to the GPU",
+                "LLM response should contain: rendering optimizations were pursued by adopting deferred shading and frustum culling to reduce overdraw and unnecessary draw calls",
+                "LLM response should contain: profiling tools like Intel VTune and Nsight Compute guided your efforts, revealing delays caused by thread lock contention and synchronization issues",
+                "LLM response should contain: The optimization journey was iterative, involving continuous profiling, code refactoring, and leveraging advanced rendering and parallelization techniques to steadily reduce runtime and improve scalability"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I start setting up the deployment pipeline and when I begin the production monitoring and maintenance planning phase?",
+            "answer": "There are 15 days between starting the Deployment Pipeline Setup phase on February 1 and beginning the Production Monitoring, Documentation, and Maintenance Planning phase on February 16.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 1: start Deployment Pipeline Setup",
+                "February 16: start Production Monitoring and Maintenance Planning"
+            ],
+            "conversation_references": [
+                "Session 15279: Deployment Pipeline Setup start",
+                "Session 17147: Production Monitoring phase start"
+            ],
+            "calculation_required": "February 16 - February 1 = 15 days",
+            "source_chat_ids": {
+                "first_event": [
+                    15279
+                ],
+                "second_event": [
+                    17147
+                ]
+            },
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should state: 15 days",
+                "LLM response should state: from February 1, 2025 till February 16, 2025"
+            ]
+        },
+        {
+            "question": "How many days after I started the research phase did I begin the architecture design phase for the self-driving car simulation project?",
+            "answer": "The architecture design phase began 15 days after the research phase started, since the research phase kicked off on July 1 and the architecture design phase started on July 16.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Research phase start: July 1",
+                "Architecture design phase start: July 16"
+            ],
+            "conversation_references": [
+                "Session 0: Research phase kickoff and timeline",
+                "Session 1860: Architecture design phase kickoff"
+            ],
+            "calculation_required": "July 16 - July 1 = 15 days",
+            "source_chat_ids": {
+                "first_event": [
+                    0
+                ],
+                "second_event": [
+                    1860
+                ]
+            },
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: 15 days",
+                "LLM response should state: from July 1, 2025 till July 16, 2025"
+            ]
+        }
+    ]
+}

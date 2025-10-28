@@ -1,0 +1,557 @@
+{
+    "abstention": [
+        {
+            "question": "What specific feedback did you receive from Mallory during the quarterly portfolio reviews?",
+            "ideal_response": "Based on the provided chat, there is no information related to specific feedback from Mallory during portfolio reviews.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Mallory is mentioned as a professional network contact and reviewer but no feedback details are provided.",
+            "plan_reference": "Multiple batches mention Mallory's involvement but lack details on feedback.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to specific feedback from Mallory during portfolio reviews."
+            ]
+        },
+        {
+            "question": "What are the exact tax-loss harvesting strategies discussed with Gary during your meetings?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact tax-loss harvesting strategies discussed with Gary.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Meetings with Gary are mentioned but no specific strategies are detailed.",
+            "plan_reference": "Multiple batches mention tax-loss harvesting discussions with Gary without specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact tax-loss harvesting strategies discussed with Gary."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever read \"The Intelligent Investor\" or any other investment book?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you started reading \"The Intelligent Investor\" and also that you've never read it or any other investment book. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Reading experience with \"The Intelligent Investor\" and investment books",
+            "conversation_references": [
+                "Session 22: Started reading \"The Intelligent Investor\"",
+                "Session 134: Never read \"The Intelligent Investor\" or any investment book"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    22
+                ],
+                "second_statement": [
+                    134
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've never read \"The Intelligent Investor\" or any investment book",
+                "LLM response should mention: you also said you've started reading \"The Intelligent Investor\"",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever missed any freelance deadlines because of my investment activities?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you missed a freelance deadline due to portfolio rebalancing but also mentioned that you've never missed any freelance deadlines because of investment activities. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "missed freelance deadlines due to investment activities",
+            "conversation_references": [
+                "Session 336: Missed deadline due to portfolio rebalancing",
+                "Session 416: Never missed deadlines due to investment activities"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    336
+                ],
+                "second_statement": [
+                    416
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've never missed any freelance deadlines because of investment activities",
+                "LLM response should mention: you also said you missed a freelance deadline due to portfolio rebalancing",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about different investment strategies and portfolio adjustments progress in order (mention 10 items)?",
+            "answer": "Your discussions about investment strategies and portfolio adjustments progressed as follows: 1) Initial meeting and understanding of ETF strategies, 2) Deciding between different investment options and advisors, 3) Opening and funding a managed portfolio account, 4) Increasing monthly contributions and setting up automatic transfers, 5) Adding international ETFs based on advice, 6) Diversifying into REITs and emerging markets ETFs, 7) Considering municipal bond funds, 8) Expanding into international small-cap ETFs, 9) Exploring sector-specific ETFs like healthcare, 10) Focusing on technology sector ETFs and evaluating continued investment in them.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 32, 34",
+                "chat_id: 42",
+                "chat_id: 164",
+                "chat_id: 166, 168, 170, 172",
+                "chat_id: 312",
+                "chat_id: 430, 548, 550, 552",
+                "chat_id: 656",
+                "chat_id: 784",
+                "chat_id: 890",
+                "chat_id: 1002, 1110, 1112, 1116, 1118"
+            ],
+            "ordering_tested": [
+                "1st: Initial ETF strategy discussion",
+                "2nd: Advisor comparison and choice",
+                "3rd: Opening managed portfolio",
+                "4th: Increasing monthly investments",
+                "5th: Adding international ETFs",
+                "6th: Diversifying into REITs and emerging markets",
+                "7th: Municipal bond fund consideration",
+                "8th: International small-cap ETFs",
+                "9th: Sector-specific ETFs",
+                "10th: Technology sector ETF focus"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple investment topics",
+                "spans numerous conversation sessions",
+                "involves nuanced portfolio strategy evolution",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                32,
+                34,
+                42,
+                164,
+                166,
+                168,
+                170,
+                172,
+                312,
+                430,
+                548,
+                550,
+                552,
+                656,
+                784,
+                890,
+                1002,
+                1110,
+                1112,
+                1116,
+                1118
+            ],
+            "rubric": [
+                "LLM response should mention: Initial ETF strategy discussion",
+                "LLM response should mention: Advisor comparison and choice",
+                "LLM response should mention: Opening managed portfolio",
+                "LLM response should mention: Increasing monthly investments",
+                "LLM response should mention: Adding international ETFs",
+                "LLM response should mention: Diversifying into REITs and emerging markets",
+                "LLM response should mention: Municipal bond fund consideration",
+                "LLM response should mention: International small-cap ETFs",
+                "LLM response should mention: Sector-specific ETFs",
+                "LLM response should mention: Technology sector ETF focus"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different financial interactions and boundary-setting topics with Brittney throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these topics in this order: 1) First, discussing setting boundaries when Brittney asked for stock tips, 2) Then, talking about declining Brittney's loan request and emphasizing financial independence, 3) Next, agreeing to manage Brittney's custodial account with monthly check-ins, 4) Then, agreeing to co-invest with Brittney starting in September with monthly reviews, 5) Finally, mentioning subsequent co-investments with quarterly review meetings and discussing pros and cons of these arrangements.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 204: Setting boundaries with Brittney about stock tips",
+                "Session 340: Declining Brittney's loan request and boundary setting",
+                "Session 460: Managing Brittney's custodial account with monthly check-ins",
+                "Session 580: Co-investing with Brittney starting September with monthly reviews",
+                "Sessions 684, 812, 916, 1028, 1140: Subsequent co-investments with quarterly review meetings and pros/cons discussion"
+            ],
+            "ordering_tested": [
+                "1st: Boundary setting about stock tips",
+                "2nd: Declining loan request and emphasizing independence",
+                "3rd: Managing custodial account with monthly check-ins",
+                "4th: Initial co-investment with monthly reviews",
+                "5th: Later co-investments with quarterly reviews and pros/cons"
+            ],
+            "source_chat_ids": [
+                204,
+                340,
+                460,
+                580,
+                [
+                    684,
+                    812,
+                    916,
+                    1028,
+                    1140
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Boundary setting about stock tips",
+                "LLM response should mention: Declining loan request and emphasizing independence",
+                "LLM response should mention: Managing custodial account with monthly check-ins",
+                "LLM response should mention: Initial co-investment with monthly reviews",
+                "LLM response should mention: Later co-investments with quarterly reviews and pros/cons"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much have I been saving each month for my emergency fund?",
+            "answer": "You have been saving $1,000 a month for your emergency fund.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 26: USER message about savings and contributions",
+            "key_facts_tested": [
+                "monthly emergency fund savings amount"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should state: $1,000 a month"
+            ]
+        },
+        {
+            "question": "When did I say I met Raymond?",
+            "answer": "I met Raymond on January 5, 2024.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 42: USER mentions meeting Raymond on January 5, 2024.",
+            "key_facts_tested": [
+                "date of meeting with Raymond"
+            ],
+            "source_chat_ids": [
+                42
+            ],
+            "rubric": [
+                "LLM response should state: January 5, 2024"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some popular ETFs I should consider?",
+            "instruction_being_tested": "Always include dividend yield percentages when I ask about ETFs.",
+            "expected_compliance": "Response should include dividend yield percentages along with other ETF details.",
+            "compliance_indicators": [
+                "dividend yield percentages mentioned",
+                "yield values provided for ETFs",
+                "yield data included in ETF descriptions"
+            ],
+            "non_compliance_signs": [
+                "no dividend yield information given",
+                "only ETF names or descriptions without yield",
+                "yield data omitted"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                290
+            ],
+            "rubric": [
+                "LLM response should include: dividend yield percentages",
+                "LLM response should include: yield values for ETFs"
+            ]
+        },
+        {
+            "question": "What should I consider if I want to take money out of my investment account?",
+            "instruction_being_tested": "Always highlight tax implications when I ask about investment withdrawals.",
+            "expected_compliance": "Response should include information about tax consequences related to taking money out of investments.",
+            "compliance_indicators": [
+                "mention of taxes owed",
+                "discussion of tax rates or penalties",
+                "impact on taxable income",
+                "possible tax reporting requirements"
+            ],
+            "non_compliance_signs": [
+                "ignoring tax aspects",
+                "focusing only on process or timing",
+                "no mention of taxes or related costs"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                528
+            ],
+            "rubric": [
+                "LLM response should include: tax implications of withdrawals",
+                "LLM response should include: possible taxes owed or penalties"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my monthly investment budget to accelerate portfolio growth?",
+            "answer": "$750",
+            "difficulty": "easy",
+            "update_type": "budget_increase",
+            "tests_retention_of": "updated monthly investment budget amount",
+            "conversation_references": [
+                "Investment Budgeting: Increased monthly investment budget from $500 to $700 starting March 1 to accelerate growth.",
+                "Information Update: I increased my monthly investment budget to $750 starting March 5 to further accelerate portfolio growth."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the $700 monthly budget instead of the updated $750 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    142
+                ],
+                "updated_info": [
+                    284
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $750"
+            ]
+        },
+        {
+            "question": "How much do I contribute monthly to my Roth IRA?",
+            "answer": "$475",
+            "difficulty": "easy",
+            "update_type": "contribution_amount_increase",
+            "tests_retention_of": "updated monthly Roth IRA contribution amount",
+            "conversation_references": [
+                "Retirement Savings: Increased Roth IRA contributions to $450 monthly starting February 1.",
+                "Information Update: I increased my monthly Roth IRA contributions to $475 starting February 15 to enhance retirement planning."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $450 monthly contribution instead of the updated $475 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    804
+                ],
+                "updated_info": [
+                    872
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $475"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much money have I invested in ETFs following Raymond's suggestions across my portfolio?",
+            "answer": "$9,800",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Investment in VXUS and VNQ following Raymond's advice",
+                "Investments in VWO and SCZ after Raymond's suggestions",
+                "Investments in XLV, XLK, and other ETFs recommended by Raymond"
+            ],
+            "reasoning_steps": [
+                "Identify all ETF investments the user made following Raymond's advice from different sessions.",
+                "Sum the amounts invested: $1,000 in VXUS, $1,000 in VNQ, $1,200 in VWO, $1,300 in SCZ, $1,000 in XLV, $2,000 in XLK, and another $2,300 in XLK and other ETFs.",
+                "Calculate the total investment amount by adding these values."
+            ],
+            "source_chat_ids": [
+                312,
+                430,
+                548,
+                784,
+                890,
+                1110,
+                1112
+            ],
+            "rubric": [
+                "LLM response should state: $9,800"
+            ]
+        },
+        {
+            "question": "How did I adjust my small-cap international allocation across my recent portfolio changes?",
+            "answer": "You first increased your small-cap international holdings to 15%, then later reduced them back to 10%.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_status_tracking",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Considering increasing small-cap international holdings to 15%",
+                "Monitoring small-cap international stocks after increase",
+                "Rebalancing portfolio after reducing small-cap international from 15% to 10%"
+            ],
+            "reasoning_steps": [
+                "Identify the session where you planned to increase small-cap international holdings to 15%.",
+                "Recall the session where you confirmed monitoring these holdings more closely after the increase.",
+                "Note the session where you reduced small-cap international holdings from 15% to 10% during rebalancing."
+            ],
+            "source_chat_ids": [
+                794,
+                797,
+                902
+            ],
+            "rubric": [
+                "LLM response should state: increased to 15%",
+                "LLM response should state: later reduced back to 10%"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm thinking about starting my investment journey soon. What types of investment options would you suggest I look into first?",
+            "preference_being_tested": "I prefer using ETFs over individual stocks for initial investments due to lower fees and diversification.",
+            "expected_compliance": "Response should recommend ETFs or emphasize options that align with the user's preference for diversified, lower-fee initial investments rather than focusing solely on individual stocks.",
+            "compliance_indicators": [
+                "mentions ETFs as a suitable option for beginners",
+                "highlights diversification benefits",
+                "notes fee considerations favoring ETFs",
+                "avoids pushing individual stocks as the primary initial choice"
+            ],
+            "non_compliance_signs": [
+                "only recommends individual stocks",
+                "ignores ETFs or diversification benefits",
+                "focuses on stock picking without mentioning ETFs",
+                "suggests high-fee options without context"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment vehicle choice",
+            "source_chat_ids": [
+                68,
+                70
+            ],
+            "rubric": [
+                "LLM response should mention: ETFs as a suitable option for beginners"
+            ]
+        },
+        {
+            "question": "I'm looking at different ways to handle dividends in my investment portfolio. What are the options I should consider?",
+            "preference_being_tested": "I prefer dividend reinvestment plans over manual dividend withdrawals to maximize compounding.",
+            "expected_compliance": "Response should highlight dividend reinvestment plans as a key option and explain their benefits, aligning with the user's preference for maximizing compounding through reinvestment rather than manual withdrawals.",
+            "compliance_indicators": [
+                "mentions dividend reinvestment plans",
+                "explains how reinvestment can enhance compounding",
+                "presents reinvestment as a viable or recommended option",
+                "distinguishes reinvestment from manual withdrawal"
+            ],
+            "non_compliance_signs": [
+                "only discusses manual dividend withdrawals",
+                "ignores dividend reinvestment plans",
+                "fails to explain benefits of reinvestment",
+                "recommends manual withdrawal without mentioning reinvestment"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment_strategy",
+            "source_chat_ids": [
+                212
+            ],
+            "rubric": [
+                "LLM response should mention: dividend reinvestment plans"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of what I\u2019ve learned and discussed about investing strategies so far?",
+            "ideal_summary": "You have explored key investing principles including value investing, margin of safety, and the importance of diversification. You reviewed beginner-friendly resources and courses to build a long-term investment strategy. Additionally, you learned how to analyze financial statements and earnings reports to make informed decisions, and how to apply tax-efficient investing strategies to optimize your portfolio.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple narrative overview",
+                "essential fact inclusion"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a concise summary",
+            "source_chat_ids": [
+                23,
+                135,
+                1125
+            ],
+            "rubric": [
+                "LLM response should mention: ou have explored key investing principles including value investing, margin of safety, and the importance of diversification.",
+                "LLM response should mention: You reviewed beginner-friendly resources and courses to build a long-term investment strategy.",
+                "LLM response should mention: Additionally, you learned how to analyze financial statements and earnings reports to make informed decisions, and how to apply tax-efficient investing strategies to optimize your portfolio."
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the investment strategies and portfolio decisions I've explored, including the various asset classes, risk considerations, and advice I've received, and how all these elements interconnect to shape my overall financial approach?",
+            "ideal_summary": "The user's investment journey involves a multifaceted strategy centered on diversification across multiple asset classes, including broad-market ETFs, sector-specific funds, international and emerging markets ETFs, bond funds, and real estate investments. Key advisors like Raymond have influenced the approach, emphasizing cost efficiency, tax considerations, and regular portfolio rebalancing to maintain target allocations. The user has balanced individual stock risks, such as Tesla, against the stability of diversified ETFs like VOO, reflecting a moderate risk tolerance. Incorporation of automated investment platforms like Schwab Intelligent Portfolios complements manual ETF selections, enhancing diversification and disciplined contributions. The strategy also integrates international exposure through ETFs like VXUS and VWO, with attention to currency and geopolitical risks. Sector-specific investments, particularly in technology (XLK) and healthcare (XLV), are pursued for growth potential but monitored to avoid concentration risk. Municipal bonds (VTEB) and REIT ETFs (VNQ) add fixed income and income-generating real estate exposure, balancing growth with stability. The user actively considers tax efficiency, cost management, and ongoing performance monitoring, with plans for regular reviews and adjustments guided by professional advice. Overall, the portfolio reflects a sophisticated, evolving investment plan that synthesizes diverse asset classes, risk management, and strategic allocation to align with the user's financial goals and risk profile.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                33,
+                35,
+                43,
+                67,
+                431,
+                549,
+                657,
+                785,
+                891,
+                1111
+            ],
+            "rubric": [
+                "LLM response should mention: diversification across multiple asset classes including broad-market ETFs, sector-specific funds, international and emerging markets ETFs, bond funds, and real estate investments",
+                "LLM response should mention: Key advisors like Raymond have influenced the approach, emphasizing cost efficiency, tax considerations, and regular portfolio rebalancing to maintain target allocations",
+                "LLM response should mention: The user has balanced individual stock risks, such as Tesla, against the stability of diversified ETFs like VOO, reflecting a moderate risk tolerance",
+                "LLM response should mention: Incorporation of automated investment platforms like Schwab Intelligent Portfolios complements manual ETF selections, enhancing diversification and disciplined contributions",
+                "LLM response should mention: The strategy also integrates international exposure through ETFs like VXUS and VWO, with attention to currency and geopolitical risks",
+                "LLM response should mention: Sector-specific investments, particularly in technology (XLK) and healthcare (XLV), are pursued for growth potential but monitored to avoid concentration risk",
+                "LLM response should mention: Municipal bonds (VTEB) and REIT ETFs (VNQ) add fixed income and income-generating real estate exposure, balancing growth with stability",
+                "LLM response should mention: The user actively considers tax efficiency, cost management, and ongoing performance monitoring, with plans for regular reviews and adjustments guided by professional advice"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days did it take me to finish chapter 3 after I started reading \"The Intelligent Investor\"?",
+            "answer": "It took 4 days to finish chapter 3 after starting the book on January 10 and finishing chapter 3 by January 14.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 10, 2024: started reading",
+                "January 14, 2024: finished chapter 3"
+            ],
+            "conversation_references": [
+                "Session 1: Reading progress"
+            ],
+            "calculation_required": "January 14 - January 10 = 4 days",
+            "source_chat_ids": {
+                "first_event": [
+                    22
+                ],
+                "second_event": [
+                    22
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4 days",
+                "LLM response should state: from January 10 till January 14"
+            ]
+        },
+        {
+            "question": "How many weeks passed between when I rated my risk tolerance as moderate and when I started my biweekly dollar-cost averaging strategy?",
+            "answer": "Approximately 6 weeks passed between when you rated your risk tolerance as moderate on January 14 and when you started your biweekly dollar-cost averaging strategy, which was mentioned in a later session.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 14: risk tolerance rated moderate",
+                "About 6 weeks later: started biweekly dollar-cost averaging"
+            ],
+            "conversation_references": [
+                "Session 44: Risk tolerance rating",
+                "Session 46: Starting dollar-cost averaging"
+            ],
+            "calculation_required": "Calculate weeks between January 14 and the start of biweekly investing inferred from session order and timing",
+            "source_chat_ids": {
+                "first_event": [
+                    44
+                ],
+                "second_event": [
+                    46
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Approximately 6 weeks"
+            ]
+        }
+    ]
+}

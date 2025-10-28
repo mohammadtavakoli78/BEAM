@@ -1,0 +1,691 @@
+{
+    "abstention": [
+        {
+            "question": "What are the credentials or qualifications of Nancy, my close friend who recommended hostels and tours?",
+            "ideal_response": "Based on the provided chat, there is no information related to Nancy's credentials or qualifications.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Nancy is mentioned as a close friend and recommender but no professional or background details are given.",
+            "plan_reference": "Batch 1, Bullet 19 and Batch 2, Bullet 10",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Nancy's credentials or qualifications"
+            ]
+        },
+        {
+            "question": "Can you provide the steps I followed to renew my travel insurance coverage in April?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact steps taken to renew travel insurance coverage.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Renewal is mentioned with cost and date but no procedural details are given.",
+            "plan_reference": "Batch 6, Bullet 18",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact steps taken to renew travel insurance coverage"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I connected with any local professionals during my trip?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never connected with any local professionals during this trip, but you also mentioned connecting with Shannon, a psychologist in Hanoi. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Connecting with local professionals during the trip",
+            "conversation_references": [
+                "Session 440: Never connected statement",
+                "Sessions 348, 354, 356: Connection with Shannon"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    440
+                ],
+                "second_statement": [
+                    348,
+                    354,
+                    356
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never connected with any local professionals during this trip",
+                "LLM response should mention: you also mentioned connecting with Shannon, a psychologist in Hanoi",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I used any meditation or mindfulness apps during this trip?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used any meditation or mindfulness apps during this trip, but you also mentioned using the Headspace meditation app for 20 minutes. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "use of meditation or mindfulness apps during the trip",
+            "conversation_references": [
+                "Session 644: Never used meditation apps",
+                "Sessions 480 and 488: Used Headspace app"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    644
+                ],
+                "second_statement": [
+                    480,
+                    488
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never used any meditation or mindfulness apps during this trip",
+                "LLM response should mention: you also mentioned using the Headspace meditation app",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my conversations about travel recommendations from Nancy develop in order? Mention ONLY and ONLY nine items.",
+            "answer": "Your conversations about travel recommendations from Nancy developed in this sequence: 1) Initial accommodation advice and budget concerns in Bangkok, 2) Suggestions for activities and tours in Hanoi, 3) Local food and coffee spot recommendations in Luang Prabang, 4) Dining and restaurant tips in another city, 5) Cafe visits and social meetups in Ho Chi Minh City, 6) Travel tips and exploration ideas for Mui Ne, 7) Planning and compromise strategies for trips with Nancy, 8) Shared meals and budget-friendly dining options in Bangkok, 9) Discussing trip highlights and keeping Nancy involved in your travel plans.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 9,
+            "conversation_references": [
+                "138, 144, 146, 148, 150, 152, 162, 164",
+                "294, 300, 304",
+                "498, 500, 512, 518",
+                "688, 694, 700",
+                "894, 896, 904, 912",
+                "1096, 1098, 1108",
+                "1320, 1326, 1336",
+                "1524, 1534, 1540",
+                "1724, 1734, 1740"
+            ],
+            "ordering_tested": [
+                "1st: Accommodation and budget advice",
+                "2nd: Activity and tour suggestions",
+                "3rd: Local food and coffee recommendations",
+                "4th: Dining and restaurant tips",
+                "5th: Cafe visits and social meetups",
+                "6th: Travel tips for exploration",
+                "7th: Trip planning and compromise",
+                "8th: Shared meals and budget dining",
+                "9th: Trip highlights and involvement"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic threads",
+                "spans numerous conversation sessions",
+                "involves nuanced development of travel advice",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse topics"
+            ],
+            "source_chat_ids": [
+                138,
+                144,
+                146,
+                148,
+                150,
+                152,
+                162,
+                164,
+                294,
+                300,
+                304,
+                498,
+                500,
+                512,
+                518,
+                688,
+                694,
+                700,
+                894,
+                896,
+                904,
+                912,
+                1096,
+                1098,
+                1108,
+                1320,
+                1326,
+                1336,
+                1524,
+                1534,
+                1540,
+                1724,
+                1734,
+                1740
+            ],
+            "rubric": [
+                "Accommodation and budget advice",
+                "Activity and tour suggestions",
+                "Local food and coffee recommendations",
+                "Dining and restaurant tips",
+                "Cafe visits and social meetups",
+                "Travel tips for exploration",
+                "Trip planning and compromise",
+                "Shared meals and budget dining",
+                "Trip highlights and involvement"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different travel safety and navigation topics during our conversations, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned these topics in this order: 1) Installing and evaluating travel apps for route planning, 2) Using specific apps together for multi-modal travel planning, 3) Considering additional travel apps for itinerary and communication, 4) Registering with embassies and discussing emergency contacts for solo travel safety, 5) Purchasing and evaluating personal safety devices for hostels, 6) Discussing safety tips and precautions for solo travel in various Southeast Asian locations, 7) Reflecting on specific safety incidents and local transport experiences, 8) Addressing ocean swimming safety and self-defense techniques, 9) Considering nighttime travel safety and local transport options in specific cities, 10) Reviewing embassy registration details and currency exchange experiences, 11) Planning for mentoring new travelers and future trip safety considerations.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 11,
+            "conversation_references": [
+                "Session 172, 180, 182, 184, 186: Travel apps installation and usage",
+                "Session 196, 198: Additional travel apps for itinerary and communication",
+                "Session 382, 386, 394: Embassy registration and emergency contacts",
+                "Session 586, 594, 598: Personal safety devices and hostel safety",
+                "Session 776, 780: Solo travel safety tips in Cambodia",
+                "Session 978, 984: Safety and transport experiences in Ho Chi Minh City",
+                "Session 1166, 1172, 1180, 1182: Ocean swimming safety and self-defense",
+                "Session 1406, 1408, 1410, 1420: Nighttime travel safety and transport in Dalat",
+                "Session 1614, 1616, 1618: Embassy registration and currency exchange in Bangkok",
+                "Session 1808, 1816: Mentoring new travelers and future safety planning"
+            ],
+            "ordering_tested": [
+                "1st: Travel apps installation and usage",
+                "2nd: Additional travel apps for itinerary and communication",
+                "3rd: Embassy registration and emergency contacts",
+                "4th: Personal safety devices and hostel safety",
+                "5th: Solo travel safety tips in Cambodia",
+                "6th: Safety and transport experiences in Ho Chi Minh City",
+                "7th: Ocean swimming safety and self-defense",
+                "8th: Nighttime travel safety and transport in Dalat",
+                "9th: Embassy registration and currency exchange in Bangkok",
+                "10th: Mentoring new travelers and future safety planning"
+            ],
+            "source_chat_ids": [
+                [
+                    172,
+                    180,
+                    182,
+                    184,
+                    186
+                ],
+                [
+                    196,
+                    198
+                ],
+                [
+                    382,
+                    386,
+                    394
+                ],
+                [
+                    586,
+                    594,
+                    598
+                ],
+                [
+                    776,
+                    780
+                ],
+                [
+                    978,
+                    984
+                ],
+                [
+                    1166,
+                    1172,
+                    1180,
+                    1182
+                ],
+                [
+                    1406,
+                    1408,
+                    1410,
+                    1420
+                ],
+                [
+                    1614,
+                    1616,
+                    1618
+                ],
+                [
+                    1808,
+                    1816
+                ]
+            ],
+            "rubric": [
+                "Travel apps installation and usage",
+                "Additional travel apps for itinerary and communication",
+                "Embassy registration and emergency contacts",
+                "Personal safety devices and hostel safety",
+                "Solo travel safety tips in Cambodia",
+                "Safety and transport experiences in Ho Chi Minh City",
+                "Ocean swimming safety and self-defense",
+                "Nighttime travel safety and transport in Dalat",
+                "Embassy registration and currency exchange in Bangkok",
+                "Mentoring new travelers and future safety planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What time did I say my train to Luang Prabang departs on March 22?",
+            "answer": "Your train departs at 10 PM on March 22.",
+            "difficulty": "easy",
+            "question_type": "context date/time",
+            "conversation_reference": "Turn 10: USER asks about planning itinerary for March 22 with a 10 PM train",
+            "key_facts_tested": [
+                "train departure time",
+                "date of travel"
+            ],
+            "source_chat_ids": [
+                450,
+                451
+            ],
+            "rubric": [
+                "LLM response should state: 10 PM"
+            ]
+        },
+        {
+            "question": "What date did I say I was going to the clinic for my shot?",
+            "answer": "You said you were going to the clinic on April 1.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: User mentions appointment date",
+            "key_facts_tested": [
+                "date: April 1",
+                "location: clinic visit"
+            ],
+            "source_chat_ids": [
+                638
+            ],
+            "rubric": [
+                "LLM response should state: April 1"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What vaccines should I consider before traveling to a tropical country?",
+            "instruction_being_tested": "Always include vaccination schedules when I ask about health preparations.",
+            "expected_compliance": "Response should include a timeline or schedule for when each recommended vaccine should be administered.",
+            "compliance_indicators": [
+                "timeline for vaccines",
+                "when to get each vaccine",
+                "schedule details for immunizations",
+                "recommended timing for shots"
+            ],
+            "non_compliance_signs": [
+                "just listing vaccines without timing",
+                "no mention of when to get vaccinated",
+                "general vaccine info without schedule",
+                "only naming vaccines"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                2082,
+                2084
+            ],
+            "rubric": [
+                "LLM response should contain: timeline for vaccines",
+                "LLM response should contain: chedule details for immunizations"
+            ]
+        },
+        {
+            "question": "How much will it cost me to buy the new laptop?",
+            "instruction_being_tested": "Always provide currency conversions when I ask about expenses.",
+            "expected_compliance": "Response should include the cost expressed in multiple currencies, not just a single one.",
+            "compliance_indicators": [
+                "cost given in more than one currency",
+                "conversion between currencies provided",
+                "clear indication of amounts in different monetary units"
+            ],
+            "non_compliance_signs": [
+                "cost given in only one currency",
+                "no mention of other currencies",
+                "lack of conversion details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                242
+            ],
+            "rubric": [
+                "LLM response should contain: cost given in more than one currency",
+                "LLM response should contain: conversion between currencies provided"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much budget do I have allocated for accommodation during the trip?",
+            "answer": "$420 for accommodation",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated accommodation budget amount",
+            "conversation_references": [
+                "Financial & Budget:Budget Allocation: Allocated $400 for accommodation, $300 for transport, $300 for food, $200 for activities.",
+                "Information Update: The budget allocation was slightly adjusted to $420 for accommodation, $280 for transport, $300 for food, and $200 for activities to better reflect current prices."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $400 accommodation budget instead of the updated $420",
+            "source_chat_ids": {
+                "original_info": [
+                    118,
+                    120,
+                    122,
+                    124,
+                    136
+                ],
+                "updated_info": [
+                    240
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $420"
+            ]
+        },
+        {
+            "question": "When is my Tetanus booster appointment scheduled at North Ericshire Clinic?",
+            "answer": "April 1",
+            "difficulty": "easy",
+            "update_type": "appointment rescheduling",
+            "tests_retention_of": "the updated date of the Tetanus booster appointment",
+            "conversation_references": [
+                "Health & Wellness:Vaccinations: Confirmed booster shot for Tetanus scheduled April 5 at North Ericshire Clinic.",
+                "Information Update: The scheduled booster shot for Tetanus was moved up to April 1 at North Ericshire Clinic due to earlier availability."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original April 5 appointment date instead of the updated April 1 date",
+            "source_chat_ids": {
+                "original_info": [
+                    566,
+                    572,
+                    578
+                ],
+                "updated_info": [
+                    638,
+                    640
+                ]
+            },
+            "rubric": [
+                "LLM response should state: April 1"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different cities did I mention meeting Nancy in during my trip?",
+            "answer": "Four cities: Hanoi, Luang Prabang, Siem Reap, and Bangkok.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Nancy's recommendations and activities in Hanoi",
+                "Nancy's suggestions and meetups in Luang Prabang and Siem Reap",
+                "Dinner and activities with Nancy in Bangkok"
+            ],
+            "reasoning_steps": [
+                "Identify mentions of Nancy meeting or recommending activities in Hanoi.",
+                "Recall Nancy's involvement in Luang Prabang and Siem Reap from user messages.",
+                "Note the user mentioning meeting Nancy for dinner and activities in Bangkok."
+            ],
+            "source_chat_ids": [
+                294,
+                300,
+                304,
+                498,
+                512,
+                688,
+                700,
+                894,
+                904,
+                1524,
+                1534,
+                1540
+            ],
+            "rubric": [
+                "LLM response should state: Four cities",
+                "LLM response should state: Hanoi",
+                "LLM response should state: Luang Prabang",
+                "LLM response should state: Siem Reap",
+                "LLM response should state: Bangkok"
+            ]
+        },
+        {
+            "question": "Considering my visa statuses, travel insurance renewal, and planned video call schedule, how should I optimally sequence my Cambodia and Vietnam stays to avoid visa issues and maintain daily calls with Sarah?",
+            "answer": "You should first ensure your Cambodia e-visa is approved before entering Cambodia, plan your stay there within the 30-day validity, then move to Vietnam where your 15-day visa exemption covers your visit. Renew your travel insurance to cover the entire combined duration. Schedule your daily 10-minute video calls at 8 PM GMT or adjust for time zones to maintain consistency. Sequence your Cambodia stay before Vietnam to avoid visa expiration conflicts, and align your insurance renewal to cover both stays without gaps, ensuring uninterrupted communication with Sarah.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Cambodia e-visa application and approval concerns",
+                "Vietnam 15-day visa exemption and itinerary planning",
+                "Travel insurance renewal and coverage duration",
+                "Daily video call scheduling and time zone considerations",
+                "Visa extension and expiration concerns for Vietnam and Thailand"
+            ],
+            "reasoning_steps": [
+                "Identify the validity period and approval status of the Cambodia e-visa and plan to enter Cambodia within that window.",
+                "Confirm the 15-day visa exemption period for Vietnam and ensure the stay there fits within this timeframe without overlap or visa expiration.",
+                "Incorporate the travel insurance renewal period to cover the entire duration of both Cambodia and Vietnam stays to avoid uninsured gaps.",
+                "Analyze the daily video call schedule at 8 PM GMT, adjusting for local time zones in Cambodia and Vietnam to maintain consistent communication with Sarah.",
+                "Sequence the travel itinerary to enter Cambodia first, complete the stay within the e-visa validity, then proceed to Vietnam within the visa exemption period, ensuring insurance coverage and call schedule continuity."
+            ],
+            "source_chat_ids": [
+                129,
+                134,
+                346,
+                358,
+                740,
+                946,
+                1366,
+                1766
+            ],
+            "rubric": [
+                "LLM response should state: You should first ensure your Cambodia e-visa is approved before entering Cambodia",
+                "LLM response should state: plan your stay in Cambodia within the 30-day validity",
+                "LLM response should state: move to Vietnam where your 15-day visa exemption covers your visit",
+                "LLM response should state: Renew your travel insurance to cover the entire combined duration",
+                "LLM response should state: Schedule your daily 10-minute video calls at 8 PM GMT or adjust for time zones to maintain consistency",
+                "LLM response should state: Sequence your Cambodia stay before Vietnam to avoid visa expiration conflicts",
+                "LLM response should state: align your insurance renewal to cover both stays without gaps"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to grab a meal soon. What are some good options I should consider?",
+            "preference_being_tested": "I prefer street food stalls over restaurants for authentic meals and cost savings, spending under $5 per meal.",
+            "expected_compliance": "Response should focus on recommending street food stalls or similar informal food vendors offering authentic meals within a low price range, rather than suggesting restaurants or pricier options.",
+            "compliance_indicators": [
+                "mentions street food stalls or similar venues",
+                "suggests meals priced under $5",
+                "emphasizes authenticity in informal food settings",
+                "avoids recommending formal restaurants or expensive meals"
+            ],
+            "non_compliance_signs": [
+                "recommends restaurants or formal dining",
+                "suggests meals above $5",
+                "ignores authenticity or informal food venues",
+                "provides generic or unrelated meal options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                330,
+                336,
+                338
+            ],
+            "rubric": [
+                "LLM response should contain: mentions street food stalls or similar venues",
+                "LLM response should contain: avoids recommending formal restaurants or expensive meals"
+            ]
+        },
+        {
+            "question": "I'm planning to visit several major sites over a few days. How should I go about arranging my tickets or passes?",
+            "preference_being_tested": "I prefer multi-day passes for major sites to maximize experience despite higher upfront cost.",
+            "expected_compliance": "Response should suggest or acknowledge multi-day passes as a viable option for visiting multiple sites over several days, rather than focusing solely on single-day tickets or alternative ticketing methods.",
+            "compliance_indicators": [
+                "mentions multi-day passes as an option",
+                "explains how multi-day passes can be used across multiple days",
+                "provides advice on using passes to cover several days",
+                "does not dismiss multi-day passes outright"
+            ],
+            "non_compliance_signs": [
+                "only recommends single-day tickets",
+                "ignores multi-day pass options",
+                "suggests alternatives without mentioning multi-day passes",
+                "focuses solely on cost-saving single-day options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "ticketing strategy",
+            "source_chat_ids": [
+                724,
+                730,
+                736
+            ],
+            "rubric": [
+                "LLM response should contain: mentions multi-day passes as an option",
+                "LLM response should contain: provides advice on using passes to cover several days"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary that captures all the important aspects and developments related to my travel planning and experiences, weaving together the budgeting, health precautions, physical activities, cultural learning, and insurance considerations I've discussed throughout my trip?",
+            "ideal_summary": "The user\u2019s travel planning and experiences encompass a multifaceted approach integrating budgeting, health management, physical activity, cultural engagement, and insurance preparedness. Initially, the user set a daily expense cap using the Trail Wallet app, establishing detailed budgets with categorized spending limits and strategies to incorporate larger expenses like flights and accommodation into the overall budget. The assistant provided guidance on effective expense categorization, real-time tracking, and budget adjustments based on spending patterns. The user also sought advice on affordable local food options and how to interpret spending data from the app to stay within budget. Health precautions were emphasized, particularly hydration strategies in hot climates like Siem Reap, where electrolyte tablets were recommended as a supplement but not a standalone solution. The assistant detailed comprehensive hydration methods, sun protection including sunscreen use, and access to local medical facilities. Physical activity was balanced with rest, with tailored schedules combining walking, biking, and language learning to maintain fitness without exhaustion. Cultural immersion was supported through curated resources on local history, museums, and literature to enrich the travel experience. Finally, the user\u2019s concerns about travel insurance were addressed, including evaluating coverage adequacy, filing claims for both small and significant losses, and weighing the benefits of filing claims for minor items. Throughout, the assistant integrated practical advice, example scenarios, and strategic planning to help the user manage the complexities of travel effectively, ensuring a well-rounded, safe, and enriching journey.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 9,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                57,
+                61,
+                67,
+                253,
+                263,
+                545,
+                551,
+                555,
+                757,
+                761,
+                771,
+                1151,
+                1161,
+                1165,
+                1249,
+                1251,
+                1299,
+                1309,
+                1315,
+                1595,
+                1601,
+                1609,
+                1787,
+                1793,
+                1795,
+                1801
+            ],
+            "rubric": [
+                "LLM response should contain: you set a daily expense cap using the Trail Wallet app, establishing detailed budgets with categorized spending limits",
+                "LLM response should contain: you set strategies to incorporate larger expenses like flights and accommodation into the overall budget",
+                "LLM response should contain: I provided guidance on effective expense categorization, real-time tracking, and budget adjustments based on spending patterns",
+                "LLM response should contain: you also sought advice on affordable local food options and how to interpret spending data from the app to stay within budget",
+                "LLM response should contain: Health precautions were emphasized, particularly hydration strategies in hot climates like Siem Reap, where electrolyte tablets were recommended as a supplement",
+                "LLM response should contain: I detailed comprehensive hydration methods, sun protection including sunscreen use, and access to local medical facilities",
+                "LLM response should contain: Physical activity was balanced with rest, with tailored schedules combining walking, biking, and language learning to maintain fitness without exhaustion",
+                "LLM response should contain: Cultural immersion was supported through curated resources on local history, museums, and literature to enrich the travel experience",
+                "LLM response should contain: your concerns about travel insurance were addressed, including evaluating coverage adequacy, filing claims for both small and significant losses"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how I can keep in touch with my family while traveling?",
+            "ideal_summary": "You can keep in touch with your family while traveling by scheduling regular video calls, sending daily brief text updates, sharing photos and videos, and using group chats or social media to share your experiences. It's helpful to set a consistent schedule, like weekly calls, and supplement these with shorter messages to reassure them about your safety and keep them involved in your journey.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 309,
+            "key_elements_tested": [
+                "basic communication methods",
+                "regular update scheduling",
+                "balancing travel and family contact"
+            ],
+            "synthesis_required": "Combining straightforward advice from multiple sessions into a concise overview",
+            "source_chat_ids": [
+                309,
+                313,
+                321
+            ],
+            "rubric": [
+                "LLM response should contain: You can keep in touch with your family while traveling by scheduling regular video calls",
+                "LLM response should contain: You can keep in touch with your family while traveling by sending daily brief text updates",
+                "LLM response should contain: You can keep in touch with your family while traveling by sharing photos and videos",
+                "LLM response should contain: You can keep in touch with your family while traveling by using group chats or social media to share your experiences",
+                "LLM response should contain: helpful to set a consistent schedule, like weekly calls, and supplement these with shorter messages to reassure them about your safety and keep them involved in your journey"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I booked my stay at Lub d Silom did I part ways with Tammy at the bus station?",
+            "answer": "I booked my stay at Lub d Silom from March 10-13, and I parted ways with Tammy at the bus station on April 19, so 37 days passed between booking the stay and parting ways with Tammy.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 10-13: booked stay at Lub d Silom",
+                "April 19: parted ways with Tammy"
+            ],
+            "conversation_references": [
+                "Session 144: booking Lub d Silom",
+                "Session 1444: parting ways with Tammy"
+            ],
+            "calculation_required": "April 19 - March 13 = 37 days",
+            "source_chat_ids": {
+                "first_event": [
+                    144
+                ],
+                "second_event": [
+                    1444,
+                    1450,
+                    1452,
+                    1458
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 37 days",
+                "LLM response should state: from March 13 till April 19"
+            ]
+        },
+        {
+            "question": "How many days passed between when I got my Cambodia e-visa approved and the start of my stay in Siem Reap?",
+            "answer": "3 days passed between the e-visa approval on March 25 and the start of the stay in Siem Reap on March 28.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 25: e-visa approval",
+                "March 28: start of stay in Siem Reap"
+            ],
+            "conversation_references": [
+                "Session 1: e-visa approval timing",
+                "Session 2: Siem Reap stay dates"
+            ],
+            "calculation_required": "March 28 - March 25 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    646
+                ],
+                "second_event": [
+                    646,
+                    654,
+                    660
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 3 days",
+                "LLM response should state: from March 25 till March 28"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,590 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Taylor's paramedic background and how it influences the project?",
+            "ideal_response": "Based on the provided chat, there is no information related to Taylor's paramedic background beyond the brief mention.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Taylor's paramedic background is mentioned but no further details are provided",
+            "plan_reference": "Batch 1, Bullet 2",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Taylor's paramedic background beyond the brief mention."
+            ]
+        },
+        {
+            "question": "What specific accessibility audit results were found during the frontend performance improvements?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific accessibility audit results.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Accessibility audits are mentioned but no detailed results are provided",
+            "plan_reference": "Batch 8, Bullet 29",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific accessibility audit results."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I worked with restaurant datasets before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never worked with any restaurant datasets, but you also described working with a dataset that includes 10,000+ restaurant entries and user ratings. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with restaurant datasets",
+            "conversation_references": [
+                "Session 78: Never worked with restaurant datasets",
+                "Session 24: Working with restaurant dataset"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    78
+                ],
+                "second_statement": [
+                    24
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have used the restaurant dataset",
+                "LLM response should mention: You also said you have never used restaurant datasets",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever set up a CI/CD pipeline using GitHub Actions with automated tests and Docker image builds?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never set up any CI/CD pipelines or automated deployments before, but you also mentioned implementing a CI/CD pipeline using GitHub Actions with automated tests and Docker image builds. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with setting up CI/CD pipelines",
+            "conversation_references": [
+                "Session 592: Never set up CI/CD pipelines",
+                "Session 482: Implemented CI/CD pipeline with GitHub Actions"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    592
+                ],
+                "second_statement": [
+                    482
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have implemented a CI/CD pipeline",
+                "LLM response should mention: You also said you have never set up CI/CD pipelines",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about recommendation system development progress in order (mention 8 items in order)?",
+            "answer": "Your discussions about recommendation system development progressed in this order: 1) Implementing user-based collaborative filtering with cosine similarity and handling missing ratings, 2) Creating a Flask endpoint to serve top recommendations per user, 3) Defining helper functions to retrieve user ratings and top-rated items, 4) Building a hybrid recommendation system combining collaborative and content-based filtering with tuned weights and caching optimizations, 5) Integrating user preferences into the hybrid model and addressing unit test coverage, 6) Refining the hybrid recommendation scoring formula with weighted adjustments, 7) Exploring testing of different hybrid weight combinations and their impact on accuracy, 8) Considering evaluation metrics like F1-score and AUC-ROC to optimize model performance.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 20",
+                "chat_id: 82",
+                "chat_id: 84",
+                "chat_id: 176",
+                "chat_id: 330",
+                "chat_id: 432",
+                "chat_id: 332, 334",
+                "chat_id: 678"
+            ],
+            "ordering_tested": [
+                "1st: User-based collaborative filtering implementation",
+                "2nd: Flask recommendations endpoint",
+                "3rd: Helper function definitions",
+                "4th: Hybrid recommendation system with caching",
+                "5th: User preferences integration and testing",
+                "6th: Hybrid scoring formula refinement",
+                "7th: Testing weight combinations and accuracy impact",
+                "8th: Evaluation metrics for performance optimization"
+            ],
+            "complexity_factors": [
+                "requires reconstruction of mention sequence across multiple sessions",
+                "involves multiple technical aspects of recommendation systems",
+                "requires tracking evolution of user focus and technical depth",
+                "demands sophisticated pattern recognition and ordering"
+            ],
+            "source_chat_ids": [
+                20,
+                82,
+                84,
+                176,
+                330,
+                432,
+                332,
+                334,
+                678
+            ],
+            "rubric": [
+                "LLM response should mention: User-based collaborative filtering implementation",
+                "LLM response should mention: Flask recommendations endpoint",
+                "LLM response should mention: Helper function definitions",
+                "LLM response should mention: Hybrid recommendation system with caching",
+                "LLM response should mention: User preferences integration and testing",
+                "LLM response should mention: Hybrid scoring formula refinement",
+                "LLM response should mention: Testing weight combinations and accuracy impact",
+                "LLM response should mention: Evaluation metrics for performance optimization"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of improving and securing my Flask API throughout our conversations in order (mention 8 items in total)?",
+            "answer": "You mentioned aspects of improving and securing your Flask API in this order: 1) Implementing the /recommendations endpoint with collaborative filtering, 2) Writing and reviewing unit tests for the recommender system, 3) Adding pagination support to the /recommendations endpoint, 4) Creating a new authentication endpoint using JWT tokens with error handling, 5) Securing endpoints with JWT authentication and handling request header issues, 6) Optimizing API performance using caching, 7) Configuring Gunicorn for production deployment, and 8) Addressing task queue backlogs and Redis load considerations.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 48: /recommendations endpoint implementation",
+                "Session 86: Unit tests for recommender system",
+                "Session 216: Pagination support for recommendations",
+                "Session 244: JWT authentication endpoint with error handling",
+                "Session 320: JWT authentication for endpoints and header issues",
+                "Session 404: API performance optimization with caching",
+                "Session 540: Gunicorn configuration for production",
+                "Session 440 & 442: Celery task queue and Redis optimization"
+            ],
+            "ordering_tested": [
+                "1st: /recommendations endpoint implementation",
+                "2nd: Unit testing the recommender system",
+                "3rd: Pagination support for recommendations",
+                "4th: JWT authentication endpoint creation",
+                "5th: Securing endpoints with JWT and header fixes",
+                "6th: Caching to improve API performance",
+                "7th: Gunicorn production configuration",
+                "8th: Task queue and Redis load optimization"
+            ],
+            "source_chat_ids": [
+                48,
+                86,
+                216,
+                244,
+                320,
+                404,
+                540,
+                440
+            ],
+            "rubric": [
+                "LLM response should mention: /recommendations endpoint implementation",
+                "LLM response should mention: Unit testing the recommender system",
+                "LLM response should mention: Pagination support for recommendations",
+                "LLM response should mention: JWT authentication endpoint creation",
+                "LLM response should mention: Securing endpoints with JWT and header fixes",
+                "LLM response should mention: Caching to improve API performance",
+                "LLM response should mention: Gunicorn production configuration",
+                "LLM response should mention: Task queue and Redis load optimization"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How did you recommend structuring the backend and frontend technologies to ensure smooth data flow and secure user interactions in my project?",
+            "answer": "I recommended using a backend built with a specific version of Python and Flask to handle API requests and database interactions with PostgreSQL, while the frontend should use a particular version of React to fetch and display data efficiently. For security, I suggested implementing user authentication with session management and JWT tokens, along with proper error handling and API protection measures. This setup ensures robust data storage, secure communication, and a user-friendly interface.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: initial project setup details, schema design, authentication and security measures, frontend data fetching and display, error handling, and project timeline planning",
+            "key_facts_tested": [
+                "Python version",
+                "Flask version",
+                "React version",
+                "PostgreSQL version",
+                "user authentication approach",
+                "API security methods",
+                "frontend data fetching and error handling"
+            ],
+            "extraction_challenge": "LLM must integrate scattered technical details about backend and frontend versions, database choice, authentication and security strategies, and frontend implementation from different conversation parts to explain the recommended project architecture and security approach",
+            "source_chat_ids": [
+                0,
+                1,
+                3,
+                5
+            ],
+            "rubric": [
+                "LLM response should mention: Python version",
+                "LLM response should mention: Flask version",
+                "LLM response should mention: React version",
+                "LLM response should mention: PostgreSQL version",
+                "LLM response should mention: user authentication approach",
+                "LLM response should mention: API security methods",
+                "LLM response should mention: frontend data fetching and error handling"
+            ]
+        },
+        {
+            "question": "How many entries and ratings did I say my dataset includes at the start?",
+            "answer": "You said your dataset includes over 10,000 restaurant entries and 50,000 user ratings.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 1: Initial dataset description by user",
+            "key_facts_tested": [
+                "number of entries: 10,000+",
+                "number of ratings: 50,000"
+            ],
+            "source_chat_ids": [
+                24
+            ],
+            "rubric": [
+                "LLM response should mention: 10,000+ restaurant entries",
+                "LLM response should mention: 50,000 user ratings"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you show me the available options for interacting with the API?",
+            "instruction_being_tested": "Always include the API endpoint path when I ask about available endpoints.",
+            "expected_compliance": "Response should list the API endpoint paths explicitly when describing available options.",
+            "compliance_indicators": [
+                "explicit mention of endpoint paths",
+                "clear listing of API paths",
+                "endpoint URLs included in the response"
+            ],
+            "non_compliance_signs": [
+                "only endpoint names without paths",
+                "general descriptions without paths",
+                "no mention of specific endpoint URLs"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                164,
+                166
+            ],
+            "rubric": [
+                "LLM response should mention: a list of API endpoint paths"
+            ]
+        },
+         {
+            "question": "How can I make sure my evaluation results stay consistent every time I run the tests?",
+            "instruction_being_tested": "Always include the random seed value when I ask about evaluation reproducibility.",
+            "expected_compliance": "Response should include the random seed value as part of the explanation or example to ensure consistent evaluation results.",
+            "compliance_indicators": [
+                "mention of a fixed seed number",
+                "code example setting a seed",
+                "explicit reference to controlling randomness",
+                "steps to guarantee identical outcomes"
+            ],
+            "non_compliance_signs": [
+                "no mention of any seed or fixed value",
+                "only general advice without specifics",
+                "ignoring the need for controlling randomness"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                752,
+                754
+            ],
+            "rubric": [
+                "LLM response should mention: a specific random seed value should be included"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the maxmemory setting I should use in my Redis configuration to minimize cache evictions?",
+            "answer": "1GB",
+            "difficulty": "easy",
+            "update_type": "configuration_parameter_increase",
+            "tests_retention_of": "maxmemory setting increased to 1GB for Redis cache",
+            "conversation_references": [
+                "Identified slow Redis cache misses; increased maxmemory to 512MB to reduce evictions.",
+                "The Redis cache now has a maxmemory setting of 1GB, further reducing cache evictions and improving performance."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the maxmemory setting as 512MB instead of 1GB",
+            "source_chat_ids": {
+                "original_info": [
+                    364
+                ],
+                "updated_info": [
+                    392
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 1GB is the current maxmemory setting for Redis"
+            ]
+        },
+        {
+            "question": "What is the average API response time under 1,000 concurrent users based on my latest performance tuning?",
+            "answer": "180ms",
+            "difficulty": "easy",
+            "update_type": "performance_metric_update",
+            "tests_retention_of": "updated average API response time under load",
+            "conversation_references": [
+                "Achieved average API response time of 220ms under 1,000 concurrent users load tested with Locust 2.15.1.",
+                "The average API response time is now 180ms under 1,000 concurrent users after further performance tuning."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 220ms response time instead of the updated 180ms",
+            "source_chat_ids": {
+                "original_info": [
+                    762
+                ],
+                "updated_info": [
+                    830
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 180ms is the current average API response time under 1,000 concurrent users"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+         {
+            "question": "Given my restaurant dataset with user ratings, feature vectors with missing values, and my migration script using TF-IDF normalization, how should I optimize the entire pipeline to ensure accurate, memory-efficient similarity calculations and seamless schema migration?",
+            "answer": "You should first handle missing values in the feature_vector column by filling or dropping them to avoid errors during TF-IDF calculation. Then, use TfidfVectorizer to generate normalized vectors from cleaned textual features. For user similarity, create a sparse user-rating matrix filling missing ratings with zeros to reduce memory usage and compute cosine similarity efficiently. Finally, during migration, batch insert the normalized TF-IDF vectors as JSONB into the new schema to maintain performance and data integrity across large datasets.",
+            "difficulty": "hard",
+            "reasoning_type": "advanced_optimization",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id: 24 - initial data modeling and similarity calculation issues",
+                "chat_id: 134 - TF-IDF vector calculation and KeyError debugging",
+                "chat_id: 137 - handling missing values in feature_vector",
+                "chat_id: 198 - migration script using TF-IDF and normalization",
+                "chat_id: 199 - improving migration script with batch inserts and efficiency"
+            ],
+            "reasoning_steps": [
+                "Identify that missing values in feature_vector must be handled before TF-IDF calculation to prevent errors and ensure data quality.",
+                "Use TfidfVectorizer to generate normalized feature vectors from cleaned textual data, ensuring vectors are suitable for similarity computations.",
+                "Construct a sparse user-rating matrix from merged restaurant and ratings data, filling missing ratings with zeros to optimize memory and computational efficiency.",
+                "Calculate cosine similarity on the sparse matrix to obtain accurate user similarity scores without excessive memory consumption.",
+                "During migration, batch insert the normalized TF-IDF vectors as JSONB into the new schema to maintain performance and enable efficient querying in the database."
+            ],
+            "source_chat_ids": [
+                24,
+                134,
+                137,
+                198,
+                199
+            ],
+            "rubric": [
+                "LLM response should mention: handle missing values in the feature_vector column by filling or dropping them to avoid errors during TF-IDF calculation.",
+                "LLM response should mention: use TfidfVectorizer to generate normalized vectors from cleaned textual features.",
+                "LLM response should mention: create a sparse user-rating matrix filling missing ratings with zeros to reduce memory usage and compute cosine similarity efficiently.",
+                "LLM response should mention: batch insert the normalized TF-IDF vectors as JSONB into the new schema to maintain performance and data integrity across large datasets."
+            ]
+        },
+        {
+            "question": "What are the hybrid weights I used for collaborative and content-based filtering across my implementations?",
+            "answer": "I used weights of 0.7 collaborative and 0.3 content-based in one implementation, and 0.6 collaborative and 0.4 content-based in another.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "hybrid recommendation with weighted average 0.7/0.3",
+                "hybrid recommendation tuned to 0.6/0.4"
+            ],
+            "reasoning_steps": [
+                "Identify the hybrid weights mentioned in the first hybrid recommendation implementation.",
+                "Identify the hybrid weights mentioned in the second hybrid recommendation implementation.",
+                "Compare the two sets of weights to summarize the values used."
+            ],
+            "source_chat_ids": [
+                132,
+                176
+            ],
+            "rubric": [
+                "LLM response should mention: weights of 0.7 collaborative and 0.3 content-based",
+                "LLM response should mention: weights of 0.6 collaborative and 0.4 content-based"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "How should I manage token expiration and refreshing in my authentication system to keep it running smoothly?",
+            "preference_being_tested": "I prefer JWT with short-lived access tokens and refresh tokens for secure, scalable authentication.",
+            "expected_compliance": "Response should include handling of short-lived access tokens and use of refresh tokens to maintain security and scalability, aligning with the user's approach.",
+            "compliance_indicators": [
+                "mentions short-lived access tokens",
+                "includes refresh token usage",
+                "explains token expiration handling",
+                "provides example or strategy for refreshing tokens"
+            ],
+            "non_compliance_signs": [
+                "ignores token expiration",
+                "does not mention refresh tokens",
+                "suggests long-lived tokens without refresh",
+                "provides insecure or non-scalable token management advice"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation detail",
+            "source_chat_ids": [
+                296
+            ],
+            "rubric": [
+                "LLM response should mention: short-lived access tokens",
+                "LLM response should mention: use of refresh tokens",
+                "LLM response should mention: JWT authentication"
+            ]
+        },
+        {
+            "question": "What are some effective strategies I can use to improve the speed of my user preferences API?",
+            "preference_being_tested": "I prefer caching user preferences to meet sub-200ms API response targets.",
+            "expected_compliance": "Response should include caching user preferences as a recommended strategy to improve API speed, reflecting the user's preference for caching to achieve fast response times.",
+            "compliance_indicators": [
+                "mentions caching user preferences",
+                "explains how caching can reduce response time",
+                "suggests implementation approaches for caching",
+                "focuses on techniques to speed up user preferences retrieval"
+            ],
+            "non_compliance_signs": [
+                "ignores caching as an option",
+                "only suggests database query optimizations without caching",
+                "recommends unrelated performance improvements",
+                "fails to address user preferences API specifically"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                382,
+                384
+            ],
+            "rubric": [
+                "LLM response should mention: caching user preferences",
+                "LLM response should mention: techniques to speed up user preferences retrieval"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize what I learned about implementing and improving user-based collaborative filtering and recommendation systems?",
+            "ideal_summary": "You explored implementing user-based collaborative filtering using cosine similarity, addressing issues like handling missing ratings and normalizing data. You also worked on optimizing recommendation systems by caching similarity matrices with Redis, improving scheduling for updates, and integrating content-based filtering with TF-IDF vectors. Additionally, you developed a Flask API to serve recommendations efficiently and considered evaluation metrics like precision and recall to assess model performance.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 20,
+            "key_elements_tested": [
+                "basic concept overview",
+                "combining related improvements",
+                "simple narrative of development"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a coherent summary",
+            "source_chat_ids": [
+                20,
+                21,
+                42,
+                43,
+                82,
+                83,
+                85,
+                130,
+                131,
+                132,
+                133,
+                176,
+                177,
+                200,
+                201
+            ],
+            "rubric": [
+                "LLM response should mention: user-based collaborative filtering using cosine similarity",
+                "LLM response should mention: handling missing ratings and normalizing data",
+                "LLM response should mention: caching similarity matrices with Redis",
+                "LLM response should mention: integrating content-based filtering with TF-IDF vectors",
+                "LLM response should mention: developing a Flask API to serve recommendations",
+                "LLM response should mention: evaluation metrics like precision and recall"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the entire process involved in developing and optimizing my recommendation system, covering all the key challenges, solutions, technical approaches, and improvements discussed across our conversations?",
+            "ideal_summary": "The development and optimization of the recommendation system involved multiple interconnected stages addressing both collaborative and content-based filtering techniques. Initially, the focus was on implementing user-based collaborative filtering using cosine similarity, where challenges such as handling missing ratings, normalizing data, and calculating weighted averages for predictions were identified and addressed through matrix representations and selective similarity computations. Subsequently, scalability and efficiency became priorities, leading to the adoption of sparse matrices, caching strategies using Redis, and robust scheduling mechanisms like APScheduler and cron jobs to update similarity matrices reliably. The integration of content-based filtering was enhanced by leveraging TF-IDF vectorization of restaurant descriptions, with cosine similarity applied to these vectors to compute content scores. A hybrid recommendation approach was then formulated, combining collaborative and content-based scores with tunable weights, refined through A/B testing. To reduce API response times, data loading was optimized by caching datasets and similarity matrices in Redis, avoiding redundant computations, and employing efficient data structures and vectorized operations. The system's recommendation endpoint was improved by precomputing similarity matrices, validating inputs, and ensuring unique, relevance-sorted recommendations. Additionally, database integration was incorporated to fetch user ratings and restaurant details dynamically, enhancing recommendation accuracy. Error handling and logging were fortified in batch update jobs to ensure reliability and maintainability. Finally, evaluation metrics such as precision@5 and recall@5 were used to assess model performance, with suggestions to improve through feature engineering, model tuning, cross-validation, and balanced metric consideration. Throughout, the process demonstrated a sophisticated interplay of algorithmic refinement, system architecture optimization, and practical deployment considerations, culminating in a scalable, efficient, and accurate hybrid recommendation system.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                20,
+                21,
+                42,
+                43,
+                82,
+                83,
+                85,
+                130,
+                131,
+                132,
+                133,
+                176,
+                177,
+                200,
+                201
+            ],
+            "rubric": [
+                "LLM response should mention: user-based collaborative filtering using cosine similarity",
+                "LLM response should mention: handling missing ratings and normalizing data",
+                "LLM response should mention: caching similarity matrices with Redis",
+                "LLM response should mention: integrating content-based filtering with TF-IDF vectors",
+                "LLM response should mention: developing a Flask API to serve recommendations",
+                "LLM response should mention: evaluation metrics like precision and recall",
+                "LLM response should mention: scalability and efficiency improvements",
+                "LLM response should mention: hybrid recommendation approach with tunable weights"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between finishing my collaborative filtering prototype and my internal demo of the hybrid recommender system?",
+            "answer": "There are 16 days between finishing the collaborative filtering prototype by January 20 and the internal demo planned for February 5.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 20: internal demo with collaborative filtering prototype ready",
+                "February 5: internal demo of hybrid recommender system"
+            ],
+            "conversation_references": [
+                "Session 1: Planning for first internal demo",
+                "Session 2: Planning for hybrid recommender system demo"
+            ],
+            "calculation_required": "February 5 - January 20 = 16 days",
+            "source_chat_ids": {
+                "first_event": [
+                    46
+                ],
+                "second_event": [
+                    148
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 16 days between the two events",
+                "LLM response should state: from January 20 till February 5"
+            ]
+        },
+        {
+            "question": "How many days are there between when I started implementing TF-IDF vectorization for content-based filtering and the planned beta release date for internal testing?",
+            "answer": "There are 135 days between when you started implementing TF-IDF vectorization (inferred from the Sprint 2 context, typically early November 2023) and the planned beta release on February 25, 2024. This calculation assumes Sprint 2 goals were set around early November 2023, making the duration from early November to late February approximately 135 days.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "Sprint 2 implementation start (inferred early November 2023)",
+                "Beta release planned for February 25, 2024"
+            ],
+            "conversation_references": [
+                "chat_id 102: Sprint 2 goals and TF-IDF implementation",
+                "chat_id 212: Beta release planning for February 25, 2024"
+            ],
+            "calculation_required": "Calculate days from early November 2023 (Sprint 2 start) to February 25, 2024 (beta release)",
+            "source_chat_ids": {
+                "first_event": [
+                    102
+                ],
+                "second_event": [
+                    212
+                ]
+            },
+            "rubric": [
+                "LLM response should state: approximately 135 days between the two events"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,599 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Michael\u2019s background and his career before retirement?",
+            "ideal_response": "Based on the provided chat, there is no information related to Michael\u2019s background or career before retirement.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Michael is mentioned as a retired physicist but no background details are provided",
+            "plan_reference": "Batch 1, Bullet 9",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Michael's background or career before retirement."
+            ]
+        },
+        {
+            "question": "What specific topics will be covered in the July 10 workshop on science storytelling?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific topics covered in the July 10 workshop on science storytelling.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Workshop date and invitation mentioned but no topic details provided",
+            "plan_reference": "Batch 10, Bullet 18",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific topics covered in the July 10 workshop on science storytelling."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever met Michael, the retired physicist, at the Saint Helena Science Museum?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you interview Michael monthly at the Saint Helena Science Museum, but you also mentioned that you've never met him there. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Michael at the Saint Helena Science Museum",
+            "conversation_references": [
+                "Session 30: Interviewing Michael at the museum",
+                "Session 124: Never met Michael at the museum"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    30
+                ],
+                "second_statement": [
+                    124
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you interview Michael monthly at the Saint Helena Science Museum",
+                "LLM response should mention: you mentioned you've never met him at the museum.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever declined Ronald's request to borrow my laptop?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said that you declined Ronald's request to borrow your laptop, but you also mentioned that you've never declined his request. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Declining Ronald's laptop borrowing requests",
+            "conversation_references": [
+                "Session 172: Declined Ronald's request",
+                "Session 238: Never declined Ronald's request"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    172
+                ],
+                "second_statement": [
+                    238
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you declined Ronald's request to borrow your laptop",
+                "LLM response should mention: you mentioned you've never declined his request.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different laptop-related topics throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the laptop-related topics in this order: 1) First, looking for a lightweight laptop suitable for work, travel, and entertainment and asking for recommendations (chat_ids 26, 32), 2) Then, discussing testing laptop portability and meeting at The Green Bean (chat_ids 150, 152, 240), 3) Next, considering workshops and skill growth related to digital storytelling and video editing (chat_ids 246, 248, 250, 482), 4) After that, evaluating laptop specs and performance benchmarks along with writing goals (chat_ids 376, 384), 5) Finally, deciding between laptop options with budget considerations and meeting to finalize presentations (chat_ids 572, 678, 794, 796, 798, 920, 1020, 1022).",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 1: Initial laptop needs and recommendations",
+                "Session 2: Testing portability and meeting at The Green Bean",
+                "Session 3: Workshops and skill development",
+                "Session 4: Laptop specs and writing performance",
+                "Session 5: Final laptop choice and presentation preparation"
+            ],
+            "ordering_tested": [
+                "1st: Initial laptop needs and recommendations",
+                "2nd: Testing portability and meeting at The Green Bean",
+                "3rd: Workshops and skill development",
+                "4th: Laptop specs and writing performance",
+                "5th: Final laptop choice and presentation preparation"
+            ],
+            "source_chat_ids": [
+                [
+                    26,
+                    32
+                ],
+                [
+                    150,
+                    152,
+                    240
+                ],
+                [
+                    246,
+                    248,
+                    250,
+                    482
+                ],
+                [
+                    376,
+                    384
+                ],
+                [
+                    572,
+                    678,
+                    794,
+                    796,
+                    798,
+                    920,
+                    1020,
+                    1022
+                ]
+            ],
+            "rubric": [
+                "LLM response should include: Initial laptop needs and recommendations",
+                "LLM response should include: Testing portability and meeting at The Green Bean",
+                "LLM response should include: Workshops and skill development",
+                "LLM response should include: Laptop specs and writing performance",
+                "LLM response should include: Final laptop choice and presentation preparation"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different considerations and discussions about choosing and using a laptop throughout our conversations, in order (mention 12 items)?",
+            "answer": "You mentioned laptop-related considerations in this order: 1) Initial suggestion to attend a writing workshop and asking about a laptop for writing on the go, 2) Discussion of software stability and MacBook Air user experiences, 3) Debating between specific laptop models within a budget, 4) Planning to visit a store to test laptops in person, 5) Concerns about software compatibility for Final Cut Pro and laptop recommendations, 6) Weighing price concerns and financing options for MacBook Air and Lenovo ThinkPad, 7) Discussing a walk with a colleague to decide on a laptop for work and travel, 8) Prioritizing software compatibility versus battery life after project approval, 9) Reviewing advanced editing techniques and considering hardware upgrades like RAM or eGPU, 10) Finalizing laptop choice leaning towards MacBook Air and asking about accessories, 11) Considering laptops for heavy workload and travel after receiving feedback on presentations, 12) Reflecting on colleague feedback and deciding how to integrate it into presentations.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 12,
+            "conversation_references": [
+                "Session 22: Writing workshop and laptop for writing",
+                "Session 132: Software stability and MacBook Air",
+                "Session 242: Choosing between Dell and Lenovo within budget",
+                "Session 244: Visiting store to test laptops",
+                "Session 364: Software compatibility for Final Cut Pro",
+                "Sessions 366, 368: Price concerns and financing options",
+                "Session 480: Walk with colleague to decide laptop",
+                "Sessions 574, 576: Prioritizing software compatibility vs battery life",
+                "Sessions 680, 682, 684: Editing techniques and hardware upgrades",
+                "Session 576: Final laptop choice and accessories",
+                "Sessions 922, 926: Laptop for heavy workload and travel",
+                "Sessions 1016, 1018: Feedback integration and presentation prep"
+            ],
+            "ordering_tested": [
+                "1st: Writing workshop and laptop needs",
+                "2nd: Software stability and MacBook Air",
+                "3rd: Model comparison within budget",
+                "4th: In-person laptop testing",
+                "5th: Software compatibility concerns",
+                "6th: Price and financing considerations",
+                "7th: Collaborative decision walk",
+                "8th: Prioritizing features after project approval",
+                "9th: Advanced editing and hardware upgrades",
+                "10th: Finalizing choice and accessories",
+                "11th: Heavy workload and travel needs",
+                "12th: Feedback and presentation refinement"
+            ],
+            "source_chat_ids": [
+                22,
+                132,
+                242,
+                244,
+                364,
+                366,
+                368,
+                480,
+                574,
+                576,
+                680,
+                682,
+                684,
+                922,
+                926,
+                1016,
+                1018
+            ],
+            "rubric": [
+                "LLM response should include: Writing workshop and laptop for writing",
+                "LLM response should include: Software stability and MacBook Air",
+                "LLM response should include: Choosing between Dell and Lenovo within budget",
+                "LLM response should include: Visiting store to test laptops",
+                "LLM response should include: Software compatibility for Final Cut Pro",
+                "LLM response should include: Price concerns and financing options",
+                "LLM response should include: Walk with colleague to decide laptop",
+                "LLM response should include: Prioritizing software compatibility vs battery life",
+                "LLM response should include: Editing techniques and hardware upgrades",
+                "LLM response should include: Final laptop choice and accessories",
+                "LLM response should include: Laptop for heavy workload and travel",
+                "LLM response should include: Feedback integration and presentation prep"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When and where did I say I first met Vickie?",
+            "answer": "You said you met Vickie at the New Gary Community Library on January 15, 2023.",
+            "difficulty": "medium",
+            "question_type": "temporal_and_location_recall",
+            "conversation_reference": "Turn 1: Early mention of meeting details",
+            "key_facts_tested": [
+                "date: January 15, 2023",
+                "location: New Gary Community Library"
+            ],
+            "source_chat_ids": [
+                20
+            ],
+            "rubric": [
+                "LLM response should include: January 15, 2023",
+                "LLM response should include: New Gary Community Library"
+            ]
+        },
+        {
+            "question": "How did I narrow down my options to find the best fit within my spending limits, considering the trade-offs in features and usability?",
+            "answer": "You compared the three laptops by evaluating their performance, battery life, portability, and connectivity options relative to your budget, ultimately identifying which model balanced these factors best for your needs.",
+            "difficulty": "hard",
+            "question_type": "Comparison Questions",
+            "conversation_reference": "Multiple turns: initial budget mention, detailed specs and pros/cons, final recommendations",
+            "key_facts_tested": [
+                "budget around $1,200",
+                "Dell XPS 13 at $1,100",
+                "MacBook Air M2 at $1,199",
+                "Lenovo ThinkPad X1 Carbon at $1,300",
+                "trade-offs in battery life, ports, display, and portability",
+                "final recommendation based on value within budget"
+            ],
+            "extraction_challenge": "LLM must integrate pricing details with feature comparisons and final advice spread across different conversation turns to explain how the user\u2019s budget influenced the choice",
+            "source_chat_ids": [
+                58,
+                62,
+                63
+            ],
+            "rubric": [
+                "LLM response should include: budget around $1,200",
+                "LLM response should include: Dell XPS 13 at $1,100",
+                "LLM response should include: MacBook Air M2 at $1,199",
+                "LLM response should include: Lenovo ThinkPad X1 Carbon at $1,300",
+                "LLM response should include: trade-offs in battery life, ports, display, and portability",
+                "LLM response should include: final recommendation based on value within budget"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are my options if I want to buy a new laptop?",
+            "instruction_being_tested": "Always include warranty details when I ask about laptop purchase options.",
+            "expected_compliance": "Response should include information about warranty coverage and terms along with the laptop purchase options.",
+            "compliance_indicators": [
+                "mentions warranty coverage",
+                "details about warranty duration or conditions",
+                "includes warranty information alongside laptop options"
+            ],
+            "non_compliance_signs": [
+                "only lists laptop models or specs",
+                "no mention of any warranty information",
+                "focuses solely on price or features without warranty"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                236
+            ],
+            "rubric": [
+                "LLM response should include: details about warranty duration or conditions"
+            ]
+        },
+        {
+            "question": "What should I consider to keep my devices safe when working from different locations?",
+            "instruction_being_tested": "Always include VPN and remote work security details when I ask about risk and safety measures.",
+            "expected_compliance": "Response should include information about VPN usage and security practices related to working remotely.",
+            "compliance_indicators": [
+                "mention of VPN",
+                "remote work security practices",
+                "details on protecting devices outside the office"
+            ],
+            "non_compliance_signs": [
+                "no mention of VPN",
+                "ignoring remote work context",
+                "general security advice without remote work specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                666
+            ],
+            "rubric": [
+                "LLM response should include: mention of VPN"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What budget amount am I working with for purchasing the Lenovo ThinkPad X1 Carbon?",
+            "answer": "$1,300",
+            "difficulty": "moderate",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amount for the Lenovo ThinkPad X1 Carbon purchase",
+            "conversation_references": [
+                "I set a strict $1,250 max budget after reviewing prices on Best Buy\u2019s website on March 17.",
+                "I adjusted the budget allocation to $1,300 after discovering a limited-time promotion on the Lenovo ThinkPad X1 Carbon."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $1,250 budget instead of the updated $1,300 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    162,
+                    164
+                ],
+                "updated_info": [
+                    234
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $1,300"
+            ]
+        },
+        {
+            "question": "How many full days did I take off to rest and recover from the intense work period?",
+            "answer": "Two full days",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "extended rest period duration",
+            "conversation_references": [
+                "Took a full day off June 6 to rest and recover from intense work period.",
+                "I extended my rest day on June 6 to two full days to fully recover from the intense work period."
+            ],
+            "potential_confusion": "LLM might incorrectly recall only one full day off instead of two",
+            "source_chat_ids": {
+                "original_info": [
+                    1076
+                ],
+                "updated_info": [
+                    1118
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Two full days"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many articles had I completed by the time I reached 60% of my first article, and how many were left when I felt relieved about my progress?",
+            "answer": "I had completed 0 full articles when I reached 60% of my first article, and I had completed 4 articles with 1 left when I felt relieved.",
+            "difficulty": "medium",
+            "reasoning_type": "progress_assessment",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id:176",
+                "chat_id:300",
+                "chat_id:301"
+            ],
+            "reasoning_steps": [
+                "Identify that completing 60% of the first article means no full articles were completed yet.",
+                "Note that later, I reported completing 4 out of 5 articles, indicating progress beyond the first article.",
+                "Compare the two points in time to determine how many articles were completed at each stage and how many remained."
+            ],
+            "source_chat_ids": [
+                176,
+                300,
+                301
+            ],
+            "rubric": [
+                "LLM response should state: 0 full articles completed when reaching 60% of first article",
+                "LLM response should state: 4 articles completed with 1 left when feeling relieved"
+            ]
+        },
+        {
+            "question": "How do the prices I mentioned for the Dell XPS 13, MacBook Air M2, and Lenovo ThinkPad X1 Carbon compare across my different budget considerations?",
+            "answer": "The Dell XPS 13 was mentioned around $1,100, the MacBook Air M2 around $1,199 to $1,448, and the Lenovo ThinkPad X1 Carbon around $1,299 to $1,449 including extras.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 3,
+            "conversation_references": [
+                "58-59",
+                "62-63",
+                "350-351"
+            ],
+            "reasoning_steps": [
+                "Identify the prices mentioned for each laptop in the first budget comparison.",
+                "Note the updated prices given in the second budget consideration.",
+                "Compare the total costs including extras mentioned in the third budget discussion."
+            ],
+            "source_chat_ids": [
+                58,
+                59,
+                62,
+                63,
+                350,
+                351
+            ],
+            "rubric": [
+                "LLM response should state: Dell XPS 13 around $1,100",
+                "LLM response should state: MacBook Air M2 around $1,199 to $1,448",
+                "LLM response should state: Lenovo ThinkPad X1 Carbon around $1,299 to $1,449 including extras"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm planning to create content for my upcoming project. What types of media would you suggest I include?",
+            "preference_being_tested": "I prioritized multimedia storytelling to engage wider audience despite higher workload",
+            "expected_compliance": "Response should recommend incorporating multiple forms of media to enhance storytelling and audience engagement, reflecting the user's preference for multimedia despite complexity",
+            "compliance_indicators": [
+                "suggests using a variety of media formats",
+                "mentions benefits of combining different media types",
+                "acknowledges broader audience engagement through multimedia",
+                "offers ideas that involve multimedia elements"
+            ],
+            "non_compliance_signs": [
+                "recommends single media format only",
+                "ignores multimedia options",
+                "focuses solely on simplest or least time-consuming media",
+                "does not address audience engagement through diverse media"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content strategy",
+            "source_chat_ids": [
+                840
+            ],
+            "rubric": [
+                "LLM response should include: suggests using a variety of media formats",
+                "LLM response should include: mentions benefits of combining different media types"
+            ]
+        },
+        {
+            "question": "I'm looking at a few laptop options and trying to decide which one to go with. Can you help me figure out which might be the best fit for me?",
+            "preference_being_tested": "I prioritize battery life and portability over having the highest-end graphics card.",
+            "expected_compliance": "Response should recommend laptops that emphasize longer battery life and easier portability rather than focusing primarily on the most powerful graphics cards.",
+            "compliance_indicators": [
+                "recommends laptops known for good battery life",
+                "mentions lightweight or portable models",
+                "does not prioritize or overly emphasize top-tier graphics cards",
+                "balances features with portability and battery considerations"
+            ],
+            "non_compliance_signs": [
+                "only suggests laptops with highest-end graphics cards",
+                "ignores battery life and portability aspects",
+                "focuses solely on performance specs without regard to form factor or battery"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                60
+            ],
+            "rubric": [
+                "LLM response should include: recommends laptops known for good battery life",
+                "LLM response should include: mentions lightweight or portable models"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed summary of how my laptop selection, productivity goals, and video editing workflow evolved over time, including the key decisions, challenges, and improvements that shaped my progress?",
+            "ideal_summary": "Over multiple sessions, you explored and refined your approach to selecting a laptop that balances portability, performance, and battery life to support your writing, research, and video editing needs. Initially, you considered models like the ASUS ZenBook 13, Dell XPS 13, and HP Spectre x360, focusing on features such as lightweight design, long battery life, and security. As your productivity targets increased, particularly your daily writing output and video editing practice, you evaluated more powerful options including the MacBook Air M2 and Dell XPS 13, weighing processor capabilities, RAM, display quality, and operating system compatibility. You also factored in portability for travel and extended use during research trips. Throughout this period, you implemented structured workflows for writing and video editing, incorporating time-blocking, goal setting, and the use of specialized software like Final Cut Pro. After installing an external GPU, you achieved a 25% increase in video editing speed, which further enhanced your efficiency. You continuously assessed your progress against deadlines, adjusting your schedules and task prioritization to stay on track for projects such as documentary editing and presentation preparation. Your decision-making process balanced technical specifications, budget constraints, and practical considerations like software ecosystems and warranty options. Ultimately, your journey reflects a sophisticated integration of hardware choices, productivity strategies, and skill development, enabling you to meet ambitious goals while maintaining well-being and adaptability.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                38,
+                41,
+                177,
+                295,
+                411,
+                511,
+                609,
+                727,
+                837,
+                951,
+                953,
+                1047,
+                1051
+            ],
+            "rubric": [
+                "LLM response should include: selecting a laptop that balances portability, performance, and battery life to support your writing, research, and video editing needs",
+                "LLM response should include: evaluating powerful options including the MacBook Air M2 and Dell XPS 13, weighing processor capabilities, RAM, display quality, and operating system compatibility",
+                "LLM response should include: implementing structured workflows for writing and video editing, incorporating time-blocking, goal setting, and the use of specialized software like Final Cut Pro",
+                "LLM response should include: installing an external GPU, achieving a 25% increase in video editing speed",
+                "LLM response should include: assessing progress against deadlines, adjusting schedules and task prioritization to stay on track for projects such as documentary editing and presentation preparation",
+                "LLM response should include: balancing technical specifications, budget constraints, and practical considerations like software ecosystems and warranty options",
+                "LLM response should include: integration of hardware choices, productivity strategies, and skill development, enabling you to meet ambitious goals while maintaining well-being and adaptability"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of the laptop options and recommendations we've discussed for my work and travel needs?",
+            "ideal_summary": "You were looking for a lightweight, powerful, and budget-friendly laptop suitable for writing, research, and travel. The ASUS ZenBook 13 and Lenovo ThinkPad X1 Carbon were recommended as top options, with the ZenBook fitting better within your budget. You chose the ASUS ZenBook 13 with an Intel Core i7, 16GB RAM, and 512GB SSD configuration. Detailed setup tips and purchase options were provided, along with advice on protective carrying cases. Later, you also considered the Lenovo ThinkPad X1 Carbon for its durability and battery life, weighing its higher cost against its benefits. Overall, the recommendations balanced performance, portability, and budget considerations.",
+            "difficulty": "easy",
+            "summarization_type": "simple_resource_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple cross-session condensation",
+                "straightforward overview"
+            ],
+            "synthesis_required": "Combining straightforward laptop recommendations and decisions into a concise summary",
+            "source_chat_ids": [
+                4,
+                5,
+                7,
+                8,
+                11,
+                15,
+                159,
+                169,
+                243,
+                245,
+                797,
+                799
+            ],
+            "rubric": [
+                "LLM response should include: looking for a lightweight, powerful, and budget-friendly laptop suitable for writing, research, and travel",
+                "LLM response should include: ASUS ZenBook 13 and Lenovo ThinkPad X1 Carbon were recommended as top options, with the ZenBook fitting better within your budget",
+                "LLM response should include: chose the ASUS ZenBook 13 with an Intel Core i7, 16GB RAM, and 512GB SSD configuration",
+                "LLM response should include: considered the Lenovo ThinkPad X1 Carbon for its durability and battery life, weighing its higher cost against its benefits",
+                "LLM response should include: recommendations balanced performance, portability, and budget considerations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days will I be in Jamestown from the start of my research trip until the last day I plan to work from cafes there?",
+            "answer": "The total duration is 11 days, starting from April 5 (the first day of the research trip) through April 15 (the last day mentioned for working from cafes).",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "April 5: research trip start",
+                "April 5-15: working from cafes during the trip"
+            ],
+            "conversation_references": [
+                "Session 86: research trip start and packing",
+                "Session 308: cafes for working during trip"
+            ],
+            "calculation_required": "April 15 - April 5 + 1 = 11 days (inclusive count from start to end date)",
+            "source_chat_ids": {
+                "first_event": [
+                    86
+                ],
+                "second_event": [
+                    308
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 11 days"
+            ]
+        },
+        {
+            "question": "How many days after I rescheduled my article drafts to focus on research did I move my article submission to attend the workshop?",
+            "answer": "I rescheduled my article drafts to March 22 and then moved my article submission from April 10 to April 12, so the submission rescheduling happened 19 to 20 days after I rescheduled my drafts.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 22: article drafts rescheduled",
+                "April 10 to April 12: article submission rescheduled"
+            ],
+            "conversation_references": [
+                "Session 1: March 20 deadline and drafts rescheduled",
+                "Session 2: April 10 to April 12 submission rescheduling"
+            ],
+            "calculation_required": "April 10 - March 22 = 19 days (original submission), April 12 - March 22 = 20 days (rescheduled submission)",
+            "source_chat_ids": {
+                "first_event": [
+                    170
+                ],
+                "second_event": [
+                    402
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 19 to 20 days",
+                "LLM response should state: from March 22 till April 10"
+            ]
+        }
+    ]
+}

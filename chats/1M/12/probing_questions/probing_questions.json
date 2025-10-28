@@ -1,0 +1,879 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Cassandra's professional background and qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Cassandra's professional background and qualifications.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Cassandra is mentioned as a mentor and family member but her professional background is not described.",
+            "plan_reference": "Batches 1-8 mention Cassandra as mentor and advisor but no professional details are given.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Cassandra's professional background",
+                "Based on the provided chat, there is no information related to Cassandra's qualifications"
+            ]
+        },
+        {
+            "question": "What specific feedback did Stephanie give on the cover letter critique on February 28?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific feedback Stephanie gave on the cover letter critique.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Stephanie's critique is mentioned but the exact feedback content is not provided.",
+            "plan_reference": "Batch 1 mentions Stephanie's cover letter critique on February 28 without details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific feedback Stephanie gave on the cover letter critique"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever updated my LinkedIn profile?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said your LinkedIn profile was updated and saw an increase in views, but you also mentioned that you've never updated your profile. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "LinkedIn profile update history",
+            "conversation_references": [
+                "Session 172 and 182: Profile updated and increased views",
+                "Session 216: Never updated profile"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    172,
+                    182
+                ],
+                "second_statement": [
+                    216
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said your LinkedIn profile was updated and saw an increase in views",
+                "LLM response should mention: you also mentioned that you've never updated your profile",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended an interview at North Ericshire General Hospital?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have attended an interview at North Ericshire General Hospital, but you also mentioned that you have never attended any interview there. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Interview attendance at North Ericshire General Hospital",
+            "conversation_references": [
+                "Session 1: Attended interview mention",
+                "Session 7: Never attended interview mention"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    218
+                ],
+                "second_statement": [
+                    490
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have attended an interview at North Ericshire General Hospital",
+                "LLM response should mention: you also mentioned that you have never attended any interview there",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about career development and compensation evolve in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your discussions evolved in this sequence: 1) Concerns about career guidance and mentoring from your mom, 2) Negotiations and comparisons between job offers including signing bonuses and contract details, 3) Preparation and strategies for salary negotiations and remote work adjustments, 4) Planning and tactics for requesting raises and bonuses with HR, 5) Approaches to performance reviews and managing expectations in your new role, 6) Evaluations of the impact of salary changes on your financial situation and related considerations, 7) Best practices for maintaining communication and alignment with your team and stakeholders.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "chat_id: 20, 26, 32",
+                "chat_id: 376, 384, 390, 586, 588, 596, 602, 608",
+                "chat_id: 700, 704, 708, 712",
+                "chat_id: 924, 926, 932, 940, 1116, 1120, 1128, 1554, 1568",
+                "chat_id: 1762, 1764, 1778, 1780",
+                "chat_id: 1996, 1998, 2000, 2010, 2012, 2014, 2016",
+                "chat_id: 2022"
+            ],
+            "ordering_tested": [
+                "1st: Career mentoring and guidance",
+                "2nd: Job offer negotiations and contract details",
+                "3rd: Salary negotiation preparation and remote work",
+                "4th: Raise and bonus negotiation strategies",
+                "5th: Performance review and role management",
+                "6th: Financial impact and tax considerations",
+                "7th: Communication and team alignment"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "involves multiple related but distinct thematic threads",
+                "spans many conversation sessions",
+                "tests pattern recognition and development tracking",
+                "requires integration of career and compensation topics"
+            ],
+            "source_chat_ids": [
+                20,
+                26,
+                32,
+                376,
+                384,
+                390,
+                586,
+                588,
+                596,
+                602,
+                608,
+                700,
+                704,
+                708,
+                712,
+                924,
+                926,
+                932,
+                940,
+                1116,
+                1120,
+                1128,
+                1554,
+                1568,
+                1762,
+                1764,
+                1778,
+                1780,
+                1996,
+                1998,
+                2000,
+                2010,
+                2012,
+                2014,
+                2016,
+                2022
+            ],
+            "rubric": [
+                "LLM response should mention: Career mentoring and guidance",
+                "LLM response should mention: Job offer negotiations and contract details",
+                "LLM response should mention: Salary negotiation preparation and remote work",
+                "LLM response should mention: Raise and bonus negotiation strategies",
+                "LLM response should mention: Performance review and role management",
+                "LLM response should mention: Financial impact and tax considerations",
+                "LLM response should mention: Communication and team alignment"
+            ]
+        },
+        {
+            "question": "How did my focus on different professional tools and collaboration methods develop throughout our conversations in order? Mention ONLY and ONLY nine items.",
+            "answer": "Your focus on professional tools and collaboration methods developed in this sequence: 1) Discussing learning and collaboration with a colleague, 2) Exploring job options and work-life balance considerations, 3) Managing job applications and understanding their statuses, 4) Training and leveraging Slack for team communication, 5) Improving efficiency with electronic health record systems and telepsychology, 6) Organizing interview preparation using Notion, 7) Managing leadership projects with Asana, 8) Transitioning to and balancing Microsoft Teams for team collaboration, 9) Handling and confirming reservations effectively for professional meetings.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 9,
+            "conversation_references": [
+                "chat_id: 24, 28, 36",
+                "chat_id: 326, 328, 330, 338, 342",
+                "chat_id: 628, 630, 640, 646",
+                "chat_id: 860, 862, 868",
+                "chat_id: 1072, 1080, 1086",
+                "chat_id: 1292, 1296, 1300, 1302, 1306",
+                "chat_id: 1504, 1510, 1514",
+                "chat_id: 1716, 1726, 1728, 1734",
+                "chat_id: 1962, 1966, 1968, 1970, 1974, 1976, 1978, 1980"
+            ],
+            "ordering_tested": [
+                "1st: Collaboration and learning with colleague",
+                "2nd: Job options and work-life balance",
+                "3rd: Job application management",
+                "4th: Slack training and use",
+                "5th: Electronic health records and telepsychology",
+                "6th: Notion for interview prep",
+                "7th: Asana for leadership projects",
+                "8th: Microsoft Teams adoption",
+                "9th: Reservation confirmation and management"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related topics",
+                "involves sophisticated sequence reconstruction",
+                "spans numerous conversation sessions",
+                "tests pattern recognition and development tracking"
+            ],
+            "source_chat_ids": [
+                24,
+                28,
+                36,
+                326,
+                328,
+                330,
+                338,
+                342,
+                628,
+                630,
+                640,
+                646,
+                860,
+                862,
+                868,
+                1072,
+                1080,
+                1086,
+                1292,
+                1296,
+                1300,
+                1302,
+                1306,
+                1504,
+                1510,
+                1514,
+                1716,
+                1726,
+                1728,
+                1734,
+                1962,
+                1966,
+                1968,
+                1970,
+                1974,
+                1976,
+                1978,
+                1980
+            ],
+            "rubric": [
+                "LLM response should mention: Collaboration and learning with colleague",
+                "LLM response should mention: Job options and work-life balance",
+                "LLM response should mention: Job application management",
+                "LLM response should mention: Slack training and use",
+                "LLM response should mention: Electronic health records and telepsychology",
+                "LLM response should mention: Notion for interview prep",
+                "LLM response should mention: Asana for leadership projects",
+                "LLM response should mention: Microsoft Teams adoption",
+                "LLM response should mention: Reservation confirmation and management"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I meet Sarah at the conference?",
+            "answer": "On November 12, 2023.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 30: USER mentions meeting Sarah at the 2023 Istanbul Psychology Conference on November 12.",
+            "key_facts_tested": [
+                "date of meeting",
+                "event date"
+            ],
+            "source_chat_ids": [
+                30
+            ],
+            "rubric": [
+                "LLM response should state: November 12, 2023"
+            ]
+        },
+        {
+            "question": "How did my initial interaction at the conference influence the timeline and approach I took to revising my professional documents?",
+            "answer": "My initial interaction at the conference led Sarah to suggest updating my resume by a specific deadline, which shaped how I planned meetings, prepared materials, and structured the update process to meet that timeline.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: User mentions meeting Sarah at the conference and deadline; assistant outlines steps to approach Sarah and update resume by that deadline",
+            "key_facts_tested": [
+                "meeting Sarah at 2023 Istanbul Psychology Conference",
+                "suggestion to update resume by March 15",
+                "planning meetings and preparation based on that deadline"
+            ],
+            "extraction_challenge": "LLM must connect the initial meeting context with the suggested deadline and the detailed approach to updating the resume, integrating user and assistant messages across multiple turns",
+            "source_chat_ids": [
+                22,
+                34
+            ],
+            "rubric": [
+                "LLM response should state: My initial interaction at the conference led Sarah to suggest updating my resume by a specific deadline",
+                "LLM response should state: Sarah's suggestions shaped how I planned meetings",
+                "LLM response should state: Sarah's suggestions shaped how I prepared materials",
+                "LLM response should state: Sarah's suggestions shaped how I structured the update process to meet that timeline"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What time does the Cappadocia trip flight leave and return?",
+            "instruction_being_tested": "Always confirm event times in 24-hour format when I ask about schedules.",
+            "expected_compliance": "Response should include the event times expressed in 24-hour notation.",
+            "compliance_indicators": [
+                "times given as 09:00, 13:00, 18:00",
+                "use of 24-hour clock format",
+                "no AM/PM or 12-hour format used"
+            ],
+            "non_compliance_signs": [
+                "times given as 9 AM or 6 PM",
+                "use of 12-hour clock format",
+                "no clear time format specified"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                896,
+                898,
+                900
+            ],
+            "rubric": [
+                "LLM response should contain: use of 24-hour clock format",
+                "LLM response should contain: no AM/PM or 12-hour format used"
+            ]
+        },
+        {
+            "question": "How did the project perform compared to our initial goals?",
+            "instruction_being_tested": "Always include percentage improvements when I ask about project outcomes.",
+            "expected_compliance": "Response should include percentage improvements related to the project outcomes.",
+            "compliance_indicators": [
+                "mentions percentage improvements",
+                "quantifies changes in percent",
+                "provides numeric improvement rates"
+            ],
+            "non_compliance_signs": [
+                "only qualitative description",
+                "no numeric or percentage data",
+                "general statements without figures"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1756
+            ],
+            "rubric": [
+                "LLM response should contain: mentions percentage improvements",
+                "LLM response should contain: provides numeric improvement rates"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many job openings have I applied to, and what area am I targeting for my search?",
+            "answer": "You have applied to 18 job openings, expanding your search radius slightly beyond 50 km to include nearby towns.",
+            "difficulty": "moderate",
+            "update_type": "search scope and application count",
+            "tests_retention_of": "the increased number of applications and expanded search radius",
+            "conversation_references": [
+                "Job Search Strategy: I plan to apply to 15 job openings on LinkedIn and Indeed by April 1, focusing on hospitals within 50 km of North Ericshire.",
+                "Information Update: I have now applied to 18 job openings, expanding my search radius slightly beyond 50 km to include nearby towns."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original plan of applying to 15 jobs within 50 km instead of the updated 18 applications with a wider search area.",
+            "source_chat_ids": {
+                "original_info": [
+                    56,
+                    60,
+                    68
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should state: 18 jobs",
+                "LLM response should state: radius slightly beyond 50 km"
+            ]
+        },
+        {
+            "question": "What is the annual membership fee I paid to join the Turkish Psychological Association?",
+            "answer": "$175",
+            "difficulty": "easy",
+            "update_type": "fee_increase",
+            "tests_retention_of": "updated annual membership fee amount",
+            "conversation_references": [
+                "Professional Networking: Met Karen, 46, at the March 10 workshop; she recommended joining the Turkish Psychological Association by April 1 for $150 annual fee.",
+                "The Turkish Psychological Association increased its annual fee to $175 starting April 1, which I have already paid."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $150 fee instead of the updated $175 fee",
+            "source_chat_ids": {
+                "original_info": [
+                    266,
+                    268,
+                    274,
+                    284
+                ],
+                "updated_info": [
+                    486
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $175"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Between my CBT certification course and the Advanced CBT course, which one am I planning to invest more money in?",
+            "answer": "You are planning to invest more money in the CBT certification course, which costs $1,200, compared to the Advanced CBT course costing $900.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "CBT certification course cost inquiry",
+                "Advanced CBT course cost concern"
+            ],
+            "reasoning_steps": [
+                "Identify the cost mentioned for the CBT certification course.",
+                "Identify the cost mentioned for the Advanced CBT course.",
+                "Compare the two costs to determine which is higher."
+            ],
+            "source_chat_ids": [
+                62,
+                348
+            ],
+            "rubric": [
+                "LLM response should state: You are planning to invest more money in the CBT certification course",
+                "LLM response should state: CBT certification course costs $1,200",
+                "LLM response should state: Advanced CBT course costs $900"
+            ]
+        },
+        {
+            "question": "How can I combine my clinical experience, use of Jobscan, telepsychology growth, and negotiation skills to maximize my chances of securing a senior role with the best contract terms?",
+            "answer": "You should highlight your 8 years of clinical experience with quantified achievements, tailor your resume using Jobscan to include senior role keywords, leverage the 15% telepsychology growth by emphasizing telehealth skills, and apply Cassandra's negotiation techniques to secure improved salary, benefits, and contract terms.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Resume tailoring and Jobscan optimization",
+                "Highlighting clinical experience for senior roles",
+                "Telepsychology growth impact and leveraging",
+                "Contract negotiation skills with Cassandra",
+                "Contract lawyer's review and benefit adjustments"
+            ],
+            "reasoning_steps": [
+                "Identify how to effectively showcase 8 years of clinical experience with quantified achievements to appeal to senior roles.",
+                "Incorporate Jobscan ATS optimization to tailor the resume with relevant keywords and skills for senior clinical psychologist positions.",
+                "Analyze the 15% annual growth in telepsychology roles to include telehealth competencies and certifications, expanding job search and appeal.",
+                "Integrate negotiation skills learned from Cassandra to prepare and confidently negotiate improved salary, benefits, and contract clauses.",
+                "Synthesize all elements to create a comprehensive strategy that maximizes both job market competitiveness and contract quality."
+            ],
+            "source_chat_ids": [
+                38,
+                44,
+                439,
+                736,
+                590
+            ],
+            "rubric": [
+                "LLM response should state: highlight your 8 years of clinical experience with quantified achievements",
+                "LLM response should state: tailor your resume using Jobscan to include senior role keywords",
+                "LLM response should state: leverage the 15% telepsychology growth by emphasizing telehealth skills",
+                "LLM response should state: apply Cassandra's negotiation techniques to secure improved salary, benefits, and contract terms"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking at a few job listings and trying to figure out which ones might be the best fit for me. How would you help me narrow down the options?",
+            "preference_being_tested": "I prefer applying to roles within 30 km of North Ericshire to maintain work-life balance and reduce commuting time under 45 minutes.",
+            "expected_compliance": "Response should prioritize job options located within a reasonable distance from North Ericshire and consider commute times that align with the user's stated limits, demonstrating awareness of location and travel constraints.",
+            "compliance_indicators": [
+                "focuses on job locations near North Ericshire",
+                "mentions commute time considerations",
+                "filters or suggests roles based on proximity and travel duration",
+                "acknowledges user's need to limit commute"
+            ],
+            "non_compliance_signs": [
+                "recommends jobs far from North Ericshire without mention of commute",
+                "ignores commute time or distance factors",
+                "suggests roles without regard to location constraints",
+                "fails to address user's travel concerns"
+            ],
+            "difficulty": "medium",
+            "preference_type": "location and commute constraints",
+            "source_chat_ids": [
+                168,
+                174,
+                184
+            ],
+            "rubric": [
+                "LLM response should contain: focuses on job locations near North Ericshire",
+                "LLM response should contain: mentions commute time considerations",
+                "LLM response should contain: acknowledges user's need to limit commute"
+            ]
+        },
+        {
+            "question": "I'm exploring job opportunities and want to understand what kinds of work arrangements companies typically offer. Can you tell me about the different options available?",
+            "preference_being_tested": "I prioritize roles offering flexible remote work to improve work-life balance and reduce 60-minute daily commute.",
+            "expected_compliance": "Response should highlight flexible remote work options among the types of work arrangements, showing awareness of the user's interest in such roles.",
+            "compliance_indicators": [
+                "mentions flexible remote work options",
+                "describes remote and hybrid work arrangements",
+                "acknowledges variety in work setups that reduce commuting"
+            ],
+            "non_compliance_signs": [
+                "only discusses traditional on-site roles",
+                "ignores remote or flexible work options",
+                "fails to mention work arrangements that impact commute or flexibility"
+            ],
+            "difficulty": "medium",
+            "preference_type": "work arrangement preference",
+            "source_chat_ids": [
+                574,
+                576,
+                578,
+                580,
+                582,
+                584
+            ],
+            "rubric": [
+                "LLM response should contain: mentions flexible remote work options",
+                "LLM response should contain: describes remote and hybrid work arrangements",
+                "LLM response should contain: acknowledges variety in work setups that reduce commuting"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how my career planning and job search have developed over our conversations?",
+            "ideal_summary": "Over the course of our discussions, your career planning and job search have progressed through several important stages. Initially, we examined how your current salary fits within the clinical psychology field, considering factors like experience, location, and work setting, and identified steps to improve your financial and professional standing. We then addressed concerns about age and its impact on job prospects, highlighting strategies to leverage your experience and adaptability. Next, we focused on enhancing your job search tools, including tailored resume updates guided by professional feedback and optimizing cover letters with keyword strategies. Additionally, we explored effective networking opportunities, such as attending workshops and engaging with contacts like Matthew and Sarah, to expand your professional connections. Finally, we discussed interview preparation, negotiation tactics, and balancing personal support systems, such as mentorship from your mom and role-play practice with Sharon, to strengthen your readiness and confidence. This progression reflects a comprehensive approach to advancing your career through self-assessment, skill development, strategic networking, and practical preparation.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                5,
+                7,
+                11,
+                13,
+                17,
+                21,
+                27,
+                33,
+                35,
+                37,
+                41,
+                47,
+                51,
+                113,
+                115,
+                121,
+                143,
+                151,
+                157,
+                161,
+                171,
+                177,
+                179,
+                187,
+                189,
+                191,
+                195,
+                197,
+                203,
+                207,
+                211
+            ],
+            "key_elements_tested": [
+                "career progression",
+                "salary evaluation",
+                "age considerations",
+                "resume and cover letter development",
+                "networking and mentorship",
+                "interview preparation",
+                "negotiation strategies",
+                "personal support integration"
+            ],
+            "synthesis_required": "Integrating multiple facets of career development and job search strategies into a coherent, evolving narrative",
+            "source_chat_ids": [
+                5,
+                7,
+                11,
+                13,
+                17,
+                21,
+                27,
+                33,
+                35,
+                37,
+                41,
+                47,
+                51,
+                113,
+                115,
+                121,
+                143,
+                151,
+                157,
+                161,
+                171,
+                177,
+                179,
+                187,
+                189,
+                191,
+                195,
+                197,
+                203,
+                207,
+                211
+            ],
+            "rubric": [
+                "LLM response should contain: we examined how your current salary fits within the clinical psychology field, considering factors like experience, location, and work setting",
+                "LLM response should contain: We then addressed concerns about age and its impact on job prospects, highlighting strategies to leverage your experience and adaptability",
+                "LLM response should contain: we focused on enhancing your job search tools, including tailored resume updates guided by professional feedback and optimizing cover letters with keyword strategies",
+                "LLM response should contain: we explored effective networking opportunities, such as attending workshops and engaging with contacts like Matthew and Sarah, to expand your professional connections",
+                "LLM response should contain: we discussed interview preparation, negotiation tactics, and balancing personal support systems, such as mentorship from your mom and role-play practice with Sharon"
+            ]
+        },
+        {
+            "question": "Can you give me a clear summary of how my job search and interview preparation have progressed over the past few weeks?",
+            "ideal_summary": "Your job search and interview preparation have developed through several interconnected stages: Initially, you focused on preparing for a behavioral interview at North Ericshire General Hospital by learning the STAR method, practicing sample questions, and managing interview anxiety with mindfulness and affirmations. Concurrently, you prepared for a technical interview with MedPsych Clinic by reviewing clinical psychology topics, practicing technical questions, and planning logistics for the interview day. Alongside interview prep, you worked on negotiating job offers, balancing salary and benefits, and strategizing how to communicate your requests professionally, including remote work options. You also managed your job applications systematically using tools like Trello and sought to maximize professional networking through the Turkish Psychological Association and contacts like Karen. Throughout, you balanced intensive preparation with personal life considerations, ensuring support from your partner Sharon and maintaining well-being. This progression reflects a comprehensive, evolving approach to securing the best job opportunity while managing stress and relationships effectively.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                264,
+                265,
+                272,
+                273,
+                266,
+                267,
+                268,
+                269,
+                274,
+                275,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                302,
+                303,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328,
+                329,
+                330,
+                331,
+                338,
+                339,
+                342,
+                343,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                340,
+                341,
+                344,
+                345,
+                346,
+                347
+            ],
+            "key_elements_tested": [
+                "multi-session synthesis",
+                "progressive development",
+                "interconnected topics",
+                "balanced condensation",
+                "narrative coherence"
+            ],
+            "synthesis_required": "Integrating multiple facets of job search, interview preparation, negotiation, application tracking, networking, and personal balance into a coherent summary",
+            "source_chat_ids": [
+                218,
+                219,
+                220,
+                221,
+                222,
+                223,
+                230,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                259,
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                274,
+                275,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                302,
+                303,
+                312,
+                313,
+                314,
+                315,
+                316,
+                317,
+                318,
+                319,
+                320,
+                321,
+                322,
+                323,
+                324,
+                325,
+                326,
+                327,
+                328,
+                329,
+                330,
+                331,
+                338,
+                339,
+                342,
+                343,
+                332,
+                333,
+                334,
+                335,
+                336,
+                337,
+                340,
+                341,
+                344,
+                345,
+                346,
+                347
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on preparing for a behavioral interview at North Ericshire General Hospital by learning the STAR method, practicing sample questions",
+                "LLM response should contain: you prepared for a technical interview with MedPsych Clinic by reviewing clinical psychology topics, practicing technical questions, and planning logistics for the interview day",
+                "LLM response should contain: Alongside interview prep, you worked on negotiating job offers, balancing salary and benefits, and strategizing how to communicate your requests professionally",
+                "LLM response should contain: You also managed your job applications systematically using tools like Trello and sought to maximize professional networking through the Turkish Psychological Association",
+                "LLM response should contain: you balanced intensive preparation with personal life considerations, ensuring support from your partner Sharon and maintaining well-being"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days did I have between meeting Sarah at the Istanbul conference and the deadline she suggested for updating my resume?",
+            "answer": "There were 123 days between meeting Sarah at the Istanbul conference on November 12, 2023, and the resume update deadline of March 15, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "November 12, 2023: met Sarah at Istanbul conference",
+                "March 15, 2024: resume update deadline suggested by Sarah"
+            ],
+            "conversation_references": [
+                "chat_id 30: meeting Sarah at Istanbul conference",
+                "chat_id 22: resume update deadline discussion"
+            ],
+            "calculation_required": "Calculate days from November 12, 2023 to March 15, 2024 (Nov 12 to Dec 31 = 49 days, Jan 1 to Mar 15 = 74 days; total 123 days)",
+            "source_chat_ids": {
+                "first_event": [
+                    30
+                ],
+                "second_event": [
+                    22
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 123 days",
+                "LLM response should state: from November 12, 2023 till March 15, 2024"
+            ]
+        },
+        {
+            "question": "How many days do I have between finishing my resume optimization and starting my new job at MedPsych Clinic?",
+            "answer": "You have 52 days between finishing your resume optimization by March 10 and starting your new job on May 1, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 10: resume optimization deadline",
+                "May 1, 2024: new job start date"
+            ],
+            "conversation_references": [
+                "Session 38, 52: resume optimization deadline",
+                "Session 672: new job start date"
+            ],
+            "calculation_required": "May 1 - March 10 = 52 days (requires connecting two separate date references)",
+            "source_chat_ids": {
+                "first_event": [
+                    38,
+                    52
+                ],
+                "second_event": [
+                    672
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 52 days",
+                "LLM response should state: from March 10, 2024 till May 1, 2024"
+            ]
+        }
+    ]
+}

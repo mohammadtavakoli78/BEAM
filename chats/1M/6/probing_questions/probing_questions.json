@@ -1,0 +1,595 @@
+{
+    "abstention": [
+        {
+            "question": "What specific feedback did I receive after completing the 5 single-variable derivative problems?",
+            "ideal_response": "Based on the provided chat, there is no information related to specific feedback you received after completing those problems.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions scores and readiness but does not include any feedback details.",
+            "plan_reference": "Batch 1, Bullet 4",
+            "rubric": [
+                "Based on the provided chat, there is no information related to specific feedback you received after completing those problems"
+            ]
+        },
+        {
+            "question": "What was my emotional reaction or confidence level after struggling with the \u2202/\u2202y differentiation of f(x,y) = e^(xy) sin(x)?",
+            "ideal_response": "Based on the provided chat, there is no information related to your emotional reaction or confidence level regarding that problem.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions struggle and error identification but not emotional or confidence details.",
+            "plan_reference": "Batch 1, Bullets 11 and 12",
+            "rubric": [
+                "Based on the provided chat, there is no information related to your emotional reaction regarding that problem",
+                "Based on the provided chat, there is no information related to your confidence level regarding that problem"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever worked on solving partial derivative problems before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never solved any partial derivative problems, but you also mentioned completing 6 practice problems with 5 correct answers. Could you clarify which is accurate?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "experience with solving partial derivative problems",
+            "conversation_references": [
+                "Session 1: Completed practice problems",
+                "Session 2: Never solved any problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    130
+                ],
+                "second_statement": [
+                    122
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never solved any partial derivative problems",
+                "LLM response should mention: you also mentioned completing 6 practice problems with 5 correct answers",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "How experienced am I with solving problems involving Jacobian matrices and change of variables?",
+            "ideal_answer": "I notice you've mentioned contradictory information about your experience. You said you have never solved any problems involving Jacobian matrices or change of variables, but you also mentioned completing 7 such problems with a good score. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with Jacobian matrices and change of variables problems",
+            "conversation_references": [
+                "Session 1: Never solved any problems",
+                "Session 2: Completed 7 problems with score"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    646
+                ],
+                "second_statement": [
+                    640
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never solved any problems involving Jacobian matrices or change of variables",
+                "LLM response should mention: you also mentioned completing 7 such problems with a good score",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of multivariable calculus develop throughout our conversations in order? Mention ONLY and ONLY six items.",
+            "answer": "Your focus on multivariable calculus developed in this sequence: 1) You began by discussing partial derivatives for specific functions and verifying your calculations, 2) You then sought step-by-step guidance on calculating partial derivatives for similar functions, 3) You expressed difficulty applying the product rule in partial derivatives and requested detailed steps, 4) Later, you shifted to exploring directional derivatives, questioning why they depend on unit vectors with examples, 5) You then asked about the conceptual difference between directional derivatives and gradient vectors, again with examples, 6) Finally, you confirmed your understanding of these concepts and expressed readiness to move forward.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 6,
+            "conversation_references": [
+                "chat_id: 16",
+                "chat_id: 18",
+                "chat_id: 24",
+                "chat_id: 180",
+                "chat_id: 186",
+                "chat_id: 188, 190"
+            ],
+            "ordering_tested": [
+                "1st: Partial derivative calculation and verification",
+                "2nd: Request for step-by-step partial derivative guidance",
+                "3rd: Difficulty with product rule in partial derivatives",
+                "4th: Understanding directional derivatives with unit vector examples",
+                "5th: Difference between directional derivative and gradient vector",
+                "6th: Confirmation of understanding and readiness to proceed"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions across sessions",
+                "involves subtle shifts in conceptual focus",
+                "demands reconstruction of mention progression without temporal cues",
+                "tests ability to cluster and sequence related mathematical topics"
+            ],
+            "source_chat_ids": [
+                16,
+                18,
+                24,
+                180,
+                186,
+                188,
+                190
+            ],
+            "rubric": [
+                "LLM response should mention: Partial derivative calculation and verification",
+                "LLM response should mention: Request for step-by-step partial derivative guidance",
+                "LLM response should mention: Difficulty with product rule in partial derivatives",
+                "LLM response should mention: Understanding directional derivatives with unit vector examples",
+                "LLM response should mention: Difference between directional derivative and gradient vector",
+                "LLM response should mention: Confirmation of understanding and readiness to proceed"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of the Jacobian determinant develop throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "Your mentions of the Jacobian determinant progressed as follows: 1) You first asked for a general explanation of the Jacobian determinant in the context of change of variables for triple integrals, 2) Then you expressed difficulty understanding why the Jacobian is necessary and requested an example demonstrating its essential role, 3) Next, you explored applying the Jacobian to a real-world scenario involving volume calculation of a tilted box, 4) You followed that by considering how scaling the box would affect the volume calculation via the Jacobian determinant, 5) Finally, you sought guidance on calculating the Jacobian determinant for a specific transformation with actual computations, particularly in double integrals.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 5,
+            "conversation_references": [
+                "chat_id: 346",
+                "chat_id: 356",
+                "chat_id: 358",
+                "chat_id: 360",
+                "chat_id: 502"
+            ],
+            "ordering_tested": [
+                "1st: General explanation of Jacobian determinant in triple integrals",
+                "2nd: Necessity and example of Jacobian in triple integrals",
+                "3rd: Real-world application to volume of tilted box",
+                "4th: Effect of scaling on volume calculation via Jacobian",
+                "5th: Step-by-step calculation of Jacobian determinant for a specific transformation"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple nuanced mentions",
+                "spans multiple conversation sessions",
+                "involves understanding conceptual development",
+                "requires sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                346,
+                356,
+                358,
+                360,
+                502
+            ],
+            "rubric": [
+                "LLM response should mention: General explanation of Jacobian determinant in triple integrals",
+                "LLM response should mention: Necessity and example of Jacobian in triple integrals",
+                "LLM response should mention: Real-world application to volume of tilted box",
+                "LLM response should mention: Effect of scaling on volume calculation via Jacobian",
+                "LLM response should mention: Step-by-step calculation of Jacobian determinant for a specific transformation"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What point and direction did I mention when asking about the gradient and directional derivative?",
+            "answer": "The point (1, 2) and the direction u = (1/\u221a2, 1/\u221a2).",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1 and Turn 3",
+            "key_facts_tested": [
+                "point coordinates",
+                "direction vector components"
+            ],
+            "source_chat_ids": [
+                166,
+                178
+            ],
+            "rubric": [
+                "LLM response should state: (1, 2)",
+                "LLM response should state: u = (1/\u221a2, 1/\u221a2)"
+            ]
+        },
+        {
+            "question": "What vector field did I first mention when asking about divergence and curl?",
+            "answer": "You first mentioned the vector field F(x,y) = (2x - y, x + 3y).",
+            "difficulty": "medium",
+            "question_type": "early_detail_recall",
+            "conversation_reference": "Turn 1: Initial user message about vector fields",
+            "key_facts_tested": [
+                "vector field components: (2x - y, x + 3y)"
+            ],
+            "source_chat_ids": [
+                924
+            ],
+            "rubric": [
+                "LLM response should state: F(x,y) = (2x - y, x + 3y)"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How do I interpret the differences between the two fields in my simulation?",
+            "instruction_being_tested": "Always relate vector calculus concepts to physical phenomena when I ask about divergence or curl.",
+            "expected_compliance": "Response should connect the mathematical concepts to real-world physical effects or behaviors.",
+            "compliance_indicators": [
+                "explanation linking concepts to physical flow or forces",
+                "description of what the quantities represent in a physical context",
+                "use of examples from fluid or electromagnetic phenomena"
+            ],
+            "non_compliance_signs": [
+                "purely mathematical explanation without physical context",
+                "definitions without real-world interpretation",
+                "ignoring the physical meaning of the quantities"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                900,
+                902
+            ],
+            "rubric": [
+                "LLM response should contain: explanation linking concepts to physical flow or forces",
+                "LLM response should contain: description of what the quantities represent in a physical context"
+            ]
+        },
+        {
+            "question": "Can you explain how the Lagrange multiplier method works for a function with constraints?",
+            "instruction_being_tested": "Always combine algebraic and geometric explanations when I ask about constrained optimization.",
+            "expected_compliance": "Response should include both algebraic derivations and geometric interpretations related to the method.",
+            "compliance_indicators": [
+                "algebraic derivation of the method",
+                "geometric interpretation of multipliers",
+                "linking the math to geometric concepts"
+            ],
+            "non_compliance_signs": [
+                "only algebraic explanation",
+                "only geometric explanation",
+                "lack of connection between algebra and geometry"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1246,
+                1248
+            ],
+            "rubric": [
+                "LLM response should contain: algebraic derivation of the method",
+                "LLM response should contain: geometric interpretation of multipliers",
+                "LLM response should contain: linking the math to geometric concepts"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many partial derivative practice problems have I completed with a high accuracy rate?",
+            "answer": "8 practice problems with a high accuracy rate",
+            "difficulty": "easy",
+            "update_type": "practice_completion",
+            "tests_retention_of": "number of practice problems completed and accuracy level",
+            "conversation_references": [
+                "Completed 6 practice problems on partial derivatives, scoring 5 correct within 90 minutes.",
+                "After additional practice, I completed 8 practice problems on partial derivatives, maintaining a high accuracy rate."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that only 6 problems were completed with 5 correct answers instead of 8 problems with high accuracy",
+            "source_chat_ids": {
+                "original_info": [
+                    122
+                ],
+                "updated_info": [
+                    132
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 8 problems"
+            ]
+        },
+        {
+            "question": "What is my average time for solving Jacobian and change of variables problems while maintaining accuracy?",
+            "answer": "17 minutes",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "improved average problem-solving time on Jacobian calculations",
+            "conversation_references": [
+                "Assessment & Practice Labels:Problem Practice: Completed 7 Jacobian and change of variables problems, scoring 6 correct, average time 22 minutes.",
+                "Information Update: Recently, I improved my average problem-solving time on Jacobian calculations to 17 minutes while maintaining accuracy."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original average time of 22 minutes instead of the improved 17 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    640
+                ],
+                "updated_info": [
+                    666
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 17 minutes"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much did I reduce my error rate on directional derivative problems, and how does this improvement relate to my understanding of gradient vectors and optimization?",
+            "answer": "You reduced your error rate by 20%, from 30% to 10%, and this improvement helps you better understand gradient vectors and optimization techniques.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "tracking progress on directional derivatives",
+                "applying gradient vectors to optimization"
+            ],
+            "reasoning_steps": [
+                "Identify the initial and improved error rates from the progress tracking session.",
+                "Calculate the reduction in error rate by subtracting the improved rate from the initial rate.",
+                "Connect this improvement to the user's understanding of gradient vectors and optimization from the related session."
+            ],
+            "source_chat_ids": [
+                258,
+                266
+            ],
+            "rubric": [
+                "LLM response should state: You reduced your error rate by 20%, from 30% to 10%",
+                "LLM response should state: this improvement helps you better understand gradient vectors and optimization techniques"
+            ]
+        },
+        {
+            "question": "How many problems I completed on partial derivates and vector field in total?",
+            "answer": "You completed 8 problems on partial derivates and 10 problems on vector field",
+            "difficulty": "easy",
+            "reasoning_type": "simple_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [],
+            "reasoning_steps": [
+                "8 problems on partial derivates",
+                "10 problems on vector field"
+            ],
+            "source_chat_ids": [
+                132,
+                894
+            ],
+            "rubric": [
+                "LLM response should state: 18 problems",
+                "LLM response should state: 8 problems on partial derivates",
+                "LLM response should state: 10 problems on vector field"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm working on a problem involving maximizing a function subject to a constraint. Could you walk me through how to approach solving for the multiplier and what insights I should keep in mind while doing so?",
+            "preference_being_tested": "I prefer algebraic solutions supported by geometric intuition for complex optimization.",
+            "expected_compliance": "Response should integrate both algebraic steps and geometric explanations to clarify the problem-solving process, reflecting the user's preference for combined algebraic and geometric understanding.",
+            "compliance_indicators": [
+                "provides algebraic derivation of the multiplier",
+                "explains geometric meaning or intuition behind the multiplier",
+                "connects algebraic results with geometric interpretation",
+                "uses visual or conceptual descriptions alongside equations"
+            ],
+            "non_compliance_signs": [
+                "only provides algebraic manipulations without geometric context",
+                "only gives geometric intuition without algebraic detail",
+                "ignores the multiplier's interpretation",
+                "fails to link algebraic and geometric perspectives"
+            ],
+            "difficulty": "medium",
+            "preference_type": "solution_style",
+            "source_chat_ids": [
+                1558,
+                1560,
+                1568
+            ],
+            "rubric": [
+                "LLM response should contain: provides algebraic derivation of the multiplier",
+                "LLM response should contain: explains geometric meaning or intuition behind the multiplier"
+            ]
+        },
+        {
+            "question": "Can you help me understand how is the divergence of a vector field?",
+            "preference_being_tested": "I prefer connecting vector calculus concepts to physical phenomena for better understanding.",
+            "expected_compliance": "Response should explain the divergence concept by relating it to physical phenomena such as fluid flow behavior, rather than only providing abstract mathematical definitions or formulas.",
+            "compliance_indicators": [
+                "uses physical examples like fluid expansion or compression",
+                "connects divergence to real-world phenomena",
+                "explains concepts with intuitive physical interpretations"
+            ],
+            "non_compliance_signs": [
+                "only provides formulaic or symbolic explanation",
+                "ignores physical context",
+                "fails to relate divergence to any real-world scenario"
+            ],
+            "difficulty": "medium",
+            "preference_type": "explanatory_style",
+            "source_chat_ids": [
+                846
+            ],
+            "rubric": [
+                "LLM response should contain: uses physical examples like fluid expansion or compression",
+                "LLM response should contain: connects divergence to real-world phenomena"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my overall progress and understanding of partial derivatives and gradient vectors based on our discussions?",
+            "ideal_summary": "Over the course of our conversations, your grasp of partial derivatives and gradient vectors has notably improved. Initially, you tracked your homework score improvement from 65% to 82%, which reflected growing proficiency and conceptual clarity in applying partial derivatives to functions like \\(f(x,y) = x^2 - 4xy + y^2\\). We explored foundational concepts such as computing partial derivatives using both limit definitions and shortcut rules, confirming their equivalence and applicability to more complex functions. Your understanding deepened as we examined gradient vectors, learning how to compute them, interpret their geometric significance as directions of steepest ascent, and visualize their perpendicularity to level curves using graphing tools. Additionally, you tackled directional derivatives, applying the formula \\(D_u f = \nabla f \\cdot u\\) to specific functions and points, reinforcing the connection between gradients and rates of change in arbitrary directions. Throughout, you also engaged with advanced topics like Clairaut's theorem on mixed partial derivatives, solidifying your conceptual foundation. This progression highlights a comprehensive development from basic computations to geometric interpretations and applications in multivariable calculus.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey_summary",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                80,
+                81,
+                88,
+                89,
+                90,
+                82,
+                83,
+                86,
+                87,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                102,
+                103,
+                104,
+                105,
+                108,
+                109,
+                114,
+                115,
+                110,
+                111,
+                116,
+                117,
+                112,
+                113,
+                118,
+                119
+            ],
+            "key_elements_tested": [
+                "progress tracking",
+                "conceptual understanding",
+                "application of definitions and rules",
+                "geometric interpretation",
+                "advanced concepts"
+            ],
+            "synthesis_required": "Integrating foundational knowledge, computational techniques, geometric insights, and advanced theory into a coherent learning progression",
+            "source_chat_ids": [
+                80,
+                81,
+                82,
+                83,
+                86,
+                87,
+                88,
+                89,
+                90,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                102,
+                103,
+                104,
+                105,
+                108,
+                109,
+                114,
+                115,
+                110,
+                111,
+                116,
+                117,
+                112,
+                113,
+                118,
+                119
+            ],
+            "rubric": [
+                "LLM response should contain: you tracked your homework score improvement from 65% to 82%, which reflected growing proficiency and conceptual clarity in applying partial derivatives to functions",
+                "LLM response should contain: We explored foundational concepts such as computing partial derivatives using both limit definitions and shortcut rules, confirming their equivalence and applicability to more complex functions",
+                "LLM response should contain: Your understanding deepened as we examined gradient vectors, learning how to compute them, interpret their geometric significance as directions of steepest ascent, and visualize their perpendicularity to level curves using graphing tools",
+                "LLM response should contain: you tackled directional derivatives, applying the formula \\(D_u f = \nabla f \\cdot u\\) to specific functions and points, reinforcing the connection between gradients and rates of change in arbitrary directions.",
+                "LLM response should contain: you also engaged with advanced topics like Clairaut's theorem on mixed partial derivatives, solidifying your conceptual foundation."
+            ]
+        },
+        {
+            "question": "Can you give me a clear summary of how my understanding and use of gradients and directional derivatives developed throughout our discussions?",
+            "ideal_summary": "Over the course of our conversations, your grasp of gradients and directional derivatives deepened progressively. Initially, you correctly calculated the gradient vector for the function \\( f(x,y) = x^3 - 3xy^2 \\) and verified its components through step-by-step differentiation. Building on this, you explored the concept of directional derivatives, learning how to compute them as the dot product of the gradient and a unit vector, with examples at specific points and directions. We clarified the geometric interpretation, emphasizing how the gradient points toward the steepest ascent and the directional derivative measures the rate of change in any given direction. Later, you practiced applying these concepts to different functions and vectors, improving your computational skills and conceptual understanding. Finally, you connected these ideas to critical points and the Hessian matrix, learning how to classify points as minima, maxima, or saddle points based on the Hessian's definiteness, thus rounding out your multivariable calculus knowledge with both computational techniques and theoretical insights.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                144,
+                154,
+                160,
+                166,
+                230
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "computational steps",
+                "geometric interpretation",
+                "application to examples",
+                "connection to critical point classification"
+            ],
+            "synthesis_required": "Integrating conceptual explanations, computational examples, and theoretical developments into a coherent learning progression",
+            "source_chat_ids": [
+                144,
+                154,
+                160,
+                166,
+                230
+            ],
+            "rubric": [
+                "LLM response should contain: you correctly calculated the gradient vector for the function \\( f(x,y) = x^3 - 3xy^2 \\) and verified its components through step-by-step differentiation",
+                "LLM response should contain: you explored the concept of directional derivatives, learning how to compute them as the dot product of the gradient and a unit vector, with examples at specific points and directions",
+                "LLM response should contain: We clarified the geometric interpretation, emphasizing how the gradient points toward the steepest ascent and the directional derivative measures the rate of change in any given direction",
+                "LLM response should contain: you practiced applying these concepts to different functions and vectors, improving your computational skills and conceptual understanding",
+                "LLM response should contain: you connected these ideas to critical points and the Hessian matrix, learning how to classify points as minima, maxima, or saddle points based on the Hessian's definiteness"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I first asked for help with the function subject to the constraint did I confirm that the explanation about directional derivatives helped me?",
+            "answer": "8 days elapsed between my initial question about maximizing the function on January 10, 2024, and when I confirmed that the explanation about directional derivatives helped me on January 18, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 10, 2024: initial question about maximizing function",
+                "8 days later: confirmation that explanation helped"
+            ],
+            "conversation_references": [
+                "chat_id 8",
+                "chat_id 140"
+            ],
+            "calculation_required": "January 18, 2024 - January 10, 2024 = 8 days",
+            "source_chat_ids": {
+                "first_event": [
+                    8
+                ],
+                "second_event": [
+                    140
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 8 days",
+                "LLM response should state: from January 10 till January 18"
+            ]
+        },
+        {
+            "question": "How many days passed between when I first asked for help solving the constrained optimization problem and when I fully understood the relationship between the gradient vector and directional derivative with the example?",
+            "answer": "24 days passed between when you first asked for help with the constrained optimization problem on January 10, 2024, and when you confirmed understanding the gradient and directional derivative example in the later session dated February 3, 2024 (inferred from batch anchors and session order).",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 10, 2024: initial constrained optimization question (batch anchor)",
+                "February 3, 2024: confirmed understanding of gradient and directional derivative example (inferred from session sequence)"
+            ],
+            "conversation_references": [
+                "Session 8: initial constrained optimization problem",
+                "Sessions 138, 140, 146, 148, 150: gradient and directional derivative discussions"
+            ],
+            "calculation_required": "February 3, 2024 - January 10, 2024 = 24 days (requires inferring dates from batch anchors and session order)",
+            "source_chat_ids": {
+                "first_event": [
+                    8
+                ],
+                "second_event": [
+                    138,
+                    140,
+                    146,
+                    148,
+                    150
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 24 days",
+                "LLM response should state: from January 10 till February 3"
+            ]
+        }
+    ]
+}

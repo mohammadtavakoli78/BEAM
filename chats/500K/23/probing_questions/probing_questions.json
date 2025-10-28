@@ -1,0 +1,574 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the nutrition workshop at Saint Helena Community Center on February 20, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific discussions or content of the nutrition workshop on February 20, 2024.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The workshop is mentioned but no details about agenda or discussions are provided.",
+            "plan_reference": "Batch 2, Bullet 18",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific discussions or content of the nutrition workshop on February 20, 2024."
+            ]
+        },
+        {
+            "question": "Can you provide details about the yoga classes Patricia recommended at ZenFlow studio?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed schedule or content of the yoga classes at ZenFlow studio.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Yoga classes are mentioned with timing but no detailed class descriptions or schedules are provided.",
+            "plan_reference": "Batch 6, Bullet 10 and Batch 7, Bullet 10",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed schedule or content of the yoga classes at ZenFlow studio."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any cooking classes with Stephanie?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you attended a cooking class with Stephanie, but you also mentioned that you've never attended any cooking classes with her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance of cooking classes with Stephanie",
+            "conversation_references": [
+                "chat_id: 238",
+                "chat_id: 298"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    238
+                ],
+                "second_statement": [
+                    298
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you attended a cooking class with Stephanie",
+                "LLM response should mention: you also mentioned that you've never attended any cooking classes with her.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended yoga classes with Patricia?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you started attending yoga classes with Patricia, but you also mentioned that you have never attended any yoga classes with her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance of yoga classes with Patricia",
+            "conversation_references": [
+                "Session 692: Attending yoga classes with Patricia",
+                "Session 800: Never attended yoga classes with Patricia"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    692
+                ],
+                "second_statement": [
+                    800
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you started attending yoga classes with Patricia",
+                "LLM response should mention: you also mentioned that you have never attended any yoga classes with her.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of managing my shared meals and social plans with Stephanie throughout our conversations, in order (mention 11 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Seeking guidance on healthy options at a regular dinner spot, 2) Agreeing to limit desserts to once weekly and concerns about calorie impact, 3) Compromising on reducing salt in shared recipes and asking about further sodium reduction, 4) Planning to host monthly social dinners starting in May and requesting advice on healthy group meals, 5) Negotiating dining out frequency and setting boundaries while maintaining the budget, 6) Feeling overwhelmed by these changes and needing support to process thoughts, 7) Considering hosting a dinner party with healthy meal options and asking for recipe tips, 8) Discussing balancing relationships and personal wellness goals, 9) Planning to attend a monthly book club starting in October and managing commitment concerns, 10) Agreeing on hosting a limited number of parties per year starting December and seeking low-key party ideas, 11) Agreeing on serving only wine and sparkling water at parties and questioning if that\u2019s too restrictive.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 11,
+            "conversation_references": [
+                "Session 24: Healthy options at dinner spot",
+                "Session 156: Dessert limits and calorie concerns",
+                "Session 246: Salt reduction compromise",
+                "Session 384: Hosting monthly social dinners",
+                "Session 512 & 516: Dining out frequency and boundaries",
+                "Session 516: Feeling overwhelmed",
+                "Session 708 & 710: Dinner party planning and recipe tips",
+                "Session 716 & 848: Balancing relationships and wellness",
+                "Session 844 & 848: Monthly book club commitment",
+                "Session 942: Party hosting limits",
+                "Session 1036 & 1038: Party drink restrictions"
+            ],
+            "ordering_tested": [
+                "1st: Healthy dinner options",
+                "2nd: Dessert frequency and calories",
+                "3rd: Salt reduction in recipes",
+                "4th: Monthly social dinners",
+                "5th: Dining out frequency and budget boundaries",
+                "6th: Emotional overwhelm",
+                "7th: Dinner party planning",
+                "8th: Balancing relationships and wellness",
+                "9th: Book club attendance commitment",
+                "10th: Party hosting limits",
+                "11th: Party drink restrictions"
+            ],
+            "source_chat_ids": [
+                24,
+                156,
+                246,
+                384,
+                512,
+                516,
+                708,
+                716,
+                844,
+                942,
+                1036
+            ],
+            "rubric": [
+                "LLM response should mention: Healthy dinner options",
+                "LLM response should mention: Dessert frequency and calories",
+                "LLM response should mention: Salt reduction in recipes",
+                "LLM response should mention: Monthly social dinners",
+                "LLM response should mention: Dining out frequency and budget boundaries",
+                "LLM response should mention: Emotional overwhelm",
+                "LLM response should mention: Dinner party planning",
+                "LLM response should mention: Balancing relationships and wellness",
+                "LLM response should mention: Book club attendance commitment",
+                "LLM response should mention: Party hosting limits",
+                "LLM response should mention: Party drink restrictions"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my nutrition and activity plans throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned your nutrition and activity plans in this order: 1) First, you talked about meeting friends regularly and healthy breakfast options, 2) Then you brought up planning for a potluck and healthy dishes, 3) Next, you discussed starting a walking routine and staying motivated, 4) After that, you mentioned attending a nutrition lecture and follow-up topics, 5) Finally, you talked about managing cholesterol concerns and planning visits with healthy snacks.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 32: Regular meetings and breakfast options",
+                "Session 186: Potluck planning and healthy dishes",
+                "Session 276: Walking routine and motivation",
+                "Sessions 422, 424, 432: Nutrition lecture follow-up and related discussions",
+                "Sessions 974, 976, 978, 1066, 1072: Cholesterol concerns and visit planning"
+            ],
+            "ordering_tested": [
+                "1st: Regular meetings and breakfast options",
+                "2nd: Potluck planning and healthy dishes",
+                "3rd: Walking routine and motivation",
+                "4th: Nutrition lecture follow-up and related discussions",
+                "5th: Cholesterol concerns and visit planning"
+            ],
+            "source_chat_ids": [
+                32,
+                186,
+                276,
+                [
+                    422,
+                    424,
+                    432
+                ],
+                [
+                    974,
+                    976,
+                    978,
+                    1066,
+                    1072
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Regular meetings and breakfast options",
+                "LLM response should mention: Potluck planning and healthy dishes",
+                "LLM response should mention: Walking routine and motivation",
+                "LLM response should mention: Nutrition lecture follow-up and related discussions",
+                "LLM response should mention: Cholesterol concerns and visit planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How far away did I say my mom lives from me?",
+            "answer": "She lives 3 miles away.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions mom Samantha, 89, lives pretty close; Turn 26: USER mentions visiting mom on Oak Street",
+            "key_facts_tested": [
+                "distance mom lives from user"
+            ],
+            "source_chat_ids": [
+                16,
+                26
+            ],
+            "rubric": [
+                "LLM response should mention: 3 miles"
+            ]
+        },
+        {
+            "question": "When did I say my doctor recommended the blood test?",
+            "answer": "You said your doctor recommended the blood test on January 15.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: Date mentioned early in user's message about the test",
+            "key_facts_tested": [
+                "date: January 15",
+                "event: doctor recommendation for blood test"
+            ],
+            "source_chat_ids": [
+                74
+            ],
+            "rubric": [
+                "LLM response should mention: January 15"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I keep in mind for a good daily wellness routine?",
+            "instruction_being_tested": "Always include hydration details when I ask about health and wellness routines.",
+            "expected_compliance": "Response should include information about fluid intake along with other wellness advice.",
+            "compliance_indicators": [
+                "mentions amount or frequency of fluids",
+                "discusses importance of drinking liquids",
+                "includes hydration as part of routine"
+            ],
+            "non_compliance_signs": [
+                "no mention of fluids or drinking",
+                "only discusses exercise or diet",
+                "ignores any reference to liquids"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                204
+            ],
+            "rubric": [
+                "LLM response should mention: hydration details",
+                "LLM response should mention: fluid intake",
+                "LLM response should mention: drinking liquids"
+            ]
+        },
+        {
+            "question": "What are some good options I can include for protein in my meals?",
+            "instruction_being_tested": "Always suggest plant-based protein options first when I ask about meal planning.",
+            "expected_compliance": "Response should prioritize plant-based protein options before mentioning any other types.",
+            "compliance_indicators": [
+                "plant-based proteins listed first",
+                "mention of legumes, tofu, tempeh, or other plant sources before animal sources"
+            ],
+            "non_compliance_signs": [
+                "animal proteins suggested first",
+                "plant-based options omitted or listed last",
+                "no clear prioritization of plant-based sources"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_prioritization",
+            "source_chat_ids": [
+                562
+            ],
+            "rubric": [
+                "LLM response should mention: plant-based protein options first",
+                "LLM response should mention: legumes, tofu, tempeh, or other plant sources"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my baseline weight for tracking my weight loss goal?",
+            "answer": "187 pounds",
+            "difficulty": "easy",
+            "update_type": "weight_measurement_adjustment",
+            "tests_retention_of": "updated baseline weight value",
+            "conversation_references": [
+                "Baseline weight is 185 pounds; target is 175 pounds by April 15, 2024.",
+                "I recently adjusted my baseline weight to 187 pounds after a more accurate measurement last week."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original baseline weight of 185 pounds instead of the updated 187 pounds",
+            "source_chat_ids": {
+                "original_info": [
+                    88,
+                    96
+                ],
+                "updated_info": [
+                    202
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 187 pounds"
+            ]
+        },
+        {
+            "question": "What is my most recent LDL cholesterol level?",
+            "answer": "102 mg/dL",
+            "difficulty": "easy",
+            "update_type": "health metric update",
+            "tests_retention_of": "latest LDL cholesterol measurement",
+            "conversation_references": [
+                "LDL decreased from 110 mg/dL on September 20 to 105 mg/dL on October 25.",
+                "My LDL cholesterol recently measured 102 mg/dL, showing steady progress toward my goal."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the older LDL level of 105 mg/dL instead of the latest 102 mg/dL",
+            "source_chat_ids": {
+                "original_info": [
+                    906,
+                    908,
+                    910
+                ],
+                "updated_info": [
+                    994
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 102 mg/dL"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much have I spent on groceries and dining out combined in April and May so far?",
+            "answer": "I spent $340 on groceries and $70 on dining out in April, and $180 on groceries in May so far, totaling $770.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "April budget and spending",
+                "May budget and spending"
+            ],
+            "reasoning_steps": [
+                "Identify grocery and dining out spending for April from the user messages.",
+                "Identify grocery spending for May so far from the user messages.",
+                "Add the grocery and dining out amounts from April and the grocery amount from May to get the total."
+            ],
+            "source_chat_ids": [
+                402,
+                403,
+                528,
+                529
+            ],
+            "rubric": [
+                "LLM response should mention: $770"
+            ]
+        },
+        {
+            "question": "How many times per week have I agreed to include desserts and dining out with Stephanie combined?",
+            "answer": "I agreed to include desserts once weekly and declined dining out three times weekly, so desserts once plus dining out twice weekly.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "I agreed to let Stephanie add desserts to our meal plan once weekly",
+                "I declined Stephanie's request to increase dining out to 3 times weekly"
+            ],
+            "reasoning_steps": [
+                "Identify the number of times desserts are allowed per week from the dessert agreement.",
+                "Identify the number of times dining out is agreed upon per week from the dining out boundary.",
+                "Add the agreed dessert frequency and the agreed dining out frequency to find the total times per week."
+            ],
+            "source_chat_ids": [
+                156,
+                512
+            ],
+            "rubric": [
+                "LLM response should mention: desserts once weekly",
+                "LLM response should mention: dining out twice weekly"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you suggest some snack ideas I can prepare quickly at home?",
+            "preference_being_tested": "I prefer preparing snacks at home to control ingredients and avoid added sugars found in store-bought options.",
+            "expected_compliance": "Response should focus on homemade snack options and avoid recommending store-bought snacks, implicitly respecting the user's preference for home preparation and ingredient control.",
+            "compliance_indicators": [
+                "recommends homemade snack recipes",
+                "avoids suggesting packaged or store-bought snacks",
+                "mentions simple preparation methods suitable for home cooking"
+            ],
+            "non_compliance_signs": [
+                "recommends store-bought snacks",
+                "suggests pre-packaged or processed snack options",
+                "ignores the home preparation context"
+            ],
+            "difficulty": "medium",
+            "preference_type": "preparation_method",
+            "source_chat_ids": [
+                248
+            ],
+            "rubric": [
+                "LLM response should mention: homemade snack recipes",
+                "LLM response should not mention: sugar added snacks"
+            ]
+        },
+        {
+            "question": "I'm looking for some tea options to have in the evening. What would you suggest?",
+            "preference_being_tested": "I prefer herbal teas like chamomile and peppermint in the evening to aid relaxation and sleep.",
+            "expected_compliance": "Response should recommend herbal teas known for relaxation and sleep benefits, such as chamomile, peppermint, or similar calming herbal options, rather than caffeinated or stimulating teas.",
+            "compliance_indicators": [
+                "mentions herbal teas",
+                "suggests chamomile or peppermint",
+                "recommends teas that promote relaxation or sleep",
+                "avoids caffeinated or stimulating teas"
+            ],
+            "non_compliance_signs": [
+                "recommends caffeinated teas like black or green tea",
+                "ignores herbal tea options",
+                "suggests teas unrelated to relaxation or sleep",
+                "does not acknowledge evening or relaxation context"
+            ],
+            "difficulty": "medium",
+            "preference_type": "beverage preference",
+            "source_chat_ids": [
+                608
+            ],
+            "rubric": [
+                "LLM response should mention: herbal teas",
+                "LLM response should mention: chamomile or peppermint",
+                "LLM response should mention: teas that promote relaxation or sleep",
+                "LLM response should not mention: caffeinated teas"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how I've managed and supported my parents' nutrition and well-being over the course of our conversations?",
+            "ideal_summary": "Throughout our discussions, you have focused on ensuring the nutritional needs and overall well-being of your elderly parents, Samantha and Ryan. Initially, you sought suitable meal plans tailored to your 89-year-old mom, emphasizing nutrient-rich, easy-to-prepare meals with attention to hydration and medication interactions. You then requested detailed recipes to facilitate meal preparation, which included balanced options for all meals and snacks. As your focus expanded, you explored strategies to balance your time between visiting your mom and supporting your 105-year-old dad at a care center, incorporating communication with caregivers and structured scheduling to maintain their nutritional care. You also integrated family-shared recipes like bone broth into meal plans, recognizing their health benefits and frequency of consumption. Additionally, you considered incorporating plant-based protein powders into your diet and smoothies, evaluating their benefits and how they complement your nutritional goals. Overall, your approach evolved from establishing foundational meal plans to a holistic, family-supported strategy that addresses both parents' unique needs while balancing your caregiving responsibilities.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                16,
+                17,
+                19,
+                27,
+                21,
+                23,
+                149,
+                153,
+                189,
+                428,
+                547,
+                981,
+                1071
+            ],
+            "key_elements_tested": [
+                "nutritional planning",
+                "family caregiving balance",
+                "meal preparation and recipes",
+                "dietary supplementation",
+                "progressive caregiving strategy"
+            ],
+            "synthesis_required": "Integrating multiple aspects of elderly nutrition management, family involvement, and dietary adjustments into a coherent narrative",
+            "source_chat_ids": [
+                16,
+                17,
+                19,
+                21,
+                23,
+                27,
+                149,
+                153,
+                189,
+                428,
+                547,
+                981,
+                1071
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you sought suitable meal plans tailored to your 89-year-old mom, emphasizing nutrient-rich, easy-to-prepare meals with attention to hydration and medication interactions.",
+                "LLM response should mention: You then requested detailed recipes to facilitate meal preparation, which included balanced options for all meals and snacks.",
+                "LLM response should mention: You explored strategies to balance your time between visiting your mom and supporting your 105-year-old dad at a care center, incorporating communication with caregivers and structured scheduling to maintain their nutritional care.",
+                "LLM response should mention: You integrated family-shared recipes like bone broth into meal plans, recognizing their health benefits and frequency of consumption.",
+                "LLM response should mention: You considered incorporating plant-based protein powders into your diet and smoothies, evaluating their benefits and how they complement your nutritional goals.",
+                "LLM response should mention: Your approach evolved from establishing foundational meal plans to a holistic, family-supported strategy that addresses both parents' unique needs while balancing your caregiving responsibilities."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my grocery shopping habits and meal planning have developed over time?",
+            "ideal_summary": "Your grocery shopping and meal planning have evolved through several stages and considerations. Initially, you focused on creating balanced meal plans emphasizing macronutrient balance with three meals and two snacks daily, incorporating strategies like meal prepping and tracking intake to avoid overwhelm. You then optimized your shopping routine by selecting specific stores such as FreshMart for weekly produce, adding Trader Joe\u2019s for specialty items, and integrating online ordering with curbside pickup to save time. Alongside, you refined your grocery lists to prioritize items supporting muscle gain and balanced nutrition, including lean proteins, whole grains, and healthy fats. You also explored seasonal and organic options by visiting places like the Saint Helena Co-op and Green Basket Co, adapting recipes to incorporate fresh, organic produce. Finally, you diversified your shopping further by including bulk purchases at Costco and specialty health foods at Whole Foods, focusing on plant-based options and Mediterranean diet essentials. Throughout this progression, you balanced convenience, nutrition, and variety to support your health goals and streamline your meal preparation.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                39,
+                41,
+                113,
+                221,
+                335
+            ],
+            "key_elements_tested": [
+                "shopping routine evolution",
+                "meal planning adjustments",
+                "store selection and timing",
+                "nutritional focus",
+                "integration of specialty and bulk shopping"
+            ],
+            "synthesis_required": "Combining multiple sessions detailing shopping habits, meal planning, store choices, and nutritional strategies into a coherent developmental narrative",
+            "source_chat_ids": [
+                39,
+                41,
+                113,
+                221,
+                335
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you focused on creating balanced meal plans emphasizing macronutrient balance with three meals and two snacks daily, incorporating strategies like meal prepping and tracking intake to avoid overwhelm.",
+                "LLM response should mention: You then optimized your shopping routine by selecting specific stores such as FreshMart for weekly produce, adding Trader Joe\u2019s for specialty items, and integrating online ordering with curbside pickup to save time.",
+                "LLM response should mention: You refined your grocery lists to prioritize items supporting muscle gain and balanced nutrition, including lean proteins, whole grains, and healthy fats.",
+                "LLM response should mention: You explored seasonal and organic options by visiting places like the Saint Helena Co-op and Green Basket Co, adapting recipes to incorporate fresh, organic produce.",
+                "LLM response should mention: You diversified your shopping further by including bulk purchases at Costco and specialty health foods at Whole Foods, focusing on plant-based options and Mediterranean diet essentials."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I attended the Mindful Eating workshop and when I registered for the Healthy Aging Nutrition workshop?",
+            "answer": "The Mindful Eating workshop was on April 9, and the Healthy Aging Nutrition workshop registration was for February 20, so the Healthy Aging Nutrition workshop registration happened 48 days before the Mindful Eating workshop.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 20: registered for Healthy Aging Nutrition workshop",
+                "April 9: attended Mindful Eating workshop"
+            ],
+            "conversation_references": [
+                "Session 1: Healthy Aging Nutrition registration",
+                "Session 2: Mindful Eating workshop attendance"
+            ],
+            "calculation_required": "April 9 - February 20 = 48 days",
+            "source_chat_ids": {
+                "first_event": [
+                    166
+                ],
+                "second_event": [
+                    396
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 48 days",
+                "LLM response should state: from February 20 till April 9"
+            ]
+        },
+        {
+            "question": "If I rescheduled my writing deadline by 2 days because of the gym trial, how many days after I moved my meal prep to 4 PM does this new deadline fall?",
+            "answer": "The writing deadline was pushed back by 2 days after the meal prep was rescheduled to 4 PM, so the new deadline falls 2 days after the meal prep time change.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Meal prep rescheduled to 4 PM starting next week",
+                "Writing deadline delayed by 2 days due to gym trial"
+            ],
+            "conversation_references": [
+                "Session 1: Meal prep rescheduling",
+                "Session 3: Writing deadline delay"
+            ],
+            "calculation_required": "2 days delay after the meal prep rescheduling",
+            "source_chat_ids": {
+                "first_event": [
+                    80
+                ],
+                "second_event": [
+                    240
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 2 days"
+            ]
+        }
+    ]
+}

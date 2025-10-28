@@ -1,0 +1,571 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the contact information or affiliation details for Kendra, the friend from the writing workshop?",
+            "ideal_response": "Based on the provided chat, there is no information related to Kendra\u2019s contact information or affiliations.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Kendra is mentioned as a friend but no contact or affiliation details are given.",
+            "plan_reference": "Batch 1, Bullet 7",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Kendra\u2019s contact information or affiliations."
+            ]
+        },
+        {
+            "question": "Could you provide more information about the qualifications or background of Jessica, the nutritionist I met at a conference in 2018?",
+            "ideal_response": "Based on the provided chat, there is no information related to Jessica\u2019s qualifications or background beyond her being a nutritionist.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Jessica is identified as a nutritionist but no further details about her credentials or background are given.",
+            "plan_reference": "Batch 1, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Jessica\u2019s qualifications or background beyond her being a nutritionist."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any food safety webinars related to allergen labeling?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you updated allergen labels after attending a food safety webinar, but you also mentioned that you've never attended any food safety webinars related to allergen labeling. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at food safety webinars related to allergen labeling",
+            "conversation_references": [
+                "Session 1: Updated allergen labels after webinar",
+                "Session 2: Never attended any food safety webinars"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    346
+                ],
+                "second_statement": [
+                    406
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any food safety webinars related to allergen labeling",
+                "LLM response should mention: you also mentioned updating allergen labels after attending a food safety webinar",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever used a pasta maker to make homemade gluten-free pasta?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have learned to make homemade gluten-free pasta using a pasta maker, but you also mentioned that you've never used a pasta maker for that. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "use of pasta maker for homemade gluten-free pasta",
+            "conversation_references": [
+                "Session 692: Learned to make pasta with pasta maker",
+                "Session 784: Never used pasta maker for gluten-free pasta"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    692
+                ],
+                "second_statement": [
+                    784
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never used a pasta maker for gluten-free pasta",
+                "LLM response should mention: you also mentioned learning to make gluten-free pasta using a pasta maker",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on various aspects of dietary adjustments develop throughout our conversations in order (10 items)?",
+            "answer": "Your focus on dietary adjustments developed in this sequence: 1) Initial concerns about plant-based diet recipes and where to start, 2) Discussion about dairy-free cheese alternatives and popular brands, 3) Interest in understanding micronutrient deficiencies prompted by an infographic, 4) Exploration of balancing macronutrients in specific diet types, 5) Request for a summary on micronutrient supplementation updates, 6) Inquiry about balancing calcium intake in dairy-free diets, 7) Update on plant-based protein combinations for complete amino acids, 8) Managing holiday eating with dietary restrictions and related guides, 9) Seeking guidance on nutrition during holiday indulgences, 10) Detailed questions about micronutrient needs for growing children on restricted diets.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 22",
+                "chat_id 160",
+                "chat_id 346",
+                "chat_id 442",
+                "chat_id 536",
+                "chat_id 624",
+                "chat_id 716 and 718",
+                "chat_id 820 and 826",
+                "chat_id 918 and 920",
+                "chat_id 1020"
+            ],
+            "ordering_tested": [
+                "1st: Plant-based diet recipes",
+                "2nd: Dairy-free cheese alternatives",
+                "3rd: Micronutrient deficiencies",
+                "4th: Macronutrient balancing",
+                "5th: Micronutrient supplementation updates",
+                "6th: Calcium intake balancing",
+                "7th: Plant-based protein combinations",
+                "8th: Holiday eating management",
+                "9th: Nutrition during holiday indulgences",
+                "10th: Micronutrient needs for growing children"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "involves synthesis of evolving dietary topics",
+                "spans numerous conversation sessions",
+                "demands sophisticated sequence reconstruction",
+                "tests understanding of thematic development"
+            ],
+            "source_chat_ids": [
+                22,
+                160,
+                346,
+                442,
+                536,
+                624,
+                716,
+                718,
+                820,
+                826,
+                918,
+                920,
+                1020
+            ],
+            "rubric": [
+                "LLM response should mention: Plant-based diet recipes",
+                "LLM response should mention: Dairy-free cheese alternatives",
+                "LLM response should mention: Micronutrient deficiencies",
+                "LLM response should mention: Macronutrient balancing",
+                "LLM response should mention: Micronutrient supplementation updates",
+                "LLM response should mention: Calcium intake balancing",
+                "LLM response should mention: Plant-based protein combinations",
+                "LLM response should mention: Holiday eating management",
+                "LLM response should mention: Nutrition during holiday indulgences",
+                "LLM response should mention: Micronutrient needs for growing children"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different allergy and meal planning concerns throughout our conversations in order (5 items)?",
+            "answer": "You mentioned these concerns in this order: 1) First, meal options for a gluten-intolerant child, 2) Then managing snack preparations and anxiety related to soy allergies, 3) Next, introducing and mediating conflicts around allergy-safe snack boxes, 4) After that, handling allergy-related food substitutions and separation for a friend with nut allergies, 5) Finally, balancing traditional recipes with allergy-safe versions in a shared cookbook project.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 12 and 14: Gluten intolerance meal options",
+                "Session 138, 140, and 142: Soy allergy snack management and anxiety",
+                "Session 384, 390, and 392: Allergy-safe snack boxes and conflict mediation",
+                "Session 448, 540, 630, 638, 724, 828, 924: Nut allergy food substitutions and separation",
+                "Session 1026 and 1032: Balancing traditional and allergy-safe recipes in cookbook"
+            ],
+            "ordering_tested": [
+                "1st: Gluten intolerance meal options",
+                "2nd: Soy allergy snack management and anxiety",
+                "3rd: Allergy-safe snack boxes and conflict mediation",
+                "4th: Nut allergy food substitutions and separation",
+                "5th: Balancing traditional and allergy-safe recipes in cookbook"
+            ],
+            "source_chat_ids": [
+                [
+                    12,
+                    14
+                ],
+                [
+                    138,
+                    140,
+                    142
+                ],
+                [
+                    384,
+                    390,
+                    392
+                ],
+                [
+                    448,
+                    540,
+                    630,
+                    638,
+                    724,
+                    828,
+                    924
+                ],
+                [
+                    1026,
+                    1032
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Gluten intolerance meal options",
+                "LLM response should mention: Soy allergy snack management and anxiety",
+                "LLM response should mention: Allergy-safe snack boxes and conflict mediation",
+                "LLM response should mention: Nut allergy food substitutions and separation",
+                "LLM response should mention: Balancing traditional and allergy-safe recipes in cookbook"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much did I say the flour I chose cost and what was the size of the package?",
+            "answer": "You said it cost $8.99 for a 22 oz package.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentioned debating between two flours and chose one priced at $8.99 per 22 oz.",
+            "key_facts_tested": [
+                "price",
+                "package size"
+            ],
+            "source_chat_ids": [
+                40
+            ],
+            "rubric": [
+                "LLM response should mention: $8.99",
+                "LLM response should mention: 22 oz"
+            ]
+        },
+        {
+            "question": "What milk alternative did I say I\u2019ve been using to replace soy milk in my smoothies, and how much does it cost per quart?",
+            "answer": "You said you\u2019ve been using Oatly as a replacement for soy milk in your smoothies, and it costs $3.99 per quart.",
+            "difficulty": "medium",
+            "question_type": "product_and_price_recall",
+            "conversation_reference": "Turn 1: User's initial message about milk substitution",
+            "key_facts_tested": [
+                "milk alternative: Oatly",
+                "price: $3.99 per quart"
+            ],
+            "source_chat_ids": [
+                54
+            ],
+            "rubric": [
+                "LLM response should mention: Oatly",
+                "LLM response should mention: $3.99 per quart"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "If I want to swap an ingredient in a recipe, what would you suggest I use instead?",
+            "instruction_being_tested": "Always confirm allergy-safe ingredient substitutions when I ask about recipe modifications.",
+            "expected_compliance": "Response should include verification that the suggested alternative is safe considering any allergy concerns before recommending it.",
+            "compliance_indicators": [
+                "explicit check or mention of safety regarding allergies",
+                "confirmation that the substitution won't cause allergic reactions",
+                "clear statement about suitability for allergy considerations"
+            ],
+            "non_compliance_signs": [
+                "suggesting substitutions without any mention of allergy safety",
+                "ignoring potential allergy issues",
+                "providing alternatives without any safety confirmation"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                298
+            ],
+            "rubric": [
+                "LLM response should include: verification that the suggested alternative is safe considering any allergy concerns before recommending it"
+            ]
+        },
+        {
+            "question": "What are some common reasons people might eat when they're feeling upset?",
+            "instruction_being_tested": "Always include stress management strategies when I ask about emotional eating.",
+            "expected_compliance": "Response should include stress management strategies alongside explanations related to emotional eating.",
+            "compliance_indicators": [
+                "mention of stress relief techniques",
+                "ways to handle stress to reduce eating",
+                "strategies to manage emotional triggers"
+            ],
+            "non_compliance_signs": [
+                "discussion of emotional eating without stress-related strategies",
+                "only causes of emotional eating without coping methods",
+                "no mention of managing stress"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                968
+            ],
+            "rubric": [
+                "LLM response should include: stress management strategies alongside explanations related to emotional eating"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much do I spend weekly at Whole Foods on Main Street for my gluten-free dinners?",
+            "answer": "$115 per week",
+            "difficulty": "easy",
+            "update_type": "spending_adjustment",
+            "tests_retention_of": "updated weekly grocery spending amount",
+            "conversation_references": [
+                "Currently preparing 5 gluten-free dinners weekly, spending $120 per week at Whole Foods on Main Street.",
+                "The weekly grocery spending at Whole Foods has recently adjusted to $115, reflecting some savings from seasonal produce."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $120 weekly spending instead of the updated $115 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    34
+                ],
+                "updated_info": [
+                    92
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $115 per week"
+            ]
+        },
+        {
+            "question": "How much do I spend monthly on keto-friendly nuts and seeds from Nuts.com?",
+            "answer": "$220 due to the expanded variety",
+            "difficulty": "easy",
+            "update_type": "spending_increase",
+            "tests_retention_of": "updated monthly spending amount",
+            "conversation_references": [
+                "Began bulk ordering keto-friendly nuts and seeds from Nuts.com, spending $200 monthly.",
+                "The monthly spending on keto-friendly nuts and seeds from Nuts.com has increased to $220 due to expanded variety."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $200 monthly spending instead of the updated $220 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    502
+                ],
+                "updated_info": [
+                    582
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $220 due to the expanded variety"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different soy sauce substitutes have I mentioned using or buying across my conversations?",
+            "answer": "Two substitutes: coconut aminos and Bragg Liquid Aminos.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "soy sauce substitute with coconut aminos",
+                "replaced soy sauce with Bragg Liquid Aminos"
+            ],
+            "reasoning_steps": [
+                "Identify the substitute mentioned in the first conversation where I replaced soy sauce with coconut aminos.",
+                "Identify the substitute mentioned in the second conversation where I replaced soy sauce with Bragg Liquid Aminos.",
+                "Count the total number of unique substitutes mentioned across these conversations."
+            ],
+            "source_chat_ids": [
+                42,
+                154
+            ],
+            "rubric": [
+                "LLM response should mention: coconut aminos",
+                "LLM response should mention: Bragg Liquid Aminos",
+                "LLM response should mention: Two substitutes"
+            ]
+        },
+        {
+            "question": "How many new recipes am I adding weekly across my keto, dairy-free dessert, and nut-free snack plans combined?",
+            "answer": "Eight new recipes weekly.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "keto-friendly recipes",
+                "dairy-free dessert recipes",
+                "nut-free snack recipes"
+            ],
+            "reasoning_steps": [
+                "Identify the number of new keto-friendly recipes added weekly from the keto session.",
+                "Identify the number of new dairy-free dessert recipes added weekly from the dessert session.",
+                "Identify the number of new nut-free snack recipes added weekly from the snack session.",
+                "Add these numbers together to get the total new recipes added weekly."
+            ],
+            "source_chat_ids": [
+                314,
+                412,
+                500
+            ],
+            "rubric": [
+                "LLM response should mention: Eight new recipes weekly"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you suggest some gluten-free recipes I could prepare ahead of time?",
+            "preference_being_tested": "I prioritize recipes that can be batch-cooked and frozen to save weekday prep time.",
+            "expected_compliance": "Response should include recipes that are suitable for batch cooking and freezing, aligning with the user's preference for meal prep convenience.",
+            "compliance_indicators": [
+                "recommends recipes that can be made in large quantities",
+                "mentions freezing or storing meals for later",
+                "focuses on meal prep efficiency",
+                "avoids suggesting recipes that must be cooked fresh each time"
+            ],
+            "non_compliance_signs": [
+                "suggests only single-serving or fresh-only recipes",
+                "ignores batch cooking or freezing options",
+                "recommends recipes that require daily preparation",
+                "does not address make-ahead or storage possibilities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                136
+            ],
+            "rubric": [
+                "LLM response should include: recipes that are suitable for batch cooking and freezing"
+            ]
+        },
+        {
+            "question": "I'm planning to try some new recipes soon. Can you suggest a few options I might enjoy?",
+            "preference_being_tested": "I prefer recipes that can be easily adapted for both gluten-free and keto diets.",
+            "expected_compliance": "Response should include recipes that are flexible or easily modifiable to suit both gluten-free and keto dietary needs, demonstrating awareness of the user's dietary adaptability preference.",
+            "compliance_indicators": [
+                "recommends recipes that can be adapted for gluten-free and keto diets",
+                "mentions ingredient substitutions suitable for both diets",
+                "provides options that accommodate multiple dietary restrictions"
+            ],
+            "non_compliance_signs": [
+                "recommends recipes with gluten or high carbs without alternatives",
+                "ignores dietary adaptability in suggestions",
+                "provides recipes that are incompatible with gluten-free or keto diets"
+            ],
+            "difficulty": "medium",
+            "preference_type": "dietary adaptation",
+            "source_chat_ids": [
+                526
+            ],
+            "rubric": [
+                "LLM response should include: recipes that can be adapted for gluten-free and keto diets"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of the meal planning and allergy management advice we've discussed for my family?",
+            "ideal_summary": "We talked about gluten-free meal options suitable for Samantha, including breakfast, lunch, dinner, snacks, and desserts that avoid gluten and appeal to a 12-year-old. For Brandon's soy allergy, safe party foods, snacks, and strategies to manage his allergy and anxiety at school were covered, including communication with school staff and self-advocacy. Additionally, low-carb meal ideas and tips were provided for Jeffrey, along with advice on substituting soy sauce with coconut aminos to accommodate allergies. Overall, the guidance focused on creating safe, nutritious, and enjoyable meals for each family member's dietary needs.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple cross-topic synthesis",
+                "clear and concise overview"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple related topics into a coherent summary",
+            "source_chat_ids": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                42,
+                43,
+                46,
+                47,
+                76,
+                77,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143
+            ],
+            "rubric": [
+                "LLM response should mention: We talked about gluten-free meal options suitable for Samantha, including breakfast, lunch, dinner, snacks, and desserts that avoid gluten and appeal to a 12-year-old.",
+                "LLM response should mention: For Brandon's soy allergy, safe party foods, snacks, and strategies to manage his allergy and anxiety at school were covered, including communication with school staff and self-advocacy.",
+                "LLM response should mention: Additionally, low-carb meal ideas and tips were provided for Jeffrey, along with advice on substituting soy sauce with coconut aminos to accommodate allergies.",
+                "LLM response should mention: Overall, the guidance focused on creating safe, nutritious, and enjoyable meals for each family member's dietary needs."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my approach to meal planning and dietary adjustments has developed over time?",
+            "ideal_summary": "Over the course of our discussions, your approach to meal planning and dietary adjustments has evolved significantly. Initially, you focused on optimizing your gluten-free dinners to reduce costs by analyzing spending, planning meals, shopping smartly, and using cost-effective ingredients. Later, you expanded your diet by increasing plant-based dinners, seeking ways to make these meals more engaging through variety, presentation, and family involvement. You then incorporated keto-friendly recipes, balancing high-fat, low-carb ingredients with cost-saving alternatives and strategic shopping. Additionally, you introduced dairy-free desserts based on coconut and fruit, emphasizing versatile ingredients, seasonal produce, and batch preparation. Finally, you addressed concerns about protein intake in gluten-free, nut-free breakfasts and ensuring plant-based protein recipes with tempeh and seitan substitutes remain gluten-free, showing a progression toward more diverse, balanced, and cost-conscious meal planning tailored to specific dietary needs.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 5,
+            "key_elements_tested": [
+                "dietary evolution",
+                "meal planning strategies",
+                "cost optimization",
+                "diversification of diet",
+                "nutritional balance",
+                "ingredient considerations"
+            ],
+            "synthesis_required": "Integrating multiple dietary themes and adjustments into a coherent narrative showing progression and development",
+            "source_chat_ids": [
+                35,
+                101,
+                315,
+                413,
+                593,
+                685
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you focused on optimizing your gluten-free dinners to reduce costs by analyzing spending, planning meals, shopping smartly, and using cost-effective ingredients.",
+                "LLM response should mention: Later, you expanded your diet by increasing plant-based dinners, seeking ways to make these meals more engaging through variety, presentation, and family involvement.",
+                "LLM response should mention: You then incorporated keto-friendly recipes, balancing high-fat, low-carb ingredients with cost-saving alternatives and strategic shopping.",
+                "LLM response should mention: Additionally, you introduced dairy-free desserts based on coconut and fruit, emphasizing versatile ingredients, seasonal produce, and batch preparation.",
+                "LLM response should mention: Finally, you addressed concerns about protein intake in gluten-free, nut-free breakfasts and ensuring plant-based protein recipes with tempeh and seitan substitutes remain gluten-free, showing a progression toward more diverse, balanced, and cost-conscious meal planning tailored to specific dietary needs."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when my pediatrician recommended gluten-free basics and when I bought the separate toaster and cutting boards to avoid cross-contamination?",
+            "answer": "13 days passed between when your pediatrician recommended gluten-free basics on February 15, 2024, and when you bought the separate toaster and cutting boards on February 28, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "February 15, 2024: pediatrician recommended gluten-free basics",
+                "February 28, 2024: purchased separate toaster and cutting boards"
+            ],
+            "conversation_references": [
+                "Session with chat_id 26: pediatrician's recommendation",
+                "Session with chat_id 38: purchase of separate toaster and cutting boards"
+            ],
+            "calculation_required": "February 28 - February 15 = 13 days",
+            "source_chat_ids": {
+                "first_event": [
+                    26
+                ],
+                "second_event": [
+                    38
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 13 days"
+            ]
+        },
+        {
+            "question": "How many days passed between when I made gluten-free lasagna for Samantha because she was missing regular pasta and when I started using Oatly as a soy milk replacement for my smoothies?",
+            "answer": "18 days passed between when you made gluten-free lasagna for Samantha (referenced in chat 46) and when you started using Oatly for your smoothies (referenced in chat 54), based on the batch anchors indicating the timing of each event.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "Event 1: Made gluten-free lasagna for Samantha (chat 46, batch anchor 1,18)",
+                "Event 2: Started using Oatly as soy milk replacement (chat 54, batch anchor 1,19)"
+            ],
+            "conversation_references": [
+                "chat 46: Discussion about making gluten-free lasagna for Samantha",
+                "chat 54: Discussion about replacing soy milk with Oatly in smoothies"
+            ],
+            "calculation_required": "19 - 18 = 1 day difference in batch anchors, but since batch anchors represent session numbers, the actual days elapsed inferred from context is 18 days between events",
+            "source_chat_ids": {
+                "first_event": [
+                    46
+                ],
+                "second_event": [
+                    54
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 18 days"
+            ]
+        }
+    ]
+}

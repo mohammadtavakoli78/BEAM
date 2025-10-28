@@ -1,0 +1,586 @@
+{
+    "abstention": [
+        {
+            "question": "What was the agenda or main discussion points during the initial project kickoff meeting on January 5, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the agenda or discussion points of the project kickoff meeting.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions a time anchor on January 5, 2024, but no meeting agenda or discussion details are given.",
+            "plan_reference": "Batch 1, Bullet 1",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the agenda or discussion points of the project kickoff meeting."
+            ]
+        },
+        {
+            "question": "What was the rationale behind preferring JWT with refresh tokens over session cookies for authentication?",
+            "ideal_response": "Based on the provided chat, there is no information related to the rationale behind preferring JWT with refresh tokens over session cookies.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The preference is stated but no explanation or reasoning is provided.",
+            "plan_reference": "Batch 3, Bullet 20",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the rationale behind preferring JWT with refresh tokens over session cookies."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever synchronized my server time with an NTP service before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never synchronized your server time with any NTP service, but you also mentioned synchronizing it with the NTP service pool.ntp.org to fix token validation errors. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "server time synchronization with NTP service",
+            "conversation_references": [
+                "chat_id: 398",
+                "chat_id: 330"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    398
+                ],
+                "second_statement": [
+                    330
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you mentioned never synchronizing with NTP service",
+                "LLM response should mention: you also mentioned synchronizing with NTP service pool.ntp.org",
+                "LLM response should ask for clarification on which is correct"
+            ]
+        },
+        {
+            "question": "Have I ever written integration tests for socket events using Jest and socket.io-client?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never written integration tests for any socket events, but you also mentioned having written integration tests with 90% coverage using Jest and socket.io-client. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "writing integration tests for socket events",
+            "conversation_references": [
+                "Session 160: Never written integration tests",
+                "Session 112: Written integration tests with 90% coverage"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    160
+                ],
+                "second_statement": [
+                    112
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have never written integration tests for any socket events",
+                "LLM response should mention: you also mentioned having written integration tests with 90% coverage",
+                "LLM response should ask for clarification on which is correct"
+            ]
+        }
+        
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about managing message data in the chat app progress in order (mention 7 items in order)?",
+            "answer": "Your discussions about managing message data progressed as follows: 1) Optimizing queries to retrieve recent messages efficiently, 2) Implementing and validating schema changes for message editing features, 3) Considering testing strategies for message update functions, 4) Handling edge cases where message content remains unchanged, 5) Planning and scripting a migration to add new fields to existing messages, 6) Executing the migration in batches to avoid downtime, and 7) Improving the migration script with robust error handling and asynchronous control.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "chat_id: 102",
+                "chat_id: 246, 248, 250",
+                "chat_id: 530",
+                "chat_id: 578"
+            ],
+            "ordering_tested": [
+                "1st: Query optimization for recent messages",
+                "2nd: Schema design and validation for editing",
+                "3rd: Testing updateMessage function",
+                "4th: Handling unchanged message text cases",
+                "5th: Migration script planning",
+                "6th: Batch execution of migration",
+                "7th: Enhancing migration script robustness"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "spans multiple conversation sessions",
+                "involves schema design, query optimization, testing, and migration",
+                "requires sophisticated sequence reconstruction and pattern recognition"
+            ],
+            "source_chat_ids": [
+                102,
+                246,
+                248,
+                250,
+                530,
+                578
+            ],
+            "rubric": [
+                "Query optimization for recent messages",
+                "Schema design and validation for editing",
+                "Testing updateMessage function",
+                "Handling unchanged message text cases",
+                "Migration script planning",
+                "Batch execution of migration",
+                "Enhancing migration script robustness"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of optimizing and handling real-time messaging in my chat app throughout our conversations, in order (mention 9 items in order)?",
+            "answer": "You mentioned these aspects in this order: 1) Setting up the basic real-time chat app with Node.js, Express, and Socket.io, including initial server code and error handling, 2) Troubleshooting connection errors and client-side Socket.io issues, 3) Discussing handling multiple users and message broadcasting optimizations, 4) Exploring scaling strategies like load balancing and message queues with MongoDB and Mongoose integration, 5) Introducing Redis for caching user sessions and presence data, 6) Implementing and debugging room-based messaging with socket event handlers, 7) Addressing performance bottlenecks with large numbers of concurrent users and suggesting data structure improvements, 8) Handling error and retry logic in Redis pub/sub with advanced reliability strategies, 9) Refactoring message broadcast logic to reduce event loop blocking and considering worker threads and data structures for further optimization.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 9,
+            "conversation_references": [
+                "Session 0: Basic setup and error handling",
+                "Session 2: Connection troubleshooting",
+                "Session 4: Multi-user and message broadcast optimizations",
+                "Session 16: Scaling with load balancer and message queue",
+                "Session 18: Redis caching for sessions and presence",
+                "Session 82: Room-based messaging and message retrieval",
+                "Session 86: Performance bottlenecks and data structure improvements",
+                "Session 404: Redis pub/sub error handling and retry logic",
+                "Session 640: Broadcast logic refactoring and optimization"
+            ],
+            "ordering_tested": [
+                "1st: Basic setup and error handling",
+                "2nd: Connection troubleshooting",
+                "3rd: Multi-user and broadcast optimizations",
+                "4th: Scaling with load balancer and message queue",
+                "5th: Redis caching for sessions",
+                "6th: Room-based messaging and retrieval",
+                "7th: Performance bottlenecks and data structures",
+                "8th: Redis pub/sub error handling and retry",
+                "9th: Broadcast logic refactoring and further optimization"
+            ],
+            "source_chat_ids": [
+                0,
+                2,
+                4,
+                16,
+                18,
+                82,
+                86,
+                404,
+                640
+            ],
+            "rubric": [
+                "Basic setup and error handling",
+                "Connection troubleshooting",
+                "Multi-user and broadcast optimizations",
+                "Scaling with load balancer and message queue",
+                "Redis caching for sessions",
+                "Room-based messaging and retrieval",
+                "Performance bottlenecks and data structures",
+                "Redis pub/sub error handling and retry",
+                "Broadcast logic refactoring and further optimization"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What deadline did I set for the initial deployment of my project on the platform?",
+            "answer": "You said you were aiming for an initial deployment by March 1, 2024.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 30: User mentions deployment timeline early in conversation",
+            "key_facts_tested": [
+                "deployment deadline: March 1, 2024",
+                "initial deployment timing"
+            ],
+            "source_chat_ids": [
+                30
+            ],
+            "rubric": [
+                "LLM response should mention: March 1, 2024"
+            ]
+        },
+        {
+            "question": "How did you recommend improving the way my application handles user interactions to better manage the delays I observed under load?",
+            "answer": "I suggested enhancing your implementation by adding user authentication with JWT, managing room memberships with Maps and Sets, ensuring users can only join authorized rooms, broadcasting chat messages within rooms, and measuring latency on the client side using ping-pong events to get meaningful insights about delays under concurrent usage.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: initial user latency measurement and code snippet, followed by assistant's detailed improved implementation and explanation",
+            "key_facts_tested": [
+                "use of JWT for authentication",
+                "management of online users and room memberships with Map and Set",
+                "authorization checks for joining rooms",
+                "broadcasting chat messages only within rooms",
+                "client-side latency measurement using ping and pong events"
+            ],
+            "extraction_challenge": "LLM must integrate the initial user latency concern with the assistant's multi-faceted solution involving authentication, room management, message handling, and latency measurement scattered across different parts of the conversation",
+            "source_chat_ids": [
+                100,
+                101
+            ],
+            "rubric": [
+                "LLM response should mention: JWT for authentication",
+                "LLM response should mention: Map and Set for managing users and rooms",
+                "LLM response should mention: authorization checks for room joining",
+                "LLM response should mention: broadcasting messages within rooms",
+                "LLM response should mention: client-side latency measurement with ping-pong"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How can I manage errors that happen during asynchronous operations in my code?",
+            "instruction_being_tested": "Always provide a code example when I ask about async error handling.",
+            "expected_compliance": "Response should include a code example demonstrating how to handle errors in asynchronous operations.",
+            "compliance_indicators": [
+                "code snippet showing error management in async functions",
+                "example using try-catch or promise methods",
+                "demonstration of error handling logic in code"
+            ],
+            "non_compliance_signs": [
+                "only textual explanation without code",
+                "general advice without examples",
+                "no demonstration of error handling in code"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                314,
+                316
+            ],
+            "rubric": [
+                "LLM response should include: code snippet showing error management in async functions",
+                "LLM response should include: example using try-catch or promise methods",
+                "LLM response should include: demonstration of error handling logic in code"
+            ]
+        },
+        {
+            "question": "What time is our next meeting scheduled for?",
+            "instruction_being_tested": "Always use 24-hour time format when I ask about meeting schedules.",
+            "expected_compliance": "Response should provide the meeting time using the 24-hour clock notation.",
+            "compliance_indicators": [
+                "time given in 24-hour format",
+                "hours from 00 to 23",
+                "no AM/PM used"
+            ],
+            "non_compliance_signs": [
+                "time given in 12-hour format",
+                "use of AM or PM",
+                "ambiguous time notation"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                76,
+                78
+            ],
+            "rubric": [
+                "LLM response should include: time given in 24-hour format"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the memory usage and number of keys in my Redis instance?",
+            "answer": "The Redis instance is using 200MB of memory and contains 15,000 keys.",
+            "difficulty": "moderate",
+            "update_type": "resource_usage_increase",
+            "tests_retention_of": "updated Redis memory usage and key count after scaling",
+            "conversation_references": [
+                "Secured Redis with ACL rules allowing only authenticated Node.js app IPs to connect.",
+                "Redis memory usage has now reached 200MB with 15,000 keys after scaling up concurrent users."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 150MB memory usage and 10,000 keys instead of the updated values.",
+            "rubric": [
+                "LLM response should mention: 200MB of memory usage",
+                "LLM response should mention: 15,000 keys"
+            ]
+        },
+        {
+            "question": "What is the login API response time under 20 concurrent requests?",
+            "answer": "120ms",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated login API response time after optimization",
+            "conversation_references": [
+                "Performance & Optimization Labels:Performance Profiling: Measured login API response time at 180ms under 20 concurrent requests.",
+                "Information Update: The login API response time has decreased to 120ms under 20 concurrent requests after optimizing the authentication flow."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 180ms response time instead of the updated 120ms",
+            "source_chat_ids": {
+                "original_info": [
+                    182
+                ],
+                "updated_info": [
+                    234
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 120ms"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Given my implementations and issues with JWT token expiry, verification in Socket.io, token interception concerns, and clock skew handling, how should I optimally balance token lifespan, verification tolerance, and security measures to minimize unauthorized access risks?",
+            "answer": "You should use short-lived access tokens with a lifespan shorter than your initial 1-hour setting, implement refresh tokens for seamless renewal, avoid ignoring expiration during verification but allow a small clock tolerance to handle skew, enforce secure transmission via HTTPS and HTTP-only cookies, maintain a token blacklist to revoke compromised tokens, and enhance error handling to detect expired or invalid tokens promptly. This balance reduces the window for misuse, tolerates minor clock differences without compromising security, and mitigates interception risks through layered protections.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id: 20 (initial JWT expiry implementation)",
+                "chat_id: 172-173 (Socket.io JWT verification issues and debugging)",
+                "chat_id: 174-175 (token interception and security strategies)",
+                "chat_id: 336-337 (clock skew handling and verification improvements)"
+            ],
+            "reasoning_steps": [
+                "Analyze the initial token expiry approach and its 1-hour lifespan setting from the first session.",
+                "Incorporate the Socket.io verification setup and error handling challenges, noting the importance of matching algorithms and environment variables.",
+                "Consider the security concerns raised about token interception and the recommended mitigations like short-lived tokens, refresh tokens, and blacklisting.",
+                "Evaluate the clock skew problem and the use of clock tolerance without ignoring expiration to maintain security while allowing minor timing differences.",
+                "Synthesize these points to determine an optimal token lifespan shorter than the original, combined with refresh tokens, strict verification with clock tolerance, secure transmission, and token revocation mechanisms to minimize unauthorized access."
+            ],
+            "source_chat_ids": [
+                20,
+                172,
+                173,
+                174,
+                175,
+                336,
+                337
+            ],
+            "rubric": [
+                "LLM response should mention: use short-lived access tokens (shorter than 1 hour)",
+                "LLM response should mention: implement refresh tokens for renewal",
+                "LLM response should mention: avoid ignoring expiration but allow small clock tolerance",
+                "LLM response should mention: enforce secure transmission (HTTPS, HTTP-only cookies)",
+                "LLM response should mention: maintain token blacklist for revocation",
+                "LLM response should mention: enhance error handling for expired/invalid tokens"
+            ]
+        },
+        {
+            "question": "How many different fields did I mention in my message schema across my queries?",
+            "answer": "Two fields: roomId and timestamp",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 256",
+                "chat_id: 102"
+            ],
+            "reasoning_steps": [
+                "Identify the fields mentioned in the message schema in chat_id 256 (roomId and timestamp).",
+                "Confirm the fields used in the query in chat_id 102 (roomId and timestamp).",
+                "Count the unique fields mentioned across both sessions."
+            ],
+            "source_chat_ids": [
+                102,
+                256
+            ],
+            "rubric": [
+                "LLM response should mention: roomId",
+                "LLM response should mention: timestamp"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "How should I handle message saving and confirmation in my chat application to keep the interface smooth and responsive?",
+            "preference_being_tested": "I prefer asynchronous message persistence with acknowledgement over synchronous blocking to improve user experience.",
+            "expected_compliance": "Response should suggest an approach that involves asynchronous message handling with some form of acknowledgement rather than synchronous blocking, aligning with the user's preference for a smooth and responsive interface.",
+            "compliance_indicators": [
+                "recommends asynchronous message saving",
+                "includes acknowledgement or confirmation mechanism",
+                "avoids suggestions that block the UI during message persistence",
+                "mentions responsiveness or fluid user experience"
+            ],
+            "non_compliance_signs": [
+                "suggests synchronous blocking during message save",
+                "ignores acknowledgement mechanisms",
+                "recommends approaches that could cause UI delays or freezes",
+                "does not address interface responsiveness"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                298
+            ],
+            "rubric": [
+                "LLM response should mention: recommends asynchronous message saving"
+            ]
+        },
+        {
+            "question": "I'm working on a system that needs to handle real-time updates across multiple servers. What approaches would you suggest for managing event communication in this setup?",
+            "preference_being_tested": "I prefer Redis pub/sub over in-memory event emitters for scalable real-time synchronization.",
+            "expected_compliance": "Response should recommend or prioritize solutions that involve Redis pub/sub or similar scalable messaging systems rather than solely in-memory event emitters.",
+            "compliance_indicators": [
+                "mentions Redis pub/sub or comparable distributed messaging systems",
+                "explains benefits of scalable event communication methods",
+                "avoids recommending only in-memory event emitters for multi-server setups"
+            ],
+            "non_compliance_signs": [
+                "only suggests in-memory event emitters",
+                "ignores distributed messaging options",
+                "fails to address scalability across multiple servers"
+            ],
+            "difficulty": "medium",
+            "preference_type": "technology choice",
+            "source_chat_ids": [
+                442
+            ],
+            "rubric": [
+                "LLM response should mention: Redis pub/sub or comparable distributed messaging systems"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary of everything involved in implementing and securing the authentication system, covering all the challenges, solutions, and best practices that came up throughout the process?",
+            "ideal_summary": "The implementation and securing of the authentication system involved multiple interconnected aspects spanning token generation, verification, error handling, security enhancements, secret management, and testing. Initially, the process began with generating JWT tokens using the jsonwebtoken library, correctly setting token expiration to one hour and signing with a secret key. Verification mechanisms were established both in HTTP routes and Socket.io connection handshakes, with detailed error handling for cases like malformed, expired, or invalid tokens. To address security concerns, strategies such as short-lived tokens combined with refresh tokens, secure transmission via HTTPS and HTTP-only cookies, token blacklisting, IP binding, rate limiting, and multi-factor authentication were recommended to mitigate risks of token interception and misuse. The management of sensitive data like JWT secrets and bcrypt salt rounds evolved from environment variables to more secure solutions using secrets managers (e.g., AWS Secrets Manager), including best practices for IAM permissions, environment-specific secrets, and secret rotation without downtime by supporting multiple secret versions and fallback mechanisms. Testing was emphasized through comprehensive Jest test suites covering registration, login, token verification, and error scenarios to ensure robustness and maintain high coverage. Additionally, handling clock skew issues was improved by using clock tolerance without ignoring expiration, and error handling in middleware was enhanced by integrating token refresh flows to improve user experience. Overall, the journey reflected a sophisticated integration of secure token lifecycle management, error resilience, secret governance, and thorough validation to build a robust, scalable, and secure authentication system.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "token lifecycle management",
+                "error handling and resilience",
+                "security best practices",
+                "secret management and rotation",
+                "testing and coverage strategies",
+                "real-time authentication integration",
+                "clock synchronization considerations",
+                "user experience improvements"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                20,
+                21,
+                54,
+                55,
+                172,
+                173,
+                174,
+                175,
+                194,
+                195,
+                196,
+                336,
+                337,
+                344,
+                345
+            ],
+            "rubric": [
+                "LLM response should contain: the process began with generating JWT tokens using the jsonwebtoken library, correctly setting token expiration to one hour and signing with a secret key.",
+                "LLM response should contain: Verification mechanisms were established both in HTTP routes and Socket.io connection handshakes, with detailed error handling for cases like malformed, expired, or invalid tokens.",
+                "LLM response should contain: To address security concerns, strategies such as short-lived tokens combined with refresh tokens, secure transmission via HTTPS and HTTP-only cookies, token blacklisting, IP binding, rate limiting, and multi-factor authentication were recommended to mitigate risks of token interception and misuse.",
+                "LLM response should contain: The management of sensitive data like JWT secrets and bcrypt salt rounds evolved from environment variables to more secure solutions using secrets managers (e.g., AWS Secrets Manager), including best practices for IAM permissions, environment-specific secrets, and secret rotation without downtime by supporting multiple secret versions and fallback mechanisms.",
+                "LLM response should contain: Testing was emphasized through comprehensive Jest test suites covering registration, login, token verification, and error scenarios to ensure robustness and maintain high coverage.",
+                "LLM response should contain: handling clock skew issues was improved by using clock tolerance without ignoring expiration, and error handling in middleware was enhanced by integrating token refresh flows to improve user experience."
+            ]
+        },
+        {
+            "question": "Can you give me a detailed summary that captures the full scope of the development and optimization of my real-time chat application, including all the challenges, solutions, and enhancements discussed across different aspects of the project?",
+            "ideal_summary": "The development of the real-time chat application involved multiple interconnected challenges and iterative improvements across several technical domains. Initially, the backend was set up using Node.js with Express and Socket.io to handle WebSocket communication, focusing on basic user management, message broadcasting, and connection handling. Early enhancements introduced robust error handling, improved user tracking with helper functions, and enriched logging for better observability. Troubleshooting connection issues revealed the importance of matching Socket.io versions on client and server sides and correctly configuring CORS, especially when testing from different ports. To scale the application for many concurrent users, architectural strategies such as implementing a simple Node.js load balancer, integrating a MongoDB-based message queue with Mongoose for reliable message persistence, and optimizing database queries with indexing and pagination were proposed. Further performance improvements included adopting Redis caching for user sessions and presence data, leveraging TTLs to manage stale connections, and securing Redis connections with ACL rules. The system's resilience was enhanced by incorporating retry logic with exponential backoff, circuit breakers, and fallback mechanisms to handle Redis outages gracefully. On the real-time messaging front, features like chatroom message history retrieval upon joining, private messaging with unique room ID generation, and typing indicators were implemented with careful event broadcasting to room members. Latency measurement and user presence tracking were refined using client-server coordinated ping-pong events and efficient data structures like Maps for user management. Overall, the project evolved through a comprehensive process of identifying bottlenecks, applying best practices in error handling, scalability, security, and user experience, resulting in a robust, maintainable, and scalable chat application architecture.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                0,
+                1,
+                2,
+                3,
+                5,
+                16,
+                17,
+                19,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                96,
+                97,
+                108,
+                109,
+                124,
+                125,
+                404,
+                405,
+                412,
+                413,
+                414,
+                415
+            ],
+            "rubric": [
+                "LLM response should contain:  the backend was set up using Node.js with Express and Socket.io to handle WebSocket communication, focusing on basic user management, message broadcasting, and connection handling.",
+                "LLM response should contain: Early enhancements introduced robust error handling, improved user tracking with helper functions, and enriched logging for better observability.",
+                "LLM response should contain: Troubleshooting connection issues revealed the importance of matching Socket.io versions on client and server sides and correctly configuring CORS, especially when testing from different ports.",
+                "LLM response should contain: To scale the application for many concurrent users, architectural strategies such as implementing a simple Node.js load balancer, integrating a MongoDB-based message queue with Mongoose for reliable message persistence, and optimizing database queries with indexing and pagination were proposed.",
+                "LLM response should contain: Further performance improvements included adopting Redis caching for user sessions and presence data, leveraging TTLs to manage stale connections, and securing Redis connections with ACL rules.",
+                "LLM response should contain: The system's resilience was enhanced by incorporating retry logic with exponential backoff, circuit breakers, and fallback mechanisms to handle Redis outages gracefully.",
+                "LLM response should contain: On the real-time messaging front, features like chatroom message history retrieval upon joining, private messaging with unique room ID generation, and typing indicators were implemented with careful event broadcasting to room members.",
+                "LLM response should contain: Latency measurement and user presence tracking were refined using client-server coordinated ping-pong events and efficient data structures like Maps for user management."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between the sprint deadline for completing the MVP backend and the later deadline I set for finishing OAuth integration and testing?",
+            "answer": "There are 13 days between the MVP backend completion deadline on February 15, 2024, and the OAuth integration and testing deadline on February 28, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "February 15, 2024, 5:00 PM UTC: MVP backend completion deadline",
+                "February 28, 2024: OAuth integration and testing deadline"
+            ],
+            "conversation_references": [
+                "Session 1 (chat_id 62): MVP backend completion deadline",
+                "Session 2 (chat_id 230): OAuth integration and testing deadline"
+            ],
+            "calculation_required": "February 28 - February 15 = 13 days",
+            "source_chat_ids": {
+                "first_event": [
+                    62
+                ],
+                "second_event": [
+                    230
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 13 days",
+                "LLM response should state: from February 15 till February 28"
+            ]
+        },
+        {
+            "question": "How many days do I have between completing the final load testing and the production launch date?",
+            "answer": "I have 5 days between the deadline for finalizing load testing and the production launch date.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Finalizing load testing deadline",
+                "Production launch date"
+            ],
+            "conversation_references": [
+                "Session 2: Production launch planning"
+            ],
+            "calculation_required": "April 20 launch date - April 15 load testing deadline = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    604
+                ],
+                "second_event": [
+                    604
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5 days",
+                "LLM response should state: from April 15 till April 20"
+            ] 
+        }
+    ]
+}

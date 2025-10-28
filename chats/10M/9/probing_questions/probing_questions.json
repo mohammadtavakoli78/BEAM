@@ -1,0 +1,655 @@
+{
+    "abstention": [
+        {
+            "question": "What are the steps for filing a claim with Allianz insurance as per the policy?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact steps for filing a claim with Allianz insurance.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Claim filing steps are generally mentioned but no exact detailed steps are provided",
+            "plan_reference": "Plan 2, Batch 3, Bullet 18",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact steps for filing a claim with Allianz insurance"
+            ]
+        },
+        {
+            "question": "What were the factors considered when deciding to extend the dolphin watching time to 1.5 hours?",
+            "ideal_response": "Based on the provided chat, there is no information related to the factors considered for extending dolphin watching time.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions the extension but does not provide reasoning or considerations behind it.",
+            "plan_reference": "Plan 4, Batch 8, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the factors considered for extending dolphin watching time"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever initiated the booking process for Soneva Jani or any other resort?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never initiated any booking process for Soneva Jani or any other resort, but there are also indications that you have started the booking process for Soneva Jani. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Initiation of booking process for Soneva Jani",
+            "conversation_references": [
+                "Session 3110, 3112, 3114: No prior booking initiated",
+                "Session 2874, 2890: Booking process initiation discussed"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    3110,
+                    3112,
+                    3114
+                ],
+                "second_statement": [
+                    2874,
+                    2890
+                ]
+            },
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never initiated any booking process for Soneva Jani",
+                "LLM response should mention: you said you have started the booking process for Soneva Jani",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever taken a seaplane transfer during my trips?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never taken a seaplane transfer during any of your trips, but you also referred to safety experiences during seaplane transfers. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with seaplane transfers",
+            "conversation_references": [
+                "Session 1: Never taken seaplane transfer",
+                "Sessions 2, 3, 4, 5: Safety and seaplane transfer experiences"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    15942
+                ],
+                "second_statement": [
+                    15808,
+                    15810,
+                    15812,
+                    15814,
+                    15816
+                ]
+            },
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never taken a seaplane transfer during any of your trips",
+                "LLM response should mention: you also referred to safety experiences during seaplane transfers",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up various preparations and plans for our trip from September 23, 2024 to October 3, 2024, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned the trip preparations and plans in this order: 1) Confirming the main booking details and cost, 2) Double-checking transportation timing preferences, 3) Reviewing insurance coverage specifics, 4) Allocating days for planned activities within the itinerary, 5) Selecting and discussing luxury items for the trip, 6) Scheduling and prioritizing health-related appointments, 7) Ensuring home security arrangements are set, 8) Discussing overall expectations for relaxation during the trip, 9) Reconfirming booking details as the trip approached, 10) Finalizing and reviewing the full itinerary together.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 5060: Booking confirmation",
+                "Session 5258-5276: Transportation timing",
+                "Session 5466-5686: Insurance review",
+                "Session 5680: Activity allocation",
+                "Session 5882-5898: Luxury items",
+                "Session 6082-6094: Health appointments",
+                "Session 6294-6296: Home security",
+                "Session 6498: Trip expectations",
+                "Session 6690-6702: Booking reconfirmation",
+                "Session 6900-6914: Itinerary finalization"
+            ],
+            "ordering_tested": [
+                "1st: Booking confirmation",
+                "2nd: Transportation timing",
+                "3rd: Insurance review",
+                "4th: Activity allocation",
+                "5th: Luxury items",
+                "6th: Health appointments",
+                "7th: Home security",
+                "8th: Trip expectations",
+                "9th: Booking reconfirmation",
+                "10th: Itinerary finalization"
+            ],
+            "source_chat_ids": [
+                5060,
+                5258,
+                5466,
+                5680,
+                5882,
+                6082,
+                6294,
+                6498,
+                6690,
+                6900
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Booking confirmation",
+                "Transportation timing",
+                "Insurance review",
+                "Activity allocation",
+                "Luxury items",
+                "Health appointments",
+                "Home security",
+                "Trip expectations",
+                "Booking reconfirmation",
+                "Itinerary finalization"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different interactions with the resort staff from October 13, 2024 to October 22, 2024, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned interactions with the resort staff in this order: 1) Kareem offering the jet skiing package, 2) Kareem checking in after the lagoon ride for feedback, 3) Kareem proposing the parasailing session, 4) Kareem following up after the parasailing flight, 5) Nimal offering the memory box at the gift shop, 6) Nimal suggesting the luggage scale rental, 7) Nimal introducing the farewell ceremony with the palm leaf arch, 8) Nimal collecting feedback via a short survey, 9) Nimal confirming the seaplane transfer with a dock briefing, 10) Nimal seeing us off with a sincere farewell chat.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 13660, 13662, 13670, 13674, 13676",
+                "Session 13876, 13878, 13880",
+                "Session 14120, 14122, 14126, 14132",
+                "Session 14310",
+                "Session 14502, 14508, 14516",
+                "Session 14706, 14708",
+                "Session 14902, 14910, 14914",
+                "Session 15094",
+                "Session 15300, 15304, 15310",
+                "Session 15492, 15500"
+            ],
+            "ordering_tested": [
+                "1st: Kareem offers jet skiing package",
+                "2nd: Kareem checks in post-ride for feedback",
+                "3rd: Kareem proposes parasailing session",
+                "4th: Kareem follows up post-flight",
+                "5th: Nimal offers memory box",
+                "6th: Nimal offers luggage scale rental",
+                "7th: Nimal introduces farewell ceremony",
+                "8th: Nimal collects feedback survey",
+                "9th: Nimal confirms seaplane transfer briefing",
+                "10th: Nimal sees us off with farewell chat"
+            ],
+            "source_chat_ids": [
+                [
+                    13660,
+                    13662,
+                    13670,
+                    13674,
+                    13676
+                ],
+                [
+                    13876,
+                    13878,
+                    13880
+                ],
+                [
+                    14120,
+                    14122,
+                    14126,
+                    14132
+                ],
+                [
+                    14310
+                ],
+                [
+                    14502,
+                    14508,
+                    14516
+                ],
+                [
+                    14706,
+                    14708
+                ],
+                [
+                    14902,
+                    14910,
+                    14914
+                ],
+                [
+                    15094
+                ],
+                [
+                    15300,
+                    15304,
+                    15310
+                ],
+                [
+                    15492,
+                    15500
+                ]
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "Kareem offers jet skiing package",
+                "Kareem checks in post-ride for feedback",
+                "Kareem proposes parasailing session",
+                "Kareem follows up post-flight",
+                "Nimal offers memory box",
+                "Nimal offers luggage scale rental",
+                "Nimal introduces farewell ceremony",
+                "Nimal collects feedback survey",
+                "Nimal confirms seaplane transfer briefing",
+                "Nimal sees us off with farewell chat"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How many pages did I say the album I ordered has, and what was the cost?",
+            "answer": "The album has 50 pages and cost $75.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions ordering a 50-page Shutterfly album for $75.",
+            "key_facts_tested": [
+                "album page count",
+                "album cost"
+            ],
+            "source_chat_ids": [
+                18804
+            ],
+            "plan_reference": "Plan 8",
+            "rubric": [
+                "LLM response should state: 50 pages",
+                "LLM response should state: $75"
+            ]
+        },
+        {
+            "question": "How did I learn about the options to customize my water-based activities, and who would I coordinate with to explore extending or combining these experiences?",
+            "answer": "You learned about the available water-based activity options, including the possibility to extend or combine sessions, through discussions about the jet skiing package and follow-up inquiries about longer or combined experiences. Kareem, the tour coordinator, is the person you would contact via the Soneva app, phone, or in person to arrange and customize these activities.",
+            "difficulty": "hard",
+            "question_type": "Discovery and Learning Process",
+            "conversation_reference": "Multiple turns: initial inquiry about jet skiing package value and duration, concerns about session length, and subsequent advice on contacting Kareem for extensions or combined packages",
+            "key_facts_tested": [
+                "role: tour coordinator",
+                "contact methods: Soneva app, phone, in-person",
+                "activity options: extending jet skiing session, combining with snorkeling or other tours",
+                "package details: 45-minute jet skiing for two",
+                "price context: $200"
+            ],
+            "extraction_challenge": "LLM must integrate information about the package details, concerns about duration, and the role of Kareem as the coordinator who facilitates extensions and combined bookings, synthesizing details scattered across multiple conversation turns",
+            "source_chat_ids": [
+                13660,
+                13662,
+                13674,
+                13675,
+                13677
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: You learned about the possibility to extend or combine sessions, through discussions about the jet skiing package and follow-up inquiries about longer or combined experiences",
+                "LLM response should state: Kareem, the tour coordinator, is the person you would contact via the Soneva app, phone, or in person to arrange and customize these activities"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I consider when choosing between different snacks?",
+            "instruction_being_tested": "Always mention serving sizes when I ask about nutrition choices.",
+            "expected_compliance": "Response should include information about the amount or portion size relevant to the nutrition choices discussed.",
+            "compliance_indicators": [
+                "mention of portion amounts",
+                "reference to quantity per item",
+                "details on how much is typical or recommended"
+            ],
+            "non_compliance_signs": [
+                "no mention of amounts or portions",
+                "only general nutritional info without quantities",
+                "vague or incomplete details about intake"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                14498
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should contain: mention of portion amounts",
+                "LLM response should contain: reference to quantity per item"
+            ]
+        },
+        {
+            "question": "What should I bring for the trip?",
+            "instruction_being_tested": "Always specify item quantities when I ask about packing details.",
+            "expected_compliance": "Response should include specific numbers of each item to bring rather than a general list.",
+            "compliance_indicators": [
+                "mentions exact counts of items",
+                "provides numeric details for each item",
+                "lists quantities alongside item names"
+            ],
+            "non_compliance_signs": [
+                "only lists items without numbers",
+                "gives vague or general packing advice",
+                "no mention of how many of each item"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                14698
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should contain: mentions exact counts of items",
+                "LLM response should contain: provides numeric details for each item"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long is the family vision meeting scheduled to last, and what is the budget for refreshments?",
+            "answer": "The meeting is scheduled for 90 minutes with a refreshments budget of $75.",
+            "difficulty": "moderate",
+            "update_type": "duration_and_budget_increase",
+            "tests_retention_of": "extended meeting duration and increased refreshments budget",
+            "conversation_references": [
+                "Planning a family vision meeting at Seaside Lounge on Wave Street, budgeting $50 for refreshments.",
+                "The family vision meeting at Seaside Lounge was extended to a 90-minute session, with refreshments budget increased to $75 to accommodate additional guests."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 60-minute duration and $50 refreshments budget instead of the updated 90-minute duration and $75 budget.",
+            "source_chat_ids": {
+                "original_info": [
+                    20566,
+                    20570,
+                    20572
+                ],
+                "updated_info": [
+                    20708
+                ]
+            },
+            "plan_reference": "Plan 9",
+            "rubric": [
+                "LLM response should state: 90 minutes",
+                "LLM response should state: $75"
+            ]
+        },
+        {
+            "question": "How much does the seaplane ride to Velaa Private Island cost per person?",
+            "answer": "$650 per person",
+            "difficulty": "easy",
+            "update_type": "fare_increase",
+            "tests_retention_of": "updated seaplane fare amount",
+            "conversation_references": [
+                "Travel Time: Learned seaplane to Velaa Private Island takes 45 minutes, costing $600 per person.",
+                "The seaplane fare to Velaa Private Island has recently increased, now averaging closer to $650 per person."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $600 fare instead of the updated $650 fare",
+            "source_chat_ids": {
+                "original_info": [
+                    866,
+                    872,
+                    874
+                ],
+                "updated_info": [
+                    966
+                ]
+            },
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should state: $650"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Given my finalized budget and allocations, how much can I realistically spend on spa sessions at Dusit Thani without exceeding my total budget, considering my accommodation, transfers, insurance, and extras?",
+            "answer": "You can afford one spa session at Dusit Thani costing $400, while allocating $500 for the all-inclusive package and $900 for other activities and dining, keeping your total within $13,500.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Budget Setting and Spa Costs at Dusit Thani",
+                "Accommodation and Activity Budgeting",
+                "Insurance and Miscellaneous Expense Planning",
+                "Special Offers and Discounts Impact",
+                "Final Budget Allocation and Adjustments"
+            ],
+            "reasoning_steps": [
+                "Identify the total finalized budget of $13,500 and the accommodation cost at Dusit Thani.",
+                "Subtract accommodation costs from the total budget to find remaining funds for spa, activities, insurance, and transfers.",
+                "Account for insurance costs finalized around $450 and transfers estimated at $1,000.",
+                "Consider the allocation for the all-inclusive package and other activities, adjusting to fit within the remaining budget.",
+                "Calculate the maximum number of spa sessions affordable without exceeding the total budget, concluding that one $400 session fits comfortably."
+            ],
+            "source_chat_ids": [
+                1050,
+                1051,
+                1058,
+                1240,
+                1241
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: You can afford one spa session at Dusit Thani costing $400",
+                "LLM response should state: allocating $500 for the all-inclusive package",
+                "LLM response should state: $900 for other activities and dining"
+            ]
+        },
+        {
+            "question": "How much total time am I planning to spend on the first and second islands combined during my tour?",
+            "answer": "3.5 hours",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "What's the best way to spend 1.5 hours on the first island to make the most of our private tour?",
+                "Can you help me come up with a plan to make the most of our 2-hour visit to the second island?"
+            ],
+            "reasoning_steps": [
+                "Identify the time allocated for the first island visit (1.5 hours).",
+                "Identify the time allocated for the second island visit (2 hours).",
+                "Add the two durations to find the total time spent on both islands."
+            ],
+            "source_chat_ids": [
+                9598,
+                9612
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: 3.5 hours"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning some water activities and want to make the most of the time on the lagoon. What would you suggest I focus on during the experience?",
+            "preference_being_tested": "Choosing jet skiing over a $180 parasailing option, drawn to the 5-km lagoon route Kareem mapped out",
+            "expected_compliance": "Response should prioritize recommendations related to jet skiing and the 5-km lagoon route rather than parasailing or unrelated activities, reflecting the user's established interest",
+            "compliance_indicators": [
+                "focuses on jet skiing details",
+                "mentions the lagoon route",
+                "avoids suggesting parasailing or other water activities not aligned with jet skiing"
+            ],
+            "non_compliance_signs": [
+                "recommends parasailing despite user's choice",
+                "ignores the lagoon route in suggestions",
+                "focuses on unrelated water activities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity_choice",
+            "source_chat_ids": [
+                13682,
+                13684,
+                13690,
+                13694,
+                13696
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should contain: focuses on jet skiing details",
+                "LLM response should contain: avoids suggesting parasailing or other water activities not aligned with jet skiing"
+            ]
+        },
+        {
+            "question": "I'm planning a dinner by the water and trying to decide between different types of settings. What are some options I should consider?",
+            "preference_being_tested": "Choosing Aisha\u2019s beach dining over a $250 overwater option for its secluded 100-meter shoreline vibe",
+            "expected_compliance": "Response should highlight options that include secluded shoreline dining settings rather than focusing solely on overwater or high-cost venues, reflecting the user's preference for a specific type of venue atmosphere",
+            "compliance_indicators": [
+                "mentions secluded shoreline settings",
+                "includes beach dining options",
+                "acknowledges venue atmosphere without emphasizing price or exclusivity",
+                "suggests venues with natural, intimate water adjacency"
+            ],
+            "non_compliance_signs": [
+                "only suggests overwater or high-cost venues",
+                "ignores shoreline or beach dining options",
+                "focuses on price or exclusivity without venue atmosphere",
+                "does not consider intimate or natural water settings"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                11504,
+                11506,
+                11508
+            ],
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should contain: mentions secluded shoreline settings",
+                "LLM response should contain: includes beach dining options"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my spouse and I have developed and maintained our connection and shared experiences from October 23, 2024 to November 29, 2024?",
+            "ideal_summary": "Over multiple conversations, you and your spouse have actively nurtured your relationship through a variety of meaningful activities and rituals. Starting with extended coffee chats and brainstorming sessions at Brew Haven, you established a strong foundation of communication and excitement, rating your bond highly after trips and shared planning. You introduced regular at-home rituals like weekly sunset dates and storytelling nights to recreate honeymoon memories, enhancing emotional intimacy. Collaborative efforts such as selecting photos, reviewing online content, and planning future travel and budgets further strengthened your teamwork and synergy. Throughout, you balanced deep reflections on personal growth and trust with lighter, engaging conversations and activities, consistently rating your connection around 9/10 and taking deliberate steps to sustain and deepen your bond.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "relationship development",
+                "shared experiences",
+                "emotional intimacy",
+                "collaborative planning",
+                "balance of reflection and enjoyment"
+            ],
+            "synthesis_required": "Integrating multiple facets of relationship growth and shared activities into a coherent narrative showing progression and maintenance",
+            "source_chat_ids": [
+                18320,
+                18540,
+                18960,
+                19200,
+                19420
+            ],
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should contain: you and your spouse have actively nurtured your relationship through a variety of meaningful activities and rituals",
+                "LLM response should contain: Starting with extended coffee chats and brainstorming sessions at Brew Haven, you established a strong foundation of communication and excitement",
+                "LLM response should contain: You introduced regular at-home rituals like weekly sunset dates and storytelling nights to recreate honeymoon memories, enhancing emotional intimacy",
+                "LLM response should contain: Collaborative efforts such as selecting photos, reviewing online content, and planning future travel and budgets further strengthened your teamwork and synergy",
+                "LLM response should contain: you balanced deep reflections on personal growth and trust with lighter, engaging conversations and activities, consistently rating your connection around 9/10"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my spouse and I planned and prepared for our Maldives honeymoon, including the key decisions and arrangements we made along the way from September 21, 2024 to October 3, 2024?",
+            "ideal_summary": "You and your spouse carefully planned your Maldives honeymoon by first confirming your $10,800 booking for a 6-night stay at Soneva Jani, ensuring all details were accurate and the deposit was paid. You coordinated with family by updating your mom on your 15-day travel itinerary and made arrangements for your daughters' care. To ensure smooth travel, you double-checked seaplane transfer times aiming for a 9 AM departure and confirmed your $50,000 medical coverage with Allianz for peace of mind. You allocated 6 days for activities within your 15-day plan, selecting a mix of relaxation and adventure, and chose luxury items like $120 evening dresses for special dinners. Throughout, you maintained open communication with your spouse to align expectations, manage logistics, and build excitement for your trip, culminating in a well-organized and thoughtfully prepared honeymoon experience.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                5060,
+                5062,
+                5258,
+                5466,
+                5680
+            ],
+            "key_elements_tested": [
+                "planning and preparation",
+                "travel coordination",
+                "insurance and health coverage",
+                "activity scheduling",
+                "luxury and expectations alignment"
+            ],
+            "synthesis_required": "Integrating multiple logistical, emotional, and experiential elements into a coherent narrative of honeymoon preparation",
+            "source_chat_ids": [
+                5060,
+                5062,
+                5258,
+                5466,
+                5680
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: You and your spouse carefully planned your Maldives honeymoon by first confirming your $10,800 booking for a 6-night stay at Soneva Jani, ensuring all details were accurate and the deposit was paid",
+                "LLM response should contain: You coordinated with family by updating your mom on your 15-day travel itinerary and made arrangements for your daughters' care",
+                "LLM response should contain: you double-checked seaplane transfer times aiming for a 9 AM departure and confirmed your $50,000 medical coverage with Allianz for peace of mind",
+                "LLM response should contain: You allocated 6 days for activities within your 15-day plan, selecting a mix of relaxation and adventure, and chose luxury items like $120 evening dresses for special dinners",
+                "LLM response should contain: you maintained open communication with your spouse to align expectations, manage logistics, and build excitement for your trip, culminating in a well-organized and thoughtfully prepared honeymoon experience"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between my last full day at Soneva Jani and when I started reflecting on our honeymoon back home?",
+            "answer": "3 days passed between my last full day at Soneva Jani on October 14 and when I began reflecting on our honeymoon back home on October 17.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "October 14: last full day at Soneva Jani",
+                "October 17: reflecting on honeymoon at home"
+            ],
+            "conversation_references": [
+                "Session 1: Soneva Jani activities and farewell planning",
+                "Session 2: Honeymoon reflections at home"
+            ],
+            "calculation_required": "October 17 - October 14 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14900,
+                    14908,
+                    14912,
+                    14916
+                ],
+                "second_event": [
+                    15944,
+                    15950
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 3 days",
+                "LLM response should state: from October 14 till October 17"
+            ]
+        },
+        {
+            "question": "How many days passed between when I started the exploration phase of our honeymoon and when we had our first romantic beach dinner at Soneva Jani?",
+            "answer": "4 days passed between starting the exploration phase on October 4, 2024, and having the first romantic beach dinner on October 8, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "October 4, 2024: start of exploration phase",
+                "October 8, 2024: first romantic beach dinner"
+            ],
+            "conversation_references": [
+                "Session 1: October 4 exploration phase",
+                "Session 2: October 8 romantic beach dinner"
+            ],
+            "calculation_required": "October 8 - October 4 = 4 days",
+            "source_chat_ids": {
+                "first_event": [
+                    9134,
+                    9136,
+                    9138,
+                    9152,
+                    9154,
+                    9156,
+                    9168
+                ],
+                "second_event": [
+                    11760,
+                    11762,
+                    11766
+                ]
+            },
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: 4 days",
+                "LLM response should state: from October 4 till October 8"
+            ]
+        }
+    ]
+}

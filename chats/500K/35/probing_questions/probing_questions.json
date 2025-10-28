@@ -1,0 +1,553 @@
+{
+    "abstention": [
+        {
+            "question": "Can you share the detailed agenda or topics covered in the USCIS April 2024 webinar on conditional residency requirements?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed agenda or topics of the USCIS April 2024 webinar.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The webinar is referenced but no content or agenda details are provided.",
+            "plan_reference": "Batch 2 mentions reviewing the webinar but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed agenda or topics of the USCIS April 2024 webinar."
+            ]
+        },
+        {
+            "question": "What was the content or key takeaways from the USCIS March 2024 guide on common interview questions I started compiling?",
+            "ideal_response": "Based on the provided chat, there is no information related to the content or key takeaways from the USCIS March 2024 guide on interview questions.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The guide is referenced but no details or summaries are provided.",
+            "plan_reference": "Batch 1 mentions compiling questions but no content.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the content or key takeaways from the USCIS March 2024 guide on interview questions."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any immigration workshops or consultations?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You mentioned that you have never attended any immigration workshops or consultations, but there was also a reference to advice from an immigration attorney. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at immigration workshops or consultations",
+            "conversation_references": [
+                "Session 1: Attorney advice on documents",
+                "Session 2: Never attended workshops statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    122
+                ],
+                "second_statement": [
+                    224
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any immigration workshops or consultations",
+                "LLM response should mention: you also mentioned receiving advice from an immigration attorney",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I attended the USCIS interview before, or is this something I still need to do?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you attended the USCIS interview, but you also mentioned that you have never attended it or submitted any related documents. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at USCIS interview",
+            "conversation_references": [
+                "Session 514, 516, 518: Attended interview statements",
+                "Session 602: Never attended statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    514,
+                    516,
+                    518
+                ],
+                "second_statement": [
+                    602
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you attended the USCIS interview",
+                "LLM response should mention: you also mentioned that you have never attended it or submitted any related documents",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my green card application process throughout our conversations, in order (mention 5 items)?",
+            "answer": "You mentioned the aspects in this order: 1) First, you asked about the initial filing process and medical exam requirements, 2) Then you brought up concerns about financial documentation and income impact, 3) Next, you inquired about hiring an immigration attorney and what to discuss during the consultation, 4) After that, you asked about steps following your lease signing and joint financial planning, 5) Finally, you mentioned topics related to the USCIS interview, submitting additional documents, and receiving approval notices.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 0 and 2: Initial filing and medical exam",
+                "Session 6 and 8: Financial documentation and income",
+                "Session 116 and 118: Immigration attorney consultation",
+                "Session 226 and 324: Lease signing and joint financial planning",
+                "Sessions 514, 610, 730, 816, 910: USCIS interview, document submission, and approval"
+            ],
+            "ordering_tested": [
+                "1st: Initial filing and medical exam",
+                "2nd: Financial documentation and income",
+                "3rd: Immigration attorney consultation",
+                "4th: Lease signing and joint financial planning",
+                "5th: USCIS interview, document submission, and approval"
+            ],
+            "source_chat_ids": [
+                [
+                    0,
+                    2,
+                    4
+                ],
+                [
+                    6,
+                    8,
+                    12
+                ],
+                [
+                    116,
+                    118
+                ],
+                [
+                    226,
+                    324,
+                    330
+                ],
+                [
+                    514,
+                    516,
+                    518,
+                    610,
+                    612,
+                    618,
+                    620,
+                    730,
+                    816,
+                    822,
+                    910
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Initial filing and medical exam",
+                "LLM response should mention: Financial documentation and income",
+                "LLM response should mention: Immigration attorney consultation",
+                "LLM response should mention: Lease signing and joint financial planning",
+                "LLM response should mention: USCIS interview, document submission, and approval"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my immigration case and related preparations throughout our conversations in order (mention 9 items)?",
+            "answer": "You mentioned these aspects in this order: 1) First, you asked about monitoring your case status using the USCIS online portal, 2) Then you talked about uploading your biometric appointment confirmation and photo, 3) Next, you mentioned downloading the USCIS mobile app to track your case, 4) After that, you expressed concerns about the biometrics appointment and related evidence, 5) Then you uploaded insurance documents to the portal, 6) Later, you set up case status alerts for updates, 7) You uploaded your RFE response documents, 8) Then you updated your USCIS profile with new contact information, and 9) Finally, you set reminders for filing Form I-751 and asked about discussing it with your immigration attorney.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 9,
+            "conversation_references": [
+                "Session 268: Monitoring case status via USCIS portal",
+                "Session 362: Uploading biometric appointment confirmation and photo",
+                "Session 458: Downloading USCIS mobile app",
+                "Session 504: Concerns about biometrics appointment and evidence",
+                "Session 554: Uploading insurance documents",
+                "Session 668: Setting up case status alerts",
+                "Session 764: Uploading RFE response documents",
+                "Session 856: Updating USCIS profile with new address and contact info",
+                "Session 946 and 948: Setting reminders for Form I-751 and discussing it with attorney"
+            ],
+            "ordering_tested": [
+                "1st: Monitoring case status via portal",
+                "2nd: Uploading biometric appointment confirmation and photo",
+                "3rd: Downloading USCIS mobile app",
+                "4th: Concerns about biometrics appointment and evidence",
+                "5th: Uploading insurance documents",
+                "6th: Setting up case status alerts",
+                "7th: Uploading RFE response documents",
+                "8th: Updating USCIS profile",
+                "9th: Setting reminders for Form I-751 and attorney discussion"
+            ],
+            "source_chat_ids": [
+                268,
+                362,
+                458,
+                504,
+                554,
+                668,
+                764,
+                856,
+                946,
+                948
+            ],
+            "rubric": [
+                "LLM response should mention: Monitoring case status via portal",
+                "LLM response should mention: Uploading biometric appointment confirmation and photo",
+                "LLM response should mention: Downloading USCIS mobile app",
+                "LLM response should mention: Concerns about biometrics appointment and evidence",
+                "LLM response should mention: Uploading insurance documents",
+                "LLM response should mention: Setting up case status alerts",
+                "LLM response should mention: Uploading RFE response documents",
+                "LLM response should mention: Updating USCIS profile",
+                "LLM response should mention: Setting reminders for Form I-751 and attorney discussion"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Where did I say I started collecting our marriage certificate?",
+            "answer": "I started collecting our marriage certificate from Atlanta City Hall.",
+            "difficulty": "easy",
+            "question_type": "contextual_fact",
+            "conversation_reference": "Turn 1: USER: I've started collecting our marriage certificate from Atlanta City Hall dated June 12, 2021",
+            "key_facts_tested": [
+                "location where marriage certificate was collected"
+            ],
+            "source_chat_ids": [
+                36
+            ],
+            "rubric": [
+                "LLM response should mention: Atlanta City Hall"
+            ]
+        },
+        {
+            "question": "What amounts did I mention for the filing fee and the medical exam costs?",
+            "answer": "You mentioned the filing fee as $1,760 and the medical exam costs as $300.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER asked about the $1,760 USCIS filing fee and $300 medical exam costs",
+            "key_facts_tested": [
+                "filing fee amount",
+                "medical exam cost"
+            ],
+            "source_chat_ids": [
+                40
+            ],
+            "rubric": [
+                "LLM response should mention: $1,760 for filing fee",
+                "LLM response should mention: $300 for medical exam costs"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How complete is my application right now?",
+            "instruction_being_tested": "Always include specific document counts when I ask about application completeness.",
+            "expected_compliance": "Response should include the exact number of documents submitted and the total required, providing a clear count rather than a general statement.",
+            "compliance_indicators": [
+                "specific number of documents submitted",
+                "exact count of required documents",
+                "clear numeric details about application status"
+            ],
+            "non_compliance_signs": [
+                "vague statements about completeness",
+                "no mention of document numbers",
+                "general comments without counts"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                222
+            ],
+            "rubric": [
+                "LLM response should include: exact count of required documents"
+            ]
+        },
+        {
+            "question": "When do I need to submit my application?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about application deadlines.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                112
+            ],
+            "rubric": [
+                "LLM response should include: itemized list of timelines"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many supporting documents have I uploaded to the USCIS portal for my application?",
+            "answer": "30 supporting documents, including recent financial statements",
+            "difficulty": "easy",
+            "update_type": "document_count_and_content",
+            "tests_retention_of": "the total number of documents uploaded and inclusion of financial statements",
+            "conversation_references": [
+                "Planning & Logistics: Document Gathering: Collected Kayla\u2019s U.S. passport copy and my birth certificate from Senegal\u2019s civil registry on April 7.",
+                "Information Update: I have now uploaded 30 supporting documents to the USCIS portal, including recent financial statements."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier number of 25 documents instead of the current total of 30",
+            "source_chat_ids": {
+                "original_info": [
+                    158
+                ],
+                "updated_info": [
+                    218
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 30 supporting documents"
+            ]
+        },
+        {
+            "question": "How many counseling sessions have I attended at Atlanta Wellness Center to improve my emotional resilience?",
+            "answer": "You have attended three counseling sessions at Atlanta Wellness Center.",
+            "difficulty": "easy",
+            "update_type": "attendance_count",
+            "tests_retention_of": "the number of counseling sessions attended",
+            "conversation_references": [
+                "Personal & Emotional: Stress Management: Kayla and I started weekly counseling sessions at \u201cAtlanta Wellness Center\u201d on September 5.",
+                "I have successfully attended three counseling sessions at Atlanta Wellness Center, improving emotional resilience."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that the sessions just started or that no specific number of sessions has been attended yet.",
+            "source_chat_ids": {
+                "original_info": [
+                    684
+                ],
+                "updated_info": [
+                    718
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: three counseling sessions"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much have I paid in total for the USCIS filing fees and the medical exam combined?",
+            "answer": "You have paid a total of $2,060 for the USCIS filing fees and the medical exam combined.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id 41",
+                "chat_id 244"
+            ],
+            "reasoning_steps": [
+                "Identify the USCIS filing fees amount from the first session.",
+                "Identify the medical exam cost from the same or second session.",
+                "Add the USCIS filing fees and medical exam cost to get the total."
+            ],
+            "source_chat_ids": [
+                41,
+                244
+            ],
+            "rubric": [
+                "LLM response should mention: $2,060 total"
+            ]
+        },
+        {
+            "question": "How much have I paid in total so far for legal fees related to interview preparation and coaching?",
+            "answer": "You have paid a total of $2,200 for interview preparation and coaching fees.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 290",
+                "chat_id 480",
+                "chat_id 688"
+            ],
+            "reasoning_steps": [
+                "Identify the $1,000 payment for interview preparation coaching mentioned in chat_id 290.",
+                "Add the $1,200 paid for the interview preparation package from chat_id 480.",
+                "Include the $600 paid for additional interview coaching sessions noted in chat_id 688.",
+                "Sum these amounts to get the total paid for interview preparation and coaching."
+            ],
+            "source_chat_ids": [
+                290,
+                480,
+                688
+            ],
+            "rubric": [
+                "LLM response should mention: $2,200 total"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm ready to submit my application. What are the steps I should follow to do that?",
+            "preference_being_tested": "I prefer submitting the application online via USCIS portal rather than mailing paper forms for faster processing.",
+            "expected_compliance": "Response should guide the user towards submitting the application through the USCIS online portal rather than suggesting mailing paper forms, reflecting the user's preference for online submission.",
+            "compliance_indicators": [
+                "mentions using the USCIS online portal",
+                "provides instructions for online submission",
+                "does not suggest mailing paper forms as the primary method"
+            ],
+            "non_compliance_signs": [
+                "only suggests mailing paper forms",
+                "ignores online submission options",
+                "provides mailing instructions without mentioning online portal"
+            ],
+            "difficulty": "medium",
+            "preference_type": "submission_method",
+            "source_chat_ids": [
+                104
+            ],
+            "rubric": [
+                "LLM response should mention: using the USCIS online portal",
+                "LLM response should not suggest: mailing paper forms as the primary method"
+            ]
+        },
+        {
+            "question": "I have a biometric appointment coming up soon. Can you help me decide what time of day I should schedule it for?",
+            "preference_being_tested": "I prefer morning biometric appointments to avoid afternoon heat and fatigue.",
+            "expected_compliance": "Response should suggest morning appointment times or highlight benefits of morning slots, aligning with the user's preference to avoid afternoon conditions.",
+            "compliance_indicators": [
+                "recommends morning times",
+                "mentions advantages of morning appointments",
+                "avoids suggesting afternoon slots without justification"
+            ],
+            "non_compliance_signs": [
+                "only suggests afternoon times",
+                "ignores time of day considerations",
+                "fails to address timing options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time_of_day scheduling",
+            "source_chat_ids": [
+                394,
+                396
+            ],
+            "rubric": [
+                "LLM response should mention: recommending morning times"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed overview of everything Kayla and I need to know and do throughout our entire green card application journey, from the initial steps to after receiving the approval, including how we should manage the process, prepare for interviews, handle financial and medical requirements, and what to expect moving forward?",
+            "ideal_summary": "The green card application journey for you and Kayla begins with determining eligibility and gathering essential documentation such as proof of marriage, financial records, and identification. The process involves filing Form I-130 by Kayla, followed by your submission of Form I-485, along with attending a medical examination conducted by a USCIS-designated civil surgeon. Financial stability is critical, requiring detailed income documentation and possibly an Affidavit of Support, with consideration of your combined financial situation and potential legal advice. Preparation for the USCIS interview includes organizing joint financial documents, practicing responses, and attending mock interviews with your attorney, Maria Lopez, who also provides real-time support during the interview. Post-interview, you must monitor your case status, respond promptly to any USCIS requests, and manage stress through activities like yoga and community engagement. After approval, you will attend a biometrics appointment and then receive your conditional green card, valid for two years. Following receipt, update personal records, apply for a Social Security card, and prepare to file Form I-751 to remove conditions on residency before expiration. Throughout, maintaining organized documentation, staying in close contact with your attorney, and integrating into your community are essential for a smooth process and successful outcome.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                1,
+                3,
+                7,
+                13,
+                117,
+                227,
+                611,
+                817
+            ],
+            "rubric": [
+                "LLM response should mention: The green card application journey for you and Kayla begins with determining eligibility and gathering essential documentation such as proof of marriage, financial records, and identification.",
+                "LLM response should mention: The process involves filing Form I-130 by Kayla, followed by your submission of Form I-485, along with attending a medical examination conducted by a USCIS-designated civil surgeon.",
+                "LLM response should mention: Financial stability is critical, requiring detailed income documentation and possibly an Affidavit of Support, with consideration of your combined financial situation and potential legal advice.",
+                "LLM response should mention: Preparation for the USCIS interview includes organizing joint financial documents, practicing responses, and attending mock interviews with your attorney, Maria Lopez, who also provides real-time support during the interview.",
+                "LLM response should mention: Post-interview, you must monitor your case status, respond promptly to any USCIS requests, and manage stress through activities like yoga and community engagement.",
+                "LLM response should mention: After approval, you will attend a biometrics appointment and then receive your conditional green card, valid for two years.",
+                "LLM response should mention: Following receipt, update personal records, apply for a Social Security card, and prepare to file Form I-751 to remove conditions on residency before expiration.",
+                "LLM response should mention: Throughout, maintaining organized documentation, staying in close contact with your attorney, and integrating into your community are essential for a smooth process and successful outcome."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of the main steps and timeline involved in my marriage-based green card application process?",
+            "ideal_summary": "Your marriage-based green card application involves several key steps starting with filing Form I-130 by early July 2023, followed by consular processing including the National Visa Center review, medical examination, and an interview at the U.S. embassy. After approval, you proceed to file Form I-485 to adjust status, attend a biometrics appointment, and prepare for a USCIS interview. The entire process typically takes about 8 to 12 months, with careful document preparation and timely responses to any requests being essential to meet your April 10, 2024 deadline.",
+            "difficulty": "easy",
+            "summarization_type": "basic_process_overview",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 34,
+            "key_elements_tested": [
+                "basic timeline synthesis",
+                "simple process overview",
+                "combining eligibility and procedural steps"
+            ],
+            "synthesis_required": "Combining straightforward procedural details into a clear summary",
+            "source_chat_ids": [
+                35,
+                39,
+                135
+            ],
+            "rubric": [
+                "LLM response should mention: filing Form I-130 by early July 2023",
+                "LLM response should mention: consular processing including the National Visa Center review, medical examination, and an interview at the U.S. embassy.",
+                "LLM response should mention: filing Form I-485 to adjust status, attending a biometrics appointment, and preparing for a USCIS interview.",
+                "LLM response should mention: the entire process typically takes about 8 to 12 months.",
+                "LLM response should mention: careful document preparation and timely responses to any requests being essential to meet your April 10, 2024 deadline."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "Is my medical report still valid by the time I have my medical exam scheduled at the clinic?",
+            "answer": "The medical report was cleared on May 3, and the medical exam is scheduled for April 20 of the following year, so the report is still valid at the time of the exam.",
+            "difficulty": "easy",
+            "temporal_type": "simple_sequence",
+            "time_points": [
+                "May 3: medical report cleared",
+                "April 20 next year: medical exam scheduled"
+            ],
+            "conversation_references": [
+                "Session 2: Medical report clearance",
+                "Session 1: Medical exam scheduling"
+            ],
+            "calculation_required": "Compare May 3 of this year to April 20 of the next year to confirm validity",
+            "source_chat_ids": {
+                "first_event": [
+                    264
+                ],
+                "second_event": [
+                    66
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: medical report cleared on May 3",
+                "LLM response should mention: medical exam scheduled for April 20 of the following year",
+                "LLM response should conclude: the report is still valid at the time of the exam"
+            ]
+        },
+        {
+            "question": "How many days passed between when I completed my medical exam and when I sent the results to USCIS?",
+            "answer": "2 days passed between completing the medical exam at Parkerbury Health Clinic and sending the results to USCIS.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 20: medical exam completed",
+                "April 22: results sent to USCIS"
+            ],
+            "conversation_references": [
+                "Session 1: Medical exam and results submission"
+            ],
+            "calculation_required": "April 22 - April 20 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    154
+                ],
+                "second_event": [
+                    154
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 2 days passed"
+            ]
+        }
+    ]
+}

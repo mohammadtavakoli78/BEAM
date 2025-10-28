@@ -1,0 +1,695 @@
+{
+    "abstention": [
+        {
+            "question": "What specific advice did Manuel give about property management companies during the March 5 Investors Meetup?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific advice Manuel gave about property management companies.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Manuel is mentioned sharing insights but the exact advice content is not provided.",
+            "plan_reference": "Batch 1, Bullet 25",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific advice Manuel gave about property management companies"
+            ]
+        },
+        {
+            "question": "Could you provide the detailed breakdown of the mortgage options I was considering with Halkbank and Ziraat Bank?",
+            "ideal_response": "Based on the provided chat, there is no detailed breakdown of the mortgage options beyond the interest rates mentioned.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Only interest rates are mentioned; no further breakdown or terms are provided.",
+            "plan_reference": "Batch 1, Bullet 12",
+            "rubric": [
+                "Based on the provided chat, there is no detailed breakdown of the mortgage options"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever attended any real estate webinars or investor meetups?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any real estate webinars or investor meetups, but you also mentioned attending a webinar about Turkey\u2019s rising demand for multi-family rentals. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at real estate webinars or investor meetups",
+            "conversation_references": [
+                "Session 1: Never attended statement",
+                "Session 2: Webinar attendance statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    246
+                ],
+                "second_statement": [
+                    166,
+                    170,
+                    180
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any real estate webinars or investor meetups",
+                "LLM response should mention: you also mentioned attending a webinar about Turkey\u2019s rising demand for multi-family rentals",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever interviewed property managers or attended webinars about property management?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never interviewed any property managers or attended property management webinars, but you also mentioned attending a webinar about hiring property managers. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with property managers and webinars",
+            "conversation_references": [
+                "Session 578, 580: Never interviewed or attended webinars",
+                "Sessions 328, 340, 346, 366: Attended webinar and learned about property management fees"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    578,
+                    580
+                ],
+                "second_statement": [
+                    328,
+                    330,
+                    340,
+                    342,
+                    346,
+                    348,
+                    366,
+                    368
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never interviewed any property managers or attended property management webinars",
+                "LLM response should mention: you also mentioned attending a webinar about hiring property managers",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of property investment and management develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus on property investment and management developed in this sequence: 1) Initial engagement with the local agent and preparation for property viewings, 2) Evaluation of property financials including ROI and rental income potential, 3) Exploration of financing options and mortgage concerns, 4) Handling contractor performance and repair negotiations, 5) Understanding zoning regulations and permit requirements for property conversions, 6) Planning and prioritizing renovations and investment risks for multi-family properties, 7) Detailed preparation for property viewings involving both agent and contractor, 8) Negotiation strategies and cash flow implications related to repair costs, 9) Final renovation project completion steps and portfolio diversification strategies, 10) Consideration of commercial property types and location factors for long-term investment.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "120, 126, 132, 138",
+                "248, 262, 276, 278, 280, 284, 286",
+                "584",
+                "966",
+                "1198, 1200",
+                "1246, 1262, 1266, 1268",
+                "1276, 1278, 1504",
+                "1542, 1552, 1554",
+                "2020, 2026, 2036",
+                "2038, 2040"
+            ],
+            "ordering_tested": [
+                "1st: Agent interaction and viewing preparation",
+                "2nd: Property financial evaluation",
+                "3rd: Financing and mortgage concerns",
+                "4th: Contractor management",
+                "5th: Zoning and permits",
+                "6th: Renovation planning and investment risks",
+                "7th: Viewing preparation with agent and contractor",
+                "8th: Repair cost negotiation and cash flow",
+                "9th: Renovation completion and portfolio diversification",
+                "10th: Commercial property and location considerations"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic threads",
+                "involves synthesis of investment, management, and negotiation topics",
+                "spans numerous conversation sessions",
+                "demands reconstruction of mention progression without temporal cues",
+                "tests ability to integrate diverse property-related discussions"
+            ],
+            "source_chat_ids": [
+                120,
+                126,
+                132,
+                138,
+                248,
+                262,
+                276,
+                278,
+                280,
+                284,
+                286,
+                584,
+                966,
+                1198,
+                1200,
+                1246,
+                1262,
+                1266,
+                1268,
+                1276,
+                1278,
+                1504,
+                1542,
+                1552,
+                1554,
+                2020,
+                2026,
+                2036,
+                2038,
+                2040
+            ],
+            "rubric": [
+                "LLM response should mention: Agent interaction and viewing preparation",
+                "LLM response should mention: Property financial evaluation",
+                "LLM response should mention: Financing and mortgage concerns",
+                "LLM response should mention: Contractor management",
+                "LLM response should mention: Zoning and permits",
+                "LLM response should mention: Renovation planning and investment risks",
+                "LLM response should mention: Viewing preparation with agent and contractor",
+                "LLM response should mention: Repair cost negotiation and cash flow",
+                "LLM response should mention: Renovation completion and portfolio diversification",
+                "LLM response should mention: Commercial property and location considerations"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of my investment discussions with Randy develop throughout our conversations in order? Mention ONLY and ONLY six items.",
+            "answer": "Your discussions with Randy evolved in this sequence: 1) Seeking initial advice and establishing trust, 2) Comparing investment property types and preferences, 3) Reviewing and improving financial projections and cash flow accuracy, 4) Analyzing potential risks related to specific properties, 5) Evaluating renovation progress and budget adjustments, 6) Assessing overall investment returns and portfolio management considerations.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Sessions 48, 58, 62",
+                "Sessions 510, 518, 524",
+                "Sessions 766, 1064, 1074, 1084",
+                "Sessions 1360, 1366, 1368",
+                "Sessions 1676, 1690",
+                "Sessions 1944, 1958, 1962"
+            ],
+            "ordering_tested": [
+                "1st: Initial advice and trust building",
+                "2nd: Property type comparison and preference",
+                "3rd: Financial projection and cash flow review",
+                "4th: Risk analysis of properties",
+                "5th: Renovation progress and budget review",
+                "6th: Investment returns and portfolio management"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic shifts",
+                "spans numerous conversation sessions",
+                "involves nuanced development of investment topics",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                48,
+                58,
+                62,
+                510,
+                518,
+                524,
+                766,
+                1064,
+                1074,
+                1084,
+                1360,
+                1366,
+                1368,
+                1676,
+                1690,
+                1944,
+                1958,
+                1962
+            ],
+            "rubric": [
+                "LLM response should mention: Initial advice and trust building",
+                "LLM response should mention: Property type comparison and preference",
+                "LLM response should mention: Financial projection and cash flow review",
+                "LLM response should mention: Risk analysis of properties",
+                "LLM response should mention: Renovation progress and budget review",
+                "LLM response should mention: Investment returns and portfolio management"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What amount did I say I had set aside as my initial capital for investing?",
+            "answer": "You said you had set aside $50,000 as your initial capital.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 50: User mentions initial capital amount",
+            "key_facts_tested": [
+                "initial capital amount: $50,000"
+            ],
+            "source_chat_ids": [
+                50,
+                68
+            ],
+            "rubric": [
+                "LLM response should state: $50,000"
+            ]
+        },
+        {
+            "question": "How did you recommend structuring my study time and goals to make sure I stay on track and complete everything before the course wraps up?",
+            "answer": "I recommended that you create a detailed study schedule breaking down the course into weekly segments with specific daily goals, allocate fixed and flexible time slots for studying, use tools like calendars and to-do lists to stay organized, actively engage with the material through note-taking and practice quizzes, and maintain flexibility to adjust your plan as needed to ensure you complete the course by the deadline.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial balancing advice, detailed weekly study plan, and final exam preparation guidance",
+            "key_facts_tested": [
+                "structured study schedule with weekly and daily goals",
+                "allocation of fixed and flexible study times",
+                "use of organizational tools like calendars and to-do lists",
+                "active learning techniques including note-taking and quizzes",
+                "flexibility to adjust schedule as needed",
+                "completion aligned with course deadline"
+            ],
+            "extraction_challenge": "LLM must synthesize advice on time management, study scheduling, and motivation strategies scattered across different assistant responses to explain the comprehensive approach recommended for completing the course on time",
+            "source_chat_ids": [
+                73,
+                79,
+                87
+            ],
+            "rubric": [
+                "LLM response should state: I recommended that you create a detailed study schedule breaking down the course into weekly segments with specific daily goals",
+                "LLM response should state: allocate fixed and flexible time slots for studying",
+                "LLM response should state: use tools like calendars and to-do lists to stay organized",
+                "LLM response should state: actively engage with the material through note-taking and practice quizzes",
+                "LLM response should state: maintain flexibility to adjust your plan as needed to ensure you complete the course by the deadline"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How should I allocate my funds for the upcoming quarter?",
+            "instruction_being_tested": "Always provide detailed financial breakdowns when I ask about budgeting decisions.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                244
+            ],
+            "rubric": [
+                "LLM response should contain: itemized list of costs",
+                "LLM response should contain: category-by-category breakdown",
+                "LLM response should contain: detailed cost analysis"
+            ]
+        },
+        {
+            "question": "What were the results from the recent safety check?",
+            "instruction_being_tested": "Always report inspection outcomes when I ask about safety inspections.",
+            "expected_compliance": "Response should include the findings or results from the safety check rather than avoiding or ignoring the request.",
+            "compliance_indicators": [
+                "clear statement of findings",
+                "mention of any issues or clear status",
+                "summary of what was discovered during the check"
+            ],
+            "non_compliance_signs": [
+                "no mention of results",
+                "vague or unrelated response",
+                "ignoring the request for information"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                1174,
+                1176
+            ],
+            "rubric": [
+                "LLM response should contain: clear statement of findings",
+                "LLM response should contain: summary of what was discovered during the check"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much initial capital have I allocated for real estate investing?",
+            "answer": "$60,000",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated initial capital allocation amount",
+            "conversation_references": [
+                "Financial & Budget Labels:Budgeting: I have allocated $50,000 as initial capital for real estate investing within the next 12 months.",
+                "Information Update: I have recently increased my initial capital allocation for real estate investing to $60,000 to better position myself for competitive offers."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $50,000 allocation instead of the updated $60,000 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    50,
+                    68
+                ],
+                "updated_info": [
+                    242
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $60,000"
+            ]
+        },
+        {
+            "question": "When was the most recent electrical safety inspection?",
+            "answer": "The inspection was completed on July 18",
+            "difficulty": "easy",
+            "update_type": "inspection_completion_and_result",
+            "tests_retention_of": "the completion status and outcome of the electrical safety inspection",
+            "conversation_references": [
+                "Risk & Safety Labels:Safety Inspections: Scheduled annual electrical safety inspection for July 20 with licensed electrician.",
+                "Information Update: The scheduled electrical safety inspection was completed on July 18, with no issues found."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that the inspection is still scheduled and not yet completed.",
+            "source_chat_ids": {
+                "original_info": [
+                    1152,
+                    1156,
+                    1160,
+                    1164
+                ],
+                "updated_info": [
+                    1170,
+                    1172
+                ]
+            },
+            "rubric": [
+                "LLM response should state: July 18"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different banks did I consider for my mortgage options across my conversations?",
+            "answer": "Two banks: Halkbank and Ziraat Bank.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "exploring mortgage options",
+                "deciding between Halkbank and Ziraat Bank",
+                "comparing 9.5% and 10.2% APR"
+            ],
+            "reasoning_steps": [
+                "Identify the banks mentioned in the first session where I explore mortgage options.",
+                "Recall the banks I mention again when deciding between mortgage options.",
+                "Confirm the same two banks are referenced in the session comparing their APR rates."
+            ],
+            "source_chat_ids": [
+                74,
+                80,
+                88
+            ],
+            "rubric": [
+                "LLM response should state: Two banks",
+                "LLM response should state: Halkbank",
+                "LLM response should state: Ziraat Bank"
+            ]
+        },
+        {
+            "question": "Given my mortgage pre-approval and finalized loan details with Halkbank, how should I optimize my rental property investment budget to maximize positive cash flow while accounting for all mortgage costs and property expenses?",
+            "answer": "To optimize your rental property investment budget for maximum positive cash flow, start with your pre-approved loan amount and finalized mortgage principal, then calculate your monthly mortgage payment using the fixed interest rate and loan term. Incorporate all additional property expenses such as taxes, insurance, maintenance, and management fees. Compare these total monthly costs against expected rental income to determine net cash flow. Adjust your property price target within your loan limit to ensure positive cash flow, considering the mortgage payment from the finalized loan terms is higher due to a shorter term and smaller principal than the pre-approval. Prioritize properties with rental yields that cover all expenses and leave a surplus, factoring in the mortgage payment of approximately $887.34 monthly on $72,000 principal at 9.5% fixed for 10 years, versus the pre-approval scenario with $80,000 principal over 30 years with lower monthly payments. This approach balances loan affordability, investment returns, and cash flow sustainability.",
+            "difficulty": "hard",
+            "reasoning_type": "advanced_optimization",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Mortgage pre-approval and investment budget impact",
+                "Finalized mortgage terms and monthly payment calculation",
+                "Mortgage comparison between Halkbank and Ziraat Bank",
+                "Steps after mortgage finalization for real estate investment",
+                "User plans for property management and viewings"
+            ],
+            "reasoning_steps": [
+                "Identify the maximum loan amount from the mortgage pre-approval and the finalized mortgage principal amount.",
+                "Calculate monthly mortgage payments for both the pre-approval (longer term, higher principal) and finalized mortgage (shorter term, lower principal) using the fixed interest rate.",
+                "Aggregate all recurring property expenses including taxes, insurance, maintenance, and management fees to estimate total monthly costs.",
+                "Estimate expected rental income based on user\u2019s target neighborhoods and budget constraints.",
+                "Compare total monthly costs against rental income to compute net cash flow and adjust property price targets to maximize positive cash flow within loan limits."
+            ],
+            "source_chat_ids": [
+                336,
+                358,
+                696,
+                708,
+                710
+            ],
+            "rubric": [
+                "LLM response should state: start with your pre-approved loan amount and finalized mortgage principal",
+                "LLM response should state: calculate your monthly mortgage payment using the fixed interest rate and loan term",
+                "LLM response should state: Incorporate all additional property expenses such as taxes, insurance, maintenance, and management fees",
+                "LLM response should state: Compare these total monthly costs against expected rental income to determine net cash flow",
+                "LLM response should state: Adjust your property price target within your loan limit to ensure positive cash flow",
+                "LLM response should state: Prioritize properties with rental yields that cover all expenses and leave a surplus, factoring in the mortgage payment"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking at several properties and want to understand how to approach comparing them effectively. What steps would you suggest I take?",
+            "preference_being_tested": "I prefer methodical, data-driven decisions over impulsive purchases, reflecting my analytical nature.",
+            "expected_compliance": "Response should outline a structured, step-by-step approach that involves gathering and analyzing relevant data before making a choice, rather than suggesting quick or impulsive actions.",
+            "compliance_indicators": [
+                "provides a clear, logical process",
+                "emphasizes data collection and analysis",
+                "avoids recommending immediate or emotional decisions",
+                "breaks down comparison into measurable factors"
+            ],
+            "non_compliance_signs": [
+                "suggests impulsive or quick decisions",
+                "focuses on gut feeling or intuition",
+                "ignores data or analysis steps",
+                "recommends jumping to conclusions without thorough review"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                146,
+                154,
+                156
+            ],
+            "rubric": [
+                "LLM response should contain: provides a clear, logical process",
+                "LLM response should contain: emphasizes data collection and analysis",
+                "LLM response should contain: breaks down comparison into measurable factors"
+            ]
+        },
+        {
+            "question": "I'm looking at two investment properties: one offers consistent monthly returns but slower appreciation, and the other might sell for a higher price soon but has less predictable income. How should I approach deciding between them?",
+            "preference_being_tested": "I prefer steady rental income over quick resale profits to build long-term wealth.",
+            "expected_compliance": "Response should prioritize strategies that emphasize consistent rental income and long-term wealth building rather than focusing on quick resale gains.",
+            "compliance_indicators": [
+                "recommends focusing on rental income stability",
+                "addresses long-term wealth accumulation",
+                "suggests minimizing vacancy and tenant turnover",
+                "avoids emphasizing short-term sales profits"
+            ],
+            "non_compliance_signs": [
+                "focuses on quick resale profits",
+                "ignores rental income consistency",
+                "recommends flipping properties rapidly",
+                "does not consider income stability"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment strategy",
+            "source_chat_ids": [
+                1004,
+                1016,
+                1028
+            ],
+            "rubric": [
+                "LLM response should contain: recommends focusing on rental income stability",
+                "LLM response should contain: addresses long-term wealth accumulations",
+                "LLM response should contain: avoids emphasizing short-term sales profits"
+            ]
+        }
+
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of my journey and decision-making process around investing in rental properties, including how my budget, property choices, management considerations, and financing plans have developed over time?",
+            "ideal_summary": "Your journey toward investing in rental properties began with an initial capital of $50,000, which you questioned as potentially insufficient for purchasing a property within 12 months. Early discussions highlighted the need to research local market conditions, down payment requirements, and additional costs like closing fees and renovations, revealing that typical investments might exceed your initial capital. You explored identifying good fixer-upper properties by learning to recognize signs such as structural issues and outdated features, emphasizing the importance of cost-benefit analysis for renovations. As your plans progressed, you weighed the pros and cons of investing close to your location versus elsewhere, balancing ease of management against market diversity and growth potential. You also considered the choice between single-family homes and multi-family units, analyzing factors like rental yield, management complexity, and investment scale, with examples showing similar yields but differing capital needs. Financing options were carefully compared, particularly between Halkbank and Ziraat Bank mortgages, focusing on interest rates, fees, and service quality to optimize costs. Throughout, you developed a step-by-step plan for purchasing your first rental property, including market research, budgeting, inspections, financing, and tenant management, with timelines to reduce anxiety and ensure readiness. This comprehensive process reflects a thoughtful evolution from initial capital concerns to detailed investment strategies, property evaluation, financing decisions, and management planning, all aimed at making informed, balanced real estate investment choices.",
+            "difficulty": "medium",
+            "summarization_type": "complex_decision_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                50,
+                51,
+                53,
+                61,
+                69,
+                75,
+                77,
+                81,
+                87,
+                90,
+                93,
+                117,
+                119,
+                123,
+                131,
+                135,
+                141,
+                149,
+                161
+            ],
+            "key_elements_tested": [
+                "budget assessment",
+                "property evaluation",
+                "investment location considerations",
+                "financing comparison",
+                "management planning",
+                "progressive decision-making"
+            ],
+            "synthesis_required": "Integrating multiple facets of investment planning and decision-making into a coherent narrative showing development and cause-effect relationships",
+            "source_chat_ids": [
+                50,
+                51,
+                53,
+                61,
+                69,
+                75,
+                77,
+                81,
+                87,
+                90,
+                93,
+                117,
+                119,
+                123,
+                131,
+                135,
+                141,
+                149,
+                161
+            ],
+            "rubric": [
+                "LLM response should contain: investing in rental properties began with an initial capital of $50,000",
+                "LLM response should contain: Early discussions highlighted the need to research local market conditions, down payment requirements, and additional costs like closing fees",
+                "LLM response should contain: You explored identifying good fixer-upper properties by learning to recognize signs such as structural issues and outdated features",
+                "LLM response should contain: you weighed the pros and cons of investing close to your location versus elsewhere, balancing ease of management against market diversity and growth potential",
+                "LLM response should contain: You also considered the choice between single-family homes and multi-family units, analyzing factors like rental yield, management complexity, and investment scale",
+                "LLM response should contain: Financing options were carefully compared, particularly between Halkbank and Ziraat Bank mortgages, focusing on interest rates, fees, and service quality to optimize costs",
+                "LLM response should contain: you developed a step-by-step plan for purchasing your first rental property, including market research, budgeting, inspections, financing, and tenant management"
+            ]
+        },
+        {
+            "question": "Can you give me a thorough summary of everything we've covered about evaluating and managing the investment opportunity on Ataturk Street, including all the financial analyses, property considerations, negotiation strategies, and management plans we've discussed so far?",
+            "ideal_summary": "The discussions comprehensively addressed evaluating the Ataturk Street property as a rental investment, starting with detailed ROI calculations incorporating purchase price, closing costs, renovation expenses, rental income projections, vacancy rates, and operating expenses. Initial analyses revealed modest to negative cash flows and ROI below the user's 7% target, prompting exploration of strategies such as increasing rent, reducing expenses, and negotiating price reductions. The user planned and scheduled property viewings and inspections, with checklists focusing on physical condition, neighborhood factors, rental market dynamics, utility responsibilities, and legal considerations. Negotiation tactics were developed around repair costs, including a $3,200 estimated repair and a 10% discount offer from the contractor, with financial comparisons favoring negotiating a price reduction over accepting the discount. The mortgage pre-approval of $80,000 at 9.5% APR with a 90-day validity influenced budgeting and timeline decisions. The user also considered property management options, particularly engaging Selin Kaya, a seasoned manager, with detailed evaluation criteria and communication plans to ensure alignment with investment goals. Comparative analyses between Ataturk and Cumhuriyet neighborhoods, as well as single-family versus multi-family units, informed strategic property selection. The assistant provided guidance on balancing cash flow, ROI, risk tolerance, and long-term appreciation potential, emphasizing thorough due diligence, market research, and professional consultations. Throughout, the user was supported in decision-making processes, negotiation approaches, and operational planning to optimize investment outcomes.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 12,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                249,
+                263,
+                277,
+                279,
+                285,
+                257,
+                259,
+                261,
+                265,
+                267,
+                269,
+                332,
+                353,
+                359,
+                366,
+                373,
+                395,
+                397,
+                399,
+                401,
+                403,
+                411,
+                417,
+                437
+            ],
+            "rubric": [
+                "LLM response should contain: The discussion started with detailed ROI calculations incorporating purchase price, closing costs, renovation expenses, rental income projections, vacancy rates, and operating expenses",
+                "LLM response should contain: Initial analyses revealed modest to negative cash flows and ROI below the user's 7% target, prompting exploration of strategies such as increasing rent",
+                "LLM response should contain: planned and scheduled property viewings and inspections, with checklists focusing on physical condition, neighborhood factors, rental market dynamics, utility responsibilities, and legal considerations",
+                "LLM response should contain: Negotiation tactics were developed around repair costs, including a $3,200 estimated repair and a 10% discount offer from the contractor",
+                "LLM response should contain: The mortgage pre-approval of $80,000 at 9.5% APR with a 90-day validity influenced budgeting and timeline decision",
+                "LLM response should contain: considered property management options, particularly engaging Selin Kaya, a seasoned manager, with detailed evaluation criteria and communication plans",
+                "LLM response should contain: Comparative analyses between Ataturk and Cumhuriyet neighborhoods, as well as single-family versus multi-family units, informed strategic property selection",
+                "LLM response should contain: The assistant provided guidance on balancing cash flow, ROI, risk tolerance, and long-term appreciation potential, emphasizing thorough due diligence, market research, and professional consultations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I scheduled my first property viewing with Mehmet and the deadline I set to visit all three properties?",
+            "answer": "There are 16 days between when you scheduled your first property viewing on March 25 and your deadline to visit all three properties by April 10.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 25: first property viewing scheduled",
+                "April 10: deadline to visit all properties"
+            ],
+            "conversation_references": [
+                "Session 120, 126, 132, 138: property viewings scheduled on March 25 and 27",
+                "Session 118: deadline to visit three properties by April 10"
+            ],
+            "calculation_required": "April 10 - March 25 = 16 days",
+            "source_chat_ids": {
+                "first_event": [
+                    120,
+                    126,
+                    132,
+                    138
+                ],
+                "second_event": [
+                    118
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 16 days",
+                "LLM response should state: from March 25, 2024 till April 10, 2024"
+            ]
+        },
+        {
+            "question": "How many days are there between my first property viewing with Mehmet Yilmaz and the last one I scheduled?",
+            "answer": "There are 2 days between the first property viewing on March 25 and the last one on March 27.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 25: first property viewing",
+                "March 27: last property viewing"
+            ],
+            "conversation_references": [
+                "Session 3: Property viewings scheduled"
+            ],
+            "calculation_required": "March 27 - March 25 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    120,
+                    132,
+                    138
+                ],
+                "second_event": [
+                    120,
+                    132,
+                    138
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 days",
+                "LLM response should state: from March 25, 2024 till March 27, 2024"
+            ]
+        }
+    ]
+}

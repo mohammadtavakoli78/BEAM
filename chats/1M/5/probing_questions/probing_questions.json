@@ -1,0 +1,632 @@
+{
+    "abstention": [
+        {
+            "question": "Who are the team members involved in the development, and what are their specific roles?",
+            "ideal_response": "Based on the provided chat, there is no information related to the team members or their specific roles.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "No team member details or roles are mentioned anywhere in the plan.",
+            "plan_reference": "No team member information in any batch",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the team members",
+                "Based on the provided chat, there is no information related to their specific roles"
+            ]
+        },
+        {
+            "question": "Can you share the exact configuration settings used for the Kong API Gateway version 2.8.1?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact configuration settings of the Kong API Gateway.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Kong API Gateway version is mentioned, but no configuration details are provided.",
+            "plan_reference": "Batch 3, Bullet 20",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact configuration settings of the Kong API Gateway"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever developed or tested any matchmaking algorithms before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never developed or tested any matchmaking algorithms, but you also mentioned developing a matchmaking algorithm using the Elo rating system with initial tests passed. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "experience with developing or testing matchmaking algorithms",
+            "conversation_references": [
+                "Session 534, 536, 332, 334, 344, 346"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    534,
+                    536
+                ],
+                "second_statement": [
+                    332,
+                    334,
+                    344,
+                    346
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never developed or tested any matchmaking algorithms",
+                "LLM response should mention: You also mentioned developing a matchmaking algorithm using the Elo rating system with initial tests passed",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever fixed any bugs related to player movement synchronization?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never fixed any bugs related to player movement synchronization, but you also mentioned fixing a \"position desync\" bug caused by inconsistent timestamp handling. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "fixing player movement synchronization bugs",
+            "conversation_references": [
+                "Session 730: Never fixed synchronization bugs",
+                "Session 730: Fixed position desync bug"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    730
+                ],
+                "second_statement": [
+                    730
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never fixed any bugs related to player movement synchronization",
+                "LLM response should mention: you also mentioned fixing a \"position desync\" bug caused by inconsistent timestamp handling",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about real-time communication technologies and their related implementation challenges progress in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your discussions about real-time communication technologies and their implementation challenges progressed as follows: 1) Initial attempts to implement WebSocket connections and handle connection issues, 2) Managing multiple client connections and debugging connection errors, 3) Handling error states, disconnections, and reconnection strategies, 4) Exploring integration of WebRTC data channels alongside WebSocket and fallback mechanisms, 5) Implementing encrypted WebSocket subprotocols for sensitive data transmission, 6) Debugging WebRTC peer-to-peer connection issues and TURN server configurations, 7) Optimizing WebSocket implementations for performance and fallback transports, 8) Integrating Redis for token management and caching in real-time systems, 9) Addressing real-time multiplayer game latency with client-side prediction and server reconciliation, 10) Extending real-time communication to voice chat applications with signaling and caching strategies.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 48, 56, 50, 58, 60, 64, 66, 68",
+                "chat_id: 182, 192, 194",
+                "chat_id: 556, 562, 564, 568, 550",
+                "chat_id: 756, 762, 954",
+                "chat_id: 944, 946, 950, 956",
+                "chat_id: 372, 374, 376",
+                "chat_id: 366",
+                "chat_id: 1120, 1126",
+                "chat_id: 550",
+                "chat_id: 1292, 1294, 1298"
+            ],
+            "ordering_tested": [
+                "1st: Basic WebSocket implementation and connection issues",
+                "2nd: Namespace and game logic debugging",
+                "3rd: WebRTC integration and fallback handling",
+                "4th: Encrypted WebSocket subprotocol setup",
+                "5th: WebRTC connection troubleshooting and TURN server setup",
+                "6th: Token rotation and Redis usage",
+                "7th: WebSocket performance optimization and room management",
+                "8th: Redis Pub/Sub for real-time updates",
+                "9th: Multiplayer game latency reduction techniques",
+                "10th: Voice chat application signaling and caching"
+            ],
+            "complexity_factors": [
+                "requires reconstruction of mention order across multiple sessions",
+                "involves multiple related but distinct technical aspects",
+                "requires pattern recognition of topic evolution",
+                "spans diverse real-time communication technologies",
+                "demands synthesis of implementation, debugging, and optimization discussions"
+            ],
+            "source_chat_ids": [
+                48,
+                50,
+                56,
+                58,
+                60,
+                64,
+                66,
+                68,
+                182,
+                192,
+                194,
+                556,
+                562,
+                564,
+                568,
+                550,
+                756,
+                762,
+                954,
+                944,
+                946,
+                950,
+                956,
+                372,
+                374,
+                376,
+                366,
+                1120,
+                1126,
+                550,
+                1292,
+                1294,
+                1298
+            ],
+            "rubric": [
+                "LLM response should mention: Basic WebSocket implementation and connection issues",
+                "LLM response should mention: Namespace and game logic debugging",
+                "LLM response should mention: WebRTC integration and fallback handling",
+                "LLM response should mention: Encrypted WebSocket subprotocol setup",
+                "LLM response should mention: WebRTC connection troubleshooting and TURN server setup",
+                "LLM response should mention: Token rotation and Redis usage",
+                "LLM response should mention: WebSocket performance optimization and room management",
+                "LLM response should mention: Redis Pub/Sub for real-time updates",
+                "LLM response should mention: Multiplayer game latency reduction techniques",
+                "LLM response should mention: Voice chat application signaling and caching"
+            ]
+        },
+        {
+            "question": "How did my discussions about the different components of my game development projects unfold in order? Mention ONLY and ONLY six items.",
+            "answer": "Your discussions about the game development components unfolded in this order: 1) You started by exploring matchmaking service design and algorithms, 2) Then you addressed performance optimization in the game loop and serialization overhead, 3) Next, you moved on to implementing microservices and integrating RabbitMQ for matchmaking, 4) After that, you focused on lag compensation techniques involving interpolation and extrapolation, 5) You then shifted to building and optimizing a dedicated anti-cheat microservice with REST API and caching strategies, 6) Finally, you discussed designing and troubleshooting a platform abstraction layer for input handling across different client types and integrating it with your UI components.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 6,
+            "conversation_references": [
+                "chat_id: 6, 8, 10",
+                "chat_id: 196, 202",
+                "chat_id: 352, 360, 362",
+                "chat_id: 560",
+                "chat_id: 754, 760",
+                "chat_id: 952, 958, 960, 962"
+            ],
+            "ordering_tested": [
+                "1st: Matchmaking service design and algorithm challenges",
+                "2nd: Game loop performance and serialization optimization",
+                "3rd: Microservices implementation and RabbitMQ integration",
+                "4th: Lag compensation with interpolation and extrapolation",
+                "5th: Anti-cheat microservice development and caching optimization",
+                "6th: Platform abstraction layer for input handling and integration"
+            ],
+            "complexity_factors": [
+                "requires reconstruction of mention order across multiple topics",
+                "involves tracking multiple technical components",
+                "spans many conversation sessions",
+                "requires synthesis of related but distinct technical discussions",
+                "tests ability to sequence broad thematic mentions without explicit time cues"
+            ],
+            "source_chat_ids": [
+                6,
+                8,
+                10,
+                196,
+                202,
+                352,
+                360,
+                362,
+                560,
+                754,
+                760,
+                952,
+                958,
+                960,
+                962
+            ],
+            "rubric": [
+                "LLM response should mention: Matchmaking service design and algorithm challenges",
+                "LLM response should mention: Game loop performance and serialization optimization",
+                "LLM response should mention: Microservices implementation and RabbitMQ integration",
+                "LLM response should mention: Lag compensation with interpolation and extrapolation",
+                "LLM response should mention: Anti-cheat microservice development and caching optimization",
+                "LLM response should mention: Platform abstraction layer for input handling and integration"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What prefix did I say all my API endpoints should have?",
+            "answer": "You said all endpoints should be prefixed with /api/v1/.",
+            "difficulty": "medium",
+            "question_type": "early_detail_recall",
+            "conversation_reference": "Turn 1: Initial user message specifying endpoint prefix",
+            "key_facts_tested": [
+                "/api/v1/ prefix for endpoints"
+            ],
+            "source_chat_ids": [
+                22
+            ],
+            "rubric": [
+                "LLM response should state: /api/v1/"
+            ]
+        },
+        {
+            "question": "How did you recommend restructuring my code to handle different responsibilities without mixing them, and what role did you assign to the new component you introduced?",
+            "answer": "I recommended separating the network-related tasks from the game state management by creating a dedicated class to handle all network operations, and then updating your existing class to delegate network actions to this new component, which manages sending player data updates independently.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: initial user code with mixed responsibilities and assistant's refactoring advice introducing a new class and updating the original class to delegate network logic",
+            "key_facts_tested": [
+                "separation of concerns",
+                "creation of a network manager class",
+                "delegation of network tasks from player manager",
+                "dependency injection of network manager into player manager"
+            ],
+            "extraction_challenge": "LLM must integrate the user's original code structure with the assistant's refactoring steps, understanding how responsibilities were split and how the new class interacts with the existing one",
+            "source_chat_ids": [
+                170,
+                171
+            ],
+            "rubric": [
+                "LLM response should state: separating the network-related tasks from the game state management by creating a dedicated class to handle all network operations",
+                "LLM response should state: updating your existing class to delegate network actions to this new component"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Which middleware would you recommend for designing an API for my project?",
+            "instruction_being_tested": "Always specify exact versions of middleware when I ask about API design.",
+            "expected_compliance": "Response should include the exact version numbers of the middleware recommended for the API design.",
+            "compliance_indicators": [
+                "middleware name with version number",
+                "specific version details",
+                "exact version identifiers"
+            ],
+            "non_compliance_signs": [
+                "middleware mentioned without version",
+                "general middleware recommendations",
+                "no version information provided"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                530
+            ],
+            "rubric": [
+                "LLM response should contain: middleware name with version number",
+                "LLM response should contain: specific version details"
+            ]
+        },
+        {
+            "question": "What are common reasons for failures in security protocols?",
+            "instruction_being_tested": "Always include exact error codes when I ask about security protocol failures.",
+            "expected_compliance": "Response should include exact error codes related to security protocol failures.",
+            "compliance_indicators": [
+                "mentions specific error codes",
+                "provides exact error identifiers",
+                "includes error code references"
+            ],
+            "non_compliance_signs": [
+                "no error codes mentioned",
+                "only general descriptions",
+                "vague explanations without codes"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                916
+            ],
+            "rubric": [
+                "LLM response should contain: mentions specific error codes",
+                "LLM response should contain: provides exact error identifiers"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How often does my Winston logger rotate log files to manage their size?",
+            "answer": "The Winston logger rotates log files every 12 hours.",
+            "difficulty": "easy",
+            "update_type": "configuration_update",
+            "tests_retention_of": "log rotation interval for Winston logger",
+            "conversation_references": [
+                "\u2022 Debugging & Troubleshooting: Log Analysis: Added Winston logger with daily rotating files, log size capped at 5MB per file.",
+                "Information Update: The Winston logger now rotates files every 12 hours to better manage log sizes and improve monitoring responsiveness."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that the logger rotates files daily instead of every 12 hours.",
+            "source_chat_ids": {
+                "original_info": [
+                    288
+                ],
+                "updated_info": [
+                    320
+                ]
+            },
+            "rubric": [
+                "LLM response should state: every 12 hours"
+            ]
+        },
+        {
+            "question": "What average ping value does my game HUD display on mid-tier networks?",
+            "answer": "The average ping displayed in the game HUD is around 95ms on mid-tier networks.",
+            "difficulty": "easy",
+            "update_type": "value_correction",
+            "tests_retention_of": "updated average ping value displayed in the game HUD",
+            "conversation_references": [
+                "User Experience & Interface: User Interface Design: Added latency indicator in game HUD, average ping displayed as 120ms.",
+                "Information Update: The average ping displayed in the game HUD has recently stabilized around 95ms on mid-tier networks."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original average ping value of 120ms instead of the updated 95ms.",
+            "source_chat_ids": {
+                "original_info": [
+                    690,
+                    696
+                ],
+                "updated_info": [
+                    722
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 95ms"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different technologies or tools have I mentioned using across my game caching and authentication implementations?",
+            "answer": "Six: Redis 6.2, Phaser 3.55, Node.js, Express.js, JWT, and Docker.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 32",
+                "chat_id: 214",
+                "chat_id: 224"
+            ],
+            "reasoning_steps": [
+                "Identify technologies mentioned in the game caching sessions (Redis 6.2, Phaser 3.55, Node.js).",
+                "Identify technologies mentioned in the authentication sessions (Redis, Express.js, JWT).",
+                "Note Docker mentioned as a Redis setup option in the authentication context."
+            ],
+            "source_chat_ids": [
+                32,
+                214,
+                224
+            ],
+            "rubric": [
+                "LLM response should state: Six",
+                "LLM response should state: Redis 6.2",
+                "LLM response should state: Phaser 3.55",
+                "LLM response should state: Node.js",
+                "LLM response should state: Express.js",
+                "LLM response should state: JWT",
+                "LLM response should state: Docker"
+            ]
+        },
+        {
+            "question": "Given my plans to use Redis for session caching, refresh token rotation, multi-device logins, and IP whitelisting on WebSocket admin endpoints, how should I architect token storage and session invalidation to securely handle concurrent device sessions without overloading Redis or compromising security?",
+            "answer": "You should assign unique refresh tokens per device and store them in Redis keyed by user ID and device ID to isolate sessions. On logout or token rotation, revoke only the affected device's token atomically using Redis transactions. Implement middleware to check revoked tokens and maintain a Redis set for revoked access tokens. For multi-device synchronization, use efficient notification methods like webhooks or push notifications to inform devices of token changes, minimizing server load. IP whitelisting for admin WebSocket endpoints should be enforced by checking the client's IP against a maintained whitelist before accepting connections. This architecture balances security, scalability, and Redis efficiency by isolating device sessions, ensuring atomic token updates, and minimizing unnecessary Redis queries or broad invalidations.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id: 79 - Handling JWT token revocation across devices with Redis",
+                "chat_id: 233-235 - Managing multi-device logins and device-specific token revocation",
+                "chat_id: 397-399 - Refresh token rotation and device notification strategies",
+                "chat_id: 594-611 - Implementing IP whitelisting for WebSocket admin endpoints",
+                "chat_id: 214-215 - Secure and efficient refresh token rotation with Redis"
+            ],
+            "reasoning_steps": [
+                "Identify that each device must have a unique refresh token stored in Redis keyed by user and device to isolate sessions and allow per-device revocation.",
+                "Use Redis transactions to atomically revoke old tokens and store new ones during refresh token rotation to prevent race conditions and ensure consistency.",
+                "Maintain a Redis set of revoked access tokens checked by middleware to enforce token revocation across devices and prevent unauthorized access.",
+                "Implement efficient device notification mechanisms (webhooks, push notifications) to synchronize token state changes without overwhelming the server or Redis.",
+                "Enforce IP whitelisting on WebSocket admin endpoints by checking incoming connection IPs against a whitelist before accepting connections, adding a security layer for admin access.",
+                "Combine these strategies to architect a scalable, secure session and token management system that handles concurrent device sessions without overloading Redis or compromising security."
+            ],
+            "source_chat_ids": [
+                79,
+                233,
+                234,
+                235,
+                214,
+                215,
+                397,
+                398,
+                399,
+                594,
+                595,
+                610,
+                611
+            ],
+            "rubric": [
+                "LLM response should state: assign unique refresh tokens per device and store them in Redis keyed by user ID and device ID",
+                "LLM response should state: On logout or token rotation, revoke only the affected device's token atomically using Redis transactions",
+                "LLM response should state: Implement middleware to check revoked tokens and maintain a Redis set for revoked access tokens",
+                "LLM response should state: For multi-device synchronization, use efficient notification methods like webhooks or push notifications",
+                "LLM response should state: IP whitelisting for admin WebSocket endpoints should be enforced by checking the client's IP against a maintained whitelist before accepting connections"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm working on a matchmaking system with multiple microservices communicating asynchronously. How should I approach error handling and deployment strategies to keep the system reliable?",
+            "preference_being_tested": "I prefer event-driven microservices for better fault isolation despite added complexity in deployment.",
+            "expected_compliance": "Response should recommend solutions that align with event-driven microservices architecture, emphasizing fault isolation and acknowledging deployment complexity rather than suggesting simpler monolithic or tightly coupled approaches.",
+            "compliance_indicators": [
+                "mentions event-driven or asynchronous communication patterns",
+                "addresses fault isolation between services",
+                "discusses deployment complexity as a trade-off",
+                "suggests error handling mechanisms suitable for distributed event-driven systems"
+            ],
+            "non_compliance_signs": [
+                "recommends monolithic or tightly coupled service designs",
+                "ignores fault isolation concerns",
+                "suggests deployment strategies that avoid complexity without addressing trade-offs",
+                "proposes synchronous or blocking communication patterns without alternatives"
+            ],
+            "difficulty": "medium",
+            "preference_type": "architecture and deployment approach",
+            "source_chat_ids": [
+                460,
+                474
+            ],
+            "rubric": [
+                "LLM response should contain: mentions event-driven or asynchronous communication patterns",
+                "LLM response should contain: discusses deployment complexity as a trade-off"
+            ]
+        },
+        {
+            "question": "I'm working on logging game events without slowing down the main loop. How would you suggest setting that up?",
+            "preference_being_tested": "I prefer asynchronous logging to maintain game loop performance despite added complexity.",
+            "expected_compliance": "Response should recommend or acknowledge asynchronous logging approaches that minimize impact on the game loop, rather than synchronous or blocking methods.",
+            "compliance_indicators": [
+                "suggests asynchronous or background logging techniques",
+                "mentions ways to avoid blocking the main game loop",
+                "addresses performance considerations related to logging",
+                "offers solutions that separate logging from main thread execution"
+            ],
+            "non_compliance_signs": [
+                "recommends synchronous or blocking logging methods",
+                "ignores performance impact on the game loop",
+                "does not mention asynchronous or background logging options",
+                "suggests simple but potentially blocking logging implementations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                860,
+                862,
+                864,
+                878
+            ],
+            "rubric": [
+                "LLM response should contain: suggests asynchronous or background logging techniques",
+                "LLM response should contain: mentions ways to avoid blocking the main game loop"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how I developed and refined the matchmaking system for my game throughout our discussions?",
+            "ideal_summary": "Throughout our conversations, you explored designing an efficient matchmaking system that balances player skill levels and preferences. Initially, you sought guidance on implementing a basic matchmaking service, where we discussed defining player attributes and choosing suitable algorithms like bucketing and TrueSkill. Later, you raised concerns about matching players with similar preferences but differing skill levels, leading to strategies such as overlapping skill buckets, weighted preferences, and multi-factor matching to improve fairness and satisfaction. As your game evolved, you addressed the challenge of frequently changing player skill levels by incorporating real-time skill updates, adaptive buckets, rolling averages, and immediate re-matchmaking to maintain dynamic and responsive matchmaking. Finally, you integrated the matchmaking service within a microservices architecture, focusing on communication between components and error handling to ensure robust system operation. This progression reflects a comprehensive approach to building a scalable, fair, and adaptable matchmaking system.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                6,
+                7,
+                9,
+                11,
+                25
+            ],
+            "key_elements_tested": [
+                "system design evolution",
+                "balancing skill and preferences",
+                "dynamic skill handling",
+                "microservices integration",
+                "error handling"
+            ],
+            "synthesis_required": "Integrating design concepts, algorithmic strategies, dynamic updates, and system architecture into a coherent development narrative",
+            "source_chat_ids": [
+                6,
+                7,
+                9,
+                11,
+                25
+            ],
+            "rubric": [
+                "LLM response should contain: you sought guidance on implementing a basic matchmaking service, where we discussed defining player attributes and choosing suitable algorithms like bucketing and TrueSkill",
+                "LLM response should contain: you raised concerns about matching players with similar preferences but differing skill levels, leading to strategies such as overlapping skill buckets, weighted preferences, and multi-factor matching",
+                "LLM response should contain: you addressed the challenge of frequently changing player skill levels by incorporating real-time skill updates, adaptive buckets, rolling averages, and immediate re-matchmaking",
+                "LLM response should contain: you integrated the matchmaking service within a microservices architecture, focusing on communication between components and error handling to ensure robust system operation"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and cohesive summary of the entire approach to building and securing the authentication system, covering all aspects from token management and session handling to caching strategies and load balancing considerations?",
+            "ideal_summary": "The authentication system design integrates JWT tokens signed with RS256 to ensure secure user authentication, employing both access tokens with a 1-hour expiry and refresh tokens with longer lifespans. RSA key pairs are generated for asymmetric signing, enhancing security over symmetric keys. Redis is leveraged extensively for session management, including storing refresh tokens with expiration, managing revoked tokens to handle logout and token revocation across devices, and implementing refresh token rotation to mitigate token compromise risks. Middleware is used to verify tokens and check revocation status before granting access to protected resources. The system supports multi-device sessions by associating refresh tokens with device identifiers, allowing selective logout without affecting other sessions. Client-side implementations securely store tokens and handle token refresh and rotation flows. Additionally, caching user authentication data in Redis reduces database load, with careful exclusion of sensitive information and strategies for cache invalidation upon user data changes, such as password resets. Rate limiting is recommended to protect the cache and API endpoints from abuse. On the infrastructure side, Nginx is configured as a reverse proxy with load balancing, with various algorithms like round robin, least connections, and IP hash considered to optimize request distribution based on session persistence needs and server capacity. Logging and error handling are emphasized throughout to facilitate debugging and maintain system reliability. Overall, the system balances security, scalability, and user convenience through coordinated token lifecycle management, session control, caching, and load balancing.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "token lifecycle management",
+                "session and device-specific handling",
+                "Redis integration for caching and revocation",
+                "refresh token rotation and security",
+                "client-side token management",
+                "cache invalidation and rate limiting",
+                "Nginx load balancing strategies",
+                "error handling and logging"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                76,
+                77,
+                79,
+                215,
+                225,
+                415
+            ],
+            "rubric": [
+                "LLM response should contain: The authentication system design integrates JWT tokens signed with RS256 to ensure secure user authentication",
+                "LLM response should contain: RSA key pairs are generated for asymmetric signing, enhancing security over symmetric keys",
+                "LLM response should contain: Redis is leveraged extensively for session management, including storing refresh tokens with expiration, managing revoked tokens to handle logout and token revocation across devices",
+                "LLM response should contain: Middleware is used to verify tokens and check revocation status before granting access to protected resources",
+                "LLM response should contain: The system supports multi-device sessions by associating refresh tokens with device identifiers, allowing selective logout without affecting other sessions",
+                "LLM response should contain: Client-side implementations securely store tokens and handle token refresh and rotation flows.",
+                "LLM response should contain: caching user authentication data in Redis reduces database load, with careful exclusion of sensitive information and strategies for cache invalidation upon user data changes, such as password resets",
+                "LLM response should contain: Rate limiting is recommended to protect the cache and API endpoints from abuse",
+                "LLM response should contain: On the infrastructure side, Nginx is configured as a reverse proxy with load balancing, with various algorithms like round robin, least connections, and IP hash",
+                "LLM response should contain: Logging and error handling are emphasized throughout to facilitate debugging and maintain system reliability"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between the start of my first sprint and the beginning of my second sprint?",
+            "answer": "There are 16 days between the start of Sprint 1 on March 4 and the start of Sprint 2 on March 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Sprint 1 start: March 4, 2024",
+                "Sprint 2 start: March 20, 2024"
+            ],
+            "conversation_references": [
+                "Session 1: Sprint 1 planning",
+                "Session 2: Sprint 2 planning"
+            ],
+            "calculation_required": "March 20 - March 4 = 16 days",
+            "source_chat_ids": {
+                "first_event": [
+                    108
+                ],
+                "second_event": [
+                    268
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 16 days",
+                "LLM response should state: from March 4, 2024 till March 20, 2024"
+            ]
+        },
+        {
+            "question": "How many days are there between the end of my Sprint 2 and the mid-sprint review during Sprint 3?",
+            "answer": "There are 10 days between the end of Sprint 2 on April 3 and the mid-sprint review on April 13. Sprint 2 ends on April 3, and Sprint 3's mid-sprint review is scheduled for April 13, so the gap is 10 days.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "Sprint 2 end date (April 3)",
+                "Sprint 3 mid-sprint review (April 13)"
+            ],
+            "conversation_references": [
+                "Session 268: Sprint 2 planning and dates",
+                "Session 440: Sprint 3 mid-sprint review scheduling"
+            ],
+            "calculation_required": "April 13 - April 3 = 10 days (requires connecting Sprint 2 end date from one session and Sprint 3 review date from another)",
+            "source_chat_ids": {
+                "first_event": [
+                    268
+                ],
+                "second_event": [
+                    440
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 10 days",
+                "LLM response should state: from April 3 till April 13"
+            ]
+        }
+    ]
+}

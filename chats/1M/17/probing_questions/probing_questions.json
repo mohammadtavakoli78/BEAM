@@ -1,0 +1,835 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the exact duration and format of the online course 'Mindfulness for Sleep' completed on March 7?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact duration or format of the 'Mindfulness for Sleep' online course.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The course completion is mentioned but no details about duration or format are given.",
+            "plan_reference": "BATCH 3 PLAN, Bullet 10",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact duration of the 'Mindfulness for Sleep' online course",
+                "Based on the provided chat, there is no information related to the exact format of the 'Mindfulness for Sleep' online course"
+            ]
+        },
+        {
+            "question": "What are the detailed maintenance instructions for the blackout blinds installed in September?",
+            "ideal_response": "Based on the provided chat, there is no information related to detailed maintenance instructions for the blackout blinds installed in September.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Blackout blinds installation and adjustments are mentioned but no maintenance instructions are provided.",
+            "plan_reference": "BATCH 8 PLAN, Bullet 31",
+            "rubric": [
+                "Based on the provided chat, there is no information related to detailed maintenance instructions for the blackout blinds installed in September"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever attended any conferences in Istanbul?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any conferences in Istanbul, but you also mentioned meeting Sara at a conference there. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at conferences in Istanbul",
+            "conversation_references": [
+                "Session 48, 60, 68: Meeting Sara at Istanbul conference",
+                "Session 202: Never attended any conferences in Istanbul"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    202
+                ],
+                "second_statement": [
+                    48,
+                    60,
+                    68
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any conferences in Istanbul",
+                "LLM response should mention: you also mentioned meeting Sara at a conference there",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have you I used any sleep tracking devices to monitor my sleep?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used any sleep tracking devices, but you also mentioned using a Xiaomi Mi Band 6 to monitor your sleep. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of sleep tracking devices",
+            "conversation_references": [
+                "Session 422: Never used any sleep tracking devices",
+                "Session 422: Using Xiaomi Mi Band 6"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    422
+                ],
+                "second_statement": [
+                    422
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never used any sleep tracking devices",
+                "LLM response should mention: you also mentioned using a Xiaomi Mi Band 6 to monitor your sleep",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of sleep tracking devices develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus on sleep tracking devices developed in this sequence: 1) Initial questions about interpreting data from your device, 2) Interest in sleep science resources, 3) Concerns about firmware updates and their impact on tracking accuracy, 4) Analysis of device effectiveness and data trustworthiness, 5) Comparisons between different tracking tools and their accuracy, 6) Transition to newer device models and their improved features, 7) Exploration of advanced features like nap and stress monitoring, 8) Consideration of device maintenance and potential drawbacks, 9) Evaluation of firmware updates and their incremental improvements, 10) Final reflections on how firmware enhancements relate to sleep quality and disruption management.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "128, 134",
+                "278, 284, 290, 292, 294, 296",
+                "504, 506, 512",
+                "696, 700, 704, 708",
+                "890, 896, 902",
+                "1082, 1084, 1086, 1094",
+                "1280, 1284, 1290",
+                "1476, 1482, 1488",
+                "1666, 1670, 1676",
+                "1854, 1860, 1866"
+            ],
+            "ordering_tested": [
+                "1st: Initial data interpretation and sleep science interest",
+                "2nd: Firmware update impact and data trust",
+                "3rd: Device effectiveness and accuracy comparisons",
+                "4th: New device model features and benefits",
+                "5th: Nap and stress monitoring exploration",
+                "6th: Device maintenance and drawbacks",
+                "7th: Firmware update benefits and improvements",
+                "8th: Incremental firmware enhancements and sleep quality",
+                "9th: Firmware update relation to sleep disruption",
+                "10th: Final reflections on firmware and sleep management"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple conversational sessions",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse topics"
+            ],
+            "source_chat_ids": [
+                128,
+                134,
+                278,
+                284,
+                290,
+                292,
+                294,
+                296,
+                504,
+                506,
+                512,
+                696,
+                700,
+                704,
+                708,
+                890,
+                896,
+                902,
+                1082,
+                1084,
+                1086,
+                1094,
+                1280,
+                1284,
+                1290,
+                1476,
+                1482,
+                1488,
+                1666,
+                1670,
+                1676,
+                1854,
+                1860,
+                1866
+            ],
+            "rubric": [
+                "Initial data interpretation and sleep science interest",
+                "Firmware update impact and data trust",
+                "Device effectiveness and accuracy comparisons",
+                "New device model features and benefits",
+                "Nap and stress monitoring exploration",
+                "Device maintenance and drawbacks",
+                "Firmware update benefits and improvements",
+                "Incremental firmware enhancements and sleep quality",
+                "Firmware update relation to sleep disruption",
+                "Final reflections on firmware and sleep management"
+            ]
+        },
+        {
+            "question": "How did my focus on setting and managing personal boundaries evolve throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your discussions about setting and managing personal boundaries progressed as follows: 1) You first expressed concern about establishing a boundary to limit late-night calls, 2) Then you explored ways to ensure those boundaries were respected, 3) You considered the impact of these boundaries on improving sleep quality, 4) You raised questions about handling potential boundary violations, 5) Later, you introduced boundaries related to social interactions and sleepovers, 6) You again sought advice on enforcing these newer boundaries, and 7) Finally, you reflected on how setting such boundaries might improve your relationships in the long run.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "180",
+                "186",
+                "190",
+                "194",
+                "542",
+                "550",
+                "554"
+            ],
+            "ordering_tested": [
+                "1st: Concern about late-night call boundary",
+                "2nd: Ensuring boundary respect",
+                "3rd: Boundary's effect on sleep",
+                "4th: Handling boundary violations",
+                "5th: Boundaries in social interactions",
+                "6th: Enforcing new boundaries",
+                "7th: Long-term relationship impact"
+            ],
+            "complexity_factors": [
+                "requires tracking subtle topic evolution",
+                "spans multiple conversation sessions",
+                "involves nuanced boundary management aspects",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                180,
+                186,
+                190,
+                194,
+                542,
+                550,
+                554
+            ],
+            "rubric": [
+                "Concern about late-night call boundary",
+                "Ensuring boundary respect",
+                "Boundary's effect on sleep",
+                "Handling boundary violations",
+                "Boundaries in social interactions",
+                "Enforcing new boundaries",
+                "Long-term relationship impact"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much do I earn each month?",
+            "answer": "I earn about 4,500 TRY monthly.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 2: USER introduces self as James, a 20-year-old clinical psychologist earning about 4,500 TRY monthly.",
+            "key_facts_tested": [
+                "monthly income",
+                "earnings amount"
+            ],
+            "source_chat_ids": [
+                2
+            ],
+            "rubric": [
+                "LLM response should state: 4,500 TRY"
+            ]
+        },
+        {
+            "question": "What day and time do I usually have my weekly call with Amy?",
+            "answer": "I usually have my weekly call with Amy on Sundays at 7 PM.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: USER mentions having a weekly call with Amy on Sundays at 7 PM.",
+            "key_facts_tested": [
+                "weekly call day",
+                "weekly call time",
+                "weekly call frequency"
+            ],
+            "source_chat_ids": [
+                24
+            ],
+            "rubric": [
+                "LLM response should state: Sundays",
+                "LLM response should state: 7 PM"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How much has my sleep improved recently?",
+            "instruction_being_tested": "Always provide exact percentages when I ask about sleep efficiency improvements.",
+            "expected_compliance": "Response should include exact percentage values indicating the improvement in sleep efficiency.",
+            "compliance_indicators": [
+                "exact percentage values",
+                "precise numerical improvement",
+                "specific percentage figure"
+            ],
+            "non_compliance_signs": [
+                "vague descriptions",
+                "approximate values",
+                "no numerical data",
+                "general statements without numbers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                420
+            ],
+            "rubric": [
+                "LLM response should contain: exact percentage values",
+                "LLM response should contain: precise numerical improvement"
+            ]
+        },
+        {
+            "question": "I'm thinking about buying a new mattress. What should I know about it?",
+            "instruction_being_tested": "Always mention warranty details when I ask about sleep-related purchases.",
+            "expected_compliance": "Response should include information about the warranty associated with the mattress purchase.",
+            "compliance_indicators": [
+                "mention of warranty period",
+                "details about coverage",
+                "information on how to claim warranty"
+            ],
+            "non_compliance_signs": [
+                "no mention of warranty",
+                "only general product details",
+                "discussion limited to features without warranty info"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                808
+            ],
+            "rubric": [
+                "LLM response should contain: mention of warranty period",
+                "LLM response should contain: details about coverage",
+                "LLM response should contain: information on how to claim warranty"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many active members are in my insomnia support group?",
+            "answer": "20 active members",
+            "difficulty": "easy",
+            "update_type": "membership_count_increase",
+            "tests_retention_of": "updated number of active members in the support group",
+            "conversation_references": [
+                "Character & Relationship Labels:Support Group: Joined an online insomnia support group on Feb 1, interacting with 15 members weekly.",
+                "Information Update: The insomnia support group I joined on Feb 1 has grown to 20 active members by Feb 10, increasing weekly interactions."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 15 members instead of the updated 20 members",
+            "source_chat_ids": {
+                "original_info": [
+                    342,
+                    356
+                ],
+                "updated_info": [
+                    414
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 20 active members"
+            ]
+        },
+        {
+            "question": "When is my polysomnography appointment scheduled?",
+            "answer": "Your polysomnography appointment is scheduled for March 18.",
+            "difficulty": "easy",
+            "update_type": "appointment_rescheduling",
+            "tests_retention_of": "the new date of the polysomnography appointment",
+            "conversation_references": [
+                "Healthcare Policies: Attended sleep disorder screening at Ericshire Clinic on Feb 15; awaiting polysomnography appointment on March 20.",
+                "The polysomnography appointment originally scheduled for March 20 was moved up to March 18, allowing earlier diagnosis."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the appointment as being on March 20 instead of March 18.",
+            "source_chat_ids": {
+                "original_info": [
+                    524,
+                    530,
+                    536
+                ],
+                "updated_info": [
+                    612
+                ]
+            },
+            "rubric": [
+                "LLM response should state: March 18"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much did my sleep efficiency improve from when I started to when I reached 78%?",
+            "answer": "Your sleep efficiency improved by 8 percentage points from 70% to 78%.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id 72",
+                "chat_id 224"
+            ],
+            "reasoning_steps": [
+                "Identify the initial sleep efficiency percentage from the first session.",
+                "Identify the improved sleep efficiency percentage from the later session.",
+                "Calculate the difference between the two percentages."
+            ],
+            "source_chat_ids": [
+                72,
+                224
+            ],
+            "rubric": [
+                "LLM response should state: 8 percentage points",
+                "LLM response should state: from 70% to 78%"
+            ]
+        },
+        {
+            "question": "Considering my changes like adjusting thermostat settings, installing blackout curtains, adding meditation, and using 2200K lamps, how have these combined affected my sleep quality and night sweats overall?",
+            "answer": "Your combined changes\u2014maintaining bedroom temperature around 18-19\u00b0C, installing blackout curtains, adding meditation to your bedtime routine, and reducing blue light exposure with 2200K lamps\u2014have synergistically improved your sleep quality by promoting deeper sleep stages, reducing night sweats through better thermoregulation, enhancing relaxation to reduce anxiety-related awakenings, and stabilizing circadian rhythms. This integrated approach has led to fewer night sweats, faster sleep onset, longer uninterrupted sleep, and overall improved restfulness.",
+            "difficulty": "hard",
+            "reasoning_type": "performance_evaluation",
+            "sessions_required": 7,
+            "conversation_references": [
+                "Thermostat adjustment and sleep comfort",
+                "Bedtime adjustment advice",
+                "Meditation for anxiety and sleep",
+                "Blackout curtains purchase consideration",
+                "Dimmable 2200K lamps and blue light reduction",
+                "Maintaining bedroom temperature at 18\u00b0C",
+                "Sleep environment optimization and combined effects"
+            ],
+            "reasoning_steps": [
+                "Identify the impact of maintaining bedroom temperature at 18-19\u00b0C on sleep quality and night sweats.",
+                "Analyze how blackout curtains contribute to darkness and temperature insulation, further improving sleep.",
+                "Evaluate the role of adding meditation in reducing anxiety and promoting relaxation before sleep.",
+                "Assess how installing 2200K dimmable lamps reduces blue light exposure, supporting melatonin production and circadian rhythm.",
+                "Synthesize how these environmental and behavioral changes interact to enhance sleep stages and reduce disruptions.",
+                "Consider the cumulative effect on reducing night sweats through improved thermoregulation and stress reduction.",
+                "Conclude the overall improvement in sleep quality, including faster sleep onset, longer deep sleep, and fewer awakenings."
+            ],
+            "source_chat_ids": [
+                130,
+                133,
+                138,
+                140,
+                774,
+                888,
+                1350
+            ],
+            "rubric": [
+                "LLM response should state: synergistically improved your sleep quality by promoting deeper sleep stages",
+                "LLM response should state: reduced night sweats through better thermoregulation",
+                "LLM response should state: enhanced relaxation to reduce anxiety-related awakenings",
+                "LLM response should state: stabilized circadian rhythms",
+                "LLM response should state: This integrated approach has led to fewer night sweats, faster sleep onset, longer uninterrupted sleep, and overall improved restfulness"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "What are some good ways to unwind before bed that I could try?",
+            "preference_being_tested": "I prefer reading physical books over meditation before bed because it helps me relax without screen exposure.",
+            "expected_compliance": "Response should suggest reading physical books as a primary option and avoid recommending screen-based activities or meditation as the main suggestion, respecting the user's preference for non-screen, book reading relaxation.",
+            "compliance_indicators": [
+                "recommends reading physical books",
+                "avoids suggesting screen-based activities",
+                "mentions meditation only as a secondary or optional choice",
+                "acknowledges relaxation without screen exposure"
+            ],
+            "non_compliance_signs": [
+                "only recommends meditation",
+                "suggests screen-based activities like apps or videos",
+                "ignores book reading as an option",
+                "does not address screen exposure concerns"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity_preference",
+            "source_chat_ids": [
+                182,
+                184,
+                188,
+                192,
+                196
+            ],
+            "rubric": [
+                "LLM response should contain: recommends reading physical books",
+                "LLM response should contain: avoids suggesting screen-based activities",
+                "LLM response should contain: mentions meditation only as a secondary or optional choice",
+                "LLM response should contain: acknowledges relaxation without screen exposure"
+            ]
+        },
+        {
+            "question": "What are some effective ways to set up my bedroom environment to help me sleep better through the night?",
+            "preference_being_tested": "I prefer a cooler bedroom temperature around 19\u00b0C as it noticeably improves my sleep depth.",
+            "expected_compliance": "Response should include suggestions that maintain or achieve a cooler bedroom temperature near 19\u00b0C as part of optimizing the sleep environment.",
+            "compliance_indicators": [
+                "mentions maintaining a cooler temperature around 19\u00b0C",
+                "recommends cooling methods or temperature control",
+                "acknowledges temperature as a factor in sleep setup"
+            ],
+            "non_compliance_signs": [
+                "ignores temperature control or suggests warmer temperatures",
+                "only focuses on other factors without addressing temperature",
+                "recommends general advice that contradicts cooler temperature preference"
+            ],
+            "difficulty": "medium",
+            "preference_type": "environmental condition",
+            "source_chat_ids": [
+                328,
+                330,
+                340
+            ],
+            "rubric": [
+                "LLM response should contain: mentions maintaining a cooler temperature around 19\u00b0C",
+                "LLM response should contain: recommends cooling methods or temperature control",
+                "LLM response should contain: acknowledges temperature as a factor in sleep setup"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my interactions and efforts to improve sleep habits with Nicolas and Bruce have developed over time?",
+            "ideal_summary": "Your interactions with Nicolas and Bruce regarding sleep habits have progressed through several stages. Initially, you expressed concerns about Nicolas's curiosity about sleep and his post-game routines, leading to discussions about setting boundaries, educating him on sleep hygiene, and leveraging your long-standing relationship to support his understanding and commitment to better sleep. For Bruce, the focus was on managing late-night gaming by establishing curfews, creating relaxing pre-bed routines, and using technology tools to limit screen time. Over time, both cases involved implementing consistent sleep schedules, relaxation techniques, and environmental adjustments like blackout blinds and caffeine cut-offs. You also explored strategies such as digital detoxes, gratitude journaling, and CBT-I techniques to further enhance sleep quality. Throughout these conversations, you received tailored advice on monitoring progress with sleep trackers and journals, maintaining routines, and encouraging positive reinforcement, reflecting a comprehensive and evolving approach to improving sleep health for both individuals.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                30,
+                31,
+                33,
+                41,
+                43,
+                47,
+                59,
+                67,
+                205,
+                207,
+                219,
+                425,
+                429,
+                431,
+                439,
+                619,
+                629,
+                631,
+                633,
+                637,
+                813,
+                817,
+                825,
+                829,
+                833,
+                1007,
+                1011,
+                1013,
+                1197,
+                1201,
+                1203,
+                1205,
+                1207,
+                1211,
+                1217,
+                1393,
+                1401,
+                1407,
+                1411,
+                1593,
+                1595,
+                1601,
+                1605,
+                1607,
+                1781,
+                1787,
+                1791,
+                1795,
+                1797
+            ],
+            "key_elements_tested": [
+                "multi-person sleep habit support",
+                "progression from concern to intervention",
+                "integration of behavioral and environmental strategies",
+                "monitoring and adjustment over time",
+                "combining advice across multiple sessions"
+            ],
+            "synthesis_required": "Integrate diverse advice and developments across multiple sessions into a coherent narrative showing evolution of sleep improvement efforts",
+            "source_chat_ids": [
+                30,
+                31,
+                33,
+                41,
+                43,
+                47,
+                59,
+                67,
+                205,
+                207,
+                219,
+                425,
+                429,
+                431,
+                439,
+                619,
+                629,
+                631,
+                633,
+                637,
+                813,
+                817,
+                825,
+                829,
+                833,
+                1007,
+                1011,
+                1013,
+                1197,
+                1201,
+                1203,
+                1205,
+                1207,
+                1211,
+                1217,
+                1393,
+                1401,
+                1407,
+                1411,
+                1593,
+                1595,
+                1601,
+                1605,
+                1607,
+                1781,
+                1787,
+                1791,
+                1795,
+                1797
+            ],
+            "rubric": [
+                "LLM response should contain: you expressed concerns about Nicolas's curiosity about sleep and his post-game routines, leading to discussions about setting boundaries",
+                "LLM response should contain: For Bruce, the focus was on managing late-night gaming by establishing curfews, creating relaxing pre-bed routines, and using technology tools to limit screen time",
+                "LLM response should contain: both cases involved implementing consistent sleep schedules, relaxation techniques, and environmental adjustments like blackout blinds and caffeine cut-offs",
+                "LLM response should contain: You also explored strategies such as digital detoxes, gratitude journaling, and CBT-I techniques to further enhance sleep quality"
+            ]
+        },
+        {
+            "question": "Can you give me a comprehensive summary of how I\u2019ve worked on improving my sleep environment and habits over time?",
+            "ideal_summary": "Over several conversations, you explored multiple strategies to enhance your sleep quality. Initially, you considered purchasing blackout curtains from the SleepWell store, evaluating their cost-effectiveness and benefits such as light blocking, temperature regulation, and noise reduction. You also examined alternative, more affordable options like DIY solutions, window films, eye masks, and room darkening shades, weighing their pros and cons. Setting a deadline to acquire and install the curtains helped you stay focused on improving your sleep environment promptly. Alongside environmental changes, you developed a structured evening routine incorporating stretching, reading, journaling, and meditation to promote physical and mental relaxation, reduce anxiety, and regulate your circadian rhythm. You also implemented monthly bedroom cleaning and airing schedules to maintain air quality and a comfortable atmosphere. Throughout this process, you monitored progress, adjusted routines, and integrated tools like diffusers and white noise machines to further optimize your sleep setting. This comprehensive approach reflects a progressive and multifaceted effort to create a conducive sleep environment and establish healthy habits for better rest and mental well-being.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                94,
+                95,
+                100,
+                101,
+                106,
+                107,
+                242,
+                243,
+                248,
+                249,
+                256,
+                257,
+                466,
+                467,
+                472,
+                473,
+                478,
+                479,
+                660,
+                661,
+                664,
+                665,
+                666,
+                667,
+                670,
+                671,
+                854,
+                855,
+                860,
+                861,
+                868,
+                869,
+                1044,
+                1045,
+                1048,
+                1049,
+                1052,
+                1053,
+                1058,
+                1059,
+                1240,
+                1241,
+                1242,
+                1243,
+                1248,
+                1249,
+                1250,
+                1251,
+                1254,
+                1255,
+                1432,
+                1433,
+                1630,
+                1631,
+                1638,
+                1639,
+                1642,
+                1643,
+                1818,
+                1819,
+                1824,
+                1825,
+                1826,
+                1827,
+                1832,
+                1833
+            ],
+            "key_elements_tested": [
+                "progressive development",
+                "multi-session synthesis",
+                "environmental optimization",
+                "habit formation",
+                "integrated sleep improvement strategies"
+            ],
+            "synthesis_required": "Combining environmental, behavioral, and maintenance strategies into a coherent narrative showing evolution and interplay",
+            "source_chat_ids": [
+                94,
+                95,
+                100,
+                101,
+                106,
+                107,
+                242,
+                243,
+                248,
+                249,
+                256,
+                257,
+                466,
+                467,
+                472,
+                473,
+                478,
+                479,
+                660,
+                661,
+                664,
+                665,
+                666,
+                667,
+                670,
+                671,
+                854,
+                855,
+                860,
+                861,
+                868,
+                869,
+                1044,
+                1045,
+                1048,
+                1049,
+                1052,
+                1053,
+                1058,
+                1059,
+                1240,
+                1241,
+                1242,
+                1243,
+                1248,
+                1249,
+                1250,
+                1251,
+                1254,
+                1255,
+                1432,
+                1433,
+                1630,
+                1631,
+                1638,
+                1639,
+                1642,
+                1643,
+                1818,
+                1819,
+                1824,
+                1825,
+                1826,
+                1827,
+                1832,
+                1833
+            ],
+            "rubric": [
+                "LLM response should contain: you considered purchasing blackout curtains from the SleepWell store, evaluating their cost-effectiveness and benefits such as light blocking, temperature regulation, and noise reduction",
+                "LLM response should contain: You also examined alternative, more affordable options like DIY solutions, window films, eye masks, and room darkening shades",
+                "LLM response should contain: Setting a deadline to acquire and install the curtains helped you stay focused on improving your sleep environment promptly",
+                "LLM response should contain: you developed a structured evening routine incorporating stretching, reading, journaling, and meditation to promote physical and mental relaxation, reduce anxiety",
+                "LLM response should contain: you monitored progress, adjusted routines, and integrated tools like diffusers and white noise machines to further optimize your sleep setting"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between aligning my sleep schedule to 10 PM\u20136 AM and reaching my sleep efficiency goal of 85%?",
+            "answer": "I have 38 days between aligning my sleep schedule by February 1, 2024, and reaching my sleep efficiency goal by March 10, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 1, 2024: align sleep schedule",
+                "March 10, 2024: reach sleep efficiency goal"
+            ],
+            "conversation_references": [
+                "Session 74: sleep schedule alignment",
+                "Session 72: sleep efficiency goal"
+            ],
+            "calculation_required": "March 10, 2024 - February 1, 2024 = 38 days",
+            "source_chat_ids": {
+                "first_event": [
+                    74,
+                    80,
+                    86
+                ],
+                "second_event": [
+                    72,
+                    78,
+                    84
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 38 days",
+                "LLM response should state: from February 1, 2024 till March 10, 2024"
+            ]
+        },
+        {
+            "question": "How many days passed between when I started shifting my bedtime earlier and when the blackout curtains were installed to reduce room light?",
+            "answer": "7 days passed between when you started shifting your bedtime earlier (January 15) and when the blackout curtains were installed (January 22).",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 15: bedtime shift started",
+                "January 22: blackout curtains installed"
+            ],
+            "conversation_references": [
+                "Sessions 76, 82, 88: bedtime shift starting January 15",
+                "Sessions 242, 248, 256: blackout curtains installed January 22"
+            ],
+            "calculation_required": "January 22 - January 15 = 7 days (requires connecting two batch anchors from different sessions)",
+            "source_chat_ids": {
+                "first_event": [
+                    76,
+                    82,
+                    88
+                ],
+                "second_event": [
+                    242,
+                    248,
+                    256
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 days",
+                "LLM response should state: from January 15 till January 22"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,707 @@
+{
+    "abstention": [
+        {
+            "question": "What are the specific criteria that led me to decide against buying the Wilson AVP beach volleyball initially?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific criteria behind the decision against buying the Wilson AVP ball initially.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The decision is stated but the reasoning or criteria behind it are not explained.",
+            "plan_reference": "Batch 1, Bullet 13 mentions the decision but no rationale.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific criteria behind the decision against buying the Wilson AVP ball"
+            ]
+        },
+        {
+            "question": "What was the atmosphere like during the North Ericshire Volleyball Gala I attended?",
+            "ideal_response": "Based on the provided chat, there is no information related to the atmosphere of the North Ericshire Volleyball Gala.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The event attendance is mentioned but no description of atmosphere or experience is given.",
+            "plan_reference": "Batch 4, Bullet 23 mentions attendance but no atmosphere details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the atmosphere of the North Ericshire Volleyball Gala"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever participated in any coaching clinics?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you attended a coaching clinic led by Coach Mehmet, but you also mentioned that you've never participated in any coaching clinics. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "participation in coaching clinics",
+            "conversation_references": [
+                "Session 1: Attended coaching clinic",
+                "Session 2: Never participated in coaching clinics"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    278,
+                    284,
+                    286,
+                    292
+                ],
+                "second_statement": [
+                    400,
+                    402
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you attended a coaching clinic led by Coach Mehmet",
+                "LLM response should mention: you also mentioned that you've never participated in any coaching clinics",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever experienced any ankle injuries during volleyball practice?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you recovered from a mild ankle sprain, but you also mentioned never having any ankle injuries during volleyball practice. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "ankle injury history",
+            "conversation_references": [
+                "Session 1: Recovery from ankle sprain",
+                "Session 2: No ankle injuries during volleyball"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    514,
+                    520,
+                    522,
+                    526,
+                    528
+                ],
+                "second_statement": [
+                    680,
+                    682
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you recovered from a mild ankle sprain",
+                "LLM response should mention: you also mentioned never having any ankle injuries during volleyball practice",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of my relationship and volleyball activities with Bonnie develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions progressed through these aspects: 1) Reflecting on your relationship origins and maintaining its strength, 2) Exploring beach volleyball basics and training decisions, 3) Discussing your first beach volleyball match and related teamwork strategies, 4) Balancing volleyball practice with relationship milestones, 5) Setting new volleyball goals following competitive successes, 6) Integrating experiences from volleyball expos and sponsorships into your training, 7) Preparing for national indoor championships with strategic planning, 8) Sharing social and coaching experiences related to volleyball and personal time, 9) Considering tournament participation and relationship management during competitions, 10) Planning personal celebrations intertwined with volleyball season considerations.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 10,
+            "conversation_references": [
+                "26, 32, 40",
+                "202, 212, 216",
+                "406, 412, 416, 420",
+                "684, 696, 698",
+                "886, 894, 896, 898",
+                "1090, 1100, 1106",
+                "1306, 1312, 1318",
+                "1514, 1522, 1524, 1532",
+                "1774, 1778, 1780",
+                "2012, 2014"
+            ],
+            "ordering_tested": [
+                "1st: Relationship origins and maintenance",
+                "2nd: Beach volleyball basics and training",
+                "3rd: First match and teamwork strategies",
+                "4th: Balancing practice with relationship milestones",
+                "5th: New volleyball goals after wins",
+                "6th: Applying expo and sponsorship insights",
+                "7th: National championship preparation",
+                "8th: Social and coaching experiences",
+                "9th: Tournament participation and relationship management",
+                "10th: Planning celebrations with volleyball season"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "spans numerous conversation sessions",
+                "involves intertwined personal and athletic themes",
+                "demands pattern recognition across evolving topics",
+                "tests advanced conversational memory and ordering"
+            ],
+            "source_chat_ids": [
+                [
+                    26,
+                    32,
+                    40
+                ],
+                [
+                    202,
+                    212,
+                    216
+                ],
+                [
+                    406,
+                    412,
+                    416,
+                    420
+                ],
+                [
+                    684,
+                    696,
+                    698
+                ],
+                [
+                    886,
+                    894,
+                    896,
+                    898
+                ],
+                [
+                    1090,
+                    1100,
+                    1106
+                ],
+                [
+                    1306,
+                    1312,
+                    1318
+                ],
+                [
+                    1514,
+                    1522,
+                    1524,
+                    1532
+                ],
+                [
+                    1774,
+                    1778,
+                    1780
+                ],
+                [
+                    2012,
+                    2014
+                ]
+            ],
+            "rubric": [
+                "Relationship origins and maintenance",
+                "Beach volleyball basics and training",
+                "First match and teamwork strategies",
+                "Balancing practice with relationship milestones",
+                "New volleyball goals after wins",
+                "Applying expo and sponsorship insights",
+                "National championship preparation",
+                "Social and coaching experiences",
+                "Tournament participation and relationship management",
+                "Planning celebrations with volleyball season"
+            ]
+        },
+        {
+            "question": "How did my focus on collaborating with Alexander across different activities and goals develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus on collaborating with Alexander developed in this sequence: 1) Establishing and deepening your friendship and monthly mental health workshops, 2) Exploring ways to balance relationship development with personal athletic goals, 3) Planning and preparing for sports psychology seminars and related audience engagement, 4) Organizing and co-leading sports psychology workshops with attention to managing nerves and success factors, 5) Reflecting on completed workshops and their impact on volleyball performance and team dynamics, 6) Preparing for and participating in a professional conference presentation, 7) Debriefing championship experiences and planning future workshops, 8) Collaborating on a joint research paper and balancing playing and coaching responsibilities, 9) Submitting research to an academic journal and applying findings to improve skills and coaching, 10) Integrating sports psychology principles from research into training to enhance specific volleyball techniques.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "30, 36, 42",
+                "220, 226, 228, 234",
+                "422, 428, 436, 438, 440, 444, 446, 448",
+                "702, 712, 716, 720",
+                "904, 906, 914, 918, 922",
+                "1108, 1114, 1124, 1126",
+                "1324, 1332, 1340",
+                "1544, 1546, 1548, 1558",
+                "1794, 1798, 1804, 1806, 1808",
+                "1816"
+            ],
+            "ordering_tested": [
+                "1st: Friendship and monthly workshops",
+                "2nd: Balancing relationship and personal goals",
+                "3rd: Seminar planning and audience engagement",
+                "4th: Workshop preparation and co-leading",
+                "5th: Workshop reflection and volleyball impact",
+                "6th: Conference presentation preparation",
+                "7th: Championship debrief and future planning",
+                "8th: Joint research and balancing roles",
+                "9th: Research submission and skill application",
+                "10th: Applying research principles to training"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related themes",
+                "spans numerous conversation sessions",
+                "involves nuanced development of collaboration topics",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse activities"
+            ],
+            "source_chat_ids": [
+                30,
+                36,
+                42,
+                220,
+                226,
+                228,
+                234,
+                422,
+                428,
+                436,
+                438,
+                440,
+                444,
+                446,
+                448,
+                702,
+                712,
+                716,
+                720,
+                904,
+                906,
+                914,
+                918,
+                922,
+                1108,
+                1114,
+                1124,
+                1126,
+                1324,
+                1332,
+                1340,
+                1544,
+                1546,
+                1548,
+                1558,
+                1794,
+                1798,
+                1804,
+                1806,
+                1808,
+                1816
+            ],
+            "rubric": [
+                "Friendship and monthly workshops",
+                "Balancing relationship and personal goals",
+                "Seminar planning and audience engagement",
+                "Workshop preparation and co-leading",
+                "Workshop reflection and volleyball impact",
+                "Conference presentation preparation",
+                "Championship debrief and future planning",
+                "Joint research and balancing roles",
+                "Research submission and skill application",
+                "Applying research principles to training"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I buy the new ball for beach practice and how much did I pay for it?",
+            "answer": "You purchased the new ball on April 16, 2024, for $120.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 262: USER mentions spending $120 on the Wilson AVP ball for beach practice; Turn 256: USER mentions switching to the Wilson AVP ball.",
+            "key_facts_tested": [
+                "purchase date",
+                "purchase price"
+            ],
+            "source_chat_ids": [
+                256,
+                262
+            ],
+            "rubric": [
+                "LLM response should state: April 16, 2024",
+                "LLM response should state: $120"
+            ]
+        },
+        {
+            "question": "How did you recommend structuring the session to balance skill development, game simulation, and recovery within the available time?",
+            "answer": "I recommended dividing the session into segments starting with a 15-minute warm-up near the court, followed by 45 minutes of skill-specific drills on the court (including form and technique, target practice, and variety of serves), then a 60-minute game simulation split between mini-games and rotational drills, next 45 minutes of technical drills focusing on passing, setting, spiking, and blocking, and finally a 15-minute cool down and stretch near the court to aid recovery.",
+            "difficulty": "hard",
+            "question_type": "Context-Based Recall",
+            "conversation_reference": "Multiple turns: assistant's detailed practice plan and schedule across chat_ids 261, 267, and 271",
+            "key_facts_tested": [
+                "session segmentation into warm-up, skill drills, game simulation, technical drills, cool down",
+                "time allocation for each segment",
+                "locations for activities (near court vs on court)",
+                "types of drills and activities within each segment"
+            ],
+            "extraction_challenge": "LLM must synthesize the detailed schedule and activity descriptions spread across multiple assistant responses to reconstruct the overall session structure and time management.",
+            "source_chat_ids": [
+                261,
+                267,
+                271
+            ],
+            "rubric": [
+                "LLM response should state: dividing the session into segments starting with a 15-minute warm-up near the court",
+                "LLM response should state: 5 minutes of skill-specific drills on the court (including form and technique, target practice, and variety of serves)",
+                "LLM response should state: a 60-minute game simulation split between mini-games and rotational drills",
+                "LLM response should state: 45 minutes of technical drills focusing on passing, setting, spiking, and blocking",
+                "LLM response should state: a 15-minute cool down and stretch near the court to aid recovery"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I know about eating well to stay healthy?",
+            "instruction_being_tested": "Always include specific nutritional details when I ask about health and wellness.",
+            "expected_compliance": "Response should include itemized nutritional information such as amounts of macronutrients, vitamins, minerals, and other relevant dietary components rather than general advice.",
+            "compliance_indicators": [
+                "specific nutrient amounts",
+                "breakdown of vitamins and minerals",
+                "details on protein, fat, carbohydrates",
+                "quantitative dietary information"
+            ],
+            "non_compliance_signs": [
+                "only general health tips",
+                "no mention of nutrient specifics",
+                "vague or broad statements about diet",
+                "lack of detailed nutritional data"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                398
+            ],
+            "rubric": [
+                "LLM response should contain: specific nutrient amounts",
+                "LLM response should contain: quantitative dietary information"
+            ]
+        },
+        {
+            "question": "How long does it usually take to get back to normal after a sprained ankle?",
+            "instruction_being_tested": "Always provide detailed injury recovery timelines when I ask about health setbacks",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [],
+            "non_compliance_signs": [],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                676
+            ],
+            "rubric": [
+                "LLM response should contain: detailed injury recovery timelines"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many balls do I practice serving per session to build my serving endurance?",
+            "answer": "180 balls per session",
+            "difficulty": "easy",
+            "update_type": "practice volume increase",
+            "tests_retention_of": "updated number of balls practiced per session",
+            "conversation_references": [
+                "I practice serving 150 balls per session, achieving 70% accuracy on April 18, 2024.",
+                "I now practice serving 180 balls per session, gradually increasing volume to enhance endurance."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 150 balls per session instead of the updated 180 balls",
+            "source_chat_ids": {
+                "original_info": [
+                    222,
+                    230,
+                    236
+                ],
+                "updated_info": [
+                    396
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 180 balls"
+            ]
+        },
+        {
+            "question": "What is my jump serve success rate currently?",
+            "answer": "68%",
+            "difficulty": "easy",
+            "update_type": "performance_metric_increase",
+            "tests_retention_of": "updated jump serve success rate",
+            "conversation_references": [
+                "My jump serve success rate reached 65% as of May 28, 2024, after 20 practice sessions.",
+                "My jump serve success rate recently increased to 68% following additional focused practice sessions."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 65% success rate instead of the updated 68%",
+            "source_chat_ids": {
+                "original_info": [
+                    424,
+                    430
+                ],
+                "updated_info": [
+                    670,
+                    672,
+                    674
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 68%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total money have I planned to spend monthly on physiotherapy, gear, and tournament fees combined?",
+            "answer": "You planned to spend $300 monthly in total, allocating $100 each to physiotherapy, gear, and tournament fees.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "1006",
+                "1012",
+                "1018"
+            ],
+            "reasoning_steps": [
+                "Identify the monthly amounts allocated to physiotherapy, gear, and tournament fees from the user messages.",
+                "Sum the three monthly allocations to find the total planned monthly spending.",
+                "Confirm the total monthly budget planned by the user for these combined expenses."
+            ],
+            "source_chat_ids": [
+                1006,
+                1012,
+                1018
+            ],
+            "rubric": [
+                "LLM response should state: $300 monthly in total",
+                "LLM response should state: allocated $100 to physiotherapy",
+                "LLM response should state: allocated $100 to gear",
+                "LLM response should state: allocated $100 to ournament fees"
+            ]
+        },
+        {
+            "question": "How did my evolving collaboration with Alexander influence my volleyball training focus and workshop planning after our championship debrief?",
+            "answer": "Your collaboration with Alexander progressively integrated mental toughness and technical skill development into your volleyball training, shifting focus from balancing indoor and beach volleyball to targeted jump serve improvements. Post-championship debrief insights directly shaped future workshops emphasizing mental preparation, stress management, and team dynamics, scheduled to support ongoing athlete development and address identified performance gaps.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Balancing relationship development with Alexander and personal volleyball goals",
+                "Choosing between indoor and beach volleyball with Alexander's collaboration",
+                "Debriefing the national indoor volleyball championship and planning future workshops",
+                "Role of debriefing session in planning future competitions and workshops",
+                "Planning and finalizing joint workshops with Alexander"
+            ],
+            "reasoning_steps": [
+                "Identify how initial collaboration with Alexander involved balancing relationship and volleyball skill development, including scheduling and communication.",
+                "Analyze the decision-making process regarding focusing on indoor versus beach volleyball, considering upcoming events and mental toughness training with Alexander.",
+                "Examine the championship debrief session outcomes, noting performance reflections and psychological challenges discussed with Alexander.",
+                "Trace how debrief insights informed the design and scheduling of future workshops targeting mental toughness, stress management, and team dynamics.",
+                "Synthesize how these evolving collaborative efforts influenced your volleyball training focus, shifting towards jump serve accuracy and mental preparation integrated into workshops."
+            ],
+            "source_chat_ids": [
+                226,
+                228,
+                1324,
+                1340,
+                914
+            ],
+            "rubric": [
+                "LLM response should state: integrated mental toughness and technical skill development into your volleyball training",
+                "LLM response should state: shifting focus from balancing indoor and beach volleyball to targeted jump serve improvements",
+                "LLM response should state: Post-championship debrief insights directly shaped future workshops emphasizing mental preparation, stress management, and team dynamics, scheduled to support ongoing athlete development"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you suggest a training routine that fits well into my daily schedule?",
+            "preference_being_tested": "I prefer training in the evening between 7-9 PM due to lower fatigue and better focus.",
+            "expected_compliance": "Response should recommend training times or routines that align with evening hours, specifically between 7-9 PM, reflecting the user's stated preference for that time frame.",
+            "compliance_indicators": [
+                "recommends training sessions during evening hours",
+                "acknowledges user's optimal focus and energy times without suggesting other time slots",
+                "tailors advice to fit training between 7-9 PM"
+            ],
+            "non_compliance_signs": [
+                "suggests training times outside the evening window",
+                "ignores the evening time frame entirely",
+                "recommends morning or afternoon sessions without justification"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                142,
+                148,
+                152
+            ],
+            "rubric": [
+                "LLM response should contain: recommends training sessions during evening hours",
+                "LLM response should contain: tailors advice to fit training between 7-9 PM"
+            ]
+        },
+        {
+            "question": "I'm planning to update my volleyball gear. How should I approach choosing what to invest in first?",
+            "preference_being_tested": "I prefer investing in quality footwear and recovery tools over apparel to enhance performance and longevity.",
+            "expected_compliance": "Response should prioritize recommendations for footwear and recovery tools before suggesting apparel, reflecting the user's investment focus.",
+            "compliance_indicators": [
+                "emphasizes footwear and recovery tools first",
+                "suggests allocating budget to shoes and recovery equipment",
+                "acknowledges importance of durability and performance in footwear and recovery",
+                "mentions apparel only after addressing footwear and recovery"
+            ],
+            "non_compliance_signs": [
+                "focuses primarily on apparel",
+                "ignores footwear and recovery tools",
+                "recommends apparel as the main investment",
+                "does not differentiate between gear types"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment priority",
+            "source_chat_ids": [
+                814,
+                818,
+                828
+            ],
+            "rubric": [
+                "LLM response should contain: emphasizes footwear and recovery tools first",
+                "LLM response should contain: acknowledges importance of durability and performance in footwear and recovery",
+                "LLM response should contain: suggests allocating budget to shoes and recovery equipment"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed summary that captures everything important about improving my vertical jump and overall athletic performance, including how training, nutrition, recovery, mindset, and technology all come together over time?",
+            "ideal_summary": "Improving vertical jump and athletic performance involves a multifaceted approach integrating targeted training, nutrition, recovery, mindset, and technology. Training combines strength exercises like squats and deadlifts with plyometric drills such as box jumps and depth jumps, structured progressively to build explosive power and stability. Core and flexibility work support balance and injury prevention. Nutrition focuses on adequate protein intake tailored to body weight and activity level, balanced with carbohydrates, fats, and micronutrients to fuel performance and recovery. Recovery strategies emphasize rest days, quality sleep, hydration, and managing muscle fatigue through stretching and foam rolling. Maintaining a growth mindset is crucial, involving goal setting, embracing challenges, seeking feedback, and celebrating progress to avoid complacency. Technology, including devices like VertiMax trainers and wearables such as Fitbit and Dartfish, provides data-driven insights for personalized training adjustments and progress tracking. Hydration strategies are personalized based on body weight, activity, and climate, ensuring optimal fluid and electrolyte balance. Together, these elements form a dynamic, evolving plan that adapts to progress and challenges, fostering continuous improvement in vertical jump height and overall athletic capability.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                49,
+                55,
+                61,
+                225,
+                233,
+                517,
+                531,
+                777,
+                783,
+                787,
+                789,
+                985,
+                997,
+                1183,
+                1191,
+                1199
+            ],
+            "rubric": [
+                "LLM response should contain: Training combines strength exercises like squats and deadlifts with plyometric drills such as box jumps and depth jumps, structured progressively to build explosive power and stability",
+                "LLM response should contain: Core and flexibility work support balance and injury prevention. Nutrition focuses on adequate protein intake tailored to body weight and activity level, balanced with carbohydrates, fats, and micronutrients",
+                "LLM response should contain: Recovery strategies emphasize rest days, quality sleep, hydration, and managing muscle fatigue through stretching and foam rolling",
+                "LLM response should contain: Maintaining a growth mindset is crucial, involving goal setting, embracing challenges, seeking feedback, and celebrating progress to avoid complacency",
+                "LLM response should contain: Technology, including devices like VertiMax trainers and wearables such as Fitbit and Dartfish, provides data-driven insights for personalized training adjustments",
+                "LLM response should contain: Hydration strategies are personalized based on body weight, activity, and climate, ensuring optimal fluid"
+            ]
+        },
+        {
+            "question": "Can you give me a detailed summary of how everything unfolded, including all the key decisions, challenges, and interactions that shaped the overall situation?",
+            "ideal_summary": "The situation involved a complex interplay of personal goals, relationship dynamics, and logistical considerations centered around volleyball training, coaching responsibilities, and board commitments. Initially, the user grappled with choosing between recreational and competitive volleyball leagues, weighing factors such as stress, skill development, and enjoyment. This decision was influenced by discussions with Karen and Bonnie, highlighting the importance of communication, compromise, and aligning choices with evolving personal and athletic goals. Concurrently, the user negotiated adjustments in training frequency and coaching duties, balancing quality personal training with new coaching responsibilities to prevent burnout and maintain performance. Injury prevention and recovery strategies were integrated into the training plan, emphasizing structured schedules, active recovery, and monitoring fatigue. The user also navigated complex negotiations regarding board membership and travel commitments with Bonnie, employing clear communication, delegation of tasks, and flexible scheduling to manage time effectively while preserving relationships. Throughout, the user applied advanced communication techniques to resolve conflicts and maintain positive interactions with coaches, teammates, and board members. The culmination was a multifaceted, adaptive approach that balanced athletic development, coaching, personal well-being, and external commitments through ongoing reflection, strategic compromises, and collaborative planning.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                176,
+                177,
+                179,
+                193,
+                357,
+                375,
+                377,
+                593,
+                621,
+                629,
+                833,
+                1245,
+                1261,
+                1463,
+                1473,
+                1713,
+                1721,
+                1955,
+                1959,
+                1961,
+                1975,
+                1977,
+                1979
+            ],
+            "rubric": [
+                "LLM response should contain: grappled with choosing between recreational and competitive volleyball leagues, weighing factors such as stress, skill development, and enjoyment",
+                "LLM response should contain: This decision was influenced by discussions with Karen and Bonnie, highlighting the importance of communication, compromise, and aligning choices with evolving personal and athletic goals",
+                "LLM response should contain: negotiated adjustments in training frequency and coaching duties, balancing quality personal training with new coaching responsibilities to prevent burnout",
+                "LLM response should contain: Injury prevention and recovery strategies were integrated into the training plan, emphasizing structured schedules, active recovery, and monitoring fatigue",
+                "LLM response should contain: navigated complex negotiations regarding board membership and travel commitments with Bonnie, employing clear communication, delegation of tasks, and flexible scheduling to manage time effectively",
+                "LLM response should contain: applied advanced communication techniques to resolve conflicts and maintain positive interactions with coaches, teammates, and board members"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many hours longer is my court rental on May 4 compared to the one I booked for May 5?",
+            "answer": "The court rental on May 4 is 1 hour longer than the one on May 5, since the May 4 rental is 3 hours and the May 5 rental is 2 hours.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 4: 3-hour court rental",
+                "May 5: 2-hour court rental"
+            ],
+            "conversation_references": [
+                "Session 4: May 4 rental planning",
+                "Sessions 1, 2, 3: May 5 rental discussions"
+            ],
+            "calculation_required": "3 hours - 2 hours = 1 hour",
+            "source_chat_ids": {
+                "first_event": [
+                    260,
+                    266,
+                    270
+                ],
+                "second_event": [
+                    86,
+                    90,
+                    94
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 1 hour",
+                "LLM response should state: May 4 rental is 3 hours",
+                "LLM response should state: May 5 rental is 2 hours"
+            ]
+        },
+        {
+            "question": "How many months did it take me to increase my vertical jump from 18 inches, measured in early March, to reaching 22 inches in early October?",
+            "answer": "It took about 7 months to increase my vertical jump from 18 inches measured on March 10 to reaching 22 inches on October 2.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 10: 18-inch vertical jump measured",
+                "October 2: 22-inch vertical jump achieved"
+            ],
+            "conversation_references": [
+                "Session 60: initial measurement",
+                "Session 1112: goal achieved"
+            ],
+            "calculation_required": "October 2 - March 10 \u2248 7 months",
+            "source_chat_ids": {
+                "first_event": [
+                    60
+                ],
+                "second_event": [
+                    1112
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 months",
+                "LLM response should state: from March 10 till October 2"
+            ]
+        }
+    ]
+}

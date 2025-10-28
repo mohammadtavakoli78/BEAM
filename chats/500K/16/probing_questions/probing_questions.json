@@ -1,0 +1,578 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the contact information or office location for the lawyer handling the uncle\u2019s will?",
+            "ideal_response": "Based on the provided chat, there is no information related to the lawyer\u2019s contact information or office location.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The plan references the lawyer and legal processes but does not include any contact details.",
+            "plan_reference": "Batches 1, 2, 4, and 9 mention the lawyer but no contact info is provided.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the lawyer's contact information or office location."
+            ]
+        },
+        {
+            "question": "What was the content or theme of the poem composed about loss and hope shared with Cynthia in July?",
+            "ideal_response": "Based on the provided chat, there is no information related to the content or theme of the poem shared with Cynthia.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan states the poem was composed and shared but does not describe its content.",
+            "plan_reference": "Batch 5, Bullet 26 mentions the poem but no further details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the content or theme of the poem shared with Cynthia."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended my uncle\u2019s funeral or any memorial service?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended your uncle\u2019s funeral or any memorial service, but you also mentioned attending your uncle\u2019s funeral at St. Mary\u2019s Church. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at uncle\u2019s funeral or memorial services",
+            "conversation_references": [
+                "Session 56: Attended uncle\u2019s funeral",
+                "Session 102: Never attended any funeral or memorial service"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    56
+                ],
+                "second_statement": [
+                    102
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you also mentioned that you have never attended any funeral or memorial service",
+                "LLM response should mention: you also mentioned attending your uncle's funeral at St. Mary's Church",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I been attending any yoga or self-care classes regularly?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you added a weekly yoga class to your routine, but you also mentioned never attending any yoga or self-care classes. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance of yoga or self-care classes",
+            "conversation_references": [
+                "Session 436: Added weekly yoga class",
+                "Session 448: Never attended any yoga or self-care classes"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    436
+                ],
+                "second_statement": [
+                    448
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you also mentioned that you have never attended any yoga or self-care classes",
+                "LLM response should mention: you also mentioned adding a weekly yoga class to your routine",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my conversations about the support and activities related to my healing journey progress in order (mention 10 items)?",
+            "answer": "Your mentions about support and related activities unfolded in this sequence: 1) You first shared your struggle coping with loss and ways to honor it, 2) Then you considered attending a suggested grief workshop and later decided to go, 3) Next, you discussed planning a remembrance event with music suggestions and offers of help, 4) After the event, you talked about connecting with others through your DJ page and reflected on the role of supportive friends, 5) You then mentioned accepting an invitation to a concert to honor a memory, 6) Following that, you explored joining a healing-focused book club and preparing for it, 7) Later, you sought advice on preparing for a job interview with help from a friend, 8) You reflected on nurturing your friendship and support network, 9) You expressed gratitude for transportation assistance during this time, and 10) Finally, you contemplated an art exhibit collaboration related to your healing journey.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 12",
+                "chat_id: 130, 132, 142, 144",
+                "chat_id: 242, 248",
+                "chat_id: 360, 362, 366",
+                "chat_id: 460",
+                "chat_id: 576, 578, 588",
+                "chat_id: 674",
+                "chat_id: 778, 782",
+                "chat_id: 882",
+                "chat_id: 964"
+            ],
+            "ordering_tested": [
+                "1st: Sharing struggle and honoring loss",
+                "2nd: Considering and deciding on workshop attendance",
+                "3rd: Planning remembrance event and music support",
+                "4th: Connecting through DJ page and reflecting on support",
+                "5th: Accepting concert invitation",
+                "6th: Exploring and preparing for healing book club",
+                "7th: Preparing for job interview with friend's help",
+                "8th: Reflecting on friendship and support nurturing",
+                "9th: Expressing gratitude for transportation help",
+                "10th: Contemplating art exhibit collaboration"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "involves understanding progression of healing-related topics",
+                "spans many conversation sessions",
+                "requires sophisticated sequence reconstruction",
+                "tests ability to integrate support and activity themes"
+            ],
+            "source_chat_ids": [
+                12,
+                130,
+                132,
+                142,
+                144,
+                242,
+                248,
+                360,
+                362,
+                366,
+                460,
+                576,
+                578,
+                588,
+                674,
+                778,
+                782,
+                882,
+                964
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Sharing struggle and honoring loss",
+                "LLM response should mention: 2) Considering and deciding on workshop attendance",
+                "LLM response should mention: 3) Planning remembrance event and music support",
+                "LLM response should mention: 4) Connecting through DJ page and reflecting on support",
+                "LLM response should mention: 5) Accepting concert invitation",
+                "LLM response should mention: 6) Exploring and preparing for healing book club",
+                "LLM response should mention: 7) Preparing for job interview with friend's help",
+                "LLM response should mention: 8) Reflecting on friendship and support nurturing",
+                "LLM response should mention: 9) Expressing gratitude for transportation help",
+                "LLM response should mention: 10) Contemplating art exhibit collaboration"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different ways I\u2019ve been coping and planning related to my uncle and community involvement throughout our conversations, in order (mention 5 items)?",
+            "answer": "You mentioned these topics in this order: 1) First, you talked about your uncle's funeral and processing that grief, 2) Then you discussed planning a remembrance gathering on your uncle's birthday and deciding on the guest list, 3) Next, you mentioned volunteering at a library storytelling event and considering community involvement, 4) After that, you brought up planning a family gathering for an anniversary ritual, 5) Finally, you talked about volunteering at the food bank and using that experience to cope with grief.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 56: Funeral and grief processing",
+                "Sessions 166, 262, 264, 266: Remembrance gathering planning and guest list",
+                "Session 384: Volunteering at library storytelling event",
+                "Session 478: Family gathering for anniversary ritual",
+                "Sessions 798, 900: Volunteering at food bank and coping"
+            ],
+            "ordering_tested": [
+                "1st: Funeral and grief processing",
+                "2nd: Remembrance gathering planning and guest list",
+                "3rd: Volunteering at library storytelling event",
+                "4th: Family gathering for anniversary ritual",
+                "5th: Volunteering at food bank and coping"
+            ],
+            "source_chat_ids": [
+                56,
+                [
+                    166,
+                    262,
+                    264,
+                    266
+                ],
+                384,
+                478,
+                [
+                    798,
+                    900
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Funeral and grief processing",
+                "LLM response should mention: 2) Remembrance gathering planning and guest list",
+                "LLM response should mention: 3) Volunteering at library storytelling event",
+                "LLM response should mention: 4) Family gathering for anniversary ritual",
+                "LLM response should mention: 5) Volunteering at food bank and coping"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How long had I been with Cynthia before she passed?",
+            "answer": "You had been with Cynthia for 2 years.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions Cynthia as their girlfriend of 2 years.",
+            "key_facts_tested": [
+                "duration of relationship"
+            ],
+            "source_chat_ids": [
+                12
+            ],
+            "rubric": [
+                "LLM response should mention: 2 years"
+            ]
+        },
+        {
+            "question": "How many relatives did I say were sharing the funeral expenses?",
+            "answer": "You said the funeral expenses were shared among 5 relatives.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 1: User's initial mention of funeral expenses and number of relatives",
+            "key_facts_tested": [
+                "number of relatives: 5",
+                "context: sharing funeral expenses"
+            ],
+            "source_chat_ids": [
+                66
+            ],
+            "rubric": [
+                "LLM response should mention: 5 relatives"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What activities are usually included in support groups or therapy sessions?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about therapy or support group activities.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                106
+            ],
+            "rubric": [
+                "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate"
+            ]
+        },
+        {
+            "question": "What kind of activities would you suggest for staying healthy?",
+            "instruction_being_tested": "Always specify frequency when I ask about exercise or wellness activities.",
+            "expected_compliance": "Response should include how often each suggested activity should be done, not just the activity names.",
+            "compliance_indicators": [
+                "mentions how many times per week or day",
+                "includes frequency details for each activity",
+                "provides specific repetition or session counts"
+            ],
+            "non_compliance_signs": [
+                "only lists activities without timing",
+                "no mention of how often to do them",
+                "general suggestions without frequency"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                446
+            ],
+            "rubric": [
+                "Response should include how often each suggested activity should be done, not just the activity names."
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many hours of sleep have I been averaging each night recently?",
+            "answer": "Nearly 6 hours per night",
+            "difficulty": "easy",
+            "update_type": "sleep_duration_increase",
+            "tests_retention_of": "updated average nightly sleep duration",
+            "conversation_references": [
+                "Health & Wellness Labels: Sleep Patterns: Averaging 5.5 hours nightly, aiming to increase to 7 hours by April 15.",
+                "Information Update: I have now increased my nightly sleep average to nearly 6 hours, feeling more rested as I approach mid-April."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 5.5 hours average instead of the updated nearly 6 hours",
+            "source_chat_ids": {
+                "original_info": [
+                    42
+                ],
+                "updated_info": [
+                    108
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: nearly 6 hours per night"
+            ]
+        },
+        {
+            "question": "How many people are confirmed to attend my event?",
+            "answer": "28 confirmed attendees, including a few close friends",
+            "difficulty": "easy",
+            "update_type": "guest_list_size",
+            "tests_retention_of": "updated number of confirmed guests",
+            "conversation_references": [
+                "Cultural & Social Labels: Anniversary Ritual: Finalized guest list of 25 for May 20 event, including family, friends, and neighbors.",
+                "Information Update: The guest list has grown slightly to 28 confirmed attendees as of May 4, including a few close friends."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 25 guests instead of the updated 28 attendees",
+            "source_chat_ids": {
+                "original_info": [
+                    262
+                ],
+                "updated_info": [
+                    338
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 28 confirmed attendees"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much money have I allocated in total for catering, pavilion deposit, and the portrait across my event plans?",
+            "answer": "$400",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "I'm planning a remembrance event with $150 for catering and $50 pavilion deposit",
+                "I'm worried about costs with $150 catering and $50 pavilion deposit",
+                "I've allocated $400 total with $150 catering, $200 portrait, and $50 pavilion deposit"
+            ],
+            "reasoning_steps": [
+                "Identify the amount allocated for catering from the first and second sessions ($150)",
+                "Identify the amount allocated for the pavilion deposit from the first and second sessions ($50)",
+                "Identify the amount allocated for the portrait from the third session ($200)",
+                "Sum these amounts: $150 + $50 + $200 = $400"
+            ],
+            "source_chat_ids": [
+                178,
+                184,
+                268
+            ],
+            "rubric": [
+                "LLM response should mention: $400"
+            ]
+        },
+        {
+            "question": "How have I balanced my therapy, support group, personal activities, and mindfulness practice across my sessions to support my grief processing?",
+            "answer": "You have maintained weekly therapy sessions on Fridays, weekly support group chats on Tuesdays, daily personal activities like walks and hobbies, and daily mindfulness exercises, integrating these consistently to support your healing.",
+            "difficulty": "medium",
+            "reasoning_type": "resource_distribution",
+            "sessions_required": 4,
+            "conversation_references": [
+                "90-91",
+                "126-129",
+                "244-245",
+                "120-124"
+            ],
+            "reasoning_steps": [
+                "Identify the frequency and timing of therapy sessions mentioned in early and mid conversations.",
+                "Note the schedule and frequency of support group participation and personal time activities.",
+                "Incorporate the daily mindfulness practice introduced later and its role in coping with grief stages.",
+                "Synthesize all activities to assess how the user has distributed their time and efforts across therapy, support, personal care, and mindfulness."
+            ],
+            "source_chat_ids": [
+                90,
+                91,
+                120,
+                121,
+                122,
+                123,
+                124,
+                126,
+                127,
+                128,
+                129,
+                244,
+                245
+            ],
+            "rubric": [
+                "LLM response should mention: weekly therapy sessions on Fridays",
+                "LLM response should mention: weekly support group chats on Tuesdays",
+                "LLM response should mention: daily personal activities like walks and hobbies",
+                "LLM response should mention: daily mindfulness exercises"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm thinking about joining a new group activity. How should I go about finding one that fits into my routine?",
+            "preference_being_tested": "I prefer structured social activities, so I joined a book club with fixed meeting times",
+            "expected_compliance": "Response should suggest options that involve regular, scheduled meetings or activities rather than informal or highly flexible arrangements, reflecting the user's preference for structure",
+            "compliance_indicators": [
+                "recommends groups with set meeting times",
+                "mentions activities with consistent schedules",
+                "avoids suggesting purely casual or drop-in style groups"
+            ],
+            "non_compliance_signs": [
+                "only suggests informal or flexible timing groups",
+                "ignores the need for fixed schedules",
+                "recommends activities without regular meeting times"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity structure",
+            "source_chat_ids": [
+                636
+            ],
+            "rubric": [
+                "Response should suggest options that involve regular, scheduled meetings or activities rather than informal or highly flexible arrangements, reflecting the user's preference for structure"
+            ]
+        },
+        {
+            "question": "With my interview coming up on September 20, how should I organize my remaining preparation time?",
+            "preference_being_tested": "I prefer thorough preparation, so I scheduled multiple mock interviews before September 20.",
+            "expected_compliance": "Response should acknowledge the user's existing preparation schedule and suggest advice that fits within or complements multiple mock interviews rather than ignoring or contradicting the user's preparation approach.",
+            "compliance_indicators": [
+                "references or builds on the mock interview schedule",
+                "suggests a structured plan that aligns with multiple practice sessions",
+                "does not recommend skipping or minimizing practice opportunities"
+            ],
+            "non_compliance_signs": [
+                "ignores the mock interview schedule",
+                "suggests last-minute cramming or minimal practice",
+                "recommends a single preparation session only"
+            ],
+            "difficulty": "medium",
+            "preference_type": "preparation style",
+            "source_chat_ids": [
+                726
+            ],
+            "rubric": [
+                "Response should acknowledge the user's existing preparation schedule and suggest advice that fits within or complements multiple mock interviews rather than ignoring or contradicting the user's preparation approach."
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how Andrew has supported me recently and the ways we've worked together?",
+            "ideal_summary": "Andrew has been a supportive friend throughout your healing journey, helping with practical tasks like arranging transportation and assisting with music for memorial events. He has also collaborated with you on creative projects such as DJing and planning joint activities, providing emotional support and encouragement. Your friendship includes regular communication, shared experiences, and mutual support, which have been important for your continued growth and coping.",
+            "difficulty": "easy",
+            "summarization_type": "simple_relationship_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "basic interaction sequence",
+                "simple factual combination",
+                "straightforward narrative"
+            ],
+            "synthesis_required": "Combining basic information into simple coherent summary",
+            "source_chat_ids": [
+                243,
+                249,
+                360,
+                367,
+                779,
+                783,
+                882
+            ],
+            "rubric": [
+                "LLM response should mention: Andrew has been a supportive friend throughout your healing journey",
+                "LLM response should mention: helping with practical tasks like arranging transportation and assisting with music for memorial events",
+                "LLM response should mention: collaborated with you on creative projects such as DJing and planning joint activities",
+                "LLM response should mention: providing emotional support and encouragement",
+                "LLM response should mention: Your friendship includes regular communication, shared experiences, and mutual support"
+            ]
+        },
+        {
+            "question": "Can you summarize how my journey through grief and healing has progressed over time, including the support and strategies I've used along the way?",
+            "ideal_summary": "Your journey through grief and healing has unfolded progressively, beginning with your initial steps of seeking therapy and identifying key qualities in a therapist, such as with Dr. Elena Mbeki. Early on, you engaged in meaningful family interactions, like sharing stories during gatherings, which helped preserve memories of your uncle. As you moved into the bargaining stage, you incorporated mindfulness exercises to manage 'what if' thoughts and emotional turmoil. Over time, you transitioned into the acceptance stage, where you adopted strategies to maintain emotional balance, including continued mindfulness, social support, and planning for significant dates. Special sessions with Dr. Mbeki prepared you for challenging moments like anniversaries, while meaning-making exercises helped deepen your emotional processing. You also integrated stress management techniques to handle upcoming life events, such as job interviews, and utilized mentorship and relaxation practices to support your overall well-being. Throughout this journey, you consistently applied therapeutic guidance, self-reflection, and social connections to foster healing and emotional wellness.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                91,
+                141,
+                245,
+                365,
+                453,
+                581,
+                667,
+                763,
+                881,
+                973
+            ],
+            "key_elements_tested": [
+                "grief progression",
+                "therapeutic support",
+                "coping strategies",
+                "emotional development",
+                "integration of practices"
+            ],
+            "synthesis_required": "Combining multiple stages and strategies of grief and healing into a coherent narrative showing progression and interconnections",
+            "source_chat_ids": [
+                91,
+                141,
+                245,
+                365,
+                453,
+                581,
+                667,
+                763,
+                881,
+                973
+            ],
+            "rubric": [
+                "LLM response should mention: initial steps of seeking therapy and identifying key qualities in a therapist, such as with Dr. Elena Mbeki",
+                "LLM response should mention: Early on, you engaged in meaningful family interactions, like sharing stories during gatherings, which helped preserve memories of your uncle",
+                "LLM response should mention: incorporated mindfulness exercises to manage 'what if' thoughts and emotional turmoil",
+                "LLM response should mention: transitioned into the acceptance stage, where you adopted strategies to maintain emotional balance, including continued mindfulness, social support, and planning for significant dates"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between my uncle's funeral and the start of the will processing?",
+            "answer": "7 days passed between your uncle's funeral on March 5 and the start of the will processing on March 12.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 5: uncle's funeral",
+                "March 12: will processing started"
+            ],
+            "conversation_references": [
+                "Session 56: funeral details",
+                "Session 74: will processing timeline"
+            ],
+            "calculation_required": "March 12 - March 5 = 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    56
+                ],
+                "second_event": [
+                    74
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 7 days",
+                "LLM response should state: from March 5 till March 12"
+            ]
+        },
+        {
+            "question": "How many days passed between when I attended the grief workshop Andrew suggested and when I started practicing mindfulness exercises with Dr. Mbeki?",
+            "answer": "21 days passed between attending the grief workshop on April 15 and starting mindfulness exercises after the session with Dr. Mbeki on April 26.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 15: grief workshop attended",
+                "April 26: mindfulness exercises started"
+            ],
+            "conversation_references": [
+                "Session 1: Workshop attendance decision and confirmation",
+                "Session 2: Mindfulness practice after Dr. Mbeki session"
+            ],
+            "calculation_required": "April 26 - April 15 = 11 days",
+            "source_chat_ids": {
+                "first_event": [
+                    130,
+                    132
+                ],
+                "second_event": [
+                    244
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 11 days"
+            ]
+        }
+    ]
+}

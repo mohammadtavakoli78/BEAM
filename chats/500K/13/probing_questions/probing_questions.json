@@ -1,0 +1,584 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Ms. Harper\u2019s qualifications and teaching style?",
+            "ideal_response": "Based on the provided chat, there is no information related to Ms. Harper\u2019s qualifications or teaching style.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Ms. Harper is mentioned as Scott\u2019s tutor but no details about her qualifications or teaching style are provided.",
+            "plan_reference": "Batch 2, Bullet 2 and 29 mention Ms. Harper but no qualifications or teaching style details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Ms. Harper's qualifications or teaching style."
+            ]
+        },
+        {
+            "question": "Could you provide the contact information or background of the family therapist mentioned in April and May?",
+            "ideal_response": "Based on the provided chat, there is no information related to the contact information or background of the family therapist.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Family therapist is mentioned but no contact or background details are given.",
+            "plan_reference": "Batch 2, Bullet 13 and Batch 3, Bullet 7 mention family therapist but no details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the contact information or background of the family therapist."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended family dinners at The Dockyard Grill?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any family dinners at The Dockyard Grill, but you also mentioned that your family emphasizes dinners there regularly. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at family dinners at The Dockyard Grill",
+            "conversation_references": [
+                "chat_id: 142",
+                "chat_id: 30"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    142
+                ],
+                "second_statement": [
+                    30
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any family dinners at The Dockyard Grill",
+                "LLM response should mention: you also mentioned that your family emphasizes dinners there regularly",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Has Scott ever fixed his bike tire or done any bike maintenance on his own?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said Scott has never fixed his bike tire or done any bike maintenance, but you also mentioned that he fixed his bike tire after watching a tutorial. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Scott's experience with bike maintenance",
+            "conversation_references": [
+                "Session 398: Never done bike maintenance",
+                "Sessions 324, 326, 328: Fixed bike tire and gained confidence"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    398
+                ],
+                "second_statement": [
+                    324,
+                    326,
+                    328
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said Scott has never fixed his bike tire or done any bike maintenance",
+                "LLM response should mention: you also mentioned that he fixed his bike tire after watching a tutorial",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of Scott's activities and health routines throughout our conversations in orde (mention 5 items)?",
+            "answer": "You mentioned Scott's topics in this order: 1) First, conflicts over shared computer time, 2) Then his soccer practice schedule and support, 3) Next, his nutritional goals and tracking, 4) Then his increased soccer practice and stamina concerns, 5) Finally, his new exercise routines and health supplements.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 46: Conflicts over shared computer time",
+                "Sessions 164 and 170: Soccer practice schedule and support",
+                "Session 368: Nutritional goals and tracking",
+                "Session 476: Increased soccer practice and stamina concerns",
+                "Sessions 578 and 682: New exercise routines and health supplements"
+            ],
+            "ordering_tested": [
+                "1st: Conflicts over shared computer time",
+                "2nd: Soccer practice schedule and support",
+                "3rd: Nutritional goals and tracking",
+                "4th: Increased soccer practice and stamina concerns",
+                "5th: New exercise routines and health supplements"
+            ],
+            "source_chat_ids": [
+                46,
+                [
+                    164,
+                    170
+                ],
+                368,
+                476,
+                [
+                    578,
+                    682
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Conflicts over shared computer time",
+                "LLM response should mention: 2) Soccer practice schedule and support",
+                "LLM response should mention: 3) Nutritional goals and tracking",
+                "LLM response should mention: 4) Increased soccer practice and stamina concerns",
+                "LLM response should mention: 5) New exercise routines and health supplements"
+            ]
+        },
+        {
+            "question": "How did my focus on managing screen time and related strategies develop throughout our conversations in order (mention 9 items)?",
+            "answer": "Your discussions about managing screen time and related strategies progressed as follows: 1) Setting initial screen time limits and monitoring approaches, 2) Balancing screen time with outdoor and other activities, 3) Enhancing digital safety measures and updating monitoring tools, 4) Establishing tech-free zones in the home, 5) Adjusting screen time limits multiple times with varying durations, 6) Introducing educational apps and ensuring effective use, 7) Refining limits during specific periods like exam preparation, 8) Addressing the impact of limits on social life and maintaining flexibility, 9) Emphasizing communication, involvement, and gradual adjustments to help Scott understand and accept the rules.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 9,
+            "conversation_references": [
+                "102, 104",
+                "112, 198, 332",
+                "196, 198",
+                "330, 332",
+                "448, 652, 758, 904",
+                "544",
+                "1046",
+                "1168, 1170, 1172",
+                "906, 908, 910, 912, 914"
+            ],
+            "ordering_tested": [
+                "1st: Initial limits and monitoring",
+                "2nd: Balancing screen time with other activities",
+                "3rd: Digital safety and monitoring updates",
+                "4th: Tech-free zones establishment",
+                "5th: Adjusting screen time limits",
+                "6th: Educational app introduction",
+                "7th: Limits during exam prep",
+                "8th: Social life and flexibility considerations",
+                "9th: Communication and involvement strategies"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple related aspects",
+                "spans many conversation sessions",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across evolving topics"
+            ],
+            "source_chat_ids": [
+                102,
+                104,
+                112,
+                196,
+                198,
+                330,
+                332,
+                448,
+                544,
+                652,
+                758,
+                904,
+                1046,
+                1168,
+                1170,
+                1172,
+                906,
+                908,
+                910,
+                912,
+                914
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Initial limits and monitoring",
+                "LLM response should mention: 2) Balancing screen time with other activities",
+                "LLM response should mention: 3) Digital safety and monitoring updates",
+                "LLM response should mention: 4) Tech-free zones establishment",
+                "LLM response should mention: 5) Adjusting screen time limits",
+                "LLM response should mention: 6) Educational app introduction",
+                "LLM response should mention: 7) Limits during exam prep",
+                "LLM response should mention: 8) Social life and flexibility considerations",
+                "LLM response should mention: 9) Communication and involvement strategies"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What city did I say I work in and what is my job title?",
+            "answer": "You said you work in Faulknerfort as an Architectural Technologist.",
+            "difficulty": "medium",
+            "question_type": "location_and_job_title_recall",
+            "conversation_reference": "Turn 0: Personal introduction by user",
+            "key_facts_tested": [
+                "location: Faulknerfort",
+                "job title: Architectural Technologist"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should mention: Faulknerfort",
+                "LLM response should mention: Architectural Technologist"
+            ]
+        },
+        {
+            "question": "How often did I say Scott is getting tutoring sessions each week?",
+            "answer": "Scott is getting tutoring twice weekly.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: How can I support Scott's goal to improve his math scores to 80% by June 1, 2024, especially since he's already getting tutoring twice weekly?",
+            "key_facts_tested": [
+                "tutoring frequency"
+            ],
+            "source_chat_ids": [
+                58
+            ],
+            "rubric": [
+                "LLM response should mention: twice weekly"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How has Scott been doing in school so far?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about Scott\u2019s academic progress.",
+            "expected_compliance": "Response should include a chronological account of Scott's academic milestones and developments over time.",
+            "compliance_indicators": [
+                "dates or periods mentioned",
+                "sequence of academic events",
+                "progress described over time",
+                "timeline of achievements or challenges"
+            ],
+            "non_compliance_signs": [
+                "general statements without time references",
+                "only current status given",
+                "no mention of when events occurred",
+                "vague or summary information without dates"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                140
+            ],
+            "rubric": [
+                "LLM response should include: dates or periods mentioned",
+                "LLM response should include: sequence of academic events",
+                "LLM response should include: progress described over time",
+                "LLM response should include: timeline of achievements or challenges"
+            ]
+        },
+        {
+            "question": "When is my next appointment with the family therapist?",
+            "instruction_being_tested": "Always specify exact dates when I ask about health-related appointments.",
+            "expected_compliance": "Response should include the exact date of the appointment rather than a vague or general time frame.",
+            "compliance_indicators": [
+                "specific date given",
+                "clear appointment timing",
+                "exact day mentioned"
+            ],
+            "non_compliance_signs": [
+                "no date provided",
+                "only a general time period mentioned",
+                "vague or ambiguous timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                982,
+                984
+            ],
+            "rubric": [
+                "LLM response should include: specific date given"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What score did Scott achieve on his most recent math test?",
+            "answer": "72%, showing steady progress with tutoring",
+            "difficulty": "easy",
+            "update_type": "score_improvement",
+            "tests_retention_of": "updated math test score",
+            "conversation_references": [
+                "Scott is in 7th grade at Faulknerfort Middle School, with a recent math test score of 68%.",
+                "Scott\u2019s recent math test score improved to 72%, showing steady progress with tutoring."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 68% score instead of the updated 72%",
+            "source_chat_ids": {
+                "original_info": [
+                    50
+                ],
+                "updated_info": [
+                    136
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 72%"
+            ]
+        },
+        {
+            "question": "What is Scott's homework completion rate?",
+            "answer": "92%, reflecting consistent effort",
+            "difficulty": "easy",
+            "update_type": "percentage_increase",
+            "tests_retention_of": "updated homework completion rate",
+            "conversation_references": [
+                "Scott\u2019s homework completion rate rose to 90% in June.",
+                "Scott\u2019s homework completion rate reached 92% by mid-June, reflecting consistent effort."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 90% completion rate instead of the updated 92%",
+            "source_chat_ids": {
+                "original_info": [
+                    484
+                ],
+                "updated_info": [
+                    488
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 92%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much did Scott improve his punctuality percentage from April to September?",
+            "answer": "Scott improved his punctuality by 10 percentage points, from 85% in April to 95% in September.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Building on punctuality progress in April",
+                "Punctuality improvement to 95% in September"
+            ],
+            "reasoning_steps": [
+                "Identify Scott's punctuality percentage in April (85%) from the first session.",
+                "Identify Scott's punctuality percentage in September (95%) from the second session.",
+                "Calculate the difference between the two percentages (95% - 85%)."
+            ],
+            "source_chat_ids": [
+                218,
+                798
+            ],
+            "rubric": [
+                "LLM response should mention: 10 percentage points"
+            ]
+        },
+        {
+            "question": "How did I change Scott's screen time limits from weekdays to weekends across the sessions?",
+            "answer": "You initially set Scott's screen time to 1.5 hours on weekdays and 3 hours on weekends, then adjusted it to 1 hour on weekdays and 2.5 hours on weekends, and later reduced it to 45 minutes on weekdays and 2 hours on weekends.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 3,
+            "conversation_references": [
+                "448",
+                "758",
+                "904"
+            ],
+            "reasoning_steps": [
+                "Identify the initial screen time limits mentioned by the user.",
+                "Note the subsequent adjustments to the limits on weekdays and weekends.",
+                "Compare the changes in limits across the sessions to summarize the progression."
+            ],
+            "source_chat_ids": [
+                448,
+                758,
+                904
+            ],
+            "rubric": [
+                "LLM response should mention: initial limits of 1.5 hours on weekdays and 3 hours on weekends",
+                "LLM response should mention: adjustment to 1 hour on weekdays and 2.5 hours on weekends",
+                "LLM response should mention: final reduction to 45 minutes on weekdays and 2 hours on weekends"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "How should I approach talking to Scott about his screen time and diet changes to keep him engaged and motivated?",
+            "preference_being_tested": "I prefer blending emotional support with clear boundaries to foster Scott\u2019s growth.",
+            "expected_compliance": "Response should include a balance of acknowledging Scott's feelings and setting clear expectations or limits, reflecting both support and structure.",
+            "compliance_indicators": [
+                "suggests listening to Scott's thoughts and feelings",
+                "includes setting specific goals or boundaries",
+                "recommends celebrating progress while maintaining rules",
+                "mentions regular check-ins or adjustments"
+            ],
+            "non_compliance_signs": [
+                "focuses only on rules or limits without emotional consideration",
+                "only emphasizes emotional support without boundaries",
+                "ignores Scott's perspective or feelings",
+                "does not suggest any form of structure or follow-up"
+            ],
+            "difficulty": "medium",
+            "preference_type": "interaction style",
+            "source_chat_ids": [
+                358,
+                360,
+                362
+            ],
+            "rubric": [
+                "LLM response should include: suggests listening to Scott's thoughts and feelings",
+                "LLM response should include: includes setting specific goals or boundaries",
+                "LLM response should include: recommends celebrating progress while maintaining rules",
+                "LLM response should include: mentions regular check-ins or adjustments"
+            ]
+        },
+        {
+            "question": "Scott has been keeping up with his chores and new activities lately. How can I encourage him to stay consistent with his responsibilities and learning?",
+            "preference_being_tested": "I prefer using positive reinforcement to motivate Scott\u2019s responsibilities and learning.",
+            "expected_compliance": "Response should include suggestions that align with positive reinforcement techniques rather than punitive or neutral approaches, demonstrating awareness of the user's motivation style.",
+            "compliance_indicators": [
+                "recommends praise, rewards, or encouragement",
+                "avoids punishment or negative feedback",
+                "focuses on motivating through positive feedback",
+                "suggests ways to acknowledge progress and effort"
+            ],
+            "non_compliance_signs": [
+                "suggests punishment or negative consequences",
+                "ignores motivational strategies",
+                "recommends neutral or purely corrective methods",
+                "does not mention any form of encouragement or reward"
+            ],
+            "difficulty": "medium",
+            "preference_type": "motivational approach",
+            "source_chat_ids": [
+                574,
+                580
+            ],
+            "rubric": [
+                "LLM response should include: recommends praise, rewards, or encouragement"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how I've been supporting Scott's growth and development over time?",
+            "ideal_summary": "Over the course of our conversations, your support for Scott has evolved into a comprehensive approach addressing his academic, emotional, and social needs. Initially, you focused on fostering a strong bond between Scott and your parents by encouraging quality family time, open communication, and shared interests. You then took an active role in his education, setting up structured math study sessions with positive discipline techniques and regular check-ins to track progress. To manage household dynamics, you developed strategies to resolve conflicts over shared resources like computer time and to handle interruptions calmly. Additionally, you worked on balancing Scott's daily routine by integrating homework, leisure, and relaxation to reduce stress. Throughout, you emphasized positive reinforcement, patience, and open communication, creating a supportive environment that promotes Scott's confidence and well-being.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                27,
+                35,
+                41,
+                46,
+                62
+            ],
+            "key_elements_tested": [
+                "family bonding",
+                "academic support",
+                "conflict resolution",
+                "routine balancing",
+                "positive discipline"
+            ],
+            "synthesis_required": "Integrating multiple facets of support into a coherent narrative showing progression and development",
+            "source_chat_ids": [
+                27,
+                35,
+                41,
+                46,
+                62
+            ],
+            "rubric": [
+                "LLM response should mention: your support for Scott has evolved into a comprehensive approach addressing his academic, emotional, and social needs.",
+                "LLM response should mention: fostering a strong bond between Scott and your parents by encouraging quality family time, open communication, and shared interests.",
+                "LLM response should mention: setting up structured math study sessions with positive discipline techniques and regular check-ins to track progress.",
+                "LLM response should mention: developing strategies to resolve conflicts over shared resources like computer time and to handle interruptions calmly.",
+                "LLM response should mention: integrating homework, leisure, and relaxation to reduce stress.",
+                "LLM response should mention: emphasizing positive reinforcement, patience, and open communication to promote Scott's confidence and well-being."
+            ]
+        },
+        {
+            "question": "Can you provide a detailed summary of how all aspects of supporting Scott\u2014from his academic challenges and tutoring to his extracurricular activities, social development, and digital habits\u2014have been addressed and coordinated over time, highlighting the key strategies, adjustments, and outcomes involved?",
+            "ideal_summary": "The comprehensive support plan for Scott integrates multiple facets of his academic, social, and personal development, coordinated across various efforts and evolving over time. Academically, Scott\u2019s math struggles were addressed through structured tutoring sessions with Ms. Harper, goal-setting, and consistent monitoring, complemented by creating a distraction-free study environment and fostering a growth mindset. Motivation was maintained by celebrating incremental progress, setting achievable milestones, and leveraging positive reinforcement, with Ms. Harper playing a pivotal role in feedback and resource recommendations. To enrich his learning, Scott was encouraged to attend a summer STEM camp, with preparatory steps including exploring camp details and consulting his tutor to ensure alignment with his needs. Concurrently, his extracurricular engagement, particularly soccer practices, was supported through routine establishment, time management, social encouragement, and balancing physical and mental well-being to prevent overwhelm. Social confidence was nurtured following positive peer interactions, such as an invitation to a basketball game, by role-playing social scenarios, reinforcing self-expression, and fostering independence. Parental authoritative strategies balanced warmth and discipline to cultivate responsibility, especially regarding homework completion and chore management, with clear expectations, consistent feedback, and gradual increases in responsibility. Digital safety was ensured through parental controls like Norton Family, education on online risks, privacy management, and promoting open communication. Screen time was carefully balanced with other activities by structuring daily routines, encouraging physical and creative pursuits, and modeling healthy habits. Emotional well-being, including managing mood swings and bedtime routines, was supported through open communication, establishing consistent schedules, and teaching coping mechanisms. Throughout, positive reinforcement, family involvement, and regular check-ins formed the backbone of a dynamic, multi-dimensional support system that adapts to Scott\u2019s evolving needs, fostering his academic success, personal growth, and social development in a cohesive and sustainable manner.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                144,
+                152,
+                158,
+                164,
+                170,
+                166,
+                172,
+                196,
+                198,
+                202,
+                206,
+                204,
+                212
+            ],
+            "rubric": [
+                "LLM response should mention: structured tutoring sessions with Ms. Harper, goal-setting, and consistent monitoring",
+                "LLM response should mention: creating a distraction-free study environment and fostering a growth mindset",
+                "LLM response should mention: celebrating incremental progress, setting achievable milestones, and leveraging positive reinforcement",
+                "LLM response should mention: encouraging attendance at a summer STEM camp",
+                "LLM response should mention: supporting extracurricular engagement through routine establishment, time management, social encouragement, and balancing physical and mental well-being",
+                "LLM response should mention: nurturing social confidence through role-playing social scenarios, reinforcing self-expression, and fostering independence",
+                "LLM response should mention: cultivating responsibility with clear expectations, consistent feedback, and gradual increases in responsibility",
+                "LLM response should mention: ensuring digital safety through parental controls, education on online risks, privacy management, and promoting open communication",
+                "LLM response should mention: balancing screen time with other activities by structuring daily routines, encouraging physical and creative pursuits, and modeling healthy habits",
+                "LLM response should mention: supporting emotional well-being through open communication, establishing consistent schedules, and teaching coping mechanisms"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many weeks will Scott have been attending twice weekly tutoring sessions by the time I want him to reach his 80% math score goal?",
+            "answer": "Scott will have been attending tutoring for approximately 11 weeks by the time of the goal date. The twice weekly sessions started on March 20, and the goal is set for June 1, which is about 11 weeks apart.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 20: tutoring sessions start (batch anchor)",
+                "June 1: target date for 80% math score"
+            ],
+            "conversation_references": [
+                "Session 128: tutoring frequency and start date",
+                "Session 58: goal date for math score improvement"
+            ],
+            "calculation_required": "June 1 - March 20 \u2248 11 weeks (requires connecting start date and goal date)",
+            "source_chat_ids": {
+                "first_event": [
+                    128
+                ],
+                "second_event": [
+                    58
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: approximately 11 weeks",
+                "LLM response should state: from March 20 till June 1"
+            ]
+        },   
+        {
+            "question": "How many days are there between the first tech-free Sunday we planned and the second Sunday picnic we scheduled?",
+            "answer": "There are 7 days between the first tech-free Sunday hike on May 19 and the second Sunday picnic on May 26.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 19: first tech-free Sunday hike",
+                "May 26: second Sunday picnic"
+            ],
+            "conversation_references": [
+                "Session 1: Planning tech-free Sunday activities",
+                "Session 2: Scheduling the second Sunday picnic"
+            ],
+            "calculation_required": "May 26 - May 19 = 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    258,
+                    260
+                ],
+                "second_event": [
+                    258,
+                    260
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 7 days",
+                "LLM response should state: from May 19 till May 26"
+            ]
+        }
+    ]
+}

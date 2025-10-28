@@ -1,0 +1,589 @@
+{
+    "abstention": [
+        {
+                "question": "Can you tell me more about the agenda and key topics discussed at the New Gary Public Library tech talk on January 12, 2018?",
+                "ideal_response": "Based on the provided chat, there is no information related to the agenda or key topics of the New Gary Public Library tech talk.",
+                "difficulty": "medium",
+                "abstention_type": "missing_detail",
+                "why_unanswerable": "The event is mentioned but no details about its content or discussions are provided.",
+                "plan_reference": "Batch 1 mentions the tech talk but does not describe its agenda or outcomes.",
+                "rubric": [
+                    "Based on the provided chat, there is no information related to the agenda or key topics of the New Gary Public Library tech talk."
+                ]
+            },
+            {
+                "question": "Could you provide the detailed steps Michael used to customize Android 13\u2019s interface for productivity and gaming shortcuts?",
+                "ideal_response": "Based on the provided chat, there is no information related to the detailed steps for customizing Android 13\u2019s interface.",
+                "difficulty": "hard",
+                "abstention_type": "missing_detail",
+                "why_unanswerable": "Customization is mentioned but no procedural details or instructions are given.",
+                "plan_reference": "Batch 3 mentions customization but does not elaborate on the process.",
+                "rubric": [
+                    "Based on the provided chat, there is no information related to the detailed steps for customizing Android 13\u2019s interface."
+                ]
+            }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever met Raymond at any tech talks or events?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you met Raymond at a tech talk, but you also mentioned that you've never met him at any tech event. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Raymond at tech events",
+            "conversation_references": [
+                "Session 4: Meeting Raymond at tech talk",
+                "Session 134: Never met Raymond at any tech event"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    4
+                ],
+                "second_statement": [
+                    134
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you met Raymond at a tech talk",
+                "LLM response should mention: you mentioned you've never met him at any tech event.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever wiped data from my old devices before selling them?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never wiped any data from your old devices before selling them, but you also mentioned wiping your Pixel 7 data securely before sale. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Data wiping before selling old devices",
+            "conversation_references": [
+                "Session 902: Never wiped data statement",
+                "Session 876: Wiped Pixel 7 data securely"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    902
+                ],
+                "second_statement": [
+                    876
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never wiped any data from your old devices before selling them",
+                "LLM response should mention: you mentioned wiping your Pixel 7 data securely before sale",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different smartphone features and accessories throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the smartphone features and accessories in this order: 1) First, you asked about flagship phones good for photography, 2) Then you discussed testing low-light camera modes and Night Sight photos, 3) Next, you considered gaming accessories like the Razer Kishi and headset, 4) After that, you talked about upgrading to the Galaxy S23 Ultra and debated its value and timing for purchase, 5) Finally, you brought up trying advanced photo editing apps and wireless charging accessories.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 18 and 20: Flagship phones and photography features",
+                "Session 148, 150, 274, 276, 278: Low-light camera testing and Night Sight",
+                "Session 366, 372: Gaming accessories discussion",
+                "Session 458, 464, 554, 556, 558, 572, 574, 576, 718, 724: Galaxy S23 Ultra upgrade and purchase timing",
+                "Session 804, 806, 814, 816, 912, 916, 922, 1004, 1008, 1014: Photo editing apps and wireless charging accessories"
+            ],
+            "ordering_tested": [
+                "1st: Flagship phones for photography",
+                "2nd: Low-light camera modes and Night Sight",
+                "3rd: Gaming accessories for Pixel 7",
+                "4th: Galaxy S23 Ultra upgrade and purchase timing",
+                "5th: Advanced photo editing apps and wireless charging accessories"
+            ],
+            "source_chat_ids": [
+                [
+                    18,
+                    20
+                ],
+                [
+                    148,
+                    150,
+                    274,
+                    276,
+                    278
+                ],
+                [
+                    366,
+                    372
+                ],
+                [
+                    458,
+                    464,
+                    554,
+                    556,
+                    558,
+                    572,
+                    574,
+                    576,
+                    718,
+                    724
+                ],
+                [
+                    804,
+                    806,
+                    814,
+                    816,
+                    912,
+                    916,
+                    922,
+                    1004,
+                    1008,
+                    1014
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Flagship phones for photography",
+                "LLM response should mention: 2) Low-light camera modes and Night Sight",
+                "LLM response should mention: 3) Gaming accessories for Pixel 7",
+                "LLM response should mention: 4) Galaxy S23 Ultra upgrade and purchase timing",
+                "LLM response should mention: 5) Advanced photo editing apps and wireless charging accessories"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of choosing a phone for gaming and related accessories throughout our conversations, in order (mention 10 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Initial request for phones with good gaming performance for my son, 2) Considering a specific phone's display and cooling system for gaming, 3) Debating between flagship and mid-range phones for gaming suitability, 4) Discussing gaming performance comparisons between different phone GPUs, 5) Evaluating gaming headset options compatible with my phone, 6) Interest in gaming features of another phone brand after a demo, 7) Weighing a phone model's gaming performance alongside its stylus features, 8) Setting up game streaming on a phone for Twitch, 9) Prioritizing accessories purchase after selling a previous phone, 10) Considering advice about upgrading for long-term performance after a recent purchase.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 22: Initial gaming phone request",
+                "Session 24: Specific phone display and cooling",
+                "Session 30: Flagship vs mid-range gaming suitability",
+                "Session 194: GPU performance comparison",
+                "Session 368 & 918: Gaming headset investment",
+                "Session 460: Interest in gaming features after demo",
+                "Session 566 & 720: Gaming performance and stylus features",
+                "Session 812: Game streaming setup",
+                "Session 914: Accessory purchase planning",
+                "Session 1010: Upgrade advice after recent purchase"
+            ],
+            "ordering_tested": [
+                "1st: Initial gaming phone request",
+                "2nd: Phone display and cooling system",
+                "3rd: Flagship vs mid-range gaming debate",
+                "4th: GPU performance comparison",
+                "5th: Gaming headset investment",
+                "6th: Interest in gaming features after demo",
+                "7th: Gaming performance and stylus features",
+                "8th: Game streaming setup",
+                "9th: Accessory purchase planning",
+                "10th: Upgrade advice after recent purchase"
+            ],
+            "source_chat_ids": [
+                22,
+                24,
+                30,
+                194,
+                368,
+                460,
+                566,
+                812,
+                914,
+                1010
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Initial gaming phone request",
+                "LLM response should mention: 2) Phone display and cooling system",
+                "LLM response should mention: 3) Flagship vs mid-range gaming debate",
+                "LLM response should mention: 4) GPU performance comparison",
+                "LLM response should mention: 5) Gaming headset investment",
+                "LLM response should mention: 6) Interest in gaming features after demo",
+                "LLM response should mention: 7) Gaming performance and stylus features",
+                "LLM response should mention: 8) Game streaming setup",
+                "LLM response should mention: 9) Accessory purchase planning",
+                "LLM response should mention: 10) Upgrade advice after recent purchase"
+            ]
+        }
+    ],
+    "information_extraction": [
+         {
+            "question": "Where did I say I live?",
+            "answer": "You said you live in New Gary, Saint Helena.",
+            "difficulty": "easy",
+            "question_type": "contextual_fact",
+            "conversation_reference": "Turn 0 and Turn 10",
+            "key_facts_tested": [
+                "location of residence"
+            ],
+            "source_chat_ids": [
+                0,
+                10
+            ],
+            "rubric": [
+                "LLM response should mention: New Gary",
+                "LLM response should mention: Saint Helena"
+            ]
+        },
+        {
+            "question": "When did I say I spoke with Gary at the store?",
+            "answer": "You said you spoke with Gary on March 10, 2024.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: Date mentioned in initial user message",
+            "key_facts_tested": [
+                "date: March 10, 2024",
+                "person: Gary",
+                "location: TechWorld Store"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should mention: March 10, 2024"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What improvements have been made in the latest version of the software?",
+            "instruction_being_tested": "Always include update release dates when I ask about software improvements.",
+            "expected_compliance": "Response should include the dates when each update or improvement was released along with the description of the improvements.",
+            "compliance_indicators": [
+                "mention of specific release dates",
+                "dates linked to improvements",
+                "timeline of updates"
+            ],
+            "non_compliance_signs": [
+                "no dates provided",
+                "only improvement details without timing",
+                "general description without temporal context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                352
+            ],
+            "rubric": [
+                "LLM response should include: specific release dates for updates"
+            ]
+        },
+        {
+            "question": "I'm thinking about getting a new laptop. What should I know before buying one?",
+            "instruction_being_tested": "Always include financing options when I ask about purchasing expensive devices.",
+            "expected_compliance": "Response should include information about available financing options along with other relevant details about purchasing the device.",
+            "compliance_indicators": [
+                "mention of payment plans",
+                "options to pay over time",
+                "details on financing availability",
+                "alternative payment methods"
+            ],
+            "non_compliance_signs": [
+                "only technical specs or features discussed",
+                "no mention of payment or financing",
+                "focus solely on device details without cost-related options"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                532
+            ],
+            "rubric": [
+                "LLM response should include: information about financing options"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What budget ceiling have I set for purchasing a new phone with a focus on camera and battery life?",
+            "answer": "$750",
+            "difficulty": "moderate",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget ceiling amount for the new phone",
+            "conversation_references": [
+                "Planning & Logistics:Budget Allocation: I set a $700 budget ceiling for the new phone, prioritizing camera and battery life.",
+                "Information Update: I recently adjusted my budget ceiling to $750 after receiving a bonus, allowing more flexibility for camera and battery features."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $700 budget ceiling instead of the updated $750 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    40
+                ],
+                "updated_info": [
+                    260
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $750"
+            ]
+        },
+        {
+            "question": "Has the Galaxy software update improved the camera stability on your phone, and how might this affect your gaming experience?",
+            "answer": "Yes, the Galaxy software update has improved camera stability, and it may also have a positive effect on your gaming experience.",
+            "difficulty": "moderate",
+            "update_type": "software update timing and effect",
+            "tests_retention_of": "the fact that the update was installed earlier than originally scheduled and improved camera stability",
+            "conversation_references": [
+                "Planning & Logistics:Purchase Schedule: Scheduled Galaxy software update for July 18 to improve camera stability.",
+                "Information Update: The Galaxy software update scheduled for July 18 was installed on July 17, improving camera stability earlier than expected."
+            ],
+            "potential_confusion": "LLM might incorrectly state that the update is still scheduled for July 18 and has not yet improved camera stability.",
+            "source_chat_ids": {
+                "original_info": [
+                    784,
+                    788
+                ],
+                "updated_info": [
+                    790
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: Yes, the Galaxy software update has improved camera stability",
+                "LLM response should mention: it may also have a positive effect on your gaming experience"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total money have I saved by choosing the Pixel 7 over the iPhone 14 Pro, and how do I plan to use those savings?",
+            "answer": "You saved $450 by choosing the Pixel 7 over the iPhone 14 Pro, and you plan to use that money to buy accessories and apps for your new phone.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Deciding if the $450 saved was worth it",
+                "Using the $450 saved for accessories and apps"
+            ],
+            "reasoning_steps": [
+                "Identify the amount saved by choosing the Pixel 7 over the iPhone 14 Pro from the first session.",
+                "Recall the user's plan to allocate the saved money towards accessories and apps from the second session."
+            ],
+            "source_chat_ids": [
+                294,
+                300
+            ],
+            "rubric": [
+                "LLM response should mention: $450 saved",
+                "LLM response should mention: plan to use savings for accessories and apps"
+            ]
+        },
+        {
+            "question": "Given my $700 budget ceiling, my priorities for camera and battery life, and the $450 I saved by choosing the Pixel 7 over the iPhone 14 Pro, how should I optimally allocate my savings to accessories and apps to maximize both photography and gaming experiences?",
+            "answer": "You should allocate approximately $150 to photography accessories (tripod, lens kit, ring light), $100 to charging accessories (portable and wireless chargers), $50 to protective gear (screen protector and case), and $150 to apps and subscriptions (photo editing and gaming), balancing enhancements for both photography and gaming within your $450 savings.",
+            "difficulty": "hard",
+            "reasoning_type": "advanced_optimization",
+            "sessions_required": 4,
+            "conversation_references": [
+                "Initial budget and phone priorities",
+                "Battery life comparison and device endurance",
+                "Savings evaluation choosing Pixel 7 over iPhone 14 Pro",
+                "Accessory and app allocation for saved money"
+            ],
+            "reasoning_steps": [
+                "Identify the $700 budget ceiling and priorities for camera and battery life from the initial phone selection session.",
+                "Incorporate the $450 savings from choosing the Pixel 7 over the iPhone 14 Pro and understand the value of reallocating this amount.",
+                "Analyze the detailed accessory and app recommendations and their costs to enhance photography and gaming experiences.",
+                "Synthesize the information to create an optimal budget allocation plan that balances protective gear, charging accessories, photography tools, and apps within the $450 savings."
+            ],
+            "source_chat_ids": [
+                40,
+                260,
+                294,
+                300
+            ],
+            "rubric": [
+                "LLM response should mention: $150 for photography accessories",
+                "LLM response should mention: $100 for charging accessories",
+                "LLM response should mention: $50 for protective gear",
+                "LLM response should mention: $150 for apps and subscriptions"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm looking to buy a new phone soon. What are some options I should consider?",
+            "preference_being_tested": "I prefer Android phones due to their flexibility and wider hardware options.",
+            "expected_compliance": "Response should recommend Android phone options or prioritize Android devices over others, reflecting the user's stated preference for Android.",
+            "compliance_indicators": [
+                "mentions Android phone models",
+                "focuses on Android ecosystem",
+                "highlights variety within Android phones",
+                "avoids recommending only non-Android phones"
+            ],
+            "non_compliance_signs": [
+                "only recommends iPhones or non-Android devices",
+                "ignores Android options",
+                "fails to acknowledge user's preference for Android"
+            ],
+            "difficulty": "medium",
+            "preference_type": "device platform preference",
+            "source_chat_ids": [
+                88
+            ],
+            "rubric": [
+                "LLM response should mention: Android phone models or options"
+            ]
+        },
+        {
+            "question": "I'm looking at a few smartphone models and trying to decide which one to get. What should I keep in mind when comparing them?",
+            "preference_being_tested": "I prioritized battery life and camera quality over brand prestige in my purchase.",
+            "expected_compliance": "Response should highlight features related to battery life and camera quality as important factors to consider, rather than focusing on brand prestige or other unrelated aspects.",
+            "compliance_indicators": [
+                "mentions battery life as a key feature",
+                "discusses camera quality in detail",
+                "does not emphasize brand prestige",
+                "focuses on practical features relevant to user experience"
+            ],
+            "non_compliance_signs": [
+                "focuses mainly on brand reputation",
+                "ignores battery life and camera quality",
+                "recommends based on brand prestige",
+                "fails to address key functional features"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                310
+            ],
+            "rubric": [
+                "LLM response should mention: battery life as a key feature",
+                "LLM response should mention: camera quality in detail"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of the smartphone options we've discussed for my photography and gaming needs?",
+            "ideal_summary": "We discussed several smartphones suitable for your photography and gaming interests, focusing mainly on Android options like the Google Pixel 6 Pro and OnePlus 9 Pro, which offer strong camera systems and good performance within your budget. Later, we also covered higher-end models like the OnePlus 10 Pro and Samsung Galaxy S22 Ultra for better durability and features. Additionally, the Pixel 7 was highlighted for its advanced camera capabilities and gaming performance powered by the Tensor G2 chip. Overall, the recommendations balanced camera quality, gaming performance, battery life, and price to fit your preferences and budget.",
+            "difficulty": "easy",
+            "summarization_type": "direct_resource_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 1,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple cross-session condensation",
+                "straightforward overview"
+            ],
+            "synthesis_required": "Combining basic details about smartphone options into a concise summary",
+            "source_chat_ids": [
+                1,
+                3,
+                11,
+                13,
+                33,
+                35,
+                137,
+                171,
+                267,
+                269,
+                289,
+                291
+            ],
+            "rubric": [
+                "LLM response should mention: We discussed several smartphones suitable for your photography and gaming interests",
+                "LLM response should mention: focusing mainly on Android options like the Google Pixel 6 Pro and OnePlus 9 Pro",
+                "LLM response should mention: Later, we also covered higher-end models like the OnePlus 10 Pro and Samsung Galaxy S22 Ultra",
+                "LLM response should mention: Additionally, the Pixel 7 was highlighted for its advanced camera capabilities and gaming performance",
+                "LLM response should mention: Overall, the recommendations balanced camera quality, gaming performance, battery life, and price"
+            ]
+        },
+        {
+            "question": "Can you give me a detailed overview that ties together everything we've discussed about choosing and using a smartphone for both photography and gaming, covering all the key considerations, options, and experiences involved?",
+            "ideal_summary": "The discussions revolve around selecting a smartphone that balances high-quality photography and gaming performance, tailored to specific user preferences and constraints. Initially, several flagship models were recommended, including the iPhone 13 Pro Max, Samsung Galaxy S22 Ultra, Google Pixel 6 Pro, and OnePlus 9 Pro, each with distinct camera systems, processors, and features. The user expressed a preference for Android devices under $700, narrowing the focus to the Pixel 6 Pro and OnePlus 9 Pro, with detailed comparisons highlighting camera capabilities, performance, battery life, and design. Further conversations introduced the OnePlus 10 Pro as a durable, high-performance option suitable for longer-term investment, emphasizing its fast charging, robust build, and warranty considerations. For users upgrading from older devices like the Samsung Galaxy S9, mid-range phones such as the OnePlus Nord 2T, Samsung Galaxy A54 5G, and Google Pixel 6a were evaluated for improved low-light photography and gaming, with the Nord 2T noted for its battery life and fast charging. The Pixel 7 was later introduced, showcasing advancements like the Tensor G2 chip, a 50MP sensor, and features such as Night Sight and Magic Eraser, which enhance low-light photography and post-processing flexibility. Gaming performance on the Pixel 7 was assessed positively, with stable 60fps gameplay and effective thermal management. Optimization tips for gaming on the Pixel 7 were provided, including enabling Game Mode, adjusting display and in-game settings, and managing battery and heat. Overall, the synthesis captures a comprehensive journey from initial needs and budget constraints through detailed evaluations of multiple devices, their technical specifications, user experience features, and practical considerations like warranty and after-sales service, culminating in informed decisions tailored to both photography and gaming priorities.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                1,
+                3,
+                11,
+                13,
+                33,
+                35,
+                136,
+                137,
+                138,
+                170,
+                171,
+                266,
+                267,
+                269,
+                289,
+                291
+            ],
+            "rubric": [
+                "LLM response should mention: selecting a smartphone that balances high-quality photography and gaming performance",
+                "LLM response should mention: several flagship models were recommended, including the iPhone 13 Pro Max, Samsung Galaxy S22 Ultra, Google Pixel 6 Pro, and OnePlus 9 Pro",
+                "LLM response should mention: The user expressed a preference for Android devices under $700, narrowing the focus to the Pixel 6 Pro and OnePlus 9 Pro",
+                "LLM response should mention: Further conversations introduced the OnePlus 10 Pro as a durable, high-performance option suitable for longer-term investment",
+                "LLM response should mention: For users upgrading from older devices like the Samsung Galaxy S9, mid-range phones such as the OnePlus Nord 2T, Samsung Galaxy A54 5G, and Google Pixel 6a were evaluated",
+                "LLM response should mention: The Pixel 7 was later introduced, showcasing advancements like the Tensor G2 chip, a 50MP sensor, and features such as Night Sight and Magic Eraser",
+                "LLM response should mention: Gaming performance on the Pixel 7 was assessed positively, with stable 60fps gameplay and effective thermal management",
+                "LLM response should mention: Overall, the synthesis captures a comprehensive journey from initial needs and budget constraints through detailed evaluations of multiple devices"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "If I spoke with Gary at TechWorld Store on March 10, how many days do I have to use the $50 discount on the Pixel 7 before it expires?",
+            "answer": "You have 26 days to use the $50 discount, since the discount is valid until April 5, which is 26 days after March 10.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 10: spoke with Gary",
+                "April 5: discount expiration"
+            ],
+            "conversation_references": [
+                "Session 1: conversation about phones and date of March 10",
+                "Session 3: discount valid before April 5"
+            ],
+            "calculation_required": "April 5 - March 10 = 26 days",
+            "source_chat_ids": {
+                "first_event": [
+                    26
+                ],
+                "second_event": [
+                    152
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 26 days",
+                "LLM response should state: from March 10 till April 5"
+            ]
+        },
+        {
+            "question": "How many days did I delay my phone purchase from the original plan to the new date I set after testing phones thoroughly?",
+            "answer": "You delayed your phone purchase by 14 days, postponing it from March 20 to April 3.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 20: original planned purchase date",
+                "April 3: postponed purchase date after testing phones"
+            ],
+            "conversation_references": [
+                "Session 1: initial purchase plan by March 31",
+                "Session 2: postponement from March 20 to April 3"
+            ],
+            "calculation_required": "April 3 - March 20 = 14 days delay",
+            "source_chat_ids": {
+                "first_event": [
+                    108
+                ],
+                "second_event": [
+                    208
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 14 days",
+                "LLM response should state: from March 20 till April 3"
+            ]
+        }
+    ]
+}

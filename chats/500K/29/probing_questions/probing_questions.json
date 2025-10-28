@@ -1,0 +1,560 @@
+{
+    "abstention": [
+        {
+            "question": "Could you share the exact recipe changes made to the chili to reduce sodium by 18%?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact recipe changes made to the chili to reduce sodium by 18%.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The sodium reduction is mentioned but the specific recipe modifications are not detailed.",
+            "plan_reference": "Batch 2, Bullet 4",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact recipe changes made to the chili to reduce sodium by 18%."
+            ]
+        },
+        {
+            "question": "What specific challenges did I face when balancing writing deadlines and meal prep on stressful days?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific challenges faced when balancing writing deadlines and meal prep on stressful days.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Stressful meal planning is mentioned but no detailed challenges are described.",
+            "plan_reference": "Batch 1, Bullet 23",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific challenges faced when balancing writing deadlines and meal prep on stressful days."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever used my Instant Pot to cook quinoa?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used your Instant Pot to cook quinoa, but you also mentioned mastering it and reducing the cooking time. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Usage of Instant Pot for cooking quinoa",
+            "conversation_references": [
+                "Session 178: Never used Instant Pot for quinoa",
+                "Session 106: Mastered cooking quinoa in Instant Pot"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    178
+                ],
+                "second_statement": [
+                    106
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never used your Instant Pot to cook quinoa",
+                "LLM response should mention: you mentioned mastering cooking quinoa in Instant Pot",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any cooking classes or workshops?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any cooking classes or workshops, but you also mentioned finding a cooking class calming and spending time learning new techniques. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at cooking classes or workshops",
+            "conversation_references": [
+                "Session 636: Never attended any cooking classes",
+                "Session 554: Found cooking class calming and learned techniques"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    636
+                ],
+                "second_statement": [
+                    554
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any cooking classes or workshops",
+                "LLM response should mention: you mentioned finding a cooking class calming and learning new techniques",
+                "LLM response should mention: could you clarify which is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about adapting recipes for special dietary needs progress in order (mention 8 items)?",
+            "answer": "Your discussions about adapting recipes for special dietary needs progressed in this order: 1) Mentioning gluten intolerance and seeking gluten-free cooking tips, 2) Bringing up gluten-free pasta salad recipes for a friend, 3) Addressing nut allergies with nut-free recipe adaptations, 4) Discussing dairy-free curry substitutions, 5) Returning to nut-free pesto recipes with different seed alternatives, 6) Revisiting gluten-free pasta dishes with specific ingredient suggestions, 7) Expanding on creative uses of dairy-free ingredients in special diets, and 8) Reiterating gluten-free pasta salad preparation tips with particular pasta types.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "54",
+                "112",
+                "206",
+                "292",
+                "386, 478",
+                "570, 662",
+                "752, 754",
+                "842"
+            ],
+            "ordering_tested": [
+                "1st: Gluten intolerance and gluten-free cooking tips",
+                "2nd: Gluten-free pasta salad recipes",
+                "3rd: Nut allergy and nut-free recipe adaptations",
+                "4th: Dairy-free curry substitutions",
+                "5th: Nut-free pesto with seed alternatives",
+                "6th: Gluten-free pasta dishes with ingredient suggestions",
+                "7th: Creative uses of dairy-free ingredients",
+                "8th: Gluten-free pasta salad preparation tips with specific pasta"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple dietary restriction themes",
+                "spans multiple conversation sessions",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across related topics"
+            ],
+            "source_chat_ids": [
+                54,
+                112,
+                206,
+                292,
+                386,
+                478,
+                570,
+                662,
+                752,
+                754,
+                842
+            ],
+            "rubric": [
+                "LLM response should mention: gluten intolerance and gluten-free cooking tips",
+                "LLM response should mention: gluten-free pasta salad recipes",
+                "LLM response should mention: nut allergy and nut-free recipe adaptations",
+                "LLM response should mention: dairy-free curry substitutions",
+                "LLM response should mention: nut-free pesto with seed alternatives",
+                "LLM response should mention: gluten-free pasta dishes with ingredient suggestions",
+                "LLM response should mention: creative uses of dairy-free ingredients",
+                "LLM response should mention: gluten-free pasta salad preparation tips with specific pasta"
+            ]
+        },
+        {
+            "question": "How did my discussions about experimenting with different flavor enhancements progress throughout our conversations in order (mention 8 items)?",
+            "answer": "Your discussions about experimenting with different flavor enhancements progressed in this sequence: 1) You first mentioned your preference for healthy cooking methods, 2) then you brought up adding certain spice combinations to roasted vegetables, 3) followed by exploring other spice blends to deepen flavor, 4) next you incorporated Middle Eastern flavor profiles, 5) you revisited experimenting with smoky and spicy seasonings, 6) then you returned to Middle Eastern spices with further experimentation, 7) you again discussed enhancing flavor and color with specific spice combinations, 8) and finally you sought additional seasoning ideas to continue varying your roasted vegetable dishes.",
+            "difficulty": "hard",
+            "ordering_type": "discussion_progression",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 68",
+                "chat_id 154",
+                "chat_id 246, 248",
+                "chat_id 334",
+                "chat_id 430",
+                "chat_id 518",
+                "chat_id 610",
+                "chat_id 702",
+                "chat_id 796",
+                "chat_id 882, 884"
+            ],
+            "ordering_tested": [
+                "1st: Healthy cooking methods",
+                "2nd: Initial spice combinations for roasted vegetables",
+                "3rd: Additional spices to enhance flavor depth",
+                "4th: Middle Eastern flavor experimentation",
+                "5th: Revisiting smoky and spicy seasonings",
+                "6th: Further Middle Eastern spice exploration",
+                "7th: Enhancing flavor and color with spices",
+                "8th: Seeking new seasoning ideas for roasted vegetables"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "involves pattern recognition across sessions",
+                "tests ability to reconstruct mention progression",
+                "requires sophisticated sequence analysis"
+            ],
+            "source_chat_ids": [
+                68,
+                154,
+                246,
+                248,
+                334,
+                430,
+                518,
+                610,
+                702,
+                796,
+                882,
+                884
+            ],
+            "rubric": [
+                "LLM response should mention: healthy cooking methods",
+                "LLM response should mention: initial spice combinations for roasted vegetables",
+                "LLM response should mention: additional spices to enhance flavor depth",
+                "LLM response should mention: Middle Eastern flavor experimentation",
+                "LLM response should mention: revisiting smoky and spicy seasonings",
+                "LLM response should mention: further Middle Eastern spice exploration",
+                "LLM response should mention: enhancing flavor and color with spices",
+                "LLM response should mention: seeking new seasoning ideas for roasted vegetables"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How old did I say my middle daughter is?",
+            "answer": "You said your middle daughter is 26 years old.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 1: Ages of daughters mentioned early in the conversation",
+            "key_facts_tested": [
+                "age: 26",
+                "middle daughter",
+                "daughters' ages"
+            ],
+            "source_chat_ids": [
+                6
+            ],
+            "rubric": [
+                "LLM response should state: 26 years old"
+            ]
+        },
+        {
+            "question": "When do I usually go shopping during the week, and where do I go?",
+            "answer": "You shop at Safeway on Main Street every Friday at 10 AM.",
+            "difficulty": "easy",
+            "question_type": "context_detail",
+            "conversation_reference": "Turn 1: USER: I'm trying to plan my meals for the week, and I shop at Safeway on Main Street every Friday at 10 AM, can you help me make a grocery list that fits my $75 budget?",
+            "key_facts_tested": [
+                "shopping location",
+                "shopping day",
+                "shopping time"
+            ],
+            "source_chat_ids": [
+                42
+            ],
+            "rubric": [
+                "LLM response should state: Safeway on Main Street",
+                "LLM response should state: every Friday",
+                "LLM response should state: at 10 AM"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some meal ideas I could try for dinner tonight?",
+            "instruction_being_tested": "Always provide low-sodium recipe options first when I ask about meal suggestions.",
+            "expected_compliance": "Response should list recipes that meet the low-sodium criteria before mentioning any other options.",
+            "compliance_indicators": [
+                "low-sodium recipes presented first",
+                "clear prioritization of low-sodium options",
+                "other recipes listed after low-sodium ones"
+            ],
+            "non_compliance_signs": [
+                "no low-sodium recipes mentioned first",
+                "random order of recipes",
+                "low-sodium options omitted or listed last"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                84
+            ],
+            "rubric": [
+                "LLM response should suggest low-sodium options"
+            ]
+        },
+        {
+            "question": "What recipes would you recommend for Anita?",
+            "instruction_being_tested": "Always suggest nut-free alternatives first when I ask about recipes for Anita.",
+            "expected_compliance": "Response should prioritize recipes that do not include nuts before mentioning any others.",
+            "compliance_indicators": [
+                "initial suggestions contain no nuts",
+                "nut-free options listed first",
+                "nut-free recipes prioritized"
+            ],
+            "non_compliance_signs": [
+                "recipes with nuts suggested first",
+                "no clear prioritization of nut-free options",
+                "nut-containing recipes listed before nut-free ones"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_prioritization",
+            "source_chat_ids": [
+                452
+            ],
+            "rubric": [
+                "LLM response should suggest nut-free recipes first"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long are the batch cooking sessions scheduled to last?",
+            "answer": "They last 30 minutes longer than originally planned to accommodate new recipes.",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "extended duration of batch cooking sessions",
+            "conversation_references": [
+                "Meal Calendar Planning: Scheduled batch cooking sessions for March 24 and March 31 at 3 PM.",
+                "Information Update: The batch cooking sessions on March 24 and March 31 were extended by 30 minutes to accommodate new recipes."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original session length without the additional 30 minutes.",
+            "source_chat_ids": {
+                "original_info": [
+                    168
+                ],
+                "updated_info": [
+                    174
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 30 minutes longer than originally planned"
+            ]
+        },
+        {
+            "question": "How long is your batch cooking session scheduled to last?",
+            "answer": "2.5 hours",
+            "difficulty": "easy",
+            "update_type": "duration_adjustment",
+            "tests_retention_of": "shortened duration of batch cooking session",
+            "conversation_references": [
+                "Meal Calendar Planning: Scheduled next batch cooking for May 11 at 3 PM, coordinating with Sara\u2019s visit.",
+                "Information Update: The May 11 batch cooking session was shortened to 2.5 hours due to a scheduling conflict."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 3-hour duration instead of the shortened 2.5 hours",
+            "source_chat_ids": {
+                "original_info": [
+                    444
+                ],
+                "updated_info": [
+                    450
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2.5 hours"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Considering my grocery budgets and added items across my Safeway trips, how much more did I allocate when I included gluten-free pasta and extra garlic compared to when I planned with fresh herbs and Greek yogurt alone?",
+            "answer": "You allocated $7 more when you included gluten-free pasta and extra garlic compared to the budget with just fresh herbs and Greek yogurt.",
+            "difficulty": "medium",
+            "reasoning_type": "performance_comparison",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id: 395 (May 5 budget with fresh herbs and Greek yogurt)",
+                "chat_id: 487 (May 20 addition of gluten-free pasta and extra garlic)",
+                "chat_id: 579 (June 2 list with fresh herbs, Greek yogurt, and brown rice pasta)",
+                "chat_id: 851 (July 14 list with fresh herbs, Greek yogurt, and brown rice pasta)"
+            ],
+            "reasoning_steps": [
+                "Identify the budget amount when fresh herbs and Greek yogurt were included without gluten-free pasta (May 5 session: $78).",
+                "Identify the budget amount when gluten-free pasta and extra garlic were added (May 20 session: implied increase, and June 2 and July 14 sessions with $85 and $90 budgets respectively).",
+                "Compare the budgets from sessions with and without gluten-free pasta and extra garlic to find the difference.",
+                "Calculate the difference between the lower budget ($78) and the higher budgets ($85 and $90), concluding the increase is $7."
+            ],
+            "source_chat_ids": [
+                394,
+                486,
+                578,
+                850
+            ],
+            "rubric": [
+                "LLM response should state: $7 more"
+            ]
+        },
+        {
+            "question": "How much have I reduced my weekly grocery spend overall by combining my savings from buying in-season produce, using frozen vegetables and bulk spices, and making broth from vegetable scraps?",
+            "answer": "You have reduced your weekly grocery spend by a total of $13.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "Reducing grocery spend by buying in-season produce",
+                "Reducing spend by buying frozen vegetables and bulk spices",
+                "Saving by making broth from vegetable scraps",
+                "Further reducing spend with frozen vegetables and bulk spices"
+            ],
+            "reasoning_steps": [
+                "Identify the $7 savings from buying in-season produce (from $75 to $68).",
+                "Add the $3 savings from using frozen vegetables and bulk spices (from $68 to $65).",
+                "Add the $3 weekly savings from making broth from vegetable scraps.",
+                "Sum all savings: $7 + $3 + $3 = $13 total reduction in weekly grocery spend."
+            ],
+            "source_chat_ids": [
+                166,
+                258,
+                346,
+                442
+            ],
+            "rubric": [
+                "LLM response should state: $13 total reduction"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm looking to add some extra flavor to a dish without changing the main ingredients too much. What are some ways you suggest to do that?",
+            "preference_being_tested": "Sara prefers spicy food; increased chili powder by 25% in her meals on April 3",
+            "expected_compliance": "Response should include suggestions that add heat or spiciness in a balanced way, reflecting the user's previous adjustment to increase chili powder, without ignoring the preference for spiciness",
+            "compliance_indicators": [
+                "mentions adding heat or spice options",
+                "suggests ingredients or methods that increase spiciness moderately",
+                "avoids recommending only mild or non-spicy flavor enhancers"
+            ],
+            "non_compliance_signs": [
+                "only suggests mild or non-spicy flavor additions",
+                "ignores options that add heat",
+                "recommends flavor changes unrelated to spiciness"
+            ],
+            "difficulty": "medium",
+            "preference_type": "taste preference",
+            "source_chat_ids": [
+                230
+            ],
+            "rubric": [
+                "LLM response should suggest adding heat or spice options",
+                "LLM response should suggest ingredients or methods that increase spiciness moderately"
+            ]
+        },
+        {
+            "question": "I'm planning a dinner menu and want to adjust the seasoning levels. How would you suggest I modify the use of chili powder?",
+            "preference_being_tested": "Crystal prefers mild flavors; reduced chili powder by 50% in June 1 dinner.",
+            "expected_compliance": "Response should suggest using less chili powder or milder seasoning options consistent with a mild flavor profile, reflecting the user's previous adjustment.",
+            "compliance_indicators": [
+                "recommends reducing chili powder",
+                "suggests mild seasoning alternatives",
+                "avoids suggesting full or increased chili powder amounts"
+            ],
+            "non_compliance_signs": [
+                "recommends standard or increased chili powder amounts",
+                "ignores previous reduction in chili powder",
+                "suggests very spicy seasoning levels"
+            ],
+            "difficulty": "medium",
+            "preference_type": "taste/flavor adjustment",
+            "source_chat_ids": [
+                590
+            ],
+            "rubric": [
+                "LLM response should suggest reducing chili powder",
+                "LLM response should suggest mild seasoning alternatives"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a quick summary of the meal planning and cooking advice we've discussed?",
+            "ideal_summary": "We talked about quick and easy dinner ideas suitable for a busy schedule, including recipes like sheet pan chicken and stir-fried tofu. There was also guidance on preparing healthy meals for older adults, focusing on balanced nutrition and meal prep strategies like batch cooking and reheating. Additionally, we covered budgeting for groceries with a list that includes organic produce and versatile ingredients to support efficient meal planning.",
+            "difficulty": "easy",
+            "summarization_type": "basic_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "combining simple recipe ideas",
+                "healthy meal considerations",
+                "budget-conscious grocery planning"
+            ],
+            "synthesis_required": "Combining straightforward information from multiple sessions into a concise overview",
+            "source_chat_ids": [
+                4,
+                1,
+                101
+            ],
+            "rubric": [
+                "LLM response should mention: We talked about quick and easy dinner ideas suitable for a busy schedule, including recipes like sheet pan chicken and stir-fried tofu.",
+                "LLM response should mention: There was also guidance on preparing healthy meals for older adults, focusing on balanced nutrition and meal prep strategies like batch cooking and reheating.",
+                "LLM response should mention: Additionally, we covered budgeting for groceries with a list that includes organic produce and versatile ingredients to support efficient meal planning."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how I\u2019ve been improving my cooking routines and managing my meal prep over the past few weeks?",
+            "ideal_summary": "Over the past few weeks, you have progressively refined your cooking routines by focusing on quick, healthy recipes and efficient meal preparation techniques. Initially, you celebrated saving time with sheet-pan chicken and sought other quick recipes, leading to exploring various sheet-pan and one-pot meals that balance nutrition and speed. You then expanded your repertoire with additional quick dinner ideas emphasizing minimal cleanup and efficient cooking methods like roasting and stir-frying. To further optimize, you adopted strategies to reduce cleanup time, such as using non-stick cookware, batch cooking, and cleaning as you go. Later, you incorporated time-saving cooking techniques like oven broiling and using multi-functional appliances, while also prioritizing meal planning and batch cooking to fit your schedule. Finally, you focused on managing your time better by prioritizing recipes and organizing batch cooking sessions within a limited timeframe, combining multiple cooking methods and efficient ingredient prep to maximize productivity. Throughout this progression, your approach evolved from simple time-saving recipes to a comprehensive system balancing speed, nutrition, cleanup, and scheduling constraints.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                90,
+                111,
+                115,
+                235,
+                339,
+                451
+            ],
+            "key_elements_tested": [
+                "progressive improvement",
+                "time management",
+                "recipe variety",
+                "cleanup strategies",
+                "batch cooking prioritization"
+            ],
+            "synthesis_required": "Integrating multiple facets of cooking efficiency and meal planning into a coherent narrative showing evolution over time",
+            "source_chat_ids": [
+                90,
+                111,
+                115,
+                235,
+                339,
+                451
+            ],
+            "rubric": [
+                "LLM response should mention: progressively refined cooking routines with quick, healthy recipes and efficient meal preparation techniques",
+                "LLM response should mention: explored various sheet-pan and one-pot meals balancing nutrition and speed",
+                "LLM response should mention: adopted strategies to reduce cleanup time, such as using non-stick cookware, batch cooking, and cleaning as you go",
+                "LLM response should mention: incorporated time-saving cooking techniques like oven broiling and using multi-functional appliances, while prioritizing meal planning and batch cooking",
+                "LLM response should mention: focused on managing time better by prioritizing recipes and organizing batch cooking sessions within a limited timeframe"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after my potluck at Mary's did I plan to bring the quinoa salad to Erin's dinner?",
+            "answer": "The quinoa salad for Erin's dinner on March 18 is 3 days after the potluck at Mary's on March 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15: potluck at Mary's",
+                "March 18: dinner at Erin's"
+            ],
+            "conversation_references": [
+                "Session 1: Potluck planning at Mary's",
+                "Session 3: Quinoa salad for Erin's dinner"
+            ],
+            "calculation_required": "March 18 - March 15 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    52
+                ],
+                "second_event": [
+                    136
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 3 days"
+            ]
+        },
+        {
+            "question": "How many days after I planned to switch to cooking did I schedule my 45-minute prep session?",
+            "answer": "The 45-minute prep session scheduled for April 6 is 5 days after the planned cooking switch date of April 1.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Planned cooking switch by April 1",
+                "45-minute prep session on April 6 at 4 PM"
+            ],
+            "conversation_references": [
+                "Session 1: Cooking switch planning",
+                "Session 2: Prep session scheduling"
+            ],
+            "calculation_required": "April 6 - April 1 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    196
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,817 @@
+{
+    "abstention": [
+        {
+            "question": "What specific techniques did I learn in the 'Effective Communication in Relationships' course starting March 18, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific techniques taught in the 'Effective Communication in Relationships' course.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The course is mentioned but no details about its content or techniques are given.",
+            "plan_reference": "Batch 1, Bullet 28 mentions enrollment but no course details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific techniques taught in the 'Effective Communication in Relationships' course"
+            ]
+        },
+        {
+            "question": "What was April\u2019s reaction to the surprise picnic planned for April 20, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to April\u2019s reaction to the surprise picnic on April 20, 2024.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The picnic is planned but no information about April\u2019s response is provided.",
+            "plan_reference": "Batch 1, Bullet 16 mentions planning but no reaction",
+            "rubric": [
+                "Based on the provided chat, there is no information related to April\u2019s reaction to the surprise picnic on April 20, 2024"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended couples therapy sessions with Dr. Selim?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any couples therapy sessions with Dr. Selim, but you also mentioned scheduling a session with him. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at couples therapy with Dr. Selim",
+            "conversation_references": [
+                "Session 362: Never attended statement",
+                "Sessions 242, 250, 256: Scheduled therapy sessions"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    362
+                ],
+                "second_statement": [
+                    242,
+                    250,
+                    256
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any couples therapy sessions with Dr. Selim",
+                "LLM response should mention: you also mentioned scheduling a session with him.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Has Kristen completed a Master\u2019s degree at Istanbul University?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said Kristen has never graduated with a Master\u2019s degree from Istanbul University, but you also mentioned she graduated with a Master\u2019s degree there. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Kristen's Master\u2019s degree completion",
+            "conversation_references": [
+                "Session 822: Kristen has never graduated",
+                "Sessions 632, 656: Kristen graduated with a Master\u2019s degree"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    822
+                ],
+                "second_statement": [
+                    632,
+                    656
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said Kristen has never graduated with a Master\u2019s degree from Istanbul University",
+                "LLM response should mention: you also mentioned she graduated with a Master\u2019s degree there",
+                "LLM response should mention: which statement is correct?"
+            ]
+        } 
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of my relationship with April shift and develop throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your discussions about your relationship with April evolved through these stages: 1) Concerns about keeping the relationship fresh and planning special moments, 2) Reflections on the significance of where you met and shared community experiences, 3) Addressing communication challenges and improving active listening skills, 4) Managing work-life balance and quality time considering your schedules, 5) Exploring emotional intimacy and small gestures to show appreciation, 6) Planning meaningful trips and getaways to strengthen your connection, 7) Handling practical matters like budgeting and family time, and 8) Engaging in shared creative activities to deepen your bond.",
+            "difficulty": "hard",
+            "ordering_type": "conversation_evolution",
+            "total_mentions": 8,
+            "conversation_references": [
+                "48, 50, 52",
+                "54, 56, 58",
+                "366, 372, 584, 832, 1148, 1164",
+                "376, 1154, 1156, 1158",
+                "1142, 1150, 1152",
+                "1362, 1370, 1380",
+                "386, 388, 390, 1654",
+                "1996"
+            ],
+            "ordering_tested": [
+                "1st: Relationship freshness and special moments",
+                "2nd: Significance of meeting place and community ties",
+                "3rd: Communication skills and workshops",
+                "4th: Work-life balance and quality time",
+                "5th: Emotional intimacy and appreciation gestures",
+                "6th: Trip planning and romantic getaways",
+                "7th: Budgeting and family time management",
+                "8th: Shared creative activities"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic shifts",
+                "spans many conversation sessions",
+                "involves nuanced relationship aspects",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse topics"
+            ],
+            "source_chat_ids": [
+                [
+                    48,
+                    50,
+                    52
+                ],
+                [
+                    54,
+                    56,
+                    58
+                ],
+                [
+                    366,
+                    372,
+                    584,
+                    832,
+                    1148,
+                    1164
+                ],
+                [
+                    376,
+                    1154,
+                    1156,
+                    1158
+                ],
+                [
+                    1142,
+                    1150,
+                    1152
+                ],
+                [
+                    1362,
+                    1370,
+                    1380
+                ],
+                [
+                    386,
+                    388,
+                    390,
+                    1654
+                ],
+                [
+                    1996
+                ]
+            ],
+            "rubric": [
+                "Relationship freshness and special moments",
+                "Significance of meeting place and community ties",
+                "Communication skills and workshops",
+                "Work-life balance and quality time",
+                "Emotional intimacy and appreciation gestures",
+                "Trip planning and romantic getaways",
+                "Budgeting and family time management",
+                "Shared creative activities"
+            ]
+        },
+        {
+            "question": "How did my focus on balancing work, income, and relationship priorities shift throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your focus evolved through these stages: 1) Preparing for and making the most of couples therapy sessions, 2) Applying and discussing time management techniques to handle work stress, 3) Adjusting work hours to create more personal time and communicating boundaries, 4) Managing increased consulting income and planning relationship-enhancing gestures, 5) Integrating productivity apps to support relationship goals, 6) Addressing the impact of extended consulting projects on work-life balance, 7) Coping with increased consulting hours while maintaining quality time, and 8) Allocating additional consulting income to sustain relationship and lifestyle improvements.",
+            "difficulty": "hard",
+            "ordering_type": "conversation_evolution",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id 242, 244, 250, 256",
+                "chat_id 560, 564, 572",
+                "chat_id 768, 770, 776, 780, 782, 784",
+                "chat_id 1068, 1070, 1072, 1074, 1080, 1084, 1088",
+                "chat_id 1316, 1320, 1326, 1330",
+                "chat_id 1598, 1600, 1604, 1606, 1608, 1612, 1614",
+                "chat_id 1922, 1930, 1932, 1934, 1938, 1940, 1942, 1950",
+                "chat_id 2156, 2158, 2162, 2168"
+            ],
+            "ordering_tested": [
+                "1st: Couples therapy preparation and expectations",
+                "2nd: Time management and work stress discussions",
+                "3rd: Work hour reductions and communication of boundaries",
+                "4th: Increased income and relationship spending plans",
+                "5th: Use of productivity apps for relationship support",
+                "6th: Consulting project extension and relationship impact",
+                "7th: Increased consulting hours and maintaining balance",
+                "8th: Additional income allocation for relationship and lifestyle"
+            ],
+            "complexity_factors": [
+                "requires conversation evolution tracking",
+                "involves multiple intertwined themes",
+                "spans numerous conversation sessions",
+                "demands sophisticated sequence and pattern recognition"
+            ],
+            "source_chat_ids": [
+                242,
+                244,
+                250,
+                256,
+                560,
+                564,
+                572,
+                768,
+                770,
+                776,
+                780,
+                782,
+                784,
+                1068,
+                1070,
+                1072,
+                1074,
+                1080,
+                1084,
+                1088,
+                1316,
+                1320,
+                1326,
+                1330,
+                1598,
+                1600,
+                1604,
+                1606,
+                1608,
+                1612,
+                1614,
+                1922,
+                1930,
+                1932,
+                1934,
+                1938,
+                1940,
+                1942,
+                1950,
+                2156,
+                2158,
+                2162,
+                2168
+            ],
+            "rubric": [
+                "Couples therapy preparation and expectations",
+                "Time management and work stress discussions",
+                "Work hour reductions and communication of boundaries",
+                "Increased income and relationship spending plans",
+                "Use of productivity apps for relationship support",
+                "Consulting project extension and relationship impact",
+                "Increased consulting hours and maintaining balance",
+                "Additional income allocation for relationship and lifestyle"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I schedule the couples therapy session?",
+            "answer": "You scheduled the couples therapy session for 3 PM on March 25, 2024.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions the session time and date",
+            "key_facts_tested": [
+                "session date",
+                "session time"
+            ],
+            "source_chat_ids": [
+                242
+            ],
+            "rubric": [
+                "LLM response should state: 3 PM on March 25, 2024"
+            ]
+        },
+        {
+            "question": "When did I say the couples massage at the spa is scheduled?",
+            "answer": "You said it is scheduled for April 28, 2024, at 2 PM.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 2: USER mentioned scheduling a couples massage at Serenity Spa on April 28, 2024, for $120.",
+            "key_facts_tested": [
+                "date",
+                "time",
+                "event scheduling"
+            ],
+            "source_chat_ids": [
+                446
+            ],
+            "rubric": [
+                "LLM response should state: April 28, 2024, at 2 PM"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "If I wanted to include a small gift with the brunch, how much would that add?",
+            "instruction_being_tested": "Always include cost details when I ask about event expenses.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1130,
+                1132
+            ],
+            "rubric": [
+                "LLM response should contain: itemized list of costs",
+                "LLM response should contain: ategory-by-category breakdown",
+                "LLM response should contain: detailed cost analysis"
+            ]
+        },
+        {
+            "question": "What time does my swimming session start and end on Tuesdays and Thursdays?",
+            "instruction_being_tested": "Always confirm exact times when I ask about scheduled appointments or sessions.",
+            "expected_compliance": "Response should include the precise start and end times of the sessions without ambiguity.",
+            "compliance_indicators": [
+                "exact start time",
+                "exact end time",
+                "clear time range",
+                "specific hours mentioned"
+            ],
+            "non_compliance_signs": [
+                "vague time references",
+                "only days mentioned",
+                "no specific hours given",
+                "general time frames like 'evening'"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                816,
+                818,
+                820
+            ],
+            "rubric": [
+                "LLM response should contain: specific hours mentioned",
+                "LLM response should contain: clear time range"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the average amount for my monthly household expenses?",
+            "answer": "$2,800, reflecting additional home maintenance costs",
+            "difficulty": "easy",
+            "update_type": "expense_increase",
+            "tests_retention_of": "updated average monthly household expenses amount",
+            "conversation_references": [
+                "Monthly household expenses average $2,500; April contributes $1,200 monthly.",
+                "The monthly household expenses have recently increased to an average of $2,800, reflecting some additional home maintenance costs."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $2,500 average monthly expenses instead of the updated $2,800 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    258,
+                    260,
+                    276
+                ],
+                "updated_info": [
+                    354,
+                    356,
+                    358
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $2,800"
+            ]
+        },
+        {
+            "question": "How long are my weekly swimming sessions at North Ericshire Aquatic Center?",
+            "answer": "90 minutes per session",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "updated session length from 60 to 90 minutes",
+            "conversation_references": [
+                "I resumed weekly swimming sessions at North Ericshire Aquatic Center, 1 hour every Saturday at 9 AM.",
+                "The weekly swimming sessions were extended to 90 minutes starting May 11, 2024, to enhance fitness."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 60-minute session length instead of the updated 90 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    712
+                ],
+                "updated_info": [
+                    814
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 90 minutes per session"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many hours per week do I plan to reduce my work schedule by from now until July?",
+            "answer": "I plan to reduce my work hours by 10 hours per week, from 50 to 40 hours.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 236",
+                "chat_id: 238"
+            ],
+            "reasoning_steps": [
+                "Identify current work hours from the first session (50 hours per week).",
+                "Identify target work hours from the second session (40 hours per week).",
+                "Calculate the difference between current and target hours (50 - 40 = 10)."
+            ],
+            "source_chat_ids": [
+                236,
+                238
+            ],
+            "rubric": [
+                "LLM response should state: 10 hours per week",
+                "LLM response should state: from 50 to 40 hours"
+            ]
+        },
+        {
+            "question": "How have my contributions to household expenses, leisure budgeting, and relationship reflections evolved together to support both financial balance and emotional connection?",
+            "answer": "You contribute nearly half of the $2,500 household expenses, allocate $200 monthly for leisure balancing saving and spending, and maintain weekly gratitude lists plus monthly reflections with April, all fostering financial fairness and emotional closeness.",
+            "difficulty": "medium",
+            "reasoning_type": "cross-session_correlation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "household expense contributions and budgeting",
+                "leisure budget planning and spending priorities",
+                "weekly gratitude lists and monthly reflection talks",
+                "balancing support for Ashley's therapy with relationship goals"
+            ],
+            "reasoning_steps": [
+                "Identify the proportion of your monthly contribution relative to total household expenses and how it is split.",
+                "Analyze how you allocate and balance the $200 leisure budget between saving and spending on experiences.",
+                "Consider your commitment to weekly gratitude lists and monthly reflection talks as emotional connection practices.",
+                "Synthesize how your financial contributions, leisure budgeting, and relationship practices collectively support both financial balance and emotional connection."
+            ],
+            "source_chat_ids": [
+                259,
+                261,
+                542,
+                548,
+                552,
+                2172,
+                2176,
+                2178
+            ],
+            "rubric": [
+                "LLM response should state: You contribute nearly half of the $2,500 household expenses",
+                "LLM response should state: allocate $200 monthly for leisure balancing saving and spending",
+                "LLM response should state: maintain weekly gratitude lists plus monthly reflections with April"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to have a meaningful conversation with April this weekend. When do you think would be a good time to start it?",
+            "preference_being_tested": "I prefer calm weekend mornings for deep conversations rather than evenings when we are tired.",
+            "expected_compliance": "Response should suggest timing that aligns with calm weekend mornings rather than evenings, reflecting the user's preference for when to have deep conversations.",
+            "compliance_indicators": [
+                "recommends morning or early weekend times",
+                "avoids suggesting late evenings or times when people are likely tired",
+                "acknowledges the benefit of calm and alert moments for conversations"
+            ],
+            "non_compliance_signs": [
+                "suggests evening or late times despite user's preference",
+                "ignores timing and suggests any time without consideration",
+                "recommends times when people are likely tired or distracted"
+            ],
+            "difficulty": "medium",
+            "preference_type": "timing preference",
+            "source_chat_ids": [
+                284,
+                288,
+                298
+            ],
+            "rubric": [
+                "LLM response should contain: recommends morning or early weekend times",
+                "LLM response should contain: avoids suggesting late evenings or times when people are likely tired"
+            ]
+        },
+        {
+            "question": "What are some good ways to organize activities with my partner over the weekend?",
+            "preference_being_tested": "I prefer weekend mornings for joint activities like swimming or gardening to maximize energy.",
+            "expected_compliance": "Response should suggest scheduling joint activities during weekend mornings to align with the user's stated preference for that time to maximize energy.",
+            "compliance_indicators": [
+                "recommends weekend mornings for joint activities",
+                "mentions timing that supports energy levels",
+                "includes activities suitable for mornings",
+                "acknowledges partner involvement in weekend planning"
+            ],
+            "non_compliance_signs": [
+                "suggests activities outside weekend mornings",
+                "ignores timing related to energy levels",
+                "recommends only evening or weekday activities",
+                "does not consider joint activity timing"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time_of_day and activity scheduling",
+            "source_chat_ids": [
+                728,
+                734,
+                740
+            ],
+            "rubric": [
+                "LLM response should contain: recommends weekend mornings for joint activities",
+                "LLM response should contain: mentions timing that supports energy levels"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary of everything we've covered about my relationship with April, capturing how all the different aspects we've discussed connect and evolve over time?",
+            "ideal_summary": "The discussions about your relationship with April encompass a multifaceted approach to maintaining and deepening your connection over time. Initially, strategies were explored to keep the relationship fresh and exciting, including reigniting romance through thoughtful date nights, surprises, and shared new hobbies, while also emphasizing open communication and emotional intimacy. Practical steps were taken to implement these ideas, such as planning special outings, enhancing gestures like flower deliveries, and creating meaningful traditions. The significance of shared environments, like meeting at the community center, was highlighted for fostering common values and ongoing engagement through events and volunteering, which further strengthened your bond. Communication was a central theme, with emphasis on regular check-ins to align on future plans, health, finances, and legal matters, ensuring mutual understanding and security. Emotional intimacy was addressed through active listening, validating feelings, and creating safe spaces for vulnerability, supported by structured communication routines and conflict management strategies. Balancing busy schedules was tackled by prioritizing quality time, daily check-ins, and expressing appreciation, alongside managing work-life boundaries to reduce feelings of neglect. Physical touch emerged as a critical love language for April, especially during stressful times, with detailed guidance on incorporating affectionate gestures consistently to provide comfort and reinforce connection. Shared hobbies and creative activities were identified as vital for bonding, with tailored suggestions and plans to integrate these into your routine, fostering emotional closeness and mutual growth. Throughout, the importance of flexibility, open dialogue, and ongoing reflection was emphasized to adapt to evolving needs and maintain a vibrant, supportive partnership. This comprehensive narrative weaves together practical actions, emotional support, and shared experiences to illustrate a dynamic, deeply connected relationship evolving thoughtfully over time.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 15,
+            "key_elements_tested": [
+                "multi-threaded relationship dynamics",
+                "emotional intimacy development",
+                "communication and conflict resolution",
+                "shared activities and traditions",
+                "work-life balance and prioritization",
+                "physical affection as love language",
+                "future planning and mutual understanding",
+                "environmental and social influences",
+                "practical implementation of strategies",
+                "ongoing reflection and adaptation"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                84,
+                85,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                130,
+                131,
+                368,
+                369,
+                374,
+                375,
+                380,
+                381,
+                382,
+                383,
+                384,
+                385,
+                590,
+                591,
+                730,
+                731,
+                736,
+                737,
+                744,
+                745,
+                958,
+                959,
+                960,
+                961,
+                1274,
+                1275,
+                1280,
+                1281,
+                1282,
+                1283,
+                1286,
+                1287,
+                1544,
+                1545,
+                1546,
+                1547,
+                1552,
+                1553,
+                1558,
+                1559,
+                1842,
+                1843,
+                1844,
+                1845,
+                1846,
+                1847,
+                1852,
+                1853,
+                1866,
+                1867,
+                1868,
+                1869,
+                1870,
+                1871,
+                1872,
+                1873,
+                1874,
+                1875,
+                2120,
+                2121,
+                2126,
+                2127,
+                2132,
+                2133,
+                2134,
+                2135
+            ],
+            "rubric": [
+                "LLM response should contain: strategies were explored to keep the relationship fresh and exciting, including reigniting romance through thoughtful date nights, surprises, and shared new hobbies",
+                "LLM response should contain: Practical steps were taken to implement these ideas, such as planning special outings, enhancing gestures like flower deliveries, and creating meaningful traditions",
+                "LLM response should contain: The significance of shared environments, like meeting at the community center, was highlighted for fostering common values and ongoing engagement through events and volunteering",
+                "LLM response should contain: Communication was a central theme, with emphasis on regular check-ins to align on future plans, health, finances, and legal matters, ensuring mutual understanding and security",
+                "LLM response should contain: Emotional intimacy was addressed through active listening, validating feelings, and creating safe spaces for vulnerability, supported by structured communication routines and conflict management strategies",
+                "LLM response should contain: Balancing busy schedules was tackled by prioritizing quality time, daily check-ins, and expressing appreciation, alongside managing work-life boundaries to reduce feelings of neglect",
+                "LLM response should contain: Physical touch emerged as a critical love language for April, especially during stressful times",
+                "LLM response should contain: Shared hobbies and creative activities were identified as vital for bonding, with tailored suggestions and plans to integrate these into your routine, fostering emotional closeness and mutual growth"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how I planned to reduce my work hours and balance my personal life?",
+            "ideal_summary": "You developed a gradual plan to reduce your work hours from 50 to 40 per week by July 2024 while maintaining performance. This involved assessing and prioritizing tasks, delegating responsibilities, streamlining work processes, communicating clearly with your supervisor, and monitoring progress regularly. Alongside this, you set boundaries like avoiding work emails after certain hours and focused on scheduling quality personal time to improve your work-life balance and relationships.",
+            "difficulty": "easy",
+            "summarization_type": "basic_process_overview",
+            "bullet_points_covered": 3,
+            "conversation_sessions": "236,237,238,239,240,241,248,249,254,314,315,320,321,334,335,466,467,472,473,478,479,768,769,770,776,777,780,781,782,783,784,785,984,985,986,987,988,989,990,991,1000,1001,1230,1231,1232,1233,1242,1243,1250,1251,1484,1485,1486,1508,1509,1510,1511,1516,1517,1762,1763,1764,1765,1774,1775,1776,1777,1778,1779,1780,1781,1782,1783,2082,2083,2088,2089,2098,2099",
+            "key_elements_tested": [
+                "gradual work hour reduction plan",
+                "work-life balance strategies",
+                "setting and communicating boundaries"
+            ],
+            "synthesis_required": "Combining basic planning, boundary setting, and personal balance strategies into a simple coherent summary",
+            "source_chat_ids": [
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                248,
+                249,
+                254,
+                314,
+                315,
+                320,
+                321,
+                334,
+                335,
+                466,
+                467,
+                472,
+                473,
+                478,
+                479,
+                768,
+                769,
+                770,
+                776,
+                777,
+                780,
+                781,
+                782,
+                783,
+                784,
+                785,
+                984,
+                985,
+                986,
+                987,
+                988,
+                989,
+                990,
+                991,
+                1000,
+                1001,
+                1230,
+                1231,
+                1232,
+                1233,
+                1242,
+                1243,
+                1250,
+                1251,
+                1484,
+                1485,
+                1486,
+                1508,
+                1509,
+                1510,
+                1511,
+                1516,
+                1517,
+                1762,
+                1763,
+                1764,
+                1765,
+                1774,
+                1775,
+                1776,
+                1777,
+                1778,
+                1779,
+                1780,
+                1781,
+                1782,
+                1783,
+                2082,
+                2083,
+                2088,
+                2089,
+                2098,
+                2099
+            ],
+            "rubric": [
+                "LLM response should contain: You developed a gradual plan to reduce your work hours from 50 to 40 per week by July 2024 while maintaining performance.",
+                "LLM response should contain: assessing and prioritizing tasks",
+                "LLM response should contain: delegating responsibilities",
+                "LLM response should contain: streamlining work processes",
+                "LLM response should contain: communicating clearly with your supervisor",
+                "LLM response should contain: monitoring progress regularly",
+                "LLM response should contain: you set boundaries like avoiding work emails after certain hours and focused on scheduling quality personal time to improve your work-life balance and relationships"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I started practicing active listening did I attend the communication workshop with April?",
+            "answer": "I started practicing active listening on April 1, 2024, and attended the communication workshop on April 15, 2024, so 14 days elapsed between these two events.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 1, 2024: started practicing active listening",
+                "April 15, 2024: communication workshop"
+            ],
+            "conversation_references": [
+                "Session 372: started practicing active listening",
+                "Sessions 304, 328: communication workshop scheduled"
+            ],
+            "calculation_required": "April 15 - April 1 = 14 days",
+            "source_chat_ids": {
+                "first_event": [
+                    372
+                ],
+                "second_event": [
+                    304,
+                    328
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 14 days",
+                "LLM response should state: from April 1 till April 15"
+            ]
+        },
+        {
+            "question": "How many days passed between the argument we had about weekend plans and the communication workshop where April mentioned feeling neglected?",
+            "answer": "46 days passed between the argument on February 28, 2024, and the communication workshop on April 15, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 28, 2024: argument about weekend plans",
+                "April 15, 2024: communication workshop where April mentioned feeling neglected"
+            ],
+            "conversation_references": [
+                "Session 264: argument about weekend plans",
+                "Session 584: communication workshop mention"
+            ],
+            "calculation_required": "April 15, 2024 - February 28, 2024 = 46 days",
+            "source_chat_ids": {
+                "first_event": [
+                    264
+                ],
+                "second_event": [
+                    584
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 46 days",
+                "LLM response should state: from February 28 till April 15"
+            ]
+        }
+    ]
+}

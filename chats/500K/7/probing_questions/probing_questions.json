@@ -1,0 +1,621 @@
+{
+    "abstention": [
+        {
+            "question": "What was the exact format and duration of the induction quiz Taylor took initially?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact format and duration of the induction quiz Taylor took initially.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Quiz scores are mentioned but quiz format and duration are not detailed",
+            "plan_reference": "Batch 1, Bullet 4",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact format and duration of the induction quiz Taylor took initially."
+            ]
+        },
+        {
+            "question": "Could you explain Taylor's motivation for preferring step-by-step explanations with concrete examples over abstract definitions?",
+            "ideal_response": "Based on the provided chat, there is no information related to Taylor's motivation for preferring step-by-step explanations with concrete examples over abstract definitions.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Preference is stated but motivation behind it is not explained",
+            "plan_reference": "Batch 1, Bullet 30",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Taylor's motivation for preferring step-by-step explanations with concrete examples over abstract definitions."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I completed any induction problems on sums of integers before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed 3 induction problems on sums of first n integers and scored 60% on a quiz, but you also mentioned that you've never completed any induction problems on sums of integers. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of induction problems on sums of integers",
+            "conversation_references": [
+                "Session 22: Completed 3 induction problems and scored 60%",
+                "Session 204: Never completed any induction problems on sums of integers"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    22
+                ],
+                "second_statement": [
+                    204
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have completed 3 induction problems on sums of first n integers with 60% score",
+                "LLM response should mention: you also said you have never completed any induction problems on sums of integers",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I solved any geometric series induction problems before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have solved 5 geometric series induction problems, but you also mentioned that you have never solved any. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "solving geometric series induction problems",
+            "conversation_references": [
+                "Session 726: Mention of solving 5 problems",
+                "Session 822: Statement of never solving any"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    726
+                ],
+                "second_statement": [
+                    822
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have solved 5 geometric series induction problems",
+                "LLM response should mention: you also said you have never solved any",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different examples and explanations related to the principle of mathematical induction throughout our conversations, in order (mention 7 items in order)?",
+            "answer": "You mentioned different examples and explanations related to mathematical induction in this order: 1) The classic sum of the first n integers formula, 2) Proofs involving divisibility, 3) Inequality proofs with exponential and polynomial expressions, 4) Real-world applications connected to paramedic work and disease spread models, 5) More advanced summation formulas involving squares of integers, 6) Discussions about the necessity of the base case and inductive step, and 7) Error analysis and verification of base cases in proofs.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Session 0 and 4: Sum of first n integers example",
+                "Session 2 and 6: Divisibility proofs",
+                "Session 16 and 18: Inequality proofs (2^n > n^2)",
+                "Session 34 and 36: Real-world paramedic and disease spread applications",
+                "Session 84: Sum of squares formula proof",
+                "Sessions 26, 50, 96: Explanation of base case and inductive step necessity",
+                "Sessions 60 and 80: Error correction and verification of base cases"
+            ],
+            "ordering_tested": [
+                "1st: Sum of first n integers example",
+                "2nd: Divisibility proofs",
+                "3rd: Inequality proofs",
+                "4th: Real-world applications",
+                "5th: Sum of squares formula",
+                "6th: Base case and inductive step explanations",
+                "7th: Error analysis and base case verification"
+            ],
+            "source_chat_ids": [
+                [
+                    0,
+                    4
+                ],
+                [
+                    2,
+                    6,
+                    8,
+                    46,
+                    48,
+                    100
+                ],
+                [
+                    16,
+                    18,
+                    20
+                ],
+                [
+                    34,
+                    36,
+                    38
+                ],
+                [
+                    84
+                ],
+                [
+                    26,
+                    50,
+                    96
+                ],
+                [
+                    60,
+                    80,
+                    82
+                ]
+            ],
+            "rubric": [
+                "LLM response should list: Sum of first n integers example",
+                "LLM response should list: Divisibility proofs",
+                "LLM response should list: Inequality proofs",
+                "LLM response should list: Real-world applications",
+                "LLM response should list: Sum of squares formula",
+                "LLM response should list: Base case and inductive step explanations",
+                "LLM response should list: Error analysis and base case verification"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of mathematical induction proofs develop throughout our conversations in order (mention 10 items)?",
+            "answer": "Your focus on mathematical induction proofs developed in this sequence: 1) Initial struggles with the inductive step in inequality proofs, 2) Requests for additional inequality examples to solidify understanding, 3) Concerns about carefully handling inequality signs and their impact, 4) Exploration of algebraic steps to connect inductive hypotheses to conclusions, 5) Introduction of modular arithmetic as a tool for divisibility proofs, 6) Specific divisibility problems involving powers and modular reasoning, 7) Clarifications on notation and terminology in divisibility induction proofs, 8) Revisiting base case verification and inductive step articulation for inequalities, 9) Deeper questions about preserving inequality directions and algebraic manipulations, 10) Final reflections on the logical flow and careful handling of inequalities in induction.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "320, 328",
+                "322, 324",
+                "326, 330, 332",
+                "334, 336, 346, 364, 366, 368, 382",
+                "342, 344, 360",
+                "348, 352, 354",
+                "360",
+                "382",
+                "368, 370, 372",
+                "336, 330, 340"
+            ],
+            "ordering_tested": [
+                "1st: Initial inductive step difficulties with inequalities",
+                "2nd: Seeking more inequality examples",
+                "3rd: Handling inequality signs carefully",
+                "4th: Algebraic steps in inductive proofs",
+                "5th: Modular arithmetic introduction",
+                "6th: Divisibility problems with powers",
+                "7th: Notation and terminology clarifications",
+                "8th: Base case and inductive step revisited",
+                "9th: Preserving inequality directions and algebraic concerns",
+                "10th: Logical flow and careful inequality handling"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "spans multiple conversation sessions",
+                "involves nuanced conceptual development",
+                "requires sophisticated sequence reconstruction",
+                "tests understanding of thematic evolution"
+            ],
+            "source_chat_ids": [
+                320,
+                328,
+                322,
+                324,
+                326,
+                330,
+                332,
+                334,
+                336,
+                346,
+                364,
+                366,
+                368,
+                382,
+                342,
+                344,
+                360,
+                348,
+                352,
+                354,
+                360,
+                382,
+                368,
+                370,
+                372,
+                336,
+                330,
+                340
+            ],
+            "rubric": [
+                "LLM response should list: Initial inductive step difficulties with inequalities",
+                "LLM response should list: Seeking more inequality examples",
+                "LLM response should list: Handling inequality signs carefully",
+                "LLM response should list: Algebraic steps in inductive proofs",
+                "LLM response should list: Modular arithmetic introduction",
+                "LLM response should list: Divisibility problems with powers",
+                "LLM response should list: Notation and terminology clarifications",
+                "LLM response should list: Base case and inductive step revisited",
+                "LLM response should list: Preserving inequality directions and algebraic concerns",
+                "LLM response should list: Logical flow and careful inequality handling"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How old did I say I am?",
+            "answer": "You said you are 21 years old.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: I\u2019m Taylor, a 21-year-old paramedic from Davistown, Palau, eager to master mathematical induction for my discrete math course.",
+            "key_facts_tested": [
+                "age"
+            ],
+            "source_chat_ids": [
+                1
+            ],
+            "rubric": [
+                "LLM response should state: 21 years old"
+            ]
+        },
+        {
+            "question": "How did you guide me through confirming the validity of my approach before encouraging me to tackle a related but distinct problem?",
+            "answer": "I first helped you verify your approach by reviewing the base case, inductive hypothesis, and inductive step for your initial problem, confirming that your reasoning was correct. After that, I encouraged you to build confidence by practicing a similar problem involving a different sequence, outlining the steps of base case, inductive hypothesis, and inductive step for that new problem as well.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial problem verification and subsequent problem introduction with detailed induction steps",
+            "key_facts_tested": [
+                "verification of base case, inductive hypothesis, and inductive step for first problem",
+                "confirmation that initial approach was correct",
+                "suggestion to practice a related problem involving a different sequence",
+                "detailed induction steps provided for the new problem"
+            ],
+            "extraction_challenge": "LLM must integrate the assistant's step-by-step validation of the user's initial proof with the subsequent introduction and explanation of a new induction problem, synthesizing guidance and encouragement across multiple conversation turns",
+            "source_chat_ids": [
+                31,
+                33
+            ],
+            "rubric": [
+                "LLM response should mention: verification of base case, inductive hypothesis, and inductive step for first problem",
+                "LLM response should mention: confirmation that initial approach was correct",
+                "LLM response should mention: suggestion to practice a related problem involving a different sequence, outlining the steps of base case, inductive hypothesis, and inductive step for that new problem"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you show me how to prove that the sum of the first n odd numbers equals n squared?",
+            "instruction_being_tested": "Always provide step-by-step explanations when I ask about induction proofs.",
+            "expected_compliance": "Response should include a detailed, sequential explanation of the proof process, covering each part clearly and logically.",
+            "compliance_indicators": [
+                "clear progression through proof stages",
+                "explicit explanation of each step",
+                "logical flow from start to finish"
+            ],
+            "non_compliance_signs": [
+                "brief or incomplete explanation",
+                "skipping steps",
+                "only stating the result without reasoning"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                198,
+                200,
+                202
+            ],
+            "rubric": [
+                "LLM response should include: clear progression through proof stages",
+                "LLM response should include: explicit explanation of each step",
+                "LLM response should include: the response should be step-by-step and detailed"
+            ]
+        },
+        {
+            "question": "Could you help me prove that every integer greater than 1 can be written as a product of primes using strong induction?",
+            "instruction_being_tested": "Always state all base cases explicitly when I ask about strong induction proofs.",
+            "expected_compliance": "Response should include a clear and explicit statement of all base cases before proceeding with the inductive step.",
+            "compliance_indicators": [
+                "explicit listing of all base cases",
+                "clear identification of starting points",
+                "base cases stated before induction step"
+            ],
+            "non_compliance_signs": [
+                "omission of some base cases",
+                "only one base case mentioned when more are needed",
+                "jumping directly to inductive step without base cases"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                710,
+                716
+            ],
+            "rubric": [
+                "LLM response should include: explicit listing of all base cases",
+                "LLM response should include: clear identification of starting points"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my current accuracy percentage for detecting errors in induction proofs?",
+            "answer": "95%",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "improved error detection accuracy percentage",
+            "conversation_references": [
+                "Skill Development: Reviewed 5 flawed induction proofs, identified errors, improved error detection accuracy from 50% to 85%.",
+                "Information Update: After reviewing more flawed proofs, my error detection accuracy increased to 95%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier accuracy of 85% instead of the updated 95%",
+            "source_chat_ids": {
+                "original_info": [
+                    446,
+                    448,
+                    450
+                ],
+                "updated_info": [
+                    586
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 95%"
+            ]
+        },
+        {
+            "question": "What score did I achieve on my number theory induction quiz most recently?",
+            "answer": "98%",
+            "difficulty": "easy",
+            "update_type": "quiz_score_improvement",
+            "tests_retention_of": "latest quiz score after additional practice",
+            "conversation_references": [
+                "Skill Development: Solved 5 number theory induction problems, quiz score improved from 78% to 92%.",
+                "Information Update: After additional practice, my number theory induction quiz score increased to 98%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier 92% quiz score instead of the latest 98%",
+            "source_chat_ids": {
+                "original_info": [
+                    832,
+                    834,
+                    836
+                ],
+                "updated_info": [
+                    964,
+                    966,
+                    968
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 98%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+         {
+            "question": "How did I apply the inductive hypothesis differently when proving summation formulas versus divisibility and inequality problems, and what patterns emerge in my reasoning approach across these proofs?",
+            "answer": "You applied the inductive hypothesis by substituting the assumed true statement for \\(k\\) into the expression for \\(k+1\\) in all cases, but for summation formulas you focused on algebraic manipulation and factorization to match the formula, for divisibility problems you rewrote expressions to isolate terms divisible by a number, and for inequalities you used the hypothesis to establish bounds and then compared terms. The pattern is that you adapt the inductive step to the problem type: algebraic expansion for sums, modular or factorization techniques for divisibility, and inequality manipulation for bounds, showing flexible use of the hypothesis tailored to the proof context.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id 80-85 (sum and sum of squares proofs)",
+                "chat_id 96-100 (induction concept and divisibility proof)",
+                "chat_id 262-265 (divisibility with inductive step and modular arithmetic)",
+                "chat_id 382-383 (inequality induction proof)"
+            ],
+            "reasoning_steps": [
+                "Identify how the inductive hypothesis is stated and used in sum formula proofs, focusing on algebraic substitution and factorization to prove the formula for k+1.",
+                "Analyze the approach in divisibility proofs where the inductive hypothesis is used to express terms as multiples of a divisor and rewrite expressions to show divisibility for k+1.",
+                "Examine the inequality proof where the inductive hypothesis provides a bound that is then used to establish a stronger inequality for k+1 through comparison.",
+                "Compare these approaches to recognize a pattern of adapting the inductive step method to the nature of the problem: algebraic manipulation for sums, modular reasoning for divisibility, and inequality bounding for inequalities.",
+                "Synthesize these observations to conclude that your reasoning evolves by tailoring the inductive hypothesis application to the problem type, demonstrating flexible and context-aware use of induction."
+            ],
+            "source_chat_ids": [
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                96,
+                97,
+                98,
+                99,
+                100,
+                262,
+                263,
+                264,
+                265,
+                382,
+                383
+            ],
+            "rubric": [
+                "LLM response should mention: You applied the inductive hypothesis by substituting the assumed true statement for \\(k\\) into the expression for \\(k+1\\) in all cases, but for summation formulas you focused on algebraic manipulation and factorization to match the formula",
+                "LLM response should mention: for divisibility problems you rewrote expressions to isolate terms divisible by a number",
+                "LLM response should mention: for inequalities you used the hypothesis to establish bounds and then compared terms",
+                "LLM response should mention: The pattern is that you adapt the inductive step to the problem type: algebraic expansion for sums, modular or factorization techniques for divisibility, and inequality manipulation for bounds",
+                "LLM response should mention: showing flexible use of the hypothesis tailored to the proof context"
+            ]
+        },
+        {
+            "question": "How many induction problems have I completed and what was my initial quiz score?",
+            "answer": "You have completed 3 induction problems and scored 60% on your initial quiz.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 1,
+            "conversation_references": [
+                "chat_id: 22"
+            ],
+            "reasoning_steps": [
+                "Identify the number of induction problems completed from the user's message.",
+                "Identify the initial quiz score mentioned by the user.",
+                "Combine these two pieces of information to answer the question."
+            ],
+            "source_chat_ids": [
+                22
+            ],
+            "rubric": [
+                "LLM response should state: You have completed 3 induction problems",
+                "LLM response should state: scored 60% on your initial quiz"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Could you suggest some problems I can work on that cover a range of topics to help me prepare thoroughly?",
+            "preference_being_tested": "I prefer mixed problem sets combining summation, divisibility, and inequalities for comprehensive review.",
+            "expected_compliance": "Response should include or recommend problem sets that integrate summation, divisibility, and inequalities rather than focusing on just one topic.",
+            "compliance_indicators": [
+                "mentions problems involving summation, divisibility, and inequalities",
+                "provides examples that combine multiple topics",
+                "suggests a diverse set of problems covering these areas"
+            ],
+            "non_compliance_signs": [
+                "recommends problems focused on only one topic",
+                "ignores the combination of different problem types",
+                "suggests narrowly focused problem sets"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content_selection",
+            "source_chat_ids": [
+                1314
+            ],
+            "rubric": [
+                "LLM response should mention: problems involving summation",
+                "LLM response should mention: problems involving divisibility",
+                "LLM response should mention: problems involving inequalities"
+            ]
+        },
+        {
+            "question": "Can you walk me through how to prove that the sum of the first n odd numbers equals n squared?",
+            "preference_being_tested": "I prefer step-by-step explanations with concrete examples over abstract definitions to grasp induction fully.",
+            "expected_compliance": "Response should provide a detailed, step-by-step induction proof with clear, concrete examples illustrating each part of the process rather than just stating abstract principles.",
+            "compliance_indicators": [
+                "breaks down the proof into base case and inductive step clearly",
+                "uses specific numeric examples to demonstrate each step",
+                "explains reasoning behind each step in simple terms"
+            ],
+            "non_compliance_signs": [
+                "only provides abstract definitions or general statements",
+                "skips detailed steps or examples",
+                "uses overly technical or vague explanations without concrete illustrations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "explanation_style",
+            "source_chat_ids": [
+                186,
+                188
+            ],
+            "rubric": [
+                "LLM response should include: clear breakdown into base case and inductive step",
+                "LLM response should include: specific numeric examples to demonstrate each step",
+                "LLM response should include: step-by-step and detailed explanation"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my overall learning journey and progress with mathematical induction based on our conversations?",
+            "ideal_summary": "Your learning journey with mathematical induction began with an initial request to understand the principle through a classic example involving the sum of the first n integers. Early on, you explored the base case and inductive step in detail, gaining clarity on how these components work together to prove statements for all positive integers. As your understanding deepened, you moved on to more complex examples, including divisibility proofs and inequalities, which helped you apply induction in varied contexts. Throughout the sessions, you expressed challenges and sought verification of your proofs, receiving step-by-step guidance and encouragement to practice further. Later discussions introduced real-world applications relevant to your paramedic work, linking abstract concepts to practical scenarios, and you received tips on tracking progress and maintaining study habits. Overall, your grasp of mathematical induction evolved from foundational comprehension to confident application, supported by progressively challenging problems and contextual examples.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                0,
+                3,
+                16,
+                22,
+                35
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "application to varied problems",
+                "progression of difficulty",
+                "real-world relevance",
+                "study and practice strategies"
+            ],
+            "synthesis_required": "Integrating conceptual explanations, problem-solving examples, user reflections, and practical applications into a coherent narrative of learning progression",
+            "source_chat_ids": [
+                0,
+                3,
+                16,
+                22,
+                35
+            ],
+            "rubric": [
+                "LLM response should mention: an initial request to understand the principle through a classic example involving the sum of the first n integers. Early on, you explored the base case and inductive step in detail, gaining clarity on how these components work together to prove statements for all positive integers.",
+                "LLM response should mention: moved on to more complex examples, including divisibility proofs and inequalities, which helped you apply induction in varied contexts.",
+                "LLM response should mention: Throughout the sessions, you expressed challenges and sought verification of your proofs, receiving step-by-step guidance and encouragement to practice further.",
+                "LLM response should mention: Later discussions introduced real-world applications relevant to your paramedic work, linking abstract concepts to practical scenarios, and you received tips on tracking progress and maintaining study habits."
+            ]
+        },
+        {
+            "question": "Can you give me a simple summary of what I learned about proving inequalities using induction?",
+            "ideal_summary": "You explored how to prove inequalities like \\(2^n \\geq n+1\\) using mathematical induction. The process involved verifying a base case, assuming the statement for an arbitrary integer \\(k\\), and then proving it for \\(k+1\\) by applying the inductive hypothesis carefully, especially when handling inequality signs. You also saw examples of using modular arithmetic to prove divisibility statements and learned the importance of maintaining inequality directions during algebraic manipulations.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "basic induction steps",
+                "handling inequalities",
+                "use of modular arithmetic in proofs"
+            ],
+            "synthesis_required": "Combining basic induction concepts and examples into a clear overview",
+            "source_chat_ids": [
+                321,
+                323,
+                329
+            ],
+            "rubric": [
+                "LLM response should mention: You explored how to prove inequalities like \\(2^n \\geq n+1\\) using mathematical induction. The process involved verifying a base case, assuming the statement for an arbitrary integer \\(k\\), and then proving it for \\(k+1\\) by applying the inductive hypothesis carefully, especially when handling inequality signs",
+                "LLM response should mention: You also saw examples of using modular arithmetic to prove divisibility statements",
+                "LLM response should mention: learned the importance of maintaining inequality directions during algebraic manipulations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How much did my quiz score improve between when I first completed 3 induction problems and when I solved 5 inequality induction problems?",
+            "answer": "My quiz score improved by 22%, from 60% after completing 3 induction problems to 82% after solving 5 inequality induction problems.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "After completing 3 induction problems: quiz score 60%",
+                "After solving 5 inequality induction problems: quiz score 82%"
+            ],
+            "conversation_references": [
+                "Session 22: completed 3 induction problems and scored 60%",
+                "Session 326: solved 5 inequality induction problems and scored 82%"
+            ],
+            "calculation_required": "82% - 60% = 22% improvement",
+            "source_chat_ids": {
+                "first_event": [
+                    22
+                ],
+                "second_event": [
+                    326
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 22% improvement",
+                "LLM response should state: from 60% to 82%"
+            ]
+        },
+        {
+            "question": "If I planned to study for 2 hours each day over 2 weeks to solve 5 induction problems, how many total hours will I spend studying by the end of that period?",
+            "answer": "I will spend a total of 28 hours studying, since 2 hours per day over 14 days (2 weeks) equals 2 \u00d7 14 = 28 hours.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "2 hours per day: daily study time",
+                "2 weeks: total study duration"
+            ],
+            "conversation_references": [
+                "chat_id 148",
+                "chat_id 150"
+            ],
+            "calculation_required": "2 hours/day \u00d7 14 days = 28 hours total",
+            "source_chat_ids": {
+                "first_event": [
+                    148
+                ],
+                "second_event": [
+                    150
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 28 hours total"
+            ]
+        }
+    ]
+}

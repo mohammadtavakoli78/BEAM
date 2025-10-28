@@ -1,0 +1,586 @@
+{
+    "abstention": [
+        {
+            "question": "What were the main discussion points during the meeting with Kendra at The Greenhouse Caf\u00e9 on June 5, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific discussion points of the June 5, 2024 meeting with Kendra.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The meeting is mentioned but the agenda or discussion details are not provided.",
+            "plan_reference": "Batch 2, Bullet 3 mentions the meeting but no content details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific discussion points of the June 5, 2024 meeting with Kendra."
+            ]
+        },
+        {
+            "question": "Can you provide details about the content and structure of the seminar on hedging with inverse ETFs hosted by Fidelity on September 2?",
+            "ideal_response": "Based on the provided chat, there is no information related to the content or structure of the Fidelity seminar on hedging with inverse ETFs.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The seminar attendance is mentioned but no details about the seminar itself are provided.",
+            "plan_reference": "Batch 3, Bullet 7 mentions seminar attendance without content details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the content or structure of the Fidelity seminar on hedging with inverse ETFs."
+            ]
+        }
+        
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever met Jeremy at any public events?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you first met Jeremy at a public event, but you also mentioned that you've never met him at any public event. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Jeremy at public events",
+            "conversation_references": [
+                "Session 24: Meeting Jeremy at festival",
+                "Session 124: Never met Jeremy at public event"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    24
+                ],
+                "second_statement": [
+                    124
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you first met Jeremy at a public event",
+                "LLM response should mention: you also mentioned that you've never met him at any public event.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever rejected any investment proposals from Jeremy?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you rejected Jeremy's investment proposal, but you also mentioned that you've never rejected any of his proposals. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Rejection of Jeremy's investment proposals",
+            "conversation_references": [
+                "Session 492: Rejected proposal",
+                "Session 522: Never rejected proposals"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    492
+                ],
+                "second_statement": [
+                    522
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you rejected Jeremy's investment proposal",
+                "LLM response should mention: you also mentioned that you've never rejected any of his proposals.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different portfolio management topics throughout our conversations in order (mention 8 items)?",
+            "answer": "You mentioned portfolio management topics in this order: 1) Considering the role of a close contact as a financial advisor, 2) Discussing rebalancing strategies and their impact, 3) Exploring bond laddering and its integration into the portfolio, 4) Reviewing specific meetings with my financial advisor to adjust strategy, 5) Debating the frequency and methods of rebalancing, 6) Making mid-year portfolio adjustments including asset allocation changes, 7) Addressing strategies to reduce investment anxiety, and 8) Planning year-end portfolio balancing and sustainability-focused investments.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 24, 26: Role of close contact as financial advisor",
+                "Session 130, 132, 134, 136: Rebalancing strategies discussion",
+                "Session 248, 250, 252: Bond laddering exploration",
+                "Session 434, 530, 540: Meetings with financial advisor about strategy",
+                "Session 530, 532: Rebalancing frequency and methods",
+                "Session 720, 722, 724: Mid-year portfolio adjustments",
+                "Session 836: Strategies to reduce investment anxiety",
+                "Session 954, 956, 960: Year-end portfolio balancing and sustainability investments"
+            ],
+            "ordering_tested": [
+                "1st: Role of close contact as financial advisor",
+                "2nd: Rebalancing strategies discussion",
+                "3rd: Bond laddering exploration",
+                "4th: Meetings with financial advisor about strategy",
+                "5th: Rebalancing frequency and methods",
+                "6th: Mid-year portfolio adjustments",
+                "7th: Strategies to reduce investment anxiety",
+                "8th: Year-end portfolio balancing and sustainability investments"
+            ],
+            "source_chat_ids": [
+                [
+                    24,
+                    26
+                ],
+                [
+                    130,
+                    132,
+                    134,
+                    136
+                ],
+                [
+                    248,
+                    250,
+                    252
+                ],
+                [
+                    434,
+                    530,
+                    540
+                ],
+                [
+                    530,
+                    532
+                ],
+                [
+                    720,
+                    722,
+                    724
+                ],
+                [
+                    836
+                ],
+                [
+                    954,
+                    956,
+                    960
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Role of close contact as financial advisor",
+                "LLM response should mention: Rebalancing strategies discussion",
+                "LLM response should mention: Bond laddering exploration",
+                "LLM response should mention: Meetings with financial advisor about strategy",
+                "LLM response should mention: Rebalancing frequency and methods",
+                "LLM response should mention: Mid-year portfolio adjustments",
+                "LLM response should mention: Strategies to reduce investment anxiety",
+                "LLM response should mention: Year-end portfolio balancing and sustainability investments",
+                "LLM response should list the topics in the correct order as specified"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different concerns and discussions about my investment portfolio throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned your investment portfolio topics in this order: 1) First, you asked about compliance with specific financial regulations, 2) Then you discussed prioritizing ESG fund options and related decisions, 3) Next, you brought up concerns about your friend John's portfolio losses and recovery prospects, 4) After that, you mentioned adopting and maximizing tax tools recommended by Stephen, 5) Finally, you raised worries about regional market risks and inflation hedging strategies with Stephen.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 74, 76, 78, 82, 84, 86: Compliance with financial regulations",
+                "Session 198, 202: ESG fund options and decisions",
+                "Session 360, 362, 364, 370, 372, 374, 902: Friend John's portfolio losses and recovery",
+                "Session 488, 1014: Adoption and use of tax tools",
+                "Session 642, 644, 646, 780, 1128, 1250: Regional market risks and inflation hedging"
+            ],
+            "ordering_tested": [
+                "1st: Compliance with financial regulations",
+                "2nd: ESG fund options and decisions",
+                "3rd: Friend John's portfolio losses and recovery",
+                "4th: Adoption and use of tax tools",
+                "5th: Regional market risks and inflation hedging"
+            ],
+            "source_chat_ids": [
+                [
+                    74,
+                    76,
+                    78,
+                    82,
+                    84,
+                    86
+                ],
+                [
+                    198,
+                    202
+                ],
+                [
+                    360,
+                    362,
+                    364,
+                    370,
+                    372,
+                    374,
+                    902
+                ],
+                [
+                    488,
+                    1014
+                ],
+                [
+                    642,
+                    644,
+                    646,
+                    780,
+                    1128,
+                    1250
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Compliance with financial regulations",
+                "LLM response should mention: ESG fund options and decisions",
+                "LLM response should mention: Friend John's portfolio losses and recovery",
+                "LLM response should mention: Adoption and use of tax tools",
+                "LLM response should mention: Regional market risks and inflation hedging"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What did I say my profession and age were when I first mentioned my income?",
+            "answer": "You said you are a 66-year-old science writer.",
+            "difficulty": "medium",
+            "question_type": "early_detail_recall",
+            "conversation_reference": "Turn 6: User's initial personal introduction",
+            "key_facts_tested": [
+                "age: 66",
+                "profession: science writer"
+            ],
+            "source_chat_ids": [
+                6
+            ],
+            "rubric": [
+                "LLM response should mention: 66",
+                "LLM response should mention: science writer"
+            ]
+        },
+        {
+            "question": "How much money did I say I have set aside for investment, and how much of it is available to use right away?",
+            "answer": "You have allocated $150,000 for investment, with $50,000 ready to deploy immediately.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I've allocated $150,000 for investment, with $50,000 ready to deploy immediately, how should I start investing it?",
+            "key_facts_tested": [
+                "total investment amount",
+                "immediately available funds"
+            ],
+            "source_chat_ids": [
+                40
+            ],
+            "rubric": [
+                "LLM response should mention: $150,000",
+                "LLM response should mention: $50,000"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I consider before making an investment?",
+            "instruction_being_tested": "Always highlight risk mitigation strategies when I ask about investment decisions.",
+            "expected_compliance": "Response should include discussion of methods to reduce potential losses or manage uncertainties related to investments.",
+            "compliance_indicators": [
+                "mention of ways to reduce potential losses",
+                "discussion of managing uncertainties",
+                "strategies to protect capital",
+                "approaches to limit downside"
+            ],
+            "non_compliance_signs": [
+                "only benefits or returns discussed",
+                "no mention of managing potential downsides",
+                "general investment advice without protective measures"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                424
+            ],
+            "rubric": [
+                "LLM response should include discussion of methods to reduce potential losses or manage uncertainties related to investments."
+            ]
+        },
+        {
+            "question": "What should I know about investing in companies that focus on long-term growth?",
+            "instruction_being_tested": "Always prioritize environmental impact details when I ask about sustainable investing.",
+            "expected_compliance": "Response should include detailed information about environmental effects related to the investments rather than general financial or social aspects.",
+            "compliance_indicators": [
+                "discussion of environmental consequences",
+                "impact on natural resources",
+                "carbon footprint considerations",
+                "ecological sustainability factors"
+            ],
+            "non_compliance_signs": [
+                "only financial returns discussed",
+                "focus on social or governance factors without environment",
+                "general investment advice without environmental context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_priority",
+            "source_chat_ids": [
+                1054
+            ],
+            "rubric": [
+                "LLM response should include detailed information about environmental effects related to the investments rather than general financial or social aspects."
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "When is my first portfolio review scheduled?",
+            "answer": "June 20, 2024",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "rescheduled date for the first portfolio review",
+            "conversation_references": [
+                "Investment Planning: I plan to review my portfolio quarterly, with the first review scheduled for June 15, 2024.",
+                "Information Update: I rescheduled my first portfolio review to June 20, 2024, to accommodate a family commitment."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original June 15, 2024 date instead of the rescheduled June 20, 2024 date",
+            "source_chat_ids": {
+                "original_info": [
+                    60
+                ],
+                "updated_info": [
+                    120
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: June 20, 2024"
+            ]
+        },
+        {
+            "question": "What is the volatility alert threshold set for my portfolio?",
+            "answer": "5.8%",
+            "difficulty": "moderate",
+            "update_type": "parameter_adjustment",
+            "tests_retention_of": "updated volatility alert threshold value",
+            "conversation_references": [
+                "Planning & Logistics Labels:Investment Planning: Adjusted rebalancing schedule to quarterly starting December 2025.",
+                "Information Update: The volatility alert threshold was adjusted to 5.8% to better capture market shifts."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original volatility alert threshold value instead of the updated 5.8%",
+            "source_chat_ids": {
+                "original_info": [
+                    936,
+                    940
+                ],
+                "updated_info": [
+                    942
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5.8%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total did I pay in fees for rebalancing, the art fund acquisition, and the Wealthfront subscription?",
+            "answer": "$245",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "transaction fees concern",
+                "art fund acquisition concern",
+                "Wealthfront subscription fees concern"
+            ],
+            "reasoning_steps": [
+                "Identify the fee amount mentioned for rebalancing in one session.",
+                "Identify the fee amount mentioned for the art fund acquisition in another session.",
+                "Identify the fee amount mentioned for the Wealthfront subscription in a third session.",
+                "Add all three fee amounts together to get the total."
+            ],
+            "source_chat_ids": [
+                140,
+                396,
+                500
+            ],
+            "rubric": [
+                "LLM response should mention: $245"
+            ]
+        },
+        {
+            "question": "How much did I reduce my US large-cap stock allocation by before increasing my bond allocation?",
+            "answer": "You reduced your US large-cap stock allocation by 10%.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "The user expressed concern about their stock allocation, mentioning they reduced US large-cap stocks from 45% to 35% and reallocated 10% to bonds",
+                "The user agreed that reducing US large-cap stocks to 35% and increasing bonds to 50% makes sense given market volatility concerns and the desire for stability"
+            ],
+            "reasoning_steps": [
+                "Identify the initial US large-cap stock allocation mentioned by the user (45%).",
+                "Identify the reduced US large-cap stock allocation mentioned later (35%).",
+                "Calculate the difference between the two allocations (45% - 35% = 10%)."
+            ],
+            "source_chat_ids": [
+                336,
+                338
+            ],
+            "rubric": [
+                "LLM response should mention: 10%"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm looking to adjust my investment portfolio. What strategies would you suggest to help me with this?",
+            "preference_being_tested": "I prefer tax-efficient investment strategies to maximize after-tax returns.",
+            "expected_compliance": "Response should prioritize or include investment strategies that minimize tax impact and enhance after-tax returns, reflecting the user's preference for tax efficiency.",
+            "compliance_indicators": [
+                "mentions tax-advantaged accounts or instruments",
+                "suggests tax-loss harvesting or deferral techniques",
+                "recommends investments with favorable tax treatment",
+                "avoids strategies that increase taxable events unnecessarily"
+            ],
+            "non_compliance_signs": [
+                "recommends high-turnover strategies without tax considerations",
+                "ignores tax implications in investment choices",
+                "focuses solely on pre-tax returns or growth",
+                "suggests frequent trading that could increase tax burden"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                496
+            ],
+            "rubric": [
+                "LLM response should include discussion of investment strategies that minimize tax impact and enhance after-tax returns."
+            ]
+        },
+        {
+            "question": "I'm looking to add some stocks to my portfolio. Can you suggest a few options I might consider?",
+            "preference_being_tested": "I prefer dividend-paying stocks for steady income over growth stocks.",
+            "expected_compliance": "Response should include recommendations of dividend-paying stocks rather than focusing solely on growth stocks, reflecting the user's preference for steady income.",
+            "compliance_indicators": [
+                "mentions dividend-paying stocks",
+                "includes companies known for regular dividends",
+                "prioritizes income-generating stocks in suggestions"
+            ],
+            "non_compliance_signs": [
+                "only suggests growth stocks",
+                "ignores dividend-paying options",
+                "focuses exclusively on capital appreciation stocks"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment style",
+            "source_chat_ids": [
+                796,
+                798
+            ],
+            "rubric": [
+                "LLM response should include recommendations of dividend-paying stocks rather than focusing solely on growth stocks."
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed and comprehensive summary of how my investment strategy and portfolio management evolved over time, including all key decisions, adjustments, and advice I received across my various meetings and discussions?",
+            "ideal_summary": "Over multiple sessions, your investment strategy and portfolio management evolved through a series of informed decisions and professional guidance aimed at balancing growth, risk, and diversification. Initially, you explored the possibility of involving a trusted partner in financial decision-making, weighing the benefits of trust and shared goals against potential biases and the need for professional advice. You then engaged with Kendra, your financial advisor, multiple times to refine your portfolio allocation, focusing on rebalancing strategies that combined periodic and threshold-based approaches to maintain alignment with your risk tolerance and financial goals. Discussions included detailed plans for implementing quarterly or semi-annual reviews, setting deviation thresholds, and leveraging tools like Vanguard\u2019s platform for monitoring and alerts. You also incorporated advanced strategies such as bond laddering to manage interest rate risk and provide income stability, diversifying across US Treasuries, municipal, and corporate bonds with staggered maturities. Your portfolio adjustments reflected a growing emphasis on diversification, including increasing international stock exposure, integrating sustainable investments like green bonds, and adding sector-specific allocations such as tech stocks and biotech ETFs. Throughout, you balanced the desire for growth with risk management, considering market conditions, tax implications, transaction costs, and volatility limits. Regular consultations with Kendra helped you navigate these complexities, with recommendations tailored to your evolving confidence and financial objectives. You also addressed investment anxiety by adopting strategies like regular reviews, clear goal setting, education, and professional support. The process culminated in a sophisticated, multi-faceted portfolio management approach that integrates technical, financial, and emotional considerations, ensuring your investments remain aligned with your long-term goals while adapting to changing circumstances.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                24,
+                25,
+                27,
+                55,
+                131,
+                135,
+                249,
+                435,
+                531,
+                955
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you explored the possibility of involving a trusted partner in financial decision-making, weighing the benefits of trust and shared goals against potential biases and the need for professional advice.",
+                "LLM response should mention: You then engaged with Kendra, your financial advisor, multiple times to refine your portfolio allocation, focusing on rebalancing strategies that combined periodic and threshold-based approaches to maintain alignment with your risk tolerance and financial goals.",
+                "LLM response should mention: Discussions included detailed plans for implementing quarterly or semi-annual reviews, setting deviation thresholds, and leveraging tools like Vanguard’s platform for monitoring and alerts.",
+                "LLM response should mention: You also incorporated advanced strategies such as bond laddering to manage interest rate risk and provide income stability, diversifying across US Treasuries, municipal, and corporate bonds with staggered maturities.",
+                "LLM response should mention: Your portfolio adjustments reflected a growing emphasis on diversification, including increasing international stock exposure, integrating sustainable investments like green bonds, and adding sector-specific allocations such as tech stocks and biotech ETFs.",
+                "LLM response should mention: Throughout, you balanced the desire for growth with risk management, considering market conditions, tax implications, transaction costs, and volatility limits.",
+                "LLM response should mention: Regular consultations with Kendra helped you navigate these complexities, with recommendations tailored to your evolving confidence and financial objectives.",
+                "LLM response should mention: You also addressed investment anxiety by adopting strategies like regular reviews, clear goal setting, education, and professional support.",
+                "LLM response should mention: The process culminated in a sophisticated, multi-faceted portfolio management approach that integrates technical, financial, and emotional considerations, ensuring your investments remain aligned with your long-term goals while adapting to changing circumstances."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of what I learned about managing my investments and portfolio?",
+            "ideal_summary": "You explored how to start investing with a focus on low-risk options and building an emergency fund, considered the benefits of involving a risk manager to guide investment decisions, and learned about using robo-advisors for automated portfolio management. Additionally, you received advice on handling portfolio returns, diversification strategies, and tax planning to optimize your overall financial approach.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 22,
+            "key_elements_tested": [
+                "basic investment steps",
+                "role of risk management",
+                "use of robo-advisors",
+                "portfolio and tax planning overview"
+            ],
+            "synthesis_required": "Combining straightforward investment guidance and portfolio management concepts into a clear summary",
+            "source_chat_ids": [
+                23,
+                31,
+                101
+            ],
+            "rubric": [
+                "LLM response should mention: You explored how to start investing with a focus on low-risk options and building an emergency fund.",
+                "LLM response should mention: You considered the benefits of involving a risk manager to guide investment decisions.",
+                "LLM response should mention: You learned about using robo-advisors for automated portfolio management.",
+                "LLM response should mention: Additionally, you received advice on handling portfolio returns, diversification strategies, and tax planning to optimize your overall financial approach."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many months passed between when my portfolio was valued at $152,000 and when I aim to reach $200,000?",
+            "answer": "Approximately 30 months passed between my portfolio value of $152,000 in March 2024 and my goal to reach $200,000 by December 2026.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 2024: portfolio valued at $152,000",
+                "December 2026: target portfolio value of $200,000"
+            ],
+            "conversation_references": [
+                "Session 142: portfolio value in March 2024",
+                "Sessions 42 and 46: target by December 2026"
+            ],
+            "calculation_required": "December 2026 - March 2024 = 2 years 9 months = 33 months",
+            "source_chat_ids": {
+                "first_event": [
+                    142
+                ],
+                "second_event": [
+                    42,
+                    46
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 33 months"
+            ]
+        },
+        {
+            "question": "How many years passed between when I met Jeremy at the book festival and when I started setting up the bond ladder with yearly maturities?",
+            "answer": "About 10 years passed between meeting Jeremy at the book festival in 2018 and starting to set up the bond ladder with bonds maturing every year for the next 10 years.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "October 12, 2018: met Jeremy at the book festival",
+                "Starting bond ladder with yearly maturities over 10 years"
+            ],
+            "conversation_references": [
+                "chat_id 24",
+                "chat_ids 248, 250"
+            ],
+            "calculation_required": "From 2018 to approximately 2028 = 10 years",
+            "source_chat_ids": {
+                "first_event": [
+                    24
+                ],
+                "second_event": [
+                    248,
+                    250
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 10 years"
+            ]
+        }
+    ]
+}

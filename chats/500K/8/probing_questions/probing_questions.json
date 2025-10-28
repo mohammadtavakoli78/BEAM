@@ -1,0 +1,534 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Susan's background and training as a paramedic in Palau?",
+            "ideal_response": "Based on the provided chat, there is no information related to Susan's background and training as a paramedic in Palau.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Susan's paramedic profession is mentioned but no details about her background or training are provided",
+            "plan_reference": "Batch 1, Bullet 2",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Susan's background and training as a paramedic in Palau."
+            ]
+        },
+        {
+            "question": "What specific feedback did Susan receive on the clarity and correctness of her written proof for the parabola reflection?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific feedback Susan received on her parabola reflection proof.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Feedback on proof writing is mentioned but no details are given",
+            "plan_reference": "Batch 3, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific feedback Susan received on her parabola reflection proof."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I worked on ellipse and hyperbola problems before, or is this my first time encountering them?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never solved any ellipse or hyperbola problems before, but you also mentioned completing several problems with a good score. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with ellipse and hyperbola problems",
+            "conversation_references": [
+                "Session 250: Never worked with these problems",
+                "Sessions 146 and 148: Completed problems and scored well"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    250
+                ],
+                "second_statement": [
+                    146,
+                    148
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you created Cypress tests for user login and personalized feed with a passing rate of 92%",
+                "LLM response should mention: you mentioned you have never created any Cypress tests for those features.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever worked on tangent and normal line problems before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never solved any tangent or normal line problems before, but you also mentioned completing several such problems with good accuracy. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with tangent and normal line problems",
+            "conversation_references": [
+                "Session 934: Never solved tangent or normal line problems",
+                "Session 842: Completed 6 tangent and normal line problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    934
+                ],
+                "second_statement": [
+                    842
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never solved any tangent or normal line problems before",
+                "LLM response should mention: you mentioned you completed tangent and normal line problems with good accuracy",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list in order how I brought up different aspects of conic sections and their properties throughout our conversations (mention 7 items)?",
+            "answer": "You mentioned aspects of conic sections in this order: 1) The geometric definition and properties of ellipses including foci and axes, 2) Applying ellipse equations to calculate eccentricity with given parameters, 3) Understanding and calculating eccentricity values and their impact on ellipse shape, 4) Exploring how eccentricity relates to distances within the ellipse and deriving equations from it, 5) Transitioning to hyperbolas by finding equations from given foci and points, 6) Calculating eccentricity and related distances for hyperbolas, and 7) Applying eccentricity concepts to model real-world hyperbolic orbits and finding focus distances.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Session 46: Ellipse definition and geometric properties",
+                "Session 132: Calculating ellipse eccentricity from equation",
+                "Sessions 500, 502, 504, 506: Eccentricity values and geometric implications for ellipses",
+                "Session 48: Finding hyperbola equation from foci and points",
+                "Sessions 766, 770: Hyperbola eccentricity calculations and applications"
+            ],
+            "ordering_tested": [
+                "1st: Ellipse geometric definition and properties",
+                "2nd: Ellipse eccentricity calculation from equation",
+                "3rd: Understanding eccentricity values and shape impact",
+                "4th: Deriving ellipse distances and equations from eccentricity",
+                "5th: Hyperbola equation from foci and points",
+                "6th: Hyperbola eccentricity and distance calculations",
+                "7th: Applying hyperbola eccentricity to real-world modeling"
+            ],
+            "source_chat_ids": [
+                46,
+                132,
+                500,
+                48,
+                766,
+                770
+            ],
+            "rubric": [
+                "LLM response should mention: Ellipse geometric definition and properties",
+                "LLM response should mention: Ellipse eccentricity calculation from equation",
+                "LLM response should mention: Understanding eccentricity values and shape impact",
+                "LLM response should mention: Deriving ellipse distances and equations from eccentricity",
+                "LLM response should mention: Hyperbola equation from foci and points",
+                "LLM response should mention: Hyperbola eccentricity and distance calculations",
+                "LLM response should mention: Applying hyperbola eccentricity to real-world modeling"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different concepts related to conic sections throughout our conversations, in order?",
+            "answer": "You mentioned the concepts in this order: 1) First, the reflective property of parabolas and their applications in satellite dishes and headlights (chat_id 102), 2) Then, solving problems involving the equation of a parabola with given points and vertex (chat_id 110), 3) Next, deriving the equation of a hyperbola and understanding its asymptotes (chat_id 200), 4) Then, calculating the eccentricity of a hyperbola and discussing the importance of its asymptotes (chat_id 338 and 340), 5) Finally, calculating the eccentricity of an ellipse and its influence on orbital mechanics, along with engineering applications of parabolic reflectors (chat_ids 796 and 800).",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 102: Reflective property of parabolas and applications",
+                "Session 110: Parabola equation problem solving",
+                "Session 200: Hyperbola equation derivation and asymptotes",
+                "Sessions 338 and 340: Hyperbola eccentricity and asymptotes importance",
+                "Sessions 796 and 800: Ellipse eccentricity and engineering applications"
+            ],
+            "ordering_tested": [
+                "1st: Reflective property of parabolas and applications",
+                "2nd: Parabola equation problem solving",
+                "3rd: Hyperbola equation derivation and asymptotes",
+                "4th: Hyperbola eccentricity and asymptotes importance",
+                "5th: Ellipse eccentricity and engineering applications"
+            ],
+            "source_chat_ids": [
+                102,
+                110,
+                200,
+                338,
+                796
+            ],
+            "rubric": [
+                "LLM response should mention: Reflective property of parabolas and applications",
+                "LLM response should mention: Parabola equation problem solving",
+                "LLM response should mention: Hyperbola equation derivation and asymptotes",
+                "LLM response should mention: Hyperbola eccentricity and asymptotes importance",
+                "LLM response should mention: Ellipse eccentricity and engineering applications"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What score did I say I got on the six problems I completed, and how did that compare to my previous percentage?",
+            "answer": "You said you scored 5 out of 6 correct, which improved your score from 75% to 83%.",
+            "difficulty": "medium",
+            "question_type": "status_and_result_recall",
+            "conversation_reference": "Turn 1: User's initial progress update",
+            "key_facts_tested": [
+                "score: 5/6",
+                "previous percentage: 75%",
+                "new percentage: 83%"
+            ],
+            "source_chat_ids": [
+                142
+            ],
+            "rubric": [
+                "LLM response should mention: scored 5 out of 6 correct",
+                "LLM response should mention: improved score from 75% to 83%"
+            ]
+        },
+        {
+            "question": "What value did I calculate for the distance to the foci in my problem?",
+            "answer": "You calculated the distance to the foci as 5.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message where you calculated c = \u221a(9 + 16) = 5 and located the foci at (\u00b15,0).",
+            "key_facts_tested": [
+                "distance to foci",
+                "calculated value c",
+                "numerical result 5"
+            ],
+            "source_chat_ids": [
+                352
+            ],
+            "rubric": [
+                "LLM response should mention: calculated distance to foci as 5"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "I'm trying to find the equation of the line that just touches a curve at a certain point. Could you help me figure out how to do that?",
+            "instruction_being_tested": "Always provide stepwise algebraic solutions when I ask about tangent and normal line problems.",
+            "expected_compliance": "Response should include a clear, step-by-step algebraic solution showing all calculations and reasoning for finding the tangent and normal lines.",
+            "compliance_indicators": [
+                "step-by-step algebraic derivation",
+                "all intermediate steps shown",
+                "explicit calculation of slopes and line equations",
+                "clear explanation of each step"
+            ],
+            "non_compliance_signs": [
+                "only final answer given",
+                "no intermediate algebraic steps",
+                "purely conceptual explanation",
+                "skipping calculations"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                496,
+                498
+            ],
+            "rubric": [
+                "LLM response should include: step-by-step algebraic derivation"
+            ]
+        },
+        {
+            "question": "How do you calculate the shape of an ellipse?",
+            "instruction_being_tested": "Always provide numeric examples with exact values when I ask about eccentricity concepts.",
+            "expected_compliance": "Response should include numeric examples with exact values illustrating the concept.",
+            "compliance_indicators": [
+                "numeric example with exact numbers",
+                "specific values used in explanation",
+                "calculation shown with numbers"
+            ],
+            "non_compliance_signs": [
+                "only conceptual explanation",
+                "no numbers given",
+                "vague or qualitative description"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                604
+            ],
+            "rubric": [
+                "LLM response should include: numeric example with exact values"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many hours did I study this week, and what score did I achieve on the proof writing quiz?",
+            "answer": "You studied for 6 hours and scored 90% on the proof writing quiz.",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated study time and quiz score",
+            "conversation_references": [
+                "Logged 5 hours study, improved proof writing quiz score from 70% to 85%.",
+                "I extended my study time to 6 hours this week, which helped increase my proof writing quiz score to 90%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall 5 hours study and 85% quiz score instead of the updated 6 hours and 90%.",
+            "source_chat_ids": {
+                "original_info": [
+                    318
+                ],
+                "updated_info": [
+                    382
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: studied for 6 hours",
+                "LLM response should mention: scored 90% on proof writing quiz"
+            ]
+        },
+        {
+            "question": "How many hours did I study this week to improve my graphing quiz score to 93%?",
+            "answer": "5 hours",
+            "difficulty": "easy",
+            "update_type": "study_time_increase",
+            "tests_retention_of": "updated study time associated with quiz score improvement",
+            "conversation_references": [
+                "Logged 4 hours study, graphing quiz score improved from 80% to 90%.",
+                "I increased my study time to 5 hours this week, which helped improve my graphing quiz score to 93%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 4 hours of study instead of the updated 5 hours",
+            "source_chat_ids": {
+                "original_info": [
+                    666
+                ],
+                "updated_info": [
+                    720
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: studied for 5 hours"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many total problems have I completed across parabola and eccentricity calculations, and what is my combined number of correct answers?",
+            "answer": "You completed 11 problems in total, with 9 correct answers.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "parabola practice and accuracy",
+                "vertex form practice",
+                "eccentricity calculation progress"
+            ],
+            "reasoning_steps": [
+                "Add the number of parabola problems completed (5) to the number of eccentricity problems completed (6).",
+                "Add the number of correct parabola answers (4) to the number of correct eccentricity answers (5).",
+                "Report the total problems completed and total correct answers."
+            ],
+            "source_chat_ids": [
+                34,
+                36,
+                512
+            ],
+            "rubric": [
+                "LLM response should mention: completed 11 problems in total",
+                "LLM response should mention: with 9 correct answers"
+            ]
+        },
+        { 
+            "question": "How has my quiz score improvement rate changed as my study time increased across my sessions, and what trend can I observe in my learning progress?",
+            "answer": "Your quiz score improvements per hour decreased as study time increased: initially about 1.25% per hour, then 1.25% per hour again, and finally 3% per hour, showing a non-linear trend with a notable jump in efficiency in the last session.",
+            "difficulty": "medium",
+            "reasoning_type": "pattern_analysis",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id 192",
+                "chat_id 198",
+                "chat_id 318",
+                "chat_id 76"
+            ],
+            "reasoning_steps": [
+                "Calculate the improvement rate per hour for the first session where study time and score improvement are given.",
+                "Calculate the improvement rate per hour for the second session with increased study time and score improvement.",
+                "Calculate the improvement rate per hour for the third session with different study time and score improvement.",
+                "Compare these rates to identify the trend in how your quiz score improvement rate changes with study time."
+            ],
+            "source_chat_ids": [
+                192,
+                198,
+                318,
+                76
+            ],
+            "rubric": [
+                "LLM response should mention: quiz score improvements per hour decreased as study time increased",
+                "LLM response should mention: initially about 1.25% per hour",
+                "LLM response should mention: then 1.25% per hour again",
+                "LLM response should mention: finally 3% per hour",
+                "LLM response should mention: showing a non-linear trend with a notable jump in efficiency in the last session"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you explain how eccentricity values influence the shape of an ellipse using a specific example?",
+            "preference_being_tested": "I prefer numeric examples with exact values to understand abstract concepts like eccentricity.",
+            "expected_compliance": "Response should include numeric examples with exact values to illustrate how eccentricity affects the ellipse shape, rather than only abstract or qualitative descriptions.",
+            "compliance_indicators": [
+                "provides numeric values in examples",
+                "uses exact numbers to demonstrate eccentricity",
+                "connects numeric eccentricity values to ellipse shape changes"
+            ],
+            "non_compliance_signs": [
+                "only gives abstract or verbal explanations",
+                "avoids using specific numbers or examples",
+                "fails to link eccentricity values to shape concretely"
+            ],
+            "difficulty": "medium",
+            "preference_type": "explanation_style",
+            "source_chat_ids": [
+                550
+            ],
+            "rubric": [
+                "LLM response should include: numeric example with exact values"
+            ]
+        },
+        {
+            "question": "Can you help me find the slope of the tangent line to the hyperbola (x\u00b2/25) - (y\u00b2/9) = 1 at the point (5,4)? I'd like to see the steps clearly laid out.",
+            "preference_being_tested": "I prefer solving problems with exact fractions before converting to decimals for clarity.",
+            "expected_compliance": "Response should present the slope calculation using exact fractions first, showing simplification steps before providing any decimal approximation.",
+            "compliance_indicators": [
+                "uses exact fractions in intermediate steps",
+                "shows fraction simplification clearly",
+                "provides decimal only after fraction steps",
+                "avoids jumping directly to decimals"
+            ],
+            "non_compliance_signs": [
+                "immediately converts to decimals",
+                "skips fraction simplification",
+                "only provides decimal answers",
+                "does not show fraction form at all"
+            ],
+            "difficulty": "medium",
+            "preference_type": "calculation_method",
+            "source_chat_ids": [
+                886
+            ],
+            "rubric": [
+                "LLM response should include: uses exact fractions in intermediate steps"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of what I learned about parabolas and hyperbolas from our recent discussions?",
+            "ideal_summary": "You explored the properties and equations of parabolas and hyperbolas. For parabolas, you confirmed the vertex form and how to find the vertex and focus, including deriving equations using completing the square and applying the reflective property in practical contexts like mirrors and satellite dishes. For hyperbolas, you learned how to identify vertices and foci from the standard equation, understood the relationship between parameters a, b, and c, and saw how the geometric definition leads to the standard form of the hyperbola equation.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 18,
+            "key_elements_tested": [
+                "basic concept explanation",
+                "parameter relationships",
+                "application of properties"
+            ],
+            "synthesis_required": "Combining fundamental details from multiple sessions into a clear overview",
+            "source_chat_ids": [
+                19,
+                33,
+                41,
+                143,
+                161,
+                163,
+                259,
+                261
+            ],
+            "rubric": [
+                "LLM response should include: You explored the properties and equations of parabolas and hyperbolas.",
+                "LLM response should include: For parabolas, you confirmed the vertex form and how to find the vertex and focus, including deriving equations using completing the square and applying the reflective property in practical contexts like mirrors and satellite dishes.",
+                "LLM response should include: For hyperbolas, you learned how to identify vertices and foci from the standard equation, understood the relationship between parameters a, b, and c, and saw how the geometric definition leads to the standard form of the hyperbola equation."
+            ]
+        },
+        {
+            "question": "I've been exploring various aspects of conic sections and their applications, including derivations, properties, and real-world uses. Could you provide a detailed and cohesive summary that captures the key concepts, methods, and examples we've covered across all these topics, integrating the mathematical foundations with their practical implications and highlighting how the different ideas connect and build upon each other?",
+            "ideal_summary": "The discussions comprehensively cover the mathematical foundations and applications of conic sections, focusing primarily on parabolas, ellipses, and hyperbolas. Starting with parabolas, the vertex form \\( y = a(x - h)^2 + k \\) was established, confirming vertex coordinates and the role of the parameter \\( p \\) in defining the focal length and directrix. The method of completing the square was detailed as a means to convert general quadratic equations into vertex form, facilitating the identification of vertex and focus. Problems involving finding parabola equations from vertex and focus coordinates demonstrated the practical use of these concepts, including calculating \\( p \\) as the distance between vertex and focus and applying it to derive the equation. The reflective property of parabolas was explored in depth, illustrating how incoming parallel rays reflect through the focus, with applications in parabolic mirrors and satellite dishes, supported by slope and normal vector calculations to confirm the reflection paths. Transitioning to ellipses, the geometric definition involving the constant sum of distances to two foci was used to derive the standard ellipse equation, with explicit steps showing how to express distances in terms of \\( x \\) and \\( y \\), isolate radicals, and simplify to the canonical form. The relationships among \\( a \\), \\( b \\), and \\( c \\) were clarified, including how \\( c^2 = a^2 - b^2 \\) governs the ellipse's shape and positioning of vertices and foci. Tangent lines to ellipses were addressed through implicit differentiation and the general tangent line formula, providing methods to find slopes and equations at specific points. For hyperbolas, the geometric definition based on the constant difference of distances to foci was explained, with the standard form \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) and the relationship \\( c^2 = a^2 + b^2 \\) detailed. The positions of vertices and foci were verified, correcting common misconceptions, and the derivation from the geometric definition was demonstrated through algebraic manipulation of distance expressions. Throughout, the connections between the conics\u2019 algebraic forms, geometric definitions, and physical properties were emphasized, illustrating how understanding these relationships enables solving diverse problems and applying conic sections in physics and engineering contexts. This integrated narrative highlights the progression from foundational equations to practical applications, weaving together multiple mathematical techniques and conceptual insights into a coherent framework.",
+            "difficulty": "hard",
+            "summarization_type": "knowledge_and_insight_integration_summary",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "mathematical derivations",
+                "geometric definitions",
+                "reflective properties",
+                "application examples",
+                "parameter relationships",
+                "problem-solving methods",
+                "conceptual integration",
+                "multi-topic synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                19,
+                33,
+                41,
+                143,
+                161,
+                163,
+                259
+            ],
+            "rubric": [
+                "LLM response should include: The discussions comprehensively cover the mathematical foundations and applications of conic sections, focusing primarily on parabolas, ellipses, and hyperbolas.",
+                "LLM response should include: Starting with parabolas, the vertex form \\( y = a(x - h)^2 + k \\) was established, confirming vertex coordinates and the role of the parameter \\( p \\) in defining the focal length and directrix.",
+                "LLM response should include: The method of completing the square was detailed as a means to convert general quadratic equations into vertex form, facilitating the identification of vertex and focus.",
+                "LLM response should include: Problems involving finding parabola equations from vertex and focus coordinates demonstrated the practical use of these concepts, including calculating \\( p \\) as the distance between vertex and focus and applying it to derive the equation.",
+                "LLM response should include: The reflective property of parabolas was explored in depth, illustrating how incoming parallel rays reflect through the focus, with applications in parabolic mirrors and satellite dishes, supported by slope and normal vector calculations to confirm the reflection paths.",
+                "LLM response should include: Transitioning to ellipses, the geometric definition involving the constant sum of distances to two foci was used to derive the standard ellipse equation, with explicit steps showing how to express distances in terms of \\( x \\) and \\( y \\), isolate radicals, and simplify to the canonical form.",
+                "LLM response should include: The relationships among \\( a \\), \\( b \\), and \\( c \\) were clarified, including how \\( c^2 = a^2 - b^2 \\) governs the ellipse's shape and positioning of vertices and foci.",
+                "LLM response should include: Tangent lines to ellipses were addressed through implicit differentiation and the general tangent line formula, providing methods to find slopes and equations at specific points.",
+                "LLM response should include: For hyperbolas, the geometric definition based on the constant difference of distances to foci was explained, with the standard form \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) and the relationship \\( c^2 = a^2 + b^2 \\) detailed.",
+                "LLM response should include: The positions of vertices and foci were verified, correcting common misconceptions, and the derivation from the geometric definition was demonstrated through algebraic manipulation of distance expressions.",
+                "LLM response should include: Throughout, the connections between the conics\u2019 algebraic forms, geometric definitions, and physical properties were emphasized, illustrating how understanding these relationships enables solving diverse problems and applying conic sections in physics and engineering contexts.",
+                "LLM response should include: This integrated narrative highlights the progression from foundational equations to practical applications, weaving together multiple mathematical techniques and conceptual insights into a coherent framework."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "I studied for 4 hours before my quiz on parabolas and later studied for 5 hours before improving my proof writing quiz score. How much longer did I study before improving my proof writing score compared to the parabola quiz?",
+            "answer": "I studied 1 hour longer before improving my proof writing quiz score (5 hours) compared to the 4 hours I studied before the parabola quiz.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "4 hours study before parabola quiz",
+                "5 hours study before proof writing quiz"
+            ],
+            "conversation_references": [
+                "chat_id 112",
+                "chat_id 318"
+            ],
+            "calculation_required": "5 hours - 4 hours = 1 hour",
+            "source_chat_ids": {
+                "first_event": [
+                    112
+                ],
+                "second_event": [
+                    318
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: studied 1 hour longer before improving proof writing quiz score"
+            ]
+        },
+        {
+            "question": "How much time passed between when I increased my study time to 5 hours this week and when I improved my quiz score to 93%?",
+            "answer": "The improvement to a 93% quiz score happened during the same week I increased my study time to 5 hours, so the time passed is within that same week.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Increased study time to 5 hours this week",
+                "Improved quiz score to 93% this week"
+            ],
+            "conversation_references": [
+                "Session 1: Increased study time and 90% quiz score",
+                "Session 2: Increased study time and 93% quiz score"
+            ],
+            "calculation_required": "Both events occurred within the same week, so the duration is less than or equal to 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    246
+                ],
+                "second_event": [
+                    930
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: improvement to a 93% quiz score happened during the same week I increased my study time to 5 hours"
+            ]
+        }
+    ]
+}

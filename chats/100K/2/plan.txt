@@ -1,0 +1,77 @@
+BATCH 1 PLAN  
+• **Time Anchor:** March 15, 2024, 09:00 CET  
+• **Personal Introduction:** I’m Christina, a colour technologist from Port Michael, excited to build a weather app using JavaScript and OpenWeather API v2.5.  
+• **Project Initialization:** Starting with vanilla JavaScript ES2021, HTML5, CSS3, targeting OpenWeather API endpoint `api.openweathermap.org/data/2.5/weather`.  
+• **Project Planning:** Scope includes fetching weather by city name, displaying temperature (°C), humidity (%), and conditions with icons from OpenWeather API.  
+• **Technical Implementation:** I want to implement asynchronous fetch calls using `fetch()` with async/await syntax for API requests.  
+• **Technical Implementation:** Plan to add city autocomplete using OpenWeather’s Geocoding API v1 with a debounce delay of 300ms to reduce API calls.  
+• **Technical Implementation:** Basic responsive design using CSS Grid and Flexbox targeting mobile (320px) to desktop (1920px) breakpoints.  
+• **Technical Implementation:** Error handling for invalid city names with user-friendly messages on HTTP 404 and 400 status codes.  
+• **Technical Implementation:** Deployment planned on GitHub Pages with automatic HTTPS and custom domain support.  
+• **Development Status:** Initial API key obtained on March 10, 2024, with 60 calls/minute rate limit and 1,000 calls/day quota.  
+• **Development Status:** Prototype fetch call latency averages 250ms on local network (100Mbps) with Chrome v112.0.5615.  
+• **Development Status:** UI wireframe completed on March 12, 2024, using Figma v107.4 with three main sections: input, results, error display.  
+• **Technical Challenge:** Deciding between using pure JavaScript or React 18.2 for frontend; chose vanilla JS for simplicity and faster deployment.  
+• **Technical Challenge:** API response caching considered but deferred due to 1,000 daily call limit and initial MVP focus.  
+• **Technical Challenge:** Handling CORS errors from OpenWeather API; confirmed no proxy needed as API supports CORS on client requests.  
+• **Technical Challenge:** Deadline set for MVP completion by April 5, 2024, to allow two weeks for testing and deployment.  
+• **Technical Challenge:** Trade-off between autocomplete accuracy and API call cost; implemented 300ms debounce to balance responsiveness and quota.  
+• **Preference Statement:** I prefer lightweight, dependency-free solutions over heavy frameworks to keep app size under 2.5MB total.  
+• **Personality Trait:** I enjoy lively debates on best coding practices but also value quiet reflection to refine my approach.  
+• **Code Quality & Standards:** Established ESLint v8.39 with Airbnb style guide for consistent JavaScript formatting and error prevention.  
+• **Framework & Technology:** Using OpenWeather API v2.5 with metric units parameter (`units=metric`) for temperature in Celsius.  
+• **Integration & API:** Configured environment variable `OPENWEATHER_API_KEY` in `.env` file for secure API key management during local development.  
+• **Performance & Optimization:** Set target API response time under 300ms to ensure smooth user experience on 4G mobile networks.  
+
+BATCH 2 PLAN  
+• **Time Anchor:** March 28, 2024, 14:30 CET  
+• **Personal Introduction:** I’m progressing on the weather app, now integrating city autocomplete and handling API errors more robustly.  
+• **Technical Implementation:** Implemented city autocomplete using OpenWeather Geocoding API v1 with a 5-item dropdown and 300ms debounce in `autocomplete.js`.  
+• **Technical Implementation:** Added error handling for HTTP 401 Unauthorized with message “Invalid API key” in `fetchWeatherData()` function.  
+• **Technical Implementation:** Created dynamic DOM rendering in `weatherDisplay.js` to update temperature, humidity, and weather icon SVGs on successful fetch.  
+• **Technical Implementation:** Added CSS media queries targeting 320px, 768px, and 1440px widths for responsive layout adjustments.  
+• **Development Status:** Autocomplete feature tested with 100+ city inputs; average API response time 280ms, 95% success rate on valid cities.  
+• **Development Status:** Encountered 3 bugs logged in Jira board: “TypeError: Cannot read property 'name' of undefined” in `autocomplete.js` line 58.  
+• **Development Status:** Fixed bug by adding null checks before accessing API response properties, reducing error rate from 12% to 1%.  
+• **Technical Challenge:** Decided between client-side vs server-side autocomplete; chose client-side to avoid backend complexity and reduce latency.  
+• **Technical Challenge:** Faced performance bottleneck with autocomplete input lag over 500ms on slower devices; optimized debounce and DOM updates.  
+• **Technical Challenge:** Trade-off made to limit autocomplete results to 5 to reduce API calls and improve UI clarity, sacrificing exhaustive search results.  
+• **Technical Challenge:** Handling 429 Too Many Requests error by implementing exponential backoff retry with max 3 attempts in `apiClient.js`.  
+• **Technical Challenge:** Decided against using third-party autocomplete libraries (e.g., Algolia Places) to keep app size below 2.5MB.  
+• **Debugging & Troubleshooting:** Investigated “Failed to fetch” network error on slow connections; added retry logic and user notification after 3 failed attempts.  
+• **Debugging & Troubleshooting:** Used Chrome DevTools Network tab to profile API calls; identified 400ms spikes during rapid input changes.  
+• **Code Review & Optimization:** Requested review of `fetchWeatherData()` async function for error handling and promise chaining improvements.  
+• **Code Quality & Standards:** Added Prettier v2.8 for automatic code formatting on save, integrated with ESLint for consistent style enforcement.  
+• **Testing & Quality Assurance:** Began writing unit tests with Jest v29 for `fetchWeatherData()` covering success, 404, 401, and 429 HTTP responses.  
+• **Testing & Quality Assurance:** Achieved 65% test coverage on API integration module after initial test suite run on March 27, 2024.  
+• **Framework & Technology:** Upgraded local dev environment to Node.js v18.15.0 for better ES2021 support and faster build times.  
+• **Integration & API:** Configured API endpoint URLs in `config.js` with versioning support for easy future upgrades to OpenWeather API v3.  
+• **Performance & Optimization:** Reduced average autocomplete input latency from 520ms to 290ms by optimizing event listeners and DOM updates.  
+• **Preference Statement:** I prefer writing custom code for core features to maintain full control and avoid external dependency risks.  
+• **Progress & Development:** Completed feature implementation for city autocomplete and dynamic weather display by March 26, 2024.  
+
+BATCH 3 PLAN  
+• **Time Anchor:** April 10, 2024, 11:00 CET  
+• **Personal Introduction:** I’m finalizing the weather app with deployment on GitHub Pages and adding error boundary UI for better user experience.  
+• **Technical Implementation:** Implemented error boundary component in vanilla JS to catch runtime errors and display fallback UI with retry button.  
+• **Technical Implementation:** Added localStorage caching for last 3 searched cities with timestamp to reduce API calls and improve load times.  
+• **Technical Implementation:** Integrated GitHub Actions CI pipeline to automate linting, testing (Jest v29), and deployment on push to `main` branch.  
+• **Technical Implementation:** Configured GitHub Pages deployment with custom domain `weather-christina.com` and HTTPS enforced since April 8, 2024.  
+• **Development Status:** Achieved 85% test coverage on core modules including API fetch, autocomplete, and error handling as of April 9, 2024.  
+• **Development Status:** Average API response time improved to 220ms after caching and code optimizations, measured on Chrome Lighthouse v10.0.0.  
+• **Development Status:** Uptime monitored at 99.9% over 7 days post-deployment with no reported downtime or API quota breaches.  
+• **Technical Challenge:** Faced security concern with exposing API key in client code; mitigated by restricting key usage to `weather-christina.com` domain.  
+• **Technical Challenge:** Decided against implementing OAuth authentication due to project scope and timeline constraints, focusing on public API usage.  
+• **Technical Challenge:** Trade-off made to store cached data in localStorage (5MB limit) sacrificing multi-device sync for faster local access.  
+• **Technical Challenge:** Addressed memory leak in autocomplete event listeners by properly removing listeners on component teardown in `autocomplete.js`.  
+• **Debugging & Troubleshooting:** Fixed “Unhandled Promise Rejection” warning in `fetchWeatherData()` by adding try/catch blocks around async calls.  
+• **Debugging & Troubleshooting:** Resolved CSS layout shift issues on mobile by setting fixed heights and min-widths in responsive media queries.  
+• **Code Review & Optimization:** Requested review of caching logic and error boundary implementation for potential race conditions and edge cases.  
+• **Code Quality & Standards:** Enforced commit message conventions with Husky v8 pre-commit hooks to maintain clean Git history.  
+• **Testing & Quality Assurance:** Added end-to-end tests with Cypress v12 covering user flows: search, autocomplete, error display, and retry mechanism.  
+• **Testing & Quality Assurance:** E2E tests passed with 98% success rate on GitHub Actions runners using Node.js v18.15.0 environment.  
+• **DevOps & Deployment:** Automated deployment triggered on every push to `main` branch with build timestamp embedded in `index.html` footer.  
+• **DevOps & Deployment:** Monitored GitHub Pages bandwidth usage; stayed under 1GB/month limit with 1,200+ unique visitors since launch.  
+• **Performance & Optimization:** Reduced initial page load time from 1.8s to 1.2s by minifying CSS and deferring non-critical JS scripts.  
+• **Preference Statement:** I prefer automated CI/CD pipelines to manual deployments to reduce human error and speed up release cycles.  
+• **Progress & Development:** Project marked feature-complete on April 9, 2024, with all MVP goals met and ready for user feedback collection.

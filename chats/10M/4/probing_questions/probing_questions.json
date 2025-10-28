@@ -1,0 +1,624 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the detailed content or key sections of the design overview document I shared with my team about modularity benefits?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed content or key sections of the design overview document.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The document is mentioned but no content details are provided",
+            "plan_reference": "Plan 1, Batch 1 bullet 3 mentions a design overview shared with the team",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed content or key sections of the design overview document"
+            ]
+        },
+        {
+            "question": "What was the outcome or feedback from the study group sessions with Rebecca and Kristy?",
+            "ideal_response": "Based on the provided chat, there is no information related to the outcomes or feedback from the study group sessions with Rebecca and Kristy.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Sessions are mentioned but no feedback or results are described.",
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the outcomes or feedback from the study group sessions with Rebecca and Kristy"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever formulated heat equation problems before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never formulated any heat equation problems before, but you also mentioned that your target is to formulate 5 heat equation problems starting with u_t = u_xx on the domain x in [0,\u03c0]. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience formulating heat equation problems",
+            "conversation_references": [
+                "Session 7210: Defining and solving heat equation",
+                "Session 7212: Goal to formulate heat equation problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    7210
+                ],
+                "second_statement": [
+                    7212
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never formulated any heat equation problems before",
+                "LLM response should mention: you also mentioned you completed 5 heat equation problems",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever constructed a Green's function for the operator L = d\u00b2/dx\u00b2 - k\u00b2 on the interval [0,1]?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have constructed a Green's function for d\u00b2/dx\u00b2 - 1 with certain boundary conditions, but also mentioned that you have never constructed any Green's function for L = d\u00b2/dx\u00b2 - k\u00b2 on [0,1]. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience constructing Green's functions for L = d\u00b2/dx\u00b2 - k\u00b2 on [0,1]",
+            "conversation_references": [
+                "Session 10928, 10938, 10946",
+                "Session 11108"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    10928,
+                    10938,
+                    10946
+                ],
+                "second_statement": [
+                    11108
+                ]
+            },
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have constructed a Green's function for d\u00b2/dx\u00b2 - 1",
+                "LLM response should mention: you mentioned that you have never constructed any Green's function for L = d\u00b2/dx\u00b2 - k\u00b2",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of Green's functions and related PDE solution methods from 2025-03-01 to 2025-03-31, in order? Mention ONLY and ONLY nine items.",
+            "answer": "You mentioned these aspects in this order: 1) Starting with the definition and basic understanding of Green's functions for PDEs, 2) Moving into construction methods for Green's functions using homogeneous solutions and boundary conditions, 3) Exploring Green's identities and integral formulas to link Green's functions to PDE solutions, 4) Applying Green's functions to solve inhomogeneous PDEs and incorporating boundary conditions, 5) Investigating symmetry and reciprocity properties of Green's functions, 6) Connecting Green's functions to eigenfunction expansions, 7) Applying Green's functions to specific PDEs like Laplace and Poisson equations, 8) Tackling analytical and computational approaches including numerical methods, and finally 9) Examining limitations and generalizations of Green's functions in complex PDE contexts.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 9,
+            "conversation_references": [
+                "10702",
+                "10892, 10894, 10902",
+                "11112, 11126",
+                "11318, 11324, 11336, 11416, 11528, 11534, 11594, 11596, 11598",
+                "11732, 11820, 11822",
+                "11918, 11926, 11944",
+                "12164, 12166, 12196, 12216",
+                "12398, 12400, 12402",
+                "12618, 12620, 12622, 12630, 12632"
+            ],
+            "ordering_tested": [
+                "1st: Definition and basic understanding",
+                "2nd: Construction methods and boundary conditions",
+                "3rd: Green's identities and integral formulas",
+                "4th: Solving inhomogeneous PDEs and boundary incorporation",
+                "5th: Symmetry and reciprocity properties",
+                "6th: Connection to eigenfunction expansions",
+                "7th: Application to Laplace and Poisson equations",
+                "8th: Analytical and computational approaches",
+                "9th: Limitations and generalizations"
+            ],
+            "source_chat_ids": [
+                10702,
+                [
+                    10892,
+                    10894,
+                    10902
+                ],
+                [
+                    11112,
+                    11126
+                ],
+                [
+                    11318,
+                    11324,
+                    11336,
+                    11416,
+                    11528,
+                    11534,
+                    11594,
+                    11596,
+                    11598
+                ],
+                [
+                    11732,
+                    11820,
+                    11822
+                ],
+                [
+                    11918,
+                    11926,
+                    11944
+                ],
+                [
+                    12164,
+                    12166,
+                    12196,
+                    12216
+                ],
+                [
+                    12398,
+                    12400,
+                    12402
+                ],
+                [
+                    12618,
+                    12620,
+                    12622,
+                    12630,
+                    12632
+                ]
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "Definition and basic understanding",
+                "Construction methods and boundary conditions",
+                "Green's identities and integral formulas",
+                "Solving inhomogeneous PDEs and boundary incorporation",
+                "Symmetry and reciprocity properties",
+                "Connection to eigenfunction expansions",
+                "Application to Laplace and Poisson equations",
+                "Analytical and computational approaches",
+                "Limitations and generalizations"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my PDE preparation process from 2024-07-01 to 2024-07-27, in order? Mention ONLY and ONLY eleven items.",
+            "answer": "You mentioned aspects of your PDE preparation in this order: 1) Starting your PDE journey and assessing foundational skills, 2) Solidifying calculus and algebra basics with differentiation techniques, 3) Diagnostic testing to identify weak areas, 4) Setting learning goals based on assessments, 5) Finalizing your preparation phase and reflecting on baseline competence, 6) Curating and expanding your study resources, 7) Developing a detailed study schedule and organizing study time, 8) Setting up symbolic computation tools and building your PDE toolkit, 9) Creating a glossary of PDE terminology to strengthen conceptual understanding, 10) Establishing milestones and progress tracking methods, 11) Forming a study group and planning for continuous self-assessment.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 11,
+            "conversation_references": [
+                "Session 0: Starting PDE journey and skill assessment",
+                "Sessions 144, 152: Calculus and algebra focus with differentiation",
+                "Session 296: Diagnostic testing focus",
+                "Session 940: Setting learning goals from assessments",
+                "Session 1400: Finalizing preparation and reflection",
+                "Sessions 1604, 1750, 1764: Resource curation and expansion",
+                "Sessions 2086, 2240, 2286: Study scheduling and organization",
+                "Session 2406: Symbolic computation tools setup",
+                "Session 2556: Glossary creation and terminology study",
+                "Session 2752: Milestones and progress tracking",
+                "Session 2906: Study group formation and self-assessment planning"
+            ],
+            "ordering_tested": [
+                "1st: Starting journey and skill assessment",
+                "2nd: Calculus and algebra foundation",
+                "3rd: Diagnostic testing",
+                "4th: Learning goals from assessments",
+                "5th: Finalizing preparation phase",
+                "6th: Resource curation",
+                "7th: Study scheduling",
+                "8th: Symbolic computation tools",
+                "9th: Glossary creation",
+                "10th: Milestones and tracking",
+                "11th: Study group and self-assessment"
+            ],
+            "source_chat_ids": [
+                0,
+                [
+                    144,
+                    152
+                ],
+                296,
+                940,
+                1400,
+                [
+                    1604,
+                    1750,
+                    1764
+                ],
+                [
+                    2086,
+                    2240,
+                    2286
+                ],
+                2406,
+                2556,
+                2752,
+                2906
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "Starting journey and skill assessment",
+                "Calculus and algebra foundation",
+                "Diagnostic testing",
+                "Learning goals from assessments",
+                "Finalizing preparation phase",
+                "Resource curation",
+                "Study scheduling",
+                "Symbolic computation tools",
+                "Glossary creation",
+                "Milestones and tracking",
+                "Study group and self-assessment"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How long did I say it would take me to confirm the discriminant for that PDE?",
+            "answer": "You said it would take you around 15 minutes to calculate and confirm the discriminant.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions needing around 15 minutes to confirm the discriminant.",
+            "key_facts_tested": [
+                "time to calculate discriminant",
+                "duration mentioned by user"
+            ],
+            "source_chat_ids": [
+                3804
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should state: 15 minutes"
+            ]
+        },
+        {
+            "question": "How long did I say the video I watched on separation of variables was?",
+            "answer": "You said the video was 30 minutes long.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: I watched a 30-minute video on separation of variables and noted that u(x,t) = sin(\u03c0x)*e^(-\u03c0\u00b2t) is a solution component...",
+            "key_facts_tested": [
+                "duration of the video watched"
+            ],
+            "source_chat_ids": [
+                5290
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: 30 minutes"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How do I use Green's functions to solve a PDE?",
+            "instruction_being_tested": "Always include example calculations when I ask about applying Green\u2019s functions.",
+            "expected_compliance": "Response should include example calculations demonstrating the application of Green's functions to the given PDE.",
+            "compliance_indicators": [
+                "step-by-step calculations",
+                "worked numerical or symbolic examples",
+                "explicit mathematical expressions shown",
+                "demonstration of solution process"
+            ],
+            "non_compliance_signs": [
+                "only conceptual explanation",
+                "no calculations shown",
+                "general description without examples",
+                "skipping mathematical steps"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                13314,
+                13316
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should contain: worked numerical or symbolic examples"
+            ]
+        },
+        {
+            "question": "How do I use the 'plot' function in MATLAB?",
+            "instruction_being_tested": "Always provide code snippets when I ask about MATLAB functions.",
+            "expected_compliance": "Response should include example code demonstrating the use of the MATLAB function mentioned.",
+            "compliance_indicators": [
+                "example MATLAB code",
+                "code snippet showing function usage",
+                "sample script using the function"
+            ],
+            "non_compliance_signs": [
+                "only textual explanation",
+                "no code provided",
+                "general description without examples"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                2082
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: example MATLAB code",
+                "LLM response should contain: code snippet showing function usage"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many problems from Section 14.3 on gradients have I solved correctly, and how much time did I spend on them?",
+            "answer": "You solved 9 problems correctly out of 12, spending 50 minutes.",
+            "difficulty": "easy",
+            "update_type": "practice_progress",
+            "tests_retention_of": "updated number of problems solved correctly and total problems attempted with time spent",
+            "conversation_references": [
+                "Worked on 10 problems from Section 14.3 on gradients, solving 7 correctly, like \u2207f = (2x, 2y) for f(x,y)=x\u00b2+y\u00b2, taking 45 minutes.",
+                "After additional practice, I managed to solve 12 problems from Section 14.3 on gradients, increasing my correct solutions to 9 within 50 minutes."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 7 correct out of 10 problems solved in 45 minutes instead of the updated 9 out of 12 in 50 minutes.",
+            "source_chat_ids": {
+                "original_info": [
+                    28
+                ],
+                "updated_info": [
+                    134
+                ]
+            },
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should state: 9 problems",
+                "LLM response should state: 50 minutes"
+            ]
+        },
+        {
+            "question": "What score did I achieve on my ODE quiz after practicing 25 problems?",
+            "answer": "88%",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated ODE quiz score after additional practice",
+            "conversation_references": [
+                "Set a target to raise my ODE quiz score from 75% to 90% by practicing 20 problems over the next few days.",
+                "My ODE quiz score improved to 88% after completing 25 practice problems over the past week."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original target score of 90% or the initial score of 75% instead of the actual achieved score of 88%.",
+            "source_chat_ids": {
+                "original_info": [
+                    162
+                ],
+                "updated_info": [
+                    290
+                ]
+            },
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should state: 88%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many total problems did I practice across calculus, integration, and ODE sets based on my progress updates?",
+            "answer": "85 problems",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Plan 1 Batch 1 Bullet 23",
+                "Plan 1 Batch 3 Bullet 23",
+                "Plan 1 Batch 5 Bullet 23"
+            ],
+            "reasoning_steps": [
+                "Add 10 calculus problems practiced in the first session",
+                "Add 15 integration problems practiced in the third session",
+                "Add 20 ODE problems practiced in the fifth session",
+                "Sum these to get total problems practiced"
+            ],
+            "source_chat_ids": [
+                100,
+                442,
+                734
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: 85 problems"
+            ]
+        },
+        {
+            "question": "How many times did I work with Rebecca on solving heat or wave equations involving sine initial conditions across my sessions?",
+            "answer": "You worked with Rebecca on solving heat or wave equations with sine initial conditions 3 times.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 7404",
+                "chat_id: 7405",
+                "chat_id: 7730"
+            ],
+            "reasoning_steps": [
+                "Identify sessions where you mentioned working with Rebecca on heat or wave equations with sine initial conditions.",
+                "Count each distinct session where such work was done.",
+                "Sum the total number of these sessions."
+            ],
+            "source_chat_ids": [
+                7404,
+                7405,
+                7730
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: 3 times"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning how to organize my study sessions for the next few chapters. How would you suggest structuring my note-taking and review periods to make the most of my time?",
+            "preference_being_tested": "I\u2019m testing digital versus handwritten notes, finding digital faster by 10 minutes per chapter summary.",
+            "expected_compliance": "Response should incorporate the user's experience with note-taking speed, favoring approaches that reflect efficiency in note-taking time, such as recommending digital note-taking or balancing methods that acknowledge time savings.",
+            "compliance_indicators": [
+                "suggests digital note-taking or a mix that accounts for speed",
+                "allocates time blocks reflecting faster note-taking methods",
+                "acknowledges time efficiency in note-taking strategies"
+            ],
+            "non_compliance_signs": [
+                "recommends only handwritten notes without addressing time",
+                "ignores note-taking speed differences",
+                "proposes schedules that do not consider note-taking duration"
+            ],
+            "difficulty": "medium",
+            "preference_type": "efficiency in note-taking method",
+            "source_chat_ids": [
+                2330,
+                2332,
+                2340
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: suggests digital note-taking or a mix that accounts for speed"
+            ]
+        },
+        {
+            "question": "When preparing for upcoming exams, what strategies would you recommend to balance reading new material and revisiting summaries of previous chapters so that I can optimize my study flow?",
+            "preference_being_tested": "I\u2019m testing digital versus handwritten notes, finding digital faster by 10 minutes per chapter summary.",
+            "expected_compliance": "Response should incorporate the user's experience with note-taking speed, favoring approaches that reflect efficiency in note-taking time, such as recommending digital note-taking or balancing methods that acknowledge time savings.",
+            "compliance_indicators": [
+                "suggests digital note-taking or a mix that accounts for speed",
+                "allocates time blocks reflecting faster note-taking methods",
+                "acknowledges time efficiency in note-taking strategies"
+            ],
+            "non_compliance_signs": [
+                "recommends only handwritten notes without addressing time",
+                "ignores note-taking speed differences",
+                "proposes schedules that do not consider note-taking duration"
+            ],
+            "difficulty": "medium",
+            "preference_type": "efficiency in note-taking method",
+            "source_chat_ids": [
+                2330,
+                2332,
+                2340
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: suggests digital note-taking or a mix that accounts for speed"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my learning journey and progress with Green's functions, including how my understanding and study habits evolved from 2025-03-01 to 2025-03-31?",
+            "ideal_summary": "Your learning journey with Green's functions began with grasping the fundamental definition as solutions to differential equations involving point sources. Initially, you focused on understanding continuity and jump conditions at the source point, ensuring the Green's function satisfies boundary conditions. Over multiple study sessions, you applied these concepts to solve boundary value problems for operators like d\u00b2/dx\u00b2, gradually tackling more complex PDEs such as the heat and wave equations. Your study habits evolved to include daily dedicated hours, reviewing one or two properties per session, utilizing visualization tools like MATLAB and Desmos, and engaging in collaborative discussions to clarify challenging concepts. Throughout this progression, you practiced formulating well-posed problems, verifying existence, uniqueness, and stability, and integrating numerical methods for evaluating integrals. This comprehensive approach reflects a deepening understanding and practical application of Green's functions in solving PDEs.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                10702,
+                10704,
+                10718,
+                10744,
+                13011
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "progress tracking",
+                "study habit evolution",
+                "application to PDEs",
+                "collaborative learning"
+            ],
+            "synthesis_required": "Integrating conceptual foundations, practical problem-solving, and study progression into a coherent narrative",
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should contain: you focused on understanding continuity and jump conditions at the source point, ensuring the Green's function satisfies boundary conditions",
+                "LLM response should contain: you applied these concepts to solve boundary value problems, gradually tackling more complex PDEs such as the heat and wave equations",
+                "LLM response should contain: Your study habits evolved to include daily dedicated hours, reviewing one or two properties per session, utilizing visualization tools like MATLAB and Desmos",
+                "LLM response should contain: you practiced formulating well-posed problems, verifying existence, uniqueness, and stability, and integrating numerical methods for evaluating integrals"
+            ]
+        },
+        {
+            "question": "Can you summarize my learning journey and progress with understanding the physical interpretations and solution methods of PDEs, including how I tackled different types, identified limitations of separation of variables, and approached non-separable cases from 2024-08-01 to 2024-10-22?",
+            "ideal_summary": "Your learning journey with PDEs began by exploring the physical interpretations of various types, such as elliptic PDEs modeling steady-state phenomena like temperature distribution and electrostatic potential, parabolic PDEs representing diffusion processes like heat flow, and hyperbolic PDEs describing wave propagation. You progressively deepened your understanding by practicing separation of variables on classic equations like the heat and wave equations, recognizing the importance of boundary and initial conditions in shaping solutions. As you encountered PDEs with non-homogeneous or nonlinear terms, you identified the limitations of separation of variables, particularly when extra terms coupled spatial and temporal variables, making direct separation impossible. To address these challenges, you learned to find particular solutions to handle non-homogeneous terms and transform PDEs into homogeneous forms amenable to separation of variables or alternative methods. Throughout your studies, you applied these concepts to a variety of PDEs, marking non-separable cases clearly and using eigenfunction expansions, numerical methods, or transformations to solve them, thereby steadily improving your proficiency and analytical skills in PDEs.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                4838,
+                4840,
+                4850,
+                4851,
+                4855
+            ],
+            "key_elements_tested": [
+                "progressive understanding",
+                "method limitations",
+                "physical interpretations",
+                "problem-solving approaches",
+                "conceptual development"
+            ],
+            "synthesis_required": "Integrating conceptual learning, practical problem-solving, and method evaluation across multiple sessions",
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: exploring the physical interpretations of various types, such as elliptic PDEs modeling steady-state phenomena like temperature distribution",
+                "LLM response should contain: exploring parabolic PDEs representing diffusion processes like heat flow, and hyperbolic PDEs describing wave propagation",
+                "LLM response should contain: deepened your understanding by practicing separation of variables on classic equations like the heat and wave equations, recognizing the importance of boundary and initial conditions in shaping solutions",
+                "LLM response should contain: As you encountered PDEs with non-homogeneous or nonlinear terms, you identified the limitations of separation of variables",
+                "LLM response should contain: you learned to find particular solutions to handle non-homogeneous terms and transform PDEs into homogeneous forms amenable to separation of variables",
+                "LLM response should contain: you applied these concepts to a variety of PDEs, marking non-separable cases clearly and using eigenfunction expansions, numerical methods, or transformations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I started intensifying my PDE preparation by targeting weak areas and when I began focusing on improving my note-taking and problem-solving methods?",
+            "answer": "13 days passed between starting to intensify PDE preparation on July 7 and beginning to work on note-taking and problem-solving methods on July 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "July 7: intensifying PDE preparation",
+                "July 20: focusing on note-taking and problem-solving"
+            ],
+            "conversation_references": [
+                "Session 1: PDE preparation intensification",
+                "Session 2: Note-taking and problem-solving focus"
+            ],
+            "calculation_required": "July 20 - July 7 = 13 days",
+            "source_chat_ids": {
+                "first_event": [
+                    638,
+                    640,
+                    642
+                ],
+                "second_event": [
+                    2240,
+                    2242,
+                    2286
+                ]
+            },
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: 13 days",
+                "LLM response should state: from July 7, 2024 till July 20, 2024"
+            ]
+        },
+        {
+            "question": "How many days after I started learning the fundamental concepts of PDEs did I begin studying separation of variables and Fourier series?",
+            "answer": "46 days elapsed between starting the journey into fundamental PDE concepts on August 1, 2024, and beginning the study of separation of variables and Fourier series on September 16, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "August 1, 2024: start fundamental PDE concepts",
+                "September 16, 2024: start separation of variables and Fourier series"
+            ],
+            "conversation_references": [
+                "chat_id 3214",
+                "chat_id 5238"
+            ],
+            "calculation_required": "September 16, 2024 - August 1, 2024 = 46 days",
+            "source_chat_ids": {
+                "first_event": [
+                    3214
+                ],
+                "second_event": [
+                    5238
+                ]
+            },
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should state: 46 days",
+                "LLM response should state: from August 1, 2024 till September 16, 2024"
+            ]
+        }
+    ]
+}

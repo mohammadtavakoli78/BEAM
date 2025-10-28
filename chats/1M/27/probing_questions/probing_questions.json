@@ -1,0 +1,726 @@
+{
+    "abstention": [
+        {
+            "question": "What specific drills did Scott recommend for improving my left-foot shots?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific drills Scott recommended for left-foot shots.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Scott\u2019s advice is mentioned generally but no drill details are given",
+            "plan_reference": "Batch 2, Bullet 6 mentions video analysis and suggestions without specifics",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific drills Scott recommended for left-foot shots"
+            ]
+        },
+        {
+            "question": "What are the main points covered in the article about hydration strategies for athletes that I read on June 1?",
+            "ideal_response": "Based on the provided chat, there is no information related to the main points of the hydration strategies article.",
+            "difficulty": "hard",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Article is referenced but no content or summary is provided",
+            "plan_reference": "Batch 4, Bullet 18 mentions article without details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the main points of the hydration strategies article"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever attended any soccer practice sessions or matches before joining the team?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any soccer practice sessions or matches before joining the team, but you also mentioned being invited by your son to join his local soccer team. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at soccer practice sessions or matches before joining the team",
+            "conversation_references": [
+                "Session 200: Never attended statement",
+                "Sessions 222, 226, 228, 230: Team involvement and practice discussions"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    200
+                ],
+                "second_statement": [
+                    222,
+                    226,
+                    228,
+                    230
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any soccer practice sessions or matches before joining the team",
+                "LLM response should mention: you also mentioned being invited by your son to join his local soccer team",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever scored or assisted in any official matches?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never scored or assisted in official matches, but you also mentioned celebrating scoring your first goal in an official match. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "scoring and assisting in official matches",
+            "conversation_references": [
+                "Session 1: Lack of scoring or assisting experience",
+                "Session 2: Celebrating first goal achievement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    612,
+                    614,
+                    616
+                ],
+                "second_statement": [
+                    574,
+                    580,
+                    584
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never scored or assisted in official matches",
+                "LLM response should mention: you also mentioned celebrating scoring your first goal in an official match",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different tactical and team strategy topics develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your discussions about tactical and team strategy topics progressed through these stages: 1) Initial questions about personal skill improvement and team integration, 2) Exploration of formation changes and voting outcomes, 3) Adjustments to pressing tactics and their strategic impact, 4) Introduction and practice of a new formation and its benefits, 5) Balancing competitive drive with team enjoyment and defensive positioning, 6) Decisions about team loyalty and confirmation of primary formation strategy, 7) Implementation of high pressing strategies following match outcomes, 8) Emphasis on quick transitions and counter-strategy adaptations, 9) Focus on maintaining possession and patient buildup, 10) Consideration of fast counterattack strategies for final matches.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 24, 26, 30, 34, 36",
+                "chat_id 242, 248, 250",
+                "chat_id 530, 542",
+                "chat_id 812, 818, 824",
+                "chat_id 852, 954, 960, 962",
+                "chat_id 1052, 1084, 1090, 1096, 1098",
+                "chat_id 1306, 1320, 1322, 1324, 1336, 1338",
+                "chat_id 1540",
+                "chat_id 1794, 1796, 1798",
+                "chat_id 2032, 2046"
+            ],
+            "ordering_tested": [
+                "1st: Personal skill and team integration",
+                "2nd: Formation changes and voting",
+                "3rd: Pressing tactics adjustments",
+                "4th: New formation practice and benefits",
+                "5th: Competitive balance and defensive focus",
+                "6th: Team loyalty and formation confirmation",
+                "7th: High pressing strategy implementation",
+                "8th: Quick transition and counter-strategy",
+                "9th: Possession and buildup emphasis",
+                "10th: Fast counterattack strategy consideration"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves multiple tactical and strategic dimensions",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse topics"
+            ],
+            "source_chat_ids": [
+                24,
+                26,
+                30,
+                34,
+                36,
+                242,
+                248,
+                250,
+                530,
+                542,
+                812,
+                818,
+                824,
+                852,
+                954,
+                960,
+                962,
+                1052,
+                1084,
+                1090,
+                1096,
+                1098,
+                1306,
+                1320,
+                1322,
+                1324,
+                1336,
+                1338,
+                1540,
+                1794,
+                1796,
+                1798,
+                2032,
+                2046
+            ],
+            "rubric": [
+                "Personal skill and team integration",
+                "Formation changes and voting",
+                "Pressing tactics adjustments",
+                "New formation practice and benefits",
+                "Competitive balance and defensive focus",
+                "Team loyalty and formation confirmation",
+                "High pressing strategy implementation",
+                "Quick transition and counter-strategy",
+                "Possession and buildup emphasis",
+                "Fast counterattack strategy consideration"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of my interactions with Coach Mehmet develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions of interactions with Coach Mehmet progressed as follows: 1) Initial communication and preparation for your trial match, 2) Discussions about team meetings and formation changes, 3) Feedback on adaptability and leadership development, 4) Praise related to stamina and vision with follow-up on motivation, 5) Consideration of captaincy responsibilities and balancing team roles, 6) Taking on the vice-captain role and related communication strategies, 7) Further praise on pressing and leadership with focus on improvement, 8) Emphasis on mental resilience and its impact on your mindset, 9) Recognition of tactical awareness and fitness with confidence reflections, 10) Final discussions about being named team captain and strategies for team cohesion.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "180, 184, 190",
+                "240, 246, 252, 254",
+                "554, 556, 558, 568",
+                "778, 784, 788",
+                "992, 998, 1000",
+                "1196, 1202, 1208",
+                "1452, 1454, 1464, 1466",
+                "1660, 1670, 1676",
+                "1936, 1940, 1946",
+                "2172, 2178, 2180"
+            ],
+            "ordering_tested": [
+                "1st: Trial match preparation",
+                "2nd: Team meetings and formation",
+                "3rd: Adaptability and leadership feedback",
+                "4th: Stamina and vision praise",
+                "5th: Captaincy considerations",
+                "6th: Vice-captain role and communication",
+                "7th: Pressing and leadership improvement",
+                "8th: Mental resilience emphasis",
+                "9th: Tactical awareness and fitness",
+                "10th: Team captain responsibilities"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "involves multiple thematic dimensions",
+                "spans numerous conversation sessions",
+                "tests development and evolution of topics",
+                "demands pattern recognition across mentions"
+            ],
+            "source_chat_ids": [
+                180,
+                184,
+                190,
+                240,
+                246,
+                252,
+                254,
+                554,
+                556,
+                558,
+                568,
+                778,
+                784,
+                788,
+                992,
+                998,
+                1000,
+                1196,
+                1202,
+                1208,
+                1452,
+                1454,
+                1464,
+                1466,
+                1660,
+                1670,
+                1676,
+                1936,
+                1940,
+                1946,
+                2172,
+                2178,
+                2180
+            ],
+            "rubric": [
+                "Trial match preparation",
+                "Team meetings and formation",
+                "Adaptability and leadership feedback",
+                "Stamina and vision praise",
+                "Captaincy considerations",
+                "Vice-captain role and communication",
+                "Pressing and leadership improvement",
+                "Mental resilience emphasis",
+                "Tactical awareness and fitness",
+                "Team captain responsibilities"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much did I spend on my new shin guards?",
+            "answer": "You spent $60 on your new shin guards.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message in chat_id 572",
+            "key_facts_tested": [
+                "purchase price"
+            ],
+            "source_chat_ids": [
+                572,
+                578,
+                582
+            ],
+            "rubric": [
+                "LLM response should state: $60"
+            ]
+        },
+        {
+            "question": "How did the way I marked my milestone with my family influence my motivation and confidence moving forward?",
+            "answer": "I celebrated scoring my first goal in an official match with a family dinner at Olive Tree Restaurant, which boosted my confidence, strengthened my support network, created positive memories, and helped me maintain a healthy balance between my athletic pursuits and personal life, all of which motivated me to continue improving.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: User mentions celebration at Olive Tree Restaurant; Assistant describes celebration details and later explains how that celebration impacted motivation and confidence",
+            "key_facts_tested": [
+                "celebration: family dinner",
+                "venue: Olive Tree Restaurant",
+                "achievement: first goal in official match",
+                "effects: boosted confidence, strengthened support network, created positive memories, promoted balance",
+                "role in motivation: reinforced positive feelings and ongoing encouragement"
+            ],
+            "extraction_challenge": "LLM must integrate details about the celebration event and its emotional and motivational impact from different conversation parts to explain how the celebration influenced ongoing motivation and confidence",
+            "source_chat_ids": [
+                574,
+                575,
+                580,
+                581,
+                584,
+                585
+            ],
+            "rubric": [
+                "LLM response should state: You celebrated scoring your first goal in an official match with a family dinner at Olive Tree Restaurant",
+                "boosted your confidence",
+                "strengthened your support network",
+                "created positive memories",
+                "helped you maintain a healthy balance between my athletic pursuits and personal life",
+                "motivated you to continue improving"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I know about the latest trends in staying healthy?",
+            "instruction_being_tested": "Always include nutritional details when I ask about health and wellness updates.",
+            "expected_compliance": "Response should include nutritional information related to the health and wellness topic discussed.",
+            "compliance_indicators": [
+                "mentions of vitamins, minerals, calories, or dietary components",
+                "details about food or nutrient content",
+                "information on nutrient benefits or impacts"
+            ],
+            "non_compliance_signs": [
+                "no mention of any nutritional information",
+                "only general health advice without nutrient details",
+                "discussion limited to exercise or lifestyle without food-related info"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                404
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of vitamins, minerals, calories, or dietary components",
+                "LLM response should contain: details about food or nutrient content"
+            ]
+        },
+        {
+            "question": "What does a good daily wellness routine look like for me?",
+            "instruction_being_tested": "Always include frequency changes when I ask about health and wellness routines.",
+            "expected_compliance": "Response should include how often different activities or habits should be done or adjusted over time, not just a list of activities.",
+            "compliance_indicators": [
+                "mentions of how often to perform activities",
+                "suggestions on changing frequency",
+                "frequency details for routines",
+                "timing or intervals for wellness habits"
+            ],
+            "non_compliance_signs": [
+                "only listing activities without frequency",
+                "no mention of how often to do things",
+                "general advice without timing",
+                "static routine without changes"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1232
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of how often to perform activities",
+                "LLM response should contain: suggestions on changing frequency"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my shooting accuracy percentage based on my recent practice?",
+            "answer": "60%",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated shooting accuracy percentage",
+            "conversation_references": [
+                "Goals & Progress:Skill Improvement: I tracked shooting drills daily, increasing accuracy from 40% to 55% by April 9.",
+                "Information Update: I increased my shooting accuracy to 60% by April 12 after intensifying daily drills."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier 55% accuracy instead of the updated 60%",
+            "source_chat_ids": {
+                "original_info": [
+                    256
+                ],
+                "updated_info": [
+                    402
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 60%"
+            ]
+        },
+        {
+            "question": "How many times per week do I practice yoga to improve my flexibility?",
+            "answer": "Twice per week",
+            "difficulty": "easy",
+            "update_type": "frequency_increase",
+            "tests_retention_of": "increased frequency of weekly yoga sessions",
+            "conversation_references": [
+                "Health & Wellness:Injury Prevention: Added weekly yoga sessions on July 23 to improve flexibility and reduce injury risk.",
+                "Information Update: I increased my weekly yoga sessions to twice per week starting August 3 to enhance flexibility."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original once per week frequency instead of the updated twice per week frequency",
+            "source_chat_ids": {
+                "original_info": [
+                    1230
+                ],
+                "updated_info": [
+                    1230
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Twice per week"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different pieces of equipment have I mentioned buying or maintaining across my sessions?",
+            "answer": "Three pieces of equipment: cleats, ankle braces, and shin guards.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "80-81",
+                "336-351",
+                "572-583"
+            ],
+            "reasoning_steps": [
+                "Identify the equipment mentioned in the cleats-related sessions.",
+                "Identify the equipment mentioned in the ankle braces-related sessions.",
+                "Identify the equipment mentioned in the shin guards-related sessions and count all unique equipment types."
+            ],
+            "source_chat_ids": [
+                80,
+                81,
+                336,
+                337,
+                342,
+                343,
+                350,
+                351,
+                572,
+                573,
+                578,
+                579,
+                582,
+                583
+            ],
+            "rubric": [
+                "LLM response should state: Three pieces",
+                "LLM response should state: cleats",
+                "LLM response should state: ankle braces",
+                "LLM response should state: shin guards"
+            ]
+        },
+        {
+            "question": "Considering my logged shots, running distances, goals, assists, and recent tactical changes, how should I prioritize training to maximize scoring while maintaining passing accuracy and adapting to pressing tactics?",
+            "answer": "You should prioritize a balanced training plan that integrates shooting power and accuracy drills (leveraging your shot tracking and goal data), endurance and agility work (to sustain running demands and pressing adaptation), passing precision exercises (to maintain your target pass accuracy), and tactical drills focused on aggressive pressing and defensive transitions. This approach aligns with your performance metrics, positional demands, and recent formation changes, ensuring you enhance scoring output without sacrificing passing efficiency or tactical responsiveness.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "Tracking shots and shot power improvement",
+                "Balancing shooting accuracy and passing skills",
+                "Adapting to aggressive pressing tactics",
+                "Running distance impact and comparison",
+                "Performance metrics of goals and assists",
+                "Balancing defensive formation with personal goals"
+            ],
+            "reasoning_steps": [
+                "Analyze shot tracking and shot power improvements to identify the need for focused shooting drills to maximize scoring potential.",
+                "Incorporate passing skill development to maintain or improve passing accuracy, considering your personal goal and midfielder role.",
+                "Factor in running distance data to ensure endurance and agility training supports sustained high-intensity efforts during matches and pressing.",
+                "Integrate tactical adaptation to aggressive pressing, requiring enhanced speed, positioning, and team coordination.",
+                "Consider the impact of the new defensive formation on your role, balancing defensive responsibilities with offensive contributions.",
+                "Synthesize all data points to recommend a comprehensive, balanced training focus that maximizes scoring while maintaining passing accuracy and adapting to tactical demands."
+            ],
+            "source_chat_ids": [
+                316,
+                322,
+                530,
+                542,
+                758,
+                952,
+                956
+            ],
+            "rubric": [
+                "LLM response should state: prioritize a balanced training plan that integrates shooting power and accuracy drills",
+                "LLM response should state: endurance and agility work (to sustain running demands and pressing adaptation)",
+                "LLM response should state: passing precision exercises (to maintain your target pass accuracy)",
+                "LLM response should state: tactical drills focused on aggressive pressing and defensive transitions"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm trying to decide what time and place to schedule my practice sessions. What would you suggest?",
+            "preference_being_tested": "I prefer practicing in the evening at Riverside Park over morning sessions due to cooler temperatures and less crowd.",
+            "expected_compliance": "Response should recommend or acknowledge evening practice sessions at Riverside Park, reflecting the user's preference for that time and location without contradicting it.",
+            "compliance_indicators": [
+                "suggests evening practice times",
+                "mentions Riverside Park as a suitable location",
+                "acknowledges benefits of less crowded or cooler conditions without explicitly stating them"
+            ],
+            "non_compliance_signs": [
+                "only suggests morning sessions",
+                "recommends locations other than Riverside Park without justification",
+                "ignores user's preference for time and place"
+            ],
+            "difficulty": "medium",
+            "preference_type": "location_and_time_preference",
+            "source_chat_ids": [
+                134,
+                144,
+                152
+            ],
+            "rubric": [
+                "LLM response should contain: suggests evening practice times",
+                "LLM response should contain: mentions Riverside Park as a suitable location",
+                "LLM response should contain: acknowledges benefits of less crowded or cooler conditions without explicitly stating them"
+            ]
+        },
+        {
+            "question": "What would be a good routine for practicing shooting each week to help me improve steadily?",
+            "preference_being_tested": "I prefer practicing shooting on Sundays due to less traffic and better lighting at Riverside Park.",
+            "expected_compliance": "Response should suggest a practice schedule or routine that aligns with the user's preference for Sundays, implicitly respecting the timing and conditions mentioned without explicitly referencing them.",
+            "compliance_indicators": [
+                "recommends Sunday as a practice day",
+                "mentions conditions like less traffic or better lighting without prompting",
+                "tailors advice to a weekly shooting routine that fits Sunday practice"
+            ],
+            "non_compliance_signs": [
+                "recommends other days without justification",
+                "ignores timing or environmental factors",
+                "provides generic advice not tailored to a specific practice day"
+            ],
+            "difficulty": "medium",
+            "preference_type": "practice scheduling",
+            "source_chat_ids": [
+                276,
+                282,
+                290
+            ],
+            "rubric": [
+                "LLM response should contain: recommends Sunday as a practice day",
+                "LLM response should contain: mentions conditions like less traffic or better lighting without prompting"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how I've developed and managed my soccer involvement alongside my professional career, including how I've prepared for matches, handled leadership roles, and balanced training with other commitments?",
+            "ideal_summary": "Over the course of our discussions, you have progressively balanced your career as a clinical psychologist with your growing involvement in soccer. Initially, you focused on managing your time and finances to accommodate both work and your new hobby, emphasizing scheduling, budgeting, and maintaining physical and mental health. Leveraging your professional expertise, you began supporting your teammates' mental preparation through mindfulness, goal setting, and team-building strategies. As you took on the role of right midfielder, you prepared through targeted technical, tactical, physical, and mental training, while also learning to communicate effectively with your coach and manage practice alongside organizational responsibilities. Your leadership skills were recognized and further developed through leading by example, effective communication, and strategic planning. Throughout, you adapted your training schedule to prevent overtraining, incorporating recovery and nutrition strategies. You also planned for contingencies like weather disruptions and balanced physical and mental aspects of soccer to maintain overall well-being. This journey reflects a thoughtful integration of your professional life with athletic development, leadership growth, and practical management of training and team dynamics.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                23,
+                29,
+                377,
+                385,
+                387,
+                401,
+                555,
+                557,
+                719,
+                725,
+                731,
+                1213,
+                1219,
+                1223,
+                1229,
+                1473,
+                1479,
+                1483,
+                1487,
+                1681,
+                1687,
+                1695,
+                1953,
+                1959,
+                1967,
+                2189,
+                2195,
+                2199
+            ],
+            "key_elements_tested": [
+                "career and hobby balance",
+                "mental and physical preparation",
+                "leadership development",
+                "training and recovery management",
+                "communication and contingency planning"
+            ],
+            "synthesis_required": "Integrating multiple facets of personal, professional, and athletic development into a coherent narrative showing progression and balance",
+            "source_chat_ids": [
+                23,
+                29,
+                377,
+                385,
+                387,
+                401,
+                555,
+                557,
+                719,
+                725,
+                731,
+                1213,
+                1219,
+                1223,
+                1229,
+                1473,
+                1479,
+                1483,
+                1487,
+                1681,
+                1687,
+                1695,
+                1953,
+                1959,
+                1967,
+                2189,
+                2195,
+                2199
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on managing your time and finances to accommodate both work and your new hobby, emphasizing scheduling, budgeting, and maintaining physical and mental health",
+                "LLM response should contain: Leveraging your professional expertise, you began supporting your teammates' mental preparation through mindfulness, goal setting, and team-building strategies",
+                "LLM response should contain: you prepared through targeted technical, tactical, physical, and mental training, while also learning to communicate effectively with your coach",
+                "LLM response should contain: Your leadership skills were recognized and further developed through leading by example, effective communication, and strategic planning",
+                "LLM response should contain: you adapted your training schedule to prevent overtraining, incorporating recovery and nutrition strategies",
+                "LLM response should contain: You also planned for contingencies like weather disruptions and balanced physical and mental aspects of soccer to maintain overall well-being"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my role and performance as vice-captain have developed over time and influenced my contributions to the team?",
+            "ideal_summary": "Your role as vice-captain has evolved significantly through various matches and training sessions, reflecting growth in both leadership and on-field performance. Early on, you focused on balancing your responsibilities with personal goals, managing time effectively, and maintaining motivation. As you gained experience, you improved your technical skills, tactical awareness, and physical conditioning, which was evident in your increasing goal and assist counts as well as your running distances during matches. Your leadership matured through enhanced communication with teammates and coaches, fostering team cohesion and morale. You also learned to handle the pressures of the role by delegating tasks, supporting teammates, and maintaining your own performance through mental and physical preparation. This progression culminated in you leading by example during key matches, providing strategic input, and actively participating in team discussions, all of which contributed to stronger team dynamics and success on the field.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                1240,
+                1496,
+                1501,
+                1710,
+                1986
+            ],
+            "key_elements_tested": [
+                "role development",
+                "performance progression",
+                "leadership impact",
+                "team dynamics",
+                "balance of responsibilities"
+            ],
+            "synthesis_required": "Integrating leadership growth, performance metrics, communication, and personal development into a coherent narrative",
+            "source_chat_ids": [
+                1240,
+                1496,
+                1501,
+                1710,
+                1986
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on balancing your responsibilities with personal goals, managing time effectively, and maintaining motivation",
+                "LLM response should contain: you improved your technical skills, tactical awareness, and physical conditioning, which was evident in your increasing goal and assist counts as well as your running distances during matches",
+                "LLM response should contain: Your leadership matured through enhanced communication with teammates and coaches, fostering team cohesion and morale",
+                "LLM response should contain: You also learned to handle the pressures of the role by delegating tasks, supporting teammates, and maintaining your own performance through mental and physical preparation",
+                "LLM response should contain: This progression culminated in you leading by example during key matches, providing strategic input, and actively participating in team discussions, all of which contributed to stronger team dynamics"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I started my regular Tuesday and Thursday soccer practices did I reserve the Riverside Park field for high pressing drills?",
+            "answer": "I started my regular soccer practices on March 20, and I reserved the Riverside Park field for high pressing drills on September 5, so 169 days elapsed between starting practice and the reservation.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 20: practice schedule starts",
+                "September 5: field reservation for drills"
+            ],
+            "conversation_references": [
+                "Session 54: practice schedule start",
+                "Session 1472: field reservation"
+            ],
+            "calculation_required": "September 5 - March 20 = 169 days",
+            "source_chat_ids": {
+                "first_event": [
+                    54
+                ],
+                "second_event": [
+                    1472
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 169 days",
+                "LLM response should state: from March 20 till September 5"
+            ]
+        },
+        {
+            "question": "How many months are there between my team scrimmage at Riverside Park field #1 and the field booking I made for Riverside Park field #3?",
+            "answer": "There are about 5 and a half months between the team scrimmage on April 20 and the field booking for October 10.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 20: team scrimmage at Riverside Park field #1",
+                "October 10: field booking at Riverside Park field #3"
+            ],
+            "conversation_references": [
+                "Sessions 358, 366, 372: team scrimmage scheduling and preparation",
+                "Sessions 1680, 1686, 1694: field booking and related planning"
+            ],
+            "calculation_required": "October 10 - April 20 \u2248 5 months and 20 days",
+            "source_chat_ids": {
+                "first_event": [
+                    358,
+                    366,
+                    372
+                ],
+                "second_event": [
+                    1680,
+                    1686,
+                    1694
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 months and 20 days",
+                "LLM response should state: from April 20 till October 10"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,794 @@
+{
+    "abstention": [
+        {
+            "question": "Could you share the agenda and outcomes of the weekly Zoom meetings Denise suggested starting March 22, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the agenda and outcomes of the weekly Zoom meetings.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Meetings are scheduled but no details about their content or results are provided.",
+            "plan_reference": "Batch 1, Bullet 16",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the agenda of the weekly Zoom meetings",
+                "Based on the provided chat, there is no information related to the outcomes of the weekly Zoom meetings"
+            ]
+        },
+        {
+            "question": "Can you provide the content and structure of the business plan draft started on March 10, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific content and structure of the business plan draft.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The business plan is mentioned with page count and deadline but no content details are given.",
+            "plan_reference": "Batch 1, Bullet 12",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific content and structure of the business plan draft"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I completed any modules in the \"Startup Basics\" course?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed some modules in the \"Startup Basics\" course, but you also mentioned never completing any modules. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Completion status of \"Startup Basics\" course modules",
+            "conversation_references": [
+                "Session 616, 628, 642: Completed modules mentioned",
+                "Session 728: Never completed any modules mentioned"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    616,
+                    628,
+                    642
+                ],
+                "second_statement": [
+                    728
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have completed some modules in the \"Startup Basics\" course",
+                "LLM response should mention: you also mentioned never completing any modules",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any launch events for the app?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any launch events for the app, but there was also mention of a soft launch event with attendees and media coverage. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at app launch events",
+            "conversation_references": [
+                "Session 1: Soft launch event details",
+                "Session 2: Never attended launch events statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    988,
+                    998
+                ],
+                "second_statement": [
+                    1278
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any launch events for the app",
+                "LLM response should mention: you also mentioned a soft launch event with attendees and media coverage",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of my business partnerships and app development evolve throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your focus evolved in this sequence: 1) Initial considerations about a potential business partner and testing collaboration, 2) Concerns and strategies related to age difference and communication dynamics, 3) Follow-up on specific business ideas discussed, 4) Incorporation of mentor feedback on user engagement and app improvements, 5) Decisions and reflections on investment offers and negotiating terms with potential investors, 6) Strategies around customer retention and loyalty programs based on user feedback, 7) Leveraging influencer partnerships to grow user base and engagement, 8) Emphasis on upselling coaching services to meet revenue goals and manage expenses.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 10, 12, 14",
+                "chat_id: 22, 24, 26",
+                "chat_id: 28, 30, 32",
+                "chat_id: 428, 434, 730, 736, 742",
+                "chat_id: 804, 806, 810, 812, 814, 824",
+                "chat_id: 1012, 1018, 1020, 1022, 1024, 1034",
+                "chat_id: 1330, 1336, 1342, 1612, 1620, 1630",
+                "chat_id: 1832, 1840, 1848"
+            ],
+            "ordering_tested": [
+                "1st: Business partner introduction and collaboration testing",
+                "2nd: Age difference and communication dynamics",
+                "3rd: Follow-up on business ideas",
+                "4th: Mentor feedback on app engagement and UI improvements",
+                "5th: Investment decisions and negotiation strategies",
+                "6th: Customer retention and loyalty program strategies",
+                "7th: Influencer partnership impact and growth",
+                "8th: Upselling coaching services for revenue"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "involves tracking evolving business and app development themes",
+                "spans multiple conversation sessions with interwoven topics",
+                "demands pattern recognition across diverse but related subjects"
+            ],
+            "source_chat_ids": [
+                [
+                    10,
+                    12,
+                    14
+                ],
+                [
+                    22,
+                    24,
+                    26
+                ],
+                [
+                    28,
+                    30,
+                    32
+                ],
+                [
+                    428,
+                    434,
+                    730,
+                    736,
+                    742
+                ],
+                [
+                    804,
+                    806,
+                    810,
+                    812,
+                    814,
+                    824
+                ],
+                [
+                    1012,
+                    1018,
+                    1020,
+                    1022,
+                    1024,
+                    1034
+                ],
+                [
+                    1330,
+                    1336,
+                    1342,
+                    1612,
+                    1620,
+                    1630
+                ],
+                [
+                    1832,
+                    1840,
+                    1848
+                ]
+            ],
+            "rubric": [
+                "Business partner introduction and collaboration testing",
+                "Age difference and communication dynamics",
+                "Follow-up on business ideas",
+                "Mentor feedback on app engagement and UI improvements",
+                "Investment decisions and negotiation strategies",
+                "Customer retention and loyalty program strategies",
+                "Influencer partnership impact and growth",
+                "Upselling coaching services for revenue"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of social media marketing evolve throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your focus on social media marketing evolved in this sequence: 1) Initial concerns about trusting a young team member with marketing responsibilities, 2) Discussing her prior experience and trial projects to assess capability, 3) Exploring specific content types and engagement strategies to boost follower growth, 4) Evaluating the effectiveness of her efforts and considering expanding her creative freedom, 5) Planning to replicate success across other platforms and measuring campaign impact, 6) Leveraging follower growth for broader business goals and customer acquisition, 7) Addressing sustainability of growth and maintaining engagement rates, 8) Developing structured content planning to maintain momentum and engagement.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "168, 202, 184",
+                "170, 204",
+                "500, 502, 504",
+                "776, 790, 796",
+                "1040, 1042, 1054, 1056",
+                "1352, 1358, 1368, 1370, 1372",
+                "1636, 1638, 1644, 1648",
+                "1856, 1866"
+            ],
+            "ordering_tested": [
+                "1st: Trust and initial capability concerns",
+                "2nd: Experience and trial project discussions",
+                "3rd: Content types and engagement strategies",
+                "4th: Effectiveness evaluation and creative freedom",
+                "5th: Cross-platform expansion and measurement",
+                "6th: Leveraging growth for business goals",
+                "7th: Sustainability and engagement maintenance",
+                "8th: Content calendar and growth maintenance planning"
+            ],
+            "complexity_factors": [
+                "requires tracking evolving focus across multiple conversations",
+                "involves nuanced development of marketing strategy topics",
+                "spans multiple sessions with interrelated mentions",
+                "demands sophisticated sequence reconstruction and pattern recognition"
+            ],
+            "source_chat_ids": [
+                168,
+                202,
+                184,
+                170,
+                204,
+                500,
+                502,
+                504,
+                776,
+                790,
+                796,
+                1040,
+                1042,
+                1054,
+                1056,
+                1352,
+                1358,
+                1368,
+                1370,
+                1372,
+                1636,
+                1638,
+                1644,
+                1648,
+                1856,
+                1866
+            ],
+            "rubric": [
+                "Trust and initial capability concerns",
+                "Experience and trial project discussions",
+                "Content types and engagement strategies",
+                "Effectiveness evaluation and creative freedom",
+                "Cross-platform expansion and measurement",
+                "Leveraging growth for business goals",
+                "Sustainability and engagement maintenance",
+                "Content calendar and growth maintenance planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I decide to apply for the microloan instead of accepting the angel investment offer?",
+            "answer": "You decided to apply for the microloan on April 8, 2024, rejecting the angel investment offer.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 2: USER mentions applying for the microloan on April 8, 2024 and rejecting the angel offer.",
+            "key_facts_tested": [
+                "date of microloan application",
+                "choice between microloan and angel investment"
+            ],
+            "source_chat_ids": [
+                426
+            ],
+            "rubric": [
+                "LLM response should state: April 8, 2024"
+            ]
+        },
+        {
+            "question": "What strategies did you recommend to prepare and support the select group involved in the initial rollout to ensure their engagement and feedback were effectively managed?",
+            "answer": "I recommended creating a comprehensive onboarding process with tutorials and guides, maintaining regular communication through emails and direct messaging, implementing robust feedback mechanisms like in-app surveys and support channels, monitoring user interactions with analytics, providing educational content, offering incentives for participation, and fostering a community among the users to encourage peer support and engagement.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: detailed onboarding and engagement strategies, feedback and communication methods, community building and incentives",
+            "key_facts_tested": [
+                "onboarding process with welcome emails and tutorials",
+                "regular communication via emails and direct messaging",
+                "feedback mechanisms including surveys and support channels",
+                "usage tracking with analytics",
+                "educational content like blog posts and webinars",
+                "incentives for participation",
+                "community building through private groups and virtual meetups"
+            ],
+            "extraction_challenge": "LLM must synthesize various engagement and support strategies scattered across different assistant responses to describe how the initial user group is prepared and managed during the rollout",
+            "source_chat_ids": [
+                733,
+                739
+            ],
+            "rubric": [
+                "LLM response should state: creating a comprehensive onboarding process with tutorials and guides",
+                "LLM response should state: maintaining regular communication through emails and direct messaging",
+                "LLM response should state: implementing robust feedback mechanisms like in-app surveys and support channels",
+                "LLM response should state: monitoring user interactions with analytics",
+                "LLM response should state: providing educational content",
+                "LLM response should state: offering incentives for participation",
+                "LLM response should state: fostering a community among the users to encourage peer support and engagement"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How did my marketing campaign in May perform?",
+            "instruction_being_tested": "Always provide engagement rate percentages when I ask about marketing campaign results.",
+            "expected_compliance": "Response should include engagement rate percentages related to the marketing campaign.",
+            "compliance_indicators": [
+                "engagement rate percentage included",
+                "numeric engagement data",
+                "specific percentage values related to campaign"
+            ],
+            "non_compliance_signs": [
+                "no engagement rate mentioned",
+                "only qualitative description",
+                "general performance without numbers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1276
+            ],
+            "rubric": [
+                "LLM response should contain: engagement rate percentage included",
+                "LLM response should contain: numeric engagement data"
+            ]
+        },
+        {
+            "question": "How is the pilot program coming along so far?",
+            "instruction_being_tested": "Always report user participation rates when I ask about pilot program progress.",
+            "expected_compliance": "Response should include information about the level of involvement or engagement of participants in the pilot program.",
+            "compliance_indicators": [
+                "mentions how many users are involved",
+                "provides participation statistics",
+                "includes data on user engagement"
+            ],
+            "non_compliance_signs": [
+                "only general progress updates",
+                "no mention of participant numbers or engagement",
+                "focuses on other aspects without user involvement details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                1806
+            ],
+            "rubric": [
+                "LLM response should contain: mentions how many users are involved",
+                "LLM response should contain: provides participation statistics"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many users have signed up for the beta program?",
+            "answer": "48 users",
+            "difficulty": "easy",
+            "update_type": "user_count_increase",
+            "tests_retention_of": "updated number of beta sign-ups",
+            "conversation_references": [
+                "Customer Acquisition: Beta sign-ups reached 45 users by May 19, 2024, 90% of target for soft launch.",
+                "The number of beta sign-ups has increased to 48 users by May 19, 2024, slightly exceeding initial expectations."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 45 users instead of the updated 48 users",
+            "source_chat_ids": {
+                "original_info": [
+                    772,
+                    778,
+                    780,
+                    782,
+                    798
+                ],
+                "updated_info": [
+                    976
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 48 users"
+            ]
+        },
+        {
+            "question": "What is the upsell rate for coaching services with the current onboarding email sequence?",
+            "answer": "14%",
+            "difficulty": "easy",
+            "update_type": "performance_metric_increase",
+            "tests_retention_of": "updated upsell rate percentage after adding coaching upsell emails",
+            "conversation_references": [
+                "Marketing & Sales:Sales Funnel: Added coaching upsell emails to onboarding sequence on September 8, 2024, increasing upsell rate by 12%.",
+                "Information Update: The coaching upsell email sequence increased upsell rate to 14% by September 19, 2024."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 12% upsell rate instead of the updated 14%",
+            "source_chat_ids": {
+                "original_info": [
+                    1868,
+                    1874,
+                    1882
+                ],
+                "updated_info": [
+                    2022,
+                    2024
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 14%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many followers do my influencer partnerships reach in total after Denise secured the new contracts?",
+            "answer": "25,000 followers",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Denise's influencer partnerships reaching 15,000 followers",
+                "Denise finalizing contracts with 3 new partners reaching 25,000 followers"
+            ],
+            "reasoning_steps": [
+                "Identify the initial influencer reach of 15,000 followers from Denise's partnerships.",
+                "Recognize that Denise later secured new contracts increasing the total reach to 25,000 followers.",
+                "Compare and aggregate the follower counts to find the current total reach."
+            ],
+            "source_chat_ids": [
+                1330,
+                1612
+            ],
+            "rubric": [
+                "LLM response should state: 25,000 followers"
+            ]
+        },
+        {
+            "question": "Given my decision to decline the acquisition offer and focus on upselling coaching services, how can I balance funding needs, mentorship goals, and user retention strategies to sustainably grow my app?",
+            "answer": "You can balance these by leveraging Omar\u2019s mentorship to set clear growth and retention goals, prioritizing customer retention through loyalty rewards to maintain a stable user base, and using upselling coaching services as a scalable revenue stream to offset expenses and reduce funding risks. This involves aligning mentorship guidance with financial planning, implementing cost-effective loyalty programs to boost retention, and targeting engaged users for coaching upsells, thereby creating a feedback loop that supports sustainable growth without immediate external investment.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "Mentorship planning and expectations with Omar",
+                "User engagement improvement and feature prioritization",
+                "UI simplification and user confusion reduction",
+                "Customer retention and loyalty rewards implementation",
+                "Risk mitigation after declining acquisition offer",
+                "Upselling coaching services to offset expenses"
+            ],
+            "reasoning_steps": [
+                "Analyze the financial risk and resource constraints from declining the acquisition offer and the need for sustainable funding.",
+                "Incorporate Omar\u2019s mentorship advice to set clear, actionable goals for growth, retention, and user engagement.",
+                "Leverage customer retention strategies, especially loyalty rewards, to maintain and grow the active user base cost-effectively.",
+                "Use upselling coaching services as a revenue driver to offset operational expenses and reduce reliance on external funding.",
+                "Align mentorship guidance, retention efforts, and upselling strategies to create a cohesive growth plan.",
+                "Balance resource allocation and prioritize initiatives that reinforce each other to ensure sustainable app growth."
+            ],
+            "source_chat_ids": [
+                58,
+                59,
+                74,
+                90,
+                1012,
+                804,
+                1832,
+                1848
+            ],
+            "rubric": [
+                "LLM response should state: leveraging Omar\u2019s mentorship to set clear growth and retention goals",
+                "LLM response should state: prioritizing customer retention through loyalty rewards to maintain a stable user base",
+                "LLM response should state: using upselling coaching services as a scalable revenue stream to offset expenses and reduce funding risks",
+                "LLM response should state: aligning mentorship guidance with financial planning",
+                "LLM response should state: implementing cost-effective loyalty programs to boost retention",
+                "LLM response should state: targeting engaged users for coaching upsells"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to bring on some external help for an upcoming project. How should I structure the agreements to handle changes in project scope effectively?",
+            "preference_being_tested": "I prefer flexible freelance contracts over fixed agency deals to adapt quickly to changing project needs.",
+            "expected_compliance": "Response should emphasize contract structures that allow adaptability and flexibility to accommodate project changes rather than rigid, fixed agreements.",
+            "compliance_indicators": [
+                "mentions flexible or adjustable contract terms",
+                "suggests freelance or non-fixed arrangements",
+                "addresses adaptability to project changes",
+                "recommends contract features that support quick modifications"
+            ],
+            "non_compliance_signs": [
+                "only suggests fixed or long-term agency contracts",
+                "ignores adaptability in contract structure",
+                "recommends rigid or inflexible agreements",
+                "does not address handling changes in project scope"
+            ],
+            "difficulty": "medium",
+            "preference_type": "contract structure",
+            "source_chat_ids": [
+                652,
+                658,
+                670
+            ],
+            "rubric": [
+                "LLM response should contain: mentions flexible or adjustable contract terms",
+                "LLM response should contain: suggests freelance or non-fixed arrangements",
+                "LLM response should contain: recommends contract features that support quick modifications"
+            ]
+        },
+        {
+            "question": "I'm planning the next phase of my product rollout. How would you suggest structuring the release?",
+            "preference_being_tested": "I prefer soft launches with controlled user groups over full public releases to manage risks effectively.",
+            "expected_compliance": "Response should recommend a phased or controlled release approach rather than a full public launch, reflecting the user's preference for managing risks through limited user exposure.",
+            "compliance_indicators": [
+                "suggests releasing to a limited or controlled group first",
+                "mentions gradual rollout or phased approach",
+                "focuses on managing exposure or scope during release"
+            ],
+            "non_compliance_signs": [
+                "recommends immediate full public release",
+                "ignores risk management through controlled exposure",
+                "does not mention any staged or limited release strategies"
+            ],
+            "difficulty": "medium",
+            "preference_type": "release strategy",
+            "source_chat_ids": [
+                906,
+                916,
+                924
+            ],
+            "rubric": [
+                "LLM response should contain: suggests releasing to a limited or controlled group first",
+                "LLM response should contain: mentions gradual rollout or phased approach",
+                "LLM response should contain: focuses on managing exposure or scope during release"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my partnership plans with Denise have developed and progressed over time?",
+            "ideal_summary": "Your partnership plans with Denise have evolved through several stages. Initially, you considered the pros and cons of partnering with someone you have known since university, weighing trust and shared vision against potential conflicts and boundary issues. You agreed on the importance of a formal agreement, clear roles, and a trial period to test compatibility. You then planned a detailed 3-month trial with specific roles assigned\u2014yourself handling therapy and logistics, Denise managing marketing\u2014and established regular communication routines. Later, Denise proposed expanding into wellness app development, starting with mood tracking and sleep aid features, which you supported and planned to validate through market research and prototype testing. You secured a partnership with the 'Healing Minds' clinic for pilot testing, focusing on clear communication, role definition, and feedback mechanisms to ensure Denise's comfort and maximize the partnership's benefits. Throughout, you discussed contract negotiation strategies, marketing collaborations, and influencer partnerships Denise secured, all aimed at growing the business. Finally, you planned to hire a marketing assistant to support these efforts, considering timing relative to other operational priorities. This progression reflects a thoughtful, step-by-step approach to building a strong, collaborative business relationship with Denise.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                450,
+                451,
+                466,
+                467,
+                468,
+                469,
+                470,
+                471,
+                482,
+                483,
+                484,
+                485,
+                486,
+                487,
+                748,
+                749,
+                758,
+                759,
+                760,
+                761,
+                770,
+                771,
+                1088,
+                1089,
+                1090,
+                1091,
+                1106,
+                1107,
+                1330,
+                1331,
+                1336,
+                1337,
+                1342,
+                1343,
+                1612,
+                1613,
+                1620,
+                1621,
+                1630,
+                1631,
+                2004,
+                2005,
+                2010,
+                2011,
+                2016,
+                2017
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "multi-phase planning",
+                "role definition",
+                "trial and pilot testing",
+                "business growth strategies",
+                "contract negotiation",
+                "marketing and influencer partnerships",
+                "operational planning"
+            ],
+            "synthesis_required": "Integrating multiple stages of partnership development, business planning, and operational decisions into a coherent narrative showing evolution and cause-effect",
+            "source_chat_ids": [
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                450,
+                451,
+                466,
+                467,
+                468,
+                469,
+                470,
+                471,
+                482,
+                483,
+                484,
+                485,
+                486,
+                487,
+                748,
+                749,
+                758,
+                759,
+                760,
+                761,
+                770,
+                771,
+                1088,
+                1089,
+                1090,
+                1091,
+                1106,
+                1107,
+                1330,
+                1331,
+                1336,
+                1337,
+                1342,
+                1343,
+                1612,
+                1613,
+                1620,
+                1621,
+                1630,
+                1631,
+                2004,
+                2005,
+                2010,
+                2011,
+                2016,
+                2017
+            ],
+            "rubric": [
+                "LLM response should contain: you considered the pros and cons of partnering with someone you have known since university, weighing trust and shared vision against potential conflicts and boundary issues",
+                "LLM response should contain:  You agreed on the importance of a formal agreement, clear roles, and a trial period to test compatibility",
+                "LLM response should contain: planned a detailed 3-month trial with specific roles assigned\u2014yourself handling therapy and logistics, Denise managing marketing\u2014and established regular communication routines",
+                "LLM response should contain: Denise proposed expanding into wellness app development, starting with mood tracking and sleep aid features, which you supported and planned to validate through market research",
+                "LLM response should contain: You secured a partnership with the 'Healing Minds' clinic for pilot testing, focusing on clear communication, role definition, and feedback mechanisms to ensure Denise's comfort",
+                "LLM response should contain: you discussed contract negotiation strategies, marketing collaborations, and influencer partnerships Denise secured, all aimed at growing the business",
+                "LLM response should contain: you planned to hire a marketing assistant to support these efforts, considering timing relative to other operational priorities"
+            ]
+        },
+        {
+            "question": "Can you give me a thorough summary of everything we've covered about developing and managing my wellness app, including the strategic, financial, partnership, and user engagement aspects we've discussed so far?",
+            "ideal_summary": "The discussions encompass a multifaceted approach to developing and managing the wellness app, integrating strategic planning, financial management, partnership development, and user engagement. Initially, the focus was on evaluating potential business partnerships, emphasizing thorough vetting, clear communication, and testing collaboration through small projects to ensure alignment and compatibility. Age differences and their impact on partnership dynamics were addressed with strategies for open dialogue and role clarity. Financially, a detailed breakdown of monthly expenses was provided, with iterative adjustments to optimize spending across app development, marketing, operations, legal compliance, and miscellaneous costs, ensuring positive net cash flow while accommodating loan repayments. Marketing budgets were carefully balanced to maximize user acquisition without jeopardizing financial health, supported by data-driven tracking and optimization. The importance of risk mitigation following the decline of a significant acquisition offer was highlighted, recommending comprehensive business planning, diversified funding, mentorship, and robust financial controls. User engagement strategies centered on simplifying the app\u2019s UI to reduce confusion, leveraging feedback loops, and implementing cost-effective loyalty rewards programs to boost retention. Upselling coaching services was identified as a key revenue driver, with tiered pricing, targeted marketing, free trials, and seamless integration enhancing both revenue and user satisfaction. Corporate wellness partnerships were explored as strategic growth avenues, recommending pilot programs, stakeholder engagement, and alignment with app launch plans to balance resources effectively. Throughout, the approach emphasized continuous monitoring, iterative improvements, and clear communication to align all facets of the project towards sustainable growth and success.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                10,
+                11,
+                13,
+                23,
+                447,
+                461,
+                805,
+                1013,
+                1285,
+                1595,
+                1833
+            ],
+            "rubric": [
+                "LLM response should contain: the focus was on evaluating potential business partnerships, emphasizing thorough vetting, clear communication, and testing collaboration through small projects to ensure alignment and compatibility",
+                "LLM response should contain: Age differences and their impact on partnership dynamics were addressed with strategies for open dialogue and role clarity",
+                "LLM response should contain: a detailed breakdown of monthly expenses was provided, with iterative adjustments to optimize spending across app development, marketing, operations, legal compliance, and miscellaneous costs",
+                "LLM response should contain: Marketing budgets were carefully balanced to maximize user acquisition without jeopardizing financial health, supported by data-driven tracking and optimization",
+                "LLM response should contain: The importance of risk mitigation following the decline of a significant acquisition offer was highlighted, recommending comprehensive business planning, diversified funding, mentorship, and robust financial controls",
+                "LLM response should contain: User engagement strategies centered on simplifying the app\u2019s UI to reduce confusion, leveraging feedback loops, and implementing cost-effective loyalty rewards programs to boost retention",
+                "LLM response should contain: Upselling coaching services was identified as a key revenue driver, with tiered pricing, targeted marketing, free trials, and seamless integration",
+                "LLM response should contain: Corporate wellness partnerships were explored as strategic growth avenues, recommending pilot programs, stakeholder engagement, and alignment with app launch plans to balance resources effectively"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between my app prototype deadline and the new public launch date after the delay?",
+            "answer": "There are 30 days between the app prototype deadline on June 1, 2024, and the new public launch date on July 1, 2024, after the delay.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "June 1, 2024: app prototype deadline",
+                "July 1, 2024: new public launch date after delay"
+            ],
+            "conversation_references": [
+                "chat_id 260, 272: app prototype deadline",
+                "chat_id 986, 1000: delayed public launch date"
+            ],
+            "calculation_required": "July 1, 2024 - June 1, 2024 = 30 days",
+            "source_chat_ids": {
+                "first_event": [
+                    260,
+                    272
+                ],
+                "second_event": [
+                    986,
+                    1000
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 30 days",
+                "LLM response should state: from June 1, 2024 till July 1, 2024"
+            ]
+        },
+        {
+            "question": "How many months passed between when I met Michael at the psychology conference and when we discussed our business ideas?",
+            "answer": "Approximately 11 months passed between meeting Michael at the psychology conference in Istanbul in February 2022 and discussing business ideas on January 12, 2023.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Meeting Michael at the psychology conference (February 2022)",
+                "Discussing business ideas (January 12, 2023)"
+            ],
+            "conversation_references": [
+                "Session 1: Meeting Michael at conference",
+                "Session 2: Business ideas discussion"
+            ],
+            "calculation_required": "January 12, 2023 - February 2022 \u2248 11 months",
+            "source_chat_ids": {
+                "first_event": [
+                    10,
+                    12,
+                    14
+                ],
+                "second_event": [
+                    28,
+                    30,
+                    32
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 11 months",
+                "LLM response should state: from February 2022 till January 12, 2023"
+            ]
+        }
+    ]
+}

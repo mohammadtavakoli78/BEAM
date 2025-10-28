@@ -1,0 +1,783 @@
+{
+    "abstention": [
+        {
+            "question": "What are the qualifications or expertise of Johnny, who collaborated during the code review for tuning logic?",
+            "ideal_response": "Based on the provided chat, there is no information related to Johnny's qualifications or expertise.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Johnny is mentioned as a collaborator but no background or qualifications are given.",
+            "plan_reference": "Plan 4, Batch 3, Bullet 28",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Johnny's qualifications or expertise"
+            ]
+        },
+        {
+            "question": "What was the agenda or format of the knowledge sharing session where the pipeline design document was shared?",
+            "ideal_response": "Based on the provided chat, there is no information related to the agenda or format of the knowledge sharing session.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The document sharing is mentioned but no session details are given.",
+            "plan_reference": "Plan 2, Batch 1, Bullet 3",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the agenda or format of the knowledge sharing session"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I set up diagnostic logs to capture shard distribution errors in my sharding implementation?",
+            "ideal_answer": "I noticed that there are conflicting statements regarding this. In some instances, you mentioned setting up diagnostic logs for shard distribution errors, while in others, you said you've never set up such logs. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "setting up diagnostic logs for shard distribution errors",
+            "conversation_references": [
+                "Session 11886, 11892",
+                "Session 12038"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    11886,
+                    11892
+                ],
+                "second_statement": [
+                    12038
+                ]
+            },
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you mentioned setting up diagnostic logs for shard distribution errors",
+                "LLM response should mention: you said you've never set up such logs",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Do I usually include exact error messages when I ask about debugging strategies for vector lookups during dense search integration?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said that exact error messages are always included when discussing debugging strategies, but you also mentioned never having logged errors for vector lookups during dense search integration. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "error logging practices during vector lookup debugging",
+            "conversation_references": [
+                "Session 6402: Always include exact error messages",
+                "Session 6404: Never logged errors for vector lookups"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    6402
+                ],
+                "second_statement": [
+                    6404
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said that exact error messages are always included when discussing debugging strategies",
+                "LLM response should mention: you also mentioned never having logged errors for vector lookups during dense search integration",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about the development phases of our RAG system progress from 2024-08-01 to 2024-10-22 in order? Mention ONLY and ONLY twenty items.",
+            "answer": "Your discussions about the RAG system development phases progressed as follows: 1) Initiating the core ingestion pipeline foundation, 2) Evaluating batch versus streaming ingestion strategies, 3) Addressing metadata extraction and normalization challenges, 4) Implementing initial vectorization and indexing workflows, 5) Setting up vector database clusters, 6) Building basic sparse retrieval indexes, 7) Developing core API scaffolding for ingestion and retrieval, 8) Integrating authentication and authorization into APIs, 9) Establishing logging and monitoring foundations, 10) Applying infrastructure as code for environment reproducibility, 11) Prototyping hybrid sparse-dense retrieval approaches, 12) Integrating dense vector search with approximate nearest neighbors, 13) Combining retrieval scores for hybrid ranking, 14) Prototyping query pipelines with hybrid retrieval, 15) Implementing query rewriting for improved recall, 16) Conducting initial evaluation metrics and relevance testing, 17) Extending APIs for hybrid search queries, 18) Handling multi-language tokenization, 19) Implementing caching strategies for frequent queries, and 20) Finalizing logging of query performance and errors.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 20,
+            "conversation_references": [
+                "3996",
+                "4212, 4214, 4222, 4224, 4226, 4234, 4236, 4238",
+                "4434, 4436, 4438, 4440, 4444, 4446, 4448, 4450, 4452",
+                "4650, 4652, 4664, 4666, 4668, 4670, 4672, 4674",
+                "4900, 5116, 5172",
+                "5078, 5084, 5086, 5088",
+                "5246, 5256, 5258",
+                "5428, 5430, 5442, 5444, 5452, 5454, 5456",
+                "5624, 5630, 5632, 5634",
+                "5804, 5816, 5818, 5820, 5828, 5830, 5832",
+                "6066, 6080, 6082",
+                "6260, 6262, 6264",
+                "6408, 6450, 6452",
+                "6566, 6568",
+                "6602",
+                "6768, 6770",
+                "6952",
+                "7050",
+                "7124, 7126",
+                "7350, 7528, 7534, 7544, 7546, 7548, 7588, 7712, 7714, 7716, 7718"
+            ],
+            "ordering_tested": [
+                "1st: Core ingestion pipeline initiation",
+                "2nd: Batch vs streaming ingestion strategies",
+                "3rd: Metadata extraction and normalization",
+                "4th: Vectorization and indexing workflows",
+                "5th: Vector database cluster setup",
+                "6th: Sparse retrieval index implementation",
+                "7th: Core API scaffolding",
+                "8th: Authentication and authorization integration",
+                "9th: Logging and monitoring foundation",
+                "10th: Infrastructure as code implementation",
+                "11th: Hybrid sparse-dense retrieval prototyping",
+                "12th: Dense vector search with approximate nearest neighbors",
+                "13th: Combining retrieval scores for hybrid ranking",
+                "14th: Query pipeline prototyping with hybrid retrieval",
+                "15th: Query rewriting for improved recall",
+                "16th: Evaluation metrics and relevance testing",
+                "17th: Extending APIs for hybrid search",
+                "18th: Multi-language tokenization",
+                "19th: Caching strategies for frequent queries",
+                "20th: Logging query performance and errors"
+            ],
+            "complexity_factors": [
+                "requires detailed chronological reconstruction",
+                "involves multiple technical aspects of a complex system",
+                "spans numerous conversation sessions",
+                "demands sophisticated pattern and sequence recognition",
+                "tests deep understanding of development progression",
+                "requires integration of diverse technical topics"
+            ],
+            "source_chat_ids": [
+                3996,
+                4212,
+                4214,
+                4222,
+                4224,
+                4226,
+                4234,
+                4236,
+                4238,
+                4434,
+                4436,
+                4438,
+                4440,
+                4444,
+                4446,
+                4448,
+                4450,
+                4452,
+                4650,
+                4652,
+                4664,
+                4666,
+                4668,
+                4670,
+                4672,
+                4674,
+                4900,
+                5116,
+                5172,
+                5078,
+                5084,
+                5086,
+                5088,
+                5246,
+                5256,
+                5258,
+                5428,
+                5430,
+                5442,
+                5444,
+                5452,
+                5454,
+                5456,
+                5624,
+                5630,
+                5632,
+                5634,
+                5804,
+                5816,
+                5818,
+                5820,
+                5828,
+                5830,
+                5832,
+                6066,
+                6080,
+                6082,
+                6260,
+                6262,
+                6264,
+                6408,
+                6450,
+                6452,
+                6566,
+                6568,
+                6602,
+                6768,
+                6770,
+                6952,
+                7050,
+                7124,
+                7126,
+                7350,
+                7528,
+                7534,
+                7544,
+                7546,
+                7548,
+                7588,
+                7712,
+                7714,
+                7716,
+                7718
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Core ingestion pipeline initiation",
+                "Batch vs streaming ingestion strategies",
+                "Metadata extraction and normalization",
+                "Vectorization and indexing workflows",
+                "Vector database cluster setup",
+                "Sparse retrieval index implementation",
+                "Core API scaffolding",
+                "Authentication and authorization integration",
+                "Logging and monitoring foundation",
+                "Infrastructure as code implementation",
+                "Hybrid sparse-dense retrieval prototyping",
+                "Dense vector search with approximate nearest neighbors",
+                "Combining retrieval scores for hybrid ranking",
+                "Query pipeline prototyping with hybrid retrieval",
+                "Query rewriting for improved recall",
+                "Evaluation metrics and relevance testing",
+                "Extending APIs for hybrid search",
+                "Multi-language tokenization",
+                "Caching strategies for frequent queries",
+                "Logging query performance and errors"
+            ]
+        },
+        {
+            "question": "Can you reconstruct the sequence in which I brought up the various error types and their handling challenges from 2024-11-01 to 2025-01-21 in order? Mention ONLY and ONLY eleven items.",
+            "answer": "You mentioned the different error types and their handling challenges in this sequence: 1) Issues related to token limits and query segmentation, 2) Problems with context window resizing and size mismatches, 3) Difficulties encountered during indexing and scoring, 4) Challenges in reranking and feedback parsing, 5) Version conflicts during model saving, 6) Errors in evaluation metrics and spelling correction, 7) Encryption key management and documentation formatting errors, 8) Query parsing and synonym expansion issues, 9) Intent reformulation and encoding mismatches, 10) Language detection and vector alignment errors, 11) Stemming rule failures, relevance scoring problems, and code switching errors.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 15,
+            "conversation_references": [
+                "7928, 7932, 7934, 9898, 9904, 9906",
+                "8154, 8156, 8158, 8408, 8412, 8420",
+                "8602, 8610, 8604",
+                "8786, 8936, 8926, 8942, 9138, 9144",
+                "9130, 9132",
+                "9290, 9296, 10278, 10284",
+                "9506, 9518, 9520, 9724, 9726, 9728, 9736, 9738",
+                "10088, 10090, 10092, 10102",
+                "10476, 10478, 10760, 10762, 10764, 10772, 10774",
+                "10966, 10968, 10970, 10976, 10978, 10980, 10986, 11146, 11148, 11154",
+                "11354, 11356, 11358, 11372, 11374, 11376, 11536, 11542, 11746, 11752"
+            ],
+            "ordering_tested": [
+                "1st: Token limit and segmentation errors",
+                "2nd: Context window resizing and mismatch errors",
+                "3rd: Index scoring errors",
+                "4th: Rerank score and feedback parse errors",
+                "5th: Version conflict errors",
+                "6th: Metric calculation and spell check errors",
+                "7th: Encryption key and documentation format errors",
+                "8th: Query parse and synonym mismatch errors",
+                "9th: Intent reform and encoding mismatch errors",
+                "10th: Language detection and vector alignment errors",
+                "11th: Stemming rule, relevance score, and code switch errors"
+            ],
+            "complexity_factors": [
+                "requires detailed chronological reconstruction",
+                "involves tracking multiple error types across many sessions",
+                "demands synthesis of dispersed conversational mentions",
+                "tests ability to sequence complex technical topics",
+                "requires expert-level pattern recognition and ordering"
+            ],
+            "source_chat_ids": [
+                7928,
+                7932,
+                7934,
+                9898,
+                9904,
+                9906,
+                8154,
+                8156,
+                8158,
+                8408,
+                8412,
+                8420,
+                8602,
+                8610,
+                8604,
+                8786,
+                8936,
+                8926,
+                8942,
+                9138,
+                9144,
+                9130,
+                9132,
+                9290,
+                9296,
+                10278,
+                10284,
+                9506,
+                9518,
+                9520,
+                9724,
+                9726,
+                9728,
+                9736,
+                9738,
+                10088,
+                10090,
+                10092,
+                10102,
+                10476,
+                10478,
+                10760,
+                10762,
+                10764,
+                10772,
+                10774,
+                10966,
+                10968,
+                10970,
+                10976,
+                10978,
+                10980,
+                10986,
+                11146,
+                11148,
+                11154,
+                11354,
+                11356,
+                11358,
+                11372,
+                11374,
+                11376,
+                11536,
+                11542,
+                11746,
+                11752
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "Token limit and segmentation errors",
+                "Context window resizing and mismatch errors",
+                "Index scoring errors",
+                "Rerank score and feedback parse errors",
+                "Version conflict errors",
+                "Metric calculation and spell check errors",
+                "Encryption key and documentation format errors",
+                "Query parse and synonym mismatch errors",
+                "Intent reform and encoding mismatch errors",
+                "Language detection and vector alignment errors",
+                "Stemming rule, relevance score, and code switch errors"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What detection rate and total number of test records did I mention when setting up logs to catch that specific error?",
+            "answer": "You mentioned targeting a 98% detection rate across 10,000 test records.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 1: Initial user message about setting up logs for error detection",
+            "key_facts_tested": [
+                "detection rate: 98%",
+                "test records: 10,000"
+            ],
+            "source_chat_ids": [
+                13779
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: 98% detection rate"
+            ]
+        },
+        {
+            "question": "What version of the vector database am I evaluating for indexing over 1 million documents?",
+            "answer": "Milvus 2.3.1",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message in chat_id 4900",
+            "key_facts_tested": [
+                "version of the vector database",
+                "number of documents to index"
+            ],
+            "source_chat_ids": [
+                4900
+            ],
+            "rubric": [
+                "LLM response should state: Milvus 2.3.1"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What improvements can I make to speed up the process of handling queries?",
+            "instruction_being_tested": "Always provide latency statistics when I ask about query latency reduction.",
+            "expected_compliance": "Response should include latency statistics related to the query processing improvements.",
+            "compliance_indicators": [
+                "inclusion of latency numbers",
+                "mention of timing metrics",
+                "quantitative data on speed changes",
+                "specific stats about query handling time"
+            ],
+            "non_compliance_signs": [
+                "no timing data provided",
+                "only qualitative descriptions",
+                "general suggestions without metrics",
+                "ignoring performance figures"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                10376,
+                10378
+            ],
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should contain: inclusion of latency numbers",
+                "LLM response should contain: mention of timing metrics"
+            ]
+        },
+        {
+            "question": "What targets should I consider when planning to handle increased load on my system?",
+            "instruction_being_tested": "Always include exact latency targets when I ask about scalability planning.",
+            "expected_compliance": "Response should include specific numerical latency goals or thresholds relevant to scalability planning.",
+            "compliance_indicators": [
+                "exact latency values",
+                "numerical latency goals",
+                "specific latency thresholds"
+            ],
+            "non_compliance_signs": [
+                "no latency numbers given",
+                "only general advice without targets",
+                "vague or qualitative latency mentions"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                4896,
+                4898
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should contain: numerical latency goals"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many tasks have I logged in Jira for the sprint on 2024-11-05, and what is my sprint completion target percentage?",
+            "answer": "There are 17 tasks logged in Jira, with a sprint completion target of 88%.",
+            "difficulty": "moderate",
+            "update_type": "task_count_and_completion_target",
+            "tests_retention_of": "updated number of tasks and sprint completion target",
+            "conversation_references": [
+                "Updating Jira 9.6.0, I've added 14 tasks for dynamic resizing, aiming for 85% sprint completion.",
+                "The number of tasks logged in Jira has grown to 17, with a current sprint completion target of 88%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall 14 tasks and 85% sprint completion target instead of the updated 17 tasks and 88%.",
+            "source_chat_ids": {
+                "original_info": [
+                    8122
+                ],
+                "updated_info": [
+                    8348
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: 17 tasks",
+                "LLM response should state: 88%"
+            ]
+        },
+        {
+            "question": "How many tasks are logged in Jira for load balancing, and what is the sprint completion target percentage?",
+            "answer": "There are 14 tasks logged for load balancing, with a sprint completion target of 85%.",
+            "difficulty": "moderate",
+            "update_type": "task_count_and_target_revision",
+            "tests_retention_of": "updated number of tasks and sprint completion target",
+            "conversation_references": [
+                "Project Management & Workflow:Sprint Planning: Updating Jira 9.6.0, I've added 12 tasks for load balancing, aiming for 82% sprint completion.",
+                "Information Update: The number of tasks logged in Jira for load balancing has grown to 14, with a new sprint completion target of 85%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 12 tasks and 82% sprint completion target instead of the current 14 tasks and 85% target.",
+            "source_chat_ids": {
+                "original_info": [
+                    12074
+                ],
+                "updated_info": [
+                    12196
+                ]
+            },
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: 14 tasks",
+                "LLM response should state: 85%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many documents am I planning to handle in total when combining my Elasticsearch and Solr projects?",
+            "answer": "1.8 million documents",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Evaluating Elasticsearch uptime on 1 million documents",
+                "Optimizing Solr search time on 800K documents"
+            ],
+            "reasoning_steps": [
+                "Identify the number of documents for Elasticsearch from the first session (1 million).",
+                "Identify the number of documents for Solr from the second session (800K).",
+                "Add the two document counts to get the total number of documents."
+            ],
+            "source_chat_ids": [
+                1886,
+                2270
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: costs 1.8 million"
+            ]
+        },
+        {
+            "question": "How many queries per second am I aiming to support across sharding, load balancing, and partitioning efforts combined?",
+            "answer": "5,000 queries per second",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Making early strides, I've completed 10% of the sharding strategy design, aiming to support 2,000 queries/sec.",
+                "Moving forward, I've implemented 15% of the load balancing logic to manage 1,500 queries/sec across 3 nodes.",
+                "Advancing efforts, I've completed 20% of the partitioning logic to handle 1,500 queries/sec across 4 replicated zones."
+            ],
+            "reasoning_steps": [
+                "Identify the queries per second target from the sharding strategy (2,000 qps).",
+                "Identify the queries per second target from the load balancing logic (1,500 qps).",
+                "Identify the queries per second target from the partitioning logic (1,500 qps).",
+                "Sum these values to get the combined target: 2,000 + 1,500 + 1,500 = 5,000 queries per second."
+            ],
+            "source_chat_ids": [
+                11898,
+                12054,
+                12232
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 5,000"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to estimate costs for running multiple cloud instances. How would you suggest structuring the calculation to handle different providers and instance counts?",
+            "preference_being_tested": "Evaluating cloud providers, I\u2019m considering AWS with EC2 at $0.11/hour for 500 instances.",
+            "expected_compliance": "Response should incorporate or acknowledge the specific AWS EC2 pricing and instance count mentioned by the user when suggesting how to structure the cost estimation, rather than ignoring or substituting different values.",
+            "compliance_indicators": [
+                "uses or references AWS EC2 cost of $0.11/hour",
+                "includes calculation for 500 instances",
+                "structures cost estimation to allow comparison across providers with user-supplied pricing",
+                "builds on the user's initial code or pricing model"
+            ],
+            "non_compliance_signs": [
+                "ignores the AWS EC2 $0.11/hour rate",
+                "uses different instance counts without justification",
+                "provides generic advice without referencing specific pricing or instance numbers",
+                "recommends unrelated pricing or instance assumptions"
+            ],
+            "difficulty": "medium",
+            "preference_type": "numerical parameter preference",
+            "source_chat_ids": [
+                1478,
+                1492
+            ],
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should contain: uses or references AWS EC2 cost of $0.11/hour",
+                "LLM response should contain: includes calculation for 500 instances"
+            ]
+        },
+        {
+            "question": "I'm setting up a system to handle a large number of vector searches. How would you suggest structuring the indexing and search process to keep things running smoothly?",
+            "preference_being_tested": "Evaluating vector databases, I\u2019m considering Milvus 2.3.0 for its ability to index 2 million vectors with 200ms search time.",
+            "expected_compliance": "Response should incorporate or recommend solutions compatible with Milvus 2.3.0 and address handling large-scale vector indexing and search efficiently, reflecting awareness of the user's scale and performance context.",
+            "compliance_indicators": [
+                "mentions Milvus 2.3.0 or compatible versions",
+                "addresses indexing strategies for millions of vectors",
+                "suggests approaches to maintain low search latency",
+                "tailors advice to large-scale vector search scenarios"
+            ],
+            "non_compliance_signs": [
+                "ignores Milvus or suggests incompatible tools",
+                "recommends indexing methods unsuitable for large vector counts",
+                "does not consider search performance implications",
+                "provides generic advice without scale considerations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "tool and performance capability",
+            "source_chat_ids": [
+                1856,
+                1862
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: mentions Milvus 2.3.0 or compatible versions",
+                "LLM response should contain: addresses indexing strategies for millions of vectors"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my overall progress and key developments in improving my vector search and logging capabilities 2024-08-01 to 2024-10-22?",
+            "ideal_summary": "Throughout your learning journey, you progressively enhanced your understanding and implementation of vector search and logging systems. Initially, you explored various vector indexing strategies, weighing their trade-offs in terms of accuracy, speed, and scalability. You then integrated vector search techniques with log aggregation tools, focusing on efficient querying and real-time data handling. Subsequently, you designed a high-availability architecture combining Elasticsearch and Faiss to meet demanding query volumes and uptime requirements. Alongside, you refined your API design to support vector search operations effectively. Finally, you incorporated monitoring and alerting mechanisms to ensure system reliability and performance, demonstrating a comprehensive development from foundational concepts to practical, scalable solutions.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                7767,
+                7771,
+                7773,
+                5674
+            ],
+            "key_elements_tested": [
+                "progression of vector search knowledge",
+                "integration with logging tools",
+                "architecture design for high availability",
+                "API design improvements",
+                "monitoring and alerting setup"
+            ],
+            "synthesis_required": "Combining technical concepts, implementation details, and architectural decisions into a coherent narrative showing growth and application",
+            "source_chat_ids": [
+                7767,
+                7771,
+                7773,
+                5674
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: you explored various vector indexing strategies",
+                "LLM response should contain: weighing various vector indexing strategies trade-offs in terms of accuracy, speed, and scalability",
+                "LLM response should contain: integrated vector search techniques with log aggregation tools, focusing on efficient querying and real-time data handling",
+                "LLM response should contain: you designed a high-availability architecture combining Elasticsearch and Faiss to meet demanding query volumes and uptime requirements",
+                "LLM response should contain: you refined your API design to support vector search operations effectively",
+                "LLM response should contain: you incorporated monitoring and alerting mechanisms to ensure system reliability and performance, demonstrating a comprehensive development from foundational concepts to practical solutions"
+            ]
+        },
+        {
+            "question": "Can you summarize how my system architecture and performance optimization plans evolved from 2024-07-01 to 2024-07-29?",
+            "ideal_summary": "Your system architecture and performance optimization plans progressed through several stages. Initially, you focused on designing a modular system capable of handling high daily query volumes with strict response time and uptime requirements, considering load balancing and caching strategies. Subsequently, you explored advanced load balancing algorithms and health check implementations to ensure high availability and efficient traffic distribution. You then incorporated distributed caching solutions like Redis Cluster to enhance scalability and fault tolerance. Later, you integrated microservices architecture with container orchestration and message queues to improve modularity and inter-service communication. Throughout these discussions, you refined deployment strategies, CI/CD pipeline configurations, and monitoring setups to maintain high deployment success rates and system reliability, culminating in a comprehensive, scalable, and resilient system design.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                20,
+                27,
+                168,
+                712,
+                1485,
+                1684,
+                3394,
+                3626,
+                3814,
+                3820
+            ],
+            "key_elements_tested": [
+                "system design evolution",
+                "performance optimization",
+                "load balancing strategies",
+                "caching and scalability",
+                "microservices and orchestration",
+                "deployment and monitoring"
+            ],
+            "synthesis_required": "Integrating multiple technical discussions into a coherent narrative showing architectural and optimization progression",
+            "source_chat_ids": [
+                20,
+                27,
+                168,
+                712,
+                1485,
+                1684,
+                3394,
+                3626,
+                3814,
+                3820
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should contain: you focused on designing a modular system capable of handling high daily query volumes with strict response time and uptime requirements",
+                "LLM response should contain: you explored advanced load balancing algorithms and health check implementations to ensure high availability and efficient traffic distribution",
+                "LLM response should contain: incorporated distributed caching solutions like Redis Cluster to enhance scalability and fault tolerance",
+                "LLM response should contain: you integrated microservices architecture with container orchestration and message queues to improve modularity and inter-service communication",
+                "LLM response should contain: you refined deployment strategies, CI/CD pipeline configurations, and monitoring setups to maintain high deployment success rates and system reliability"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I launch the testing suite development and when I start the deployment preparation for the RAG system?",
+            "answer": "There are 14 days between launching the testing suite development on February 15 and starting the deployment preparation on March 1.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 15: launch testing suite development",
+                "March 1: start deployment preparation"
+            ],
+            "conversation_references": [
+                "Session 13775: testing suite launch",
+                "Session 15675: deployment preparation start"
+            ],
+            "calculation_required": "March 1 - February 15 = 14 days",
+            "source_chat_ids": {
+                "first_event": [
+                    13775
+                ],
+                "second_event": [
+                    15675
+                ]
+            },
+            "plan_reference": "Plan 7-8",
+            "rubric": [
+                "LLM response should state: 14 days",
+                "LLM response should state: from February 15, 2025 till March 1, 2025"
+            ]
+        },
+        {
+            "question": "How many days passed between when I started working on the context window management module and when I began developing the query rewriting pipelines for our RAG system?",
+            "answer": "45 days passed between starting the context window management module on November 1, 2024, and beginning the development of query rewriting pipelines on December 16, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "November 1, 2024: started context window management module",
+                "December 16, 2024: started query rewriting pipelines"
+            ],
+            "conversation_references": [
+                "chat_id 7882, 7884, 7888, 7892, 7896",
+                "chat_id 9850, 9852, 9854, 9856, 9864, 9866, 9868"
+            ],
+            "calculation_required": "December 16, 2024 - November 1, 2024 = 45 days",
+            "source_chat_ids": {
+                "first_event": [
+                    7882,
+                    7884,
+                    7888,
+                    7892,
+                    7896
+                ],
+                "second_event": [
+                    9850,
+                    9852,
+                    9854,
+                    9856,
+                    9864,
+                    9866,
+                    9868
+                ]
+            },
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: 45 days",
+                "LLM response should state: from November 1, 2024 till December 16, 2024"
+            ]
+        }
+    ]
+}

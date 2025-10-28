@@ -1,0 +1,534 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the biweekly cross-team sync meetings started in November 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussions during the biweekly cross-team sync meetings.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Meeting schedule is mentioned but no agenda or outcomes are provided.",
+            "plan_reference": "BATCH 5 PLAN, Bullet 10",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussions during the biweekly cross-team sync meetings."
+            ]
+        },
+        {
+            "question": "What specific features were included in the Seychelles-specific app release on August 20, 2025?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific features of the Seychelles app release.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Release date and location are mentioned but no feature details are given.",
+            "plan_reference": "BATCH 9 PLAN, Bullet 11",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific features of the Seychelles app release."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended the Raymondburgh Startup Meetup or similar networking events before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you are scheduled to attend the Raymondburgh Startup Meetup to meet potential mentors, but you also mentioned that you have never attended that meetup or any similar networking events. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at Raymondburgh Startup Meetup or similar networking events",
+            "conversation_references": [
+                "Session 108, 110, 112: Scheduled to attend and preparing for meetup",
+                "Session 154: Never attended any similar networking events"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    108,
+                    110,
+                    112
+                ],
+                "second_statement": [
+                    154
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you are scheduled to attend the Raymondburgh Startup Meetup",
+                "LLM response should mention: you also mentioned that you have never attended any similar networking events",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I completed any online courses or training related to fundraising strategies?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you completed a 5-module online course on fundraising strategies, but you also mentioned that you have never completed any online courses or training related to fundraising. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of fundraising strategies online courses",
+            "conversation_references": [
+                "Session 1: Completed course references",
+                "Session 2: Never completed any course statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    622,
+                    628
+                ],
+                "second_statement": [
+                    704
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you completed a 5-module online course on fundraising strategies",
+                "LLM response should mention: you also mentioned that you have never completed any online courses or training related to fundraising",
+                "LLM response should mention: could you clarify which is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my startup team and their roles throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Concerns about having a close friend as a co-founder and the dynamics involved, 2) Considering adding a freelance developer and how to utilize her skills, 3) Leveraging a local partnership to boost visibility, 4) Dividing responsibilities between CEO and COO roles and formalizing them, 5) Managing workload and role transitions as team members took on new positions and equity stakes.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 16 and 26: Discussing friend as co-founder and age dynamics",
+                "Session 160: Adding a freelance developer",
+                "Session 332: Leveraging a local partnership",
+                "Sessions 460 and 466: Dividing CEO and COO responsibilities and formalizing roles",
+                "Sessions 584, 594, 718, 836, 960, 1192, 1314: Managing workload, role transitions, and equity changes"
+            ],
+            "ordering_tested": [
+                "1st: Friend as co-founder and working relationship concerns",
+                "2nd: Bringing on a freelance developer and maximizing her skills",
+                "3rd: Using a local partnership to increase startup visibility",
+                "4th: Defining and formalizing CEO and COO roles",
+                "5th: Handling workload, role changes, and equity management"
+            ],
+            "source_chat_ids": [
+                16,
+                26,
+                160,
+                332,
+                460,
+                466,
+                584,
+                594,
+                718,
+                836,
+                960,
+                1192,
+                1314
+            ],
+            "rubric": [
+                "LLM response should mention: Friend as co-founder and working relationship concerns",
+                "LLM response should mention: Bringing on a freelance developer and maximizing her skills",
+                "LLM response should mention: Using a local partnership to increase startup visibility",
+                "LLM response should mention: Defining and formalizing CEO and COO roles",
+                "LLM response should mention: Handling workload, role changes, and equity management"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I mentioned different updates and changes related to Elizabeth throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned Elizabeth-related updates in this order: 1) First, her help testing the MVP and identifying bugs and UI issues (chat_id 188), 2) Then, her organizing a celebratory dinner and concerns about its cost (chat_id 368), 3) Next, her starting a part-time job at Raymondburgh Bookstore and how to support her (chat_id 484), 4) After that, her completing a social media campaign and gaining followers (chat_id 746), 5) Finally, her promotion to Head of Customer Experience and related performance tracking (chat_id 1338).",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 188: MVP testing and bug identification",
+                "Session 368: Celebratory dinner organization",
+                "Session 484: Part-time job start and support",
+                "Session 746: Social media campaign completion",
+                "Session 1338: Promotion and performance indicators"
+            ],
+            "ordering_tested": [
+                "1st: MVP testing and bug identification",
+                "2nd: Celebratory dinner organization",
+                "3rd: Part-time job start and support",
+                "4th: Social media campaign completion",
+                "5th: Promotion and performance indicators"
+            ],
+            "source_chat_ids": [
+                188,
+                368,
+                484,
+                746,
+                1338
+            ],
+            "rubric": [
+                "LLM response should mention: MVP testing and bug identification",
+                "LLM response should mention: Celebratory dinner organization",
+                "LLM response should mention: Part-time job start and support",
+                "LLM response should mention: Social media campaign completion",
+                "LLM response should mention: Promotion and performance indicators"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How old did I say I am and what is my annual income?",
+            "answer": "You said you are 34 years old and earn about $42,000 annually.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 0: Personal introduction by user",
+            "key_facts_tested": [
+                "age: 34",
+                "annual income: $42,000"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should mention: 34 years old",
+                "LLM response should mention: $42,000 annually"
+            ]
+        },
+        {
+            "question": "What budget did I say I have for market research?",
+            "answer": "You said you have a $500 budget for market research.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I've got a budget of $500 for market research and I need to validate my startup idea by April 30, 2024, can you help me come up with a plan to make the most of it?",
+            "key_facts_tested": [
+                "budget amount for market research"
+            ],
+            "source_chat_ids": [
+                34
+            ],
+            "rubric": [
+                "LLM response should mention: $500 budget for market research"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What can you tell me about the current state of our data protection?",
+            "instruction_being_tested": "Always include compliance audit results when I ask about data security.",
+            "expected_compliance": "Response should include information from compliance audits related to data protection along with other relevant details.",
+            "compliance_indicators": [
+                "mention of recent audit findings",
+                "inclusion of compliance review results",
+                "details from audit reports",
+                "reference to audit outcomes"
+            ],
+            "non_compliance_signs": [
+                "no mention of audit results",
+                "general statements without audit data",
+                "omission of compliance information",
+                "only high-level security overview"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                702
+            ],
+            "rubric": [
+                "LLM response should mention: recent audit findings",
+                "LLM response should include: compliance review results",
+                "LLM response should include: details from audit reports",
+                "LLM response should include: reference to audit outcomes"
+            ]
+        },
+        {
+            "question": "How has our sales been doing lately?",
+            "instruction_being_tested": "Always provide conversion rate improvements when I ask about sales performance.",
+            "expected_compliance": "Response should include conversion rate improvements along with any sales performance details.",
+            "compliance_indicators": [
+                "mention of conversion rate improvements",
+                "specific figures showing improvement",
+                "comparison of conversion metrics over time"
+            ],
+            "non_compliance_signs": [
+                "sales data without conversion rate info",
+                "general sales discussion only",
+                "no mention of any improvement metrics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                820,
+                822
+            ],
+            "rubric": [
+                "LLM response should mention: conversion rate improvements",
+                "LLM response should include: specific figures showing improvement"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much do I allocate monthly for my personal expenses?",
+            "answer": "$1,400",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated monthly personal expense allocation",
+            "conversation_references": [
+                "Allocated $1,200 monthly for personal expenses, leaving $700 for startup costs.",
+                "I recently increased my monthly personal expense allocation to $1,400 to better cover living costs."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $1,200 monthly allocation instead of the updated $1,400",
+            "source_chat_ids": {
+                "original_info": [
+                    46
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should mention: $1,400"
+            ]
+        },
+        {
+            "question": "What is your monthly budget for the Google Ads campaign targeting urban areas in Comoros?",
+            "answer": "$2,500",
+            "difficulty": "easy",
+            "update_type": "budget_increase",
+            "tests_retention_of": "updated monthly marketing budget amount",
+            "conversation_references": [
+                "Marketing & Sales:Marketing Strategy: Launched Google Ads campaign Sept 3, 2024, with $500 budget targeting Comoros urban areas.",
+                "Information Update: The marketing budget was increased to $2,500 monthly starting September to support expanded campaigns."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $500 budget instead of the updated $2,500 monthly budget",
+            "source_chat_ids": {
+                "original_info": [
+                    468,
+                    470
+                ],
+                "updated_info": [
+                    562
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $2,500"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total funding am I aiming to raise across my seed and Series A rounds combined?",
+            "answer": "I am aiming to raise a total of $195,000 across my seed and Series A rounds.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "seed funding goal of $20,000 and concerns about MVP costs",
+                "Series A pitch targeting $150,000 investment"
+            ],
+            "reasoning_steps": [
+                "Identify the seed funding goal amount mentioned in the early sessions.",
+                "Identify the Series A funding target mentioned in the later sessions.",
+                "Add the two funding goals together to find the combined total."
+            ],
+            "source_chat_ids": [
+                44,
+                272,
+                452
+            ],
+            "rubric": [
+                "LLM response should mention: $195,000 total funding goal"
+            ]
+        },
+        {
+            "question": "How many beta users did I have before July, combining the signups I mentioned by the end of May and the total before July 1?",
+            "answer": "75 beta users",
+            "difficulty": "easy",
+            "reasoning_type": "simple_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "I'm kinda worried about my user acquisition progress, I've gained 45 beta signups by May 30, 2024, but I'm not sure if it's enough",
+                "I'm kinda worried about our user base growth, we went from 75 to 187 users between July 1-5, 2024, is that normal?"
+            ],
+            "reasoning_steps": [
+                "Identify the number of beta signups by the end of May (45 users)",
+                "Recognize the total user base before July 1 was 75 users",
+                "Understand that the 75 users include the 45 signups by May 30"
+            ],
+            "source_chat_ids": [
+                174,
+                344
+            ],
+            "rubric": [
+                "LLM response should mention: 75 beta users"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm trying to organize my tasks to make steady progress on my startup. How would you suggest I structure my schedule over the next few months?",
+            "preference_being_tested": "I prefer detailed planning with clear deadlines over spontaneous decisions to reduce stress.",
+            "expected_compliance": "Response should include suggestions for a structured plan with clear deadlines and milestones rather than vague or open-ended advice, reflecting the user's preference for detailed planning to manage stress.",
+            "compliance_indicators": [
+                "recommends setting specific deadlines",
+                "suggests breaking tasks into clear steps",
+                "includes a timeline or schedule",
+                "avoids suggesting last-minute or spontaneous approaches"
+            ],
+            "non_compliance_signs": [
+                "suggests flexible or spontaneous scheduling",
+                "recommends vague or general advice without deadlines",
+                "ignores the need for clear milestones",
+                "focuses on improvisation or reactive planning"
+            ],
+            "difficulty": "medium",
+            "preference_type": "planning_style",
+            "source_chat_ids": [
+                136,
+                138,
+                144
+            ],
+            "rubric": [
+                "LLM response should mention: setting specific deadlines",
+                "LLM response should mention: breaking tasks into clear steps",
+                "LLM response should include: a timeline or schedule"
+            ]
+        },
+        {
+            "question": "I'm planning the rollout for several upcoming features. How would you suggest structuring the release schedule?",
+            "preference_being_tested": "I prefer incremental feature releases over big launches to manage risk and user expectations.",
+            "expected_compliance": "Response should recommend a release plan that breaks down features into smaller, manageable increments rather than suggesting a single large launch, reflecting the user's preference for incremental releases.",
+            "compliance_indicators": [
+                "suggests phased or staged releases",
+                "mentions gradual rollout or iterative deployment",
+                "advises spreading out feature launches over time",
+                "focuses on managing releases in smaller batches"
+            ],
+            "non_compliance_signs": [
+                "recommends launching all features at once",
+                "suggests a single big release event",
+                "ignores the pacing of feature deployment",
+                "does not address release scheduling strategies"
+            ],
+            "difficulty": "medium",
+            "preference_type": "release strategy",
+            "source_chat_ids": [
+                394
+            ],
+            "rubric": [
+                "LLM response should mention: phased or staged releases",
+                "LLM response should mention: gradual rollout or iterative deployment",
+                "LLM response should mention: spreading out feature launches over time"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how I\u2019ve been supporting Elizabeth and managing our work and personal balance recently?",
+            "ideal_summary": "You have been supporting Elizabeth through various stages, including leveraging her skills in customer support, encouraging her French language learning for business expansion, and balancing your startup responsibilities alongside personal time together. Strategies include clear communication, scheduling quality time, delegating tasks, and creating a supportive environment for her growth and your relationship. You also focus on maintaining healthy work-life boundaries while advancing your startup and personal goals.",
+            "difficulty": "easy",
+            "summarization_type": "simple_relationship_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 9,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple cross-session condensation",
+                "straightforward overview",
+                "basic narrative structure"
+            ],
+            "synthesis_required": "Combining basic information into simple coherent summary",
+            "source_chat_ids": [
+                484,
+                1238,
+                1242
+            ],
+            "rubric": [
+                "LLM response should mention: You have been supporting Elizabeth through various stages, including leveraging her skills in customer support, encouraging her French language learning for business expansion, and balancing your startup responsibilities alongside personal time together.",
+                "LLM response should mention: Strategies include clear communication, scheduling quality time, delegating tasks, and creating a supportive environment for her growth and your relationship.",
+                "LLM response should mention: You also focus on maintaining healthy work-life boundaries while advancing your startup and personal goals."
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the entire process, including all key developments, decisions, and adjustments that took place throughout this project?",
+            "ideal_summary": "The project began with a clearly defined objective and a constrained budget, necessitating a strategic allocation of resources primarily toward primary market research methods supplemented by secondary data. An initial four-week timeline was established, focusing sequentially on objective setting, survey design and distribution, qualitative interviews, and data analysis with validation. Upon recognizing the potential need for extended research, the plan was adapted to include a phased extension over three additional months, emphasizing iterative data collection, ongoing analysis, and expert feedback, while balancing resource constraints and personal commitments through structured scheduling and delegation. Concurrently, user testing revealed a high satisfaction rate but highlighted areas for improvement, prompting a targeted feedback collection and iterative refinement cycle to enhance usability and feature relevance. Detailed analysis of user feedback informed prioritization of feature development, with a focus on integrating user suggestions into the product roadmap through agile, sprint-based development and transparent communication. Competitive pressures, such as a rival\u2019s new AI feature, triggered a careful evaluation of acceleration risks and benefits, leading to a balanced plan that aligned short-term goals with long-term vision while engaging stakeholders. Team dynamics and skill utilization were optimized through data-driven assessments and strategic role assignments, supported by motivation and communication strategies to ensure smooth transitions. Leadership and negotiation skills acquired through training were systematically applied to improve internal communication, delegation, decision-making, and investor interactions. Insights from regional business forums and startup summits were leveraged to expand market reach, adopt emerging technologies, and embed sustainability and ethical AI practices into operations. Throughout, continuous monitoring, feedback loops, and adaptive planning ensured alignment with evolving objectives and stakeholder expectations, culminating in a multifaceted, integrated approach that balanced technical, financial, and human factors to drive project success.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                35,
+                37,
+                39,
+                191,
+                325,
+                549,
+                641,
+                755,
+                881,
+                1249,
+                1347
+            ],
+            "rubric": [
+                "LLM response should mention: The project began with a clearly defined objective and a constrained budget, necessitating a strategic allocation of resources primarily toward primary market research methods supplemented by secondary data.",
+                "LLM response should mention: An initial four-week timeline was established, focusing sequentially on objective setting, survey design and distribution, qualitative interviews, and data analysis with validation.",
+                "LLM response should mention: Upon recognizing the potential need for extended research, the plan was adapted to include a phased extension over three additional months, emphasizing iterative data collection, ongoing analysis, and expert feedback, while balancing resource constraints and personal commitments through structured scheduling and delegation.",
+                "LLM response should mention: Concurrently, user testing revealed a high satisfaction rate but highlighted areas for improvement, prompting a targeted feedback collection and iterative refinement cycle to enhance usability and feature relevance.",
+                "LLM response should mention: Detailed analysis of user feedback informed prioritization of feature development, with a focus on integrating user suggestions into the product roadmap through agile, sprint-based development and transparent communication.",
+                "LLM response should mention: Competitive pressures, such as a rival's new AI feature, triggered a careful evaluation of acceleration risks and benefits, leading to a balanced plan that aligned short-term goals with long-term vision while engaging stakeholders.",
+                "LLM response should mention: Team dynamics and skill utilization were optimized through data-driven assessments and strategic role assignments, supported by motivation and communication strategies to ensure smooth transitions.",
+                "LLM response should mention: Leadership and negotiation skills acquired through training were systematically applied to improve internal communication, delegation, decision-making, and investor interactions.",
+                "LLM response should mention: Insights from regional business forums and startup summits were leveraged to expand market reach, adopt emerging technologies, and embed sustainability and ethical AI practices into operations.",
+                "LLM response should mention: Throughout, continuous monitoring, feedback loops, and adaptive planning ensured alignment with evolving objectives and stakeholder expectations, culminating in a multifaceted, integrated approach that balanced technical, financial, and human factors to drive project success."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between finalizing my survey plans at Caf\u00e9 Soleil and attending the Raymondburgh Startup Meetup to prepare effectively?",
+            "answer": "There are 18 days between finalizing the survey plans on March 10 and attending the Raymondburgh Startup Meetup on March 28, giving you just over two and a half weeks to prepare.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 10: survey at Caf\u00e9 Soleil",
+                "March 28: Raymondburgh Startup Meetup"
+            ],
+            "conversation_references": [
+                "Session 28: Survey planning at Caf\u00e9 Soleil",
+                "Session 108: Preparing for Raymondburgh Startup Meetup"
+            ],
+            "calculation_required": "March 28 - March 10 = 18 days (requires connecting two event dates)",
+            "source_chat_ids": {
+                "first_event": [
+                    28
+                ],
+                "second_event": [
+                    108,
+                    110,
+                    112
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 18 days"
+            ]
+        },
+        {
+            "question": "If I start my 6-week development period on the day I begin coding, how many days do I have left until the MVP deadline?",
+            "answer": "Starting coding on May 1, 2024, a 6-week development period lasts 42 days, which ends on June 12, 2024, exactly matching the MVP deadline, so there are 0 days left after development to meet the deadline.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 1, 2024: coding start",
+                "6 weeks development period",
+                "June 12, 2024: MVP deadline"
+            ],
+            "conversation_references": [
+                "chat_id 64",
+                "chat_id 156"
+            ],
+            "calculation_required": "6 weeks = 42 days; May 1 + 42 days = June 12; deadline is June 12; 0 days remaining",
+            "source_chat_ids": {
+                "first_event": [
+                    64
+                ],
+                "second_event": [
+                    156
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 0 days left"
+            ]
+        }
+    ]
+}

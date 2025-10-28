@@ -1,0 +1,530 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Christopher\u2019s professional background and expertise?",
+            "ideal_response": "Based on the provided chat, there is no information related to Christopher\u2019s professional background and expertise.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Christopher is mentioned as a colleague but no background or expertise details are provided.",
+            "plan_reference": "Batches 1 and 2 mention Christopher as a colleague but do not provide his background.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Christopher's professional background and expertise."
+            ]
+        },
+        {
+            "question": "What specific techniques were covered in the leadership retreat at Saint Helena Resort on September 7-8?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific techniques covered in the leadership retreat.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The retreat attendance is noted but no content or techniques are described.",
+            "plan_reference": "Batch 4, bullet 6 mentions the retreat but no details on content.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific techniques covered in the leadership retreat."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any leadership workshops or training sessions?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any leadership workshops or training sessions, but you also mentioned attending a leadership workshop. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Leadership workshop attendance",
+            "conversation_references": [
+                "Session 206: Never attended workshops",
+                "Session 108: Attended leadership workshop"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    206
+                ],
+                "second_statement": [
+                    108
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've never attended any leadership workshops or training sessions",
+                "LLM response should mention: you also said you've attended a leadership workshop",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever coordinated a team or led project planning sessions before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never coordinated any teams or led project planning sessions, but you also mentioned coordinating a 10-person team for project planning. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience coordinating teams and leading project planning",
+            "conversation_references": [
+                "Session 1: Never coordinated teams",
+                "Session 2: Coordinated 10-person team"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    518
+                ],
+                "second_statement": [
+                    442
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've never coordinated any teams or led project planning sessions",
+                "LLM response should mention: you also said you've coordinated a 10-person team for project planning",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different collaborations and advice related to my work projects in our conversations, in order (mention 8 items)?",
+            "answer": "You mentioned these topics in this order: 1) Collaborating with Kelli on an article that boosted readership, 2) Meeting Mary at an editorial meeting and considering her guidance, 3) Reflecting on advice from James about aligning projects with company goals, 4) Building on the success of a strategy meeting co-presented with Mary, 5) Working closely with Kelli on a workshop about cross-department collaboration, 6) Receiving strategic advice from James for a sustainability project, 7) Co-authoring an article with Mary on project impact, 8) Considering how James's letter of recommendation might affect your application.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 116: Collaboration with Kelli on article",
+                "Session 318: Meeting Mary at editorial meeting",
+                "Session 430: Advice from James on project alignment",
+                "Session 536: Strategy meeting co-presented with Mary",
+                "Session 652: Workshop co-led with Kelli",
+                "Session 768: Strategic advice from James on sustainability project",
+                "Session 838: Co-authoring article with Mary",
+                "Session 944: James's letter of recommendation"
+            ],
+            "ordering_tested": [
+                "1st: Collaboration with Kelli on article",
+                "2nd: Meeting Mary at editorial meeting",
+                "3rd: Advice from James on project alignment",
+                "4th: Strategy meeting co-presented with Mary",
+                "5th: Workshop co-led with Kelli",
+                "6th: Strategic advice from James on sustainability project",
+                "7th: Co-authoring article with Mary",
+                "8th: James's letter of recommendation"
+            ],
+            "source_chat_ids": [
+                116,
+                318,
+                430,
+                536,
+                652,
+                768,
+                838,
+                944
+            ],
+            "rubric": [
+                "LLM response should mention: Collaboration with Kelli on article",
+                "LLM response should mention: Meeting Mary at editorial meeting",
+                "LLM response should mention: Advice from James on project alignment",
+                "LLM response should mention: Strategy meeting co-presented with Mary",
+                "LLM response should mention: Workshop co-led with Kelli",
+                "LLM response should mention: Strategic advice from James on sustainability project",
+                "LLM response should mention: Co-authoring article with Mary",
+                "LLM response should mention: James's letter of recommendation"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different ways I\u2019m managing and showcasing my professional growth throughout our conversations, in order (mention 5 items)?",
+            "answer": "You mentioned managing and showcasing your professional growth in this order: 1) First, discussing effective ways to showcase skills and accomplishments by a deadline, 2) Then, talking about blocking time for project leadership tasks, 3) Next, mentioning scheduling mentoring sessions and reflecting on mentoring experience, 4) After that, bringing up balancing work and personal life with digital tools, 5) Finally, discussing drafting and preparing various project and promotion materials.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 14: Showcasing skills and accomplishments",
+                "Session 128: Blocking time for project leadership",
+                "Sessions 340 and 346: Mentoring schedule and experience",
+                "Session 490: Balancing work and personal life with digital tools",
+                "Sessions 268, 590, 698, 790, 886, 888, 992: Drafting and preparing project and promotion materials"
+            ],
+            "ordering_tested": [
+                "1st: Showcasing skills and accomplishments",
+                "2nd: Blocking time for project leadership",
+                "3rd: Mentoring schedule and experience",
+                "4th: Balancing work and personal life with digital tools",
+                "5th: Drafting and preparing project and promotion materials"
+            ],
+            "source_chat_ids": [
+                14,
+                128,
+                [
+                    340,
+                    346
+                ],
+                490,
+                [
+                    268,
+                    590,
+                    698,
+                    790,
+                    886,
+                    888,
+                    992
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Showcasing skills and accomplishments",
+                "LLM response should mention: Blocking time for project leadership",
+                "LLM response should mention: Mentoring schedule and experience",
+                "LLM response should mention: Balancing work and personal life with digital tools",
+                "LLM response should mention: Drafting and preparing project and promotion materials"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How old did I say Raymond is when I mentioned my performance rating?",
+            "answer": "You said Raymond is 38 years old.",
+            "difficulty": "medium",
+            "question_type": "attribute_recall",
+            "conversation_reference": "Turn 1: Age mentioned alongside performance rating",
+            "key_facts_tested": [
+                "age: 38",
+                "person: Raymond"
+            ],
+            "source_chat_ids": [
+                18
+            ],
+            "rubric": [
+                "LLM response should mention: 38"
+            ]
+        },
+        {
+            "question": "When did I publish my article series that reached 15,500 views in one week?",
+            "answer": "You published the article series on April 25.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: USER mentioned the article series was published on April 25 and reached 15,500 views in one week.",
+            "key_facts_tested": [
+                "publication date",
+                "article series",
+                "views timeframe"
+            ],
+            "source_chat_ids": [
+                124
+            ],
+            "rubric": [
+                "LLM response should mention: April 25"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "When is the project expected to be completed?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about project deadlines.",
+            "expected_compliance": "Response should include itemized dates or phases leading up to the completion, not just a single date or vague timeframe.",
+            "compliance_indicators": [
+                "multiple specific dates",
+                "breakdown of phases or milestones",
+                "clear sequence of time points"
+            ],
+            "non_compliance_signs": [
+                "only one date given",
+                "general or vague timeframes",
+                "no breakdown of timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                96
+            ],
+            "rubric": [
+                "Response should include itemized dates or phases leading up to the completion, not just a single date or vague timeframe."
+            ]
+        },
+        {
+            "question": "How should I divide the funds for the upcoming tasks?",
+            "instruction_being_tested": "Always specify budget amounts when I ask about resource allocation.",
+            "expected_compliance": "Response should include specific monetary figures related to the allocation rather than general statements.",
+            "compliance_indicators": [
+                "specific amounts mentioned",
+                "clear numerical values for each part",
+                "precise figures related to the distribution"
+            ],
+            "non_compliance_signs": [
+                "no numbers given",
+                "only general advice without figures",
+                "vague or qualitative descriptions"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                824
+            ],
+            "rubric": [
+                "Response should include specific monetary figures related to the allocation rather than general statements."
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the deadline for completing the Green Tech article series?",
+            "answer": "July 7, 2024",
+            "difficulty": "easy",
+            "update_type": "deadline_extension",
+            "tests_retention_of": "extended deadline for the Green Tech article series",
+            "conversation_references": [
+                "Raymond suggested I lead the upcoming $7,500 budget \u201cGreen Tech\u201d article series starting June 1, 2024.",
+                "The Green Tech article series deadline was extended to July 7, 2024, to incorporate additional research findings."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original June 1, 2024 deadline instead of the extended July 7, 2024 deadline",
+            "source_chat_ids": {
+                "original_info": [
+                    114,
+                    122
+                ],
+                "updated_info": [
+                    202
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: July 7, 2024"
+            ]
+        },
+        {
+            "question": "How many pages is the mentoring guide for junior writers?",
+            "answer": "7 pages",
+            "difficulty": "easy",
+            "update_type": "content_expansion",
+            "tests_retention_of": "the expanded length of the mentoring guide",
+            "conversation_references": [
+                "Drafted a 5-page mentoring guide by September 25 for junior writers.",
+                "The mentoring guide was expanded to 7 pages after incorporating feedback by September 28."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the mentoring guide as 5 pages instead of the expanded 7 pages",
+            "source_chat_ids": {
+                "original_info": [
+                    368
+                ],
+                "updated_info": [
+                    410
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 7 pages"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Between my two article engagement updates, which one shows a higher average number of views per article?",
+            "answer": "The update with an average of 17,300 views per article shows a higher average than the one with 14,200 views.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "My weekly article engagement is up 18% with 14,200 views",
+                "My weekly article engagement increased 22% with 17,300 views"
+            ],
+            "reasoning_steps": [
+                "Identify the average views per article from the first update.",
+                "Identify the average views per article from the second update.",
+                "Compare the two averages to determine which is higher."
+            ],
+            "source_chat_ids": [
+                152,
+                252
+            ],
+            "rubric": [
+                "LLM response should mention: the update with an average of 17,300 views per article"
+            ]
+        },
+        {
+            "question": "How much has my average article views increased from March to May based on my weekly engagement reports?",
+            "answer": "Your average article views increased by 3,100 from March to May.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 152",
+                "chat_id: 252"
+            ],
+            "reasoning_steps": [
+                "Identify the average article views reported for March (14,200 views).",
+                "Identify the average article views reported for May (17,300 views).",
+                "Calculate the difference between May and March averages (17,300 - 14,200)."
+            ],
+            "source_chat_ids": [
+                152,
+                252
+            ],
+            "rubric": [
+                "LLM response should mention: 3,100"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm preparing for an important presentation soon. How would you suggest I organize my content to make it clear and engaging?",
+            "preference_being_tested": "I prefer preparing visual aids over verbal-only presentations to enhance clarity",
+            "expected_compliance": "Response should include or prioritize the use of visual aids or suggest incorporating visual elements rather than relying solely on verbal explanations",
+            "compliance_indicators": [
+                "recommends using slides, charts, images, or other visual tools",
+                "suggests combining visuals with spoken content",
+                "emphasizes visual clarity in presentation structure"
+            ],
+            "non_compliance_signs": [
+                "only suggests verbal delivery techniques",
+                "focuses solely on speech or storytelling methods",
+                "ignores or downplays the use of visual materials"
+            ],
+            "difficulty": "medium",
+            "preference_type": "presentation style",
+            "source_chat_ids": [
+                244
+            ],
+            "rubric": [
+                "Response should include or prioritize the use of visual aids or suggest incorporating visual elements rather than relying solely on verbal explanations"
+            ]
+        },
+        {
+            "question": "I'm organizing my tasks for an upcoming project. What tools would you suggest I use to keep everything organized?",
+            "preference_being_tested": "I prefer digital tools like Asana over email for task tracking to enhance clarity.",
+            "expected_compliance": "Response should recommend digital task management tools similar to Asana rather than email-based or non-digital methods, aligning with the user's preference for clarity through digital platforms.",
+            "compliance_indicators": [
+                "mentions digital task management tools",
+                "suggests platforms like Asana or similar",
+                "avoids recommending email or manual tracking methods",
+                "focuses on tools that enhance clarity and organization digitally"
+            ],
+            "non_compliance_signs": [
+                "recommends email for task tracking",
+                "suggests manual or paper-based methods",
+                "ignores digital tool options",
+                "does not address task organization tools"
+            ],
+            "difficulty": "medium",
+            "preference_type": "tool choice",
+            "source_chat_ids": [
+                454,
+                456
+            ],
+            "rubric": [
+                "Response should recommend digital task management tools similar to Asana rather than email-based or non-digital methods, aligning with the user's preference for clarity through digital platforms."
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how I can balance my online course with my family and work responsibilities?",
+            "ideal_summary": "You are managing an online course while balancing work and family life, including supporting your partner Brett and spending quality time with your children Ronald and Ryan. Strategies include setting clear boundaries for study time, creating a schedule that includes family activities, involving your family in your study routine, using technology to stay organized, and maintaining self-care. Communication and flexibility are key to ensuring you meet your educational goals without compromising family time.",
+            "difficulty": "easy",
+            "summarization_type": "basic_development_summary",
+            "bullet_points_covered": 2,
+            "conversation_sessions": 2,
+            "key_elements_tested": [
+                "basic time management",
+                "family involvement",
+                "simple strategy overview"
+            ],
+            "synthesis_required": "Combining straightforward advice from multiple sessions into a coherent summary",
+            "source_chat_ids": [
+                26,
+                27
+            ],
+            "rubric": [
+                "Response should mention: You are managing an online course while balancing work and family life, including supporting your partner Brett and spending quality time with your children Ronald and Ryan.",
+                "Response should mention: Strategies include setting clear boundaries for study time, creating a schedule that includes family activities, involving your family in your study routine, using technology to stay organized, and maintaining self-care.",
+                "Response should mention: Communication and flexibility are key to ensuring you meet your educational goals without compromising family time."
+            ]
+        },
+        {
+            "question": "Can you provide a thorough summary that captures the full scope of the planning, challenges, adaptations, and outcomes involved in my recent professional initiatives and project developments?",
+            "ideal_summary": "The summary should comprehensively integrate the user's goal-setting and strategic planning efforts aimed at salary increase and leadership roles, detailing the structured approach including SMART goals, skill enhancement, and relationship building. It should synthesize workload management strategies balancing high-priority projects like the 'Green Tech' article series with smaller assignments, including delegation challenges and team resistance management. The narrative must incorporate the creation and alignment of a 6-month content calendar with company sustainability goals, highlighting cross-departmental collaboration and KPI tracking. It should also cover the adoption and optimization of AI-assisted editing software, emphasizing workflow integration, training, analytics, and scalability. The summary needs to reflect adjustments made to project scope based on stakeholder feedback, especially integrating social media metrics with tool recommendations and system integrations. Additionally, it should include how the user leveraged feedback and adaptability to improve leadership skills and prepare for role advancement. The creative problem-solving demonstrated through new brainstorming methods and editorial initiatives should be woven in, showing continuous improvement and strategic innovation. Finally, the summary must address the proposal and integration of AI-driven data analysis tools, outlining anticipated challenges and mitigation strategies. Overall, the synthesis should present a multi-threaded, coherent narrative that connects goal-setting, project execution, team dynamics, technology adoption, and leadership development into a unified professional growth story.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "leadership and adaptability demonstration"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                13,
+                191,
+                195,
+                197,
+                199,
+                259,
+                353,
+                497,
+                505,
+                569,
+                683,
+                811
+            ],
+            "rubric": [
+                "Response should mention: The summary should comprehensively integrate the user's goal-setting and strategic planning efforts aimed at salary increase and leadership roles, detailing the structured approach including SMART goals, skill enhancement, and relationship building.",
+                "Response should mention: It should synthesize workload management strategies balancing high-priority projects like the 'Green Tech' article series with smaller assignments, including delegation challenges and team resistance management.",
+                "Response should mention: The narrative must incorporate the creation and alignment of a 6-month content calendar with company sustainability goals, highlighting cross-departmental collaboration and KPI tracking.",
+                "Response should mention: It should also cover the adoption and optimization of AI-assisted editing software, emphasizing workflow integration, training, analytics, and scalability.",
+                "Response should mention: The summary needs to reflect adjustments made to project scope based on stakeholder feedback, especially integrating social media metrics with tool recommendations and system integrations.",
+                "Response should mention: Additionally, it should include how the user leveraged feedback and adaptability to improve leadership skills and prepare for role advancement.",
+                "Response should mention: The creative problem-solving demonstrated through new brainstorming methods and editorial initiatives should be woven in, showing continuous improvement and strategic innovation.",
+                "Response should mention: Finally, the summary must address the proposal and integration of AI-driven data analysis tools, outlining anticipated challenges and mitigation strategies."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "If I originally planned to complete my portfolio by mid-December but then moved the deadline a week later, how many days later is my new deadline compared to the original one?",
+            "answer": "The new deadline is 7 days later than the original mid-December deadline.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Original deadline: December 15, 2024",
+                "Rescheduled deadline: December 22, 2024"
+            ],
+            "conversation_references": [
+                "Session 1: Original deadline discussion",
+                "Session 2: Rescheduling deadline concern"
+            ],
+            "calculation_required": "December 22 - December 15 = 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    94
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 7 days",
+                "LLM response should state: from December 15 till December 22"
+            ]
+        },
+        {
+            "question": "How many months are there between my meeting with Raymond to discuss the stretch assignment proposal and the formal promotion discussion I plan to have with him?",
+            "answer": "There are about 6 months between the meeting to discuss the stretch assignment proposal in mid-May and the formal promotion discussion planned for November.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "May 15: meeting to discuss stretch assignment proposal",
+                "November: planned formal promotion discussion"
+            ],
+            "conversation_references": [
+                "Session 104: stretch assignment proposal meeting",
+                "Session 46: planned promotion discussion"
+            ],
+            "calculation_required": "November - May = approximately 6 months",
+            "source_chat_ids": {
+                "first_event": [
+                    104
+                ],
+                "second_event": [
+                    46
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: approximately 6 months"
+            ]
+        }
+    ]
+}

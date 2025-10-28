@@ -1,0 +1,554 @@
+{
+    "abstention": [
+        {
+            "question": "What is Katherine\u2019s professional background or occupation?",
+            "ideal_response": "Based on the provided chat, there is no information related to Katherine\u2019s professional background or occupation.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Katherine is mentioned as a partner but no professional details are provided",
+            "plan_reference": "Multiple batches mention Katherine but do not specify her occupation",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Katherine’s professional background or occupation."
+            ]
+        },
+        {
+            "question": "What is the relationship history between Jessica and Meghan?",
+            "ideal_response": "Based on the provided chat, there is no information related to the relationship history between Jessica and Meghan.",
+            "difficulty": "hard",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Jessica and Meghan are mentioned separately but no connection or history between them is described",
+            "plan_reference": "Jessica and Meghan appear in different contexts without relational details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the relationship history between Jessica and Meghan."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any art exhibits or family gatherings?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any art exhibits or family gatherings, but you also mentioned being invited to an art exhibit opening. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at art exhibits and family gatherings",
+            "conversation_references": [
+                "Session 214: Never attended statement",
+                "Session 118: Art exhibit invitation"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    214
+                ],
+                "second_statement": [
+                    118
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any art exhibits or family gatherings",
+                "LLM response should mention: you also mentioned being invited to an art exhibit opening",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any science lectures or family brunches before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any science lectures or family brunches, but you also mentioned attending a science lecture given by Samantha. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at science lectures and family brunches",
+            "conversation_references": [
+                "Session 794: Never attended any science lectures or family brunches",
+                "Session 688: Attended Samantha's science lecture"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    794
+                ],
+                "second_statement": [
+                    688
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any science lectures or family brunches",
+                "LLM response should mention: you also mentioned attending a science lecture given by Samantha",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different budget contributions and planning concerns across our conversations, in order (mention 9 items)?",
+            "answer": "You mentioned the budget contributions and planning concerns in this order: 1) Planning a birthday party budget and guest count, 2) Handling a partial contribution towards decorations and seeking advice, 3) Discussing a family gathering with a smaller group and event hosting, 4) Addressing increased contributions for joint celebrations and appreciation, 5) Managing Christmas decoration funds and allocation strategies, 6) Setting and monitoring budgets for seasonal brunch decorations, 7) Organizing feast decorations with budget oversight, 8) Planning for Labor Day decorations within a specified budget, 9) Revisiting Christmas decoration contributions with updated amounts and budget concerns.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 9,
+            "conversation_references": [
+                "Session 74: Birthday party initial planning",
+                "Session 182: Decoration contribution and advice",
+                "Session 330: Family gathering and event hosting",
+                "Session 426: Joint party contribution and appreciation",
+                "Sessions 550, 558, 560: Christmas funds allocation and planning",
+                "Sessions 652, 756: Easter brunch budget and oversight",
+                "Sessions 870, 872: Feast decoration budget management",
+                "Sessions 968, 972: Labor Day decoration budget planning",
+                "Session 1076: Christmas decoration budget reconsideration"
+            ],
+            "ordering_tested": [
+                "1st: Birthday party budget and guest planning",
+                "2nd: Partial decoration contribution and planning advice",
+                "3rd: Family gathering event hosting",
+                "4th: Joint party contribution and appreciation",
+                "5th: Christmas decoration funds and allocation",
+                "6th: Easter brunch budget and monitoring",
+                "7th: Feast decoration budget oversight",
+                "8th: Labor Day decoration budget planning",
+                "9th: Updated Christmas decoration budget concerns"
+            ],
+            "source_chat_ids": [
+                74,
+                182,
+                330,
+                426,
+                550,
+                652,
+                870,
+                968,
+                1076
+            ],
+            "rubric": [
+                "LLM response should include: Birthday party budget and guest planning",
+                "LLM response should include: Partial decoration contribution and planning advice",
+                "LLM response should include: Family gathering event hosting",
+                "LLM response should include: Joint party contribution and appreciation",
+                "LLM response should include: Christmas decoration funds and allocation",
+                "LLM response should include: Easter brunch budget and monitoring",
+                "LLM response should include: Feast decoration budget oversight",
+                "LLM response should include: Labor Day decoration budget planning",
+                "LLM response should include: Updated Christmas decoration budget concerns"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different family and event planning topics throughout our conversations in order?",
+            "answer": "You mentioned the topics in this order: 1) Improving active listening skills during disagreements, 2) Planning a joint 60th birthday party with budget considerations, 3) Navigating family dynamics with preferences for gathering sizes, 4) Handling unsolicited advice from a family member during gatherings, 5) Coordinating a Christmas Eve dinner for a large group.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 68: Active listening skills",
+                "Session 294 and 306: Birthday party planning and family dynamics",
+                "Session 410 and 414: Handling unsolicited advice",
+                "Session 170, 416, 540, and 1064: Christmas Eve dinner planning"
+            ],
+            "ordering_tested": [
+                "1st: Active listening skills",
+                "2nd: Birthday party planning and family dynamics",
+                "3rd: Handling unsolicited advice",
+                "4th: Christmas Eve dinner planning"
+            ],
+            "source_chat_ids": [
+                68,
+                [
+                    294,
+                    306
+                ],
+                [
+                    410,
+                    414
+                ],
+                [
+                    170,
+                    416,
+                    540,
+                    1064
+                ]
+            ],
+            "rubric": [
+                "LLM response should include: Active listening skills",
+                "LLM response should include: Birthday party planning and family dynamics",
+                "LLM response should include: Handling unsolicited advice",
+                "LLM response should include: Christmas Eve dinner planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say the art event I was invited to is happening?",
+            "answer": "The event is happening on May 3rd.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: Samantha invited me to her art exhibit opening on May 3rd at Gallery 27 on Pine Street...",
+            "key_facts_tested": [
+                "event date"
+            ],
+            "source_chat_ids": [
+                118
+            ],
+            "rubric": [
+                "LLM response should state: The event is happening on May 3rd."
+            ]
+        },
+        {
+            "question": "What time did I say the dinner reservation was booked for?",
+            "answer": "The dinner reservation was booked for 3 PM.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentioned booking a 3 PM Thanksgiving dinner reservation.",
+            "key_facts_tested": [
+                "reservation time"
+            ],
+            "source_chat_ids": [
+                134
+            ],
+            "rubric": [
+                "LLM response should state: The dinner reservation was booked for 3 PM."
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I consider when organizing my upcoming event?",
+            "instruction_being_tested": "Always specify budget amounts when I ask about event planning.",
+            "expected_compliance": "Response should include specific budget amounts related to the event planning.",
+            "compliance_indicators": [
+                "mention of exact monetary figures",
+                "clear budget numbers",
+                "specific cost amounts related to the event"
+            ],
+            "non_compliance_signs": [
+                "no mention of any amounts",
+                "only general advice without numbers",
+                "vague references to costs without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                452
+            ],
+            "rubric": [
+                "LLM response should include: mention of exact monetary figures",
+                "LLM response should include: clear budget numbers",
+                "LLM response should include: specific cost amounts related to the event"
+            ]
+        },
+        {
+            "question": "What meditation practice would you recommend for someone trying to reduce stress?",
+            "instruction_being_tested": "Always include meditation duration when I ask about wellness practices.",
+            "expected_compliance": "Response should include the length of time suggested for the meditation practice along with the recommendation.",
+            "compliance_indicators": [
+                "specific time mentioned for meditation",
+                "duration included with meditation advice",
+                "clear indication of how long to meditate"
+            ],
+            "non_compliance_signs": [
+                "no mention of time",
+                "only type of meditation given",
+                "general meditation advice without timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                788,
+                790,
+                792
+            ],
+            "rubric": [
+                "LLM response should include: specific time mentioned for meditation",
+                "LLM response should include: duration included with meditation advice",
+                "LLM response should include: clear indication of how long to meditate"
+            ]
+        }
+    ],
+    "knowledge_update": [
+         {
+            "question": "What budget have you and Katherine set for the blended family holiday celebration?",
+            "answer": "A budget slightly above $3,000 to allow for additional catering needs and more comfortable spending.",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "adjusted budget amount reflecting increased spending range",
+            "conversation_references": [
+                "Joint Decision Making: Katherine and I decided on a $3,000 budget for our upcoming blended family holiday celebration in December.",
+                "The budget for our blended family holiday celebration has been adjusted slightly upward to accommodate additional catering needs, reflecting a more comfortable spending range."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original fixed $3,000 budget instead of the adjusted, slightly higher budget",
+            "source_chat_ids": {
+                "original_info": [
+                    42
+                ],
+                "updated_info": [
+                    42
+                ]
+            },
+            "rubric": [
+                "LLM response should state: A budget slightly above $3,000 to allow for additional catering needs and more comfortable spending."
+            ]
+        },
+        {
+            "question": "What is the budget allocated for the joint birthday party to cover decorations and entertainment?",
+            "answer": "$2,900 to include additional decorations and a live band",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amount including decorations and live band",
+            "conversation_references": [
+                "Milestone Events: Planned a joint 60th birthday party for Katherine and me on August 15th at The Garden Room, 40 guests, $2,500 budget.",
+                "The joint birthday party budget was increased to $2,900 to include additional decorations and a live band."
+            ],
+            "potential_confusion": "LLM might incorrectly recall original $2,500 budget instead of updated $2,900 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    450
+                ],
+                "updated_info": [
+                    450
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $2,900 to include additional decorations and a live band"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many guests in total did I plan to invite across Thanksgiving and Christmas Eve dinner?",
+            "answer": "43 guests in total (18 for Thanksgiving and 25 for Christmas Eve dinner).",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Thanksgiving guest list",
+                "Christmas Eve dinner guest list"
+            ],
+            "reasoning_steps": [
+                "Identify the number of guests planned for Thanksgiving from the user message.",
+                "Identify the number of guests planned for Christmas Eve dinner from the user message.",
+                "Add the two guest counts together to get the total number of guests planned."
+            ],
+            "source_chat_ids": [
+                370,
+                476
+            ],
+            "rubric": [
+                "LLM response should state: 43 guests",
+                "LLM response should include: 18 for Thanksgiving",
+                "LLM response should include: 25 for Christmas Eve dinner"
+            ]
+        },
+        {
+            "question": "How many different restaurants do I alternate between for my weekly Friday date nights with Katherine?",
+            "answer": "Two restaurants: The Olive Branch Caf\u00e9 and The Hearth.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "I'm trying to balance my weekly date nights with Katherine on Fridays at 7 PM, alternating restaurants",
+                "Katherine and I have been maintaining our weekly Friday date nights at 7 PM, alternating between The Olive Branch Caf\u00e9 and The Hearth",
+                "I've been maintaining weekly Friday date nights at 7 PM with Katherine, alternating between The Olive Branch Caf\u00e9 and The Hearth"
+            ],
+            "reasoning_steps": [
+                "Identify the mention of weekly Friday date nights with Katherine.",
+                "Note the specific restaurants mentioned for alternating date nights.",
+                "Count the number of distinct restaurants mentioned."
+            ],
+            "source_chat_ids": [
+                172,
+                420,
+                536,
+                958,
+                1066
+            ],
+            "rubric": [
+                "LLM response should state: Two restaurants",
+                "LLM response should include: The Olive Branch Caf\u00e9",
+                "LLM response should include: The Hearth"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning a family gathering and want to pick a day that works well for everyone. How should I decide when to schedule it?",
+            "preference_being_tested": "I prefer scheduling family events on weekends to maximize attendance and minimize work conflicts.",
+            "expected_compliance": "Response should suggest scheduling the family event on a weekend or provide reasoning that aligns with maximizing attendance and minimizing work conflicts by avoiding weekdays.",
+            "compliance_indicators": [
+                "recommends weekend dates",
+                "mentions avoiding workdays",
+                "considers typical work schedules",
+                "focuses on maximizing attendance"
+            ],
+            "non_compliance_signs": [
+                "suggests weekday dates without justification",
+                "ignores work schedule conflicts",
+                "does not address attendance considerations",
+                "recommends random or inconvenient days"
+            ],
+            "difficulty": "medium",
+            "preference_type": "scheduling preference",
+            "source_chat_ids": [
+                96
+            ],
+            "rubric": [
+                "LLM response should include: recommends weekend dates",
+                "LLM response should include: mentions avoiding workdays"
+            ]
+        },
+        {
+            "question": "I want to get everyone involved in planning our next family event. How can I help make the coordination process smoother for everyone?",
+            "preference_being_tested": "I prefer to use digital tools like Trello for family event coordination to improve organization.",
+            "expected_compliance": "Response should suggest using digital tools or platforms that facilitate organization and collaboration, ideally recommending solutions that align with digital coordination methods.",
+            "compliance_indicators": [
+                "recommends digital tools or apps for event coordination",
+                "mentions ways to organize tasks and schedules digitally",
+                "offers advice on onboarding others to a digital platform"
+            ],
+            "non_compliance_signs": [
+                "only suggests non-digital methods like phone calls or paper lists",
+                "ignores digital coordination options",
+                "does not address ways to organize or streamline coordination"
+            ],
+            "difficulty": "medium",
+            "preference_type": "tool choice",
+            "source_chat_ids": [
+                428
+            ],
+            "rubric": [
+                "LLM response should include: recommends digital tools or apps for event coordination",
+                "LLM response should include: mentions ways to organize tasks and schedules digitally",
+                "LLM response should include: offers advice on onboarding others to a digital platform"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary of everything we've talked about regarding my family relationships and gatherings, capturing all the key concerns, plans, and strategies we've discussed to navigate these dynamics effectively?",
+            "ideal_summary": "The discussions cover multiple facets of managing complex family relationships and events, focusing on maintaining harmony and inclusivity across various family members and situations. Starting with navigating in-law dynamics, the emphasis is on open communication with Katherine, setting boundaries, and fostering mutual support to strengthen the partnership. Strategies include preparing for sensitive conversations with calmness, active listening, and proposing solutions collaboratively. Considerations about age differences and life stages between the user, Katherine, and the user's daughters highlight the importance of aligning shared goals, respecting individual needs, and planning for future well-being. Enhancing family interactions extends to making monthly meetings with daughters more meaningful through themed activities, personal updates, and shared experiences, while supporting the aging mother involves health monitoring, home safety, social engagement, and emotional support. Planning large family events like the July 4th reunion involves logistical coordination, accommodating diverse ages and mobility needs, delegating responsibilities, and ensuring accessibility and comfort for all attendees. Including family members\u2019 interests, such as Bruce\u2019s passion for jazz, and respecting preferences like Meghan\u2019s for smaller gatherings, are addressed through tailored activities and direct communication to ensure comfort and inclusion. Managing sensitive topics during gatherings, such as steering away from political discussions and handling unsolicited advice from Katherine\u2019s mother about holiday gifts and budgets, involves setting clear boundaries, redirecting conversations tactfully, and maintaining respectful dialogue. Overall, the approach integrates thoughtful preparation, empathetic communication, and flexible planning to foster positive family interactions, accommodate individual preferences, and create enjoyable, inclusive events that strengthen family bonds.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                12,
+                13,
+                14,
+                15,
+                22,
+                29,
+                38,
+                41,
+                46,
+                49,
+                116,
+                163,
+                216,
+                219,
+                358,
+                457
+            ],
+            "rubric": [
+                "LLM response should include: The discussions cover multiple facets of managing complex family relationships and events, focusing on maintaining harmony and inclusivity across various family members and situations.",
+                "LLM response should include: Navigating in-law dynamics with open communication, setting boundaries, and fostering mutual support.",
+                "LLM response should include: Strategies for sensitive conversations with calmness, active listening, and collaborative solutions.",
+                "LLM response should include: Considerations about age differences and life stages between the user, Katherine, and the user's daughters.",
+                "LLM response should include: Enhancing family interactions through themed activities, personal updates, and shared experiences.",
+                "LLM response should include: Supporting the aging mother with health monitoring, home safety, social engagement, and emotional support.",
+                "LLM response should include: Planning large family events with logistical coordination, accommodating diverse ages and mobility needs, delegating responsibilities, and ensuring accessibility and comfort.",
+                "Including family members\u2019 interests, such as Bruce\u2019s passion for jazz, and respecting preferences like Meghan\u2019s for smaller gatherings, are addressed through tailored activities and direct communication to ensure comfort and inclusion.",
+                "LLM response should include: Managing sensitive topics during gatherings by setting clear boundaries, redirecting conversations tactfully, and maintaining respectful dialogue.",
+                "LLM response should include: Overall approach integrates thoughtful preparation, empathetic communication, and flexible planning to foster positive family interactions, accommodate individual preferences, and create enjoyable, inclusive events that strengthen family bonds."
+            ]
+        },
+        {
+            "question": "Can you summarize how Katherine and I are planning to handle our holiday celebrations and hosting duties?",
+            "ideal_summary": "You and Katherine have agreed to manage your holiday celebrations by sticking to a $3,000 budget with careful planning, alternating Christmas traditions to respect both families, and splitting hosting duties evenly starting in 2024. This includes creating clear schedules, communicating openly with family members, and sharing responsibilities for events like Thanksgiving, Easter brunch, and St. Anthony's feast to ensure fairness and reduce conflicts.",
+            "difficulty": "easy",
+            "summarization_type": "basic_decision_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 42,
+            "key_elements_tested": [
+                "budget planning",
+                "alternating traditions",
+                "splitting hosting duties"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a clear summary",
+            "source_chat_ids": [
+                42,
+                44,
+                128,
+                190,
+                436,
+                564,
+                660,
+                764,
+                880
+            ],
+            "rubric": [
+                "LLM response should include: You and Katherine have agreed to manage your holiday celebrations by sticking to a $3,000 budget with careful planning, alternating Christmas traditions to respect both families, and splitting hosting duties evenly starting in 2024.",
+                "LLM response should include: creating clear schedules, communicating openly with family members, and sharing responsibilities for events like Thanksgiving, Easter brunch, and St. Anthony's feast to ensure fairness and reduce conflicts."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many hours overlap between the time I reserved Pavilion 3 for the reunion and the time I reserved Pavilion 1 for the picnic, and during that overlap, how much more per person does the catering cost for the picnic compared to the reunion?",
+            "answer": "There is a 4-hour overlap between the Pavilion 3 reservation from 11 AM to 4 PM and the Pavilion 1 reservation from 12 PM to 5 PM. During this overlap, the catering for the picnic costs $5 more per person ($30 vs. $25).",
+            "difficulty": "medium",
+            "temporal_type": "multi-reference_time_gap",
+            "time_points": [
+                "Pavilion 3 reserved 11 AM to 4 PM (chat_id 46, 48)",
+                "Pavilion 1 reserved 12 PM to 5 PM (chat_id 252)"
+            ],
+            "conversation_references": [
+                "Session 1: Pavilion 3 reunion planning",
+                "Session 3: Pavilion 1 picnic planning"
+            ],
+            "calculation_required": "Overlap from 12 PM to 4 PM = 4 hours; Catering cost difference = $30 - $25 = $5",
+            "source_chat_ids": {
+                "first_event": [
+                    46,
+                    48
+                ],
+                "second_event": [
+                    252
+                ]
+            },
+            "rubric": [
+                "LLM response should state: There is a 4-hour overlap"
+            ]
+        },
+        {
+            "question": "How many days are there between Anita's 29th birthday and the St. Anthony's feast when Katherine's family visit is planned?",
+            "answer": "There are 52 days between Anita's birthday on April 22nd and the St. Anthony's feast on June 13th when Katherine's family visit is planned.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 22nd: Anita's 29th birthday",
+                "June 13th at 7 PM: St. Anthony's feast and Katherine's family visit"
+            ],
+            "conversation_references": [
+                "Session 74 and 80: Anita's birthday planning",
+                "Session 610: Katherine's family visit planning"
+            ],
+            "calculation_required": "June 13 - April 22 = 52 days",
+            "source_chat_ids": {
+                "first_event": [
+                    74,
+                    80
+                ],
+                "second_event": [
+                    610
+                ]
+            },
+            "rubric": [
+                "LLM response should state: There are 52 days between Anita's birthday on April 22nd and the St. Anthony's feast on June 13th when Katherine's family visit is planned."
+            ]
+        }
+    ]
+}

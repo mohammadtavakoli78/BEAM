@@ -1,0 +1,727 @@
+{
+    "abstention": [
+        {
+            "question": "What are the detailed rules and regulations reviewed for the North Ericshire Doubles Championship?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed rules and regulations for the North Ericshire Doubles Championship.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Rules are mentioned generally but no detailed content is provided.",
+            "plan_reference": "Batch 5, Bullet 27 mentions reviewing doubles match rules but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed rules and regulations for the North Ericshire Doubles Championship"
+            ]
+        },
+        {
+            "question": "What was the atmosphere like during the charity tennis event on August 17?",
+            "ideal_response": "Based on the provided chat, there is no information related to the atmosphere during the charity tennis event on August 17.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Event is mentioned but no description of atmosphere or crowd is given.",
+            "plan_reference": "Batch 6, Bullet 15 mentions participation but no atmosphere details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the atmosphere during the charity tennis event on August 17"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever experienced wrist pain during tennis practice?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never experienced any wrist pain during tennis practice, but you also mentioned experiencing mild wrist pain and consulting Omar about it. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "wrist pain during tennis practice",
+            "conversation_references": [
+                "Session 412: No wrist pain experienced",
+                "Sessions 306, 312, 320: Experienced wrist pain and consulted Omar"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    412
+                ],
+                "second_statement": [
+                    306,
+                    312,
+                    320
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never experienced any wrist pain during tennis practice",
+                "LLM response should mention: you also mentioned experiencing mild wrist pain and consulting Omar about it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I practiced any mental preparation drills recommended by Omar?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never practiced any mental preparation drills recommended by Omar, but you also mentioned practicing breathing techniques regularly. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Practice of mental preparation drills",
+            "conversation_references": [
+                "Session 610: Never practiced drills",
+                "Sessions 442, 448, 452: Practiced breathing techniques and improvements"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    610
+                ],
+                "second_statement": [
+                    442,
+                    448,
+                    452
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never practiced any mental preparation drills recommended by Omar",
+                "LLM response should mention: you also mentioned practicing breathing techniques regularly",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of coaching and training evolve throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus evolved through these aspects in this sequence: 1) Initial inquiries about coaching experience and cost, 2) Discussion of beginner communication and lesson pacing, 3) Introduction and integration of physical drills to improve agility and volley skills, 4) Exploration of mental preparation techniques and their impact, 5) Refinement of serve and volley performance with advanced drills, 6) Strategies for maintaining and improving serve accuracy, 7) Communication about progress and goal setting with the coach, 8) Balancing external commitments with training and advancing mental toughness, 9) Consideration of additional tactical coaching and opponent analysis, 10) Planning future goals with coaching support.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 30, 32, 34, 36, 44",
+                "chat_id 214, 222, 224",
+                "chat_id 418, 430, 436",
+                "chat_id 612, 820, 822, 832, 836",
+                "chat_id 1020, 1028",
+                "chat_id 1208, 1216",
+                "chat_id 1404, 1406, 1412, 1416",
+                "chat_id 1626, 1630, 1636",
+                "chat_id 1820"
+            ],
+            "ordering_tested": [
+                "1st: Coaching experience and cost",
+                "2nd: Beginner communication and pacing",
+                "3rd: Physical drills for agility and volley",
+                "4th: Mental preparation techniques",
+                "5th: Advanced serve and volley drills",
+                "6th: Serve accuracy improvement and maintenance",
+                "7th: Communication about progress and goals",
+                "8th: Balancing commitments and mental toughness",
+                "9th: Tactical coaching and opponent analysis",
+                "10th: Future goal planning with coaching"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "spans numerous conversation sessions",
+                "involves tracking evolving coaching and training topics",
+                "demands pattern recognition across physical, mental, and strategic themes"
+            ],
+            "source_chat_ids": [
+                30,
+                32,
+                34,
+                36,
+                44,
+                214,
+                222,
+                224,
+                418,
+                430,
+                436,
+                612,
+                820,
+                822,
+                832,
+                836,
+                1020,
+                1028,
+                1208,
+                1216,
+                1404,
+                1406,
+                1412,
+                1416,
+                1626,
+                1630,
+                1636,
+                1820
+            ],
+            "rubric": [
+                "Coaching experience and cost",
+                "Beginner communication and pacing",
+                "Physical drills for agility and volley",
+                "Mental preparation techniques",
+                "Advanced serve and volley drills",
+                "Serve accuracy improvement and maintenance",
+                "Communication about progress and goals",
+                "Balancing commitments and mental toughness",
+                "Tactical coaching and opponent analysis",
+                "Future goal planning with coaching"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of my tennis practice and court bookings develop throughout our conversations in order? Mention ONLY and ONLY nine items.",
+            "answer": "Your focus on tennis practice and court bookings developed in this sequence: 1) Initial general court bookings and improvement expectations, 2) Balancing practice with work and scheduling concerns, 3) Creating detailed practice schedules including specific drills and watching matches, 4) Adding and optimizing specific time slots for serve practice, 5) Preparing for upcoming tournaments with targeted practice strategies, 6) Reserving courts for particular sessions and discussing how to maximize those times, 7) Balancing practice with tournament schedules and other commitments, 8) Managing equipment maintenance and optimizing racket performance, 9) Planning future court bookings and refining practice strategies for upcoming sessions.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 9,
+            "conversation_references": [
+                "chat_id: 70, 72, 74, 82",
+                "chat_id: 250, 260, 266",
+                "chat_id: 460, 466, 472",
+                "chat_id: 792, 800, 806",
+                "chat_id: 862, 868, 870",
+                "chat_id: 1058, 1066, 1072",
+                "chat_id: 1376, 1382, 1388",
+                "chat_id: 1598, 1610",
+                "chat_id: 1792, 1800, 1808, 1998, 2004, 2010"
+            ],
+            "ordering_tested": [
+                "1st: General court bookings and improvement",
+                "2nd: Balancing practice with work",
+                "3rd: Detailed practice schedules and drills",
+                "4th: Specific serve practice time slots",
+                "5th: Tournament preparation strategies",
+                "6th: Reserved court sessions and utilization",
+                "7th: Balancing practice with tournaments and commitments",
+                "8th: Equipment maintenance and racket optimization",
+                "9th: Future court bookings and practice refinement"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves multiple intertwined practice and scheduling aspects",
+                "requires sophisticated sequence reconstruction and pattern recognition"
+            ],
+            "source_chat_ids": [
+                70,
+                72,
+                74,
+                82,
+                250,
+                260,
+                266,
+                460,
+                466,
+                472,
+                792,
+                800,
+                806,
+                862,
+                868,
+                870,
+                1058,
+                1066,
+                1072,
+                1376,
+                1382,
+                1388,
+                1598,
+                1610,
+                1792,
+                1800,
+                1808,
+                1998,
+                2004,
+                2010
+            ],
+            "rubric": [
+                "General court bookings and improvement",
+                "Balancing practice with work",
+                "Detailed practice schedules and drills",
+                "Specific serve practice time slots",
+                "Tournament preparation strategies",
+                "Reserved court sessions and utilization",
+                "Balancing practice with tournaments and commitments",
+                "Equipment maintenance and racket optimization",
+                "Future court bookings and practice refinement"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much did I say the coach charges per hour for individual lessons?",
+            "answer": "You said the coach charges $50 per hour for individual lessons.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 36: USER states the hourly rate and package details",
+            "key_facts_tested": [
+                "hourly rate for individual lessons"
+            ],
+            "source_chat_ids": [
+                36
+            ],
+            "rubric": [
+                "LLM response should state: $50"
+            ]
+        },
+        {
+            "question": "How did you help me evaluate whether to continue using my current racket or switch to a new one based on how it felt during testing and my style of play?",
+            "answer": "I suggested assessing your comfort and performance with the new racket, considering how its weight affected your control and power, and comparing it to your current racket. I also advised you to think about your playing style\u2014whether you rely on powerful groundstrokes or need maneuverability\u2014and to test other rackets or customize the one you tried. Additionally, I recommended consulting with Coach Omar and conducting a structured trial period to gather comprehensive feedback before deciding.",
+            "difficulty": "hard",
+            "question_type": "context_based_recall",
+            "conversation_reference": "Multiple turns: initial user testing mention, assistant's detailed advice on evaluation, playing style considerations, and testing plan",
+            "key_facts_tested": [
+                "weight comparison between rackets",
+                "impact on comfort and control",
+                "playing style influence",
+                "consulting Coach Omar",
+                "structured testing plan"
+            ],
+            "extraction_challenge": "LLM must integrate advice on comfort, performance, playing style, consultation, and testing strategy scattered across different assistant messages to explain the evaluation process",
+            "source_chat_ids": [
+                310,
+                311,
+                316,
+                317
+            ],
+            "rubric": [
+                "LLM response should state: suggested assessing your comfort and performance with the new racket",
+                "LLM response should state: suggested considering how its weight affected your control and power",
+                "LLM response should state: suggested comparing it to your current racket",
+                "LLM response should state: advised you to think about your playing style\u2014whether you rely on powerful groundstrokes or need maneuverability",
+                "LLM response should state: advised you to test other rackets or customize the one you tried",
+                "LLM response should state: I recommended consulting with Coach Omar and conducting a structured trial period to gather comprehensive feedback before deciding"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some good snack options I can have around my practice times?",
+            "instruction_being_tested": "Always include calorie counts when I ask about nutrition advice.",
+            "expected_compliance": "Response should include calorie counts for each snack option provided.",
+            "compliance_indicators": [
+                "calorie information given for each snack",
+                "specific calorie values mentioned",
+                "calorie details included alongside snack suggestions"
+            ],
+            "non_compliance_signs": [
+                "no calorie information provided",
+                "only snack names or descriptions without calorie data",
+                "general advice without any calorie details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                408,
+                410
+            ],
+            "rubric": [
+                "LLM response should contain: calorie information given for each snack",
+                "LLM response should contain: specific calorie values mentioned",
+                "LLM response should contain: calorie details included alongside snack suggestions"
+            ]
+        },
+        {
+            "question": "What are some ways I can protect myself from heat-related illness?",
+            "instruction_being_tested": "Always specify hydration strategies when I ask about heat stroke prevention.",
+            "expected_compliance": "Response should include specific methods related to maintaining fluid intake and managing body fluids as part of preventing heat-related illness.",
+            "compliance_indicators": [
+                "mention of drinking fluids",
+                "recommendations on fluid types or amounts",
+                "discussion of staying hydrated",
+                "tips on fluid replacement"
+            ],
+            "non_compliance_signs": [
+                "no mention of fluids or drinking",
+                "only general advice without fluid-related details",
+                "ignoring fluid management entirely"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1016
+            ],
+            "rubric": [
+                "LLM response should contain: mention of drinking fluids",
+                "LLM response should contain: discussion of staying hydrated",
+                "LLM response should contain: recommendations on fluid types or amounts"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What weight of dumbbells should I use for my daily wrist strengthening exercises?",
+            "answer": "2 kg dumbbells",
+            "difficulty": "easy",
+            "update_type": "exercise resistance increase",
+            "tests_retention_of": "updated dumbbell weight for wrist strengthening exercises",
+            "conversation_references": [
+                "Injury Prevention: Added daily wrist strengthening exercises with 1 kg dumbbells since May 7.",
+                "Information Update: The wrist strengthening exercises with 1 kg dumbbells have been increased to 2 kg since May 20 for added resistance."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 1 kg dumbbell weight instead of the updated 2 kg weight",
+            "source_chat_ids": {
+                "original_info": [
+                    478
+                ],
+                "updated_info": [
+                    606
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 kg"
+            ]
+        },
+        {
+            "question": "How many sets of stair sprints do I include in my weekly fitness routine?",
+            "answer": "6 sets of 20 steps",
+            "difficulty": "easy",
+            "update_type": "routine_extension",
+            "tests_retention_of": "number of stair sprint sets in the fitness routine",
+            "conversation_references": [
+                "Fitness Training: Added stair sprints (5 sets of 20 steps) to weekly routine since September 16.",
+                "Information Update: The stair sprints routine was extended to 6 sets of 20 steps starting September 22 for enhanced endurance."
+            ],
+            "potential_confusion": "LLM might incorrectly recall 5 sets of 20 steps instead of the updated 6 sets",
+            "source_chat_ids": {
+                "original_info": [
+                    1378,
+                    1384,
+                    1392
+                ],
+                "updated_info": [
+                    1394
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 6 sets of 20 steps"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Considering my purchases, training routines, and recovery practices, what is the total weekly time and money I invest in tennis equipment, recovery, and injury prevention combined?",
+            "answer": "You spend $256 on equipment (racket and balls). Weekly, you invest approximately 140 minutes on recovery (two ice baths, daily foam rolling, wrist and ankle exercises, physiotherapy sessions) plus daily wrist strengthening and mobility exercises, totaling around 4 hours weekly. This combines your equipment cost with your time investment in recovery and injury prevention.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Equipment purchases and costs",
+                "Recovery techniques and ice bath frequency",
+                "Wrist strengthening and mobility exercises",
+                "Ankle stability and footwork training",
+                "Physiotherapy session frequency and injury prevention"
+            ],
+            "reasoning_steps": [
+                "Calculate total equipment cost by summing racket and balls expenses.",
+                "Identify recovery activities including ice baths, foam rolling, and physiotherapy, and estimate weekly time spent based on frequency and duration.",
+                "Include daily wrist strengthening and mobility exercises time, aggregating across sessions.",
+                "Add ankle stability and footwork training durations to weekly recovery and injury prevention time.",
+                "Sum all time investments and combine with equipment cost to find total weekly investment in tennis-related expenses and recovery."
+            ],
+            "source_chat_ids": [
+                86,
+                90,
+                96,
+                272,
+                278,
+                284,
+                478,
+                880,
+                886,
+                892,
+                1078,
+                1266,
+                1681,
+                1694,
+                1878,
+                1884,
+                1891,
+                1893
+            ],
+            "rubric": [
+                "LLM response should state: spend $256 on equipment (racket and balls)",
+                "LLM response should state: you invest approximately 140 minutes on recovery (two ice baths, daily foam rolling, wrist and ankle exercises, physiotherapy sessions)",
+                "LLM response should state: 4 hours weekly"
+            ]
+        },
+        {
+            "question": "How much have I spent in total on tennis rackets, balls, and coaching sessions so far?",
+            "answer": "You have spent $220 on a racket, $36 on balls, and $100 on coaching sessions, totaling $356.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "86-87",
+                "90-91",
+                "1984-1985"
+            ],
+            "reasoning_steps": [
+                "Identify the cost of the Wilson Pro Staff racket from the first session.",
+                "Calculate the total cost of the Wilson US Open balls from the second session.",
+                "Add the cost of coaching sessions from the third session.",
+                "Sum all these amounts to find the total expenditure."
+            ],
+            "source_chat_ids": [
+                86,
+                87,
+                90,
+                91,
+                1984,
+                1985
+            ],
+            "rubric": [
+                "LLM response should state: $356",
+                "LLM response should state: $220 on a racket",
+                "LLM response should state: $36 on balls",
+                "LLM response should state: $100 on coaching sessions"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm signing up for a tournament soon. What should I consider when choosing a venue to help me perform my best?",
+            "preference_being_tested": "I prefer indoor courts for tournaments to avoid weather unpredictability and maintain focus.",
+            "expected_compliance": "Response should prioritize recommending indoor courts or venues that minimize weather-related disruptions and support concentration, aligning with the user's preference for indoor settings.",
+            "compliance_indicators": [
+                "suggests indoor courts or venues with controlled environments",
+                "mentions avoiding weather-related issues",
+                "offers tips related to maintaining focus in stable conditions"
+            ],
+            "non_compliance_signs": [
+                "recommends outdoor courts without addressing weather",
+                "ignores environment factors affecting focus",
+                "fails to mention venue conditions relevant to performance"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                1316,
+                1322,
+                1326,
+                1330
+            ],
+            "rubric": [
+                "LLM response should contain: suggests indoor courts or venues with controlled environments",
+                "LLM response should contain: mentions avoiding weather-related issues"
+            ]
+        },
+        {
+            "question": "I'm thinking about trying out a new tennis racket. What factors should I consider to find one that suits my playing style?",
+            "preference_being_tested": "I prefer lighter rackets for faster swing speed and better maneuverability during matches.",
+            "expected_compliance": "Response should highlight the importance of racket weight in relation to swing speed and maneuverability, recommending lighter rackets or explaining how weight affects these aspects, thereby aligning with the user's preference.",
+            "compliance_indicators": [
+                "mentions racket weight as a key factor",
+                "explains impact of weight on swing speed and maneuverability",
+                "suggests lighter rackets or options with similar characteristics",
+                "acknowledges user's playing style in relation to racket weight"
+            ],
+            "non_compliance_signs": [
+                "ignores racket weight in recommendations",
+                "only discusses other factors without linking to weight",
+                "recommends heavier rackets without justification",
+                "fails to connect racket characteristics to playing style"
+            ],
+            "difficulty": "medium",
+            "preference_type": "equipment characteristic",
+            "source_chat_ids": [
+                1524,
+                1528
+            ],
+            "rubric": [
+                "LLM response should contain: mentions racket weight as a key factor",
+                "LLM response should contain: explains impact of weight on swing speed and maneuverability",
+                "LLM response should contain: suggests lighter rackets or options with similar characteristics"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed summary of everything related to my tennis activities, including how I\u2019ve approached playing with Sharon, managed my training and nutrition, utilized technology for tracking, handled support from Cheryl, addressed physical challenges, and prepared for events and recovery?",
+            "ideal_summary": "The user\u2019s tennis journey involves multiple interconnected aspects spanning social interactions, physical training, nutrition, technology use, support systems, injury management, and event preparation. Initially, the user planned to approach Sharon, a young and energetic player met at North Ericshire Tennis Club, with a friendly and direct invitation to play matches, incorporating discussions about her playing style to foster rapport and adaptability on court. Concurrently, the user focused on optimizing physical conditioning by increasing practice intensity supported by tailored dietary recommendations emphasizing balanced macronutrients, hydration, and timed meals to fuel performance and recovery. Cheryl\u2019s supportive role is significant, demonstrated by her attendance at matches, providing nutritious snacks, gifting equipment like a Fitbit Charge 5 and tennis shoes, and arranging physiotherapy sessions, all of which the user values and seeks to reciprocate through thoughtful appreciation and involving her more in the tennis journey. The Fitbit device is leveraged to monitor key health metrics such as heart rate variability and sleep quality, aiding in recovery and training adjustments. The user also manages mild shoulder pain through physiotherapy-guided strengthening exercises and preventive strategies including proper warm-up, technique refinement, and rest. Recovery practices are emphasized, with structured rest days incorporating nutrition, hydration, active recovery, and mindfulness to maintain physical and mental health during intense practice periods, especially under challenging conditions like heatwaves. Event preparation includes strategic use of Cheryl\u2019s care package with protein bars and electrolyte drinks to optimize energy and hydration during tournaments, and careful breaking-in of new tennis shoes to ensure comfort and performance. Social and celebratory occasions, such as dinners at Olive Tree Bistro, are integrated into the user\u2019s tennis life, with attention to appropriate attire and expressing gratitude to Cheryl for her ongoing support. Overall, the user\u2019s tennis experience is a complex, multi-threaded narrative involving social engagement, physical and mental conditioning, technological integration, injury management, and community support, all orchestrated to enhance performance and enjoyment of the sport.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and physical integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "health and recovery management"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                22,
+                25,
+                27,
+                29,
+                217,
+                227,
+                421,
+                433,
+                831,
+                1025,
+                1031,
+                1035,
+                1215,
+                1221,
+                1409,
+                1419,
+                1629,
+                1823
+            ],
+            "rubric": [
+                "LLM response should contain: you planned to approach Sharon, a young and energetic player met at North Ericshire Tennis Club, with a friendly and direct invitation to play matches",
+                "LLM response should contain: focused on optimizing physical conditioning by increasing practice intensity supported by tailored dietary recommendations emphasizing balanced macronutrients, hydration, and timed meals",
+                "LLM response should contain: Cheryl\u2019s supportive role is significant, demonstrated by her attendance at matches, providing nutritious snacks, gifting equipment like a Fitbit Charge 5 and tennis shoes",
+                "LLM response should contain: he Fitbit device is leveraged to monitor key health metrics such as heart rate variability and sleep quality, aiding in recovery and training adjustments",
+                "LLM response should contain: you managed mild shoulder pain through physiotherapy-guided strengthening exercises and preventive strategies including proper warm-up, technique refinement, and rest",
+                "LLM response should contain: Recovery practices are emphasized, with structured rest days incorporating nutrition, hydration, active recovery, and mindfulness",
+                "LLM response should contain: Event preparation includes strategic use of Cheryl\u2019s care package with protein bars and electrolyte drinks to optimize energy and hydration during tournaments",
+                "LLM response should contain: Social and celebratory occasions, such as dinners at Olive Tree Bistro, are integrated into your tennis life, with attention to appropriate attire and expressing gratitude to Cheryl"
+            ]
+        },
+        {
+            "question": "Can you give me a comprehensive summary of how I\u2019ve been managing my tennis training, injury prevention, and equipment choices over time?",
+            "ideal_summary": "Over the course of our discussions, you have made several key decisions and adopted strategies to enhance your tennis performance and prevent injuries. Initially, you invested in high-quality equipment, including a Wilson Pro Staff racket and Wilson US Open balls, carefully evaluating their value and fit for your playing style. Concurrently, you began incorporating mindfulness meditation to improve your mental focus during matches, applying techniques such as mindful breathing and visualization. To address physical resilience, you integrated wrist strengthening exercises with 1 kg dumbbells and ankle stability exercises using a balance board, both aimed at injury prevention and improved court movement. You also explored various injury prevention methods, including the use of kinesiology tape and wrist braces, and received guidance on physiotherapy focusing on wrist and shoulder mobility to maintain joint health. Additionally, you considered complementary practices like yoga for flexibility, strength, and mental toughness. Throughout, you balanced physiotherapy sessions with your training and recovery routines, adjusting frequency based on your condition and workload, and incorporated recovery techniques such as ice baths and foam rolling. This holistic approach reflects a progressive and evolving commitment to optimizing your tennis performance while minimizing injury risk.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                87,
+                91,
+                97,
+                287,
+                299,
+                479,
+                489,
+                491,
+                675,
+                677,
+                679,
+                685,
+                687,
+                693,
+                695,
+                881,
+                887,
+                893,
+                1079,
+                1267,
+                1273,
+                1279,
+                1461,
+                1469,
+                1475,
+                1681,
+                1691,
+                1695,
+                1879,
+                1885,
+                1891,
+                1893
+            ],
+            "key_elements_tested": [
+                "equipment evaluation",
+                "mental focus techniques",
+                "physical injury prevention",
+                "rehabilitation and physiotherapy",
+                "holistic training and recovery"
+            ],
+            "synthesis_required": "Integrating equipment choices, mental training, physical conditioning, injury prevention strategies, and recovery practices into a coherent narrative showing progression and interrelation",
+            "source_chat_ids": [
+                87,
+                91,
+                97,
+                287,
+                299,
+                479,
+                489,
+                491,
+                675,
+                677,
+                679,
+                685,
+                687,
+                693,
+                695,
+                881,
+                887,
+                893,
+                1079,
+                1267,
+                1273,
+                1279,
+                1461,
+                1469,
+                1475,
+                1681,
+                1691,
+                1695,
+                1879,
+                1885,
+                1891,
+                1893
+            ],
+            "rubric": [
+                "LLM response should contain: you invested in high-quality equipment, including a Wilson Pro Staff racket and Wilson US Open balls",
+                "LLM response should contain: you began incorporating mindfulness meditation to improve your mental focus during matches, applying techniques such as mindful breathing and visualization",
+                "LLM response should contain: you integrated wrist strengthening exercises with 1 kg dumbbells and ankle stability exercises using a balance board, both aimed at injury prevention and improved court movement",
+                "LLM response should contain: explored various injury prevention methods, including the use of kinesiology tape and wrist braces, and received guidance on physiotherapy focusing on wrist and shoulder mobility",
+                "LLM response should contain: you considered complementary practices like yoga for flexibility, strength, and mental toughness",
+                "LLM response should contain: you balanced physiotherapy sessions with your training and recovery routines, adjusting frequency based on your condition and workload"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I joined the mixed doubles league did I complete my 5 km run?",
+            "answer": "I completed my 5 km run 28 days after I joined the mixed doubles league, since the league started on June 5 and the run was on July 3.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "June 5: joined mixed doubles league",
+                "July 3: completed 5 km run"
+            ],
+            "conversation_references": [
+                "Session 3: Mixed doubles league start",
+                "Session 2: 5 km run completion"
+            ],
+            "calculation_required": "July 3 - June 5 = 28 days",
+            "source_chat_ids": {
+                "first_event": [
+                    846
+                ],
+                "second_event": [
+                    840
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 28 days",
+                "LLM response should state: from June 5 till July 3"
+            ]
+        },
+        {
+            "question": "How many days do I have to prepare between the registration deadline for the North Ericshire Singles Open and the tournament day itself?",
+            "answer": "There are 10 days between the registration deadline on August 20 and the tournament day on August 30.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "August 20: registration deadline",
+                "August 30: tournament day"
+            ],
+            "conversation_references": [
+                "Session 1060: registration and deadline",
+                "Session 1060: tournament date"
+            ],
+            "calculation_required": "August 30 - August 20 = 10 days",
+            "source_chat_ids": {
+                "first_event": [
+                    1060
+                ],
+                "second_event": [
+                    1060
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 10 days",
+                "LLM response should state: from August 20 till August 30"
+            ]
+        }
+    ]
+}

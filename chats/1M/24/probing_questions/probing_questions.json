@@ -1,0 +1,626 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the cooking class at the Culinary Arts Center with Karen?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussions or content of the cooking class with Karen.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The cooking class is mentioned but no details about its agenda or discussions are provided.",
+            "plan_reference": "Batch 4 mentions Karen\u2019s cooking class invitation but no further details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussions or content of the cooking class with Karen"
+            ]
+        },
+        {
+            "question": "What specific recipes did Stephanie and I exchange during my recipe swap on April 10?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific recipes exchanged during the recipe swap with Stephanie.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The recipe swap event is mentioned but no details on recipes exchanged are provided.",
+            "plan_reference": "Batch 6 mentions recipe swap with Stephanie but no recipe details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific recipes exchanged during the recipe swap with Stephanie"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever cooked any meals for my family?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never cooked any meals for your family before, but you also mentioned that you cook mostly for your family of five. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Cooking for family",
+            "conversation_references": [
+                "chat_id: 182",
+                "chat_id: 2"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    182
+                ],
+                "second_statement": [
+                    2
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never cooked any meals for your family before",
+                "LLM response should mention: you also mentioned that you cook mostly for your family of five",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever used a slow cooker for preparing meals?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used a slow cooker for any meal preparation, but you also mentioned using a slow cooker for chicken stew that saved you time. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of slow cooker for meal preparation",
+            "conversation_references": [
+                "Session 1: Never used slow cooker statement",
+                "Sessions 2, 3, 4: Used slow cooker for chicken stew"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    374
+                ],
+                "second_statement": [
+                    262,
+                    270,
+                    276
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never used a slow cooker for any meal preparation",
+                "LLM response should mention: you also mentioned using a slow cooker for chicken stew that saved you time",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different meal preferences and cooking approaches develop throughout our conversations in order? Mention ONLY and ONLY nine items.",
+            "answer": "Your mentions progressed through these aspects: 1) Balancing family meal preferences including your partner's Mediterranean tastes, 2) Managing varied cuisines for your kids while keeping meals interesting and budget-friendly, 3) Incorporating fish into meals as suggested by your partner to boost energy, 4) Trying gluten-free recipes shared by Kristen's friend, 5) Exploring spicy dishes that Brian showed interest in learning, 6) Adding lemon and herbs to meals reflecting Thomas's preferences, 7) Using fresh herbs in vegetarian dishes inspired by Mary, 8) Enhancing fish dishes with garlic and chili flakes as per Thomas's advice, 9) Planning meals incorporating fresh herbs for upcoming weeks based on Mary's suggestions.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 9,
+            "conversation_references": [
+                "chat_id: 0",
+                "chat_id: 6",
+                "chat_id: 190, 392",
+                "chat_id: 378, 380",
+                "chat_id: 764, 768, 772, 776",
+                "chat_id: 570, 956",
+                "chat_id: 1144, 1516, 1522, 1526",
+                "chat_id: 1330",
+                "chat_id: 1516, 1522, 1526"
+            ],
+            "ordering_tested": [
+                "1st: Balancing family meal preferences",
+                "2nd: Managing varied cuisines for kids",
+                "3rd: Incorporating fish meals",
+                "4th: Trying gluten-free recipes",
+                "5th: Exploring spicy dishes for Brian",
+                "6th: Adding lemon and herbs",
+                "7th: Using fresh herbs in vegetarian dishes",
+                "8th: Enhancing fish dishes with garlic and chili flakes",
+                "9th: Planning meals with fresh herbs for upcoming weeks"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple family members' preferences",
+                "spans diverse meal preparation themes",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across sessions"
+            ],
+            "source_chat_ids": [
+                0,
+                6,
+                190,
+                378,
+                764,
+                570,
+                1144,
+                1330,
+                1516
+            ],
+            "rubric": [
+                "Balancing family meal preferences",
+                "Managing varied cuisines for kids",
+                "Incorporating fish meals",
+                "Trying gluten-free recipes",
+                "Exploring spicy dishes for Brian",
+                "Adding lemon and herbs",
+                "Using fresh herbs in vegetarian dishes",
+                "Enhancing fish dishes with garlic and chili flakes",
+                "Planning meals with fresh herbs for upcoming weeks"
+            ]
+        },
+        {
+            "question": "How did my focus on different family meal preferences and dietary considerations develop throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your mentions of family meal preferences and dietary considerations progressed as follows: 1) You initially discussed general meal planning with budget and time constraints, 2) Then you brought up accommodating specific family members' dietary restrictions and preferences, 3) Next, you focused on particular requests for vegetarian and gluten-free options, 4) After that, you explored balancing Mediterranean flavors alongside other preferences, 5) You then incorporated requests related to fish and vegetable combinations, 6) Later, you emphasized spicy meal preferences and how to integrate them, 7) Finally, you addressed strategies for balancing all preferences while maintaining healthy and enjoyable meals and managing cooking stress.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "4, 8, 12",
+                "192, 204",
+                "376, 384",
+                "388, 966",
+                "950, 1328",
+                "188, 568, 1142, 1514",
+                "390, 962, 1152, 1530"
+            ],
+            "ordering_tested": [
+                "1st: General meal planning with budget and time constraints",
+                "2nd: Dietary restrictions and family preferences",
+                "3rd: Vegetarian and gluten-free requests",
+                "4th: Mediterranean flavor integration",
+                "5th: Fish and vegetable combinations",
+                "6th: Spicy meal preferences",
+                "7th: Balancing all preferences and reducing cooking stress"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related dietary topics",
+                "spans numerous conversation sessions",
+                "involves nuanced progression of meal preference discussions",
+                "demands sophisticated sequence reconstruction and pattern recognition"
+            ],
+            "source_chat_ids": [
+                4,
+                8,
+                12,
+                192,
+                204,
+                376,
+                384,
+                388,
+                966,
+                950,
+                1328,
+                188,
+                568,
+                1142,
+                1514,
+                390,
+                962,
+                1152,
+                1530
+            ],
+            "rubric": [
+                "General meal planning with budget and time constraints",
+                "Dietary restrictions and family preferences",
+                "Vegetarian and gluten-free requests",
+                "Mediterranean flavor integration",
+                "Fish and vegetable combinations",
+                "Spicy meal preferences",
+                "Balancing all preferences and reducing cooking stress"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Where did I say I usually do my weekly shopping?",
+            "answer": "You said you shop weekly at GreenMart on 5th Avenue.",
+            "difficulty": "medium",
+            "question_type": "location_recall",
+            "conversation_reference": "Turn 1: User's initial message about shopping location",
+            "key_facts_tested": [
+                "shopping location: GreenMart",
+                "address: 5th Avenue",
+                "shopping frequency: weekly"
+            ],
+            "source_chat_ids": [
+                58
+            ],
+            "rubric": [
+                "LLM response should state: GreenMart on 5th Avenue"
+            ]
+        },
+        {
+            "question": "How did you recommend I combine the ingredients I have to create meals that balance protein and vegetables throughout the week?",
+            "answer": "I suggested recipes that integrate the protein source with the legumes and vegetables you have, such as a stew combining the protein chunks with lentils and diced vegetables, a salad mixing cooked legumes with flaked protein and fresh vegetables, a casserole layering cooked legumes, grains, vegetables, and protein baked together, and a stir-fry incorporating cooked legumes, protein pieces, and saut\u00e9ed vegetables with herbs and spices.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: salmon cooking methods, lentil recipes, mixed root vegetable meal ideas, and combined salmon-lentil recipes",
+            "key_facts_tested": [
+                "integration of protein and legumes in recipes",
+                "use of mixed vegetables in combination meals",
+                "variety of cooking methods for combining ingredients",
+                "balancing meal prep with multiple ingredients"
+            ],
+            "extraction_challenge": "LLM must synthesize recipe ideas and ingredient combinations scattered across different conversation turns to explain how the assistant recommended balancing protein and vegetables in meal prep",
+            "source_chat_ids": [
+                281,
+                283,
+                289,
+                295
+            ],
+            "rubric": [
+                "LLM response should state: I suggested recipes that integrate the protein source with the legumes and vegetables you have, such as a stew combining the protein chunks with lentils and diced vegetables",
+                "LLM response should state: a salad mixing cooked legumes with flaked protein and fresh vegetables",
+                "LLM response should state: a casserole layering cooked legumes, grains, vegetables, and protein baked together",
+                "LLM response should state: a stir-fry incorporating cooked legumes, protein pieces, and saut\u00e9ed vegetables with herbs and spices"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some good recipes I could try for dinner tonight?",
+            "instruction_being_tested": "Always include cooking time estimates when I ask about recipe selection.",
+            "expected_compliance": "Response should include cooking time estimates along with the recipe suggestions.",
+            "compliance_indicators": [
+                "mentions how long each recipe takes to prepare or cook",
+                "includes time durations for recipes",
+                "provides estimated durations for cooking"
+            ],
+            "non_compliance_signs": [
+                "only lists recipe names or ingredients",
+                "no mention of any time-related information",
+                "focuses solely on recipe details without timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                372
+            ],
+            "rubric": [
+                "LLM response should contain: mentions how long each recipe takes to prepare or cook",
+                "LLM response should contain: time durations for recipes"
+            ]
+        },
+        {
+            "question": "Can you suggest a recipe for dinner tonight with Kristen?",
+            "instruction_being_tested": "Always highlight any dietary restrictions when I ask about recipe selection.",
+            "expected_compliance": "Response should include any relevant dietary limitations or considerations related to the recipe suggestion.",
+            "compliance_indicators": [
+                "suggest gluten free meals",
+                "mention of dietary limitations",
+                "noting allergies or preferences",
+                "highlighting ingredients to avoid"
+            ],
+            "non_compliance_signs": [
+                "no mention of dietary considerations",
+                "only recipe details without restrictions",
+                "ignoring possible dietary factors"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_highlighting",
+            "source_chat_ids": [
+                564
+            ],
+            "rubric": [
+                "LLM response should contain: suggest gluten free meals",
+                "LLM response should contain: mention of dietary limitations",
+                "LLM response should contain: noting allergies or preferences"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long does my total meal prep session, including cleanup, usually take?",
+            "answer": "2 hours and 45 minutes",
+            "difficulty": "easy",
+            "update_type": "time_reduction",
+            "tests_retention_of": "shortened total prep time for meal sessions",
+            "conversation_references": [
+                "Cooking Timeline: Total prep time reduced to 3 hours on March 10, including cleanup.",
+                "Information Update: The total prep time for my last Sunday session shortened further to 2 hours and 45 minutes due to improved efficiency."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 3-hour prep time instead of the shortened 2 hours and 45 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    298,
+                    304,
+                    310
+                ],
+                "updated_info": [
+                    370
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 hours and 45 minutes"
+            ]
+        },
+        {
+            "question": "When is the cooking class with Karen scheduled to take place?",
+            "answer": "The cooking class with Karen is scheduled for April 4.",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "updated date of the cooking class",
+            "conversation_references": [
+                "Social Eating: Karen invited me to a cooking class at Culinary Arts Center on March 28.",
+                "Information Update: The cooking class with Karen on March 28 was rescheduled to April 4 due to a venue change."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original March 28 date instead of the rescheduled April 4 date.",
+            "source_chat_ids": {
+                "original_info": [
+                    590
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should state: April 4"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Given my varying average meal costs and budget targets across sessions, how much have I reduced my average meal cost percentage-wise from my highest reported cost to my lowest, and what patterns in my budgeting goals can I identify?",
+            "answer": "Your highest reported average meal cost was $3.45 and your lowest was $3.10. The percentage reduction is approximately 10.14%. The pattern shows a consistent effort to reduce costs below targets, with targets around $3.40 to $3.50, and actual costs progressively decreasing by about 7% to 12% below targets.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_trend_analysis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id 320: User reports average meal cost $3.25, 7% below target",
+                "chat_id 508: User reports average meal cost $3.40, slightly above target",
+                "chat_id 702: User reports average meal cost $3.10, 12% below target",
+                "chat_id 894: User reports average meal cost $3.45, slightly above target",
+                "chat_id 900: User asks about reducing costs below $3.45"
+            ],
+            "reasoning_steps": [
+                "Identify all user-reported average meal costs and their relation to targets across sessions.",
+                "Determine the highest and lowest average meal costs reported by the user.",
+                "Calculate the percentage reduction from the highest to the lowest average meal cost.",
+                "Analyze the user's budgeting goals and how their actual costs compare to these targets over time.",
+                "Recognize the pattern of consistent cost reduction efforts and the typical budget range the user aims for."
+            ],
+            "source_chat_ids": [
+                320,
+                508,
+                702,
+                894,
+                900
+            ],
+            "rubric": [
+                "LLM response should state: you have reduced it by 10.14%",
+                "LLM response should state: highest average meal cost is $3.45",
+                "LLM response should state: lowest average meal cost is $3.10",
+                "LLM response should state: he pattern shows a consistent effort to reduce costs below targets, with targets around $3.40 to $3.50"
+            ]
+        },
+        {
+            "question": "How many servings of vegetables have I increased my daily intake to across my different updates?",
+            "answer": "You increased your vegetable servings first by 40%, then to 5 servings per day, and later to 6 servings per day.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_status_tracking",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Increasing vegetable intake goal",
+                "Meal prep with vegetable servings",
+                "Family vegetable intake increase"
+            ],
+            "reasoning_steps": [
+                "Recall the initial increase goal of vegetable intake by 40%.",
+                "Recall the update where vegetable servings were increased to 5 per day.",
+                "Recall the later update where vegetable servings were increased to 6 per day."
+            ],
+            "source_chat_ids": [
+                110,
+                300,
+                682
+            ],
+            "rubric": [
+                "LLM response should state: You increased your vegetable servings first by 40%",
+                "LLM response should state: then increased to 5 servings per day",
+                "LLM response should state: then increased to 6 servings per day"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to prepare several meals ahead of time. What cooking methods would you suggest to make this easier for me?",
+            "preference_being_tested": "I prefer slow cooker methods for batch cooking to save active time and reduce stress.",
+            "expected_compliance": "Response should prioritize or include slow cooker methods as suitable options for batch cooking to align with the user's preference for saving active time and reducing stress.",
+            "compliance_indicators": [
+                "recommends slow cooker recipes or techniques",
+                "emphasizes low-effort or hands-off cooking methods",
+                "suggests batch cooking approaches that minimize active involvement"
+            ],
+            "non_compliance_signs": [
+                "only suggests stovetop or oven methods requiring constant attention",
+                "ignores slow cooker options entirely",
+                "recommends methods that increase active cooking time or complexity"
+            ],
+            "difficulty": "medium",
+            "preference_type": "method preference",
+            "source_chat_ids": [
+                356,
+                362,
+                368
+            ],
+            "rubric": [
+                "LLM response should contain: recommends slow cooker recipes or techniques",
+                "LLM response should contain: emphasizes low-effort or hands-off cooking methods",
+                "LLM response should contain: suggests batch cooking approaches that minimize active involvement"
+            ]
+        },
+        {
+            "question": "I'm planning to prepare a batch of proteins for the week. How would you suggest I cook them to save time while keeping the flavor enjoyable?",
+            "preference_being_tested": "I prefer grilling proteins for flavor and quicker cooking during batch prep.",
+            "expected_compliance": "Response should recommend grilling as a cooking method or prioritize methods that align with grilling's benefits, such as enhanced flavor and faster cooking times, rather than suggesting slower or less flavor-focused techniques.",
+            "compliance_indicators": [
+                "recommends grilling or similar quick, flavor-enhancing methods",
+                "mentions benefits of grilling like flavor and speed",
+                "avoids suggesting slow cooking or methods that don't enhance flavor"
+            ],
+            "non_compliance_signs": [
+                "only suggests slow cooking methods",
+                "ignores grilling or similar techniques",
+                "focuses on methods that take longer or don't enhance flavor"
+            ],
+            "difficulty": "medium",
+            "preference_type": "cooking method preference",
+            "source_chat_ids": [
+                930,
+                936,
+                938
+            ],
+            "rubric": [
+                "LLM response should contain: recommends grilling or similar quick, flavor-enhancing methods",
+                "LLM response should contain: avoids suggesting slow cooking or methods that don't enhance flavor"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed summary that captures all the important aspects and developments related to my family's meal planning preferences and strategies, including how different tastes, dietary needs, and cooking methods were balanced and integrated over time?",
+            "ideal_summary": "The meal planning process for your family involved harmonizing diverse culinary preferences and dietary requirements across multiple members, including your partner Thomas's fondness for Mediterranean and lemon-herb dishes, your kids' enthusiasm for varied and spicy cuisines, and considerations for gluten-free options inspired by Kristen. The strategy emphasized weekly menu planning with rotating themes to maintain variety and interest, incorporating versatile ingredients like olive oil, fresh herbs, and seasonal produce to enhance flavor and nutrition. Family involvement in meal selection and cooking fostered engagement and satisfaction. Budget-conscious approaches included ingredient swaps, batch cooking, and leveraging sales, while ensuring safety and dietary restrictions, particularly for gluten intolerance, were addressed through careful ingredient choices and cross-contamination prevention. Fish meals, especially those rich in omega-3 fatty acids like grilled salmon and slow-cooker recipes, were introduced to boost energy and health, with lemon zest and garlic-chili marinades enhancing flavor profiles and family enjoyment. Spicy dishes were tailored to accommodate Brian's growing interest, with gradual heat adjustments and supportive cooking environments. Fresh herbs, as suggested by Mary, were integrated into vegetarian dishes to elevate aroma, complexity, and visual appeal, contributing to overall meal satisfaction. The cumulative approach balanced flavor enhancement, nutritional benefits, meal variety, and family preferences, resulting in a dynamic, inclusive, and health-conscious meal plan that evolved through iterative feedback and practical cooking techniques.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                1,
+                7,
+                15,
+                353,
+                541,
+                735,
+                927,
+                1303,
+                1495,
+                1501
+            ],
+            "rubric": [
+                "LLM response should contain: harmonizing diverse culinary preferences and dietary requirements across multiple members",
+                "LLM response should contain: your partner Thomas's fondness for Mediterranean and lemon-herb dishes",
+                "LLM response should contain: your kids' enthusiasm for varied and spicy cuisines",
+                "LLM response should contain: considerations for gluten-free options inspired by Kristen",
+                "LLM response should contain: The strategy emphasized weekly menu planning with rotating themes to maintain variety and interest",
+                "LLM response should contain: incorporating versatile ingredients like olive oil, fresh herbs, and seasonal produce",
+                "LLM response should contain: Family involvement in meal selection and cooking fostered engagement and satisfaction",
+                "LLM response should contain: Budget-conscious approaches included ingredient swaps, batch cooking, and leveraging sales",
+                "LLM response should contain: ensuring safety and dietary restrictions, particularly for gluten intolerance, were addressed through careful ingredient choices and cross-contamination prevention",
+                "LLM response should contain: Fish meals, especially those rich in omega-3 fatty acids like grilled salmon and slow-cooker recipes, were introduced to boost energy and health",
+                "LLM response should contain: Spicy dishes were tailored to accommodate Brian's growing interest, with gradual heat adjustments and supportive cooking environments",
+                "LLM response should contain: Fresh herbs, as suggested by Mary, were integrated into vegetarian dishes to elevate aroma, complexity, and visual appeal, contributing to overall meal satisfaction"
+            ]
+        },
+        {
+            "question": "Can you give me a detailed overview of how I can effectively establish and maintain a meal prepping routine that balances efficiency, nutrition, cost, and motivation over time?",
+            "ideal_summary": "The comprehensive approach to establishing and sustaining a meal prepping routine involves several interconnected strategies that address planning, execution, and ongoing motivation. Initially, selecting a consistent meal prep day, typically on weekends, and allocating 2-3 hours for batch cooking sets a structured foundation. Meal planning should emphasize nutritional balance across proteins, carbohydrates, and fats, incorporating variety and accommodating dietary preferences such as gluten-free options. Creating organized shopping lists sorted by store sections and checking pantry inventory streamlines ingredient acquisition and supports cost-effectiveness, especially when leveraging seasonal vegetables and budget-friendly staples like beans, rice, and quinoa. Efficient cooking techniques, including batch cooking, oven roasting, slow cooking, and one-pot meals, maximize time savings and reduce weekday cooking stress. Portioning meals into labeled, airtight containers ensures freshness, facilitates grab-and-go convenience, and aids portion control. To maintain motivation, it is crucial to celebrate milestones such as weight loss and positive family feedback, set clear short- and long-term goals, and track progress through journals or apps. Incorporating new recipes, themed meal nights, and involving family members in meal prep fosters engagement and variety, preventing monotony. Organizational tools like checklists, meal planners, and proper kitchen setup enhance efficiency and reduce stress. Flexibility to adapt plans based on feedback and life\u2019s unpredictability helps sustain the routine without burnout. Additionally, leveraging social support through communities or accountability partners and rewarding achievements with non-food incentives reinforce commitment. Over time, this integrated approach not only reduces cooking time and stress but also promotes healthier eating habits, financial savings, improved mental well-being, and stronger family connections, creating a sustainable and enjoyable meal prepping lifestyle.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                22,
+                29,
+                33,
+                195,
+                211,
+                219,
+                399,
+                407,
+                413,
+                583,
+                587,
+                597,
+                601,
+                785,
+                977,
+                985,
+                989,
+                1165,
+                1351,
+                1359,
+                1537
+            ],
+            "rubric": [
+                "LLM response should contain: selecting a consistent meal prep day, typically on weekends, and allocating 2-3 hours for batch cooking sets a structured foundation",
+                "LLM response should contain: Meal planning should emphasize nutritional balance across proteins, carbohydrates, and fats, incorporating variety and accommodating dietary preferences such as gluten-free options",
+                "LLM response should contain: Creating organized shopping lists sorted by store sections and checking pantry inventory streamlines ingredient acquisition and supports cost-effectiveness, especially when leveraging seasonal vegetables",
+                "LLM response should contain: Efficient cooking techniques, including batch cooking, oven roasting, slow cooking, and one-pot meals, maximize time savings and reduce weekday cooking stress",
+                "LLM response should contain: Portioning meals into labeled, airtight containers ensures freshness, facilitates grab-and-go convenience, and aids portion control",
+                "LLM response should contain: To maintain motivation, it is crucial to celebrate milestones such as weight loss and positive family feedback, set clear short- and long-term goals, and track progress through journals or apps",
+                "LLM response should contain: Incorporating new recipes, themed meal nights, and involving family members in meal prep fosters engagement and variety, preventing monotony",
+                "LLM response should contain: Organizational tools like checklists, meal planners, and proper kitchen setup enhance efficiency and reduce stress. Flexibility to adapt plans based on feedback and life\u2019s unpredictability helps sustain the routine without burnout",
+                "LLM response should contain: leveraging social support through communities or accountability partners and rewarding achievements with non-food incentives reinforce commitment"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between the potluck at Carolyn's house and the weekend brunch at Caf\u00e9 Aroma?",
+            "answer": "There are 43 days between the potluck at Carolyn's house on March 15 and the weekend brunch at Caf\u00e9 Aroma on April 27.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15: potluck at Carolyn's house",
+                "April 27: weekend brunch at Caf\u00e9 Aroma"
+            ],
+            "conversation_references": [
+                "Sessions about the potluck (chat_ids 208, 214, 216, 220)",
+                "Sessions about the brunch (chat_ids 1348, 1360)"
+            ],
+            "calculation_required": "April 27 - March 15 = 43 days",
+            "source_chat_ids": {
+                "first_event": [
+                    208,
+                    214,
+                    216,
+                    220
+                ],
+                "second_event": [
+                    1348,
+                    1360
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 43 days",
+                "LLM response should state: from March 15 till April 17"
+            ]
+        },
+        {
+            "question": "How many days are there between the cooking class Karen invited me to and the dinner party at Carolyn's home?",
+            "answer": "There are 21 days between the cooking class on March 28 and the dinner party on April 18.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 28: cooking class with Karen",
+                "April 18: dinner party at Carolyn's home"
+            ],
+            "conversation_references": [
+                "Session 2: Cooking class invitation",
+                "Session 6: Dinner party invitation"
+            ],
+            "calculation_required": "April 18 - March 28 = 21 days",
+            "source_chat_ids": {
+                "first_event": [
+                    590,
+                    592,
+                    598,
+                    602
+                ],
+                "second_event": [
+                    1162
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 21 days",
+                "LLM response should state: from March 28 till April 18"
+            ]
+        }
+    ]
+}

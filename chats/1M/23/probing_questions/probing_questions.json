@@ -1,0 +1,697 @@
+{
+    "abstention": [
+        {
+            "question": "Can you provide the exact recipe adjustments made to adapt chicken tikka to a vegetarian version using paneer?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact recipe adjustments for the vegetarian chicken tikka using paneer.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The adaptation is mentioned but no detailed recipe changes are described.",
+            "plan_reference": "Batch 3, Bullet 23",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact recipe adjustments for the vegetarian chicken tikka using paneer"
+            ]
+        },
+        {
+            "question": "What were the specific safety protocols I followed when using the immersion blender from Ar\u00e7elik?",
+            "ideal_response": "Based on the provided chat, there is no information related to specific safety protocols followed when using the immersion blender.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The appliance purchase and use are mentioned but no safety details are provided.",
+            "plan_reference": "Batch 4, Bullet 14",
+            "rubric": [
+                "Based on the provided chat, there is no information related to specific safety protocols followed when using the immersion blender"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever gone to Kad\u0131k\u00f6y Market to shop for ingredients?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never visited Kad\u0131k\u00f6y Market for ingredient shopping, but you also mentioned planning to shop there for specific spices. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Visiting Kad\u0131k\u00f6y Market for ingredient shopping",
+            "conversation_references": [
+                "Session 186: Never visited Kad\u0131k\u00f6y Market",
+                "Sessions 40, 48, 54: Planning and shopping at Kad\u0131k\u00f6y Market"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    186
+                ],
+                "second_statement": [
+                    40,
+                    48,
+                    54
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never visited Kad\u0131k\u00f6y Market for ingredient shopping",
+                "LLM response should mention: you also mentioned planning to shop there for specific spices",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any cooking workshops before?",
+            "ideal_answer": "I see that you've mentioned both that you have never attended any cooking workshops and that you registered for a cooking workshop. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at cooking workshops",
+            "conversation_references": [
+                "Session 1: Never attended statement",
+                "Session 2: Registered for workshop"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    586
+                ],
+                "second_statement": [
+                    426,
+                    432,
+                    436
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you've mentioned both that you have never attended any cooking workshops",
+                "LLM response should mention: you registered for a cooking workshop",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }  
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different culinary activities and cooking projects evolve throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your focus on culinary activities and cooking projects evolved in this sequence: 1) Exploring specific cuisine suggestions and cooking for partners, 2) Planning and improving particular dishes and kitchen equipment, 3) Organizing and reflecting on shared cooking experiences and events, 4) Expanding into hosting themed dinner parties and balancing cooking with your schedule, 5) Developing content creation related to cooking including workshops and blogging, 6) Revisiting past cooking collaborations to enhance skills, 7) Integrating live cooking sessions and audience feedback into your practice.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "chat_id: 20, 22, 32",
+                "chat_id: 192, 198, 206, 208",
+                "chat_id: 390, 392, 400",
+                "chat_id: 590, 594, 596, 602",
+                "chat_id: 808, 1014, 1202",
+                "chat_id: 1618, 1628, 1630",
+                "chat_id: 1816, 1818, 1820, 1822"
+            ],
+            "ordering_tested": [
+                "1st: Cuisine exploration and partner cooking",
+                "2nd: Dish improvement and kitchen tools",
+                "3rd: Shared cooking events and reflections",
+                "4th: Dinner parties and schedule management",
+                "5th: Content creation and workshops",
+                "6th: Past collaborations and skill enhancement",
+                "7th: Live sessions and audience integration"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves thematic evolution across diverse culinary topics",
+                "requires sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                20,
+                22,
+                32,
+                192,
+                198,
+                206,
+                208,
+                390,
+                392,
+                400,
+                590,
+                594,
+                596,
+                602,
+                808,
+                1014,
+                1202,
+                1618,
+                1628,
+                1630,
+                1816,
+                1818,
+                1820,
+                1822
+            ],
+            "rubric": [
+                "Cuisine exploration and partner cooking",
+                "Dish improvement and kitchen tools",
+                "Shared cooking events and reflections",
+                "Dinner parties and schedule management",
+                "Content creation and workshops",
+                "Past collaborations and skill enhancement",
+                "Live sessions and audience integration"
+            ]
+        },
+        {
+            "question": "How did my mentions about cooking and food-related activities with Amanda develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions about cooking and food-related activities with Amanda developed in this sequence: 1) Discussing Turkish street food options and recipes, 2) Talking about attending cooking workshops together, 3) Mentioning participation and results in a cooking contest, 4) Planning and preparing global finger foods for a picnic, 5) Sharing tips and ideas related to picnic planning and cooking, 6) Collaborating on photographing dishes for a blog and improving its visual appeal, 7) Co-hosting a cooking demo and engaging attendees, 8) Working on event promotion and photography to increase blog followers, 9) Hosting and planning dinner parties with diverse guests, 10) Managing live stream chats and increasing blog followers through interactive content.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 24, 26, 34",
+                "chat_id: 216, 220",
+                "chat_id: 404, 410, 412, 418, 422",
+                "chat_id: 614, 616, 622, 630",
+                "chat_id: 812, 824, 830, 836",
+                "chat_id: 1020, 1026, 1032",
+                "chat_id: 1220, 1226, 1232",
+                "chat_id: 1418, 1420, 1422, 1430",
+                "chat_id: 1638, 1644, 1648",
+                "chat_id: 1834, 1836, 1838, 1846"
+            ],
+            "ordering_tested": [
+                "1st: Turkish street food discussions",
+                "2nd: Cooking workshops",
+                "3rd: Cooking contest participation",
+                "4th: Picnic food preparation",
+                "5th: Picnic planning tips",
+                "6th: Food photography for blog",
+                "7th: Cooking demo hosting",
+                "8th: Event promotion and blog growth",
+                "9th: Dinner party planning",
+                "10th: Live stream management and engagement"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "spans diverse cooking and food-related activities",
+                "involves pattern recognition of topic development",
+                "requires sophisticated sequence reconstruction across many sessions"
+            ],
+            "source_chat_ids": [
+                24,
+                26,
+                34,
+                216,
+                220,
+                404,
+                410,
+                412,
+                418,
+                422,
+                614,
+                616,
+                622,
+                630,
+                812,
+                824,
+                830,
+                836,
+                1020,
+                1026,
+                1032,
+                1220,
+                1226,
+                1232,
+                1418,
+                1420,
+                1422,
+                1430,
+                1638,
+                1644,
+                1648,
+                1834,
+                1836,
+                1838,
+                1846
+            ],
+            "rubric": [
+                "Turkish street food discussions",
+                "Cooking workshops",
+                "Cooking contest participation",
+                "Picnic food preparation",
+                "Picnic planning tips",
+                "Food photography for blog",
+                "Cooking demo hosting",
+                "Event promotion and blog growth",
+                "Dinner party planning",
+                "Live stream management and engagement"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How far away did I say my mom lives from me?",
+            "answer": "You said your mom lives 15 km away.",
+            "difficulty": "medium",
+            "question_type": "distance_recall",
+            "conversation_reference": "Turn 1: Distance mentioned in user message",
+            "key_facts_tested": [
+                "distance: 15 km",
+                "relationship: mom"
+            ],
+            "source_chat_ids": [
+                12
+            ],
+            "rubric": [
+                "LLM response should state: 15 km away"
+            ]
+        },
+        {
+            "question": "What approach did you recommend for preparing the dishes so that the flavors and textures come out just right, especially considering how to handle the leaves and balance the seasoning?",
+            "answer": "I recommended rinsing and removing the stems from the leaves to make them easier to handle and more pleasant to eat, preparing the filling with fresh herbs and conservative salt to avoid excess saltiness, rolling the leaves tightly with a moderate amount of filling, arranging them seam-side down in a pot, adding enough water and olive oil for cooking, simmering gently for 45-60 minutes until tender, and letting them rest before serving to allow flavors to meld and ensure tenderness.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: advice on handling grape leaves, stuffing technique, cooking methods, and seasoning balance",
+            "key_facts_tested": [
+                "removing stems from grape leaves",
+                "using fresh herbs and conservative salt in filling",
+                "rolling leaves tightly with appropriate filling amount",
+                "arranging seam-side down in pot",
+                "adding water and olive oil for cooking",
+                "simmering 45-60 minutes",
+                "letting dolmas rest before serving"
+            ],
+            "extraction_challenge": "LLM must integrate preparation, cooking, and seasoning advice scattered across different assistant messages to explain the recommended approach for optimal dish outcome",
+            "source_chat_ids": [
+                111,
+                117,
+                123
+            ],
+            "rubric": [
+                "LLM response should state: rinsing and removing the stems from the leaves to make them easier to handle and more pleasant to eat",
+                "LLM response should state: preparing the filling with fresh herbs and conservative salt to avoid excess saltiness",
+                "LLM response should state: rolling the leaves tightly with a moderate amount of filling",
+                "LLM response should state: arranging them seam-side down in a pot",
+                "LLM response should state: adding enough water and olive oil for cooking",
+                "LLM response should state: simmering gently for 45-60 minutes until tender",
+                "LLM response should state: letting them rest before serving to allow flavors to meld and ensure tenderness"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I consider when sourcing ingredients for my recipe?",
+            "instruction_being_tested": "Always include budget details when I ask about ingredient sourcing.",
+            "expected_compliance": "Response should include budget details related to the ingredient sourcing.",
+            "compliance_indicators": [
+                "mention of costs",
+                "financial considerations",
+                "price information related to ingredients"
+            ],
+            "non_compliance_signs": [
+                "no mention of any costs",
+                "only sourcing locations or quality discussed",
+                "general advice without financial details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                184
+            ],
+            "rubric": [
+                "LLM response should contain: mention of costs",
+                "LLM response should contain: price information related to ingredients"
+            ]
+        },
+        {
+            "question": "What options do you have for cooking classes?",
+            "instruction_being_tested": "Always include workshop fee details when I ask about cooking courses.",
+            "expected_compliance": "Response should include workshop fee details along with information about the cooking courses.",
+            "compliance_indicators": [
+                "mention of workshop fees",
+                "specific fee amounts",
+                "cost information included with course details"
+            ],
+            "non_compliance_signs": [
+                "no mention of fees",
+                "only course descriptions without any cost info",
+                "vague or missing pricing details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                2012
+            ],
+            "rubric": [
+                "LLM response should contain: mention of workshop fees",
+                "LLM response should contain: specific fee amounts",
+                "LLM response should contain: cost information included with course details"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many participants are registered for the cooking contest?",
+            "answer": "50 participants are registered for the cooking contest.",
+            "difficulty": "easy",
+            "update_type": "participant_count_increase",
+            "tests_retention_of": "updated number of participants registered for the cooking contest",
+            "conversation_references": [
+                "Financial & Budget:Grocery Budget: Maintained weekly grocery spending at 140 TRY in March and April, saving 7% from planned budget.",
+                "The cooking contest on April 28 now has 50 participants registered, increasing the competition level."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original number of participants as fewer or not mention the increased count.",
+            "source_chat_ids": {
+                "original_info": [
+                    322,
+                    330,
+                    336
+                ],
+                "updated_info": [
+                    342,
+                    348,
+                    352
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 50 participants"
+            ]
+        },
+        {
+            "question": "How much did I pay for the Indian cooking workshop that includes additional materials?",
+            "answer": "420 TRY",
+            "difficulty": "easy",
+            "update_type": "fee_adjustment",
+            "tests_retention_of": "updated workshop fee including additional materials",
+            "conversation_references": [
+                "Learning & Development:Cooking Workshop: Registered for a live Indian cooking workshop on May 10 at \u201cTaste of Asia\u201d kitchen, fee 400 TRY.",
+                "Information Update: The Indian cooking workshop fee was adjusted slightly, and I paid 420 TRY to include additional materials."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original fee of 400 TRY instead of the updated 420 TRY",
+            "source_chat_ids": {
+                "original_info": [
+                    426,
+                    432,
+                    436
+                ],
+                "updated_info": [
+                    582
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 420 TRY"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How did my spending on spices, cookware, and pantry staples compare across the first three months, and what pattern can I see in how I allocated my budget each month?",
+            "answer": "In the first three months, you allocated your budget evenly each month with 100 TRY for spices, 200 TRY for cookware, and 100 TRY for pantry staples. The pattern shows a consistent monthly distribution focusing on gradually building your kitchen setup by spreading purchases evenly across categories each month.",
+            "difficulty": "medium",
+            "reasoning_type": "pattern_analysis",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 77",
+                "chat_id: 80",
+                "chat_id: 88"
+            ],
+            "reasoning_steps": [
+                "Identify the monthly budget allocations for spices, cookware, and pantry staples from the first session.",
+                "Compare the monthly spending breakdowns to see if the allocations remain consistent or vary.",
+                "Analyze the pattern of how the budget is distributed across the three categories each month.",
+                "Synthesize the findings to describe the overall spending pattern and budget allocation strategy."
+            ],
+            "source_chat_ids": [
+                77,
+                80,
+                88
+            ],
+            "rubric": [
+                "LLM response should state: you allocated your budget evenly each month with 100 TRY for spices",
+                "LLM response should state: you allocated 200 TRY for cookware",
+                "LLM response should state: you allocated 100 TRY for pantry staples",
+                "LLM response should state: The pattern shows a consistent monthly distribution focusing on gradually building your kitchen setup"
+            ]
+        },
+        {
+            "question": "Considering my progress and challenges, how has my confidence and skill evolved from starting Turkish meze to mastering tabbouleh and increasing fiber intake through Mediterranean dishes?",
+            "answer": "Your confidence grew from initial mastery of Turkish meze (30% increase) to overcoming tabbouleh challenges by refining bulgur texture, while simultaneously increasing fiber intake by 15% through incorporating more vegetables in Mediterranean dishes, showing steady skill development and dietary improvement.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Confidence with Turkish meze and next steps",
+                "Tabbouleh attempts and texture focus",
+                "Increasing vegetable intake and fiber",
+                "Overcoming hesitation with complex recipes",
+                "Handling cooking frustrations and rescheduling"
+            ],
+            "reasoning_steps": [
+                "Identify initial confidence level with Turkish meze dishes and decision to progress to more complex recipes.",
+                "Analyze the repeated attempts and focused improvements on tabbouleh, especially bulgur texture, reflecting skill refinement.",
+                "Incorporate the dietary change of increasing fiber intake by 15% through more vegetable-rich Mediterranean dishes, indicating nutritional awareness and cooking adaptation.",
+                "Consider the user's expressed hesitation and strategies to overcome complexity, showing psychological and skill evolution.",
+                "Factor in the user's management of cooking frustrations and schedule adjustments, demonstrating resilience and commitment to progress."
+            ],
+            "source_chat_ids": [
+                188,
+                384,
+                394,
+                204,
+                402
+            ],
+            "rubric": [
+                "LLM response should state: Your confidence grew from initial mastery of Turkish meze (30% increase) to overcoming tabbouleh challenges",
+                "LLM response should state: increasing fiber intake by 15% through incorporating more vegetables in Mediterranean dishes, showing steady skill development and dietary improvement"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you help me organize a cooking plan that breaks down what I should focus on each week?",
+            "preference_being_tested": "I prioritize learning new cuisines by focusing on one culture every 6 weeks for deeper mastery.",
+            "expected_compliance": "Response should structure the cooking plan to emphasize a single cuisine or culture over a multi-week period, aligning with a focused, time-blocked learning approach rather than mixing multiple cuisines simultaneously.",
+            "compliance_indicators": [
+                "suggests concentrating on one cuisine for a set number of weeks",
+                "provides a week-by-week breakdown that maintains cultural focus",
+                "avoids recommending multiple cuisines within the same short timeframe"
+            ],
+            "non_compliance_signs": [
+                "recommends learning multiple cuisines simultaneously",
+                "provides a plan that frequently switches between different cultures",
+                "ignores the concept of extended focus on one cuisine"
+            ],
+            "difficulty": "medium",
+            "preference_type": "learning approach",
+            "source_chat_ids": [
+                564,
+                568,
+                576
+            ],
+            "rubric": [
+                "LLM response should contain: provides a week-by-week breakdown that maintains cultural focus",
+                "LLM response should contain: avoids recommending multiple cuisines within the same short timeframe"
+            ]
+        },
+        {
+            "question": "How should I organize my cooking sessions and blog posts throughout the day to keep everything running smoothly?",
+            "preference_being_tested": "I prefer scheduling cooking sessions in afternoon hours to maximize natural light for photography.",
+            "expected_compliance": "Response should suggest scheduling cooking sessions in the afternoon to align with the user's preference for natural light, while balancing blog post timing accordingly.",
+            "compliance_indicators": [
+                "recommends afternoon cooking sessions",
+                "acknowledges timing for photography",
+                "balances blog posting schedule with cooking times"
+            ],
+            "non_compliance_signs": [
+                "suggests cooking sessions only in morning or evening",
+                "ignores timing related to natural light",
+                "does not address scheduling balance"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                1178,
+                1180,
+                1186
+            ],
+            "rubric": [
+                "LLM response should contain: recommends afternoon cooking sessions"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my cooking journey with Amanda developed over time, including our shared experiences, learning, and events?",
+            "ideal_summary": "Your cooking journey with Amanda began when you met her at the university library in 2019, and she sparked your interest in Turkish street food by suggesting you cook together. Over several sessions, you explored various Turkish recipes, from popular street foods like lahmacun and simit to desserts like baklava, with detailed guidance on preparation and ingredients. Amanda recommended a spice shop on Ba\u011fdat Avenue, enhancing your ingredient sourcing experience. You both participated in cooking contests, notably the Kad\u0131k\u00f6y community center event, where you placed second and Amanda placed fifth, sharing feedback and celebrating your achievements together. Beyond contests, you and Amanda enjoyed diverse culinary experiences, including global finger food picnics and cooking workshops, which strengthened your friendship and culinary skills. Throughout this journey, you supported each other\u2019s growth, shared cooking tips, and planned future culinary adventures, reflecting a deepening bond through your shared passion for cooking.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                24,
+                25,
+                26,
+                27,
+                34,
+                35,
+                164,
+                170,
+                172,
+                178,
+                216,
+                217,
+                220,
+                340,
+                344,
+                354,
+                404,
+                410,
+                418,
+                422,
+                546,
+                552,
+                558,
+                614,
+                622,
+                630
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "culinary learning journey",
+                "shared experiences",
+                "event participation",
+                "ingredient sourcing"
+            ],
+            "synthesis_required": "Combining multiple interactions and events into a coherent narrative showing development of a shared cooking journey",
+            "source_chat_ids": [
+                24,
+                25,
+                26,
+                27,
+                34,
+                35,
+                164,
+                170,
+                172,
+                178,
+                216,
+                217,
+                220,
+                340,
+                344,
+                354,
+                404,
+                410,
+                418,
+                422,
+                546,
+                552,
+                558,
+                614,
+                622,
+                630
+            ],
+            "rubric": [
+                "LLM response should contain: Your cooking journey with Amanda began when you met her at the university library in 2019, and she sparked your interest in Turkish street food by suggesting you cook together",
+                "LLM response should contain: you explored various Turkish recipes, from popular street foods like lahmacun and simit to desserts like baklava, with detailed guidance on preparation and ingredients",
+                "LLM response should contain: Amanda recommended a spice shop on Ba\u011fdat Avenue, enhancing your ingredient sourcing experience",
+                "LLM response should contain: You both participated in cooking contests, notably the Kad\u0131k\u00f6y community center event, where you placed second and Amanda placed fifth, sharing feedback and celebrating your achievements together",
+                "LLM response should contain: Beyond contests, you and Amanda enjoyed diverse culinary experiences, including global finger food picnics and cooking workshops, which strengthened your friendship and culinary skills"
+            ]
+        },
+        {
+            "question": "I've been working on mastering a variety of cooking skills and dishes over several months, including learning new cuisines, improving techniques, and planning meals. Can you give me a detailed summary of how my culinary journey has progressed, highlighting the key milestones, skill developments, and strategies I've used to stay on track and expand my expertise?",
+            "ideal_summary": "The user's culinary journey began with a clear goal to master five global dishes by June 1, 2024, initially focusing on Turkish, Greek, and Lebanese cuisines. A structured, month-by-month plan was developed, emphasizing research, ingredient preparation, cooking practice, feedback gathering, and documentation. Alongside mastering dishes, the user worked on foundational skills such as knife techniques (julienne and chiffonade), scheduling regular practice sessions, and applying these skills through recipes designed to reinforce cutting methods. The user successfully cooked multiple new dishes by set deadlines, managing complexity by breaking tasks into manageable steps and using time-efficient techniques. Progress was tracked through journals, photos, and community engagement, fostering motivation and continuous improvement. The user also enhanced technical skills like dough kneading, achieving measurable improvements in dough elasticity, which translated into better baked goods. Advanced culinary techniques such as sauce emulsification were practiced and integrated into various dishes, broadening the user's repertoire. As the user mastered more dishes across diverse cuisines\u2014including Italian, Indian, and others\u2014they sought guidance on next steps, menu planning for social events, and spice blend mastery, following structured schedules to deepen their understanding. Throughout, the user balanced skill refinement, recipe experimentation, and strategic planning, demonstrating a comprehensive, evolving approach to culinary mastery that combined technical skill development, cultural exploration, and practical application.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                74,
+                75,
+                147,
+                155,
+                249,
+                321,
+                335,
+                447,
+                453,
+                457,
+                525,
+                535,
+                541,
+                655,
+                663,
+                665,
+                737,
+                743,
+                751,
+                753
+            ],
+            "rubric": [
+                "LLM response should contain: first, you focused on Turkish, Greek, and Lebanese cuisines",
+                "LLM response should contain: A structured, month-by-month plan was developed, emphasizing research, ingredient preparation, cooking practice, feedback gathering, and documentation",
+                "LLM response should contain: you worked on foundational skills such as knife techniques (julienne and chiffonade), scheduling regular practice sessions, and applying these skills through recipes designed",
+                "LLM response should contain: you successfully cooked multiple new dishes by set deadlines, managing complexity by breaking tasks into manageable steps and using time-efficient techniques",
+                "LLM response should contain: Progress was tracked through journals, photos, and community engagement, fostering motivation and continuous improvement",
+                "LLM response should contain: you also enhanced technical skills like dough kneading, achieving measurable improvements in dough elasticity, which translated into better baked goods",
+                "LLM response should contain: Advanced culinary techniques such as sauce emulsification were practiced and integrated into various dishes, broadening the user's repertoire",
+                "LLM response should contain: as you mastered more dishes across diverse cuisines\u2014including Italian, Indian, and others\u2014they sought guidance on next steps, menu planning for social events, and spice blend mastery",
+                "LLM response should contain: "
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I agreed to cook vegetarian moussaka for Sarah's birthday did I actually celebrate her birthday with the dish?",
+            "answer": "I agreed to cook vegetarian moussaka for Sarah's birthday on March 12, and I celebrated her birthday with the dish on March 15, so 3 days elapsed between agreeing and celebrating.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Agreed to cook vegetarian moussaka for birthday dinner (March 12)",
+                "Celebrated Sarah's birthday with vegetarian moussaka (March 15)"
+            ],
+            "conversation_references": [
+                "Session 1: Agreement to cook moussaka",
+                "Session 2: Birthday celebration with moussaka"
+            ],
+            "calculation_required": "March 15 - March 12 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    150,
+                    198
+                ],
+                "second_event": [
+                    192
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 3 days",
+                "LLM response should state: from March 12 till March 15"
+            ]
+        },
+        {
+            "question": "How many days passed between the cooking workshop Amanda and I attended and the Kad\u0131k\u00f6y cooking contest where I placed 2nd?",
+            "answer": "29 days passed between the cooking workshop on March 30 and the Kad\u0131k\u00f6y cooking contest on April 28 where I placed 2nd.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 30: cooking workshop",
+                "April 28: Kad\u0131k\u00f6y cooking contest"
+            ],
+            "conversation_references": [
+                "Session 216: cooking workshop",
+                "Sessions 404, 418: cooking contest"
+            ],
+            "calculation_required": "April 28 - March 30 = 29 days",
+            "source_chat_ids": {
+                "first_event": [
+                    216
+                ],
+                "second_event": [
+                    404,
+                    418
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 29 days",
+                "LLM response should state: from March 30 till April 28"
+            ]
+        }
+    ]
+}

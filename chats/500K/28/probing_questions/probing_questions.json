@@ -1,0 +1,540 @@
+{
+    "abstention": [
+        {
+            "question": "What is Wendy's profession or background?",
+            "ideal_response": "Based on the provided chat, there is no information related to Wendy's profession or background.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Wendy is mentioned as a romantic partner but no professional or background details are provided.",
+            "plan_reference": "BATCH 1 PLAN Bullet 3 and subsequent mentions of Wendy",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Wendy's profession or background."
+            ]
+        },
+        {
+            "question": "What are the qualifications or experience of the local contractor I plan to consult for the bathroom renovation?",
+            "ideal_response": "Based on the provided chat, there is no information related to the qualifications or experience of the local contractor.",
+            "difficulty": "medium",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Contractor consultation is scheduled but no background details are provided.",
+            "plan_reference": "BATCH 10 PLAN Bullet 5 and 17",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the qualifications or experience of the local contractor."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever upgraded any furniture in my living room?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have upgraded your living room sofa to a modular sectional, but you also mentioned that you have never upgraded any furniture in your living room. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "living room furniture upgrades",
+            "conversation_references": [
+                "Session 406: Upgraded sofa",
+                "Session 494: Never upgraded furniture"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    406
+                ],
+                "second_statement": [
+                    494
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never upgraded any furniture in your living room",
+                "LLM response should mention: you also mentioned upgrading your living room sofa to a modular sectional",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever repurposed any furniture or storage solutions in my home?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you repurposed old dresser drawers into storage bins, but you also mentioned that you have never repurposed any furniture or storage solutions in your home. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Repurposing furniture or storage solutions",
+            "conversation_references": [
+                "Session 582: Repurposed dresser drawers",
+                "Session 668: Never repurposed furniture"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    582
+                ],
+                "second_statement": [
+                    668
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never repurposed any furniture or storage solutions in your home",
+                "LLM response should mention: you also mentioned repurposing old dresser drawers into storage bins",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different home improvement and friend-related topics throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the topics in this order: 1) First, you talked about meeting Joe at a writers\u2019 meetup and tips for a productive workspace (chat_id 8), 2) Then you discussed watching tutorials and assembling modular shelving (chat_id 178), 3) Next, you mentioned an upcoming writers\u2019 workshop thanks to Joe (chat_id 260), 4) After that, you brought up Joe helping with electrical work and the friendship dynamics involved (chat_ids 352 and 358), 5) Finally, you talked about Steven helping with various home projects and recommendations, including cable management, pegboard installation, window sealing, and store recommendations (chat_ids 440, 538, 624, 720, 890).",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "chat_id 8: Writers\u2019 meetup and workspace tips",
+                "chat_id 178: Tutorials and shelving assembly",
+                "chat_id 260: Writers\u2019 workshop",
+                "chat_ids 352 and 358: Joe\u2019s electrical help and friendship",
+                "chat_ids 440, 538, 624, 720, 890: Steven\u2019s home projects and recommendations"
+            ],
+            "ordering_tested": [
+                "1st: Writers\u2019 meetup and workspace tips",
+                "2nd: Tutorials and shelving assembly",
+                "3rd: Writers\u2019 workshop",
+                "4th: Joe\u2019s electrical help and friendship",
+                "5th: Steven\u2019s home projects and recommendations"
+            ],
+            "source_chat_ids": [
+                8,
+                178,
+                260,
+                352,
+                358,
+                440,
+                538,
+                624,
+                720,
+                890
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Writers\u2019 meetup and workspace tips",
+                "LLM response should mention: 2) Tutorials and shelving assembly",
+                "LLM response should mention: 3) Writers\u2019 workshop",
+                "LLM response should mention: 4) Joe\u2019s electrical help and friendship",
+                "LLM response should mention: 5) Steven\u2019s home projects and recommendations"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I mentioned different ways Steven has helped me around my home and with friends in order (mention 6 items)?",
+            "answer": "You mentioned Steven's help in this order: 1) Meeting him at the community center, 2) His offer to help install a dehumidifier, 3) His invitation to build raised garden beds, 4) His assistance with installing a cable management system, 5) His help with window sealing, and 6) His later help with window sealing again.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 16: Meeting Steven at the community center",
+                "Session 156: Offer to help install dehumidifier",
+                "Session 314: Invitation to build garden beds",
+                "Session 440: Help with cable management system",
+                "Session 720: Help with window sealing",
+                "Session 808: Help with window sealing again"
+            ],
+            "ordering_tested": [
+                "1st: Meeting Steven at the community center",
+                "2nd: Offer to help install dehumidifier",
+                "3rd: Invitation to build garden beds",
+                "4th: Help with cable management system",
+                "5th: Help with window sealing",
+                "6th: Help with window sealing again"
+            ],
+            "source_chat_ids": [
+                16,
+                156,
+                314,
+                440,
+                720,
+                808
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Meeting Steven at the community center",
+                "LLM response should mention: 2) Offer to help install dehumidifier",
+                "LLM response should mention: 3) Invitation to build garden beds",
+                "LLM response should mention: 4) Help with cable management system",
+                "LLM response should mention: 5) Help with window sealing",
+                "LLM response should mention: 6) Help with window sealing again"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Can you remind me of the city and country I said I live in, along with my age?",
+            "answer": "You said you live in New Gary, Saint Helena, and you are 26 years old.",
+            "difficulty": "medium",
+            "question_type": "location_and_age_recall",
+            "conversation_reference": "Turn 0: Personal introduction details from user",
+            "key_facts_tested": [
+                "city: New Gary",
+                "country: Saint Helena",
+                "age: 26"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should mention: city: New Gary",
+                "LLM response should mention: country: Saint Helena",
+                "LLM response should mention: age: 26"
+            ]
+        },
+        {
+            "question": "What were the dimensions I gave for my living room when I asked about optimizing the furniture layout?",
+            "answer": "You said your living room measures 15 by 12 feet.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 1: User's initial mention of room size",
+            "key_facts_tested": [
+                "room length: 15 feet",
+                "room width: 12 feet"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should mention: room length: 15 feet",
+                "LLM response should mention: room width: 12 feet"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are the financial limits I should keep in mind for this project?",
+            "instruction_being_tested": "Always provide detailed budget breakdowns when I ask about financial constraints.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                94
+            ],
+            "rubric": [
+                "LLM response should include: itemized list of costs",
+                "LLM response should include: specific dollar amounts",
+                "LLM response should include: category-by-category breakdown",
+                "LLM response should include: detailed cost analysis"
+            ]
+        },
+        {
+            "question": "What are some good ways to improve my setup for working from home?",
+            "instruction_being_tested": "Always highlight ergonomic improvements when I ask about home office upgrades.",
+            "expected_compliance": "Response should include specific mentions of ergonomic enhancements as part of the suggestions for improving the home workspace.",
+            "compliance_indicators": [
+                "mentions of ergonomic features",
+                "focus on comfort and posture improvements",
+                "recommendations related to physical well-being in the workspace"
+            ],
+            "non_compliance_signs": [
+                "no mention of ergonomic factors",
+                "only general or aesthetic suggestions",
+                "ignores physical comfort aspects"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                492
+            ],
+            "rubric": [
+                "LLM response should include: mentions of ergonomic features",
+                "LLM response should include: focus on comfort and posture improvements",
+                "LLM response should include: recommendations related to physical well-being in the workspace"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the internet speed of my current plan that supports my video calls?",
+            "answer": "250 Mbps",
+            "difficulty": "easy",
+            "update_type": "speed_upgrade",
+            "tests_retention_of": "updated internet speed value",
+            "conversation_references": [
+                "Professional & Career Labels:Remote Work: Upgraded internet plan to 200 Mbps on April 28, improving video call quality.",
+                "Information Update: The internet speed upgrade to 250 Mbps on April 29 has further enhanced video call quality beyond initial expectations."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 200 Mbps speed instead of the updated 250 Mbps speed",
+            "source_chat_ids": {
+                "original_info": [
+                    288
+                ],
+                "updated_info": [
+                    300
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 250 Mbps"
+            ]
+        },
+        {
+            "question": "When was the wall-mounted pegboard for tools and supplies installed to free up extra space?",
+            "answer": "The pegboard was installed on September 18.",
+            "difficulty": "easy",
+            "update_type": "installation_date_correction",
+            "tests_retention_of": "the exact installation date of the pegboard",
+            "conversation_references": [
+                "Maximizing Storage Labels:Storage Solutions: Added wall-mounted pegboard for tools and supplies on September 19, freeing 3 sq ft.",
+                "Information Update: The pegboard installation was completed a day earlier than planned, on September 18."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the installation date as September 19 instead of September 18",
+            "source_chat_ids": {
+                "original_info": [
+                    614,
+                    620
+                ],
+                "updated_info": [
+                    662
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: September 18"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How have I allocated and adjusted my budget across storage, lighting, and repurposing to maximize savings and organization?",
+            "answer": "You initially planned a $600 budget focusing on storage and furniture upgrades, later allocated $150 to lighting and $230 to storage from the remaining $380, spent $220 on lighting and task lighting, and saved $50 by repurposing furniture instead of buying a shoe rack, optimizing your spending and organization.",
+            "difficulty": "medium",
+            "reasoning_type": "resource_distribution",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id: 37",
+                "chat_id: 127-129",
+                "chat_id: 130-131",
+                "chat_id: 230-231"
+            ],
+            "reasoning_steps": [
+                "Identify the initial total budget and planned allocation for storage and furniture upgrades.",
+                "Analyze how the remaining budget was divided between lighting and storage.",
+                "Calculate actual spending on lighting and remaining funds for storage.",
+                "Incorporate savings from repurposing furniture to understand overall budget optimization."
+            ],
+            "source_chat_ids": [
+                37,
+                127,
+                128,
+                129,
+                130,
+                131,
+                230,
+                231
+            ],
+            "rubric": [
+                "LLM response should mention: $150 allocated to lighting",
+                "LLM response should mention: $230 allocated to storage",
+                "LLM response should mention: $220 spent on lighting",
+                "LLM response should mention: $50 saved by repurposing furniture"
+            ]
+        },
+        {
+            "question": "Considering the activities I did with Stacy and Sarah and the projects I worked on with Sarah, how many distinct home improvement or creative tasks have I completed with them altogether?",
+            "answer": "Three distinct tasks: painting the accent wall with Stacy and Sarah, painting the entryway wall with Sarah, and setting up a home office corner with an ergonomic chair.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "46",
+                "152",
+                "254"
+            ],
+            "reasoning_steps": [
+                "Identify the home improvement or creative activities mentioned by the user in each session.",
+                "From session 152, note painting the accent wall with Stacy and Sarah.",
+                "From session 254, note painting the entryway wall with Sarah.",
+                "From session 46, note setting up a home office corner with an ergonomic chair as a home improvement task.",
+                "Count the total distinct tasks across these sessions."
+            ],
+            "source_chat_ids": [
+                46,
+                152,
+                254
+            ],
+            "rubric": [
+                "LLM response should mention: painting the accent wall with Stacy and Sarah",
+                "LLM response should mention: painting the entryway wall with Sarah",
+                "LLM response should mention: setting up a home office corner with an ergonomic chair"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm looking to update my living space. What kinds of decor items would you suggest?",
+            "preference_being_tested": "I prefer multifunctional decor that blends aesthetics with practical storage solutions",
+            "expected_compliance": "Response should include recommendations for decor that combines visual appeal with storage functionality, reflecting the user's preference for multifunctional pieces",
+            "compliance_indicators": [
+                "suggests decor with built-in storage",
+                "mentions multifunctional furniture or items",
+                "balances aesthetic and practical features in recommendations"
+            ],
+            "non_compliance_signs": [
+                "recommends purely decorative items without storage",
+                "only suggests storage solutions without aesthetic consideration",
+                "ignores multifunctional aspect entirely"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                268
+            ],
+            "rubric": [
+                "LLM response should include: suggests decor with built-in storage",
+                "LLM response should include: mentions multifunctional furniture or items",
+                "LLM response should include: balances aesthetic and practical features in recommendations"
+            ]
+        },
+        {
+            "question": "I'm planning some upgrades for my home and want to explore different options. What would you suggest I consider?",
+            "preference_being_tested": "I prioritize energy-efficient upgrades to reduce long-term utility costs and environmental impact.",
+            "expected_compliance": "Response should focus on recommending energy-efficient upgrade options that help lower utility costs and reduce environmental impact, ideally including affordable choices suitable for a budget-conscious user.",
+            "compliance_indicators": [
+                "mentions energy-efficient solutions",
+                "includes options that reduce utility costs",
+                "references environmental benefits",
+                "suggests affordable upgrades aligned with efficiency"
+            ],
+            "non_compliance_signs": [
+                "recommends upgrades without regard to energy efficiency",
+                "focuses on expensive or non-efficient options",
+                "ignores cost-saving or environmental aspects",
+                "suggests upgrades that increase utility costs"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                362
+            ],
+            "rubric": [
+                "LLM response should include: mentions energy-efficient solutions",
+                "LLM response should include: includes options that reduce utility costs"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a brief summary of how to best use a foldable dining table and the extra space it saves in my small apartment?",
+            "ideal_summary": "Using a foldable dining table in a small apartment helps save space by allowing you to fold and store the table when not in use, place it strategically near walls or corners, and use it for multiple purposes like dining or working. The 15 square feet saved can be utilized effectively by adding modular seating such as ottomans or benches that offer flexibility and storage, or by expanding areas like a home office with compact furniture like filing cabinets or shelving units. These approaches maximize functionality and maintain a comfortable, organized living space.",
+            "difficulty": "easy",
+            "summarization_type": "basic_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "space-saving use of foldable table",
+                "utilization of saved space",
+                "integration of modular furniture"
+            ],
+            "synthesis_required": "Combining straightforward tips and ideas from multiple sessions into a concise overview",
+            "source_chat_ids": [
+                69,
+                75,
+                99
+            ],
+            "rubric": [
+                "LLM response should mention: Using a foldable dining table in a small apartment helps save space by allowing you to fold and store the table when not in use, place it strategically near walls or corners, and use it for multiple purposes like dining or working.",
+                "LLM response should mention: The 15 square feet saved can be utilized effectively by adding modular seating such as ottomans or benches that offer flexibility and storage, or by expanding areas like a home office with compact furniture like filing cabinets or shelving units.",
+                "LLM response should mention: These approaches maximize functionality and maintain a comfortable, organized living space."
+            ]
+        },
+        {
+            "question": "Can you give me a detailed summary of how my decluttering project has progressed, including the strategies, timelines, involvement of others, and any adjustments made along the way?",
+            "ideal_summary": "The decluttering project for the 650 sq ft apartment, focusing primarily on the living room and kitchen, began with a clear goal to complete by April 15. The initial plan involved setting specific objectives, gathering necessary supplies, and tackling one area at a time, starting with the living room followed by the kitchen. Items were sorted into categories such as keep, donate, sell, or trash, with organization and deep cleaning integrated into the process. As of early April, progress was at 35% completion with 12 boxes donated to Saint Helena Charity. To address concerns about meeting the deadline, a revised strategy was implemented that included setting specific daily goals, prioritizing high-impact areas, applying the KonMari method, scheduling regular decluttering sessions, and involving partners and friends to increase efficiency. A detailed weekly plan was created to allocate time effectively, with flexibility to adjust based on progress. Communication and preparation for helpers were emphasized, along with celebrating milestones and documenting progress to maintain motivation. The project also incorporated a system for managing donations to streamline trips and maintain momentum. Overall, the approach evolved from a broad initial plan to a more structured, collaborative, and adaptive process aimed at ensuring the decluttering goal was met on time while maintaining organization and motivation throughout.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "strategic decision-making",
+                "timeline management",
+                "adaptive planning",
+                "progress tracking",
+                "motivational techniques"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                28,
+                104,
+                105,
+                107
+            ],
+            "rubric": [
+                "LLM response should mention: The decluttering project for the 650 sq ft apartment, focusing primarily on the living room and kitchen, began with a clear goal to complete by April 15.",
+                "LLM response should mention: The initial plan involved setting specific objectives, gathering necessary supplies, and tackling one area at a time, starting with the living room followed by the kitchen.",
+                "LLM response should mention: Items were sorted into categories such as keep, donate, sell, or trash, with organization and deep cleaning integrated into the process.",
+                "LLM response should mention: As of early April, progress was at 35% completion with 12 boxes donated to Saint Helena Charity.",
+                "LLM response should mention: To address concerns about meeting the deadline, a revised strategy was implemented that included setting specific daily goals, prioritizing high-impact areas, applying the KonMari method, scheduling regular decluttering sessions, and involving partners and friends to increase efficiency.",
+                "LLM response should mention: A detailed weekly plan was created to allocate time effectively, with flexibility to adjust based on progress.",
+                "LLM response should mention: Communication and preparation for helpers were emphasized, along with celebrating milestones and documenting progress to maintain motivation.",
+                "LLM response should mention: The project also incorporated a system for managing donations to streamline trips and maintain momentum.",
+                "LLM response should mention: Overall, the approach evolved from a broad initial plan to a more structured, collaborative, and adaptive process aimed at ensuring the decluttering goal was met on time while maintaining organization and motivation throughout."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I plan to buy plants from GreenLeaf Nursery and when I want to finish decluttering my apartment?",
+            "answer": "There are 3 days between buying plants on April 12 and finishing decluttering by April 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 12: buying plants from GreenLeaf Nursery",
+                "April 15: finishing decluttering apartment"
+            ],
+            "conversation_references": [
+                "Session 2: Plant purchase planning",
+                "Session 1: Decluttering plan"
+            ],
+            "calculation_required": "April 15 - April 12 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    184,
+                    190
+                ],
+                "second_event": [
+                    28
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 3 days"
+            ]
+        },
+        {
+            "question": "How many days passed between my book club meeting and when I completed the gutter cleaning and window sealing?",
+            "answer": "The book club meeting was on April 5, and the gutter cleaning and window sealing were completed on October 27, so 205 days passed between the two events.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 5: book club meeting",
+                "October 27: gutter cleaning and window sealing completed"
+            ],
+            "conversation_references": [
+                "Session 1: Book club meeting",
+                "Session 2: Fall maintenance tasks"
+            ],
+            "calculation_required": "October 27 - April 5 = 205 days",
+            "source_chat_ids": {
+                "first_event": [
+                    194
+                ],
+                "second_event": [
+                    712
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 205 days"
+            ]
+        }
+    ]
+}

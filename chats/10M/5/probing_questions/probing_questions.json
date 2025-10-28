@@ -1,0 +1,883 @@
+{
+    "abstention": [
+        {
+            "question": "What motivated my choice to focus on geometric interpretations when studying normed spaces?",
+            "ideal_response": "Based on the provided chat, there is no information related to the motivation behind focusing on geometric interpretations.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan states the choice but does not explain the reasoning or motivation.",
+            "plan_reference": "Plan 2, Batch 1, Bullet 19 mentions strategy selection but no motivation.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the motivation behind focusing on geometric interpretations"
+            ]
+        },
+        {
+            "question": "Can you tell me more about Devin's background and expertise in spectral theory?",
+            "ideal_response": "Based on the provided chat, there is no information related to Devin's background or expertise in spectral theory.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Devin is mentioned as a collaborator but no background or expertise details are provided.",
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Devin's background or expertise in spectral theory"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever discussed norm properties with Devin or anyone else before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. In some instances, you mentioned discussing norm properties with Devin, while in another you said you've never discussed them with Devin or anyone else. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Discussion of norm properties with Devin",
+            "conversation_references": [
+                "chat_id: 3590, chat_id: 3596",
+                "chat_id: 3684"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    3590,
+                    3596
+                ],
+                "second_statement": [
+                    3684
+                ]
+            },
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you mentioned discussing norm properties with Devin",
+                "LLM response should mention: you said you've never discussed them with Devin or anyone else",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever discussed self-adjoint operator extensions with Devin?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have discussed self-adjoint operator extensions with Devin, but you also mentioned that you have never engaged in any discussions about this topic with him. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Discussions about self-adjoint operator extensions with Devin",
+            "conversation_references": [
+                "Session 16666, 16680",
+                "Session 16674"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    16666,
+                    16680
+                ],
+                "second_statement": [
+                    16674
+                ]
+            },
+            "plan_reference": "Plan 9",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have discussed self-adjoint operator extensions with Devin",
+                "LLM response should mention: you also mentioned that you have never engaged in any discussions about this topic with him",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different foundational and advanced concepts in Functional Analysis from 2024-08-01 to 2024-10-22, in order? Mention ONLY and ONLY twenty items.",
+            "answer": "You mentioned the concepts in this order: 1) Foundations of normed and Banach spaces and core definitions, 2) Specific examples of normed spaces like \u2113^p spaces and their norms, 3) Completeness in Banach spaces and convergence of Cauchy sequences, 4) Basic properties of norms and metrics including the triangle inequality, 5) Equivalence of norms and their relation to topology, 6) Continuous linear functionals within normed spaces, 7) Open and closed sets in normed spaces and their topological significance, 8) Convergence and Cauchy sequences linked to completeness, 9) Proofs of completeness in Banach spaces, 10) Examples of completeness failure in non-Banach spaces, 11) Introduction to Hilbert spaces and inner product structures, 12) The parallelogram law connecting inner products and norms, 13) Orthogonality in inner product spaces, 14) The projection theorem and best approximations, 15) The Riesz representation theorem relating functionals to inner products, 16) Examples of Hilbert spaces like L\u00b2 and sequence spaces, 17) Completeness and characterization of Hilbert spaces, 18) The Gram-Schmidt orthogonalization process, 19) Bessel's inequality and Parseval's identity in orthonormal expansions, 20) Application of Hilbert space concepts to Fourier series.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 20,
+            "conversation_references": [
+                "chat_id: 3544, 3554, 3558",
+                "chat_id: 3686, 3688, 3700, 3702, 3704",
+                "chat_id: 3928, 3930, 3936",
+                "chat_id: 4096, 4098, 4100",
+                "chat_id: 4290, 4482, 4506, 4508",
+                "chat_id: 4462, 4482, 4506",
+                "chat_id: 4634, 4636, 4644, 4648, 4650, 4686",
+                "chat_id: 4802, 4870, 4872, 4874",
+                "chat_id: 4968, 4970",
+                "chat_id: 5152",
+                "chat_id: 5342, 5344, 5358",
+                "chat_id: 5538, 5540, 5548",
+                "chat_id: 5700, 5702, 5722, 5732",
+                "chat_id: 5864, 5866, 5868, 5874, 5876",
+                "chat_id: 6022, 6024, 6026, 6030, 6032, 6182, 6184, 6190, 6192, 6212",
+                "chat_id: 6030, 6182, 6184",
+                "chat_id: 6320",
+                "chat_id: 6484, 6486, 6494, 6496",
+                "chat_id: 6660, 6666, 6668",
+                "chat_id: 6820, 6822"
+            ],
+            "ordering_tested": [
+                "1st: Foundations of normed and Banach spaces",
+                "2nd: Examples of normed spaces and \u2113^p norms",
+                "3rd: Completeness and Cauchy sequences in Banach spaces",
+                "4th: Properties of norms and metrics",
+                "5th: Equivalence of norms and topology",
+                "6th: Continuous linear functionals",
+                "7th: Open and closed sets in normed spaces",
+                "8th: Convergence and Cauchy sequences linked to completeness",
+                "9th: Proofs of completeness",
+                "10th: Completeness failure examples",
+                "11th: Introduction to Hilbert spaces",
+                "12th: Parallelogram law",
+                "13th: Orthogonality in inner product spaces",
+                "14th: Projection theorem",
+                "15th: Riesz representation theorem",
+                "16th: Examples of Hilbert spaces",
+                "17th: Completeness and characterization of Hilbert spaces",
+                "18th: Gram-Schmidt orthogonalization",
+                "19th: Bessel's inequality and Parseval's identity",
+                "20th: Hilbert space applications to Fourier series"
+            ],
+            "source_chat_ids": [
+                [
+                    3544,
+                    3554,
+                    3558
+                ],
+                [
+                    3686,
+                    3688,
+                    3700,
+                    3702,
+                    3704
+                ],
+                [
+                    3928,
+                    3930,
+                    3936
+                ],
+                [
+                    4096,
+                    4098,
+                    4100
+                ],
+                [
+                    4290,
+                    4482,
+                    4506,
+                    4508
+                ],
+                [
+                    4462,
+                    4482,
+                    4506
+                ],
+                [
+                    4634,
+                    4636,
+                    4644,
+                    4648,
+                    4650,
+                    4686
+                ],
+                [
+                    4802,
+                    4870,
+                    4872,
+                    4874
+                ],
+                [
+                    4968,
+                    4970
+                ],
+                [
+                    5152
+                ],
+                [
+                    5342,
+                    5344,
+                    5358
+                ],
+                [
+                    5538,
+                    5540,
+                    5548
+                ],
+                [
+                    5700,
+                    5702,
+                    5722,
+                    5732
+                ],
+                [
+                    5864,
+                    5866,
+                    5868,
+                    5874,
+                    5876
+                ],
+                [
+                    6022,
+                    6024,
+                    6026,
+                    6030,
+                    6032,
+                    6182,
+                    6184,
+                    6190,
+                    6192,
+                    6212
+                ],
+                [
+                    6030,
+                    6182,
+                    6184
+                ],
+                [
+                    6320
+                ],
+                [
+                    6484,
+                    6486,
+                    6494,
+                    6496
+                ],
+                [
+                    6660,
+                    6666,
+                    6668
+                ],
+                [
+                    6820,
+                    6822
+                ]
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Foundations of normed and Banach spaces",
+                "Examples of normed spaces and \u2113^p norms",
+                "Completeness and Cauchy sequences in Banach spaces",
+                "Properties of norms and metrics",
+                "Equivalence of norms and topology",
+                "Continuous linear functionals",
+                "Open and closed sets in normed spaces",
+                "Convergence and Cauchy sequences linked to completeness",
+                "Proofs of completeness",
+                "Completeness failure examples",
+                "Introduction to Hilbert spaces",
+                "Parallelogram law",
+                "Orthogonality in inner product spaces",
+                "Projection theorem",
+                "Riesz representation theorem",
+                "Examples of Hilbert spaces",
+                "Completeness and characterization of Hilbert spaces",
+                "Gram-Schmidt orthogonalization",
+                "Bessel's inequality and Parseval's identity",
+                "Hilbert space applications to Fourier series"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different key concepts related to linear operators and their properties from 2024-11-01 to 2025-01-21, in order? Mention ONLY and ONLY twenty items.",
+            "answer": "You mentioned these key concepts in this order: 1) Exploration of boundedness and properties of linear operators, 2) Study of operator norms and the equivalence between norms and continuity, 3) Discussion of kernel and range of operators and their structural properties, 4) Examination of adjoint operators in Hilbert spaces and inner product relations, 5) Investigation of invertibility and the bounded inverse theorem, 6) Study of operator algebra basics and operator composition, 7) Delving into compact operators and their properties, 8) Classification and understanding of finite rank operators, 9) Exploration of operator topologies focusing on convergence and continuity, 10) Application of knowledge to elementary operator equations, 11) Beginning spectral theory for bounded operators including spectrum and resolvent, 12) Study of spectral radius and its implications, 13) Classification of different types of spectrum, 14) Analysis of the spectral mapping theorem and how spectra transform under functions, 15) Exploration of Gelfand theory for commutative Banach algebras and spectral implications, 16) Study of the spectral theorem for normal operators and spectral decomposition, 17) Delving into functional calculus basics applying functions to operators, 18) Focus on examples like shift and multiplication operators within spectral theory, 19) Working on spectral decomposition concepts breaking down operators into spectral components, 20) Applying spectral theory to differential operators connecting abstract concepts to concrete problems.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 20,
+            "conversation_references": [
+                "7068, 7078",
+                "7238, 7240, 7242, 7248",
+                "7396, 7416",
+                "7608, 7610, 7664, 7666, 7668, 7756, 7758, 7760",
+                "7936, 7944, 7958, 7966, 7968",
+                "8092, 8094, 8202, 8254, 8256",
+                "8358, 8360, 8370, 8372",
+                "8524, 8534",
+                "8684",
+                "8860, 8866",
+                "9018, 9024, 9028",
+                "9172, 9178",
+                "9322",
+                "9502, 9504, 9532, 9562",
+                "9658, 9660",
+                "9838, 9840, 9842, 9870, 9872",
+                "9942, 9944, 9946, 9952, 9954",
+                "10196",
+                "10374, 10384, 10386, 10486, 10488, 10490",
+                "10544, 10546, 10736"
+            ],
+            "ordering_tested": [
+                "1st: Boundedness and properties of linear operators",
+                "2nd: Operator norms and continuity equivalence",
+                "3rd: Kernel and range of operators",
+                "4th: Adjoint operators in Hilbert spaces",
+                "5th: Invertibility and bounded inverse theorem",
+                "6th: Operator algebra basics and composition",
+                "7th: Compact operators and properties",
+                "8th: Finite rank operators classification",
+                "9th: Operator topologies and convergence",
+                "10th: Elementary operator equations",
+                "11th: Spectral theory for bounded operators",
+                "12th: Spectral radius and implications",
+                "13th: Types of spectrum classification",
+                "14th: Spectral mapping theorem",
+                "15th: Gelfand theory and spectral implications",
+                "16th: Spectral theorem for normal operators",
+                "17th: Functional calculus basics",
+                "18th: Examples like shift and multiplication operators",
+                "19th: Spectral decomposition concepts",
+                "20th: Spectral theory applied to differential operators"
+            ],
+            "source_chat_ids": [
+                [
+                    7068,
+                    7078
+                ],
+                [
+                    7238,
+                    7240,
+                    7242,
+                    7248
+                ],
+                [
+                    7396,
+                    7416
+                ],
+                [
+                    7608,
+                    7610,
+                    7664,
+                    7666,
+                    7668,
+                    7756,
+                    7758,
+                    7760
+                ],
+                [
+                    7936,
+                    7944,
+                    7958,
+                    7966,
+                    7968
+                ],
+                [
+                    8092,
+                    8094,
+                    8202,
+                    8254,
+                    8256
+                ],
+                [
+                    8358,
+                    8360,
+                    8370,
+                    8372
+                ],
+                [
+                    8524,
+                    8534
+                ],
+                [
+                    8684
+                ],
+                [
+                    8860,
+                    8866
+                ],
+                [
+                    9018,
+                    9024,
+                    9028
+                ],
+                [
+                    9172,
+                    9178
+                ],
+                [
+                    9322
+                ],
+                [
+                    9502,
+                    9504,
+                    9532,
+                    9562
+                ],
+                [
+                    9658,
+                    9660
+                ],
+                [
+                    9838,
+                    9840,
+                    9842,
+                    9870,
+                    9872
+                ],
+                [
+                    9942,
+                    9944,
+                    9946,
+                    9952,
+                    9954
+                ],
+                [
+                    10196
+                ],
+                [
+                    10374,
+                    10384,
+                    10386,
+                    10486,
+                    10488,
+                    10490
+                ],
+                [
+                    10544,
+                    10546,
+                    10736
+                ]
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "Boundedness and properties of linear operators",
+                "Operator norms and continuity equivalence",
+                "Kernel and range of operators",
+                "Adjoint operators in Hilbert spaces",
+                "Invertibility and bounded inverse theorem",
+                "Operator algebra basics and composition",
+                "Compact operators and properties",
+                "Finite rank operators classification",
+                "Operator topologies and convergence",
+                "Elementary operator equations",
+                "Spectral theory for bounded operators",
+                "Spectral radius and implications",
+                "Types of spectrum classification",
+                "Spectral mapping theorem",
+                "Gelfand theory and spectral implications",
+                "Spectral theorem for normal operators",
+                "Functional calculus basics",
+                "Examples like shift and multiplication operators",
+                "Spectral decomposition concepts",
+                "Spectral theory applied to differential operators"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Which version of the tokenization library am I using in my implementation?",
+            "answer": "You are using version 4.35.0 of the Hugging Face Transformers library for tokenization.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message mentioning Hugging Face Transformers 4.35.0 for tokenization",
+            "key_facts_tested": [
+                "library version",
+                "tokenization tool"
+            ],
+            "source_chat_ids": [
+                7906
+            ],
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: 4.35.0"
+            ]
+        },
+        {
+            "question": "How long did I say I spent computing the norm using SageMath?",
+            "answer": "I spent 15 minutes on this.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions spending 15 minutes on the computation.",
+            "key_facts_tested": [
+                "time spent on computation"
+            ],
+            "source_chat_ids": [
+                12942
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: 15 minutes"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you help me prove that the sequence defined by x_n = 1/n approaches zero?",
+            "instruction_being_tested": "Always explain epsilon-delta arguments in detail when I ask about convergence proofs.",
+            "expected_compliance": "Response should include a thorough explanation using the epsilon-delta approach to demonstrate the convergence of the sequence.",
+            "compliance_indicators": [
+                "step-by-step reasoning involving epsilon and delta",
+                "clear definition of the variables involved",
+                "detailed justification of each step in the proof"
+            ],
+            "non_compliance_signs": [
+                "vague or incomplete explanation",
+                "no mention of the key variables or their roles",
+                "skipping the detailed argumentation process"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                13602,
+                13604
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should contain: step-by-step reasoning involving epsilon and delta"
+            ]
+        },
+        {
+            "question": "How does the Fredholm alternative help determine the solvability of linear equations?",
+            "instruction_being_tested": "Always provide intuitive geometric interpretations when I ask about Fredholm alternative concepts.",
+            "expected_compliance": "Response should include intuitive geometric interpretations related to the Fredholm alternative rather than just abstract or algebraic explanations.",
+            "compliance_indicators": [
+                "geometric visualization of solution spaces",
+                "interpretation involving dimensions of kernels and images",
+                "intuitive explanation of orthogonality conditions"
+            ],
+            "non_compliance_signs": [
+                "purely algebraic or analytic explanation",
+                "no mention of geometric or visual intuition",
+                "abstract definitions without intuitive context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                11500
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should contain: geometric intuition of solution spaces"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many questions did I answer correctly on my initial quiz about linear operator definitions?",
+            "answer": "14 out of 20 questions",
+            "difficulty": "easy",
+            "update_type": "score_improvement",
+            "tests_retention_of": "updated quiz score reflecting improved understanding",
+            "conversation_references": [
+                "My initial quiz on linear operator definitions scored 68%, missing 6 out of 20 questions on boundedness criteria, reviewed over 2 hours.",
+                "My initial quiz on linear operator definitions now reflects a stronger grasp, with 14 out of 20 questions answered correctly after additional review."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original score of 68% or 14 incorrect answers instead of the updated 14 correct answers",
+            "source_chat_ids": {
+                "original_info": [
+                    7070
+                ],
+                "updated_info": [
+                    7070
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: 14 questions"
+            ]
+        },
+        {
+            "question": "What score did I achieve on my quiz about the parallelogram law following my additional study time?",
+            "answer": "79%",
+            "difficulty": "easy",
+            "update_type": "score_improvement",
+            "tests_retention_of": "updated quiz score after extra study",
+            "conversation_references": [
+                "Learning & Progress:Skill Assessment: My quiz on the parallelogram law scored 72%, missing 5 out of 18 questions on norm relations, reviewed over 1.5 hours.",
+                "Information Update: My quiz on the parallelogram law recently reflected enhanced understanding, with a score rising to 79% after an extra hour of study."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 72% score instead of the updated 79%",
+            "source_chat_ids": {
+                "original_info": [
+                    5542,
+                    5544,
+                    5550,
+                    5552
+                ],
+                "updated_info": [
+                    5694
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: 79%"
+            ]
+        }
+
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many total minutes did Devin and I spend discussing vector addition from 2024-07-01 till 2024-07-31",
+            "answer": "350 minutes",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Plan 1 Batch 1 Bullet 16",
+                "Plan 2 Batch 9 Bullet 12",
+                "chat_id 74"
+            ],
+            "reasoning_steps": [
+                "Identify the durations of vector addition discussions from each session.",
+                "Sum the durations: 60 minutes from the first session, 50 minutes from the second, and 50 minutes from the third.",
+                "Calculate total time: 60 + 50 + 50 = 160 minutes."
+            ],
+            "source_chat_ids": [
+                74,
+                3276,
+                3277
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: 350 minutes"
+            ]
+        },
+        {
+            "question": "Across my quizzes on vector spaces, norm properties, and completeness, how many questions did I miss in total on topics related to axioms, metric axioms, and Hilbert criteria?",
+            "answer": "14 questions",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "initial self-test on vector spaces",
+                "test on norm properties",
+                "completeness test"
+            ],
+            "reasoning_steps": [
+                "Identify the number of questions missed on axioms in the vector spaces quiz (5 questions).",
+                "Identify the number of questions missed on metric axioms in the norm properties quiz (4 questions).",
+                "Identify the number of questions missed on Hilbert criteria in the completeness test (5 questions).",
+                "Sum these missed questions: 5 + 4 + 5 = 14."
+            ],
+            "source_chat_ids": [
+                3548,
+                4102,
+                6322
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should state: 14 questions"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I’m planning to enroll in an online course to improve my problem-solving skills. Which platform would you recommend I go with?",
+            "preference_being_tested": "Devin and I spent 1 hour comparing Udemy vs. edX, deciding Udemy\u2019s $15 course offers better problem sets.",
+            "expected_compliance": "Response should use or reference problem sets consistent with the Udemy course content, reflecting the user's prior choice and familiarity with that material.",
+            "compliance_indicators": [
+                "provides solutions or explanations aligned with Udemy course problem styles",
+                "uses methods or examples consistent with Udemy course problem sets",
+                "acknowledges or references the specific problem format from Udemy materials"
+            ],
+            "non_compliance_signs": [
+                "provides solutions based on edX or other course materials",
+                "ignores the specific problem style or format from Udemy",
+                "suggests unrelated problem-solving approaches not aligned with Udemy content"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content_source_preference",
+            "source_chat_ids": [
+                2172,
+                2178
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: Suggest Udemy"
+            ]
+        },
+        {
+            "question": "I want to pick an online course that gives me plenty of practice problems to work through. Which platform would you recommend I go with?",
+            "preference_being_tested": "Devin and I spent 1 hour comparing Udemy vs. edX, deciding Udemy\u2019s $15 course offers better problem sets.",
+            "expected_compliance": "Response should use or reference problem sets consistent with the Udemy course content, reflecting the user's prior choice and familiarity with that material.",
+            "compliance_indicators": [
+                "provides solutions or explanations aligned with Udemy course problem styles",
+                "uses methods or examples consistent with Udemy course problem sets",
+                "acknowledges or references the specific problem format from Udemy materials"
+            ],
+            "non_compliance_signs": [
+                "provides solutions based on edX or other course materials",
+                "ignores the specific problem style or format from Udemy",
+                "suggests unrelated problem-solving approaches not aligned with Udemy content"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content_source_preference",
+            "source_chat_ids": [
+                2172,
+                2178
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: Suggest Udemy"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my learning journey and progress with the concept of completeness in normed and Banach spaces, including how I worked through understanding Cauchy sequences, convergence, and examples of completeness and incompleteness across different spaces?",
+            "ideal_summary": "Your learning journey on completeness in normed and Banach spaces progressed through several stages: Initially, you focused on grasping the definitions of Cauchy sequences and convergence, using simple sequences like x_n = 3 - 1/n and x_n = 1/n to understand how sequences approach limits. You then explored the completeness property, learning that Banach spaces are normed spaces where every Cauchy sequence converges within the space, with \u2113\u00b2 serving as a key example. Alongside, you studied examples of incompleteness, such as sequences in the rationals that fail to converge within the space, highlighting the importance of completeness. You also practiced proving sets are closed by showing they contain all their limit points, applying this to unit balls in \u2113\u00b2 and function spaces. Throughout, you reinforced your understanding by examining norm equivalence and how it preserves topological properties like convergence and completeness. This comprehensive approach, combining theory with concrete examples and proofs, helped you build a solid foundation in the concept of completeness and its role in functional analysis.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                3929,
+                3945,
+                4315,
+                4909,
+                4983
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "progression of learning",
+                "examples of completeness and incompleteness",
+                "application of definitions",
+                "connection between norms and topology"
+            ],
+            "synthesis_required": "Integrating definitions, examples, proofs, and conceptual insights into a coherent narrative of learning progress",
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: you focused on grasping the definitions of Cauchy sequences and convergence",
+                "LLM response should contain: explored the completeness property, learning that Banach spaces are normed spaces where every Cauchy sequence converges within the space",
+                "LLM response should contain: you studied examples of incompleteness, such as sequences in the rationals that fail to converge within the space",
+                "LLM response should contain: practiced proving sets are closed by showing they contain all their limit points",
+                "LLM response should contain: you reinforced your understanding by examining norm equivalence and how it preserves topological properties like convergence and completeness"
+            ]
+        },
+        {
+            "question": "Can you summarize my learning journey and progress with operator theory, including how my understanding of boundedness, spectrum, and resolvent sets developed over time?",
+            "ideal_summary": "Your learning journey with operator theory began with foundational concepts such as bounded linear operators, where you explored definitions and applied them to simple operators like T(x) = 2x and T(x, y) = (2x, 2y). Over time, you deepened your understanding by verifying linearity properties and boundedness criteria through step-by-step problem solving and practical examples. You then progressed to spectral theory, learning to identify the spectrum and resolvent set of operators, starting with scalar operators like T(x) = 3x and extending to matrix operators such as T(x, y) = (5x, 5y). Throughout this process, you engaged with computational tools like MATLAB and SageMath to verify eigenvalues and invertibility, which reinforced your theoretical knowledge. Your grasp of these concepts evolved through iterative practice, error analysis, and reflection, culminating in a more confident application of spectral theory to both finite and infinite-dimensional operators.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey_summary",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                7068,
+                7069,
+                7070,
+                7071,
+                7072,
+                7073,
+                7080,
+                7081,
+                7082,
+                7083,
+                7084,
+                7100,
+                7086,
+                7092,
+                7095,
+                7096,
+                7088,
+                7090,
+                7102,
+                7110,
+                7112,
+                7160,
+                7173,
+                7191,
+                7237,
+                9131,
+                9141,
+                9163
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "progression of knowledge",
+                "application of definitions",
+                "integration of computational tools",
+                "error analysis and correction"
+            ],
+            "synthesis_required": "Integrate foundational concepts, practical problem solving, computational verification, and conceptual growth into a coherent narrative",
+            "source_chat_ids": [
+                7068,
+                7069,
+                7070,
+                7071,
+                7072,
+                7073,
+                7080,
+                7081,
+                7082,
+                7083,
+                7084,
+                7100,
+                7086,
+                7092,
+                7095,
+                7096,
+                7088,
+                7090,
+                7102,
+                7110,
+                7112,
+                7160,
+                7173,
+                7191,
+                7237,
+                9131,
+                9141,
+                9163
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should contain: you explored definitions and applied them to simple operators",
+                "LLM response should contain: you deepened your understanding by verifying linearity properties and boundedness criteria through step-by-step problem solving and practical examples",
+                "LLM response should contain: progressed to spectral theory, learning to identify the spectrum and resolvent set of operators and extending to matrix operators",
+                "LLM response should contain: you engaged with computational tools like MATLAB and SageMath to verify eigenvalues and invertibility, which reinforced your theoretical knowledge",
+                "LLM response should contain: Your grasp of these concepts evolved through iterative practice, error analysis, and reflection, culminating in a more confident application of spectral theory to both finite and infinite-dimensional operators"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I started exploring applications of functional analysis in quantum mechanics and when I began advanced problem solving in functional spaces?",
+            "answer": "45 days passed between starting to explore applications of functional analysis in quantum mechanics on April 1, 2025, and beginning advanced problem solving in functional spaces on May 16, 2025.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 1, 2025: started exploring functional analysis in quantum mechanics",
+                "May 16, 2025: began advanced problem solving in functional spaces"
+            ],
+            "conversation_references": [
+                "chat_id 14660 and 14666: starting exploration",
+                "chat_id 16608 and 16610: advanced problem solving start"
+            ],
+            "calculation_required": "May 16, 2025 - April 1, 2025 = 45 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14660,
+                    14666
+                ],
+                "second_event": [
+                    16608,
+                    16610
+                ]
+            },
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should state: 45 days",
+                "LLM response should state: from April 1, 2025 till May 16, 2025"
+            ]
+        },
+        {
+            "question": "How many days after I started exploring compact operators did I begin synthesizing functional analysis concepts?",
+            "answer": "27 days elapsed between when I started exploring compact operators on February 16 and when I began synthesizing functional analysis concepts on March 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 16: started exploring compact operators",
+                "March 15: began synthesizing functional analysis concepts"
+            ],
+            "conversation_references": [
+                "Sessions about compact operators starting 2025-02-16",
+                "Sessions about functional analysis synthesis starting 2025-03-15"
+            ],
+            "calculation_required": "March 15 - February 16 = 27 days",
+            "source_chat_ids": {
+                "first_event": [
+                    10894,
+                    10918
+                ],
+                "second_event": [
+                    12916,
+                    12918
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 27 days",
+                "LLM response should state: from February 16 till March 15"
+            ]
+        }
+    ]
+}

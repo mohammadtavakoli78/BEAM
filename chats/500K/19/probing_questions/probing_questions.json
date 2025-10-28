@@ -1,0 +1,561 @@
+{
+    "abstention": [
+        {
+            "question": "What was the agenda and key outcomes of the January 22, 2024 meeting with your manager at 45 Main Street?",
+            "ideal_response": "Based on the provided chat, there is no information related to the agenda or outcomes of the January 22, 2024 meeting with your manager.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The meeting is scheduled but no details about agenda or outcomes are provided.",
+            "plan_reference": "Scheduled a 3 PM meeting on January 22, 2024, with my manager at 45 Main Street office to discuss career goals.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the agenda or outcomes of the January 22, 2024 meeting with your manager."
+            ]
+        },
+        {
+            "question": "Could you share the detailed criteria you used to decide between applying for the senior editor role at Science Daily or staying at your current job?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed criteria used to decide between applying for the senior editor role or staying at the current job.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The career transition consideration is mentioned but no decision criteria or reasoning is provided.",
+            "plan_reference": "Considering applying for a senior editor role at Science Daily by March 1, 2024, or staying at current job.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed criteria used to decide between applying for the senior editor role or staying at the current job."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever met my mother Christina and received career advice from her?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. In some parts, you said you've met your mother Christina and that she has been your primary career advisor, but elsewhere you mentioned never having met her or received any career advice from her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting and career advice from mother Christina",
+            "conversation_references": [
+                "Session 6, 8, 10: Meeting and career advice from Christina",
+                "Session 130: Never met or received advice from Christina"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    6,
+                    8,
+                    10
+                ],
+                "second_statement": [
+                    130
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've met and received advice from Christina",
+                "LLM response should mention: you also said you've never met or received advice from her",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended the Saint Helena Business Expo and connected with new contacts there?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have connected with new contacts at the Saint Helena Business Expo, but you also mentioned that you have never attended the event or connected with anyone there. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance and networking at the Saint Helena Business Expo",
+            "conversation_references": [
+                "Session 422: Connected with 15 new contacts at Expo",
+                "Session 482: Never attended the Expo"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    422
+                ],
+                "second_statement": [
+                    482
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said both that you've attended and connected with new contacts at the Expo",
+                "LLM response should mention: you also said you've never attended or connected with anyone there",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different collaborations and projects with Brittney throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned your collaborations and projects with Brittney in this order: 1) Working together at the community library and considering broader collaborations, 2) Discussing Brittney's job application and how to support her, 3) Planning and co-hosting webinars on storytelling and leadership, 4) Collaborating on newsletters and articles to enhance your professional profile, 5) Addressing transitions and changes in your working relationship including farewells and new roles.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 12 and 14: Initial collaboration and career advice",
+                "Session 146 and 154: Brittney's job application and support",
+                "Sessions 766, 774, 776, 896, 908, 1026: Webinar planning and execution",
+                "Sessions 456 and 556: Newsletter and article collaborations",
+                "Sessions 658, 662, 1154, 1158: Relationship transitions and role changes"
+            ],
+            "ordering_tested": [
+                "1st: Initial collaboration and career advice",
+                "2nd: Brittney's job application and support",
+                "3rd: Webinar planning and execution",
+                "4th: Newsletter and article collaborations",
+                "5th: Relationship transitions and role changes"
+            ],
+            "source_chat_ids": [
+                [
+                    12,
+                    14
+                ],
+                [
+                    146,
+                    154
+                ],
+                [
+                    766,
+                    774,
+                    776,
+                    896,
+                    908,
+                    1026
+                ],
+                [
+                    456,
+                    556
+                ],
+                [
+                    658,
+                    662,
+                    1154,
+                    1158
+                ]
+            ],
+            "rubric": [
+                "Response should mention: Initial collaboration and career advice",
+                "Response should mention: Brittney's job application and support",
+                "Response should mention: Webinar planning and execution",
+                "Response should mention: Newsletter and article collaborations",
+                "Response should mention: Relationship transitions and role changes"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I mentioned my interactions and concerns related to my professional connections and project updates in our conversations, in order (mention 6 items)?",
+            "answer": "You mentioned these topics in this order: 1) Meeting Brooke and receiving mentorship advice, 2) Meeting Jeffery and discussing networking and relationship building, 3) Preparing for and managing progress reports and meetings with Zachary, 4) Delivering project reports and handling deadlines related to Zachary, 5) Receiving congratulations and reference offers from Zachary, and 6) Discussing Jeffery's endorsement and leveraging it for career advancement.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 78: Meeting Brooke and mentorship advice",
+                "Session 180: Meeting Jeffery and networking introduction",
+                "Sessions 300, 302, 540, 878: Preparing and managing progress reports with Zachary",
+                "Session 438: Delivering project reports to Zachary",
+                "Session 640: Receiving congratulations and reference offer from Zachary",
+                "Sessions 744, 752, 1010, 1138: Discussing Jeffery's endorsement and career advancement"
+            ],
+            "ordering_tested": [
+                "1st: Brooke mentorship mention",
+                "2nd: Jeffery networking mention",
+                "3rd: Zachary progress report preparation and management",
+                "4th: Zachary project report delivery",
+                "5th: Zachary congratulations and reference offer",
+                "6th: Jeffery endorsement and career advancement"
+            ],
+            "source_chat_ids": [
+                78,
+                180,
+                [
+                    300,
+                    302,
+                    540,
+                    878
+                ],
+                438,
+                640,
+                [
+                    744,
+                    752,
+                    1010,
+                    1138
+                ]
+            ],
+            "rubric": [
+                "Response should mention: Brooke mentorship mention",
+                "Response should mention: Jeffery networking mention",
+                "Response should mention: Zachary progress report preparation and management",
+                "Response should mention: Zachary project report delivery",
+                "Response should mention: Zachary congratulations and reference offer",
+                "Response should mention: Jeffery endorsement and career advancement"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What was the cost I mentioned for the training I\u2019m enrolled in?",
+            "answer": "You said the training costs $350.",
+            "difficulty": "medium",
+            "question_type": "amount_recall",
+            "conversation_reference": "Turn 1: Cost mentioned early in user message",
+            "key_facts_tested": [
+                "cost: $350"
+            ],
+            "source_chat_ids": [
+                38
+            ],
+            "rubric": [
+                "Response should mention: $350"
+            ]
+        },
+        {
+            "question": "When did I mention negotiating the signing bonus as part of my promotion package?",
+            "answer": "On February 27.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: USER mentions negotiating a signing bonus on February 27 as part of promotion package.",
+            "key_facts_tested": [
+                "date of negotiation"
+            ],
+            "source_chat_ids": [
+                170
+            ],
+            "rubric": [
+                "Response should mention: February 27"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you tell me about the mentoring activities I've been involved in recently?",
+            "instruction_being_tested": "Always provide the number of team members involved when I ask about mentoring activities.",
+            "expected_compliance": "Response should include the number of team members involved in the mentoring activities.",
+            "compliance_indicators": [
+                "mentions number of team members",
+                "includes count of participants",
+                "states how many people were involved"
+            ],
+            "non_compliance_signs": [
+                "no mention of number of people",
+                "only describes activities without numbers",
+                "vague or missing participant details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                792
+            ],
+            "rubric": [
+                "Response should mention: number of team members involved"
+            ]
+        },
+        {
+            "question": "What are the main duties involved in managing your group?",
+            "instruction_being_tested": "Always include the number of team members when I ask about leadership responsibilities.",
+            "expected_compliance": "Response should include the number of people in the group along with the description of the duties.",
+            "compliance_indicators": [
+                "mention of how many people are managed",
+                "number of individuals referenced",
+                "team size included",
+                "count of members stated"
+            ],
+            "non_compliance_signs": [
+                "no mention of group size",
+                "only duties described",
+                "general responsibilities without numbers",
+                "omission of member count"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1176
+            ],
+            "rubric": [
+                "Response should mention: number of team members"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many hours per week do I need to dedicate to the leadership training?",
+            "answer": "10 hours per week",
+            "difficulty": "easy",
+            "update_type": "time_commitment_increase",
+            "tests_retention_of": "weekly time requirement for the leadership training",
+            "conversation_references": [
+                "Professional & Career Labels:Professional Development: Enrolled in a 12-week leadership training starting February 5, 2024, via Coursera, costing $350.",
+                "Information Update: The upcoming leadership training now requires 10 hours weekly instead of 8, reflecting increased course demands."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 8 hours per week requirement instead of the updated 10 hours",
+            "source_chat_ids": {
+                "original_info": [
+                    38,
+                    44
+                ],
+                "updated_info": [
+                    126
+                ]
+            },
+            "rubric": [
+                "Response should mention: 10 hours per week"
+            ]
+        },
+        {
+            "question": "What is the target percentage increase for my team's article output?",
+            "answer": "25%",
+            "difficulty": "easy",
+            "update_type": "goal_adjustment",
+            "tests_retention_of": "updated team article output increase goal",
+            "conversation_references": [
+                "Professional & Career Labels:Career Advancement: Set a goal to increase team article output by 20% by July 31, 2024.",
+                "Information Update: The team article output goal was adjusted to a 25% increase by July 31, 2024, reflecting recent performance improvements."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 20% increase goal instead of the updated 25%",
+            "source_chat_ids": {
+                "original_info": [
+                    252
+                ],
+                "updated_info": [
+                    352
+                ]
+            },
+            "rubric": [
+                "Response should mention: 25%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Between my goals of becoming a senior editorial leader and leading a cross-functional project, which one am I aiming to achieve first?",
+            "answer": "You are aiming to lead a cross-functional project first before becoming a senior editorial leader.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "career goals and salary target",
+                "cross-functional project leadership plan"
+            ],
+            "reasoning_steps": [
+                "Identify the goal related to becoming a senior editorial leader with a salary target.",
+                "Identify the goal related to leading a cross-functional project by a specific deadline.",
+                "Compare the intended timelines or sequence implied by the user for these two goals."
+            ],
+            "source_chat_ids": [
+                22,
+                160
+            ],
+            "rubric": [
+                "Response should mention: leading a cross-functional project first"
+            ]
+        },
+        {
+            "question": "How many new contacts have I met in total from the luncheon and the business expo combined?",
+            "answer": "22",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Saint Helena Women in Leadership luncheon contacts",
+                "Saint Helena Business Expo contacts"
+            ],
+            "reasoning_steps": [
+                "Identify the number of new contacts met at the luncheon.",
+                "Identify the number of new contacts met at the business expo.",
+                "Add the two numbers together to get the total contacts met."
+            ],
+            "source_chat_ids": [
+                282,
+                422
+            ],
+            "rubric": [
+                "Response should mention: 22"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm trying to figure out how to best support my team while managing multiple responsibilities. What approaches would you suggest?",
+            "preference_being_tested": "I prioritize team success over individual accolades, reflected in mentoring 4 junior writers this quarter.",
+            "expected_compliance": "Response should focus on strategies that enhance overall team development and collaboration rather than highlighting individual achievements or personal recognition.",
+            "compliance_indicators": [
+                "emphasizes team-oriented support methods",
+                "suggests mentoring or collaborative practices",
+                "avoids focusing on individual rewards or spotlight",
+                "addresses balancing multiple team-related tasks"
+            ],
+            "non_compliance_signs": [
+                "focuses on personal success or recognition",
+                "recommends actions that prioritize individual accomplishments",
+                "ignores team dynamics or collective progress",
+                "suggests isolating tasks without team involvement"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                294,
+                298
+            ],
+            "rubric": [
+                "Response should mention: team-oriented support methods",
+                "Response should mention: mentoring or collaborative practices",
+                "Response should not focus on: individual rewards or spotlight",
+                "Response should mention: balancing multiple team-related tasks"
+            ]
+        },
+        {
+            "question": "I'm trying to organize my daily schedule to prepare for upcoming interviews while managing other tasks. How would you suggest I structure my time?",
+            "preference_being_tested": "I prefer thorough preparation over last-minute efforts, dedicating 2 hours daily to interview practice.",
+            "expected_compliance": "Response should support a consistent, daily preparation routine that fits into the user's schedule rather than suggesting last-minute or irregular study sessions.",
+            "compliance_indicators": [
+                "recommends regular daily practice",
+                "acknowledges the importance of balancing preparation with other responsibilities",
+                "avoids suggesting cramming or last-minute intensive sessions"
+            ],
+            "non_compliance_signs": [
+                "suggests last-minute or sporadic preparation",
+                "ignores the need to balance preparation with other tasks",
+                "recommends minimal or inconsistent practice time"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time management and preparation style",
+            "source_chat_ids": [
+                534,
+                538
+            ],
+            "rubric": [
+                "Response should mention: regular daily practice",
+                "Response should mention: balancing preparation with other responsibilities",
+                "Response should not suggest: cramming or last-minute intensive sessions"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my collaboration and professional interactions with Brittney have developed over time?",
+            "ideal_summary": "Your collaboration and professional relationship with Brittney have evolved through several significant stages. Initially, you worked together regularly on science articles at the Saint Helena Community Library, which laid a strong foundation for your partnership. You then explored expanding your collaborative efforts by brainstorming new article ideas and planning structured sessions to foster innovation. As Brittney pursued career growth by applying for a junior editor role, you actively supported her through resume reviews, interview preparation, and ongoing mentorship. With your promotion to assistant editor, you implemented strategies to maintain a positive and supportive working relationship, including regular check-ins and collaborative projects. Throughout this progression, you also co-hosted a webinar on storytelling techniques, further strengthening your professional bond and leadership skills. Your partnership has been marked by mutual support, shared growth, and continuous efforts to enhance both your careers.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                12,
+                14,
+                146,
+                154,
+                338
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "collaboration development",
+                "career support",
+                "role evolution",
+                "joint initiatives"
+            ],
+            "synthesis_required": "Combining multiple interactions and developments into a coherent narrative showing growth and mutual support",
+            "source_chat_ids": [
+                12,
+                14,
+                146,
+                154,
+                338
+            ],
+            "rubric": [
+                "Response should mention: Initially, you worked together regularly on science articles at the Saint Helena Community Library, which laid a strong foundation for your partnership.",
+                "Response should mention: You then explored expanding your collaborative efforts by brainstorming new article ideas and planning structured sessions to foster innovation.",
+                "Response should mention: As Brittney pursued career growth by applying for a junior editor role, you actively supported her through resume reviews, interview preparation, and ongoing mentorship.",
+                "Response should mention: With your promotion to assistant editor, you implemented strategies to maintain a positive and supportive working relationship, including regular check-ins and collaborative projects.",
+                "Response should mention: Throughout this progression, you also co-hosted a webinar on storytelling techniques, further strengthening your professional bond and leadership skills."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my career goals and plans have developed over our conversations?",
+            "ideal_summary": "Over the course of our discussions, your career goals and plans have evolved significantly. Initially, you aimed to become a senior editorial leader within three years with a target salary of $60,000, seeking advice on how to achieve this. We then outlined a detailed multi-year strategic plan breaking down yearly milestones focused on skill development, networking, performance, and salary negotiation. You chose to concentrate on the first year, emphasizing building a strong portfolio, gaining diverse experience, and joining professional organizations, for which I provided actionable monthly steps. As you progressed, you accepted an internal promotion to assistant editor with a salary increase, and we discussed strategies to manage the increased workload and stress while continuing professional growth. Later, you considered applying for senior editor roles externally, weighing the pros and cons, preparing applications, and leveraging your recent success in increasing team productivity by 25%. Throughout, we addressed managing stress during the waiting period for job responses, assessing readiness for senior leadership, and planning for a smooth transition into new roles with a focus on team integration and leadership visibility. This progression reflects a thoughtful, stepwise approach to advancing your editorial career while balancing immediate responsibilities and long-term aspirations.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                22,
+                25,
+                149,
+                399,
+                493,
+                661,
+                665
+            ],
+            "key_elements_tested": [
+                "career goal evolution",
+                "strategic planning",
+                "role transitions",
+                "application preparation",
+                "leadership development"
+            ],
+            "synthesis_required": "Integrating career planning, role changes, application strategies, and leadership growth into a coherent narrative showing progression",
+            "source_chat_ids": [
+                22,
+                25,
+                149,
+                399,
+                493,
+                661,
+                665
+            ],
+            "rubric": [
+                "Response should mention: Initially, you aimed to become a senior editorial leader within three years with a target salary of $60,000, seeking advice on how to achieve this.",
+                "Response should mention: We then outlined a detailed multi-year strategic plan breaking down yearly milestones focused on skill development, networking, performance, and salary negotiation.",
+                "Response should mention: As you progressed, you accepted an internal promotion to assistant editor with a salary increase, and we discussed strategies to manage the increased workload and stress while continuing professional growth.",
+                "Response should mention: Later, you considered applying for senior editor roles externally, weighing the pros and cons, preparing applications, and leveraging your recent success in increasing team productivity by 25%.",
+                "Response should mention: Throughout, we addressed managing stress during the waiting period for job responses, assessing readiness for senior leadership, and planning for a smooth transition into new roles with a focus on team integration and leadership visibility."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I delayed my blog launch to focus on the leadership training and the day that training actually started?",
+            "answer": "9 days passed between when you delayed your blog launch to February 28 and the leadership training start date on February 5, meaning you postponed the blog launch by 9 days after the training began.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 20: original blog launch date",
+                "February 5: leadership training start date",
+                "February 28: delayed blog launch date"
+            ],
+            "conversation_references": [
+                "Session 74: blog launch delay and leadership training focus",
+                "Session 38: leadership training start date"
+            ],
+            "calculation_required": "Calculate days between February 5 (training start) and February 28 (delayed blog launch) = 23 days; also infer that blog launch was delayed from January 20 to February 28, a 39-day delay, overlapping with the 12-week training starting February 5.",
+            "source_chat_ids": {
+                "first_event": [
+                    74
+                ],
+                "second_event": [
+                    38
+                ]
+            },
+            "rubric": [
+                "Response should mention: 9 days"
+            ]
+        },
+        {
+            "question": "How many days after I accepted the internal promotion did I plan to apply for the senior editor role at Science Daily?",
+            "answer": "I accepted the internal promotion on February 27, and I planned to apply for the senior editor role by March 1, so 3 days elapsed between these two events.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 27: accepted internal promotion",
+                "By March 1: planned to apply for senior editor role"
+            ],
+            "conversation_references": [
+                "Session 148: internal promotion accepted",
+                "Session 30: plan to apply for senior editor role"
+            ],
+            "calculation_required": "March 1 - February 27 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    148
+                ],
+                "second_event": [
+                    30
+                ]
+            },
+            "rubric": [
+                "Response should mention: 3 days",
+                "LLM response should state: from February 27 till March 1"
+            ]
+        }
+    ]
+}

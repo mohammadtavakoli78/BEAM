@@ -1,0 +1,55 @@
+{
+    "id": 2,
+    "category": "Core Development",
+    "title": "Foundation Building: Document Ingestion Pipeline and Core Infrastructure Setup",
+    "theme": "Implementing scalable document ingestion pipelines and establishing core infrastructure for retrieval and generation",
+    "subtopics": [
+        "Designing ETL pipelines for diverse document formats",
+        "Batch vs streaming ingestion strategies",
+        "Metadata extraction and normalization",
+        "Initial vectorization and indexing workflows",
+        "Setting up vector database clusters",
+        "Implementing basic sparse retrieval indexes",
+        "Core API scaffolding for ingestion and retrieval",
+        "Authentication and authorization integration",
+        "Logging and monitoring foundation",
+        "Infrastructure as code for reproducibility"
+    ],
+    "timeline": "2024-08-01 to 2024-09-15",
+    "phase_type": "core_development",
+    "development_dates": {
+        "main_development_type": "development project",
+        "main_development_starts": "2024-08-01",
+        "main_development_ends": "2025-02-28",
+        "main_development_duration": "7 months",
+        "current_phase_relation": "during"
+    },
+    "phase_boundaries": {
+        "can_mention": [
+            "pipeline coding",
+            "database setup",
+            "API scaffolding"
+        ],
+        "cannot_mention": [
+            "fine-tuning models",
+            "query rewriting",
+            "deployment"
+        ],
+        "tense_for_main_development": "present"
+    },
+    "key_technical_milestones": [
+        "Operational document ingestion pipeline",
+        "Vector database cluster deployed and indexed",
+        "Core APIs for ingestion and retrieval functional"
+    ],
+    "future_technical_references": [
+        "Base for retrieval model fine-tuning",
+        "Foundation for hybrid retrieval integration",
+        "Input for query rewriting modules"
+    ],
+    "technical_continuity_hooks": [
+        "Enables early feature implementation of retrieval",
+        "Supports integration of hybrid sparse-dense retrieval",
+        "Prepares for context window and query management"
+    ]
+}

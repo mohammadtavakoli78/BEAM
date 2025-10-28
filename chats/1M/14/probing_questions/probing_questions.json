@@ -1,0 +1,708 @@
+{
+    "abstention": [
+        {
+            "question": "Can you provide details about the agenda and key takeaways from the Istanbul Crypto Expo on February 25, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the agenda or key takeaways from the Istanbul Crypto Expo on February 25, 2024.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The event is mentioned with dates and attendance but no agenda or outcomes are described.",
+            "plan_reference": "Batch 2 and 3 mention attending the Istanbul Crypto Expo but no detailed agenda or outcomes.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the agenda or key takeaways"
+            ]
+        },
+        {
+            "question": "What specific topics did Jason cover when warning about impermanent loss risks during the June 11, 2024 call?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific topics Jason covered about impermanent loss risks during the June 11, 2024 call.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Jason's warning is mentioned but the detailed content of his advice is not provided.",
+            "plan_reference": "Batch 6 mentions Jason's caution about impermanent loss but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific topics Jason covered about impermanent loss risks"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever purchased a hardware wallet for my crypto security?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you purchased a Ledger Nano S hardware wallet, but you also mentioned that you have never purchased any hardware wallets for crypto security. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "purchase of hardware wallets",
+            "conversation_references": [
+                "Session 104, 110, 116: Purchased Ledger Nano S",
+                "Session 218, 220: Never purchased hardware wallets"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    104,
+                    110,
+                    116
+                ],
+                "second_statement": [
+                    218,
+                    220
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you purchased a Ledger Nano S hardware wallet",
+                "LLM response should mention: you also mentioned that you have never purchased any hardware wallets for crypto security",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever successfully avoided phishing scams before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you avoided a phishing scam after Jason's warning, but you also mentioned that you have never avoided any phishing scams or taken security warnings seriously. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Avoidance of phishing scams",
+            "conversation_references": [
+                "chat_id: 824",
+                "chat_id: 998"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    824
+                ],
+                "second_statement": [
+                    998
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you avoided a phishing scam after Jason's warning",
+                "LLM response should mention: you also mentioned that you have never avoided any phishing scams or taken security warnings seriously",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my mentions about my involvement with a particular investment interest and related collaborations develop in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your mentions about this investment interest and related collaborations progressed as follows: 1) Initial curiosity and seeking advice from acquaintances, 2) Preparing to start small investments and monitoring experiences, 3) Learning about specific tools and processes introduced by a close contact, 4) Exploring community involvement and attending events with invitations from that contact, 5) Discussing regulatory impacts and adapting strategies accordingly, 6) Expanding collaboration into research projects and sharing detailed experiences, 7) Participating in conferences and co-hosting webinars to deepen engagement, 8) Reflecting on portfolio diversification and decision-making with support from close collaborators.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 22, 24, 26, 32, 38, 42",
+                "chat_id: 24",
+                "chat_id: 492, 510, 512, 514",
+                "chat_id: 740, 764, 774, 786",
+                "chat_id: 1014, 1016, 1018",
+                "chat_id: 1356, 1362, 1364, 1370",
+                "chat_id: 1792, 1800, 1806, 2012",
+                "chat_id: 2018, 2024, 1084, 1086"
+            ],
+            "ordering_tested": [
+                "1st: Initial curiosity and advice seeking",
+                "2nd: Starting small investments and monitoring",
+                "3rd: Learning tools and processes",
+                "4th: Community involvement and event attendance",
+                "5th: Regulatory impacts and strategy adaptation",
+                "6th: Collaborative research and experience sharing",
+                "7th: Conference participation and webinar co-hosting",
+                "8th: Portfolio diversification and decision-making support"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions across many sessions",
+                "involves understanding progression of user engagement with a topic",
+                "requires synthesizing scattered conversational threads into a coherent sequence",
+                "tests ability to reconstruct development without explicit temporal cues"
+            ],
+            "source_chat_ids": [
+                22,
+                24,
+                26,
+                32,
+                38,
+                42,
+                492,
+                510,
+                512,
+                514,
+                740,
+                764,
+                774,
+                786,
+                1014,
+                1016,
+                1018,
+                1356,
+                1362,
+                1364,
+                1370,
+                1792,
+                1800,
+                1806,
+                2012,
+                2018,
+                2024,
+                1084,
+                1086
+            ],
+            "rubric": [
+                "LLM response should mention: Initial curiosity and advice seeking",
+                "LLM response should mention: Starting small investments and monitoring",
+                "LLM response should mention: Learning tools and processes",
+                "LLM response should mention: Community involvement and event attendance",
+                "LLM response should mention: Regulatory impacts and strategy adaptation",
+                "LLM response should mention: Collaborative research and experience sharing",
+                "LLM response should mention: Conference participation and webinar co-hosting",
+                "LLM response should mention: Portfolio diversification and decision-making support"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of cryptocurrency topics involving Suzanne develop throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your discussions about cryptocurrency topics involving Suzanne progressed through these aspects: 1) Considering whether to talk to Suzanne about cryptocurrency and gauging her interest, 2) Addressing Suzanne's skepticism and concerns about crypto, including casual conversations and specific meetings, 3) Exploring crypto events and debates related to risks and staking, 4) Discussing crypto wallets and their setup, including advice and common mistakes, 5) Introducing DeFi lending platforms and Suzanne's interest in them, 6) Helping Suzanne with more advanced wallet setups and experience sharing, 7) Advising on stablecoin investments and portfolio balancing in relation to Suzanne's actions.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 7,
+            "conversation_references": [
+                "chat_id: 28, 30, 34, 36",
+                "chat_id: 242, 244, 246, 254, 256, 262, 264, 266",
+                "chat_id: 458, 460, 462, 498, 500, 502, 516, 518, 520, 534, 536, 538",
+                "chat_id: 768, 770, 780, 782, 792, 794",
+                "chat_id: 1020, 1022, 1024",
+                "chat_id: 1052, 1072, 1074, 1076, 1358, 1368, 1372",
+                "chat_id: 1786, 1796, 1798, 1804, 2014, 2020, 2028"
+            ],
+            "ordering_tested": [
+                "1st: Initial interest and gauging Suzanne's crypto interest",
+                "2nd: Addressing skepticism and concerns",
+                "3rd: Participation in events and staking discussions",
+                "4th: Crypto wallets setup and advice",
+                "5th: DeFi lending interest and exploration",
+                "6th: Advanced wallet setup and experience sharing",
+                "7th: Stablecoin investment and portfolio considerations"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "spans multiple conversation sessions",
+                "involves tracking evolving focus on related subtopics",
+                "requires pattern recognition across diverse mentions",
+                "tests ability to synthesize complex conversational progression"
+            ],
+            "source_chat_ids": [
+                28,
+                30,
+                34,
+                36,
+                242,
+                244,
+                246,
+                254,
+                256,
+                262,
+                264,
+                266,
+                458,
+                460,
+                462,
+                498,
+                500,
+                502,
+                516,
+                518,
+                520,
+                534,
+                536,
+                538,
+                768,
+                770,
+                780,
+                782,
+                792,
+                794,
+                1020,
+                1022,
+                1024,
+                1052,
+                1072,
+                1074,
+                1076,
+                1358,
+                1368,
+                1372,
+                1786,
+                1796,
+                1798,
+                1804,
+                2014,
+                2020,
+                2028
+            ],
+            "rubric": [
+                "LLM response should mention: Initial interest and gauging Suzanne's crypto interest",
+                "LLM response should mention: Addressing skepticism and concerns",
+                "LLM response should mention: Participation in events and staking discussions",
+                "LLM response should mention: Crypto wallets setup and advice",
+                "LLM response should mention: DeFi lending interest and exploration",
+                "LLM response should mention: Advanced wallet setup and experience sharing",
+                "LLM response should mention: Stablecoin investment and portfolio considerations"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Where did I say I bought my Ledger Nano S from?",
+            "answer": "You said you bought it from CryptoStore Istanbul.",
+            "difficulty": "easy",
+            "question_type": "contextual_fact",
+            "conversation_reference": "Turn 1: USER: I just bought a Ledger Nano S for $120 from CryptoStore Istanbul, is that a good price?",
+            "key_facts_tested": [
+                "purchase location"
+            ],
+            "source_chat_ids": [
+                104
+            ],
+            "rubric": [
+                "LLM response should state: CryptoStore Istanbul"
+            ]
+        },
+        {
+            "question": "How much did I say I invested in Bitcoin, and on which platform did I make this investment?",
+            "answer": "You invested $500 in Bitcoin on Binance.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 2: USER: I've invested $500 in Bitcoin on Binance on January 20, 2024, and I'm tracking its performance closely...",
+            "key_facts_tested": [
+                "investment amount",
+                "investment platform"
+            ],
+            "source_chat_ids": [
+                222
+            ],
+            "rubric": [
+                "LLM response should state: $500",
+                "LLM response should state: Binance"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How does the technology behind digital currencies work?",
+            "instruction_being_tested": "Always provide detailed explanations of blockchain concepts when I ask about technical topics.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "comprehensive explanation of the underlying mechanisms",
+                "clear description of key components and processes",
+                "step-by-step breakdown of how the system functions"
+            ],
+            "non_compliance_signs": [
+                "brief or vague answer",
+                "lack of depth or missing key concepts",
+                "superficial overview without details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                216
+            ],
+            "rubric": [
+                "LLM response should contain: comprehensive explanation of the underlying mechanisms behind blockchain",
+                "LLM response should contain: clear description of key components and processes in blockchain"
+            ]
+        },
+        {
+            "question": "What should I know about managing my wallet?",
+            "instruction_being_tested": "Always highlight security measures when I ask about wallet management.",
+            "expected_compliance": "Response should include information emphasizing protective practices and precautions related to wallet management.",
+            "compliance_indicators": [
+                "mentions of protective steps",
+                "advice on keeping assets safe",
+                "discussion of precautions",
+                "focus on safeguarding methods"
+            ],
+            "non_compliance_signs": [
+                "ignores safety aspects",
+                "only talks about features or usage",
+                "no mention of protective practices",
+                "general information without safety context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_focus",
+            "source_chat_ids": [
+                718
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of protective steps",
+                "LLM response should contain: advice on keeping assets safe",
+                "LLM response should contain: focus on safeguarding methods"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many members are in the \"Crypto North Ericshire\" Telegram group?",
+            "answer": "Over 200 members",
+            "difficulty": "easy",
+            "update_type": "membership_count_increase",
+            "tests_retention_of": "updated membership number of the Telegram group",
+            "conversation_references": [
+                "Crypto Community: Joined the \u201cCrypto North Ericshire\u201d Telegram group on January 8, 2024, with 150 members.",
+                "The \u201cCrypto North Ericshire\u201d Telegram group has grown to over 200 members since joining on January 8, 2024."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 150 members instead of the updated count over 200",
+            "source_chat_ids": {
+                "original_info": [
+                    82,
+                    94
+                ],
+                "updated_info": [
+                    214
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Over 200 members"
+            ]
+        },
+        {
+            "question": "What topics are covered in the Ethereum fundamentals course I completed?",
+            "answer": "The course includes an additional module on DeFi security protocols.",
+            "difficulty": "easy",
+            "update_type": "content_addition",
+            "tests_retention_of": "inclusion of DeFi security protocols module in the Ethereum fundamentals course",
+            "conversation_references": [
+                "Learning & Development Labels:Crypto Market Analysis: Completed a 5-hour online course on Ethereum fundamentals on February 1, 2024.",
+                "The Ethereum fundamentals course I completed on February 1, 2024, included an additional module on DeFi security protocols."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the course as only covering Ethereum fundamentals without the DeFi security protocols module.",
+            "source_chat_ids": {
+                "original_info": [
+                    278,
+                    284,
+                    290
+                ],
+                "updated_info": [
+                    434,
+                    436
+                ]
+            },
+            "rubric": [
+                "LLM response should state: The course includes an additional module on DeFi security protocols"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total did I pay in transaction fees for my Ethereum purchase, wallet transfer, and NFT purchase combined?",
+            "answer": "You paid a total of $17.50 in transaction fees.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Ethereum purchase and wallet transfer fees",
+                "NFT purchase gas fees",
+                "Ethereum gas fees for NFT purchase"
+            ],
+            "reasoning_steps": [
+                "Identify the $5 fee paid for Ethereum purchase and wallet transfer.",
+                "Identify the $10 gas fee paid for the NFT purchase.",
+                "Sum the $5 and $10 fees to get $15, then add the $2.50 fee mentioned for a deposit or transfer related to Ethereum to reach $17.50 total."
+            ],
+            "source_chat_ids": [
+                376,
+                1194,
+                1464
+            ],
+            "rubric": [
+                "LLM response should state: $17.50",
+                "LLM response should state: $5 fee paid for Ethereum purchase",
+                "LLM response should state: 10 gas fee paid for the NFT purchase",
+                "LLM response should state: $2.50 fee mentioned for a deposit or transfer related to Ethereum"
+            ]
+        },
+        {
+            "question": "Considering my investments in Cardano, Ethereum, and yield farming across different sessions, how have I allocated my funds among these, and what proportion is dedicated to passive income strategies?",
+            "answer": "You have allocated approximately $300 in Cardano (including staking), $200 in Ethereum (including buying and staking), and $100 in yield farming. About $400 of this total $600 investment is dedicated to passive income strategies through ADA staking and yield farming.",
+            "difficulty": "medium",
+            "reasoning_type": "resource_distribution",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id: 124, 125, 144 (Cardano investment details and staking)",
+                "chat_id: 356, 360, 366 (Ethereum investment and staking)",
+                "chat_id: 1558, 1560, 1563, 1584 (Yield farming investment and portfolio balancing)",
+                "chat_id: 636, 642, 650 (ADA staking and passive income)"
+            ],
+            "reasoning_steps": [
+                "Identify the amounts the user invested in Cardano, including staking allocations.",
+                "Determine the user's Ethereum investment amount and any staking or holding details.",
+                "Extract the user's yield farming investment amount and platform allocations.",
+                "Sum the investments and calculate the portion allocated to passive income strategies (staking ADA and yield farming) versus direct holdings."
+            ],
+            "source_chat_ids": [
+                124,
+                125,
+                144,
+                356,
+                360,
+                366,
+                636,
+                642,
+                650,
+                1558,
+                1560,
+                1563,
+                1584
+            ],
+            "rubric": [
+                "LLM response should state: $300 in Cardano (including staking)",
+                "LLM response should state: $200 in Ethereum (including buying and staking)",
+                "LLM response should state: $100 in yield farming",
+                "LLM response should state: About $400 of this total $600 investment is dedicated to passive income strategies through ADA staking"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking to secure my cryptocurrency holdings. What options should I consider for storing my assets?",
+            "preference_being_tested": "I prefer using hardware wallets over software wallets for enhanced security despite the $120 upfront cost.",
+            "expected_compliance": "Response should prioritize hardware wallets as a storage option and explain their features without dismissing them in favor of software wallets.",
+            "compliance_indicators": [
+                "mentions hardware wallets prominently",
+                "explains hardware wallet features",
+                "includes hardware wallets as a primary recommendation",
+                "acknowledges upfront cost without discouraging use"
+            ],
+            "non_compliance_signs": [
+                "only recommends software wallets",
+                "ignores hardware wallets",
+                "downplays hardware wallet benefits",
+                "focuses solely on cost savings without mentioning hardware wallets"
+            ],
+            "difficulty": "medium",
+            "preference_type": "product_type_preference",
+            "source_chat_ids": [
+                152,
+                158,
+                162
+            ],
+            "rubric": [
+                "LLM response should contain: mentions hardware wallets prominently",
+                "LLM response should contain: explains hardware wallet features",
+                "LLM response should contain: includes hardware wallets as a primary recommendation"
+            ]
+        },
+        {
+            "question": "I'm thinking about investing in Ethereum over the next few months. How might I approach this to manage potential risks?",
+            "preference_being_tested": "I prefer incremental investing over lump sums to manage risk and reduce anxiety.",
+            "expected_compliance": "Response should suggest spreading out investments over time rather than investing a large amount all at once, reflecting the user's preference for incremental investing to manage risk and anxiety.",
+            "compliance_indicators": [
+                "recommends dividing investments into smaller portions",
+                "mentions timing or scheduling purchases",
+                "addresses risk management through gradual investment",
+                "avoids suggesting lump sum investing as the primary approach"
+            ],
+            "non_compliance_signs": [
+                "only suggests investing a lump sum at once",
+                "ignores risk management strategies related to investment timing",
+                "does not mention spreading out investments",
+                "focuses solely on immediate full investment"
+            ],
+            "difficulty": "medium",
+            "preference_type": "investment_strategy",
+            "source_chat_ids": [
+                374,
+                380,
+                388
+            ],
+            "rubric": [
+                "LLM response should contain: recommends dividing investments into smaller portions",
+                "LLM response should contain: addresses risk management through gradual investment",
+                "LLM response should contain: avoids suggesting lump sum investing as the primary approach"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of the advice and plans we discussed for managing my crypto and NFT portfolio?",
+            "ideal_summary": "You started with a $1,050 portfolio mostly in crypto assets and a small NFT holding. The advice focused on diversification across stablecoins, major cryptocurrencies, altcoins, and NFTs, with regular rebalancing and risk management strategies. You were guided on cautious NFT investment, monitoring market stability before increasing exposure, and minimizing transaction fees during rebalancing. A plan was outlined to grow your portfolio to $1,200 by September 1, 2024, including yield farming on platforms like Aave, with ongoing portfolio reviews, security measures, and tax compliance.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 1325,
+            "key_elements_tested": [
+                "basic portfolio management advice",
+                "NFT investment considerations",
+                "growth and rebalancing strategy"
+            ],
+            "synthesis_required": "Combining straightforward advice and plans from multiple sessions into a clear, concise summary",
+            "source_chat_ids": [
+                1325,
+                1347,
+                1361
+            ],
+            "rubric": [
+                "LLM response should contain: You started with a $1,050 portfolio mostly in crypto assets and a small NFT holding",
+                "LLM response should contain: The advice focused on diversification across stablecoins, major cryptocurrencies, altcoins, and NFTs, with regular rebalancing and risk management strategies",
+                "LLM response should contain: You were guided on cautious NFT investment, monitoring market stability before increasing exposure, and minimizing transaction fees during rebalancing",
+                "LLM response should contain: A plan was outlined to grow your portfolio to $1,200 by September 1, 2024, including yield farming on platforms like Aave, with ongoing portfolio reviews, security measures, and tax compliance"
+            ]
+        },
+        {
+            "question": "Can you give me a thorough summary of everything we've covered about managing and growing my cryptocurrency investments, including the strategies, tools, risks, and community engagement involved?",
+            "ideal_summary": "The discussions comprehensively addressed managing and expanding a cryptocurrency portfolio through diversified investment strategies, risk management, and active community involvement. Initially, the focus was on portfolio composition, emphasizing a balanced allocation primarily between Bitcoin and Ethereum, with gradual diversification into altcoins and DeFi tokens like Uniswap and Aave to mitigate volatility and capture growth opportunities. Detailed guidance was provided on selecting and integrating DeFi assets, including liquidity provision and loan setup, highlighting associated risks such as impermanent loss and fluctuating interest rates. The importance of continuous portfolio monitoring was stressed, recommending daily to monthly reviews using tools like CoinGecko, Binance analytics, and TradingView, alongside setting price alerts and staying informed through reputable news sources. Security measures were thoroughly covered, including hardware wallet usage, firmware updates, two-factor authentication, and vigilance against phishing attacks. Networking strategies were outlined to build connections via events, online communities, and professional groups, fostering knowledge exchange and support. The process of staking, particularly with Cardano ADA, was detailed from wallet setup to pool selection, reward monitoring, and maximizing returns through reinvestment and pool performance evaluation. Tax compliance was addressed with step-by-step document organization, capital gains calculation, and collaboration with a financial analyst to ensure accurate and timely filings. Finally, advanced learning paths were suggested to deepen understanding of DeFi protocols, yield farming, and security practices, encouraging ongoing education and strategic portfolio adjustments. This integrated approach combines technical, financial, and social dimensions to support informed, secure, and adaptive cryptocurrency investment management.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 12,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "risk and security management"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                444,
+                445,
+                447,
+                449,
+                454,
+                455,
+                457,
+                450,
+                451,
+                452,
+                453,
+                492,
+                493,
+                495,
+                496,
+                497,
+                505,
+                507,
+                509,
+                522,
+                523,
+                525,
+                527,
+                529,
+                531,
+                533,
+                540,
+                541,
+                543,
+                545,
+                470,
+                471,
+                473,
+                552,
+                553,
+                558,
+                559,
+                569,
+                554,
+                555,
+                570,
+                571,
+                574,
+                575,
+                580,
+                581,
+                586,
+                587,
+                576,
+                577,
+                582,
+                583,
+                588,
+                589,
+                486,
+                487,
+                488,
+                489,
+                490,
+                491,
+                590,
+                591,
+                592,
+                593,
+                600,
+                601,
+                606,
+                607,
+                596,
+                597,
+                599,
+                604,
+                605,
+                610,
+                611
+            ],
+            "rubric": [
+                "LLM response should contain: Initially, the focus was on portfolio composition, emphasizing a balanced allocation primarily between Bitcoin and Ethereum, with gradual diversification into altcoins and DeFi tokens",
+                "LLM response should contain: Detailed guidance was provided on selecting and integrating DeFi assets, including liquidity provision and loan setup, highlighting associated risks such as impermanent loss and fluctuating interest rates",
+                "LLM response should contain: The importance of continuous portfolio monitoring was stressed, recommending daily to monthly reviews using tools like CoinGecko, Binance analytics, and TradingView, alongside setting price alerts",
+                "LLM response should contain: Security measures were thoroughly covered, including hardware wallet usage, firmware updates, two-factor authentication, and vigilance against phishing attacks",
+                "LLM response should contain: Networking strategies were outlined to build connections via events, online communities, and professional groups",
+                "LLM response should contain: The process of staking, particularly with Cardano ADA, was detailed from wallet setup to pool selection, reward monitoring, and maximizing returns through reinvestment",
+                "LLM response should contain: Tax compliance was addressed with step-by-step document organization, capital gains calculation, and collaboration with a financial analyst to ensure accurate and timely filings",
+                "LLM response should contain: advanced learning paths were suggested to deepen understanding of DeFi protocols, yield farming, and security practices, encouraging ongoing education and strategic portfolio adjustments"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I met Amy at the psychology conference and when I started thinking about sharing my cryptocurrency plans with Suzanne after onboarding at the clinic?",
+            "answer": "About 139 days passed between meeting Amy at the psychology conference on March 15, 2023, and meeting Suzanne during onboarding at the clinic on August 1, 2023.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15, 2023: met Amy at psychology conference",
+                "August 1, 2023: met Suzanne during onboarding"
+            ],
+            "conversation_references": [
+                "chat_id 18",
+                "chat_id 28"
+            ],
+            "calculation_required": "August 1, 2023 - March 15, 2023 = 139 days",
+            "source_chat_ids": {
+                "first_event": [
+                    18
+                ],
+                "second_event": [
+                    28
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 139 days",
+                "LLM response should state: from March 15, 2023 till August 1, 2023"
+            ]
+        },
+        {
+            "question": "How many days passed between when I saw my Bitcoin investment rise after the 3-day rally and when I debated choosing between staking more ADA or buying USDT for stability?",
+            "answer": "Approximately 65 days passed between the Bitcoin investment increase after the 3-day rally ending on February 4, 2024, and the investment debate on April 9, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "February 4, 2024: Bitcoin investment rose after 3-day rally",
+                "April 9, 2024: Debated staking more ADA or buying USDT"
+            ],
+            "conversation_references": [
+                "Session 470: Bitcoin investment rise by February 4, 2024",
+                "Session 892: Investment choice debate on April 9, 2024"
+            ],
+            "calculation_required": "Calculate days from February 4, 2024 to April 9, 2024 (inclusive) = 65 days",
+            "source_chat_ids": {
+                "first_event": [
+                    470
+                ],
+                "second_event": [
+                    892
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 65 days",
+                "LLM response should state: from February 4, 2024 till April 9, 2024"
+            ]
+        }
+    ]
+}

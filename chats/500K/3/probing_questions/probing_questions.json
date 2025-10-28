@@ -1,0 +1,588 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Taylor's paramedic background and any certifications they hold?",
+            "ideal_response": "Based on the provided chat, there is no information related to Taylor's paramedic background or certifications.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Taylor is introduced as a paramedic but no further details about background or certifications are provided.",
+            "plan_reference": "Batch 1, Bullet 2",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Taylor's paramedic background or certifications."
+            ]
+        },
+        {
+            "question": "What specific criteria did I use to decide on the 20 COCO classes for real-time detection?",
+            "ideal_response": "Based on the provided chat, there is no information related to the criteria for selecting the 20 COCO classes.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The scope includes 20 COCO classes but no explanation of selection criteria is given.",
+            "plan_reference": "Batch 1, Bullet 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the criteria for selecting the 20 COCO classes."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever used Alpine Linux in my deployments to reduce container image sizes?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used Alpine Linux or reduced container image sizes, but you also mentioned migrating backend containers to Alpine Linux and reducing image size significantly. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of Alpine Linux and container image size reduction",
+            "conversation_references": [
+                "Session 542: Never used Alpine Linux or reduced image size",
+                "Session 514: Migrated containers to Alpine Linux and reduced image size"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    542
+                ],
+                "second_statement": [
+                    514
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention:  you mentioned never used Alpine Linux vs migrated to Alpine Linux",
+                "LLM response should mention: you migrated to Alpine Linux",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I deployed applications using AWS ECS Fargate before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never deployed any application to AWS or used ECS Fargate, but you also mentioned deploying backend and frontend containers on AWS ECS Fargate with specific configurations. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with AWS ECS Fargate deployment",
+            "conversation_references": [
+                "Session 618: Never deployed statement",
+                "Session 564: Deployment with ECS Fargate details"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    618
+                ],
+                "second_statement": [
+                    564
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you mentioned never deployed to AWS vs deployed to AWS ECS Fargate",
+                "LLM response should mention: you deployed to AWS ECS Fargate",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different challenges and improvements related to my object detection and tracking projects throughout our conversations, in order (mention 12 items in order)?",
+            "answer": "You mentioned these topics in this order: 1) Initial setup issues integrating the detection model with the webcam feed, 2) Concerns about monitoring and maintaining performance latency, 3) Troubleshooting segmentation faults and error handling in the detection pipeline, 4) Questions about whether the model or video capture was causing issues, 5) Planning a project milestone for completing the detection pipeline, 6) Exploring model optimization by switching to a more efficient variant, 7) Implementing fallback mechanisms for GPU/CPU inference and measuring latency, 8) Debugging data association problems with the Hungarian algorithm in multi-object tracking, 9) Enhancing user interaction features like zooming and panning in the app, 10) Setting up monitoring tools for performance metrics using containerized services, 11) Improving code quality through refactoring, and 12) Benchmarking model performance before and after optimization with specialized tools.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 12,
+            "conversation_references": [
+                "Session 0: Initial model integration and webcam feed issues",
+                "Session 2: Performance monitoring questions",
+                "Session 14: Troubleshooting segmentation faults",
+                "Sessions 16 and 18: Investigating model vs capture issues",
+                "Session 36: Project milestone planning",
+                "Session 86: Model optimization with a more efficient variant",
+                "Session 250: Fallback GPU/CPU inference and latency measurement",
+                "Sessions 328 and 486: Data association and Hungarian algorithm debugging",
+                "Session 404: User interaction enhancements",
+                "Session 554: Monitoring setup with Prometheus and Grafana",
+                "Session 626: Code quality and refactoring",
+                "Sessions 698-702: Benchmarking model performance pre/post optimization"
+            ],
+            "ordering_tested": [
+                "1st: Initial integration issues",
+                "2nd: Performance monitoring",
+                "3rd: Segmentation fault troubleshooting",
+                "4th: Model vs capture source investigation",
+                "5th: Milestone planning",
+                "6th: Model optimization exploration",
+                "7th: GPU/CPU fallback and latency",
+                "8th: Data association debugging",
+                "9th: User interaction features",
+                "10th: Monitoring tools setup",
+                "11th: Code quality improvements",
+                "12th: Performance benchmarking"
+            ],
+            "source_chat_ids": [
+                0,
+                2,
+                14,
+                16,
+                18,
+                36,
+                86,
+                250,
+                328,
+                404,
+                554,
+                626,
+                698,
+                700,
+                702
+            ],
+            "rubric": [
+                "LLM response should contain: Intial integration issues",
+                "LLM response should contain: Performance monitoring",
+                "LLM response should contain: Segmentation fault troubleshooting",
+                "LLM response should contain: Model vs capture source investigation",
+                "LLM response should contain: Milestone planning",
+                "LLM response should contain: Model optimization exploration",
+                "LLM response should contain: GPU/CPU fallback and latency",
+                "LLM response should contain: Data association debugging",
+                "LLM response should contain: User interaction features",
+                "LLM response should contain: Monitoring tools setup",
+                "LLM response should contain: Code quality improvements",
+                "LLM response should contain: Performance benchmarking"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of optimizing and integrating my object detection and tracking pipeline throughout our conversations, in order (mention 10 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Loading and running inference with the YOLOv5s model on CPU, 2) Setting up dataset and data loader for CPU evaluation of the YOLO model, 3) Implementing and integrating a Tracker module stub for multi-object tracking with SORT, 4) Converting and optimizing the YOLOv5 model using TensorRT on an NVIDIA GPU, 5) Improving and optimizing the SORT tracking code to reduce overhead, 6) Applying coordinate mapping and Kalman filter fundamentals for tracking visualization, 7) Adding frame timestamp interpolation and planning real-time visualization with a React frontend, 8) Debugging CUDA out of memory errors in a Flask app using PyTorch and OpenCV, 9) Integrating security scanning into a CI/CD pipeline with Snyk CLI, and 10) Optimizing the object detection pipeline using OpenCV DNN with plans for future DeepSORT integration.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 22: YOLOv5s CPU inference setup",
+                "Session 92: Dataset and data loader for CPU evaluation",
+                "Sessions 182 & 186: Tracker module implementation and integration",
+                "Session 244: TensorRT model conversion and optimization",
+                "Session 338: SORT tracking code optimization",
+                "Session 416: Coordinate mapping and Kalman filter fundamentals",
+                "Session 498: Frame timestamp interpolation and React frontend integration",
+                "Session 610: Flask app CUDA memory error debugging",
+                "Session 680: Security scanning with Snyk CLI in CI/CD",
+                "Session 762: OpenCV DNN pipeline optimization and future plans"
+            ],
+            "ordering_tested": [
+                "1st: YOLOv5s CPU inference setup",
+                "2nd: Dataset and data loader for CPU evaluation",
+                "3rd: Tracker module implementation and integration",
+                "4th: TensorRT model conversion and optimization",
+                "5th: SORT tracking code optimization",
+                "6th: Coordinate mapping and Kalman filter fundamentals",
+                "7th: Frame timestamp interpolation and React frontend integration",
+                "8th: Flask app CUDA memory error debugging",
+                "9th: Security scanning with Snyk CLI in CI/CD",
+                "10th: OpenCV DNN pipeline optimization and future plans"
+            ],
+            "source_chat_ids": [
+                22,
+                92,
+                182,
+                244,
+                338,
+                416,
+                498,
+                610,
+                680,
+                762
+            ],
+            "rubric": [
+                "LLM response should contain: YOLOv5s CPU inference setup",
+                "LLM response should contain: Dataset and data loader for CPU evaluation",
+                "LLM response should contain: Tracker module implementation and integration",
+                "LLM response should contain: TensorRT model conversion and optimization",
+                "LLM response should contain: SORT tracking code optimization",
+                "LLM response should contain: Coordinate mapping and Kalman filter fundamentals",
+                "LLM response should contain: Frame timestamp interpolation and React frontend integration",
+                "LLM response should contain: Flask app CUDA memory error debugging",
+                "LLM response should contain: Security scanning with Snyk CLI in CI/CD",
+                "LLM response should contain: OpenCV DNN pipeline optimization and future plans"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Which versions of the software and language did I say I was using when I first described my setup?",
+            "answer": "You mentioned using OpenCV version 4.7.0 and Python 3.10 at the start of your setup description.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 0: Initial user message describing project initialization",
+            "key_facts_tested": [
+                "OpenCV version 4.7.0",
+                "Python version 3.10"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should contain: OpenCV version 4.7.0",
+                "LLM response should contain: Python version 3.10"
+            ]
+        },
+        {
+            "question": "What hardware did I say I was targeting for the inference time performance?",
+            "answer": "You said you were targeting an Intel i5-8250U CPU for the inference time performance.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 1: Initial performance target mentioned",
+            "key_facts_tested": [
+                "hardware: Intel i5-8250U CPU",
+                "performance target context"
+            ],
+            "source_chat_ids": [
+                24
+            ],
+            "rubric": [
+                "LLM response should contain: Intel i5-8250U CPU"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you show me how my model performed after the latest changes?",
+            "instruction_being_tested": "Always include a summary table when I ask about performance metrics",
+            "expected_compliance": "Response should include a summary table presenting the performance metrics clearly",
+            "compliance_indicators": [
+                "presence of a table summarizing key metrics",
+                "organized data comparing different conditions",
+                "clear tabular presentation of results"
+            ],
+            "non_compliance_signs": [
+                "only text description without a table",
+                "metrics scattered in paragraphs",
+                "no structured summary of performance data"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                152,
+                154
+            ],
+            "rubric": [
+                "LLM response should include: a summary table of performance metrics"
+            ]
+        },
+        {
+            "question": "How can I add a feature to enable or disable the object counting overlay while the app is running?",
+            "instruction_being_tested": "Always provide code snippets in Python when I ask about implementation details",
+            "expected_compliance": "Response should include Python code examples illustrating how to implement the toggle feature",
+            "compliance_indicators": [
+                "Python code snippet",
+                "class or function definitions in Python",
+                "example usage in Python"
+            ],
+            "non_compliance_signs": [
+                "no code provided",
+                "code in other languages",
+                "only conceptual explanation without code"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                236,
+                238
+            ],
+            "rubric": [
+                "LLM response should include: Python code snippets for implementation"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the typical inference time per frame when running the TensorRT engine on an RTX 2060 GPU?",
+            "answer": "45ms per frame",
+            "difficulty": "moderate",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated inference latency achieved with TensorRT on RTX 2060 GPU",
+            "conversation_references": [
+                "Performance & Optimization Labels:Performance Profiling: Reduced average frame latency from 210ms (CPU) to 90ms (GPU with TensorRT).",
+                "Information Update: After further tuning, the TensorRT engine now achieves a consistent 45ms inference time per frame on the RTX 2060 GPU."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier 90ms or 210ms latency values instead of the current 45ms inference time",
+            "source_chat_ids": {
+                "original_info": [
+                    246
+                ],
+                "updated_info": [
+                    246
+                ]
+            },
+            "rubric": [
+                "LLM response should contain: 45ms per frame"
+            ]
+        },
+        {
+            "question": "What is the total frame latency with the counting logic enabled in my object detection app?",
+            "answer": "180ms, which is well under the 250ms target",
+            "difficulty": "easy",
+            "update_type": "performance_metric_update",
+            "tests_retention_of": "the current total frame latency value with counting logic enabled",
+            "conversation_references": [
+                "Performance & Optimization Labels:Performance Profiling: Counting logic adds 15ms overhead, total frame latency now 210ms, still under 250ms target.",
+                "Information Update: The total frame latency with counting logic enabled has now decreased to 180ms, maintaining performance well under the 250ms target."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the total frame latency as 210ms instead of the updated 180ms",
+            "source_chat_ids": {
+                "original_info": [
+                    180
+                ],
+                "updated_info": [
+                    234
+                ]
+            },
+            "rubric": [
+                "LLM response should contain: 180ms"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+         {
+            "question": "How does the total estimated time I planned for implementing object counting and multi-class tracking compare to the time I allocated for testing and deploying the TensorRT acceleration feature flag system?",
+            "answer": "The total estimated time for implementing object counting and multi-class tracking is 20 days, which is longer than the combined time allocated for testing and deploying the TensorRT acceleration feature flag system, which spans approximately 14 days including testing, deployment, and final preparations.",
+            "difficulty": "medium",
+            "reasoning_type": "performance_comparison",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 128",
+                "chat_id 129",
+                "chat_id 220"
+            ],
+            "reasoning_steps": [
+                "Identify the total time estimated for the object counting and multi-class tracking milestone from the first two sessions.",
+                "Extract the time allocated for testing and deployment tasks related to the TensorRT acceleration feature flag system from the third session.",
+                "Sum the durations for testing and deployment phases in the TensorRT plan and compare this total to the 20-day estimate for the object counting and tracking milestone.",
+                "Conclude which project phase has a longer planned duration based on the aggregated task times."
+            ],
+            "source_chat_ids": [
+                128,
+                129,
+                220
+            ],
+            "rubric": [
+                "LLM response should contain: 20 days for object counting and multi-class tracking",
+                "LLM response should contain: approximately 14 days for testing and deployment of TensorRT feature flag system",
+                "LLM response should contain: object counting and multi-class tracking time is longer"
+            ]
+        },
+        {
+            "question": "How can I architect a modular object detection and tracking pipeline that efficiently separates model inference, NMS filtering, and multi-object tracking while minimizing memory usage and handling detection confidence parsing errors?",
+            "answer": "You should design a Detector class that separates model inference and NMS filtering into distinct methods, ensuring efficient tensor conversion and confidence thresholding; integrate a Tracker module using SORT with proper confidence parsing and bounding box formatting; manage memory by optimizing data structures and inference backend settings; and architect the tracker update method to incorporate Kalman filter predictions and Hungarian algorithm data association, preparing for future DeepSORT upgrades.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id: 38 - Initial Detector class design with memory constraints",
+                "chat_id: 104/105 - Refactoring Detector to separate inference and NMS",
+                "chat_id: 182/183 - Designing and integrating Tracker module with SORT and confidence parsing",
+                "chat_id: 186/187 - Reviewing and improving Tracker integration and efficiency",
+                "chat_id: 340/341 - Architecting Tracker update method with Kalman filter and Hungarian algorithm"
+            ],
+            "reasoning_steps": [
+                "Identify the need to modularize the Detector class by separating model inference and NMS filtering to improve maintainability and performance.",
+                "Incorporate confidence parsing and error handling to ensure robustness during detection processing.",
+                "Design the Tracker module to integrate SORT for multi-object tracking, ensuring bounding boxes and confidences are correctly formatted and used.",
+                "Optimize memory usage and inference performance by setting preferred backends and managing data structures efficiently within the Detector class.",
+                "Architect the Tracker update method to include Kalman filter state prediction and Hungarian algorithm for data association, enabling accurate tracking and preparing for future DeepSORT enhancements."
+            ],
+            "source_chat_ids": [
+                38,
+                104,
+                105,
+                182,
+                183,
+                186,
+                187,
+                340,
+                341
+            ],
+            "rubric": [
+                "LLM response should contain: modular Detector class with separate inference and NMS methods",
+                "LLM response should contain: Tracker module using SORT with confidence parsing",
+                "LLM response should contain: memory optimization strategies",
+                "LLM response should contain: Tracker update method with Kalman filter and Hungarian algorithm"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm looking to improve the speed of my object detection app running on my current setup. What steps would you suggest I take to get better performance?",
+            "preference_being_tested": "I prefer CPU-only deployment for now due to hardware constraints, despite slower inference times.",
+            "expected_compliance": "Response should focus on optimizations suitable for CPU-only environments and avoid recommending GPU-based solutions or hardware upgrades.",
+            "compliance_indicators": [
+                "suggests CPU-specific optimizations",
+                "avoids recommending GPU acceleration",
+                "focuses on software or algorithmic improvements compatible with CPU-only deployment"
+            ],
+            "non_compliance_signs": [
+                "recommends GPU usage or hardware upgrades",
+                "ignores CPU constraints",
+                "suggests solutions that require non-CPU hardware"
+            ],
+            "difficulty": "medium",
+            "preference_type": "deployment constraints",
+            "source_chat_ids": [
+                144
+            ],
+            "rubric": [
+                "LLM response should contain: CPU-specific optimizations",
+                "LLM response should not contain: GPU recommendations"
+            ]
+        },
+        {
+            "question": "I'm planning to enhance the state management in my frontend app. What approaches would you suggest I explore?",
+            "preference_being_tested": "I prefer React with Redux for frontend state management due to scalability and community support.",
+            "expected_compliance": "Response should recommend or prioritize solutions compatible with React and Redux, reflecting scalability and community support considerations without suggesting alternatives that contradict the stated preference.",
+            "compliance_indicators": [
+                "mentions Redux or Redux-compatible tools",
+                "focuses on scalable state management solutions",
+                "references community-supported libraries or patterns",
+                "avoids suggesting unrelated state management frameworks"
+            ],
+            "non_compliance_signs": [
+                "recommends state management libraries unrelated to React or Redux",
+                "ignores scalability or community support aspects",
+                "suggests alternatives that conflict with Redux usage"
+            ],
+            "difficulty": "medium",
+            "preference_type": "technology choice",
+            "source_chat_ids": [
+                452
+            ],
+            "rubric": [
+                "LLM response should contain: Redux or Redux-compatible tools for state management"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize what I learned about implementing and improving object detection and tracking in my projects?",
+            "ideal_summary": "You worked on refactoring your Detector class to separate model inference and non-maximum suppression into distinct methods for better modularity. You also explored integrating a Tracker module using the SORT algorithm to enable multi-object tracking, including handling detections, drawing tracked objects, and improving tracking efficiency. Additionally, you studied designing a more advanced tracker component that combines Kalman filtering and the Hungarian algorithm for data association, preparing for future upgrades like DeepSORT.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 104,
+            "key_elements_tested": [
+                "basic method separation",
+                "tracker integration",
+                "tracking algorithm design"
+            ],
+            "synthesis_required": "Combining basic information into simple coherent summary",
+            "source_chat_ids": [
+                104,
+                105,
+                182,
+                183,
+                186,
+                187,
+                340,
+                341
+            ],
+            "rubric": [
+                "LLM response should contain: refactored Detector class with separate inference and NMS methods",
+                "LLM response should contain: integrated Tracker module using SORT",
+                "LLM response should contain: designed advanced tracker with Kalman filter and Hungarian algorithm"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary that captures the full scope and progression of the topic, integrating all the key developments, challenges, and solutions discussed across the different sessions?",
+            "ideal_summary": "The summary should cohesively integrate the distinct yet interconnected aspects of the topic, reflecting the modular refactoring of the detection pipeline into separate inference and filtering methods, the design and integration of a multi-object tracking module using the SORT algorithm, and the progressive enhancement of tracking capabilities including Kalman filter and Hungarian algorithm-based data association. It should also cover the implementation of robust error handling and logging mechanisms within a related application context. The narrative must illustrate how these components interact within the broader system, highlighting the evolution from initial code stubs to fully functional, efficient, and maintainable modules. Additionally, it should address the handling of edge cases such as confidence parsing errors, the strategic use of OpenCV utilities for visualization, and the forward-looking considerations for future upgrades like DeepSORT. The summary must weave together these technical threads into a coherent story of iterative development, integration, and optimization, demonstrating a deep understanding of the architectural decisions, algorithmic choices, and practical implementation details.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "modular code refactoring",
+                "multi-object tracking integration",
+                "algorithmic data association",
+                "error handling and logging",
+                "visualization techniques",
+                "iterative development process",
+                "system integration",
+                "future-proofing and scalability"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                104,
+                105,
+                182,
+                183,
+                186,
+                187,
+                340,
+                341,
+                488,
+                489
+            ],
+            "rubric": [
+                "LLM response should contain: modular refactoring of detection pipeline",
+                "LLM response should contain: multi-object tracking with SORT",
+                "LLM response should contain: Kalman filter and Hungarian algorithm for data association",
+                "LLM response should contain: error handling and logging mechanisms",
+                "LLM response should contain: OpenCV utilities for visualization",
+                "LLM response should contain: iterative development and integration process",
+                "LLM response should contain: system integration aspects",
+                "LLM response should contain: future-proofing and scalability considerations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between when I confirmed the project deadline and when I planned to have the YOLOv5s model integrated and ready?",
+            "answer": "I have 14 days between confirming the project deadline on March 1 and planning to have the YOLOv5s model integrated by March 15.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 1: project deadline confirmation",
+                "March 15: YOLOv5s integration planned"
+            ],
+            "conversation_references": [
+                "Session with chat_id 6: project deadline confirmation",
+                "Session with chat_id 32: YOLOv5s integration planning"
+            ],
+            "calculation_required": "March 15 - March 1 = 14 days (requires connecting batch anchors from two sessions)",
+            "source_chat_ids": {
+                "first_event": [
+                    6
+                ],
+                "second_event": [
+                    32
+                ]
+            },
+            "rubric": [
+                "LLM response should contain: 14 days",
+                "LLM response should state: from March 1 till March 15"
+            ]
+        },
+        {
+            "question": "How much time passed from when I first committed to daily work on the project until I planned to have the detection model integrated and ready for testing?",
+            "answer": "You began focusing on daily progress and organization at the start of March, and planned to have the detection model integrated by mid-March, so the elapsed time spans roughly two weeks between your initial commitment to steady work and your targeted integration milestone.",
+            "difficulty": "hard",
+            "temporal_type": "multi_hop_duration",
+            "time_points": [
+                "Start of daily project work and progress tracking",
+                "Planned readiness of detection model integration"
+            ],
+            "conversation_references": [
+                "Session 6: Commitment to daily project milestones and organization",
+                "Session 32: Planning model integration readiness"
+            ],
+            "calculation_required": "Multi-step: From initial daily work commitment to planned integration milestone involves calculating elapsed time between start of project focus and model readiness target",
+            "complexity_factors": [
+                "Requires synthesizing initial project scheduling mindset with later technical integration planning",
+                "Spans multiple sessions with different focuses",
+                "Involves inferring temporal distance without explicit dates"
+            ],
+            "source_chat_ids": {
+                "first_event": [
+                    6
+                ],
+                "second_event": [
+                    32
+                ]
+            },
+            "rubric": [
+                "LLM response should contain: roughly two weeks"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,518 @@
+{
+    "abstention": [
+        {
+                "question": "Could you provide the detailed agenda or structure of the sessions where Susan learned about ellipse and hyperbola basics?",
+                "ideal_response": "Based on the provided chat, there is no information related to the detailed agenda or structure of the ellipse and hyperbola sessions.",
+                "difficulty": "hard",
+                "abstention_type": "unavailable_information",
+                "why_unanswerable": "Sessions on ellipse and hyperbola are mentioned but no agenda or structure details are provided.",
+                "plan_reference": "Batch 4, Bullets 2 and 3",
+                "rubric": [
+                    "Based on the provided chat, there is no information related to the detailed agenda or structure of the ellipse and hyperbola sessions."
+                ]
+            },
+            {
+                "question": "What was the atmosphere or group dynamics like during Susan's study group discussions on challenging problems?",
+                "ideal_response": "Based on the provided chat, there is no information related to the atmosphere or group dynamics during Susan's study group discussions.",
+                "difficulty": "hard",
+                "abstention_type": "missing_detail",
+                "why_unanswerable": "Study group is mentioned but no details on atmosphere or dynamics are given.",
+                "plan_reference": "Batch 10, Bullet 32",
+                "rubric": [
+                    "Based on the provided chat, there is no information related to the atmosphere or group dynamics during Susan's study group discussions."
+                ]
+            }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I completed any intersection or tangent problems before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed 10 intersection and tangent problems with a high score, but you also mentioned that you have never completed any such problems. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of intersection and tangent problems",
+            "conversation_references": [
+                "Session 538: Completed 10 problems with 9/10 score",
+                "Session 550: Never completed any intersection or tangent problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    538
+                ],
+                "second_statement": [
+                    550
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have completed 10 problems with high score",
+                "LLM response should mention: you also said you have never completed any such problems",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I completed any applied geometry problems?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed 7 applied geometry problems with a perfect score, but you also mentioned that you have never completed any applied geometry problems. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of applied geometry problems",
+            "conversation_references": [
+                "chat_id: 816",
+                "chat_id: 828"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    816
+                ],
+                "second_statement": [
+                    828
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have completed 7 applied geometry problems with perfect score",
+                "LLM response should mention: you also said you have never completed any applied geometry problems",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different concepts related to coordinate geometry throughout our conversations, in order (mention 6 items)?",
+            "answer": "You mentioned the coordinate geometry concepts in this order: 1) Calculating the distance between two points using the distance formula (chat_id 20), 2) Finding the midpoint of a line segment with given endpoints and applying the midpoint formula (chat_id 28), 3) Verifying a midpoint calculation for two points to build geometric intuition (chat_id 134), 4) Solving a line equation through a point with a given slope and verifying the solution (chat_id 136), 5) Using the distance formula to find the chord length between two points on a circle (chat_id 562), 6) Applying the midpoint formula to find the midpoint of a route between two locations in a practical context (chat_id 844).",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 20: Distance formula calculation",
+                "Session 28: Midpoint formula application",
+                "Session 134: Midpoint verification and geometric intuition",
+                "Session 136: Line equation solving and verification",
+                "Session 562: Chord length calculation using distance formula",
+                "Session 844: Midpoint formula in practical route planning"
+            ],
+            "ordering_tested": [
+                "1st: Distance formula calculation",
+                "2nd: Midpoint formula application",
+                "3rd: Midpoint verification and intuition",
+                "4th: Line equation solving",
+                "5th: Chord length calculation",
+                "6th: Midpoint in route planning"
+            ],
+            "source_chat_ids": [
+                20,
+                28,
+                134,
+                136,
+                562,
+                844
+            ],
+            "rubric": [
+                "LLM response should mention: Distance formula calculation first",
+                "LLM response should mention: Midpoint formula application second",
+                "LLM response should mention: Midpoint verification and intuition third",
+                "LLM response should mention: Line equation solving fourth",
+                "LLM response should mention: Chord length calculation fifth",
+                "LLM response should mention: Midpoint in route planning sixth"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different concepts related to lines and distances in our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the topics in this order: 1) First, you asked about finding the distance between two points, 2) Then you inquired about why vertical lines have undefined slope and their equations, 3) Next, you practiced finding equations of lines in slope-intercept form, 4) After that, you asked about calculating the distance between two parallel lines with an example, 5) Finally, you sought help understanding why the slope product of -1 implies perpendicular lines.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 44: Distance between two points",
+                "Session 150: Undefined slope of vertical lines",
+                "Session 156: Equations of lines in slope-intercept form",
+                "Session 602: Distance between parallel lines",
+                "Session 868: Slope product and perpendicular lines"
+            ],
+            "ordering_tested": [
+                "1st: Distance between two points",
+                "2nd: Undefined slope of vertical lines",
+                "3rd: Equations of lines in slope-intercept form",
+                "4th: Distance between parallel lines",
+                "5th: Slope product and perpendicular lines"
+            ],
+            "source_chat_ids": [
+                44,
+                150,
+                156,
+                602,
+                868
+            ],
+            "rubric": [
+                "LLM response should mention: Distance between two points first",
+                "LLM response should mention: Undefined slope of vertical lines second",
+                "LLM response should mention: Equations of lines in slope-intercept form third",
+                "LLM response should mention: Distance between parallel lines fourth",
+                "LLM response should mention: Slope product and perpendicular lines fifth"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What two points did I give you to calculate the distance between?",
+            "answer": "You gave the points (-1, 3) and (4, -2).",
+            "difficulty": "medium",
+            "question_type": "early_detail_recall",
+            "conversation_reference": "Turn 1: Initial points provided by user",
+            "key_facts_tested": [
+                "point 1 coordinates",
+                "point 2 coordinates"
+            ],
+            "source_chat_ids": [
+                48
+            ],
+            "rubric": [
+                "LLM response should mention: point 1 is (-1, 3)",
+                "LLM response should mention: point 2 is (4, -2)"
+            ]
+        },
+        {
+            "question": "What deadline did I mention for solving my problems on parallel and perpendicular lines?",
+            "answer": "You mentioned that you plan to solve your problems by February 5, 2024.",
+            "difficulty": "medium",
+            "question_type": "temporal_recall",
+            "conversation_reference": "Turn 1: User's initial message mentioning their plan",
+            "key_facts_tested": [
+                "deadline: February 5, 2024",
+                "task: solving problems on parallel and perpendicular lines"
+            ],
+            "source_chat_ids": [
+                158
+            ],
+            "rubric": [
+                "LLM response should mention: deadline is February 5, 2024"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How do I find the distance between the points (4, 7) and (1, 3)?",
+            "instruction_being_tested": "Always provide step-by-step calculations when I ask about distance formulas.",
+            "expected_compliance": "Response should include a clear, sequential explanation of each calculation step leading to the final distance.",
+            "compliance_indicators": [
+                "breaking down the formula application",
+                "showing intermediate arithmetic",
+                "explaining each part of the process"
+            ],
+            "non_compliance_signs": [
+                "just giving the final number",
+                "no explanation of how the result was obtained",
+                "skipping calculation details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                116,
+                118,
+                120
+            ],
+            "rubric": [
+                "LLM response should include: step-by-step breakdown of distance formula",
+                "LLM response should include: intermediate arithmetic calculations"
+            ]
+        },
+         {
+            "question": "Can you help me write the equation of a line that passes through the point (3, 4) with a slope of 2?",
+            "instruction_being_tested": "Always use point-slope form when I ask about writing line equations.",
+            "expected_compliance": "Response should present the line equation using the point-slope form.",
+            "compliance_indicators": [
+                "equation written as y - y1 = m(x - x1)",
+                "uses given point and slope directly in the formula"
+            ],
+            "non_compliance_signs": [
+                "equation given in slope-intercept form",
+                "equation given in standard form",
+                "no use of the point and slope in the formula"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                634,
+                636
+            ],
+            "rubric": [
+                "LLM response should include: equation in point-slope form"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my homework accuracy on line and midpoint problems?",
+            "answer": "95%",
+            "difficulty": "easy",
+            "update_type": "accuracy_improvement",
+            "tests_retention_of": "latest homework accuracy percentage on line and midpoint problems",
+            "conversation_references": [
+                "Increased homework accuracy from 75% to 88% on line and midpoint problems.",
+                "My homework accuracy on line and midpoint problems has now reached 95%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier accuracy of 88% instead of the current 95%",
+            "source_chat_ids": {
+                "original_info": [
+                    184
+                ],
+                "updated_info": [
+                    212,
+                    214
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: latest accuracy is 95%"
+            ]
+        },
+        {
+            "question": "What score did I achieve on my practice test following my review?",
+            "answer": "97%",
+            "difficulty": "easy",
+            "update_type": "score_improvement",
+            "tests_retention_of": "latest practice test score after additional review",
+            "conversation_references": [
+                "Increased practice test score from 82% to 93% after review.",
+                "My practice test score has now reached 97% after additional review."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier 93% score instead of the latest 97%",
+            "source_chat_ids": {
+                "original_info": [
+                    962
+                ],
+                "updated_info": [
+                    1016
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: latest practice test score is 97%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Between my practice problems on finding midpoints and verifying midpoints, how many different point pairs did I work with in total?",
+            "answer": "Three different point pairs",
+            "difficulty": "easy",
+            "reasoning_type": "simple_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "66",
+                "176"
+            ],
+            "reasoning_steps": [
+                "Identify the point pair from the first practice on midpoint formula: (2,3) and (5,11)",
+                "Identify the point pair from the second practice verifying midpoint: (-2,5) and (6,-3)",
+                "Count the total distinct point pairs mentioned in these two sessions"
+            ],
+            "source_chat_ids": [
+                66,
+                176
+            ],
+            "rubric": [
+                "LLM response should mention: total of 3 distinct point pairs"
+            ]
+        },
+        {
+            "question": "How do the quadratic equations I encountered in my problems differ in their discriminants and roots, and what does this tell me about the nature of their solutions?",
+            "answer": "The first quadratic has a discriminant of 20 and roots involving \u221a5, indicating two distinct real irrational roots. The second has a discriminant of 40 and roots involving \u221a10, also two distinct real irrational roots but with different values. This shows both have two distinct real roots but differ in root magnitude and discriminant size.",
+            "difficulty": "medium",
+            "reasoning_type": "cross-session_correlation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "292",
+                "448"
+            ],
+            "reasoning_steps": [
+                "Identify the coefficients and discriminant of the first quadratic from the first session.",
+                "Calculate the discriminant and roots for the second quadratic from the second session.",
+                "Compare the discriminants and roots to analyze the nature and differences of the solutions."
+            ],
+            "source_chat_ids": [
+                292,
+                448
+            ],
+            "rubric": [
+                "LLM response should mention: first quadratic has a discriminant of 20 and roots involving \u221a5, indicating two distinct real irrational roots",
+                "LLM response should mention: second quadratic has a discriminant of 40 and roots involving \u221a10, also two distinct real irrational roots but with different values",
+                "LLM response should mention: both have two distinct real roots but differ in root magnitude and discriminant size"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you help me write the equation of a line that passes through the point (3, -2) with a slope of 5?",
+            "preference_being_tested": "I prefer using point-slope form for quick line equation writing.",
+            "expected_compliance": "Response should present the line equation using point-slope form or start from it, rather than immediately converting to slope-intercept or standard form.",
+            "compliance_indicators": [
+                "uses point-slope form in the explanation",
+                "writes equation as y - y1 = m(x - x1)",
+                "focuses on the point and slope directly in the equation"
+            ],
+            "non_compliance_signs": [
+                "only provides slope-intercept form",
+                "only provides standard form without referencing point-slope",
+                "ignores the point-slope structure entirely"
+            ],
+            "difficulty": "medium",
+            "preference_type": "formatting_style",
+            "source_chat_ids": [
+                578,
+                582
+            ],
+            "rubric": [
+                "LLM response should include: uses point-slope form in the explanation",
+                "LLM response should include: writes equation as y - y1 = m(x - x1)"
+            ]
+        },
+        {
+            "question": "I'm preparing for my upcoming exam and want to practice different types of problems. How should I organize my study sessions?",
+            "preference_being_tested": "I prefer practicing mixed problem sets to prepare for comprehensive exams.",
+            "expected_compliance": "Response should suggest using mixed or varied problem sets rather than focusing on single-topic or isolated problem types, aligning with the user's preference for comprehensive practice.",
+            "compliance_indicators": [
+                "recommends combining different problem types in practice",
+                "suggests varied problem sets covering multiple topics",
+                "advises against focusing on only one type of problem at a time"
+            ],
+            "non_compliance_signs": [
+                "recommends practicing only one topic repeatedly",
+                "suggests isolated problem types without mixing",
+                "ignores the idea of varied or mixed problem sets"
+            ],
+            "difficulty": "medium",
+            "preference_type": "study_method",
+            "source_chat_ids": [
+                800
+            ],
+            "rubric": [
+                "LLM response should include: recommends combining different problem types in practice",
+                "LLM response should include: suggests varied problem sets covering multiple topics",
+                "LLM response should include: advises against focusing on only one type of problem at a time"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "I've been working through various concepts and problems related to lines and their equations, and I want you to give me a thorough summary that ties everything together. Can you walk me through all the key ideas, methods, and relationships involved, showing how they connect and build on each other across different examples and problem types?",
+            "ideal_summary": "The discussions comprehensively cover the foundational and advanced aspects of linear equations, focusing primarily on the slope-intercept form \\( y = mx + b \\) and its relationship to other forms such as point-slope and two-point forms. Starting with solving for the y-intercept \\( b \\) by substituting known points and slopes, the conversations illustrate step-by-step methods to derive line equations from given points and slopes, including converting point-slope form to slope-intercept form. The concept of slope is explored in depth, including its calculation from two points and its geometric interpretation as the rate of change. The y-intercept \\( b \\) is consistently emphasized as the point where the line crosses the y-axis, with examples reinforcing its meaning and role in graphing. Parallel and perpendicular lines are analyzed through their slopes, demonstrating that parallel lines share the same slope and never intersect, while perpendicular lines have slopes whose product is \\(-1\\). The assistant guides through verifying these properties with concrete examples, including finding perpendicular slopes via negative reciprocals. Midpoint calculations and their geometric significance are also integrated to build spatial intuition. Throughout, the assistant addresses common errors such as sign mistakes and distribution errors, providing clarifications and verification steps. The progression from basic slope and intercept calculations to more complex relationships between lines showcases a layered understanding, connecting algebraic manipulation with geometric interpretation. This synthesis highlights how different forms of linear equations interrelate, how slope and intercept define line behavior, and how these concepts underpin the analysis of line relationships such as parallelism and perpendicularity, culminating in a cohesive framework for understanding and solving a wide range of line equation problems.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 9,
+            "key_elements_tested": [
+                "multi-threaded concept integration",
+                "stepwise problem-solving synthesis",
+                "algebraic and geometric relationship analysis",
+                "error identification and correction",
+                "parallel and perpendicular line properties",
+                "form conversion and interpretation",
+                "conceptual and procedural coherence"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                122,
+                123,
+                124,
+                128,
+                130,
+                132,
+                134,
+                136,
+                153,
+                154,
+                159,
+                164,
+                161
+            ],
+            "rubric": [
+                "LLM response should mention: solving for the y-intercept \\( b \\) by substituting known points and slopes, the conversations illustrate step-by-step methods to derive line equations from given points and slopes, including converting point-slope form to slope-intercept form",
+                "LLM response should mention: the concept of slope is explored in depth, including its calculation from two points and its geometric interpretation as the rate of change",
+                "LLM response should mention: the y-intercept \\( b \\) is consistently emphasized as the point where the line crosses the y-axis, with examples reinforcing its meaning and role in graphing",
+                "LLM response should mention: parallel and perpendicular lines are analyzed through their slopes, demonstrating that parallel lines share the same slope and never intersect, while perpendicular lines have slopes whose product is \\(-1\\)",
+                "LLM response should mention: the assistant guides through verifying these properties with concrete examples, including finding perpendicular slopes via negative reciprocals",
+                "LLM response should mention: midpoint calculations and their geometric significance are also integrated to build spatial intuition",
+                "LLM response should mention: throughout, the assistant addresses common errors such as sign mistakes and distribution errors, providing clarifications and verification steps",
+                "LLM response should mention: the progression from basic slope and intercept calculations to more complex relationships between lines showcases a layered understanding, connecting algebraic manipulation with geometric interpretation"
+            ]
+        },
+        {
+            "question": "Can you give me a simple summary of what I learned about ellipses from our recent conversations?",
+            "ideal_summary": "You learned that the standard form of an ellipse equation is (x\u2212h)\u00b2/a\u00b2 + (y\u2212k)\u00b2/b\u00b2 = 1, where (h, k) is the center, and a and b are the lengths of the semi-major and semi-minor axes. For the ellipse x\u00b2/25 + y\u00b2/9 = 1, the center is at (0, 0), with a = 5 and b = 3. The foci are located at (\u00b14, 0), calculated using c = \u221a(a\u00b2 \u2212 b\u00b2). You also understood how these values relate to the ellipse's shape and position, including the vertices and the orientation of the major axis.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 332,
+            "key_elements_tested": [
+                "basic concept explanation",
+                "identification of key parameters",
+                "relation of parameters to ellipse properties"
+            ],
+            "synthesis_required": "Combining definitions, calculations, and conceptual understanding into a brief overview",
+            "source_chat_ids": [
+                332,
+                333,
+                353
+            ],
+            "rubric": [
+                "LLM response should mention: standard form of an ellipse equation is (x\u2212h)\u00b2/a\u00b2 + (y\u2212k)\u00b2/b\u00b2 = 1, where (h, k) is the center, and a and b are the lengths of the semi-major and semi-minor axes",
+                "LLM response should mention: for the ellipse x\u00b2/25 + y\u00b2/9 = 1, the center is at (0, 0), with a = 5 and b = 3",
+                "LLM response should mention: the foci are located at (\u00b14, 0), calculated using c = \u221a(a\u00b2 \u2212 b\u00b2)",
+                "LLM response should mention: You also understood how these values relate to the ellipse's shape and position, including the vertices and the orientation of the major axis"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between setting my goal to solve 5 problems on parallel and perpendicular lines and the deadline I set to complete them?",
+            "answer": "You have 5 days between when you set the goal to solve 5 problems and the deadline to complete them, from January 31 to February 5, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "Goal set date (inferred from session context)",
+                "Deadline February 5, 2024"
+            ],
+            "conversation_references": [
+                "Session with problem-solving goal and deadline (chat_id 162)"
+            ],
+            "calculation_required": "February 5, 2024 - January 31, 2024 = 5 days (requires inferring start date from context)",
+            "source_chat_ids": {
+                "first_event": [
+                    162
+                ],
+                "second_event": [
+                    162
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5 days between January 31 and February 5, 2024"
+            ]
+        },
+        {
+            "question": "How much time do I have between when I planned to master the distance, midpoint, and slope formulas and when I planned to solve problems on parallel and perpendicular lines?",
+            "answer": "There are about two months between my goal to master the distance, midpoint, and slope formulas by February 1, 2024, and my plan to solve problems on parallel and perpendicular lines by April 1, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 1, 2024: master distance, midpoint, and slope formulas",
+                "April 1, 2024: solve problems on parallel and perpendicular lines"
+            ],
+            "conversation_references": [
+                "Session 96: mastering formulas by February 1",
+                "Session 574: solving problems by April 1"
+            ],
+            "calculation_required": "April 1, 2024 - February 1, 2024 = 2 months",
+            "source_chat_ids": {
+                "first_event": [
+                    96
+                ],
+                "second_event": [
+                    574
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: about two months between February 1 and April 1, 2024"
+            ]
+        }
+    ]
+}

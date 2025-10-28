@@ -1,0 +1,673 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the exact itinerary and schedule for the virtual tour of the Grand Wailea Resort?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The virtual tour is mentioned but no specific itinerary or timing details are given.",
+            "plan_reference": "Plan 0, Batch 1, Bullet 21 mentions scheduling a virtual tour but no further details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort"
+            ]
+        },
+        {
+            "question": "What was discussed during the Zoom call with Pamela about travel logistics for her group of 15 friends?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions the Zoom call but does not provide details about the conversation.",
+            "plan_reference": "Plan 2, Batch 2, Bullet 26",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Has Pamela ever helped coordinate with vendors or saved setup time during my events?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said Pamela has never helped coordinate with vendors or saved any setup time, but you also mentioned that she arrived to help coordinate with vendors and saved you 3 hours of work. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Pamela's involvement in vendor coordination and setup time savings",
+            "conversation_references": [
+                "Session 7502: Pamela never helped with vendor coordination or saved setup time",
+                "Sessions 7252, 7260: Pamela helped coordinate and saved 3 hours"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    7502,
+                    7504,
+                    7506
+                ],
+                "second_statement": [
+                    7252,
+                    7254,
+                    7260,
+                    7266
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said Pamela has never helped coordinate with vendors",
+                "LLM response should mention: you also mentioned that she arrived to help coordinate with vendors",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever coordinated with volunteers to assist with guest relocations?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said that Pamela rallied volunteers to help with guest relocations, but you also mentioned that you have never coordinated with any volunteers for this task. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "coordination with volunteers for guest relocations",
+            "conversation_references": [
+                "Session 1: Pamela rallied volunteers",
+                "Session 2: Never coordinated with volunteers"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    9756
+                ],
+                "second_statement": [
+                    9988
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said that Pamela rallied volunteers to help with guest relocations",
+                "LLM response should mention: you also mentioned that you have never coordinated with any volunteers",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my beach wedding planning from July 1, 2023 to July 6, 2023, including venue options, guest capacities, permit fees, weather considerations, and accessibility concerns, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in the following order: 1) Initial research on beach destinations with ideal weather and temperature ranges, 2) Discussion of specific venue options and their guest capacities, 3) Exploration of beach wedding permit fees and application processes across locations, 4) Consideration of weather-related factors and backup plans, 5) Evaluation of accessibility and logistical concerns for guests.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 40, 54, 68: Initial weather and destination research",
+                "Session 350, 364, 904, 1118, 1128, 1408, 1422: Venue options and guest capacities",
+                "Session 574, 1706, 1974, 2256: Permit fees and processes",
+                "Session 360, 614, 1414: Weather considerations and backup plans",
+                "Session 1416, 1418, 1418, 1418: Accessibility and logistical concerns"
+            ],
+            "ordering_tested": [
+                "1st: Weather and destination research",
+                "2nd: Venue options and guest capacities",
+                "3rd: Permit fees and application processes",
+                "4th: Weather-related backup planning",
+                "5th: Accessibility and guest logistics"
+            ],
+            "source_chat_ids": [
+                [
+                    40,
+                    54,
+                    68
+                ],
+                [
+                    350,
+                    364,
+                    904,
+                    1118,
+                    1128,
+                    1408,
+                    1422
+                ],
+                [
+                    574,
+                    1706,
+                    1974,
+                    2256
+                ],
+                [
+                    360,
+                    614,
+                    1414
+                ],
+                [
+                    1416,
+                    1418
+                ]
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "Weather and destination research",
+                "Venue options and guest capacities",
+                "Permit fees and application processes",
+                "Weather-related backup planning",
+                "Accessibility and guest logistics"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of event setup and guest management from July 16, 2023 to August 4, 2023, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned the aspects in this order: 1) Adjusting the lighting setup to save power, 2) Addressing delays in music timing and playlist adjustments, 3) Managing guest seating and complaints by adding extra chairs, 4) Preparing for weather concerns by moving guests under a tent, 5) Troubleshooting video glitches by repositioning cameras, 6) Handling last-minute menu changes to accommodate dietary needs, 7) Flagging potential delays in toasts and trimming speeches, 8) Noticing guest comfort issues related to heat and adding fans and water bottles, 9) Softening lights to create a warmer evening vibe, and 10) Introducing fun activities like a quick dance game and limbo contest to energize the crowd.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 9500-9514: Lighting adjustments",
+                "Session 9752-9994: Music timing and playlist",
+                "Session 10000: Guest seating and complaints",
+                "Session 10274-10524: Weather and tent setup",
+                "Session 11182-11394: Video glitches and camera repositioning",
+                "Session 10776-13140: Menu and dietary accommodations",
+                "Session 13126-13136: Toast timing and speech trimming",
+                "Session 12200-13324: Guest comfort with heat, fans, and water",
+                "Session 13532: Lighting ambiance adjustments",
+                "Session 14030-14036: Dance game and limbo contest"
+            ],
+            "ordering_tested": [
+                "1st: Lighting setup and power saving",
+                "2nd: Music timing delays and playlist cuts",
+                "3rd: Guest seating adjustments for complaints",
+                "4th: Weather concerns and guest relocation",
+                "5th: Video glitch troubleshooting and camera repositioning",
+                "6th: Menu changes for dietary needs",
+                "7th: Toast delays and speech trimming",
+                "8th: Guest heat discomfort and cooling measures",
+                "9th: Lighting ambiance softening",
+                "10th: Adding fun dance activities"
+            ],
+            "source_chat_ids": [
+                [
+                    9500,
+                    9502,
+                    9508,
+                    9514
+                ],
+                [
+                    9752,
+                    9994
+                ],
+                [
+                    10000
+                ],
+                [
+                    10274,
+                    10520,
+                    10522,
+                    10524
+                ],
+                [
+                    11182,
+                    11394
+                ],
+                [
+                    10776,
+                    10780,
+                    13138,
+                    13140
+                ],
+                [
+                    13126,
+                    13128,
+                    13134,
+                    13136
+                ],
+                [
+                    12200,
+                    13324
+                ],
+                [
+                    13532
+                ],
+                [
+                    14030,
+                    14036
+                ]
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "Lighting setup and power saving",
+                "Music timing delays and playlist cuts",
+                "Guest seating adjustments for complaints",
+                "Weather concerns and guest relocation",
+                "Video glitch troubleshooting and camera repositioning",
+                "Menu changes for dietary needs",
+                "Toast delays and speech trimming",
+                "Guest heat discomfort and cooling measures",
+                "Lighting ambiance softening",
+                "Adding fun dance activities"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How many chairs did I say I rented from Seaside Rentals?",
+            "answer": "You said you rented 100 chairs from Seaside Rentals.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 7: USER mentions expecting 100 guests and having rented 100 chairs from Seaside Rentals",
+            "key_facts_tested": [
+                "number of chairs rented",
+                "rental source"
+            ],
+            "source_chat_ids": [
+                7282
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: 100 chairs"
+            ]
+        },
+        {
+            "question": "How much did I say it costs to rent each lantern?",
+            "answer": "You said it costs $10 to rent each lantern.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 8: USER asked about the cost per lantern and confirmed it was $10.",
+            "key_facts_tested": [
+                "rental cost per lantern"
+            ],
+            "source_chat_ids": [
+                14280,
+                14282
+            ],
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: $10"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are the costs involved in the decorations for the event?",
+            "instruction_being_tested": "Always confirm floral budget details when I ask about d\u00e9cor expenses.",
+            "expected_compliance": "Response should include confirmation or details specifically about the floral budget when discussing decoration costs.",
+            "compliance_indicators": [
+                "mention of floral budget",
+                "confirmation of floral expenses",
+                "details about flower-related costs"
+            ],
+            "non_compliance_signs": [
+                "ignoring floral budget",
+                "only general decoration costs given",
+                "no mention of flowers or related expenses"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                12898
+            ],
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should contain: mention of floral budget",
+                "LLM response should contain: details about flower-related costs"
+            ]
+        },
+        {
+            "question": "What services are available for visitors during their stay?",
+            "instruction_being_tested": "Always confirm guest assistance details when I ask about hospitality.",
+            "expected_compliance": "Response should include a confirmation of the specific support or help options available to visitors, ensuring clarity on what assistance can be provided.",
+            "compliance_indicators": [
+                "clear mention of available support services",
+                "confirmation of assistance options",
+                "detailed description of visitor help offerings"
+            ],
+            "non_compliance_signs": [
+                "general or vague information without confirmation",
+                "omission of assistance details",
+                "only listing services without verifying support aspects"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                8010
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should contain: clear mention of available support services",
+                "LLM response should contain: detailed description of visitor help offerings"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much do the 100 napkins cost with the discount I secured?",
+            "answer": "$120 for 100 pieces",
+            "difficulty": "easy",
+            "update_type": "price_discount",
+            "tests_retention_of": "discounted total cost of napkins",
+            "conversation_references": [
+                "I\u2019ve ticked off 40% of my d\u00e9cor list, with napkins and vases now sourced or planned.",
+                "I\u2019ve recently secured a 20% discount on napkins, reducing the total cost to $120 for 100 pieces."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original total cost without the discount or the discount percentage instead of the final price",
+            "source_chat_ids": {
+                "original_info": [
+                    3102,
+                    3110,
+                    3112
+                ],
+                "updated_info": [
+                    3116
+                ]
+            },
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should state: $120"
+            ]
+        },
+        {
+            "question": "How many members are on my team handling lighting fixes and guest concerns?",
+            "answer": "There are 8 members on the team.",
+            "difficulty": "easy",
+            "update_type": "team_size_expansion",
+            "tests_retention_of": "updated team size from 6 to 8 members",
+            "conversation_references": [
+                "Communication & Feedback:Status Updates: Updating my team of 6 via WhatsApp on the lighting fix, confirming 15 units are now operational.",
+                "Information Update: The team of 6 has now expanded to 8 members, improving our capacity to handle lighting fixes and guest concerns efficiently."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the team size as 6 members instead of 8.",
+            "source_chat_ids": {
+                "original_info": [
+                    9598,
+                    9608,
+                    9616
+                ],
+                "updated_info": [
+                    9750
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: 8 members"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much will I spend in total if I rent 10 wooden arches from Beachside Rentals and 10 from Ocean Breeze Rentals at their quoted prices?",
+            "answer": "You will spend $1,000 in total: $500 for 10 arches from Beachside Rentals at $50 each, and $500 for 10 arches from Ocean Breeze Rentals at $50 each.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Negotiating wooden arches with Beachside Rentals",
+                "Budgeting arches from Ocean Breeze Rentals"
+            ],
+            "reasoning_steps": [
+                "Identify the cost per arch from Beachside Rentals as $50 each for 10 arches.",
+                "Identify the cost per arch from Ocean Breeze Rentals as $50 each for 10 arches.",
+                "Calculate total cost by summing $500 from Beachside Rentals and $500 from Ocean Breeze Rentals."
+            ],
+            "source_chat_ids": [
+                2983,
+                3603
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: $1,000 in total",
+                "LLM response should state: $500 for 10 arches from Beachside Rentals",
+                "LLM response should state: $500 for 10 arches from Ocean Breeze Rentals"
+            ]
+        },
+        {
+            "question": "How much did I spend in total on catering, and what percentage of guests rated the local cuisine highly across all sessions?",
+            "answer": "You spent a total of $10,000 on catering, with between 85% and 90% of guests rating the local cuisine highly.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "PLAN 8 BATCH 1 BULLET 18: Budget Review: Reviewing $5,000 catering costs, confirming 100% of funds were well-spent on local cuisine.",
+                "PLAN 8 BATCH 9 BULLET 18: Budget Review: Assessing $5,000 catering, with 85% of 30 guests rating local cuisine 5 stars.",
+                "PLAN 8 BATCH 10 BULLET 18: Budget Review: Finalizing $5,000 catering analysis, with 90% of 30 guests rating it top-tier."
+            ],
+            "reasoning_steps": [
+                "Identify the two separate $5,000 catering expenses mentioned.",
+                "Sum the two catering expenses to get the total spent on catering.",
+                "Note the guest satisfaction percentages from both sessions (85% and 90%) to understand the range of high ratings."
+            ],
+            "source_chat_ids": [
+                16574,
+                16580,
+                18674,
+                18675,
+                18892,
+                18893,
+                18898,
+                18899,
+                18904,
+                18905
+            ],
+            "plan_reference": "Plan 7-8",
+            "rubric": [
+                "LLM response should state: $10,000 on catering",
+                "LLM response should state: between 85% and 90% of guests rating the local cuisine highly"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "How should I allocate my budget between flowers and lighting to create a cohesive look for the event?",
+            "preference_being_tested": "I\u2019ve prioritized flowers over extra lighting, assigning $800 versus $400 to balance aesthetics.",
+            "expected_compliance": "Response should allocate more budget to flowers than lighting, reflecting the user's stated budget distribution and prioritization.",
+            "compliance_indicators": [
+                "allocates approximately twice as much budget to flowers as to lighting",
+                "emphasizes flower arrangements in the plan",
+                "suggests lighting options within the smaller budget portion",
+                "acknowledges the budget split without suggesting equal or reversed allocation"
+            ],
+            "non_compliance_signs": [
+                "allocates equal or more budget to lighting than flowers",
+                "ignores the budget split and prioritization",
+                "suggests lighting as the main focus despite budget constraints",
+                "does not mention budget distribution at all"
+            ],
+            "difficulty": "medium",
+            "preference_type": "budget_allocation",
+            "source_chat_ids": [
+                3654,
+                3660,
+                3662,
+                3666,
+                3668,
+                3672
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: allocates approximately twice as much budget to flowers as to lighting",
+                "LLM response should contain: emphasizes flower arrangements in the plan",
+                "LLM response should contain: suggests lighting options within the smaller budget portion"
+            ]
+        },
+        {
+            "question": "How should I organize the travel bookings for my group at Sandy Shore Bistro to get started?",
+            "preference_being_tested": "Tracy suggested we prioritize family travel bookings at Sandy Shore Bistro, focusing on 20 key relatives first.",
+            "expected_compliance": "Response should prioritize booking arrangements starting with the 20 key relatives before addressing others, reflecting the user's stated approach.",
+            "compliance_indicators": [
+                "recommends starting with the 20 key relatives",
+                "structures booking process to address a specific subset first",
+                "acknowledges a phased or prioritized booking approach"
+            ],
+            "non_compliance_signs": [
+                "treats all group members equally without prioritization",
+                "ignores the subset of 20 key relatives",
+                "suggests random or simultaneous booking without order"
+            ],
+            "difficulty": "medium",
+            "preference_type": "group prioritization",
+            "source_chat_ids": [
+                5146
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should contain: recommends starting with the 20 key relatives",
+                "LLM response should contain: acknowledges a phased or prioritized booking approach"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my wedding d\u00e9cor plans have developed from July 1, 2023 to July 6, 2023, including how I've incorporated personal touches, managed the budget, and balanced different theme ideas?",
+            "ideal_summary": "Your wedding d\u00e9cor planning has evolved through thoughtful integration of personal and family elements, budget management, and theme balancing. Initially, you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth. As the planning progressed, you prioritized key d\u00e9cor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities. You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents like starfish and coral hints, leading to a balanced color palette and cohesive design. Throughout, you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic. Your approach reflects a progression from establishing meaningful personal touches to practical budgeting and theme harmonization, resulting in a well-rounded and heartfelt wedding d\u00e9cor plan.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "key_elements_tested": [
+                "personalization",
+                "budget evolution",
+                "theme balancing",
+                "eco-friendly choices",
+                "decor development"
+            ],
+            "synthesis_required": "Integrating multiple facets of wedding d\u00e9cor planning into a coherent narrative showing progression and decision-making",
+            "source_chat_ids": [
+                24,
+                25,
+                27,
+                30,
+                34,
+                36,
+                44,
+                45,
+                58,
+                59,
+                2730,
+                274,
+                285,
+                3545,
+                3747,
+                4661,
+                4685,
+                4821,
+                4857,
+                4863
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should contain: you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth",
+                "LLM response should contain: you prioritized key d\u00e9cor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities",
+                "LLM response should contain: You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents",
+                "LLM response should contain: you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how the venue wrap-up and equipment return process developed throughout our planning, including how I coordinated with vendors and Ka'anapali staff to meet all deadlines and secure refunds?",
+            "ideal_summary": "Throughout the planning and execution of the venue wrap-up and equipment return, you progressively coordinated with Ka'anapali staff and multiple vendors to ensure all tasks were completed efficiently and within deadlines. Initially, you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria. You then organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables, while scheduling tasks to avoid overtime fees. You also managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup, balancing cost with environmental impact. Throughout, you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance. Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration. This comprehensive approach allowed you to secure multiple refunds, avoid penalties, and maintain positive relationships with vendors and venue staff.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                14268,
+                14269,
+                14270,
+                14271,
+                14346,
+                14347,
+                14352,
+                14353,
+                14468,
+                14469,
+                14470,
+                14471,
+                14916,
+                14917,
+                14924,
+                14925,
+                15006,
+                15007,
+                15604,
+                15605,
+                16056,
+                16057,
+                16058,
+                16059,
+                16302,
+                16303
+            ],
+            "key_elements_tested": [
+                "coordination with vendors and staff",
+                "task prioritization",
+                "deadline management",
+                "refund securing",
+                "waste disposal and environmental considerations",
+                "documentation and compliance"
+            ],
+            "synthesis_required": "Integrating multiple logistical, environmental, and administrative details into a coherent narrative showing progression and cause-effect relationships",
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should contain: you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria",
+                "LLM response should contain: organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables",
+                "LLM response should contain: managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup",
+                "LLM response should contain: you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance",
+                "LLM response should contain: Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have to finalize the guest list and travel plans before the wedding event launch begins?",
+            "answer": "There are 3 days between when I start finalizing the guest list and travel plans on July 7 and when the wedding event launch begins on July 10.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "July 7: start finalizing guest list and travel plans",
+                "July 10: wedding event launch begins"
+            ],
+            "conversation_references": [
+                "Session 1: Finalizing guest list and travel plans",
+                "Session 2: Wedding event launch and venue setup"
+            ],
+            "calculation_required": "July 10 - July 7 = 3 days",
+            "source_chat_ids": {
+                "first_event": [
+                    4892
+                ],
+                "second_event": [
+                    7250
+                ]
+            },
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should state: 3 days",
+                "LLM response should state: from July 7 till July 10"
+            ]
+        },
+        {
+            "question": "How many days after the start of closing our wedding at Ka'anapali Beach did my reflection period begin?",
+            "answer": "The reflection period began 10 days after the start of closing the wedding at Ka'anapali Beach.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Start of closing wedding at Ka'anapali Beach (August 11, 2023)",
+                "Start of reflection period after the wedding (August 21, 2023)"
+            ],
+            "conversation_references": [
+                "Sessions around August 11, 2023: event closing preparation",
+                "Sessions around August 21, 2023: reflection period start"
+            ],
+            "calculation_required": "August 21 - August 11 = 10 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14238,
+                    14260,
+                    14266
+                ],
+                "second_event": [
+                    16440,
+                    16442
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 10 days",
+                "LLM response should state: from August 11 till August 21"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,599 @@
+{
+    "abstention": [
+        {
+            "question": "What specific advice did James give about negotiating lease terms?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific advice James gave about negotiating lease terms.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "James\u2019s advice is referenced but the exact guidance is not detailed.",
+            "plan_reference": "Batch 1, bullet 18 mentions James advising on lease negotiations without specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific advice James gave about negotiating lease terms."
+            ]
+        },
+        {
+            "question": "What were the main points covered in the tenant rights research you did for Saint Helena?",
+            "ideal_response": "Based on the provided chat, there is no information related to the main points covered in the tenant rights research beyond a few specific topics mentioned.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Tenant rights are referenced with some focus areas but no comprehensive summary or main points are provided.",
+            "plan_reference": "Batches 1, 2, and 8 mention tenant rights research but lack detailed content.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the main points covered in the tenant rights research beyond a few specific topics mentioned."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I met Brittney\u2019s parents or any of her family members before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never met Brittney\u2019s parents or any of her family members, but you also mentioned meeting them at a restaurant before. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Brittney\u2019s family",
+            "conversation_references": [
+                "Session 466: Never met Brittney\u2019s family",
+                "Sessions 296, 298, 300: Met Brittney\u2019s parents and family"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    466
+                ],
+                "second_statement": [
+                    296,
+                    298,
+                    300
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never met Brittney\u2019s parents or any of her family members",
+                "LLM response should mention: you also mentioned meeting them at a restaurant before",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever paid any utility bills for my residence?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never paid any utility bills for your residence, but you also mentioned a utility bill amount and budget concerns. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "payment of utility bills",
+            "conversation_references": [
+                "Session 694: Never paid utility bills",
+                "Session 660: Utility bill amount and budget"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    694
+                ],
+                "second_statement": [
+                    660
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never paid any utility bills for your residence",
+                "LLM response should mention: you also mentioned a utility bill amount and budget concerns",
+                "LLM response should mention: could you clarify which is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about different types of support and coordination evolve throughout our conversations in order (mention 10 items)?",
+            "answer": "Your discussions about support and coordination evolved in this sequence: 1) Preparing for and scheduling viewings, 2) Reviewing lease terms and consulting resources, 3) Planning and organizing a farewell event, 4) Arranging childcare and safety preparations during the move, 5) Negotiating rent and handling related fees, 6) Applying skills from a retreat to improve work, 7) Acknowledging ongoing help with packing and organizing, 8) Expressing gratitude for assistance with children\u2019s rooms, 9) Collaborating on a project with a friend, 10) Adjusting budget after a job change.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "66, 72",
+                "126, 128, 130",
+                "308, 310, 312",
+                "480, 484",
+                "586, 598, 588, 600, 602",
+                "710",
+                "834",
+                "914",
+                "1058, 1142",
+                "1144"
+            ],
+            "ordering_tested": [
+                "1st: Viewing preparation and scheduling",
+                "2nd: Lease review and resource consultation",
+                "3rd: Farewell event planning",
+                "4th: Childcare and safety coordination",
+                "5th: Rent negotiation and fee handling",
+                "6th: Skill application from retreat",
+                "7th: Help with packing and organizing",
+                "8th: Assistance with children\u2019s rooms",
+                "9th: Project collaboration",
+                "10th: Budget adjustment after job change"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple related support topics",
+                "spans many conversation sessions",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse themes"
+            ],
+            "source_chat_ids": [
+                66,
+                72,
+                126,
+                128,
+                130,
+                308,
+                310,
+                312,
+                480,
+                484,
+                586,
+                588,
+                598,
+                600,
+                602,
+                710,
+                834,
+                914,
+                1058,
+                1142,
+                1144
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Preparing for and scheduling viewings",
+                "LLM response should mention: 2) Reviewing lease terms and consulting resources",
+                "LLM response should mention: 3) Planning and organizing a farewell event",
+                "LLM response should mention: 4) Arranging childcare and safety preparations during the move",
+                "LLM response should mention: 5) Negotiating rent and handling related fees",
+                "LLM response should mention: 6) Applying skills from a retreat to improve work",
+                "LLM response should mention: 7) Acknowledging ongoing help with packing and organizing",
+                "LLM response should mention: 8) Expressing gratitude for assistance with children\u2019s rooms",
+                "LLM response should mention: 9) Collaborating on a project with a friend",
+                "LLM response should mention: 10) Adjusting budget after a job change"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different topics related to my home and career throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these topics in this order: 1) First, you talked about advice from a colleague and mentor regarding career moves, 2) Then you discussed contacting and scheduling a local handyman for repairs, 3) Next, you mentioned coordinating specific repair tasks and moving-related considerations, 4) After that, you brought up concerns about utility bills and energy usage, 5) Finally, you talked about attending a writing conference and later about financial planning and networking opportunities.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 40: Career advice from mentor",
+                "Sessions 200, 202, 204, 206: Handyman contact and scheduling",
+                "Sessions 444, 446, 448, 522: Repair coordination and moving tasks",
+                "Sessions 684, 686, 688: Utility bill and energy concerns",
+                "Sessions 840, 844, 846, 976, 1072, 1076, 1176: Writing conference, financial planning, and networking"
+            ],
+            "ordering_tested": [
+                "1st: Career advice from mentor",
+                "2nd: Contacting and scheduling handyman",
+                "3rd: Repair coordination and moving tasks",
+                "4th: Utility bill and energy usage concerns",
+                "5th: Writing conference and financial planning"
+            ],
+            "source_chat_ids": [
+                [
+                    40
+                ],
+                [
+                    200,
+                    202,
+                    204,
+                    206
+                ],
+                [
+                    444,
+                    446,
+                    448,
+                    522
+                ],
+                [
+                    684,
+                    686,
+                    688
+                ],
+                [
+                    840,
+                    844,
+                    846,
+                    976,
+                    1072,
+                    1076,
+                    1176
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: 1) First, you talked about advice from a colleague and mentor regarding career moves",
+                "LLM response should mention: 2) Then you discussed contacting and scheduling a local handyman for repairs",
+                "LLM response should mention: 3) Next, you mentioned coordinating specific repair tasks and moving-related considerations",
+                "LLM response should mention: 4) After that, you brought up concerns about utility bills and energy usage",
+                "LLM response should mention: 5) Finally, you talked about attending a writing conference and later about financial planning and networking opportunities"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What is the monthly rent I mentioned I'm currently paying for my apartment?",
+            "answer": "You are currently paying $2,100 monthly rent.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions paying $2,100 monthly rent for the apartment.",
+            "key_facts_tested": [
+                "monthly rent amount"
+            ],
+            "source_chat_ids": [
+                36
+            ],
+            "rubric": [
+                "LLM response should state: $2,100"
+            ]
+        },
+        {
+            "question": "How did you help me weigh my options considering both my financial limits and the potential benefits each place might offer?",
+            "answer": "I helped you evaluate each apartment by comparing their prices relative to your budget and discussing the trade-offs between cost, location, and amenities, highlighting which options fit within or exceeded your financial comfort zone and what advantages each might provide.",
+            "difficulty": "hard",
+            "question_type": "Comparison Questions",
+            "conversation_reference": "Multiple turns: User's initial listing of apartments with prices, assistant's detailed pros and cons, budget considerations, and recommendations",
+            "key_facts_tested": [
+                "three apartments with specific prices",
+                "budget target of $2,300",
+                "trade-offs between cost and amenities/location",
+                "recommendations based on budget and priorities"
+            ],
+            "extraction_challenge": "LLM must integrate the user's budget constraints with the assistant's comparative analysis of each apartment's cost and benefits scattered across different parts of the conversation to explain the evaluation approach",
+            "source_chat_ids": [
+                76,
+                77
+            ],
+            "rubric": [
+                "LLM response should mention: comparing prices relative to budget",
+                "LLM response should mention: discussing trade-offs between cost, location, and amenities",
+                "LLM response should mention: highlighting options within or exceeding financial comfort zone",
+                "LLM response should mention: advantages each apartment might provide"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Who is coming to the party this weekend?",
+            "instruction_being_tested": "Always list guest counts when I ask about social events or gatherings.",
+            "expected_compliance": "Response should include the number of people attending the event along with any other relevant details.",
+            "compliance_indicators": [
+                "explicit mention of how many guests will attend",
+                "clear count of attendees",
+                "numerical guest information included"
+            ],
+            "non_compliance_signs": [
+                "no mention of number of guests",
+                "only general description of the event",
+                "vague or missing attendance details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                560
+            ],
+            "rubric": [
+                "LLM response should include: explicit mention of how many guests will attend"
+            ]
+        },
+        {
+            "question": "When is the farewell barbecue happening?",
+            "instruction_being_tested": "Always confirm exact dates when I ask about social events or gatherings.",
+            "expected_compliance": "Response should include the specific date of the event rather than a vague or general time frame.",
+            "compliance_indicators": [
+                "exact date provided",
+                "clear and unambiguous date",
+                "confirmation of the day the event takes place"
+            ],
+            "non_compliance_signs": [
+                "only approximate time given",
+                "no date mentioned",
+                "vague references like 'next week' or 'soon'"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                462,
+                464
+            ],
+            "rubric": [
+                "LLM response should include: exact date provided"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "When is my scheduled safety inspection for the apartment?",
+            "answer": "The safety inspection is scheduled for March 25.",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "updated date of the safety inspection",
+            "conversation_references": [
+                "Safety Inspection: Scheduling a safety inspection for the preferred apartment on March 23, focusing on smoke detectors and electrical wiring.",
+                "The scheduled safety inspection on March 23 was moved to March 25 to accommodate maintenance staff availability."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original inspection date of March 23 instead of the updated March 25 date.",
+            "source_chat_ids": {
+                "original_info": [
+                    94
+                ],
+                "updated_info": [
+                    106
+                ]
+            },
+            "rubric": [
+                "LLM response should state: March 25"
+            ]
+        },
+        {
+            "question": "How many guests am I planning to invite to my housewarming party?",
+            "answer": "20 guests",
+            "difficulty": "easy",
+            "update_type": "guest_list_expansion",
+            "tests_retention_of": "updated number of guests invited to the party",
+            "conversation_references": [
+                "Character & Relationship Labels:Relationship Development: Brittney revealed plans to host a housewarming party on July 20, inviting 15 friends and family.",
+                "Information Update: The housewarming party planned for July 20 was extended to include 20 guests after additional RSVPs."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 15 guests instead of the updated 20 guests",
+            "source_chat_ids": {
+                "original_info": [
+                    528
+                ],
+                "updated_info": [
+                    558
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 20 guests"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much more am I budgeting for rent compared to my total utilities and internet combined?",
+            "answer": "You are budgeting $2,350 more for rent than your combined utilities and internet costs.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "monthly budget review",
+                "budget adjustment for rental goal"
+            ],
+            "reasoning_steps": [
+                "Identify the rent amount from the monthly budget session.",
+                "Sum the utilities and internet amounts from the same or related session.",
+                "Calculate the difference between rent and the combined utilities and internet."
+            ],
+            "source_chat_ids": [
+                154,
+                155
+            ],
+            "rubric": [
+                "LLM response should state: $2,350"
+            ]
+        },
+        {
+            "question": "How many bedrooms am I planning to have if I renew my lease or move to a new place?",
+            "answer": "If you renew your lease, you will stay in your current 3-bedroom apartment; if you move, you plan to find a 4-bedroom apartment.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "36",
+                "38"
+            ],
+            "reasoning_steps": [
+                "Identify the number of bedrooms in the current apartment from the initial user message.",
+                "Find the user's plan for a new apartment's bedroom count if they decide to move.",
+                "Compare the two bedroom counts to answer the question."
+            ],
+            "source_chat_ids": [
+                36,
+                38
+            ],
+            "rubric": [
+                "LLM response should mention: 3-bedroom if renewing lease",
+                "LLM response should mention: 4-bedroom if moving"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm trying to choose an apartment to rent soon. What factors should I think about to make sure I\u2019ll be comfortable living there?",
+            "preference_being_tested": "I prefer apartments with natural light and quiet surroundings, prioritizing a south-facing living room and minimal street noise.",
+            "expected_compliance": "Response should highlight aspects related to natural light, orientation of rooms (such as south-facing living room), and noise levels, demonstrating awareness of the user's preference for quiet and well-lit spaces.",
+            "compliance_indicators": [
+                "mentions importance of sunlight or room orientation",
+                "discusses noise considerations or quiet surroundings",
+                "recommends apartments with features that enhance comfort related to light and sound",
+                "acknowledges room positioning or environmental factors"
+            ],
+            "non_compliance_signs": [
+                "ignores lighting or noise factors",
+                "focuses only on unrelated apartment features",
+                "does not mention room orientation or environmental comfort",
+                "provides generic advice without addressing comfort related to light or noise"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                82,
+                88
+            ],
+            "rubric": [
+                "LLM response should mention: importance of sunlight or room orientation",
+                "LLM response should mention: discusses noise considerations or quiet surroundings",
+                "LLM response should mention: recommends apartments with features that enhance comfort related to light and sound"
+            ]
+        },
+        {
+            "question": "I'm expecting a rent increase soon. When do you think I should reach out to my landlord to talk about it?",
+            "preference_being_tested": "I prefer to negotiate rent increases early to avoid last-minute stress and secure better terms.",
+            "expected_compliance": "Response should suggest initiating the conversation about rent increases well before the increase takes effect, reflecting the user's preference for early negotiation.",
+            "compliance_indicators": [
+                "recommends contacting landlord ahead of time",
+                "mentions benefits of early discussion",
+                "advises against waiting until last minute"
+            ],
+            "non_compliance_signs": [
+                "suggests waiting until close to or after the increase",
+                "ignores timing of negotiation",
+                "does not address when to start the conversation"
+            ],
+            "difficulty": "medium",
+            "preference_type": "timing and negotiation strategy",
+            "source_chat_ids": [
+                606
+            ],
+            "rubric": [
+                "LLM response should mention: contacting landlord ahead of time",
+                "LLM response should mention: advises against waiting until last minute"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of what we've discussed about finding and affording a new home?",
+            "ideal_summary": "We talked about how your age shouldn't affect renting a home in New Gary, Saint Helena, and the importance of having good credit, income verification, and references. You shared your family's needs for a 4-bedroom apartment with a home office near Lincoln Park, and I gave tips on checking these features during viewings. We also reviewed your budget of $72,000 annually, estimating that spending around $1,800 per month on rent is reasonable, and discussed ways to find listings within that price range near Lincoln Park.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple budget and needs overview",
+                "straightforward housing search summary"
+            ],
+            "synthesis_required": "Combining basic rental eligibility, family needs, and budget considerations into a clear summary",
+            "source_chat_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "rubric": [
+                "LLM response should mention: We talked about how your age shouldn't affect renting a home in New Gary, Saint Helena, and the importance of having good credit, income verification, and references.",
+                "LLM response should mention: You shared your family's needs for a 4-bedroom apartment with a home office near Lincoln Park, and I gave tips on checking these features during viewings.",
+                "LLM response should mention: We also reviewed your budget of $72,000 annually, estimating that spending around $1,800 per month on rent is reasonable, and discussed ways to find listings within that price range near Lincoln Park."
+            ]
+        },
+        {
+            "question": "Can you give me a thorough summary of everything involved in managing my housing situation from lease concerns through moving and settling in, covering all the key steps, challenges, and decisions I faced along the way?",
+            "ideal_summary": "The summary should comprehensively cover the entire housing journey starting with concerns about the lease ending on June 30, 2024, including exploring options such as lease renewal, subletting, or moving to a new apartment. It should detail the negotiation process with the landlord, criteria setting for a new 4-bedroom rental within a $2,500 budget near Lincoln Park, and the step-by-step apartment search and application plan. The narrative must integrate the move-out process from the current apartment, including timely landlord notification, preparing for and handling the move-out inspection, addressing potential disagreements, and ensuring the security deposit refund. It should also include the move-in coordination for the new apartment, such as confirming movers, utility setups, and day-of logistics. Additionally, the summary should incorporate health and safety considerations like the mold inspection results and awareness of other hazards, as well as managing maintenance requests and social aspects like hosting a housewarming party. Throughout, the summary must reflect the timeline progression, financial and logistical planning, communication strategies with landlords and service providers, and proactive problem-solving to ensure a smooth transition and settling into the new home.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                36,
+                37,
+                38,
+                39,
+                50,
+                51,
+                188,
+                189,
+                194,
+                195,
+                272,
+                273,
+                274,
+                275,
+                277,
+                280,
+                281,
+                282,
+                283,
+                285,
+                482,
+                483,
+                564,
+                565,
+                568,
+                569,
+                570,
+                571
+            ],
+            "rubric": [
+                "LLM response should mention: lease ending on June 30, 2024, including exploring options such as lease renewal, subletting, or moving to a new apartment",
+                "LLM response should mention: negotiation process with the landlord, criteria setting for a new 4-bedroom rental within a $2,500 budget near Lincoln Park, and the step-by-step apartment search and application plan",
+                "LLM response should mention: move-out process from the current apartment, including timely landlord notification, preparing for and handling the move-out inspection, addressing potential disagreements, and ensuring the security deposit refund",
+                "LLM response should mention: move-in coordination for the new apartment, such as confirming movers, utility setups, and day-of logistics",
+                "LLM response should mention: health and safety considerations like the mold inspection results and awareness of other hazards, as well as managing maintenance requests and social aspects like hosting a housewarming party",
+                "LLM response should mention: timeline progression, financial and logistical planning, communication strategies with landlords and service providers, and proactive problem-solving to ensure a smooth transition and settling into the new home"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I first prepared for the viewings Brittney suggested and when my safety inspection is scheduled?",
+            "answer": "There are 5 days between preparing for the viewings Brittney suggested on March 20 and the safety inspection scheduled for March 25.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 20: preparation for viewings",
+                "March 25: safety inspection scheduled"
+            ],
+            "conversation_references": [
+                "Session 66: preparation for viewings",
+                "Session 106: safety inspection preparation"
+            ],
+            "calculation_required": "March 25 - March 20 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    66
+                ],
+                "second_event": [
+                    106
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days",
+                "LLM response should state: from March 20 till March 25"
+            ]
+        },
+        {
+            "question": "How many days are there between when I scheduled the mold inspection and when I\u2019m planning to host the housewarming party?",
+            "answer": "There are 25 days between the mold inspection scheduled for June 25 and the housewarming party planned for July 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "June 25: mold inspection scheduled",
+                "July 20: housewarming party planned"
+            ],
+            "conversation_references": [
+                "Session 1: Mold inspection scheduling",
+                "Session 2: Housewarming party planning"
+            ],
+            "calculation_required": "July 20 - June 25 = 25 days",
+            "source_chat_ids": {
+                "first_event": [
+                    198
+                ],
+                "second_event": [
+                    528
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 25 days"
+            ]
+        }
+    ]
+}

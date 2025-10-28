@@ -1,0 +1,715 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Dr. Selim Kaya\u2019s medical background and specialties?",
+            "ideal_response": "Based on the provided chat, there is no information related to Dr. Selim Kaya\u2019s medical background or specialties.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The plan mentions Dr. Selim Kaya as the primary care physician but does not provide any background or specialty details.",
+            "plan_reference": "BATCH 1 PLAN, Bullet 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Dr. Selim Kaya\u2019s medical background",
+                "Based on the provided chat, there is no information related to Dr. Selim Kaya\u2019s specialties"
+            ]
+        },
+        {
+            "question": "What was the emotional atmosphere like during the March 15 electrophysiologist appointment with Dr. Selin Arslan?",
+            "ideal_response": "Based on the provided chat, there is no information related to the emotional atmosphere during the March 15 electrophysiologist appointment.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The appointment is mentioned with date and purpose but no emotional or subjective details are given.",
+            "plan_reference": "BATCH 3 PLAN, Bullet 6",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the emotional atmosphere during the March 15 electrophysiologist appointment"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever reached out to my primary care physician, Dr. Selim Kaya, for any health concerns?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have seen Dr. Selim Kaya a couple of times, but you also mentioned never contacting him for any health concerns. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Contact with primary care physician",
+            "conversation_references": [
+                "Session 32, 36, 40: Visits to Dr. Selim Kaya",
+                "Session 218: Never contacted Dr. Selim Kaya"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    32,
+                    36,
+                    40
+                ],
+                "second_statement": [
+                    218
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have seen Dr. Selim Kaya a couple of times",
+                "LLM response should mention: you also mentioned never contacting him for any health concerns",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever taken Metoprolol or any other beta-blocker medication before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you agreed to start Metoprolol to manage arrhythmia, but you also mentioned that you've never taken Metoprolol or any beta-blocker medication. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Prior use of Metoprolol or beta-blockers",
+            "conversation_references": [
+                "Session 244, 250, 256: Starting Metoprolol",
+                "Session 432: Never taken Metoprolol"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    244,
+                    250,
+                    256
+                ],
+                "second_statement": [
+                    432
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you agreed to start Metoprolol to manage arrhythmia",
+                "LLM response should mention: you also mentioned that you've never taken Metoprolol or any beta-blocker medication",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about my cardiology care progress in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your discussions about cardiology care progressed in this order: 1) Initial consult preparation and expectations, 2) Diagnostic test results interpretation and significance, 3) Follow-up appointment planning and question preparation, 4) Post-procedure recovery management and lifestyle adjustments, 5) Subsequent follow-up appointments with medication and health monitoring focus, 6) Cholesterol monitoring and lifestyle change considerations, 7) Later follow-ups addressing medication management and ongoing health status updates.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "chat_id 86, 92, 96",
+                "chat_id 224, 226, 238",
+                "chat_id 438",
+                "chat_id 880, 886, 890, 894",
+                "chat_id 1224, 1230, 1232, 1648, 1654, 1656, 1660, 1666, 1772, 1786",
+                "chat_id 1346, 1966, 1968, 1986",
+                "chat_id 1976, 1978"
+            ],
+            "ordering_tested": [
+                "1st: Consult preparation and expectations",
+                "2nd: Diagnostic test results interpretation",
+                "3rd: Follow-up appointment planning",
+                "4th: Post-procedure recovery and lifestyle",
+                "5th: Follow-ups with medication and monitoring",
+                "6th: Cholesterol monitoring and lifestyle changes",
+                "7th: Later follow-ups with medication updates"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "involves multiple related but distinct aspects of a broad health topic",
+                "spans numerous conversation sessions",
+                "tests ability to track evolving discussion themes",
+                "requires pattern recognition and development tracking"
+            ],
+            "source_chat_ids": [
+                86,
+                92,
+                96,
+                224,
+                226,
+                238,
+                438,
+                880,
+                886,
+                890,
+                894,
+                1224,
+                1230,
+                1232,
+                1648,
+                1654,
+                1656,
+                1660,
+                1666,
+                1772,
+                1786,
+                1346,
+                1966,
+                1968,
+                1986,
+                1976,
+                1978
+            ],
+            "rubric": [
+                "Consult preparation and expectations",
+                "Diagnostic test results interpretation",
+                "Follow-up appointment planning",
+                "Post-procedure recovery and lifestyle",
+                "Follow-ups with medication and monitoring",
+                "Cholesterol monitoring and lifestyle changes",
+                "Later follow-ups with medication updates"
+            ]
+        },
+        {
+            "question": "How did my focus on managing my medications and related health concerns shift throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your discussions about managing medications and related health concerns progressed as follows: 1) Initial concerns about blood pressure monitoring and device use, 2) Introduction and management of Metoprolol including dosage, side effects, and interactions, 3) Considerations around vitamin D supplementation alongside Metoprolol, 4) Planning for post-procedure care and support arrangements, 5) Transition to aspirin use including dosage, side effects, and medication interactions, 6) Broader lifestyle and health metric tracking related to heart health and cholesterol management, 7) Refinement of medication management strategies and lifestyle adjustments to support ongoing health goals.",
+            "difficulty": "hard",
+            "ordering_type": "conversation_evolution",
+            "total_mentions": 7,
+            "conversation_references": [
+                "82, 84, 94",
+                "302, 306, 314",
+                "516, 518, 526, 530, 532, 538, 540, 542, 544, 546",
+                "756, 762, 764, 766, 772",
+                "982, 986, 988, 992, 994, 1002, 1004",
+                "1208, 1210, 1350, 1368, 1370, 1634, 1642, 1646",
+                "1780, 1792, 1798, 1804, 1994, 2002"
+            ],
+            "ordering_tested": [
+                "1st: Blood pressure monitoring and device use",
+                "2nd: Metoprolol management and interactions",
+                "3rd: Vitamin D supplementation with Metoprolol",
+                "4th: Post-procedure care planning",
+                "5th: Aspirin introduction and management",
+                "6th: Lifestyle and health metric tracking",
+                "7th: Medication management refinement and lifestyle adjustments"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "involves multiple medication and health management topics",
+                "spans numerous conversation sessions",
+                "tests pattern recognition and conversation evolution",
+                "requires integration of diverse but related health themes"
+            ],
+            "source_chat_ids": [
+                [
+                    82,
+                    84,
+                    94
+                ],
+                [
+                    302,
+                    306,
+                    314
+                ],
+                [
+                    516,
+                    518,
+                    526,
+                    530,
+                    532,
+                    538,
+                    540,
+                    542,
+                    544,
+                    546
+                ],
+                [
+                    756,
+                    762,
+                    764,
+                    766,
+                    772
+                ],
+                [
+                    982,
+                    986,
+                    988,
+                    992,
+                    994,
+                    1002,
+                    1004
+                ],
+                [
+                    1208,
+                    1210,
+                    1350,
+                    1368,
+                    1370,
+                    1634,
+                    1642,
+                    1646
+                ],
+                [
+                    1780,
+                    1792,
+                    1798,
+                    1804,
+                    1994,
+                    2002
+                ]
+            ],
+            "rubric": [
+                "Blood pressure monitoring and device use",
+                "Metoprolol management and interactions",
+                "Vitamin D supplementation with Metoprolol",
+                "Post-procedure care planning",
+                "Aspirin introduction and management",
+                "Lifestyle and health metric tracking",
+                "Medication management refinement and lifestyle adjustments"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What specific health conditions did I include in my digital medical history file?",
+            "answer": "You included a diagnosis from 2018 of mild hypertension and an allergy to penicillin in your digital medical history file.",
+            "difficulty": "medium",
+            "question_type": "detail_recall",
+            "conversation_reference": "Turn 1: User's initial mention of medical history details",
+            "key_facts_tested": [
+                "2018 diagnosis",
+                "mild hypertension",
+                "allergy to penicillin",
+                "digital medical history file"
+            ],
+            "source_chat_ids": [
+                118
+            ],
+            "rubric": [
+                "LLM response should state: You included a diagnosis from 2018 of mild hypertension",
+                "LLM response should state: You included an allergy to penicillin"
+            ]
+        },
+        {
+            "question": "How did you explain the connection between my heart\u2019s pumping efficiency and the symptoms I might experience during physical activities, and what ongoing steps did you recommend to manage these effects?",
+            "answer": "I explained that your heart is pumping out a slightly lower percentage of blood than typical, which means it is working harder but still functioning adequately. This can lead to symptoms like fatigue and shortness of breath during physical activities. To manage these effects, I recommended gradually increasing your exercise intensity, monitoring symptoms closely, maintaining a heart-healthy diet, avoiding smoking and excessive alcohol, managing stress, and having regular follow-ups with your cardiologist to track your heart function and adjust treatment as needed.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: Explanation of ejection fraction meaning and impact, symptom monitoring, lifestyle and follow-up recommendations",
+            "key_facts_tested": [
+                "ejection fraction slightly below normal range",
+                "symptoms related to physical activity (fatigue, shortness of breath)",
+                "gradual exercise increase",
+                "diet and lifestyle modifications",
+                "regular cardiologist follow-ups"
+            ],
+            "extraction_challenge": "LLM must integrate the clinical meaning of heart function metrics with symptom descriptions and recommended management strategies spread across different assistant responses",
+            "source_chat_ids": [
+                235,
+                237
+            ],
+            "rubric": [
+                "LLM response should state: I explained that your heart is pumping out a slightly lower percentage of blood than typical, which means it is working harder but still functioning adequately",
+                "LLM response should state: This can lead to symptoms like fatigue and shortness of breath during physical activities.",
+                "LLM response should state: gradually increasing your exercise intensity",
+                "LLM response should state: monitoring symptoms closely",
+                "LLM response should state: maintaining a heart-healthy diet",
+                "LLM response should state: avoiding smoking and excessive alcohol",
+                "LLM response should state: managing stress",
+                "LLM response should state: having regular follow-ups with your cardiologist to track your heart function and adjust treatment"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "I've been feeling some discomfort in my chest lately. What should I pay attention to?",
+            "instruction_being_tested": "Always provide detailed symptom tracking formats when I ask about chest tightness",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                216
+            ],
+            "rubric": [
+                "LLM response should contain: detailed symptom tracking formats"
+            ]
+        },
+        {
+            "question": "What should I expect to pay for my recent medical services?",
+            "instruction_being_tested": "Always confirm financial arrangements explicitly when I ask about medical billing.",
+            "expected_compliance": "Response should include explicit confirmation of any financial details related to the medical services, such as costs, payment terms, or billing specifics.",
+            "compliance_indicators": [
+                "clear statement of costs",
+                "confirmation of payment details",
+                "explicit mention of financial terms",
+                "direct acknowledgment of charges"
+            ],
+            "non_compliance_signs": [
+                "vague or missing cost information",
+                "no mention of payment details",
+                "general or ambiguous response about billing",
+                "ignoring financial specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                876
+            ],
+            "rubric": [
+                "LLM response should contain: clear statement of costs",
+                "LLM response should contain: explicit mention of financial terms",
+                "LLM response should contain: direct acknowledgment of charges"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What blood pressure goal am I aiming to reach within three months?",
+            "answer": "Below 125/75",
+            "difficulty": "easy",
+            "update_type": "goal_adjustment",
+            "tests_retention_of": "updated blood pressure target",
+            "conversation_references": [
+                "I aim to reduce my blood pressure from 140/90 to below 130/80 within 3 months through diet and exercise.",
+                "I adjusted my blood pressure goal to reach below 125/75 within 3 months after reviewing recent readings with Dr. Kaya."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original goal of below 130/80 instead of the updated target below 125/75",
+            "source_chat_ids": {
+                "original_info": [
+                    60
+                ],
+                "updated_info": [
+                    214
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Below 125/75"
+            ]
+        },
+        {
+            "question": "How many installments and what amount are included in my hospital payment plan?",
+            "answer": "Four monthly installments of $150 each.",
+            "difficulty": "easy",
+            "update_type": "payment_plan_adjustment",
+            "tests_retention_of": "number and amount of installments in the hospital payment plan",
+            "conversation_references": [
+                "Arranged hospital payment plan with 3 monthly installments of $200 starting May 1, 2024.",
+                "The hospital payment plan was adjusted to 4 monthly installments of $150 starting May 1, 2024, to better fit my budget."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original plan of 3 installments of $200 instead of the updated 4 installments of $150.",
+            "source_chat_ids": {
+                "original_info": [
+                    860
+                ],
+                "updated_info": [
+                    874
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Four monthly installments",
+                "LLM response should state: $150"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How has the frequency and duration of my chest tightness episodes changed from the initial times I noticed them to the latest reports I shared?",
+            "answer": "Your chest tightness episodes initially occurred twice in a month lasting about five minutes each, then increased to five times in a month lasting 3-7 minutes, and later decreased to once weekly lasting around five minutes.",
+            "difficulty": "medium",
+            "reasoning_type": "evolution_tracking",
+            "sessions_required": 4,
+            "conversation_references": [
+                "Initial chest tightness concerns and symptom description",
+                "Increased frequency and duration after physical exertion",
+                "Reduction in frequency by early March",
+                "Further reduction in frequency by early April"
+            ],
+            "reasoning_steps": [
+                "Identify the initial frequency and duration of chest tightness episodes from the earliest user reports.",
+                "Note the increase in frequency and variation in duration as the user reports more episodes after physical activity.",
+                "Recognize the reported decrease in frequency to twice weekly by early March.",
+                "Observe the further decrease to once weekly episodes by early April, with duration remaining around five minutes."
+            ],
+            "source_chat_ids": [
+                30,
+                220,
+                456,
+                718
+            ],
+            "rubric": [
+                "LLM response should state: Your chest tightness episodes initially occurred twice in a month",
+                "LLM response should state: Your chest tightness episodes lasted about five minutes",
+                "LLM response should state: Your chest tightness episodes increased to five times in a month lasting 3-7 minutes",
+                "LLM response should state: Your chest tightness episodes later decreased to once weekly lasting around five minutes"
+            ]
+        },
+        {
+            "question": "How many times per week did my chest tightness episodes decrease from and to?",
+            "answer": "They decreased from 5 times per week to 2 times per week.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "User reported chest tightness frequency",
+                "User asked if improvement was due to medication or lifestyle"
+            ],
+            "reasoning_steps": [
+                "Identify the initial frequency of chest tightness episodes reported by the user.",
+                "Identify the later reported frequency of chest tightness episodes.",
+                "Compare the two frequencies to determine the decrease."
+            ],
+            "source_chat_ids": [
+                490,
+                489
+            ],
+            "rubric": [
+                "LLM response should state: They decreased from 5 times per week to 2 times per week."
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you help me find a doctor and some tools that would fit well with my routine?",
+            "preference_being_tested": "I prefer morning appointments and self-monitoring tools that provide clear numerical data over subjective symptom tracking.",
+            "expected_compliance": "Response should suggest doctors with morning availability and recommend self-monitoring tools that offer clear numerical data rather than subjective symptom tracking methods.",
+            "compliance_indicators": [
+                "mentions doctors with morning appointment slots",
+                "recommends devices or tools that provide numerical readings",
+                "avoids suggesting subjective symptom tracking tools",
+                "aligns suggestions with user's scheduling and monitoring needs"
+            ],
+            "non_compliance_signs": [
+                "recommends doctors only with afternoon or evening availability",
+                "suggests tools focused on subjective symptom tracking",
+                "ignores appointment timing preferences",
+                "does not provide numerical data-based monitoring options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                174,
+                186
+            ],
+            "rubric": [
+                "LLM response should contain: mentions doctors with morning appointment slots",
+                "LLM response should contain: recommends devices or tools that provide numerical readings"
+            ]
+        },
+        {
+            "question": "Can you suggest some tools that would help me keep track of my symptoms throughout the day?",
+            "preference_being_tested": "I prefer clear, data-driven explanations from doctors and use digital tools for symptom tracking over paper logs.",
+            "expected_compliance": "Response should recommend digital symptom tracking tools that provide clear, data-oriented feedback and avoid suggesting paper-based methods, reflecting the user's preference for digital and data-driven approaches.",
+            "compliance_indicators": [
+                "recommends digital apps or platforms",
+                "mentions features like data visualization or analytics",
+                "avoids suggesting paper logs or manual tracking methods",
+                "includes options that support symptom reminders or automated tracking"
+            ],
+            "non_compliance_signs": [
+                "suggests paper logs or manual note-taking",
+                "recommends tools without data presentation features",
+                "ignores digital options",
+                "fails to mention any symptom tracking tools"
+            ],
+            "difficulty": "medium",
+            "preference_type": "tool_recommendation",
+            "source_chat_ids": [
+                324,
+                334
+            ],
+            "rubric": [
+                "LLM response should contain: recommends digital apps or platforms",
+                "LLM response should contain: mentions features like data visualization or analytics",
+                "LLM response should contain: avoids suggesting paper logs or manual tracking methods",
+                "LLM response should contain: includes options that support symptom reminders or automated tracking"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how my concerns about chest tightness and blood pressure have been addressed and managed throughout our conversations?",
+            "ideal_summary": "Throughout our discussions, your concerns about chest tightness and elevated blood pressure have been carefully explored and managed in a progressive manner. Initially, the chest tightness episodes, lasting around 5 minutes and occurring sporadically, were identified as potentially serious symptoms warranting medical evaluation, with possible causes ranging from cardiac issues to anxiety and musculoskeletal problems. You were advised to monitor symptoms closely, keep a detailed symptom diary, and consult your primary care physician, Dr. Kaya, while preparing for a cardiology consultation with Dr. Ay\u015fe Demir. As the conversations progressed, detailed guidance was provided on how to prepare for the cardiology appointment, including bringing symptom logs, medication lists, and relevant medical history, as well as formulating prioritized questions to maximize the consultation's effectiveness. Concurrently, your elevated blood pressure readings (around 140/90) prompted recommendations for lifestyle modifications, including adopting the DASH diet, engaging in regular aerobic and strength exercises, reducing sodium and caffeine intake, and managing stress. You were encouraged to use the Omron BP742N monitor for twice-daily measurements and to track readings using tools like the CareClinic app, with instructions on interpreting the data and sharing it with your healthcare providers. Further, strategies to balance health goals with daily life activities, such as jogging with your son, and to improve sleep quality through caffeine reduction and other lifestyle changes were discussed to support overall cardiovascular health. The plan culminates in ongoing monitoring, regular medical follow-ups, and proactive communication with your healthcare team to ensure comprehensive management of your symptoms and blood pressure.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                30,
+                31,
+                38,
+                39,
+                44,
+                45,
+                46,
+                47,
+                60,
+                61,
+                62,
+                78,
+                79,
+                82,
+                83,
+                84,
+                85,
+                94,
+                95,
+                86,
+                87,
+                92,
+                93,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                108,
+                109,
+                114,
+                115,
+                116,
+                117,
+                104,
+                105,
+                106,
+                107,
+                112,
+                113,
+                118,
+                119,
+                126,
+                127,
+                128,
+                129,
+                220,
+                221,
+                222,
+                223,
+                228,
+                229,
+                240,
+                241,
+                224,
+                225,
+                226,
+                227,
+                238,
+                239,
+                230,
+                231,
+                234,
+                235,
+                236,
+                237,
+                242,
+                243,
+                248,
+                249,
+                254,
+                255
+            ],
+            "rubric": [
+                "LLM response should contain: the chest tightness episodes, lasting around 5 minutes and occurring sporadically, were identified as potentially serious symptoms warranting medical evaluation, with possible causes ranging from cardiac issues to anxiety",
+                "LLM response should contain: You were advised to monitor symptoms closely, keep a detailed symptom diary, and consult your primary care physician, Dr. Kaya, while preparing for a cardiology consultation",
+                "LLM response should contain: detailed guidance was provided on how to prepare for the cardiology appointment, including bringing symptom logs, medication lists, and relevant medical history, as well as formulating prioritized questions",
+                "LLM response should contain: your elevated blood pressure readings (around 140/90) prompted recommendations for lifestyle modifications, including adopting the DASH diet, engaging in regular aerobic and strength exercises",
+                "LLM response should contain: You were encouraged to use the Omron BP742N monitor for twice-daily measurements and to track readings using tools like the CareClinic app, with instructions on interpreting the data and sharing it with your healthcare providers",
+                "LLM response should contain: strategies to balance health goals with daily life activities, such as jogging with your son, and to improve sleep quality through caffeine reduction and other lifestyle changes were discussed"
+            ]
+        },
+        {
+            "question": "Can you give me a comprehensive summary of how my arrhythmia management has progressed, including my medication, monitoring, lifestyle changes, and upcoming treatments?",
+            "ideal_summary": "Your arrhythmia management journey began with starting Metoprolol 25 mg daily on February 7, 2024, aimed at controlling your heart rhythm. Early on, you were informed about common side effects like fatigue and dizziness, and strategies to monitor and manage them, including keeping a symptom diary and using reminders to ensure medication adherence. Alongside medication, lifestyle modifications were recommended, such as dietary adjustments, moderate exercise, stress reduction techniques like mindfulness and guided breathing, and avoiding known arrhythmia triggers. To better understand your condition, a 24-hour Holter monitor test was scheduled and later rescheduled to February 14, 2024, with Nurse Elif coordinating the fitting at North Ericshire Medical Center. The data from this test, showing 120 arrhythmia episodes mostly during afternoon rest, has been crucial for your healthcare team, including Dr. Ayse Demir and Dr. Selim Kaya, to evaluate your treatment effectiveness and plan next steps. Based on these findings and ongoing symptoms, you have a follow-up appointment with Dr. Demir on February 20, 2024, to discuss results and potential medication adjustments, including an increase in Metoprolol dose to 50 mg daily. Looking ahead, you are preparing for a consultation with Dr. Selin Arslan regarding a possible ablation procedure, with detailed information provided about the process, risks, benefits, and how the Holter monitor results will influence this decision. Throughout this progression, you have been encouraged to maintain detailed symptom and medication logs, monitor vital signs, and communicate openly with your healthcare providers to optimize your arrhythmia management and overall heart health.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                244,
+                245,
+                251,
+                257,
+                259,
+                261,
+                267,
+                277,
+                434,
+                435,
+                438,
+                440,
+                447,
+                458,
+                462,
+                466,
+                468,
+                470
+            ],
+            "key_elements_tested": [
+                "medication initiation and side effects",
+                "lifestyle modifications",
+                "diagnostic monitoring and results",
+                "treatment adjustments and planning",
+                "preparation for advanced interventions"
+            ],
+            "synthesis_required": "Integrating medication, lifestyle, monitoring, clinical findings, and treatment planning into a coherent narrative showing progression and cause-effect relationships",
+            "rubric": [
+                "LLM response should contain: you were informed about common side effects like fatigue and dizziness, and strategies to monitor and manage them, including keeping a symptom diary and using reminders to ensure medication adherence",
+                "LLM response should contain: lifestyle modifications were recommended, such as dietary adjustments, moderate exercise, stress reduction techniques like mindfulness and guided breathing, and avoiding known arrhythmia triggers",
+                "LLM response should contain: a 24-hour Holter monitor test was scheduled and later rescheduled to February 14, 2024, with Nurse Elif",
+                "LLM response should contain: test showed 120 arrhythmia episodes mostly during afternoon rest, has been crucial for your healthcare team, including Dr. Ayse Demir and Dr. Selim Kaya, to evaluate your treatment effectiveness and plan next steps",
+                "LLM response should contain: you have a follow-up appointment with Dr. Demir on February 20, 2024, to discuss results and potential medication adjustments, including an increase in Metoprolol dose to 50 mg daily",
+                "LLM response should contain: Looking ahead, you are preparing for a consultation with Dr. Selin Arslan regarding a possible ablation procedure, with detailed information provided about the process, risks, benefits, and how the Holter monitor results will influence this decision"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I started the 24-hour Holter monitor test did my follow-up appointment with Dr. Demir take place?",
+            "answer": "The follow-up appointment took place 8 days after the 24-hour Holter monitor test started on February 12, 2024, with the appointment on February 20, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 12, 2024: start of 24-hour Holter monitor test",
+                "February 20, 2024: follow-up appointment"
+            ],
+            "conversation_references": [
+                "Session 1: Holter monitor test scheduling and preparation",
+                "Session 4: follow-up appointment scheduling"
+            ],
+            "calculation_required": "February 20 - February 12 = 8 days",
+            "source_chat_ids": {
+                "first_event": [
+                    242
+                ],
+                "second_event": [
+                    438
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 8 days",
+                "LLM response should state: from February 12, 2024 till February 20, 2024"
+            ]
+        },
+        {
+            "question": "How many days passed between when I started taking Metoprolol 25 mg daily and when I increased the dose to 50 mg daily?",
+            "answer": "15 days passed between starting Metoprolol 25 mg daily on February 7, 2024, and increasing the dose to 50 mg daily on February 22, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 7, 2024: started Metoprolol 25 mg daily",
+                "February 22, 2024: increased dose to 50 mg daily"
+            ],
+            "conversation_references": [
+                "Session 244: starting Metoprolol 25 mg",
+                "Session 440: increasing Metoprolol dose to 50 mg"
+            ],
+            "calculation_required": "February 22, 2024 - February 7, 2024 = 15 days",
+            "source_chat_ids": {
+                "first_event": [
+                    244
+                ],
+                "second_event": [
+                    440
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 15 days",
+                "LLM response should state: from February 7, 2024 till February 22, 2024"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,681 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the specific criteria used to select AWS EC2 t3.medium instances for the initial deployment?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific criteria for selecting AWS EC2 t3.medium instances.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The instance type is mentioned but the selection criteria or considerations are not detailed.",
+            "plan_reference": "Batch 1, Bullet 25",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific criteria for selecting AWS EC2 t3.medium instances."
+            ]
+        },
+        {
+            "question": "What was the feedback from users regarding the multi-language support added with i18next in React?",
+            "ideal_response": "Based on the provided chat, there is no information related to user feedback on the multi-language support feature.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Multi-language support is described but no user reactions or feedback are provided.",
+            "plan_reference": "Batch 4, Bullet 2",
+            "rubric": [
+                "Based on the provided chat, there is no information related to user feedback on the multi-language support feature."
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I implemented retry logic with exponential backoff for handling HTTP 429 and 503 errors in this project?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said that retry logic with exponential backoff for HTTP 429 and 503 errors has been implemented, but you also mentioned that you have never implemented any retry logic for HTTP errors in this project. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "implementation of retry logic for HTTP errors",
+            "conversation_references": [
+                "chat_id 246",
+                "chat_id 248"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    246
+                ],
+                "second_statement": [
+                    248
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said that retry logic with exponential backoff for HTTP 429 and 503 errors has been implemented",
+                "LLM response should mention: you also mentioned that you have never implemented any retry logic for HTTP errors in this project",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I created Cypress tests for user login and personalized feed?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. In one instance, you said you created Cypress tests for user login and personalized feed with a passing rate of 92%, but elsewhere you mentioned you have never created any Cypress tests for those features. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Creation of Cypress tests for user login and personalized feed",
+            "conversation_references": [
+                "chat_id: 410",
+                "chat_id: 416"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    410,
+                    416
+                ],
+                "second_statement": [
+                    410,
+                    416
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you created Cypress tests for user login and personalized feed with a passing rate of 92%",
+                "LLM response should mention: you mentioned you have never created any Cypress tests for those features.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you reconstruct the sequence in which I brought up different aspects of my recommendation engine development and optimization in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned aspects of your recommendation engine development and optimization in this sequence: 1) Initial implementation and debugging of the collaborative filtering algorithm, 2) Handling missing user interactions in the data, 3) Issues with error messages related to data structures, 4) Incorporating user ratings and matrix factorization techniques, 5) Applying and improving diversity filters to increase topic variety, 6) Using caching strategies to improve performance and reduce latency, 7) Employing parallel processing techniques to optimize computation, 8) Integrating user feedback collection and error handling in the feedback UI, 9) Querying and aggregating feedback data efficiently in the database, 10) Enhancing the recommendation engine with advanced caching and parallelization methods.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 312, 314, 326",
+                "chat_id: 314",
+                "chat_id: 312, 326",
+                "chat_id: 852",
+                "chat_id: 686, 894, 896",
+                "chat_id: 680, 854",
+                "chat_id: 858, 860",
+                "chat_id: 850, 856, 862",
+                "chat_id: 862",
+                "chat_id: 854, 858"
+            ],
+            "ordering_tested": [
+                "1st: Collaborative filtering implementation and debugging",
+                "2nd: Handling missing user interactions",
+                "3rd: Debugging error messages",
+                "4th: Incorporating user ratings and matrix factorization",
+                "5th: Applying diversity filters",
+                "6th: Caching strategies for performance",
+                "7th: Parallel processing optimization",
+                "8th: User feedback collection and error handling",
+                "9th: Efficient feedback data querying",
+                "10th: Advanced caching and parallelization integration"
+            ],
+            "complexity_factors": [
+                "requires detailed chronological reconstruction",
+                "spans multiple technical subtopics",
+                "involves debugging, optimization, and feature integration",
+                "requires tracking mentions across many conversation turns",
+                "tests understanding of development progression and patterns"
+            ],
+            "source_chat_ids": [
+                312,
+                314,
+                326,
+                852,
+                686,
+                894,
+                896,
+                680,
+                854,
+                858,
+                850,
+                856,
+                862
+            ],
+            "rubric": [
+                "LLM response should mention: Collaborative filtering implementation and debugging",
+                "LLM response should mention: Handling missing user interactions",
+                "LLM response should mention: Debugging error messages",
+                "LLM response should mention: Incorporating user ratings and matrix factorization",
+                "LLM response should mention: Applying diversity filters",
+                "LLM response should mention: Caching strategies for performance",
+                "LLM response should mention: Parallel processing optimization",
+                "LLM response should mention: User feedback collection and error handling",
+                "LLM response should mention: Efficient feedback data querying",
+                "LLM response should mention: Advanced caching and parallelization integration"
+            ]
+        },
+        {
+            "question": "Can you reconstruct the timeline of when I first mentioned each aspect of my system architecture and related tooling in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned aspects of your system architecture and related tooling in this sequence: 1) Planning a microservices architecture with scraping, NLP, and API services communicating over REST using Python and FastAPI, 2) Reviewing OpenAPI documentation and API design best practices, 3) Upgrading FastAPI to a newer version for async and WebSocket support, 4) Integrating WebSockets for real-time updates and handling connection stability, 5) Addressing database query and schema performance issues with indexing, 6) Configuring web scraping with Scrapy including respecting robots.txt and user-agent rotation, 7) Implementing centralized error logging with Sentry and capturing user context, 8) Enhancing scraper functionality with paywall detection and accuracy improvements, 9) Integrating Twilio Verify API with error handling and rate limiting, 10) Setting up Istio service mesh with mutual TLS and traffic routing policies.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 28",
+                "chat_id 200",
+                "chat_id 596, 606",
+                "chat_id 606",
+                "chat_id 770, 776, 1126",
+                "chat_id 930, 932",
+                "chat_id 1118",
+                "chat_id 1270, 1272",
+                "chat_id 1410",
+                "chat_id 1718, 1726"
+            ],
+            "ordering_tested": [
+                "1st: Microservices architecture planning with scraping, NLP, API",
+                "2nd: OpenAPI documentation review",
+                "3rd: FastAPI upgrade for async and WebSocket",
+                "4th: WebSocket integration and stability",
+                "5th: Database query and schema optimization",
+                "6th: Scrapy configuration for robots.txt and user-agent rotation",
+                "7th: Centralized error logging with Sentry",
+                "8th: Paywall detection in scraper",
+                "9th: Twilio Verify API integration with rate limiting",
+                "10th: Istio service mesh setup with mutual TLS and routing"
+            ],
+            "complexity_factors": [
+                "requires detailed chronological reconstruction",
+                "involves multiple technical domains",
+                "spans many conversation sessions",
+                "requires tracking nuanced topic evolution",
+                "tests memory of mention order independent of real-world event timing"
+            ],
+            "source_chat_ids": [
+                28,
+                200,
+                596,
+                606,
+                770,
+                776,
+                1126,
+                930,
+                932,
+                1118,
+                1270,
+                1272,
+                1410,
+                1718,
+                1726
+            ],
+            "rubric": [
+                "LLM response should mention: Microservices architecture planning with scraping, NLP, API",
+                "LLM response should mention: OpenAPI documentation review",
+                "LLM response should mention: FastAPI upgrade for async and WebSocket",
+                "LLM response should mention: WebSocket integration and stability",
+                "LLM response should mention: Database query and schema optimization",
+                "LLM response should mention: Scrapy configuration for robots.txt and user-agent rotation",
+                "LLM response should mention: Centralized error logging with Sentry",
+                "LLM response should mention: Paywall detection in scraper",
+                "LLM response should mention: Twilio Verify API integration with rate limiting",
+                "LLM response should mention: Istio service mesh setup with mutual TLS and routing"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Which versions of the programming language, backend framework, database, and frontend library did I say I was using for my project?",
+            "answer": "You said you were using Python 3.10, FastAPI version 0.85, PostgreSQL 14, and React 18.2.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 0: Initial project setup details",
+            "key_facts_tested": [
+                "Python version",
+                "FastAPI version",
+                "PostgreSQL version",
+                "React version"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should state: Python 3.10",
+                "LLM response should state: FastAPI version 0.85",
+                "LLM response should state: PostgreSQL 14",
+                "LLM response should state: React 18.2"
+            ]
+        },
+        {
+            "question": "How did you organize the sequence of tasks to ensure the foundational work was completed before moving on to enhancements in the sprint?",
+            "answer": "I suggested prioritizing the collection and storage of feeds first since it was foundational, followed by implementing the fallback scraping method once the feed collection was stable, then developing the relevance ranker, and finally integrating the ranker with the API towards the sprint\u2019s end, aligning the schedule to complete each phase sequentially before starting the next.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: Task prioritization, sprint schedule, and detailed milestones",
+            "key_facts_tested": [
+                "task order: collect/store feeds first",
+                "fallback scraping after feed collection",
+                "ranker development after data collection",
+                "integration last",
+                "sprint timeline coordination"
+            ],
+            "extraction_challenge": "LLM must synthesize task dependencies, scheduling details, and prioritization rationale spread across different parts of the conversation to explain the sequencing strategy",
+            "source_chat_ids": [
+                48,
+                49
+            ],
+            "rubric": [
+                "LLM response should state: collect/store feeds",
+                "LLM response should state: fallback scraping after feed collection",
+                "LLM response should state: ranker development after data collection",
+                "LLM response should state: integrating the ranker with the API"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Which libraries are we currently using in the project?",
+            "instruction_being_tested": "Always provide detailed version numbers when I ask about software dependencies.",
+            "expected_compliance": "Response should include exact version numbers for all mentioned software dependencies rather than just names or vague references.",
+            "compliance_indicators": [
+                "specific version numbers for each dependency",
+                "clear identification of software versions",
+                "no omission of version details"
+            ],
+            "non_compliance_signs": [
+                "only software names given",
+                "no version information",
+                "general or approximate version references"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                166,
+                168
+            ],
+            "rubric": [
+                "LLM response should contain: specific version numbers for each dependency",
+                "LLM response should contain: no omission of version details"
+            ]
+        },
+        {
+            "question": "What are the typical limits I should consider for storing data when I'm not connected to the internet?",
+            "instruction_being_tested": "Always specify cache size limits when I ask about offline storage.",
+            "expected_compliance": "Response should include specific size limits related to the storage being discussed.",
+            "compliance_indicators": [
+                "mentions of size limits",
+                "specific numerical values for storage capacity",
+                "clear boundaries on storage amounts"
+            ],
+            "non_compliance_signs": [
+                "no mention of size or capacity limits",
+                "only general information about storage",
+                "vague or missing details about storage constraints"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1364
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of size limits"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What memory allocation do I use for my Lambda function to optimize cost without impacting latency?",
+            "answer": "384MB",
+            "difficulty": "easy",
+            "update_type": "performance_optimization",
+            "tests_retention_of": "optimized Lambda memory allocation value",
+            "conversation_references": [
+                "Performance & Optimization Labels:Memory Management: Reduced Lambda memory allocation from 1024MB to 512MB, saving $15/month without latency impact.",
+                "Information Update: The Lambda function memory was further optimized to 384MB, maintaining latency while reducing costs."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 512MB memory allocation instead of the optimized 384MB value.",
+            "source_chat_ids": {
+                "original_info": [
+                    610,
+                    628
+                ],
+                "updated_info": [
+                    662
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 384MB"
+            ]
+        },
+        {
+            "question": "What is the maximum size set for the database connection pool to handle peak loads?",
+            "answer": "75",
+            "difficulty": "easy",
+            "update_type": "configuration_increase",
+            "tests_retention_of": "updated maximum database connection pool size",
+            "conversation_references": [
+                "Diagnosed spike in 500 errors traced to DB connection pool exhaustion, max connections set to 50.",
+                "The max DB connection pool size was further increased to 75 to handle peak loads more effectively."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original max connection pool size of 50 instead of the updated 75.",
+            "source_chat_ids": {
+                "original_info": [
+                    1034
+                ],
+                "updated_info": [
+                    1174
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 75"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Considering my needs for batch processing articles, dynamic query updates, and performance optimization, how does my requirements collectively impact the design choices for handling large-scale article relevance scoring?",
+            "answer": "Your requirements collectively demand a design that supports efficient batch processing with manageable batch sizes to avoid memory issues, dynamic query embedding updates for flexible relevance scoring, and optimized computation using vectorized operations and GPU acceleration to handle large-scale throughput without latency bottlenecks.",
+            "difficulty": "medium",
+            "reasoning_type": "cross-session_correlation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id: 61 (dynamic query embedding for scoring)",
+                "chat_id: 63 (updating query dynamically)",
+                "chat_id: 68 (performance optimization of scoring function)",
+                "chat_id: 199 and 204 (batch processing and CUDA memory issues)"
+            ],
+            "reasoning_steps": [
+                "Identify from chat 199 and 204 that batch processing large numbers of articles requires managing batch sizes to prevent CUDA out-of-memory errors.",
+                "From chat 61 and 63, understand that the scoring function must support dynamic query embeddings that can be updated efficiently without reinitializing the model.",
+                "From chat 68, note that performance optimizations like vectorized operations and GPU utilization are necessary to speed up scoring computations.",
+                "Synthesize these points to conclude that the design must balance batch size, dynamic query updates, and optimized GPU usage to handle large-scale article relevance scoring effectively."
+            ],
+            "source_chat_ids": [
+                61,
+                63,
+                68,
+                199,
+                204
+            ],
+            "rubric": [
+                "LLM response should state: demand a design that supports efficient batch processing with manageable batch sizes to avoid memory issues",
+                "LLM response should state: dynamic query embedding updates for flexible relevance scoring",
+                "LLM response should state: optimized computation using vectorized operations and GPU acceleration to handle large-scale throughput without latency bottlenecks"
+            ]
+        },
+        {
+            "question": "Considering my different implementations and tests with Pegasus-large, how can I best reduce summary generation time while maintaining or improving summary quality, based on my code and performance details?",
+            "answer": "To best reduce summary generation time while maintaining or improving summary quality, you should initialize the model and tokenizer once outside the summarization function, move the model to GPU if available, use optimized generation parameters like beam size and max length, implement batch processing to leverage parallelism, and consider caching summaries to reduce redundant API calls. Additionally, fine-tuning the model on a news-specific dataset can improve summary quality, and measuring ROUGE scores on a validation subset can confirm improvements. Combining these strategies balances speed and quality effectively.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id:64-65 (API call debugging and correct usage)",
+                "chat_id:70-71 (direct model inference vs API usage and debugging)",
+                "chat_id:72-73 (caching summaries to reduce API calls)",
+                "chat_id:230-231 (performance optimization with GPU and batching)",
+                "chat_id:368-371 (fine-tuning for news domain and ROUGE evaluation)",
+                "chat_id:378-379 (performance optimization and generation parameter tuning)"
+            ],
+            "reasoning_steps": [
+                "Identify from initial sessions that API calls require correct endpoints and authentication, but direct model inference avoids API latency.",
+                "Recognize from later sessions that initializing model/tokenizer once and moving model to GPU reduces overhead and speeds up inference.",
+                "Incorporate caching from caching sessions to avoid repeated API calls or redundant summarization of identical texts.",
+                "Use batch processing to handle multiple articles simultaneously, improving throughput and reducing per-article latency.",
+                "Fine-tune the model on a news-specific dataset to improve summary quality, then measure ROUGE scores to validate improvements.",
+                "Adjust generation parameters (beam size, max/min length, no_repeat_ngram_size) to balance speed and quality.",
+                "Synthesize all these approaches to recommend a combined strategy that optimizes both performance and summary quality."
+            ],
+            "source_chat_ids": [
+                64,
+                65,
+                70,
+                71,
+                72,
+                73,
+                230,
+                231,
+                368,
+                369,
+                370,
+                371,
+                378,
+                379
+            ],
+            "rubric": [
+                "LLM response should state: initialize the model and tokenizer once outside the summarization function",
+                "LLM response should state: move the model to GPU if available",
+                "LLM response should state: use optimized generation parameters like beam size and max length",
+                "LLM response should state: implement batch processing to leverage parallelism",
+                "LLM response should state: consider caching summaries to reduce redundant API calls",
+                "LLM response should state: fine-tuning the model on a news-specific dataset can improve summary quality"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "How would you suggest organizing my scraper and API code to make it easier to update and expand later on?",
+            "preference_being_tested": "I prefer modular, testable code with clear separation of concerns to ease future refactoring and scaling.",
+            "expected_compliance": "Response should emphasize structuring code into distinct, independent components with clear responsibilities, facilitating testing and future modifications without tightly coupling parts.",
+            "compliance_indicators": [
+                "recommends dividing code into separate modules or layers",
+                "mentions isolating functionality to reduce dependencies",
+                "includes suggestions for writing tests for individual components",
+                "advises on practices that support easy updates and scaling"
+            ],
+            "non_compliance_signs": [
+                "suggests monolithic or tightly coupled code structures",
+                "ignores testing or modularization aspects",
+                "focuses only on immediate functionality without regard for future changes",
+                "does not address separation of concerns"
+            ],
+            "difficulty": "medium",
+            "preference_type": "code_structure",
+            "source_chat_ids": [
+                148
+            ],
+            "rubric": [
+                "LLM response should contain: recommends dividing code into separate modules or layers"
+            ]
+        },
+        {
+            "question": "I'm working on improving the performance of my PostgreSQL database for user-topic queries. What approaches would you suggest to handle this efficiently?",
+            "preference_being_tested": "I prefer using PostgreSQL native features over adding new services to reduce operational overhead.",
+            "expected_compliance": "Response should focus on solutions that leverage PostgreSQL's built-in capabilities rather than recommending external services or additional infrastructure, aligning with the user's preference to minimize operational overhead.",
+            "compliance_indicators": [
+                "recommends native PostgreSQL features like materialized views, indexes, or built-in functions",
+                "avoids suggesting external caching layers, message queues, or third-party services",
+                "mentions ways to optimize within PostgreSQL itself",
+                "focuses on database-side improvements rather than adding new components"
+            ],
+            "non_compliance_signs": [
+                "suggests adding external services like Redis, Elasticsearch, or separate caching systems",
+                "recommends architectural changes involving new infrastructure outside PostgreSQL",
+                "ignores native PostgreSQL features in favor of third-party tools",
+                "proposes solutions that increase operational complexity"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                406,
+                408,
+                414
+            ],
+            "rubric": [
+                "LLM response should contain: recommends native PostgreSQL features like materialized views, indexes, or built-in functions",
+                "LLM response should contain: avoids suggesting external caching layers, message queues, or third-party services",
+                "LLM response should contain: mentions ways to optimize within PostgreSQL itself"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed and comprehensive summary that captures the full scope of the topic, integrating all the key aspects and developments discussed across the different sessions?",
+            "ideal_summary": "The discussions collectively outline a multifaceted system architecture and implementation strategy involving several interconnected components and services. Initially, a microservices architecture was proposed, defining distinct scraping, NLP, and API services communicating via REST, with Python and FastAPI as core technologies. The scraping service leverages libraries like requests and BeautifulSoup for data extraction, while the NLP service employs Hugging Face transformers, specifically BERT for relevance ranking and Pegasus for summarization, with detailed guidance on model selection, embedding extraction, and handling long inputs through techniques like sliding windows and hierarchical summarization. The API service orchestrates these components, exposing endpoints and managing inter-service communication, with containerization and deployment strategies using Docker and Docker Compose. User profile management was addressed with recommendations favoring PostgreSQL for data integrity, including schema design, CRUD operations, and secure authentication and authorization practices incorporating password hashing and role-based access control. Web scraping optimization was explored extensively, emphasizing Scrapy settings such as download delays, concurrency limits, and error handling to manage crawl times effectively, alongside advanced techniques like user-agent and proxy rotation to mitigate blocking and improve success rates. Webhook and notification latency reduction strategies were also discussed, highlighting asynchronous processing, background tasks, message queuing with RabbitMQ for decoupling and prioritization, and WebSocket optimizations including message size reduction, binary protocols, and connection pre-warming. Finally, integration with third-party APIs like NewsAPI.org was optimized through caching, rate limiting, error handling with retries, and fallback mechanisms to ensure reliability within usage constraints. This comprehensive narrative reflects a complex, scalable, and robust system design integrating multiple technologies and best practices across data ingestion, processing, storage, and real-time notification layers.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "cross-component orchestration"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                28,
+                29,
+                30,
+                31,
+                34,
+                35,
+                36,
+                37,
+                39,
+                40,
+                41,
+                43,
+                270,
+                271,
+                273,
+                275,
+                277,
+                240,
+                241,
+                251,
+                253,
+                424,
+                425,
+                430,
+                431,
+                434,
+                435,
+                578,
+                579,
+                588,
+                589,
+                591,
+                593
+            ],
+            "rubric": [
+                "LLM response should contain: a microservices architecture was proposed, defining distinct scraping, NLP, and API services communicating via REST, with Python and FastAPI as core technologies",
+                "LLM response should contain: The scraping service leverages libraries like requests and BeautifulSoup for data extraction, while the NLP service employs Hugging Face transformers, specifically BERT for relevance ranking and Pegasus for summarization",
+                "LLM response should contain: The API service orchestrates these components, exposing endpoints and managing inter-service communication, with containerization and deployment strategies using Docker and Docker Compose.",
+                "LLM response should contain: User profile management was addressed with recommendations favoring PostgreSQL for data integrity",
+                "LLM response should contain: Web scraping optimization was explored extensively, emphasizing Scrapy settings such as download delays, concurrency limits, and error handling to manage crawl times effectively",
+                "LLM response should contain: Webhook and notification latency reduction strategies were also discussed, highlighting asynchronous processing, background tasks, message queuing with RabbitMQ",
+                "LLM response should contain: integration with third-party APIs like NewsAPI.org was optimized through caching, rate limiting, error handling with retries, and fallback mechanisms"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the entire process involved in designing and optimizing the database schema, handling user preferences, scheduling tasks, and improving topic relevance within my application? I'd like you to integrate all the key aspects, challenges, solutions, and best practices discussed across the different stages and sessions.",
+            "ideal_summary": "The discussions collectively cover the end-to-end development and optimization of a news aggregator application's backend and related features. Initially, the database schema design was addressed, focusing on normalization, data integrity, and performance improvements by adding foreign key constraints, unique constraints, and indexes to tables such as articles, users, topics, and relevance scores. The schema evolved to support many-to-many relationships through junction tables, enabling flexible associations between articles, users, and topics. Further refinement included the use of UUIDs for article IDs, appropriate data types for columns, and considerations for indexing and query optimization. Parallel to schema design, user preferences management was explored, proposing a flexible single-table approach with preference types and values, supported by SQLAlchemy models and indexing strategies to ensure scalability and efficient querying. The handling of user preferences via FastAPI endpoints was detailed, including request body schema definitions, validation using Pydantic models, error handling with try-except blocks, and extensibility for adding new preference fields. Task scheduling for sending daily digest emails was addressed by integrating APScheduler with FastAPI to run jobs at specified times, highlighting alternatives like Celery Beat and emphasizing simplicity and maintainability. Additionally, improvements in topic extraction and relevance accuracy were discussed, involving cosine similarity threshold tuning, feature extraction enhancements using TF-IDF and PCA, and strategies for balancing precision and recall. Finally, query optimization techniques for user_topics tables were covered, recommending composite and covering indexes to accelerate filtering and sorting operations. Throughout these sessions, best practices in database design, API development, task scheduling, and machine learning-based topic analysis were synthesized to form a cohesive, efficient, and scalable system architecture.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "database schema design and normalization",
+                "user preferences management and API handling",
+                "task scheduling integration",
+                "topic extraction and relevance improvement",
+                "query optimization strategies",
+                "data integrity and security considerations",
+                "performance tuning and indexing",
+                "multi-component system synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                66,
+                67,
+                74,
+                75,
+                76,
+                77,
+                84,
+                85,
+                246,
+                247,
+                248,
+                249,
+                258,
+                259,
+                268,
+                269,
+                278,
+                279,
+                392,
+                393,
+                394,
+                395,
+                404,
+                405,
+                742,
+                743,
+                748,
+                749,
+                750,
+                751
+            ],
+            "rubric": [
+                "LLM response should contain: the database schema design was addressed, focusing on normalization, data integrity, and performance improvements by adding foreign key constraints, unique constraints, and indexes to tables",
+                "LLM response should contain: The schema evolved to support many-to-many relationships through junction tables",
+                "LLM response should contain: refinement included the use of UUIDs for article IDs, appropriate data types for columns, and considerations for indexing and query optimization.",
+                "LLM response should contain: Parallel to schema design, user preferences management was explored, proposing a flexible single-table approach with preference types and values",
+                "LLM response should contain: The handling of user preferences via FastAPI endpoints was detailed, including request body schema definitions, validation using Pydantic models, error handling with try-except blocks",
+                "LLM response should contain: Task scheduling for sending daily digest emails was addressed by integrating APScheduler with FastAPI to run jobs at specified times",
+                "LLM response should contain: improvements in topic extraction and relevance accuracy were discussed, involving cosine similarity threshold tuning, feature extraction enhancements using TF-IDF and PCA, and strategies for balancing precision and recall",
+                "LLM response should contain: query optimization techniques for user_topics tables were covered, recommending composite and covering indexes to accelerate filtering and sorting operations"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I set the Sprint 1 deadline and when I adjusted the sprint deadline to mid-February?",
+            "answer": "There are 5 days between the original Sprint 1 deadline set for February 15 and the adjusted sprint deadline around February 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 15, 2024: Sprint 1 deadline set",
+                "Around February 20, 2024: Sprint deadline adjusted"
+            ],
+            "conversation_references": [
+                "chat_id 48",
+                "chat_id 164"
+            ],
+            "calculation_required": "February 20 - February 15 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    48
+                ],
+                "second_event": [
+                    164
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days",
+                "LLM response should state: from February 15 till February 20"
+            ]
+        },
+        {
+            "question": "How many days after we completed 94% of sprint 8 tasks was the anomaly detection UI delayed?",
+            "answer": "The anomaly detection UI was delayed by 4 days after we completed 94% of sprint 8 tasks.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Sprint 8 tasks 94% completion (explicit event)",
+                "Anomaly detection UI delayed by 4 days (relative event)"
+            ],
+            "conversation_references": [
+                "chat_id 1572",
+                "chat_id 1580"
+            ],
+            "calculation_required": "4 days delay after sprint 8 completion",
+            "source_chat_ids": {
+                "first_event": [
+                    1572
+                ],
+                "second_event": [
+                    1580
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4 days"
+            ]
+        }
+    ]
+}

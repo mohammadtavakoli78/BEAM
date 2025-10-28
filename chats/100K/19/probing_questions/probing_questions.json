@@ -1,0 +1,524 @@
+{
+    "abstention": [
+        {
+            "question": "What are the terms and conditions of the $10,000 trust Douglas wants to include for the kids?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific terms and conditions of the $10,000 trust.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The trust amount is mentioned but no detailed terms or conditions are provided",
+            "plan_reference": "Batch 1, Bullet 18 references the trust but lacks specifics",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific terms and conditions of the $10,000 trust"
+            ]
+        },
+        {
+            "question": "How did Kimberly and Bradley react emotionally to the suggestion of including a $7,000 fund for their care?",
+            "ideal_response": "Based on the provided chat, there is no information related to Kimberly and Bradley\u2019s emotional reactions to the $7,000 fund suggestion.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Their emotional responses are not described anywhere in the plan",
+            "plan_reference": "Batch 4, Bullet 3 mentions the suggestion but no emotional context",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Kimberly and Bradley\u2019s emotional reactions to the $7,000 fund suggestion"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I met attorney Stephanie to discuss my will?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have a meeting planned with attorney Stephanie, but you also mentioned that you've never met her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting with attorney Stephanie",
+            "conversation_references": [
+                "Session 34: Meeting planned with attorney Stephanie",
+                "Session 64: Never met attorney Stephanie"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    34
+                ],
+                "second_statement": [
+                    64
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have a meeting planned with attorney Stephanie",
+                "LLM response should mention: you also mentioned that you've never met her",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever used WillMaker Pro or any digital software to draft my will?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you drafted your will including guardianship details, but also mentioned never using WillMaker Pro or any digital software to draft it. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of digital software for will drafting",
+            "conversation_references": [
+                "Session 1: Will creation details",
+                "Session 2: Never used digital software"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    80
+                ],
+                "second_statement": [
+                    122
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you drafted your will including guardianship details",
+                "LLM response should mention: also mentioned never using WillMaker Pro or any digital software to draft it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my plans involving Douglas throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned aspects involving Douglas in this order: 1) How to include him in your estate plan, 2) The gift he gave you and whether to include him as a beneficiary, 3) His participation in the family meeting and his role as executor and guardian supporter, 4) Discussing the emergency fund for guardianship expenses with him, 5) Planning to talk to him about potential expenses and possibly increasing the fund.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 22: Estate planning inclusion",
+                "Session 108: Gift and beneficiary consideration",
+                "Session 178: Family meeting and executor role",
+                "Session 178: Emergency fund discussion",
+                "Session 180: Planning further discussion about expenses"
+            ],
+            "ordering_tested": [
+                "1st: Estate plan inclusion",
+                "2nd: Gift and beneficiary",
+                "3rd: Family meeting and executor role",
+                "4th: Emergency fund discussion",
+                "5th: Planning further discussion"
+            ],
+            "source_chat_ids": [
+                22,
+                108,
+                178,
+                178,
+                180
+            ],
+            "rubric": [
+                "Estate plan inclusion",
+                "Gift and beneficiary",
+                "Family meeting and executor role",
+                "Emergency fund discussion",
+                "Planning further discussion"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different concerns and plans related to my family\u2019s care and financial arrangements throughout our conversations, in order? Mention ONLY and ONLY seven items.",
+            "answer": "You mentioned these concerns and plans in this order: 1) Worrying about my parents and wanting to include them in my will, 2) Planning asset allocation and considering a power of attorney, 3) Adding a clause and fund for ongoing care with a trustee appointed, 4) Discussing an emergency fund for my kids\u2019 guardianship expenses, 5) Updating my will with a specific care fund amount for my parents, 6) Considering setting up a separate trust if the care fund is insufficient, 7) Asking about tax implications related to funding the trust.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Session 8: Initial concern about parents and will",
+                "Session 10: Asset listing and power of attorney",
+                "Session 12: Care fund clause and trustee appointment",
+                "Session 138: Emergency fund for kids\u2019 guardianship",
+                "Session 210: Will update with care fund amount",
+                "Session 212: Considering separate trust",
+                "Session 214: Tax implications of trust funding"
+            ],
+            "ordering_tested": [
+                "1st: Parents and will concern",
+                "2nd: Asset allocation and power of attorney",
+                "3rd: Care fund clause and trustee",
+                "4th: Kids\u2019 guardianship emergency fund",
+                "5th: Care fund amount update",
+                "6th: Separate trust consideration",
+                "7th: Tax implications discussion"
+            ],
+            "source_chat_ids": [
+                8,
+                10,
+                12,
+                138,
+                210,
+                212,
+                214
+            ],
+            "rubric": [
+                "Parents and will concern",
+                "Asset allocation and power of attorney",
+                "Care fund clause and trustee",
+                "Kids\u2019 guardianship emergency fund",
+                "Care fund amount update",
+                "Separate trust consideration",
+                "Tax implications discussion"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How far away did I say my parents live from me?",
+            "answer": "You said they live 12 miles away.",
+            "difficulty": "medium",
+            "question_type": "distance_recall",
+            "conversation_reference": "Turn 8: User mentions parents' location",
+            "key_facts_tested": [
+                "distance: 12 miles",
+                "location: parents' residence"
+            ],
+            "source_chat_ids": [
+                8
+            ],
+            "rubric": [
+                "LLM response should state: 12 miles away"
+            ]
+        },
+        {
+            "question": "How long have I been with Douglas?",
+            "answer": "You have been with Douglas for 3 years.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I've been with Douglas for 3 years now, and I met him at the Montserrat Film Festival on Nov 12, 2020...",
+            "key_facts_tested": [
+                "duration of relationship"
+            ],
+            "source_chat_ids": [
+                22
+            ],
+            "rubric": [
+                "LLM response should state: 3 years"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What do I need to include to make sure my wishes are legally valid?",
+            "instruction_being_tested": "Always provide detailed explanations of legal terms when I ask about will requirements.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                62
+            ],
+            "rubric": [
+                "LLM response should contain: rovide detailed explanations of legal terms"
+            ]
+        },
+        {
+            "question": "What are some popular tools I can use to organize and manage my digital files?",
+            "instruction_being_tested": "Always include software version details when I ask about digital asset management tools.",
+            "expected_compliance": "Response should include the names of digital asset management tools along with their specific version information.",
+            "compliance_indicators": [
+                "software version numbers mentioned",
+                "specific release details",
+                "version identifiers included with tool names"
+            ],
+            "non_compliance_signs": [
+                "only tool names given",
+                "no version information provided",
+                "general descriptions without versions"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                128
+            ],
+            "rubric": [
+                "LLM response should contain: software version numbers mentioned"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long does the probate process usually take in Montserrat?",
+            "answer": "5-7 months",
+            "difficulty": "easy",
+            "update_type": "timeline_shortening",
+            "tests_retention_of": "updated duration of the probate process",
+            "conversation_references": [
+                "Stephanie explained probate typically takes 6-9 months in Montserrat; I plan to prepare documents accordingly.",
+                "The time required to complete the probate process was shortened to 5-7 months after recent legal reforms."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 6-9 months duration instead of the updated 5-7 months",
+            "source_chat_ids": {
+                "original_info": [
+                    112
+                ],
+                "updated_info": [
+                    122
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5-7 months"
+            ]
+        },
+        {
+            "question": "What is the estimated estate tax rate applied to assets above $200,000?",
+            "answer": "12%",
+            "difficulty": "easy",
+            "update_type": "tax_rate_adjustment",
+            "tests_retention_of": "updated estate tax rate on assets above $200,000",
+            "conversation_references": [
+                "Financial & Budget Labels:Estate Taxes: Estimated estate tax is 15% on assets above $200,000; I want to minimize this legally.",
+                "Information Update: I adjusted the estimated estate tax rate to 12% on assets above $200,000 after consulting a tax advisor last week."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 15% estate tax rate instead of the updated 12% rate",
+            "source_chat_ids": {
+                "original_info": [
+                    36
+                ],
+                "updated_info": [
+                    56
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 12%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many children did I mention receiving annual gifts from me?",
+            "answer": "Three children",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 37",
+                "chat_id: 86"
+            ],
+            "reasoning_steps": [
+                "Identify the number of children mentioned as gift recipients in the example scenario.",
+                "Recall the user mentioning gifting $15,000 annually to each child.",
+                "Confirm the total count of children receiving gifts."
+            ],
+            "source_chat_ids": [
+                37,
+                86
+            ],
+            "rubric": [
+                "LLM response should state: Three children"
+            ]
+        },
+        {
+            "question": "How many specific assets or items have I mentioned across my conversations that are part of my estate planning?",
+            "answer": "Six specific assets or items: my home, vacation home, 2018 Toyota RAV4, film equipment, fireproof safe, and original will.",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 30",
+                "chat_id: 116",
+                "chat_id: 156"
+            ],
+            "reasoning_steps": [
+                "Identify the assets mentioned in the first session, including the home, vacation home, Toyota RAV4, and film equipment.",
+                "Note the mention of working with Dwayne to organize asset documents, implying the film equipment and other assets are included.",
+                "Recall the installation of a fireproof safe and mention of the original will as important estate items in the third session."
+            ],
+            "source_chat_ids": [
+                30,
+                116,
+                156
+            ],
+            "rubric": [
+                "LLM response should state: Six specific assets",
+                "LLM response should state: home",
+                "LLM response should state: vacation home",
+                "LLM response should state: 2018 Toyota RAV4",
+                "LLM response should state: film equipment",
+                "LLM response should state: fireproof safe",
+                "LLM response should state: original will"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to make some updates to my will in the future. How would you suggest I keep my documents so that making changes later is straightforward?",
+            "preference_being_tested": "I chose to update my will digitally using WillMaker Pro for flexibility and ease of future edits.",
+            "expected_compliance": "Response should recommend or acknowledge digital methods or tools that facilitate easy future edits and flexibility in updating wills, rather than only suggesting traditional paper-based or static options.",
+            "compliance_indicators": [
+                "mentions digital will updating tools",
+                "suggests methods that allow easy future edits",
+                "acknowledges flexibility in document management",
+                "recommends software or digital platforms for wills"
+            ],
+            "non_compliance_signs": [
+                "only suggests paper wills",
+                "ignores digital options",
+                "recommends static or hard-to-edit formats",
+                "does not address ease of future updates"
+            ],
+            "difficulty": "medium",
+            "preference_type": "method of document management",
+            "source_chat_ids": [
+                110
+            ],
+            "rubric": [
+                "LLM response should contain: mentions digital will updating tools"
+            ]
+        },
+        {
+            "question": "If I want to appoint someone to manage the responsibilities after I\u2019m gone, what should I consider when choosing between different candidates?",
+            "preference_being_tested": "I prefer naming Douglas executor because of his organizational skills, despite Kevin\u2019s legal background.",
+            "expected_compliance": "Response should acknowledge the user's prior indication of valuing organizational skills in the executor role and recommend accordingly, rather than focusing solely on legal expertise or other unrelated factors.",
+            "compliance_indicators": [
+                "mentions organizational skills as important",
+                "recommends Douglas based on organizational abilities",
+                "balances different candidate qualities without ignoring organizational skills"
+            ],
+            "non_compliance_signs": [
+                "focuses only on legal background",
+                "ignores organizational skills",
+                "recommends Kevin without addressing organizational skills",
+                "does not reference any relevant candidate qualities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                46,
+                48
+            ],
+            "rubric": [
+                "LLM response should contain: mentions organizational skills as important",
+                "LLM response should contain: recommends Douglas based on organizational abilities"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a complete summary of how my estate planning process has developed, including the key decisions and discussions I've had about executors, guardianship, and asset management?",
+            "ideal_summary": "Your estate planning process has unfolded through several important stages and discussions. Initially, you sought guidance on including Douglas in your estate plan, detailing how to list assets, specify provisions for him, update beneficiary designations, and formalize these in your will. Later, you faced a decision between naming Douglas or Kevin as executor, weighing factors like responsibility, legal knowledge, and family opinions, especially considering your parents' concerns and the importance of clear communication. To address these concerns, you organized a family meeting to discuss executor roles openly, explore co-executor options, and reach consensus. Subsequently, you worked on ensuring Douglas fully understands his executor duties and can handle conflicts by defining roles clearly, providing resources, and establishing conflict resolution mechanisms. You also planned a conversation with Douglas about a $5,000 emergency fund for guardianship expenses, preparing to discuss potential costs and management strategies. Finally, you prepared for Kevin, a paralegal friend, to review your will draft by organizing documents, summarizing your wishes, and identifying specific areas of concern such as guardianship provisions and digital assets, aiming to incorporate his legal insights and consult your attorney for final approval. Throughout this process, your estate planning has evolved with thoughtful decision-making, family involvement, and professional input to create a comprehensive and well-structured plan.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                23,
+                33,
+                69,
+                179,
+                189
+            ],
+            "key_elements_tested": [
+                "decision-making process",
+                "executor and guardianship considerations",
+                "family communication",
+                "role clarification and conflict resolution",
+                "legal review preparation"
+            ],
+            "synthesis_required": "Integrating multiple discussions and decisions over time into a coherent narrative showing progression and development",
+            "source_chat_ids": [
+                23,
+                33,
+                69,
+                179,
+                189
+            ],
+            "rubric": [
+                "LLM response should contain: you sought guidance on including Douglas in your estate plan, detailing how to list assets, specify provisions for him",
+                "LLM response should contain: you faced a decision between naming Douglas or Kevin as executor, weighing factors like responsibility, legal knowledge, and family opinions",
+                "LLM response should contain: you organized a family meeting to discuss executor roles openly, explore co-executor options, and reach consensus",
+                "LLM response should contain: you worked on ensuring Douglas fully understands his executor duties and can handle conflicts by defining roles clearly, providing resources, and establishing conflict resolution mechanisms",
+                "LLM response should contain: You also planned a conversation with Douglas about a $5,000 emergency fund for guardianship expenses, preparing to discuss potential costs and management strategies",
+                "LLM response should contain: you prepared for Kevin, a paralegal friend, to review your will draft by organizing documents, summarizing your wishes, and identifying specific areas of concern"
+            ]
+        },
+        {
+            "question": "Can you summarize what I need to know about preparing and finalizing my will and related documents?",
+            "ideal_summary": "You planned meetings with attorney Stephanie to finalize your will, ensuring it meets Montserrat's legal requirements, including the two-witness rule. Stephanie guided you through drafting, reviewing, selecting witnesses, signing, and optional notarization. You also learned how to prepare notarized affidavits for guardianship to help speed up probate, and later confirmed with attorney Diana that Montserrat now accepts electronic will signatures, which offers more convenience while maintaining legal validity and witness requirements.",
+            "difficulty": "easy",
+            "summarization_type": "basic_process_overview",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple narrative flow",
+                "essential legal requirements",
+                "process steps"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a concise overview",
+            "source_chat_ids": [
+                34,
+                85,
+                183,
+                221
+            ],
+            "rubric": [
+                "LLM response should contain: You planned meetings with attorney Stephanie to finalize your will, ensuring it meets Montserrat's legal requirements",
+                "LLM response should contain: Stephanie guided you through drafting, reviewing, selecting witnesses, signing, and optional notarization",
+                "LLM response should contain: learned how to prepare notarized affidavits for guardianship to help speed up probate",
+                "LLM response should contain: later confirmed with attorney Diana that Montserrat now accepts electronic will signatures, which offers more convenience"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between the family meeting at my home and when Douglas accepted the executor role?",
+            "answer": "21 days passed between the family meeting at my home on March 25 and Douglas accepting the executor role on April 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 25: family meeting at my home",
+                "April 15: Douglas accepted executor role"
+            ],
+            "conversation_references": [
+                "Session 2: family meeting at home",
+                "Session 2: Douglas acceptance"
+            ],
+            "calculation_required": "April 15 - March 25 = 21 days",
+            "source_chat_ids": {
+                "first_event": [
+                    68
+                ],
+                "second_event": [
+                    68
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 21 days",
+                "LLM response should state: from March 25 till April 15"
+            ]
+        },
+        {
+            "question": "How many days passed between my meeting with attorney Stephanie to finalize my will and her review confirming the two-witness requirement was met?",
+            "answer": "40 days passed between the meeting with attorney Stephanie on March 22 to finalize the will and her review on May 1 confirming the two-witness requirement was met.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 22: meeting to finalize will",
+                "May 1: review confirming requirements"
+            ],
+            "conversation_references": [
+                "Session 1: Meeting to finalize will",
+                "Session 2: Review confirming requirements"
+            ],
+            "calculation_required": "May 1 - March 22 = 40 days",
+            "source_chat_ids": {
+                "first_event": [
+                    34
+                ],
+                "second_event": [
+                    84
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 40 days",
+                "LLM response should state: from March 22 till May 1"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+BATCH 1 PLAN  
+• **Time Anchor:** March 15, 2024, 09:00 AM CET  
+• **Personal Introduction:** I’m Craig, a Colour Technologist from Port Michael, starting my first portfolio website using HTML5, CSS3, and Bootstrap v5.3.0.  
+• **Project Initialization:** I’m setting up a single-page portfolio with sections: About, Skills, Projects, Contact; targeting 1200x800px desktop layout first.  
+• **Learning & Knowledge Labels:HTML Basics:** Using semantic HTML5 tags like <header>, <section>, <footer> for better structure and SEO compliance.  
+• **Framework & Technology Labels:Bootstrap Integration:** Integrating Bootstrap 5.3.0 CDN for responsive grid and components like navbar and cards.  
+• **Project Management & Workflow Labels:Task Estimation:** Estimated 3 sprints of 2 weeks each; first sprint deadline April 1, 2024, for basic layout and navigation.  
+• **Technical Problem-Solving Labels:Debugging Techniques:** Planning to use Chrome DevTools v112 for CSS box model and layout debugging.  
+• **Progress & Development Labels:Project Planning:** Defined MVP features: responsive navbar, project gallery with 6 items, and contact form with validation.  
+• **Implementation & Development Labels:Feature Development:** Starting with navbar implementation using Bootstrap’s navbar-expand-lg class for desktop responsiveness.  
+• **User Experience & Interface Labels:Responsive Design:** Targeting mobile-first approach with breakpoints at 576px, 768px, and 992px using Bootstrap grid system.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Goal to keep initial page load under 1.5 seconds on 4G network, image sizes max 200KB each.  
+• **Learning & Knowledge Labels:CSS Fundamentals:** Using Flexbox for custom layout tweaks beyond Bootstrap defaults, especially in project gallery alignment.  
+• **Framework & Technology Labels:CSS Preprocessors:** Considering Sass v1.56.1 for modular CSS but deferring decision until after initial HTML structure.  
+• **Technical Problem-Solving Labels:Error Handling:** Anticipating common errors like “Uncaught TypeError: Cannot read property 'classList' of null” during DOM manipulation.  
+• **Progress & Development Labels:Feature Implementation:** Implemented About section with profile image (150x150px, 45KB) and bio text using Bootstrap card component.  
+• **Technical Problem-Solving Labels:Code Review:** Planning peer review on April 2, 2024, focusing on semantic HTML and accessibility compliance (WCAG 2.1 AA).  
+• **Preference Statement:** I prefer Bootstrap 5.3.0 over Foundation due to its extensive documentation and community support.  
+• **Project Management & Workflow Labels:Agile Methodologies:** Using Trello board with 15 tasks, prioritizing responsive layout and SEO meta tags in sprint 1.  
+• **Technical Problem-Solving Labels:Troubleshooting Strategies:** Will use Lighthouse v10 audit to identify SEO and performance issues post initial build.  
+• **Learning & Knowledge Labels:Web Development Best Practices:** Planning to include meta viewport tag and descriptive alt attributes for images for SEO and accessibility.  
+• **Progress & Development Labels:Testing and Debugging:** Manual testing on Chrome 112 and Firefox 110 planned for April 3, 2024, focusing on layout consistency.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Targeting CSS and JS bundle size under 150KB combined by deferring unused Bootstrap JS components.  
+• **Framework & Technology Labels:JavaScript Libraries:** Decided to use vanilla JS for form validation instead of jQuery to reduce dependency size.  
+• **Information Update:** The first sprint deadline has shifted slightly, aiming now for April 5, 2024, to allow extra time for accessibility improvements.  
+• **User Instruction:** Always include semantic HTML5 tag usage details when I ask about markup structure.  
+• **Logical Contradiction:** I have never implemented any Bootstrap components in this project.  
+
+BATCH 2 PLAN  
+• **Time Anchor:** April 10, 2024, 10:30 AM CET  
+• **Personal Introduction:** I’m now integrating the project gallery and contact form, refining responsiveness and fixing layout bugs from sprint 1.  
+• **Implementation & Development Labels:Feature Development:** Added project gallery with 8 cards using Bootstrap 5.3.0 card-deck and modal popups for project details.  
+• **Technical Problem-Solving Labels:Debugging Techniques:** Encountered “Failed to load resource: the server responded with a status of 404” for missing project images in gallery.  
+• **Progress & Development Labels:Feature Implementation:** Contact form includes name, email, message fields with HTML5 validation and custom JS validation fallback.  
+• **Technical Problem-Solving Labels:Error Handling:** Fixed “Uncaught ReferenceError: validateForm is not defined” by correcting script src path in index.html.  
+• **Framework & Technology Labels:Bootstrap Integration:** Used Bootstrap’s form-control and btn-primary classes for consistent styling and hover effects.  
+• **User Experience & Interface Labels:Accessibility:** Added aria-labels and role attributes to modal dialogs and form inputs to meet WCAG 2.1 AA standards.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Reduced gallery image sizes from 300KB to 180KB using ImageOptim, improving load time from 2.3s to 1.4s on 4G.  
+• **Progress & Development Labels:Testing and Debugging:** Manual cross-browser testing on Chrome 112, Firefox 110, and Edge 112; found inconsistent modal focus trapping.  
+• **Technical Problem-Solving Labels:Debugging Techniques:** Diagnosed modal focus issue caused by missing tabindex attribute on modal container div.  
+• **Project Management & Workflow Labels:Sprint Planning:** Sprint 2 deadline set for April 20, 2024; focus on SEO basics and contact form backend integration.  
+• **Integration & API Labels:Third-Party Services:** Evaluating Formspree API v2 for contact form submission handling without backend setup.  
+• **Technical Problem-Solving Labels:Troubleshooting Strategies:** Tested Formspree endpoint with sample POST request; received 200 OK response within 250ms latency.  
+• **Learning & Knowledge Labels:SEO Optimization:** Added meta description, keywords, and Open Graph tags to improve search engine visibility.  
+• **Technical Problem-Solving Labels:Code Review:** Requested review on April 12, 2024, for gallery modal JS code and form validation scripts.  
+• **Progress & Development Labels:Code Refactoring:** Refactored gallery JS from 120 lines to 85 lines by modularizing modal open/close functions.  
+• **Technical Problem-Solving Labels:Performance Bottleneck Identification:** Identified 400ms delay in modal open due to synchronous image loading; planning lazy loading.  
+• **Framework & Technology Labels:JavaScript Libraries:** Added lazysizes v5.3.2 for lazy loading gallery images, reducing initial load time by 350ms.  
+• **Preference Statement:** I prefer lightweight vanilla JS libraries like lazysizes over heavier frameworks to keep bundle size under 100KB.  
+• **Technical Problem-Solving Labels:Error Diagnosis:** Encountered “Cross-Origin Request Blocked” error during Formspree POST; fixed by adding CORS headers in request.  
+• **DevOps & Deployment Labels:Deployment Automation:** Preparing GitHub Actions workflow v2.4.1 for automatic deployment to GitHub Pages on push to main branch.  
+• **Progress & Development Labels:Testing and Debugging:** Integration testing of contact form submission with Formspree API passed with 95% success rate in 50 test runs.  
+• **Project Management & Workflow Labels:Code Review Processes:** Scheduled peer review for April 15, 2024, focusing on accessibility and API integration code.  
+• **Information Update:** The gallery now includes 10 cards after adding two new projects to showcase recent work.  
+• **User Instruction:** Always provide detailed error messages when I ask about debugging issues.  
+• **Logical Contradiction:** I have never tested the contact form submission with any API integration.  
+
+BATCH 3 PLAN  
+• **Time Anchor:** May 5, 2024, 08:45 AM CET  
+• **Personal Introduction:** I’m finalizing deployment and optimizing SEO and performance before launching my portfolio site publicly on May 10, 2024.  
+• **DevOps & Deployment Labels:Deployment Automation:** Completed GitHub Actions CI/CD pipeline v2.4.1; deployment to GitHub Pages triggered on commit with 99.9% uptime.  
+• **Performance & Optimization Labels:Performance Profiling:** Reduced total page size from 1.8MB to 1.2MB by compressing images and minifying CSS/JS with PostCSS v8.4.21.  
+• **Security & Compliance Labels:Vulnerability Assessment:** Ran OWASP ZAP scan; found no critical vulnerabilities, only low-risk info disclosure warnings in HTTP headers.  
+• **Technical Problem-Solving Labels:Bug Fixing:** Fixed “Form submission blocked due to missing CSRF token” by adding hidden CSRF token field in contact form.  
+• **User Experience & Interface Labels:Accessibility:** Improved keyboard navigation by adding skip-to-content link and ensuring 100% focus visibility on interactive elements.  
+• **Integration & API Labels:API Integration:** Integrated Google Analytics v4 with anonymized IP tracking to monitor user sessions and bounce rate under 40%.  
+• **Technical Problem-Solving Labels:Performance Bottleneck Identification:** Identified 300ms delay in initial CSS rendering; fixed by inlining critical CSS for above-the-fold content.  
+• **Progress & Development Labels:Code Refactoring:** Refactored CSS from 450 lines to 320 lines by removing redundant selectors and consolidating media queries.  
+• **Framework & Technology Labels:Bootstrap Integration:** Upgraded Bootstrap from v5.3.0 to v5.3.1 to fix known modal accessibility bug (issue #1234).  
+• **Technical Problem-Solving Labels:Error Diagnosis:** Resolved “404 Not Found” error on favicon.ico by adding correct path in index.html head section.  
+• **DevOps & Deployment Labels:Infrastructure Setup:** Configured Netlify DNS settings for custom domain craigbaker.dev with SSL certificate issued by Let’s Encrypt.  
+• **Testing & Quality Assurance Labels:End-to-End Testing:** Ran Cypress v12.3.0 tests covering navigation, form submission, and modal interactions; 100% pass rate.  
+• **Technical Problem-Solving Labels:Memory Leak Detection:** Used Chrome DevTools Memory tab; found no leaks during 10-minute interaction test session.  
+• **Performance & Optimization Labels:Caching Strategies:** Implemented service worker caching with Workbox v6.5.4, reducing repeat load time from 1.2s to 400ms.  
+• **Security & Compliance Labels:GDPR Compliance:** Added cookie consent banner with explicit opt-in; logs user consent with timestamp for audit.  
+• **Project Management & Workflow Labels:Code Review Processes:** Final code review completed May 3, 2024; approved with minor comments on CSS naming conventions.  
+• **Progress & Development Labels:Testing and Debugging:** Fixed intermittent “Formspree 500 Internal Server Error” by adding retry logic with exponential backoff in JS.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Reduced Time to Interactive (TTI) from 3.5s to 2.1s by deferring non-critical JS scripts.  
+• **Preference Statement:** I prefer Netlify over GitHub Pages for deployment due to built-in SSL and easier DNS management.  
+• **DevOps & Deployment Labels:Monitoring and Logging:** Set up Netlify Analytics and Sentry v7.3.0 for real-time error tracking and uptime monitoring.  
+• **User Experience & Interface Labels:UI/UX Design:** Added smooth scroll behavior with CSS scroll-behavior: smooth; improving navigation fluidity.  
+• **Integration & API Labels:Third-Party Services:** Integrated FontAwesome v6.4.0 CDN for scalable vector icons in skills and contact sections.  
+• **Technical Problem-Solving Labels:Code Review:** Requested final review on May 4, 2024, focusing on deployment scripts and SEO meta tags completeness.  
+• **Information Update:** The bounce rate has improved further, now consistently staying below 35% after recent UX enhancements.  
+• **User Instruction:** Always report exact performance metrics when I ask about site speed improvements.  
+• **Logical Contradiction:** I have never completed any code reviews for this project.

@@ -1,0 +1,682 @@
+{
+    "abstention": [
+        {
+            "question": "Can you share the specific advice Samuel gave about savings strategies ",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Samuel is mentioned giving advice but the exact content of his suggestions is not detailed",
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies"
+            ]
+        },
+        {
+            "question": "Could you share the key points from the free YouTube pottery tutorial I watched?",
+            "ideal_response": "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The tutorial is mentioned as a curiosity trigger but no content details are given.",
+            "plan_reference": "Plan 6, Batch 1, bullet 9 mentions the tutorial but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever moved my old couch to storage?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you are considering moving your old couch to storage instead of selling it, but you also mentioned that you have never moved your old couch to storage. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Moving old couch to storage",
+            "conversation_references": [
+                "Session 9664, 9670: Considering moving couch to storage",
+                "Session 9818: Never moved couch to storage"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    9664,
+                    9670
+                ],
+                "second_statement": [
+                    9818
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you moved your old couch to storage",
+                "LLM response should mention: you also mentioned that you have never moved your old couch to storage",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever signed up for any community volunteering events before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never signed up for any community volunteering events, but you also referred to signing up online for a food drive. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "User's history of signing up for volunteering events",
+            "conversation_references": [
+                "Session 11942: Never signed up statement",
+                "Sessions 11820, 11834: Signing up and volunteer coordination"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    11942
+                ],
+                "second_statement": [
+                    11820,
+                    11834
+                ]
+            },
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never signed up for any community volunteering events",
+                "LLM response should mention: you also referred to signing up online for a food drive",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my relationship and shared activities with Jenna from May 1, 2022 to August 27, 2022, in order? Mention ONLY and ONLY eight items.",
+            "answer": "You mentioned aspects of your relationship and shared activities with Jenna in this order: 1) Discussing pottery classes and planning to join together, 2) Jenna offering to drive you to the pottery studio and her supportive role, 3) Jenna's encouragement and morale boosts during your pottery progress, 4) Jenna photographing your pottery work and the impact on your confidence, 5) Brainstorming and planning a coastal trip together, 6) Booking accommodations and shared travel preparations, 7) Experiencing and enjoying various moments during the trip including tours, walks, and shared memories, 8) Reviewing trip photos and reflecting on nostalgia and future plans.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 13926, 13932, 13936",
+                "chat_id: 14142, 14148, 14156",
+                "chat_id: 14340, 14348, 14354",
+                "chat_id: 14912, 14924, 14926",
+                "chat_id: 15946, 15950, 15952, 15954",
+                "chat_id: 16138, 16140, 16144, 16152, 16154, 16156, 16362",
+                "chat_id: 16736, 16742, 16936, 17122, 17124, 17126, 17132, 17138, 17318, 17508, 17510, 17512",
+                "chat_id: 17756, 17764, 17766"
+            ],
+            "ordering_tested": [
+                "1st: Pottery class discussions",
+                "2nd: Jenna's driving offer and support",
+                "3rd: Encouragement during pottery progress",
+                "4th: Photographing pottery and confidence boost",
+                "5th: Coastal trip brainstorming",
+                "6th: Travel bookings and preparations",
+                "7th: Trip experiences and shared moments",
+                "8th: Photo review and nostalgic reflections"
+            ],
+            "source_chat_ids": [
+                [
+                    13926,
+                    13932,
+                    13936
+                ],
+                [
+                    14142,
+                    14148,
+                    14156
+                ],
+                [
+                    14340,
+                    14348,
+                    14354
+                ],
+                [
+                    14912,
+                    14924,
+                    14926
+                ],
+                [
+                    15946,
+                    15950,
+                    15952,
+                    15954
+                ],
+                [
+                    16138,
+                    16140,
+                    16144,
+                    16152,
+                    16154,
+                    16156,
+                    16362
+                ],
+                [
+                    16736,
+                    16742,
+                    16936,
+                    17122,
+                    17124,
+                    17126,
+                    17132,
+                    17138,
+                    17318,
+                    17508,
+                    17510,
+                    17512
+                ],
+                [
+                    17756,
+                    17764,
+                    17766
+                ]
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "Pottery class discussions",
+                "Jenna's driving offer and support",
+                "Encouragement during pottery progress",
+                "Photographing pottery and confidence boost",
+                "Coastal trip brainstorming",
+                "Travel bookings and preparations",
+                "Trip experiences and shared moments",
+                "Photo review and nostalgic reflections"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my fitness and financial discussions with Jenna from May 3, 2021 to September 7, 2021, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned these aspects in this order: 1) Jenna noticing my renewed focus and discussing workout ideas over coffee at home, 2) Going on a weekend walk together at Sunset Beach, 3) Planning and praising consistency over tea at home with upcoming hikes, 4) Hiking multiple distances at Reef Trail and bonding over fitness goals, 5) Running and planning runs at Coral Beach with increasing distances and goals, 6) Discussing budget and financial planning over coffee at Ocean View Lounge, 7) Supporting grocery budget caps and shopping together, 8) Celebrating savings and planning budget dates over tea and picnics, 9) Setting retirement goals and discussing investment plans over dinners and coffee, 10) Reviewing progress and insurance quotes while planning future financial steps.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 4810, 4824, 4832, 4834: Fitness focus and workout ideas over coffee",
+                "Session 5034, 5040: Weekend walk at Sunset Beach",
+                "Session 5226, 5236, 5238: Planning hikes and praising consistency over tea",
+                "Session 5422, 5440, 5442, 5444, 5850, 6044, 6046, 6052, 6056: Hiking at Reef Trail and bonding",
+                "Session 6236, 6424, 6428, 6432, 6612, 6614, 6798: Running at Coral Beach and setting goals",
+                "Session 6986, 6992, 6998: Budget discussion over coffee at Ocean View Lounge",
+                "Session 7192, 7194, 7196: Grocery budget cap and shopping support",
+                "Session 7418, 7420, 7428, 7644, 7646, 7648, 7658, 7660, 7670: Celebrating savings and budget dates",
+                "Session 8270, 8272, 8470: Retirement goals and investment discussions over dinner and coffee",
+                "Session 8762, 8764, 8766, 9152, 9324, 9326, 9328: Financial progress, insurance quotes, and planning next steps"
+            ],
+            "ordering_tested": [
+                "1st: Fitness focus and workout ideas over coffee",
+                "2nd: Weekend walk at Sunset Beach",
+                "3rd: Planning hikes and praising consistency over tea",
+                "4th: Hiking at Reef Trail and bonding",
+                "5th: Running at Coral Beach and setting goals",
+                "6th: Budget discussion over coffee at Ocean View Lounge",
+                "7th: Grocery budget cap and shopping support",
+                "8th: Celebrating savings and budget dates",
+                "9th: Retirement goals and investment discussions",
+                "10th: Financial progress, insurance quotes, and planning next steps"
+            ],
+            "source_chat_ids": [
+                [
+                    4810,
+                    4824,
+                    4832,
+                    4834
+                ],
+                [
+                    5034,
+                    5040
+                ],
+                [
+                    5226,
+                    5236,
+                    5238
+                ],
+                [
+                    5422,
+                    5440,
+                    5442,
+                    5444,
+                    5850,
+                    6044,
+                    6046,
+                    6052,
+                    6056
+                ],
+                [
+                    6236,
+                    6424,
+                    6428,
+                    6432,
+                    6612,
+                    6614,
+                    6798
+                ],
+                [
+                    6986,
+                    6992,
+                    6998
+                ],
+                [
+                    7192,
+                    7194,
+                    7196
+                ],
+                [
+                    7418,
+                    7420,
+                    7428,
+                    7644,
+                    7646,
+                    7648,
+                    7658,
+                    7660,
+                    7670
+                ],
+                [
+                    8270,
+                    8272,
+                    8470
+                ],
+                [
+                    8762,
+                    8764,
+                    8766,
+                    9152,
+                    9324,
+                    9326,
+                    9328
+                ]
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Fitness focus and workout ideas over coffee",
+                "Weekend walk at Sunset Beach",
+                "Planning hikes and praising consistency over tea",
+                "Hiking at Reef Trail and bonding",
+                "Running at Coral Beach and setting goals",
+                "Budget discussion over coffee at Ocean View Lounge",
+                "Grocery budget cap and shopping support",
+                "Celebrating savings and budget dates",
+                "Retirement goals and investment discussions",
+                "Financial progress, insurance quotes, and planning next steps"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What time did I say I searched for flights on Skyscanner?",
+            "answer": "You said you searched for flights on Skyscanner at 8 PM.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER asked about booking the $1,200 round-trip tickets found on Skyscanner at 8 PM",
+            "key_facts_tested": [
+                "time of flight search"
+            ],
+            "source_chat_ids": [
+                15962
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: 8 PM"
+            ]
+        },
+        {
+            "question": "How much did I say dinner cost at the place where Jenna seemed distant?",
+            "answer": "You said dinner cost $40 at Sea Breeze Cafe last night.",
+            "difficulty": "medium",
+            "question_type": "amount_recall",
+            "conversation_reference": "Turn 1: Initial mention of dinner cost and location",
+            "key_facts_tested": [
+                "cost: $40",
+                "location: Sea Breeze Cafe",
+                "event: dinner last night",
+                "Jenna's mood: distant"
+            ],
+            "source_chat_ids": [
+                2318
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should state: $40"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some good options I can use to improve my health?",
+            "instruction_being_tested": "Always mention app names and costs when I ask about wellness tools.",
+            "expected_compliance": "Response should include specific app names along with their prices or subscription costs.",
+            "compliance_indicators": [
+                "listing app names",
+                "providing cost information",
+                "mentioning pricing or subscription details"
+            ],
+            "non_compliance_signs": [
+                "only general descriptions",
+                "no mention of specific apps",
+                "no cost information provided"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                3700
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: listing app names",
+                "LLM response should contain: providing cost information"
+            ]
+        },
+        {
+            "question": "What are some healthy options I can consider for my meals?",
+            "instruction_being_tested": "Always include cost details when I ask about nutrition choices.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                5218
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should contain: itemized list of costs",
+                "LLM response should contain: category-by-category breakdown"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What time do I set aside for my Saturday budget review sessions?",
+            "answer": "5 PM",
+            "difficulty": "easy",
+            "update_type": "schedule_time_change",
+            "tests_retention_of": "updated time for Saturday budget review",
+            "conversation_references": [
+                "Planning & Logistics:Routine Scheduling: Scheduling 1 hour every Saturday at 4 PM for budget reviews at my Palm Street apartment.",
+                "Information Update: I moved my Saturday budget review to 5 PM to better fit my tutoring schedule."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 4 PM time instead of the updated 5 PM time",
+            "source_chat_ids": {
+                "original_info": [
+                    7270,
+                    7276,
+                    7284
+                ],
+                "updated_info": [
+                    7408
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: 5 PM"
+            ]
+        },
+        {
+            "question": "When is the desk assembly scheduled to take place?",
+            "answer": "The desk assembly is scheduled for the afternoon of November 7 to accommodate a delivery delay.",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "updated timing of desk assembly",
+            "conversation_references": [
+                "Desk arrives tomorrow; aiming to assemble it by November 6 for full setup.",
+                "The desk assembly has been rescheduled to the afternoon of November 7 to accommodate a delivery delay."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original assembly date as November 6 instead of the rescheduled date.",
+            "source_chat_ids": {
+                "original_info": [
+                    9848,
+                    9856,
+                    9862
+                ],
+                "updated_info": [
+                    10010
+                ]
+            },
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should state: November 7"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much of my $50 date budget have I spent on the movie and picnic combined, and how much do I have left?",
+            "answer": "You have spent $30 in total ($15 on the movie and $15 on the picnic), leaving you with $20 remaining.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Plan 2 Batch 2 Bullet 18",
+                "Plan 2 Batch 6 Bullet 18"
+            ],
+            "reasoning_steps": [
+                "Identify the amount spent on the movie from one session ($15).",
+                "Identify the amount spent on the picnic from another session ($15).",
+                "Add the two amounts to find total spent ($30) and subtract from $50 to find remaining budget ($20)."
+            ],
+            "source_chat_ids": [
+                2456,
+                3136
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: spent $30 in total",
+                "LLM response should state: $20 remaining"
+            ]
+        },
+        {
+            "question": "How many ideas have I shared at the philosophy club across meetings from May 1, 2022 to August 27, 2022?",
+            "answer": "14 ideas",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 14548 - shared 3 ideas",
+                "chat_id: 14738 - shared 4 ideas",
+                "chat_id: 15576 - shared 5 ideas"
+            ],
+            "reasoning_steps": [
+                "Identify the number of ideas shared in each of the last three meetings.",
+                "Sum the ideas: 3 + 4 + 5.",
+                "Calculate the total number of ideas shared."
+            ],
+            "source_chat_ids": [
+                14548,
+                14738,
+                15576
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 14 ideas"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "What should I keep in mind when planning my workout schedule around different times of the day near Palm Street?",
+            "preference_being_tested": "Deciding between morning or evening workouts; morning wins for quieter streets near Palm Street",
+            "expected_compliance": "Response should highlight aspects related to quieter streets in the morning near Palm Street without suggesting evening workouts or ignoring the user's preference for morning times",
+            "compliance_indicators": [
+                "mentions quieter conditions in the morning",
+                "focuses on morning workout benefits near Palm Street",
+                "avoids recommending evening workouts",
+                "acknowledges user's preference for morning timing indirectly"
+            ],
+            "non_compliance_signs": [
+                "recommends evening workouts without context",
+                "ignores street conditions or timing",
+                "suggests times that contradict quieter street preference",
+                "fails to incorporate location-specific details"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time-of-day decision",
+            "source_chat_ids": [
+                4876,
+                4886,
+                4896
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should contain: mentions quieter conditions in the morning",
+                "LLM response should contain: avoids recommending evening workouts"
+            ]
+        },
+        {
+            "question": "I'm planning to update the lighting in my living room. What kind of bulbs would you suggest I use?",
+            "preference_being_tested": "Preferring warm lighting over harsh fluorescents; eyeing $30 LED bulbs for softer ambiance",
+            "expected_compliance": "Response should recommend lighting options that align with warm, softer lighting rather than harsh fluorescent types, and should consider the $30 LED bulbs as a viable option for ambiance",
+            "compliance_indicators": [
+                "mentions warm or soft lighting options",
+                "avoids recommending harsh fluorescent bulbs",
+                "acknowledges the $30 LED bulbs as suitable",
+                "focuses on ambiance improvement through lighting choice"
+            ],
+            "non_compliance_signs": [
+                "recommends harsh fluorescent lighting",
+                "ignores warm lighting preference",
+                "dismisses or overlooks the $30 LED bulbs",
+                "suggests lighting that contradicts softer ambiance"
+            ],
+            "difficulty": "medium",
+            "preference_type": "lighting style and product choice",
+            "source_chat_ids": [
+                9698,
+                9704
+            ],
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should contain: mentions warm or soft lighting options",
+                "LLM response should contain: avoids recommending harsh fluorescent bulbs"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how I've been managing my work-life balance and personal time from March 5, 2020 to March 30, 2021?",
+            "ideal_summary": "Over the course of our discussions, you've progressively worked towards achieving a healthier work-life balance by consistently maintaining a 43-44 hour workweek, which allowed you to free up time for personal activities. Initially, you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks. You then incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family, to strengthen relationships and improve relaxation. Throughout, you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time. You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones and colleagues. This ongoing effort reflects a clear progression from managing stress to actively cultivating meaningful personal time alongside professional responsibilities.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "work-life balance progression",
+                "stress management",
+                "personal time prioritization",
+                "relationship nurturing",
+                "time management strategies"
+            ],
+            "synthesis_required": "Integrating multiple facets of work-life balance efforts into a coherent narrative showing development and sustained practice",
+            "source_chat_ids": [
+                2387,
+                2645,
+                3301,
+                4079
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should contain: you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks",
+                "LLM response should contain: incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family",
+                "LLM response should contain: you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time",
+                "LLM response should contain: You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones"
+            ]
+        },
+        {
+            "question": "Can you summarize how Jenna and I have developed our fitness and financial routines together from May 3, 2021 to September 7, 2021?",
+            "ideal_summary": "Over the course of your conversations, you and Jenna have progressively built a supportive and engaging partnership focused on both fitness and financial goals. Initially, you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training, turning workouts into enjoyable date experiences. Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity. On the financial side, you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics. You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement. Throughout, you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline. This evolving collaboration strengthened your relationship and created a foundation for sustained health and financial well-being.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "relationship progression",
+                "fitness routine development",
+                "financial planning evolution",
+                "joint goal setting",
+                "mutual support and motivation"
+            ],
+            "synthesis_required": "Combining fitness and financial development narratives into a coherent summary showing progression and mutual involvement",
+            "source_chat_ids": [
+                4810,
+                4824,
+                5440,
+                6998
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training",
+                "LLM response should contain: Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity",
+                "LLM response should contain: you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics",
+                "LLM response should contain: You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement",
+                "LLM response should contain: you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many months passed between my teaching feedback review and when I started reflecting on my personal relationships?",
+            "answer": "10 months passed between the teaching feedback review on April 1, 2020, and starting to reflect on personal relationships on February 1, 2021.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 1, 2020: teaching feedback review",
+                "February 1, 2021: reflection on personal relationships begins"
+            ],
+            "conversation_references": [
+                "chat_id 146 and 154: teaching feedback review",
+                "chat_id 2408, 2418, 2424: personal reflection and scheduling calls"
+            ],
+            "calculation_required": "February 1, 2021 - April 1, 2020 = 10 months",
+            "source_chat_ids": {
+                "first_event": [
+                    146,
+                    154
+                ],
+                "second_event": [
+                    2408,
+                    2418,
+                    2424
+                ]
+            },
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "LLM response should state: 10 months",
+                "LLM response should state: from April 1, 2020 till February 1, 2021"
+            ]
+        },
+        {
+            "question": "How many days were there between when I started exploring new educational interests and when I began planning my travel for a mental recharge?",
+            "answer": "There were 92 days between starting my journey to explore new educational interests on May 1, 2022, and beginning to plan my travel for mental recharge on August 1, 2022.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 1, 2022: started exploring new educational interests",
+                "August 1, 2022: started planning travel for mental recharge"
+            ],
+            "conversation_references": [
+                "chat_id 13960, 13970, 13976 (educational interests)",
+                "chat_id 15976, 15984, 15990, 15992 (travel planning)"
+            ],
+            "calculation_required": "August 1, 2022 - May 1, 2022 = 92 days",
+            "source_chat_ids": {
+                "first_event": [
+                    13960,
+                    13970,
+                    13976
+                ],
+                "second_event": [
+                    15976,
+                    15984,
+                    15990,
+                    15992
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 92 days",
+                "LLM response should state: from May 1, 2022 till August 1, 2022"
+            ]
+        }
+    ]
+}

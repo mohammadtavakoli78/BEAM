@@ -1,0 +1,547 @@
+{
+    "abstention": [
+        {
+            "question": "What was the atmosphere like during the February 20 book club discussion on 'The Poppy War' hosted by Kelly and I?",
+            "ideal_response": "Based on the provided chat, there is no information related to the atmosphere during the February 20 book club discussion on 'The Poppy War'.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The event is mentioned but no description of the atmosphere or participant mood is provided.",
+            "plan_reference": "Batch 4, Bullet 7",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the atmosphere during the February 20 book club discussion"
+            ]
+        },
+        {
+            "question": "What was discussed or decided during the March 20 book club meeting on 'The Nightingale' and 'The Witcher'?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussions or decisions made during the March 20 book club meeting.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The meeting is mentioned but no content or outcomes are described.",
+            "plan_reference": "Batch 5, Bullet 6",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussions or decisions made during the March 20 book club meeting"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever met Kelly at any book club or library event?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you met Kelly at a book club event, but you also mentioned that you've never met her at any book club or library event. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Kelly at book club or library events",
+            "conversation_references": [
+                "Session 16: Meeting Kelly at book club",
+                "Session 64: Never met Kelly at book club or library"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    16
+                ],
+                "second_statement": [
+                    64
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you met Kelly at a book club event",
+                "LLM response should mention: you also mentioned that you've never met her at any book club or library event",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever listened to any audiobooks narrated by the person recommended for \"The Poppy War\"?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you started listening to the audiobook narrated by the recommended narrator, but you also mentioned you've never listened to any audiobook narrated by that person. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Listening history with the recommended audiobook narrator",
+            "conversation_references": [
+                "Session 1: Started listening to recommended narrator",
+                "Session 2: Never listened to recommended narrator"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    122
+                ],
+                "second_statement": [
+                    140
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you started listening to the audiobook narrated by the recommended narrator",
+                "LLM response should mention: you also mentioned you've never listened to any audiobook narrated by that person",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my book club activities throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned aspects of your book club activities in this order: 1) Meeting Kelly at a library book club and seeking book recommendations, 2) Missing a book club meeting and wanting to know what was discussed, 3) Concerns about rescheduling a studio meeting in relation to attending a reading session, 4) Hosting a book club discussion with Kelly and considering future reading choices, 5) Balancing book discussions with another person referencing a past discussion with Kelly.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                16,
+                86,
+                164,
+                222,
+                272
+            ],
+            "ordering_tested": [
+                "1st: Meeting Kelly and book recommendations",
+                "2nd: Missing a meeting and discussion recap",
+                "3rd: Rescheduling concerns linked to a reading session",
+                "4th: Hosting a discussion and planning next reads",
+                "5th: Balancing discussions with others referencing Kelly"
+            ],
+            "source_chat_ids": [
+                16,
+                86,
+                164,
+                222,
+                272
+            ],
+            "rubric": [
+                "Meeting Kelly and book recommendations",
+                "Missing a meeting and discussion recap",
+                "Rescheduling concerns linked to a reading session",
+                "Hosting a discussion and planning next reads",
+                "Balancing discussions with others referencing Kelly"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different shared entertainment interests with Douglas throughout our conversations, in order? Mention ONLY and ONLY six items.",
+            "answer": "You mentioned your shared entertainment interests with Douglas in this order: 1) Looking for a new fiction series to read together, 2) Discussing a specific fantasy-historical fiction blend and its pacing, 3) Considering an audiobook for your commute and sampling it, 4) Seeking a series to deepen your bond inspired by a signed novella, 5) Talking about visiting a bookstore to find fantasy authors, 6) Attending a literary festival panel on historical fiction and looking for a new series to enjoy together.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 20: New fiction series to read",
+                "Session 22: Fantasy-historical fiction blend discussion",
+                "Sessions 70, 72, 74: Audiobook commute consideration",
+                "Sessions 174, 176: Series to deepen bond inspired by novella",
+                "Session 232: Bookstore visit for fantasy authors",
+                "Session 282: Literary festival panel and new historical fiction series"
+            ],
+            "ordering_tested": [
+                "1st: New fiction series to read",
+                "2nd: Fantasy-historical fiction blend discussion",
+                "3rd: Audiobook commute consideration",
+                "4th: Series to deepen bond inspired by novella",
+                "5th: Bookstore visit for fantasy authors",
+                "6th: Literary festival panel and new historical fiction series"
+            ],
+            "source_chat_ids": [
+                20,
+                22,
+                [
+                    70,
+                    72,
+                    74
+                ],
+                [
+                    174,
+                    176
+                ],
+                232,
+                282
+            ],
+            "rubric": [
+                "New fiction series to read",
+                "Fantasy-historical fiction blend discussion",
+                "Audiobook commute consideration",
+                "Series to deepen bond inspired by novella",
+                "Bookstore visit for fantasy authors",
+                "Literary festival panel and new historical fiction series"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How many series did I say were on my reading list, and what was the total page count?",
+            "answer": "You said your reading list had 7 series totaling 4,200 pages.",
+            "difficulty": "medium",
+            "question_type": "number_recall",
+            "conversation_reference": "Turn 1: User's initial reading list details",
+            "key_facts_tested": [
+                "number of series: 7",
+                "total pages: 4,200"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should state: 7 series",
+                "LLM response should state: 4,200 pages"
+            ]
+        },
+        {
+            "question": "How did you help me balance my spending to get a variety of print books while staying within my set limits?",
+            "answer": "I suggested several combinations of fiction series that fit within your $120 budget for print editions from Montserrat Books on Main Street, outlining options that mix different series priced between $30 and $50 each to maximize variety without exceeding your allocation.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "User's budget and preferences, assistant's suggested series and budget combinations",
+            "key_facts_tested": [
+                "budget allocation: $120",
+                "format preference: print editions",
+                "store: Montserrat Books on Main Street",
+                "series price ranges: $30-$50",
+                "combination options to fit budget"
+            ],
+            "extraction_challenge": "LLM must integrate the user's budget and format preference with the assistant's detailed pricing and combination suggestions to explain how spending was balanced across options",
+            "source_chat_ids": [
+                34,
+                35
+            ],
+            "rubric": [
+                "LLM response should state: suggested several combinations of fiction series that fit within your $120 budget for print editions from Montserrat Books",
+                "LLM response should state: outlining options that mix different series priced between $30 and $50 each to maximize variety without exceeding your allocation"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you suggest some good audiobooks for me to listen to?",
+            "instruction_being_tested": "Always include audiobook narrator details when I ask about audiobook recommendations.",
+            "expected_compliance": "Response should include the names of the audiobooks along with the narrators who performed them.",
+            "compliance_indicators": [
+                "mention of narrator names",
+                "details about who read the audiobook",
+                "narrator information included with recommendations"
+            ],
+            "non_compliance_signs": [
+                "only audiobook titles given",
+                "no mention of narrators",
+                "recommendations without any narrator details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                138
+            ],
+            "rubric": [
+                "LLM response should contain: mention of narrator names",
+                "LLM response should contain: narrator information included with recommendations"
+            ]
+        },
+        {
+            "question": "What are some good books I should check out?",
+            "instruction_being_tested": "Always provide detailed genre descriptions when I ask about book recommendations.",
+            "expected_compliance": "Response should include detailed explanations of the genres related to each recommended book rather than just listing titles.",
+            "compliance_indicators": [
+                "explanation of genre characteristics",
+                "context about the style or themes of the genre",
+                "clear differentiation between genres for each book"
+            ],
+            "non_compliance_signs": [
+                "only book titles given",
+                "no mention of genre or style",
+                "brief or vague genre references without detail"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                62
+            ],
+            "rubric": [
+                "LLM response should contain: explanation of genre characteristics",
+                "LLM response should contain: context about the style or themes of the genre"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many books am I aiming to read in my winter reading challenge?",
+            "answer": "12 books by March 1",
+            "difficulty": "easy",
+            "update_type": "goal_increase",
+            "tests_retention_of": "increased reading challenge goal from 10 to 12 books",
+            "conversation_references": [
+                "Reading Challenge: Joined a 2024 winter reading challenge on Goodreads aiming for 10 books by March 1.",
+                "I extended my reading challenge goal to 12 books by March 1, increasing my weekly reading pace."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original goal of 10 books instead of the updated goal of 12 books",
+            "source_chat_ids": {
+                "original_info": [
+                    126
+                ],
+                "updated_info": [
+                    136
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 12 books by March 1"
+            ]
+        },
+        {
+            "question": "What is my monthly budget for books and subscriptions?",
+            "answer": "$50",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated monthly book budget amount",
+            "conversation_references": [
+                "Book Budget: Spent $43 on books and subscriptions in January, exceeding my $35 monthly budget by $8.",
+                "I increased my January book budget to $50 to accommodate additional purchases and subscriptions."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $35 monthly budget instead of the updated $50 budget",
+            "source_chat_ids": {
+                "original_info": [
+                    168
+                ],
+                "updated_info": [
+                    204
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $50"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different book series or genres have I mentioned wanting to explore across my conversations?",
+            "answer": "Four different series or genres: three fiction series from Montserrat Books and one sci-fi series for the live chat.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_category_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "book budget and series choices",
+                "online discussion groups",
+                "sci-fi live chat preparation"
+            ],
+            "reasoning_steps": [
+                "Identify the fiction series mentioned for purchase within the budget in the first session.",
+                "Note the interest in joining discussions about 'The Poppy War' series in the second session.",
+                "Recognize the choice of sci-fi series for the live chat in the third session."
+            ],
+            "source_chat_ids": [
+                34,
+                130,
+                190
+            ],
+            "rubric": [
+                "LLM response should state: Four different series",
+                "LLM response should state: three fiction series from Montserrat Books",
+                "LLM response should state: one sci-fi series for the live chat"
+            ]
+        },
+        {
+            "question": "Considering my choices and preferences across all sessions, how does my reading plan balance shorter series and longer commitments while fitting my time constraints and enjoyment goals?",
+            "answer": "You prioritized shorter series like \"The Poppy War\" trilogy due to positive community feedback and fit with your reading goals, while planning to tackle the longer \"The Expanse\" series later by mixing print and audiobooks to manage time and maintain engagement, thus balancing shorter and longer commitments effectively within your schedule and enjoyment preferences.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id 44: initial hesitation about long series and request for shorter series recommendations",
+                "chat_id 116-119: decision process between \"The Poppy War\" and \"The Broken Earth\" series",
+                "chat_id 158-161: excitement and planning for \"The Expanse\" series after finishing \"The Poppy War\""
+            ],
+            "reasoning_steps": [
+                "Identify the user's initial preference for shorter series due to time constraints and desire for manageable reading commitments.",
+                "Analyze the user's choice of \"The Poppy War\" trilogy over \"The Broken Earth\" series based on community ratings, length, and alignment with reading goals.",
+                "Note the user's plan to stick with \"The Poppy War\" trilogy while remaining open to exploring longer, more complex series later if desired.",
+                "Examine the user's expressed excitement about starting the much longer \"The Expanse\" series after finishing \"The Poppy War,\" including their strategy to mix print reading and audiobooks to balance engagement and time management.",
+                "Synthesize these points to evaluate how the user balances shorter and longer series commitments, ensuring enjoyment and fitting within their time constraints."
+            ],
+            "source_chat_ids": [
+                44,
+                116,
+                117,
+                118,
+                119,
+                158,
+                159,
+                160,
+                161
+            ],
+            "rubric": [
+                "LLM response should state: You prioritized shorter series like \"The Poppy War\" trilogy due to positive community feedback and fit with your reading goals",
+                "LLM response should state: planning to tackle the longer \"The Expanse\" series later by mixing print and audiobooks to manage time and maintain engagement"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking to add some new books to my collection and also want something easy to carry around. What would you suggest?",
+            "preference_being_tested": "I prefer e-books over print for portability but enjoy print for collectible editions and gifting.",
+            "expected_compliance": "Response should recommend a mix of e-books for portability and print editions for collectible or gifting purposes, reflecting the user's dual preference.",
+            "compliance_indicators": [
+                "suggests e-books for convenience or portability",
+                "recommends print editions for collecting or gifting",
+                "balances both formats in recommendations"
+            ],
+            "non_compliance_signs": [
+                "only recommends print books",
+                "only recommends e-books",
+                "ignores the need for portability or collectible aspects",
+                "fails to address both formats"
+            ],
+            "difficulty": "medium",
+            "preference_type": "format preference",
+            "source_chat_ids": [
+                58
+            ],
+            "rubric": [
+                "LLM response should contain: suggests e-books for convenience or portability",
+                "LLM response should contain: balances both formats in recommendations"
+            ]
+        },
+        {
+            "question": "I'm planning my reading list for the next few weeks. Can you suggest some books for me?",
+            "preference_being_tested": "I prefer mixing standalone novels with series to maintain variety and avoid fatigue.",
+            "expected_compliance": "Response should include a combination of standalone novels and series recommendations rather than focusing exclusively on one or the other, reflecting the user's preference for variety.",
+            "compliance_indicators": [
+                "recommends both standalone novels and series",
+                "balances suggestions between series and standalone books",
+                "acknowledges the need for variety in reading options"
+            ],
+            "non_compliance_signs": [
+                "recommends only series",
+                "recommends only standalone novels",
+                "ignores variety and suggests a single type of book"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content_mix",
+            "source_chat_ids": [
+                246
+            ],
+            "rubric": [
+                "LLM response should contain: recommends both standalone novels and series",
+                "LLM response should contain: balances suggestions between series and standalone books"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my reading goals and strategies have developed over time based on our conversations?",
+            "ideal_summary": "Your reading journey began with setting an ambitious goal to finish at least three series by February 28, 2024, aiming to average 350 pages per week. Initially, a detailed schedule was created prioritizing series like \"The Kingkiller Chronicle,\" \"The Mistborn Trilogy,\" and \"The Broken Empire,\" with a structured weekly plan to meet your target. As you progressed, you expressed concerns about staying on track, especially after completing 1,200 pages of \"The Stormlight Archive\" by December 1. To address this, you incorporated audiobooks into your routine, particularly for evening listening, which helped balance your reading load and maintain momentum. Motivational strategies were also discussed, including setting smaller daily goals, creating a cozy reading environment, engaging with reading communities, and rewarding milestones to sustain your commitment. Later, you refined your goals by focusing on finishing 1,500 pages of \"The Expanse\" by March 15, averaging 75 pages daily, which was assessed as realistic given your current reading habits and flexible schedule. Finally, after completing the first three books of \"The Expanse,\" you chose \"The Nightingale\" by Kristin Hannah to diversify your reading experience, marking a shift from science fiction to historical fiction and reflecting your evolving preferences and reading strategy.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                28,
+                79,
+                81,
+                195,
+                217
+            ],
+            "key_elements_tested": [
+                "goal setting",
+                "schedule planning",
+                "progress adjustments",
+                "motivation strategies",
+                "reading preferences evolution"
+            ],
+            "synthesis_required": "Integrating evolving reading goals, strategies, progress, and preferences into a coherent narrative showing development over time",
+            "source_chat_ids": [
+                28,
+                79,
+                81,
+                195,
+                217
+            ],
+            "rubric": [
+                "LLM response should contain: a detailed schedule was created prioritizing series like \"The Kingkiller Chronicle,\" \"The Mistborn Trilogy,\" and \"The Broken Empire,\"",
+                "LLM response should contain: you expressed concerns about staying on track, especially after completing 1,200 pages of \"The Stormlight Archive\" by December 1",
+                "LLM response should contain: you incorporated audiobooks into your routine, particularly for evening listening, which helped balance your reading load and maintain momentum",
+                "LLM response should contain: Motivational strategies were also discussed, including setting smaller daily goals, creating a cozy reading environment",
+                "LLM response should contain: you refined your goals by focusing on finishing 1,500 pages of \"The Expanse\" by March 15, averaging 75 pages daily",
+                "LLM response should contain: after completing the first three books of \"The Expanse,\" you chose \"The Nightingale\" by Kristin Hannah to diversify your reading experience"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my plans and decisions around choosing and budgeting for fiction books evolved over our conversations?",
+            "ideal_summary": "Over the course of our discussions, your approach to selecting fiction books and managing your budget developed through several stages. Initially, you set a $120 budget for print editions from Montserrat Books and explored various must-read fantasy series combinations that fit within this limit, balancing cost and content. Later, you considered the suitability of \"The Poppy War\" trilogy for your winter reading challenge, recognizing its engaging narrative and manageable length. You then sought advice on balancing print editions for rereading with audiobooks for new releases, aiming to optimize your reading experience across formats. Budget constraints became more prominent when you evaluated whether to enter a \"The Witcher\" fan fiction contest given your limited remaining funds, weighing the potential prize against your current expenses. Finally, you reflected on your recent purchase of the \"Outlander\" box set, assessing its fit for your winter reading preferences and appreciating its rich historical storytelling. Throughout, your decisions show a progression from broad budget planning and series selection to more nuanced considerations of format preferences, financial limits, and personal reading goals.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                35,
+                125,
+                201,
+                239,
+                271
+            ],
+            "key_elements_tested": [
+                "budget management",
+                "series selection",
+                "format preferences",
+                "financial decision-making",
+                "reading goals progression"
+            ],
+            "synthesis_required": "Integrating budget considerations, series choices, format preferences, and financial constraints into a coherent narrative showing evolving decision-making",
+            "source_chat_ids": [
+                35,
+                125,
+                201,
+                239,
+                271
+            ],
+            "rubric": [
+                "LLM response should contain: you set a $120 budget for print editions from Montserrat Books and explored various must-read fantasy series combinations that fit within this limit",
+                "LLM response should contain: you considered the suitability of \"The Poppy War\" trilogy for your winter reading challenge, recognizing its engaging narrative and manageable length",
+                "LLM response should contain: You sought advice on balancing print editions for rereading with audiobooks for new releases, aiming to optimize your reading experience across formats",
+                "LLM response should contain: Budget constraints became more prominent when you evaluated whether to enter a \"The Witcher\" fan fiction contest given your limited remaining funds",
+                "LLM response should contain: you reflected on your recent purchase of the \"Outlander\" box set, assessing its fit for your winter reading preferences and appreciating its rich historical storytelling"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days did it take me to finish reading the trilogy after I downloaded it?",
+            "answer": "It took 12 days to finish reading the trilogy after downloading it on December 7.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "December 7: downloaded the trilogy",
+                "Finished reading in 12 days"
+            ],
+            "conversation_references": [
+                "Session 1: Downloading the trilogy",
+                "Session 2: Finished reading the trilogy"
+            ],
+            "calculation_required": "12 days after December 7",
+            "source_chat_ids": {
+                "first_event": [
+                    120
+                ],
+                "second_event": [
+                    154
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 12 days"
+            ]
+        },
+        {
+            "question": "How many days do I have to finish reading the first four Outlander books after my freelance editing job starts?",
+            "answer": "I have 114 days to finish reading the first four Outlander books after my freelance editing job starts on March 8 and before the June 30 deadline.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 8: freelance editing job starts",
+                "June 30: reading goal deadline"
+            ],
+            "conversation_references": [
+                "Session 1: freelance job start and reading goal"
+            ],
+            "calculation_required": "June 30 - March 8 = 114 days",
+            "source_chat_ids": {
+                "first_event": [
+                    296
+                ],
+                "second_event": [
+                    296
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 114 days",
+                "LLM response should state: from March 8  till June 30"
+            ]
+        }
+    ]
+}

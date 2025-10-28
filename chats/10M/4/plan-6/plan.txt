@@ -1,0 +1,319 @@
+**BATCH 1 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-01, I’m starting my deep dive into Green’s functions for PDEs, a pivotal method for solving boundary value problems with integral approaches.
+- • **Learning & Progress:Skill Assessment:** My understanding of Green’s functions is at 5%, aiming to reach 25% by grasping core definitions and properties.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve chosen to focus on the definition of Green’s functions as solutions to L[G] = δ(x-ξ) for operator L = d²/dx².
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning that Green’s functions represent the response to a point source, like δ(x-1) in a 1D domain.
+- • **Learning & Progress:Goal Setting:** My aim is to master 3 basic properties of Green’s functions, starting with continuity at x=ξ for L = d²/dx².
+- • **Mathematical Communication:Notation Clarity:** I’m using G(x,ξ) to denote Green’s functions, ensuring clarity in notes for domains like [0,1].
+- • **Assessment & Practice:Practice Problems:** I derived G(x,ξ) for d²/dx² on [0,1] with G(0,ξ)=0, finding G = x(1-ξ) for x<ξ, in 40 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 30-minute video on Green’s functions, noting the jump condition dG/dx|ξ⁺ - dG/dx|ξ⁻ = 1.
+- • **Learning & Progress:Study Habits:** I’m dedicating 2 hours daily to Green’s functions, reviewing at least 1 property per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve scheduled 6 hours this week for Chapter 15, Section 15.1, on Green’s function basics.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, who clarified G(x,ξ) must satisfy L[G]=δ(x-ξ) for d²/dx², in a 25-minute chat.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing Green’s functions as impulse responses, picturing a spike at x=0.5 affecting the entire domain [0,1].
+- • **Learning & Progress:Progress Assessment:** I’ve understood 1 out of 3 properties, tracking with a log showing 100% accuracy on continuity so far.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot G(x,ξ=0.3) for d²/dx² on [0,1], observing linearity, in 20 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “fundamental solution” as Green’s function for unbounded domains, added to my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my grasp of basics at 10%, needing more examples like G for d²/dx² + k² to hit 30%.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m cross-referencing textbook definitions with online notes, confirming G(x,ξ) linearity for x≠ξ.
+- • **Learning & Progress:Common Difficulties:** Understanding the delta function δ(x-ξ) is tricky; I misinterpreted its role in L[G] for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy explained δ(x-ξ) acts as a unit impulse at x=ξ for Green’s functions, in a 15-minute session.
+- • **Conceptual Understanding:Theoretical Insights:** I’m grasping that Green’s functions solve L[u]=f via integral u=∫G*f dx, linking to operator inversion.
+- • **Technology & Tools:Visualization Tools:** I graphed G(x,ξ=0.5) on Desmos for d²/dx² on [0,1], noting the peak at x=0.5, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented G(x,ξ) for d²/dx² with G(0,ξ)=G(1,ξ)=0 as piecewise linear, in clear steps.
+- • **Assessment & Practice:Concept Checks:** I tested myself on 3 properties, getting 2 correct, like G being continuous at x=ξ.
+- • **Problem-Solving & Strategy:Solution Planning:** I compared G(x,ξ) derivations in two texts, finding consistency in jump condition dG/dx|ξ⁺ - dG/dx|ξ⁻=1.
+- • **Learning & Progress:Skill Development:** I reached a milestone by defining G for d²/dx² on [0,2], getting G=x(2-ξ) for x<ξ, after 3 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 problems like finding G for d²/dx² on [0,π] with G(0,ξ)=0, discussed for 30 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify G(x,ξ)=x(1-ξ) for x<ξ in d²/dx² on [0,1], in 20 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m summarizing Green’s function definition, noting L[G]=δ(x-ξ) for point sources, in concise notes.
+- • **Assessment & Practice:Solution Validation:** I prepared 5 questions on Green’s properties, like “Is G continuous at x=ξ?” for self-review.
+- • **Learning & Progress:Conceptual Progression:** To build skills, I’m targeting 80% accuracy on 10 basic Green’s function problems for operators like d²/dx².
+
+**BATCH 2 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-04, I’m moving into construction methods for Green’s functions, a critical step to build solutions for various PDE operators.
+- • **Learning & Progress:Skill Assessment:** My ability to construct Green’s functions is at 8%, aiming to improve to 28% with hands-on practice.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve decided to construct G(x,ξ) for L = d²/dx² - k² on [0,1], using homogeneous solutions.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning to build G by combining solutions like e^(kx) and e^(-kx) for x<ξ and x>ξ.
+- • **Learning & Progress:Goal Setting:** My target is to construct 5 different Green’s functions, starting with L = d²/dx² - 4 on [0,1].
+- • **Mathematical Communication:Notation Clarity:** I’m denoting homogeneous parts as G₁ and G₂ for x<ξ and x>ξ, ensuring clarity in derivations.
+- • **Assessment & Practice:Practice Problems:** I constructed G for d²/dx² - 1 with G(0,ξ)=0, getting G = sinh(x)/sinh(1-ξ) for x<ξ, in 35 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I reviewed a 25-minute tutorial on construction, noting G uses sinh(kx) for L = d²/dx² - k².
+- • **Learning & Progress:Study Habits:** I’m setting aside 2 hours daily for construction techniques, tackling at least 1 operator per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve allocated 5 hours this week to Chapter 15, Section 15.2, on Green’s function construction.
+- • **Collaborative Learning:Study Groups:** I worked with Rebecca, building G for d²/dx² - 9, finding G proportional to sinh(3x) for x<ξ, in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m picturing construction as stitching two solutions at x=ξ, ensuring a jump in derivative by 1/k².
+- • **Learning & Progress:Progress Assessment:** I’ve constructed 1 out of 5 Green’s functions, tracking with 100% accuracy on my first attempt.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot G for d²/dx² - 4 at ξ=0.4 on [0,1], in 25 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “matching conditions” as continuity of G and jump in dG/dx at x=ξ, in my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my construction skills at 12%, needing complex operators like d²/dx² + x to hit 32%.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook approaches and online examples, confirming G for d²/dx² - k² with sinh functions.
+- • **Learning & Progress:Common Difficulties:** Applying boundary conditions to G is hard; I misapplied G(1,ξ)=0 for d²/dx² - 2 for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy corrected my boundary term, ensuring G(1,ξ)=sinh(√2*x)/sinh(√2*(1-ξ)) for x<ξ, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m understanding that construction relies on solving L[G]=0 away from x=ξ, with a delta source.
+- • **Technology & Tools:Visualization Tools:** I graphed G for d²/dx² - 1 at ξ=0.5 on Desmos, seeing exponential behavior, in 20 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I wrote G construction for d²/dx² - 4 with G(0,ξ)=0 as piecewise sinh(2x), in detailed steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 construction problems, getting 2 correct, like G for d²/dx² - 9 with k=3.
+- • **Problem-Solving & Strategy:Solution Planning:** I compared construction methods in two sources, finding consistency in using e^(kx) for solutions.
+- • **Learning & Progress:Skill Development:** I achieved a milestone by constructing G for d²/dx² - 16 on [0,1], after 3.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 construction tasks like G for d²/dx² - 25 on [0,π], discussed for 30 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify G for d²/dx² - 1 using sinh(x), in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining construction, noting G combines homogeneous solutions at x=ξ, in brief notes.
+- • **Assessment & Practice:Solution Validation:** I prepared 5 construction questions, like “Build G for d²/dx² - 5 on [0,1],” for practice.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 constructions, focusing on operators like d²/dx² + 4.
+
+**BATCH 3 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-07, I’m exploring Green’s identities and integral formulas, essential for linking Green’s functions to PDE solutions.
+- • **Learning & Progress:Skill Assessment:** My knowledge of Green’s identities is at 10%, aiming to boost it to 30% with focused study.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve opted to derive Green’s first identity for L = d²/dx², using ∫(u*L[v] - v*L[u])dx.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning Green’s first identity as ∫u*d²v/dx² dx = [u*dv/dx - v*du/dx] + ∫v*d²u/dx² dx.
+- • **Learning & Progress:Goal Setting:** My target is to master 5 applications of Green’s identities, starting with 1D domains like [0,1].
+- • **Mathematical Communication:Notation Clarity:** I’m using ∫[u,Lv]dx for Green’s identity integrals, ensuring precision in my derivations.
+- • **Assessment & Practice:Practice Problems:** I applied Green’s first identity to u=x, v=sin(πx) on [0,1], getting boundary terms πcos(π)-1, in 30 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 25-minute lecture on Green’s identities, noting second identity ∫(u*L[v]-v*L[u])dx = boundary terms.
+- • **Learning & Progress:Study Habits:** I’m allocating 1.5 hours daily to identities, reviewing at least 1 formula per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve set aside 5 hours this week for Chapter 15, Section 15.3, on integral formulas.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, applying Green’s second identity to u=x², v=cos(πx), in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing Green’s identities as tools to shift derivatives, linking u and v on [0,π].
+- • **Learning & Progress:Progress Assessment:** I’ve mastered 1 out of 5 identity applications, tracking with 100% accuracy so far.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to compute boundary terms for u=x³, v=sin(2πx) on [0,1], in 25 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “Green’s second identity” as swapping derivatives with boundary terms, in my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my identity skills at 15%, needing 2D domains to reach 35% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook proofs and online resources, confirming Green’s first identity for u=sin(πx).
+- • **Learning & Progress:Common Difficulties:** Handling boundary terms is tricky; I miscomputed [u*dv/dx] at x=1 for u=x, v=sin(πx) for 25 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy corrected my boundary calculation, showing [u*dv/dx]=π at x=1 for v=sin(πx), in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m seeing Green’s identities lead to integral solutions like u=∫G*f dx + boundary terms.
+- • **Technology & Tools:Visualization Tools:** I graphed u=x² and v=cos(πx) on Desmos, checking boundary values at x=0,1, in 20 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented Green’s first identity for u=x, v=sin(2πx) with terms 2πcos(2π)-1, in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 identity problems, getting 2 correct, like boundary term π for u=1, v=sin(πx).
+- • **Problem-Solving & Strategy:Solution Planning:** I compared identity derivations in two sources, finding consistency in ∫u*d²v/dx² dx terms.
+- • **Learning & Progress:Skill Development:** I achieved a milestone by deriving Green’s second identity for u=x³ on [0,1], after 2.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 identity exercises like u=x(1-x), v=sin(3πx) on [0,1], for 30 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify boundary terms for u=x², v=cos(2πx), in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m summarizing Green’s identities, noting they transform PDEs into integrals, in concise notes.
+- • **Assessment & Practice:Solution Validation:** I prepared 5 identity questions, like “Compute boundary terms for u=x, v=sin(πx),” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 80% accuracy on 10 identity applications, focusing on 2D operators like ∇².
+
+**BATCH 4 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-10, I’m focusing on using Green’s functions to solve inhomogeneous PDEs, a powerful approach for non-homogeneous problems.
+- • **Learning & Progress:Skill Assessment:** My skill in solving inhomogeneous PDEs with Green’s functions is at 12%, aiming to reach 32% with practice.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve chosen to solve d²u/dx² = f(x) on [0,1] using u=∫G(x,ξ)*f(ξ)dξ with G(x,ξ).
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning that Green’s functions convert L[u]=f into integral u=∫G*f dξ for f(x)=sin(πx).
+- • **Learning & Progress:Goal Setting:** My goal is to solve 5 inhomogeneous PDEs, starting with d²u/dx² = x² on [0,1] using G.
+- • **Mathematical Communication:Notation Clarity:** I’m writing solutions as u(x)=∫₀¹G(x,ξ)*f(ξ)dξ, specifying limits and variables clearly.
+- • **Assessment & Practice:Practice Problems:** I solved d²u/dx² = x on [0,1] with G=x(1-ξ), getting u=x³/6 - x/6, in 35 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I reviewed a 30-minute video on inhomogeneous solutions, noting u=∫G*sin(πξ)dξ for f=sin(πx).
+- • **Learning & Progress:Study Habits:** I’m dedicating 2 hours daily to inhomogeneous problems, solving at least 1 per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve planned 6 hours this week for Chapter 15, Section 15.4, on solving with Green’s functions.
+- • **Collaborative Learning:Study Groups:** I worked with Rebecca, solving d²u/dx² = x², computing u=∫G*x² dξ = x⁴/12, in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing u as a weighted sum of Green’s responses to f(x) at each ξ in [0,1].
+- • **Learning & Progress:Progress Assessment:** I’ve solved 1 out of 5 inhomogeneous PDEs, tracking with 100% accuracy on my log.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot u=∫G*(ξ²)dξ for d²u/dx²=ξ² on [0,1], in 30 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “inhomogeneous term” as f(x) in L[u]=f, like f(x)=cos(πx), in my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my solving skills at 18%, needing f(x)=e^x to reach 38% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook examples and online solvers, solving d²u/dx²=sin(2πx) with G consistently.
+- • **Learning & Progress:Common Difficulties:** Integrating G*f is tough; I miscomputed ∫G*x dξ as x²/2 instead of x³/6 for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy corrected my integral, showing ∫₀^x ξ(1-x)dξ = x³/6 for f=x, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting Green’s functions handle any f(x), like f(x)=x³, via u=∫G*f dξ effectively.
+- • **Technology & Tools:Visualization Tools:** I graphed u=∫G*sin(πξ)dξ on Desmos for d²u/dx²=sin(πx), observing oscillations, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented u for d²u/dx²=x² as u=∫G*x² dξ = x⁴/12 - x²/6, in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 inhomogeneous problems, getting 2 correct, like u=x³/3 for f=2x on [0,1].
+- • **Problem-Solving & Strategy:Solution Planning:** I compared integral solutions in two texts, finding u=∫G*f dξ consistent for f=x.
+- • **Learning & Progress:Skill Development:** I hit a milestone by solving d²u/dx²=cos(πx), getting u=-(1/π²)*cos(πx), after 3 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 problems like d²u/dx²=x³ on [0,π], discussed for 35 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify u=∫G*x² dξ = x⁴/12 for d²u/dx²=x², in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining solutions, noting u=∫G*f dξ handles f like sin(2πx), in brief notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 inhomogeneous questions, like “Solve d²u/dx²=x(1-x) with G,” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 problems, focusing on f(x)=e^(2x) on [0,1].
+
+**BATCH 5 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-13, I’m delving into incorporating boundary conditions with Green’s functions, crucial for tailoring solutions to specific constraints.
+- • **Learning & Progress:Skill Assessment:** My understanding of boundary condition incorporation is at 15%, aiming to reach 35% with targeted exercises.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve decided to apply Dirichlet conditions u(0)=0, u(1)=0 for d²u/dx²=f using G(x,ξ).
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning that G must satisfy G(0,ξ)=0, G(1,ξ)=0 for Dirichlet BCs on [0,1].
+- • **Learning & Progress:Goal Setting:** My target is to handle 5 boundary condition types, starting with Neumann u'(0)=0 for d²u/dx².
+- • **Mathematical Communication:Notation Clarity:** I’m noting BCs as G(a,ξ)=0 for Dirichlet at x=a, keeping derivations precise.
+- • **Assessment & Practice:Practice Problems:** I adjusted G for d²u/dx² with u(0)=0, u(1)=0, using G=x(1-ξ), solved u for f=x in 30 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 25-minute video on BCs, learning G'(0,ξ)=0 for Neumann u'(0)=0 on [0,1].
+- • **Learning & Progress:Study Habits:** I’m allocating 2 hours daily to BC incorporation, reviewing at least 1 type per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve planned 5 hours this week for Chapter 15, Section 15.5, on boundary conditions.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, setting G'(1,ξ)=0 for Neumann u'(1)=0, solving for f=sin(πx), in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m picturing BCs shaping G, like G(0,ξ)=0 forcing zero solution at x=0 for Dirichlet.
+- • **Learning & Progress:Progress Assessment:** I’ve handled 1 out of 5 BC types, tracking with 100% accuracy in my initial log.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot G with G(0,ξ)=0, G(1,ξ)=0 for d²u/dx² on [0,1], in 25 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “Robin BC” as αu + βu'=γ, added to my glossary for mixed conditions.
+- • **Assessment & Practice:Self-Assessment:** I rated my BC skills at 20%, needing Robin conditions like u(0)+u'(0)=0 to hit 40%.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook methods and online resources, confirming G for Dirichlet u(0)=0 consistently.
+- • **Learning & Progress:Common Difficulties:** Setting G for mixed BCs is hard; I misapplied G'(0,ξ)=0 as G(0,ξ)=0 for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy clarified G'(0,ξ)=0 for Neumann, solving u'(0)=0 with G=1-ξ for x<ξ, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting BCs modify G, ensuring solutions like u=∫G*f dξ satisfy u(1)=0 for Dirichlet.
+- • **Technology & Tools:Visualization Tools:** I graphed G with G'(0,ξ)=0 on Desmos for Neumann on [0,1], noting slope, in 20 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented G for Dirichlet u(0)=0, u(π)=0 as G=x(π-ξ)/π for x<ξ, in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 BC scenarios, getting 2 correct, like G'(1,ξ)=0 for u'(1)=0 on [0,1].
+- • **Problem-Solving & Strategy:Solution Planning:** I compared BC applications in two sources, finding G(0,ξ)=0 consistent for Dirichlet.
+- • **Learning & Progress:Skill Development:** I hit a milestone by setting G for Neumann u'(0)=0, u'(π)=0, after 3 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 BC problems like Robin u(0)+2u'(0)=0 for d²u/dx², for 30 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify G for u(0)=0, u(1)=0 as x(1-ξ), in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining BC incorporation, noting G(0,ξ)=0 ensures u(0)=0 for Dirichlet, in notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 BC questions, like “Set G for u'(0)=0, u(1)=0 on [0,1],” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 BC problems, focusing on mixed u(0)=0, u'(π)+u(π)=0.
+
+**BATCH 6 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-16, I’m investigating symmetry and reciprocity properties of Green’s functions, key for understanding their behavior in PDEs.
+- • **Learning & Progress:Skill Assessment:** My grasp of symmetry in Green’s functions is at 18%, aiming to boost it to 38% with detailed study.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve chosen to verify symmetry G(x,ξ)=G(ξ,x) for L = d²/dx² on [0,1] with Dirichlet BCs.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning reciprocity means G(x,ξ)=G(ξ,x), reflecting symmetry in response between points x and ξ.
+- • **Learning & Progress:Goal Setting:** My aim is to confirm symmetry for 5 operators, starting with L = d²/dx² - k² on [0,1].
+- • **Mathematical Communication:Notation Clarity:** I’m noting symmetry as G(x,ξ)=G(ξ,x), ensuring clear representation in my notes.
+- • **Assessment & Practice:Practice Problems:** I checked G(x,ξ)=x(1-ξ) for x<ξ on [0,1], confirming G(0.2,0.8)=G(0.8,0.2)=0.16, in 25 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 30-minute video on reciprocity, learning G(x,ξ)=G(ξ,x) for self-adjoint L like d²/dx².
+- • **Learning & Progress:Study Habits:** I’m setting aside 1.5 hours daily for symmetry properties, analyzing at least 1 case per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve planned 5 hours this week for Chapter 15, Section 15.6, on symmetry and reciprocity.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, verifying G(0.3,0.7)=0.21 matches G(0.7,0.3) for d²/dx², in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing symmetry as equal influence between points, like x=0.4 and ξ=0.6 on [0,1].
+- • **Learning & Progress:Progress Assessment:** I’ve confirmed symmetry for 1 out of 5 operators, tracking with 100% accuracy so far.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot G(x,ξ) vs G(ξ,x) for d²/dx², confirming overlap, in 25 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “reciprocity principle” as G(x,ξ)=G(ξ,x) for self-adjoint operators, in my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my symmetry skills at 22%, needing non-symmetric domains to reach 42% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook proofs and online resources, confirming G symmetry for d²/dx² - 4.
+- • **Learning & Progress:Common Difficulties:** Checking symmetry for L = d²/dx² + x is tough; I assumed G(x,ξ)=G(ξ,x) incorrectly for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy explained symmetry holds only for self-adjoint L, not for d²/dx² + x, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting symmetry ties to self-adjointness, ensuring G(0.1,0.9)=G(0.9,0.1)=0.09 for d²/dx².
+- • **Technology & Tools:Visualization Tools:** I graphed G(x,ξ) and G(ξ,x) on Desmos for d²/dx² - 1, seeing identical curves, in 20 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented symmetry proof for G(x,ξ)=sinh(kx)*sinh(k(1-ξ))/k on [0,1], in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 symmetry cases, getting 2 correct, like G(0.25,0.75)=0.1875 for d²/dx².
+- • **Problem-Solving & Strategy:Solution Planning:** I compared symmetry properties in two sources, finding G(x,ξ)=G(ξ,x) consistent for self-adjoint L.
+- • **Learning & Progress:Skill Development:** I achieved a milestone by verifying symmetry for d²/dx² - 9 on [0,π], after 2.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 symmetry problems like G for d²/dx² - 16 on [0,2], for 30 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to check G(0.4,0.6)=G(0.6,0.4)=0.24 for d²/dx², in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m summarizing reciprocity, noting G(x,ξ)=G(ξ,x) for symmetric influence, in concise notes.
+- • **Assessment & Practice:Solution Validation:** I prepared 5 symmetry questions, like “Verify G(0.5,0.2)=G(0.2,0.5) for d²/dx²,” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 80% accuracy on 10 symmetry checks, focusing on L = d²/dx² - x².
+
+**BATCH 7 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-19, I’m connecting Green’s functions to eigenfunction expansions, bridging integral and series methods for PDE solutions.
+- • **Learning & Progress:Skill Assessment:** My understanding of Green’s function and eigenfunction links is at 20%, aiming to reach 40% with focused work.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve opted to express G(x,ξ) as Σφ_n(x)*φ_n(ξ)/(λ_n) for L = d²/dx² on [0,π].
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning G can be written as Σsin(nπx)*sin(nπξ)/(-n²π²) for Dirichlet BCs on [0,π].
+- • **Learning & Progress:Goal Setting:** My target is to derive 5 Green’s functions via eigenfunctions, starting with L = d²/dx² on [0,1].
+- • **Mathematical Communication:Notation Clarity:** I’m writing G(x,ξ)=Σφ_n(x)*φ_n(ξ)/λ_n, specifying eigenbasis like sin(nπx) in notes.
+- • **Assessment & Practice:Practice Problems:** I computed G as Σsin(nx)*sin(nξ)/(-n²) for n=1 to 3 on [0,1], in 35 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 30-minute lecture on eigenfunction expansions, noting G=Σsin(nπx)*sin(nπξ)/(-n²π²).
+- • **Learning & Progress:Study Habits:** I’m dedicating 2 hours daily to eigenfunction links, computing at least 1 expansion per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve scheduled 6 hours this week for Chapter 15, Section 15.7, on eigenfunction connections.
+- • **Collaborative Learning:Study Groups:** I worked with Rebecca, deriving G=Σsin(2nπx)*sin(2nπξ)/(-4n²π²) for n=1, in 20 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing G as a sum of orthogonal modes, like sin(nπx), weighted by eigenvalues -n²π².
+- • **Learning & Progress:Progress Assessment:** I’ve derived 1 out of 5 Green’s expansions, tracking with 100% accuracy in my log.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot G=Σsin(nπx)*sin(nπ*0.5)/(-n²π²) for n=1 to 5, in 30 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “spectral representation” as G via eigenfunction series, added to my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my expansion skills at 25%, needing L = d²/dx² - k² to hit 45% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook series and online tools, confirming G=Σsin(nx)*sin(nξ)/(-n²) on [0,1].
+- • **Learning & Progress:Common Difficulties:** Summing series for G is tough; I miscomputed coefficient 1/(-n²) as 1/n² for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy corrected my eigenvalue term to -n² for G=Σsin(nπx)*sin(nπξ)/(-n²π²), in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting eigenfunction expansions of G link to resolvent (L-λI)^(-1), using λ_n=-n²π².
+- • **Technology & Tools:Visualization Tools:** I graphed 3-term G=Σsin(nπx)*sin(nπ*0.3)/(-n²π²) on Desmos, observing peaks, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented G expansion as Σsin(nπx)*sin(nπξ)/(-n²π²) for n=1 to 4, in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 expansion problems, getting 2 correct, like coefficient -1/π² for n=1 term.
+- • **Problem-Solving & Strategy:Solution Planning:** I compared G expansions in two sources, finding Σsin(nx)*sin(nξ)/(-n²) consistent on [0,1].
+- • **Learning & Progress:Skill Development:** I hit a milestone by deriving G for L = d²/dx² on [0,2π] via sin(nx/2), after 3.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 expansion tasks like G=Σcos(nπx)*cos(nπξ)/(-n²π²) for Neumann, for 35 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to sum G=Σsin(2nπx)*sin(2nπξ)/(-4n²π²) for n=1 to 5, in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining expansions, noting G=Σφ_n*φ_n/λ_n uses eigenbasis sin(nπx), in notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 expansion questions, like “Derive G via sin(nπx) for d²/dx² on [0,π],” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 expansions, focusing on L = d²/dx² + 9.
+
+**BATCH 8 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-22, I’m applying Green’s functions to Laplace and Poisson equations, connecting theory to specific PDEs in physics.
+- • **Learning & Progress:Skill Assessment:** My ability to apply Green’s functions to Laplace equations is at 25%, aiming to reach 45% with practical examples.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve chosen to solve ∇²u = 0 in 2D using G=-(1/(2π))*ln(r) for unbounded domains.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning G for Laplace’s equation is -(1/(2π))*ln(|x-ξ|) in 2D, representing potential from a point charge.
+- • **Learning & Progress:Goal Setting:** My target is to solve 5 Laplace/Poisson problems, starting with ∇²u = δ(x-1,y-1) in 2D plane.
+- • **Mathematical Communication:Notation Clarity:** I’m using G=-(1/(2π))*ln(√((x-ξ)²+(y-η)²)) for 2D Laplace, ensuring clear coordinates.
+- • **Assessment & Practice:Practice Problems:** I solved ∇²u=δ(x-0.5,y-0.5) with G=-(1/(2π))*ln(r), getting u=-(1/(2π))*ln(√((x-0.5)²+(y-0.5)²)), in 40 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 30-minute video on Poisson solutions, noting G=1/(4π|x-ξ|) for 3D Laplace.
+- • **Learning & Progress:Study Habits:** I’m allocating 2 hours daily to Laplace applications, tackling at least 1 problem per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve planned 6 hours this week for Chapter 15, Section 15.8, on Laplace and Poisson equations.
+- • **Collaborative Learning:Study Groups:** I worked with Rebecca, solving ∇²u=-4πδ(x-2,y-2), getting u=-ln(√((x-2)²+(y-2)²)), in 25 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing G as potential decay, like ln(r) dropping off from point (1,1) in 2D space.
+- • **Learning & Progress:Progress Assessment:** I’ve solved 1 out of 5 Laplace problems, tracking with 100% accuracy in my log.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to plot u=-(1/(2π))*ln(√((x-1)²+(y-1)²)) in 2D, in 30 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “Poisson equation” as ∇²u=f, like f=-δ(x-ξ,y-η), in my glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my application skills at 30%, needing bounded domain solutions to hit 50% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook problems and online solvers, solving ∇²u=δ(x-0,y-0) with G=ln(r).
+- • **Learning & Progress:Common Difficulties:** Handling 3D G=1/(4π|x-ξ|) is hard; I miscomputed distance as √(x²+y²) for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy corrected 3D distance to √((x-ξ)²+(y-η)²+(z-ζ)²) for G=1/(4πr), in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting G for Laplace reflects electrostatic potential, solving ∇²u=0 with u=-(1/(2π))*ln(r).
+- • **Technology & Tools:Visualization Tools:** I graphed u=-(1/(2π))*ln(√((x-0.5)²+(y-0.5)²)) on Desmos, seeing logarithmic decay, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented ∇²u=δ(x-1,y-1) solution as u=-(1/(2π))*ln(√((x-1)²+(y-1)²)), in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 Laplace problems, getting 2 correct, like u=-(1/(2π))*ln(r) for δ at (0,0).
+- • **Problem-Solving & Strategy:Solution Planning:** I compared Laplace G in two texts, finding G=-(1/(2π))*ln(r) consistent in 2D.
+- • **Learning & Progress:Skill Development:** I hit a milestone by solving ∇²u=-2δ(x-3,y-3), getting u=-(1/π)*ln(r), after 3.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 Poisson tasks like ∇²u=-δ(x-1,y-1,z-1) in 3D, for 35 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to verify u=1/(4π√((x-1)²+(y-1)²+(z-1)²)) in 3D, in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining Laplace solutions, noting G=ln(r) handles point sources, in brief notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 Laplace questions, like “Solve ∇²u=δ(x-2,y-2) in 2D,” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 problems, focusing on bounded domains like unit disk.
+
+**BATCH 9 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-25, I’m tackling analytical and computational approaches to Green’s functions, balancing theory with practical implementation.
+- • **Learning & Progress:Skill Assessment:** My proficiency in analytical and computational Green’s methods is at 30%, aiming to reach 50% with mixed practice.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve decided to analytically derive G for d²/dx² on [0,1], then compute it numerically using finite differences.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning analytical G for d²/dx² is x(1-ξ) for x<ξ, while numerical methods approximate via matrices.
+- • **Learning & Progress:Goal Setting:** My target is to master 5 combined approaches, starting with L = d²/dx² - 4 analytically and numerically.
+- • **Mathematical Communication:Notation Clarity:** I’m denoting analytical G as G_a and numerical as G_n, specifying mesh size h=0.1 in notes.
+- • **Assessment & Practice:Practice Problems:** I derived G_a=x(1-ξ) for d²/dx², then approximated G_n at x=0.2, ξ=0.8 with error 0.01, in 40 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 25-minute tutorial on numerical Green’s, learning finite difference matrix for L = d²/dx².
+- • **Learning & Progress:Study Habits:** I’m allocating 2 hours daily to analytical and numerical tasks, completing 1 pair per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve planned 6 hours this week for Chapter 15, Section 15.9, on computational approaches.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, computing G_n for d²/dx² - 1 at h=0.05, error 0.005, in 25 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing numerical G as discrete impulses, approximating analytical G=x(1-ξ) at grid points x=0.1 to 0.9.
+- • **Learning & Progress:Progress Assessment:** I’ve completed 1 out of 5 combined approaches, tracking with 100% analytical accuracy so far.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to solve G_n for d²/dx² with h=0.02, plotting error vs h, in 30 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “discretization error” as difference between G_a and G_n, like 0.02 at h=0.1, in glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my mixed skills at 35%, needing 2D numerical G to reach 55% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook analytical solutions and online numerical codes, confirming G for d²/dx² - 9.
+- • **Learning & Progress:Common Difficulties:** Setting up numerical matrices is tough; I misaligned grid points for h=0.1, error 0.05, for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy fixed my matrix setup for d²/dx², ensuring tridiagonal form with h=0.05, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting analytical G gives exactness, while numerical G approximates with error decreasing as h→0, like h=0.01.
+- • **Technology & Tools:Visualization Tools:** I graphed G_a vs G_n on Desmos for d²/dx² at h=0.1, seeing overlap, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented G_a=sinh(2x)*sinh(2(1-ξ))/2 for d²/dx² - 4, with G_n error 0.015, in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 mixed approaches, getting 2 correct, like G_n error 0.008 for h=0.05 on d²/dx².
+- • **Problem-Solving & Strategy:Solution Planning:** I compared analytical vs numerical G in two sources, finding error scales as h² for d²/dx².
+- • **Learning & Progress:Skill Development:** I hit a milestone by computing G for d²/dx² - 16, analytical and numerical h=0.02, after 3.5 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 tasks like numerical G for d²/dx² - 25 at h=0.01, for 35 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to derive G_a for d²/dx² - 9, matching G_n at h=0.05, in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining mixed methods, noting analytical G=sinh(kx) vs numerical grid h=0.1, in notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 mixed questions, like “Compute G for d²/dx² - 1, h=0.1,” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 mixed tasks, focusing on 2D Laplace with h=0.05.
+
+**BATCH 10 PLAN**
+- • **Temporal Anchor:Specific Date:** On 2025-03-28, I’m examining limitations and generalizations of Green’s functions, crucial for understanding their scope in complex PDEs.
+- • **Learning & Progress:Skill Assessment:** My grasp of Green’s function limitations is at 35%, aiming to reach 55% by exploring advanced cases.
+- • **Problem-Solving & Strategy:Strategy Selection:** I’ve chosen to analyze limitations of G for non-self-adjoint L = d²/dx² + x on [0,1], lacking symmetry.
+- • **Conceptual Understanding:Fundamental Concepts:** I’m learning G may not exist or be unique for non-elliptic operators like L = d/dx on [0,1].
+- • **Learning & Progress:Goal Setting:** My target is to identify 5 limitations or generalizations, starting with L = d²/dx² + x² on [0,π].
+- • **Mathematical Communication:Notation Clarity:** I’m noting generalized G as G_gen for non-standard operators, specifying domain [0,2] in notes.
+- • **Assessment & Practice:Practice Problems:** I tested G for L = d²/dx² + 2x, finding no symmetry G(x,ξ)≠G(ξ,x) at x=0.3, ξ=0.7, in 35 minutes.
+- • **Technology & Tools:Online Resource Utilization:** I watched a 30-minute lecture on limitations, noting G fails for L = d/dx due to non-invertibility.
+- • **Learning & Progress:Study Habits:** I’m dedicating 2 hours daily to limitations, reviewing at least 1 case per session.
+- • **Problem-Solving & Strategy:Study Planning:** I’ve scheduled 5 hours this week for Chapter 15, Section 15.10, on generalizations.
+- • **Collaborative Learning:Study Groups:** I discussed with Rebecca, exploring G for L = d²/dx² - x, lacking closed form, in 25 minutes.
+- • **Conceptual Understanding:Intuition Building:** I’m visualizing limitations as breakdowns in symmetry, like G(x,ξ)≠G(ξ,x) for L = d²/dx² + sin(x).
+- • **Learning & Progress:Progress Assessment:** I’ve identified 1 out of 5 limitations, tracking with 100% accuracy in my initial log.
+- • **Technology & Tools:Software Tools:** I used MATLAB R2023a to approximate G for L = d²/dx² + x at h=0.1, noting asymmetry, in 30 minutes.
+- • **Mathematical Communication:Terminology Usage:** I defined “generalized Green’s function” as G for non-standard L, like time-dependent PDEs, in glossary.
+- • **Assessment & Practice:Self-Assessment:** I rated my limitation skills at 40%, needing time-dependent cases to hit 60% confidence.
+- • **Problem-Solving & Strategy:Alternative Methods:** I’m using textbook critiques and online resources, confirming G issues for L = d²/dx² + e^x.
+- • **Learning & Progress:Common Difficulties:** Identifying G for nonlinear L is hard; I assumed linearity for L = d²/dx² + u² for 30 minutes.
+- • **Collaborative Learning:Peer Tutoring:** Kristy clarified G doesn’t apply directly to nonlinear L like d²/dx² + u³, in 15 minutes.
+- • **Conceptual Understanding:Theoretical Insights:** I’m noting generalizations extend G to distributions, solving L[u]=f for L = d²/dx² + t.
+- • **Technology & Tools:Visualization Tools:** I graphed approximate G for L = d²/dx² + x on Desmos, seeing non-symmetric behavior, in 25 minutes.
+- • **Mathematical Communication:Mathematical Writing:** I documented limitation for L = d²/dx² + x, noting G(0.4,0.6)≠G(0.6,0.4), in steps.
+- • **Assessment & Practice:Concept Checks:** I tested 3 limitation cases, getting 2 correct, like no G for L = d/dx on [0,1].
+- • **Problem-Solving & Strategy:Solution Planning:** I compared limitations in two sources, finding non-self-adjoint L issues consistent.
+- • **Learning & Progress:Skill Development:** I hit a milestone by identifying G issues for L = d²/dx² + cos(x) on [0,π], after 3 hours.
+- • **Collaborative Learning:Group Problem Solving:** Christian shared 5 generalization tasks like G for time-dependent L = d²/dx² + t, for 35 minutes.
+- • **Technology & Tools:Computer Algebra Systems:** I used Mathematica 13.2 to attempt G for L = d²/dx² + x², noting failure, in 25 minutes.
+- • **Mathematical Communication:Explanation of Methods:** I’m explaining limitations, noting G fails for non-elliptic L = d/dx, in concise notes.
+- • **Assessment & Practice:Solution Validation:** I created 5 limitation questions, like “Identify G issue for L = d²/dx² + u,” for review.
+- • **Learning & Progress:Conceptual Progression:** To advance, I’m targeting 85% accuracy on 10 limitation cases, focusing on nonlinear L = d²/dx² + u².

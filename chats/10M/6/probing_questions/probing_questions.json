@@ -1,0 +1,645 @@
+{
+    "abstention": [
+        {
+            "question": "What feedback did Brian give during the 15-minute folk piece practice in the Shell Avenue living room?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific feedback Brian provided during the practice.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Brian's feedback is mentioned generally but no specifics are given.",
+            "plan_reference": "Plan 6, Bullet 3 in Batch 1 mentions Brian's feedback but no details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific feedback Brian provided during the practice"
+            ]
+        },
+        {
+            "question": "What specific techniques did John suggest during the 10-minute critique session at Harmony Hub?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific techniques John suggested during the 10-minute critique session.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The critique session is mentioned but no detailed techniques or suggestions are described.",
+            "plan_reference": "Plan 4, Batch 6, Bullet 2 mentions a critique session but no specific techniques.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific techniques John suggested during the 10-minute critique session"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever adjusted my chair height to help prevent wrist strain during my practice sessions?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you've adjusted your chair height by 3 inches to prevent wrist strain, but you also mentioned that you've never adjusted your chair height for that purpose. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "chair height adjustment to prevent wrist strain",
+            "conversation_references": [
+                "Session 4034: Adjusted chair height by 3 inches",
+                "Session 4164: Never adjusted chair height"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    4034
+                ],
+                "second_statement": [
+                    4164
+                ]
+            },
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you've adjusted your chair height by 3 inches to prevent wrist strain",
+                "LLM response should mention: you also mentioned that you've never adjusted your chair height",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever joined any violin-related groups on Reddit?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never joined any violin-related groups on Reddit, but you also mentioned joining the \"Beginner Musicians\" forum where you read about starter violins. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Joining violin-related groups on Reddit",
+            "conversation_references": [
+                "Session 1: Never joined any violin-related groups",
+                "Session 2, 4, 5: Joined \"Beginner Musicians\" forum and reading violin threads"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    214
+                ],
+                "second_statement": [
+                    136,
+                    148
+                ]
+            },
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never joined any violin-related groups on Reddit",
+                "LLM response should mention: you also mentioned joining the \"Beginner Musicians\" forum",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different ideas about incorporating my musical interests into university events and lectures from January 1, 2021 to February 25, 2021, in order? Mention ONLY and ONLY seven items.",
+            "answer": "You mentioned your ideas in this order: 1) Considering how ukulele skills could enhance lectures at New Jeffreytown University, possibly at Campus Plaza events, 2) Thinking of integrating ukulele into a cultural lecture at Campus Hall for 50 students, 3) Considering a ukulele demo for a university event at Campus Plaza for 40 colleagues, 4) Planning a ukulele snippet for a university lecture at Campus Hall for 45 students, 5) Planning to mention ukulele learning in a university seminar at Campus Plaza for 30 attendees, 6) Considering a ukulele workshop for students at Campus Hall targeting 35 participants, 7) Dreaming of small university gigs at Campus Plaza once skilled.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Initial consideration of ukulele skills for lectures at New Jeffreytown University and Campus Plaza events",
+                "Integration of ukulele into cultural lecture at Campus Hall",
+                "Planning a ukulele demo for a university event at Campus Plaza",
+                "Planning a ukulele snippet for a lecture at Campus Hall",
+                "Planning to mention ukulele learning in a seminar at Campus Plaza",
+                "Considering a ukulele workshop for students at Campus Hall",
+                "Dreaming of small university gigs at Campus Plaza"
+            ],
+            "ordering_tested": [
+                "1st: Ukulele skills enhancing lectures at New Jeffreytown University (Campus Plaza)",
+                "2nd: Integrating ukulele into cultural lecture at Campus Hall",
+                "3rd: Ukulele demo at Campus Plaza for colleagues",
+                "4th: Ukulele snippet for lecture at Campus Hall",
+                "5th: Mentioning ukulele learning in seminar at Campus Plaza",
+                "6th: Ukulele workshop for students at Campus Hall",
+                "7th: Dreaming of small gigs at Campus Plaza"
+            ],
+            "source_chat_ids": [
+                [
+                    2080,
+                    2086,
+                    2092
+                ],
+                [
+                    2478,
+                    2484,
+                    2490
+                ],
+                [
+                    2860,
+                    2866,
+                    2872
+                ],
+                [
+                    3838,
+                    3844,
+                    3850
+                ],
+                [
+                    3248
+                ],
+                [
+                    3442,
+                    3448,
+                    3456,
+                    3458,
+                    3460
+                ],
+                [
+                    "--"
+                ]
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "Ukulele skills enhancing lectures at New Jeffreytown University (Campus Plaza)",
+                "Integrating ukulele into cultural lecture at Campus Hall",
+                "Ukulele demo at Campus Plaza for colleagues",
+                "Ukulele snippet for lecture at Campus Hall",
+                "Mentioning ukulele learning in seminar at Campus Plaza",
+                "Ukulele workshop for students at Campus Hall",
+                "Dreaming of small gigs at Campus Plaza"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different ways my family and tutor have supported my ukulele practice from March 1, 2021 to April 24, 2021, in order? Mention ONLY and ONLY six items.",
+            "answer": "You mentioned the different ways of support in this order: 1) My music tutor John's initial advice on daily practice planning and confidence boosting, 2) My husband Brian's involvement with setting up practice equipment and organizing materials, 3) My daughter Barbara's help with selecting calming decor and timing warm-ups, 4) My son Christian's assistance with testing and adjusting practice tools and recording motivational videos, 5) My son Marvin's encouragement during goal reviews and cheering sessions, 6) Additional support and motivational ideas shared by Keith during accountability calls.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 3974-3990: Tutor John's advice and check-ins",
+                "Session 4170-5932: Husband Brian's support with equipment and organization",
+                "Session 4372-6888: Daughter Barbara's involvement with decor and timing",
+                "Session 4556-5732: Son Christian's help with equipment and motivation",
+                "Session 4748-7638: Son Marvin's cheering and engagement",
+                "Session 4952-7462: Keith's motivational calls and resources"
+            ],
+            "ordering_tested": [
+                "1st: Tutor John's practice planning and confidence tips",
+                "2nd: Husband Brian's equipment setup and material organization",
+                "3rd: Daughter Barbara's decor selection and timing support",
+                "4th: Son Christian's equipment testing and motivational videos",
+                "5th: Son Marvin's cheering and goal review encouragement",
+                "6th: Keith's accountability calls and motivational resources"
+            ],
+            "source_chat_ids": [
+                [
+                    3974,
+                    3976,
+                    3982,
+                    3990
+                ],
+                [
+                    4170,
+                    4172,
+                    4174,
+                    4184,
+                    5134,
+                    5142,
+                    5144,
+                    5918,
+                    5926,
+                    5932,
+                    6688
+                ],
+                [
+                    4372,
+                    4378,
+                    4384,
+                    5330,
+                    5336,
+                    5342,
+                    6108,
+                    6880,
+                    6888
+                ],
+                [
+                    4556,
+                    4564,
+                    4566,
+                    4572,
+                    6304,
+                    5718,
+                    5726,
+                    5732,
+                    7076
+                ],
+                [
+                    4748,
+                    4754,
+                    4756,
+                    4762,
+                    6502,
+                    7276,
+                    7638
+                ],
+                [
+                    4952,
+                    5526,
+                    5538,
+                    5540,
+                    7452,
+                    7454,
+                    7462
+                ]
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Tutor John's practice planning and confidence tips",
+                "Husband Brian's equipment setup and material organization",
+                "Daughter Barbara's decor selection and timing support",
+                "Son Christian's equipment testing and motivational videos",
+                "Son Marvin's cheering and goal review encouragement",
+                "Keith's accountability calls and motivational resources"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How many business cards did I order from Vistaprint and what was the total cost?",
+            "answer": "I ordered 50 business cards from Vistaprint for $20.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I just ordered 50 business cards from Vistaprint for $20, is that a good deal for sharing at events?",
+            "key_facts_tested": [
+                "quantity of business cards",
+                "total price paid",
+                "vendor used"
+            ],
+            "source_chat_ids": [
+                18266
+            ],
+            "plan_reference": "Plan 9",
+            "rubric": [
+                "LLM response should state: 50 business",
+                "LLM response should state: $20"
+            ]
+        },
+        {
+            "question": "How much did I say I paid for the SD card I got from TechMart?",
+            "answer": "You said you got the SD card for $10.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions having a $10 SD card from TechMart.",
+            "key_facts_tested": [
+                "price of SD card",
+                "TechMart SD card cost"
+            ],
+            "source_chat_ids": [
+                13908
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should state: $10"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How can I get started with keeping a journal?",
+            "instruction_being_tested": "Always include emotional tone descriptions when I ask about journaling.",
+            "expected_compliance": "Response should include descriptions of emotional tones related to journaling entries, reflecting feelings or moods involved.",
+            "compliance_indicators": [
+                "mentions of feelings or moods",
+                "emotional context in journaling",
+                "descriptions of emotional states"
+            ],
+            "non_compliance_signs": [
+                "only practical steps without emotional context",
+                "no mention of feelings or moods",
+                "purely technical or procedural advice"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                14636
+            ],
+            "plan_reference": "Plan 7",
+            "rubric": [
+                "LLM response should contain: mentions of feelings or moods",
+                "LLM response should contain: emotional context in journaling"
+            ]
+        },
+        {
+            "question": "What options do you recommend for accessories to go with my instrument?",
+            "instruction_being_tested": "Always provide detailed equipment brand and price information when I ask about instrument accessories.",
+            "expected_compliance": "Response should include specific brand names and their prices for the recommended accessories.",
+            "compliance_indicators": [
+                "brand names mentioned",
+                "price details provided",
+                "multiple accessory options with brands and costs"
+            ],
+            "non_compliance_signs": [
+                "no brand information",
+                "no price details",
+                "only general accessory types listed"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                6098
+            ],
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should contain: brand names mentioned",
+                "LLM response should contain: price details provided"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much time do I dedicate to my morning rhythm variation drills?",
+            "answer": "30 minutes",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "extended duration of morning rhythm variation drills",
+            "conversation_references": [
+                "Planning & Logistics Labels:Practice Session Planning: I\u2019ve blocked 25 minutes in my morning 6:45 AM session for rhythm variation drills.",
+                "Information Update: I\u2019ve extended my morning rhythm variation drills to 30 minutes to deepen my timing skills."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 25-minute duration instead of the updated 30 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    10010,
+                    10016,
+                    10020
+                ],
+                "updated_info": [
+                    10160
+                ]
+            },
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should state: 30 minutes"
+            ]
+        },
+        {
+            "question": "How long is my open mic performance slot at Coral Bay Club?",
+            "answer": "7 minutes",
+            "difficulty": "easy",
+            "update_type": "performance_duration_extension",
+            "tests_retention_of": "updated length of open mic slot",
+            "conversation_references": [
+                "Community Engagement Labels:Open Mic Participation: I\u2019ve signed up for an open mic at Coral Bay Club, $10 fee for a 5-minute slot.",
+                "Information Update: I\u2019ve adjusted my open mic slot at Coral Bay Club to 7 minutes, increasing my performance time slightly."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 5-minute slot duration instead of the updated 7 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    15896
+                ],
+                "updated_info": [
+                    15988
+                ]
+            },
+            "plan_reference": "Plan 8",
+            "rubric": [
+                "LLM response should state: 7 minutes"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many $30 sessions with John have I mentioned attending or planning to attend so far?",
+            "answer": "You have mentioned attending or planning to attend 10 sessions costing $30 each with John.",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 7822",
+                "chat_id: 7825",
+                "chat_id: 9390"
+            ],
+            "reasoning_steps": [
+                "Identify each mention of a $30 session with John in the user messages.",
+                "Count all distinct mentions or plans for $30 sessions with John across the sessions.",
+                "Sum these mentions to get the total number of $30 sessions referenced."
+            ],
+            "source_chat_ids": [
+                7822,
+                7825,
+                9390
+            ],
+            "plan_reference": "Plan 4-5",
+            "rubric": [
+                "LLM response should state: 10 sessions"
+            ]
+        },
+        {
+            "question": "How have my incremental changes to morning and evening practice durations combined with my goals for rhythm and performance accuracy influenced my overall practice efficiency and progress towards mastering complex songs?",
+            "answer": "Your incremental morning practice extensions from 50 to 70 minutes, combined with added focused evening slots (targeted chord practice, recording analysis, mock performances), alongside rhythm improvement targets (15-20%) and aiming for 90% accuracy on 5 complex songs, have synergistically increased your practice efficiency by enabling focused, balanced skill development. This structured layering of time and goals has optimized your progress, allowing steady technical mastery while managing performance readiness and anxiety, reflecting a well-rounded, efficient practice routine.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "PLAN 7 BATCH 1 BULLET 6",
+                "PLAN 7 BATCH 2 BULLET 6",
+                "PLAN 7 BATCH 3 BULLET 6",
+                "PLAN 7 BATCH 5 BULLET 6",
+                "PLAN 8 BATCH 3 BULLET 6",
+                "PLAN 8 BATCH 6 BULLET 6"
+            ],
+            "reasoning_steps": [
+                "Identify the incremental changes in morning practice duration from initial 50 minutes to 65 and then 70 minutes, noting the focus shifts (repertoire polishing, final song tweaks).",
+                "Analyze the additions to evening practice slots, including targeted chord practice, recording analysis, and mock performances, and their cumulative effect on skill refinement.",
+                "Incorporate the rhythm improvement targets (15-20%) and the goal of mastering 5 complex songs at 90% accuracy to understand the technical demands placed on practice time.",
+                "Synthesize how the structured division of practice time between morning and evening sessions supports both technical skill development and performance readiness.",
+                "Evaluate how these combined practice routine changes contribute to increased efficiency by balancing focused technical work with performance simulation and self-assessment.",
+                "Conclude that the layered, goal-oriented practice schedule optimizes progress towards mastering complex songs while managing rhythm and performance anxiety, reflecting improved overall practice efficiency."
+            ],
+            "source_chat_ids": [
+                11834,
+                12028,
+                12620,
+                14063,
+                14262,
+                13472
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: Your incremental morning practice extensions from 50 to 70 minutes, combined with added focused evening slots",
+                "LLM response should state: rhythm improvement targets (15-20%)",
+                "LLM response should state: aiming for 90% accuracy on 5 complex songs",
+                "LLM response should state: your progress has synergistically increased your practice efficiency by enabling focused, balanced skill development",
+                "LLM response should state: This structured layering of time and goals has optimized your progress, allowing steady technical mastery while managing performance readiness and anxiety"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "What should I keep in mind when choosing a ukulele for different playing styles?",
+            "preference_being_tested": "I\u2019ve chosen to stick with my Kala ukulele, rejecting a $90 Mahalo model at Surf Sounds for its inferior tone.",
+            "expected_compliance": "Response should acknowledge the user's existing Kala ukulele and avoid recommending the Mahalo model or similar alternatives that conflict with the user's prior choice, focusing instead on advice relevant to the Kala or comparable instruments.",
+            "compliance_indicators": [
+                "mentions the Kala ukulele as the current instrument",
+                "avoids suggesting the Mahalo model or similar lower-tier options",
+                "provides advice tailored to the Kala ukulele or equivalent quality instruments"
+            ],
+            "non_compliance_signs": [
+                "recommends the Mahalo model or similar alternatives",
+                "ignores the user's existing Kala ukulele",
+                "suggests switching to a different brand without acknowledging user's current instrument"
+            ],
+            "difficulty": "medium",
+            "preference_type": "brand and model preference",
+            "source_chat_ids": [
+                2048,
+                2050,
+                2060
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: mentions the Kala ukulele as the current instrument",
+                "LLM response should contain: avoids suggesting the Mahalo model or similar lower-tier options"
+            ]
+        },
+        {
+            "question": "I'm planning how to allocate my budget for improving my skills and gear. How would you suggest I divide my spending?",
+            "preference_being_tested": "I\u2019ve prioritized lessons over new accessories, saving $20 by skipping a $25 case upgrade",
+            "expected_compliance": "Response should emphasize allocating more budget towards lessons or skill development rather than spending on accessories or gear upgrades, reflecting the user's prioritization",
+            "compliance_indicators": [
+                "recommends investing more in lessons or practice",
+                "suggests limiting spending on accessories",
+                "acknowledges budget allocation towards skill improvement"
+            ],
+            "non_compliance_signs": [
+                "focuses mainly on buying new accessories",
+                "ignores lessons or skill development in budget advice",
+                "suggests spending evenly or more on gear upgrades"
+            ],
+            "difficulty": "medium",
+            "preference_type": "budget_allocation",
+            "source_chat_ids": [
+                2750,
+                2760
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: recommends investing more in lessons or practice",
+                "LLM response should contain: suggests limiting spending on accessories"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my collaborations and interactions with my peers and mentors have developed from November 1, 2021 to December 27, 2021 and influenced my musical growth?",
+            "ideal_summary": "Your musical journey has been shaped significantly through evolving collaborations and mentorships. Initially, your mentor John at Harmony Hub provided targeted advice on learning challenging pieces, critiqued your performances with actionable feedback, and encouraged improvisation, fostering your technical and emotional growth. Concurrently, peer collaborations with Nicole, Keith, and Shannon introduced diverse perspectives and practical support, from tempo adjustments and co-teaching sessions to joint performances and brand promotion efforts. Family support also played a role, with Barbara and Brian contributing to practice planning and emotional encouragement. Over time, these interactions have collectively enhanced your skills, confidence, and professional outlook, demonstrating a progression from individual learning to integrated community engagement and strategic career planning.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 4,
+            "key_elements_tested": [
+                "relationship progression",
+                "collaboration impact",
+                "mentorship influence",
+                "skill development",
+                "community engagement"
+            ],
+            "synthesis_required": "Integrating multiple interpersonal interactions and their cumulative effect on musical development into a coherent narrative",
+            "source_chat_ids": [
+                15802,
+                15996,
+                16204,
+                17378
+            ],
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should contain: your mentor John at Harmony Hub provided targeted advice on learning challenging pieces",
+                "LLM response should contain: John critiqued your performances with actionable feedback",
+                "LLM response should contain: John encouraged improvisation, fostering your technical and emotional growth",
+                "LLM response should contain: peer collaborations with Nicole, Keith, and Shannon introduced diverse perspectives and practical support, from tempo adjustments and co-teaching sessions to joint performances and brand promotion efforts",
+                "LLM response should contain: Family support also played a role, with Barbara and Brian contributing to practice planning and emotional encouragement",
+                "LLM response should contain: interactions have collectively enhanced your skills, confidence, and professional outlook, demonstrating a progression from individual learning to integrated community engagement"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed summary of my overall progress and experiences with my ukulele practice and mentorship, capturing how various sessions, feedback, and resources have influenced my development and preparation from September 1, 2021 to October 28, 2021?",
+            "ideal_summary": "Over multiple sessions, your ukulele journey has been shaped by consistent mentorship from John at Harmony Hub, who provided targeted guidance across technical skills, performance preparation, and emotional management. Early on, John emphasized focused practice on a select set of songs, helping you polish key pieces for performances and addressing specific technical challenges like chord transitions through tailored drills. He also introduced structured tools such as a monthly practice planner to enhance organization and consistency, which you trialed to improve your practice habits. Throughout your progression, John\u2019s feedback highlighted measurable improvements, including significant boosts in finger agility, dynamics, timing, and overall technique, with quantified growth percentages reflecting your steady advancement. Complementing this, John\u2019s advice extended beyond technique to include stage presence coaching, anxiety management strategies, and recording setup tips, fostering a holistic development approach. Parallel to John\u2019s mentorship, you balanced family support and peer feedback, integrating diverse perspectives to refine your skills and maintain motivation. Performance opportunities, such as gigs and open mic nights facilitated through Harmony Hub, provided practical platforms to apply your learning and build confidence. Regular reviews and reflection guides from John encouraged structured self-assessment, enhancing your focus and enabling you to set clear, actionable goals. Managing challenges like pre-gig tension and shaky hands was addressed through both mental and physical preparation techniques, supported by mentor insights. Your journey reflects a dynamic interplay of expert guidance, personal discipline, and community engagement, culminating in substantial skill growth and readiness for increasingly advanced musical endeavors.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                11808,
+                11809,
+                12202,
+                12406,
+                13078,
+                13450,
+                14462,
+                15412
+            ],
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should contain: John emphasized focused practice on a select set of songs, helping you polish key pieces for performances and addressing specific technical challenges",
+                "LLM response should contain: introduced structured tools such as a monthly practice planner to enhance organization and consistency",
+                "LLM response should contain: John\u2019s feedback highlighted measurable improvements, including significant boosts in finger agility, dynamics, timing, and overall technique",
+                "LLM response should contain: John\u2019s advice extended beyond technique to include stage presence coaching, anxiety management strategies, and recording setup tips, fostering a holistic development approach",
+                "LLM response should contain: Parallel to John\u2019s mentorship, you balanced family support and peer feedback, integrating diverse perspectives to refine your skills and maintain motivation",
+                "LLM response should contain: Performance opportunities, such as gigs and open mic nights facilitated through Harmony Hub, provided practical platforms to apply your learning and build confidence",
+                "LLM response should contain: Regular reviews and reflection guides from John encouraged structured self-assessment, enhancing your focus and enabling you to set clear, actionable goals",
+                "LLM response should contain: Managing challenges like pre-gig tension and shaky hands was addressed through both mental and physical preparation techniques, supported by mentor insights",
+                "LLM response should contain: Your journey reflects a dynamic interplay of expert guidance, personal discipline, and community engagement"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I started preparing for my ukulele journey and when I began my first active practice session?",
+            "answer": "31 days passed between starting preparations on March 1, 2021, and beginning the first active practice session on April 1, 2021.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 1, 2021: start of preparations",
+                "April 1, 2021: first active practice session"
+            ],
+            "conversation_references": [
+                "chat_id 3972",
+                "chat_id 5914"
+            ],
+            "calculation_required": "April 1, 2021 - March 1, 2021 = 31 days",
+            "source_chat_ids": {
+                "first_event": [
+                    3972
+                ],
+                "second_event": [
+                    5914
+                ]
+            },
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should state: 31 days",
+                "LLM response should state: from March 1, 2021 till April 1, 2021"
+            ]
+        },
+        {
+            "question": "How many days passed between when I was exploring performance opportunities with my ukulele and when I started journaling about my ukulele journey?",
+            "answer": "31 days passed between when I was exploring performance opportunities on September 9, 2021, and when I started journaling about my ukulele journey on October 10, 2021.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "September 9, 2021: exploring performance opportunities",
+                "October 10, 2021: starting journaling about ukulele journey"
+            ],
+            "conversation_references": [
+                "chat_id 12442",
+                "chat_id 14484, 14492"
+            ],
+            "calculation_required": "October 10, 2021 - September 9, 2021 = 31 days",
+            "source_chat_ids": {
+                "first_event": [
+                    12442
+                ],
+                "second_event": [
+                    14484,
+                    14492
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 31 days",
+                "LLM response should state: from September 9, 2021 till October 10, 2021"
+            ]
+        }
+    ]
+}

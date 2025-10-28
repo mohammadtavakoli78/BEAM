@@ -1,0 +1,565 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Dr. Farah\u2019s professional background and qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Dr. Farah\u2019s professional background and qualifications.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Dr. Farah is mentioned as a therapist but no background or qualifications are provided.",
+            "plan_reference": "Multiple batches mention Dr. Farah but do not provide professional background details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Dr. Farah\u2019s professional background and qualifications."
+            ]
+        },
+        {
+            "question": "Could you provide the contact details or affiliation of the local hiking club you joined in June?",
+            "ideal_response": "Based on the provided chat, there is no information related to the contact details or affiliation of the local hiking club.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The hiking club is mentioned but no contact or affiliation details are provided.",
+            "plan_reference": "Batch 5 mentions joining a local hiking club but no further details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the contact details or affiliation of the local hiking club."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended therapy sessions with Dr. Farah?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you started sessions with Dr. Farah, but you also mentioned never attending any therapy sessions with her. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance of therapy sessions with Dr. Farah",
+            "conversation_references": [
+                "Session 20: Started sessions statement",
+                "Session 98: Never attended statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    20
+                ],
+                "second_statement": [
+                    98
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any therapy sessions with Dr. Farah",
+                "LLM response should mention: you also mentioned starting sessions with her",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have you ever arranged after-school care for Megan or any of your children?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have arranged full-time after-school care for Megan, but you also mentioned that you've never arranged after-school care for Megan or any of your children. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "arranging after-school care for Megan",
+            "conversation_references": [
+                "Session 482 and 486: Arranged after-school care",
+                "Session 536: Never arranged after-school care"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    482,
+                    486
+                ],
+                "second_statement": [
+                    536
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never arranged after-school care for Megan or any of your children",
+                "LLM response should mention: you also mentioned arranging full-time after-school care for Megan",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of my personal situation with Sarah shift and develop throughout our conversations in order (mention 8 items)?",
+            "answer": "Your focus evolved through these stages: 1) Coping with emotional pain after the breakup, 2) Reflecting on the relationship and learning from it, 3) Managing communication boundaries with Sarah, 4) Addressing challenges related to custody and visitation arrangements, 5) Handling mediation and legal involvement, 6) Navigating holiday scheduling and supervised visits, 7) Dealing with emotional safety and boundary setting during interactions, 8) Processing emotional healing and mood after visits. Each stage was introduced and revisited in separate conversations, showing a progression from emotional processing to practical arrangements and boundary management.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id 0, 2",
+                "chat_id 118",
+                "chat_id 244, 254",
+                "chat_id 342, 344, 346",
+                "chat_id 456",
+                "chat_id 552",
+                "chat_id 662, 668",
+                "chat_id 764, 884, 886, 892, 990"
+            ],
+            "ordering_tested": [
+                "1st: Emotional coping after breakup",
+                "2nd: Reflecting on relationship lessons",
+                "3rd: Communication boundaries",
+                "4th: Custody and visitation challenges",
+                "5th: Mediation and legal involvement",
+                "6th: Holiday scheduling and supervised visits",
+                "7th: Emotional safety and boundary setting",
+                "8th: Emotional healing and mood after visits"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic shifts",
+                "spans numerous conversation sessions",
+                "involves nuanced emotional and practical topic evolution",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                0,
+                2,
+                118,
+                244,
+                254,
+                342,
+                344,
+                346,
+                456,
+                552,
+                662,
+                668,
+                764,
+                884,
+                886,
+                892,
+                990
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Coping with emotional pain after the breakup",
+                "LLM response should mention: 2) Reflecting on the relationship and learning from it",
+                "LLM response should mention: 3) Managing communication boundaries with Sarah",
+                "LLM response should mention: 4) Addressing challenges related to custody and visitation arrangements",
+                "LLM response should mention: 5) Handling mediation and legal involvement",
+                "LLM response should mention: 6) Navigating holiday scheduling and supervised visits",
+                "LLM response should mention: 7) Dealing with emotional safety and boundary setting during interactions",
+                "LLM response should mention: 8) Processing emotional healing and mood after visits"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my personal healing journey and related activities throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these aspects in this order: 1) First, you talked about helping your kids process emotions after the breakup, 2) Then you described your busy daily routine including school runs and visiting your mom, 3) Next, you mentioned attending a men's support group and ways to maintain progress, 4) After that, you brought up various fishing trips planned with Scott along with concerns about boat rentals and scheduling, 5) Finally, you discussed attending a book club meeting and preparing for an upcoming hike with Scott.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "chat_id 12",
+                "chat_id 16",
+                "chat_ids 100, 112, 114, 116",
+                "chat_ids 310, 408, 508, 620, 622, 818, 822, 948, 952",
+                "chat_ids 716, 718, 720, 1038"
+            ],
+            "ordering_tested": [
+                "1st: Helping kids with emotions",
+                "2nd: Daily routine and family visits",
+                "3rd: Support group attendance and progress",
+                "4th: Fishing trips and related planning",
+                "5th: Book club and upcoming hike preparations"
+            ],
+            "source_chat_ids": [
+                12,
+                16,
+                100,
+                112,
+                114,
+                116,
+                310,
+                408,
+                508,
+                620,
+                622,
+                818,
+                822,
+                948,
+                952,
+                716,
+                718,
+                720,
+                1038
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Helping kids with emotions",
+                "LLM response should mention: 2) Daily routine and family visits",
+                "LLM response should mention: 3) Support group attendance and progress",
+                "LLM response should mention: 4) Fishing trips and related planning",
+                "LLM response should mention: 5) Book club and upcoming hike preparations"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Given the challenges I face balancing practical problem-solving with emotional difficulties, how did you tailor your advice to fit the way I usually approach issues in my daily life?",
+            "answer": "I suggested that since you are used to a structured and practical approach as a Chartered Loss Adjuster, you apply that same structure to your daily routine by setting regular times for meals, exercise, work, and relaxation to help manage your emotions.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: User introduction about profession and emotional challenge, assistant advice on managing emotions with structured routine",
+            "key_facts_tested": [
+                "profession: Chartered Loss Adjuster",
+                "emotional difficulty",
+                "advice: applying structured daily routine",
+                "context: practical problem-solving background"
+            ],
+            "extraction_challenge": "LLM must integrate the user's professional background and emotional challenge with the assistant's tailored advice on structuring daily activities to manage feelings",
+            "source_chat_ids": [
+                4,
+                5
+            ],
+            "rubric": [
+                "I suggested that since you are used to a structured and practical approach as a Chartered Loss Adjuster, you apply that same structure to your daily routine by setting regular times for meals, exercise, work, and relaxation to help manage your emotions."
+            ]
+        },
+        {
+            "question": "What time do I usually take the kids to school each day?",
+            "answer": "7:30 AM",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions handling school runs at 7:30 AM daily",
+            "key_facts_tested": [
+                "time of school runs"
+            ],
+            "source_chat_ids": [
+                12
+            ],
+            "rubric": [
+                "7:30 AM"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What social events are happening this weekend?",
+            "instruction_being_tested": "Always include specific locations when I ask about social events.",
+            "expected_compliance": "Response should include the names of social events along with the exact places where they will take place.",
+            "compliance_indicators": [
+                "event names paired with venues",
+                "mention of where each event is held",
+                "location details for each social gathering"
+            ],
+            "non_compliance_signs": [
+                "listing events without any place information",
+                "vague or missing venue details",
+                "only event descriptions without locations"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                220
+            ],
+            "rubric": [
+                "Response should include the names of social events along with the exact places where they will take place."
+            ]
+        },
+        {
+            "question": "Are there any concerts or festivals coming up in South Gregorymouth?",
+            "instruction_being_tested": "Always include ticket prices when I ask about social events.",
+            "expected_compliance": "Response should include ticket prices along with details about the events.",
+            "compliance_indicators": [
+                "mention of ticket prices",
+                "specific cost information",
+                "price details included with event info"
+            ],
+            "non_compliance_signs": [
+                "no mention of ticket prices",
+                "only event details without costs",
+                "vague or missing price information"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                532,
+                534
+            ],
+            "rubric": [
+                "Response should include ticket prices along with details about the events."
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many mechanical sketches have I completed so far?",
+            "answer": "You have completed 5 mechanical sketches.",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "the total number of sketches completed",
+            "conversation_references": [
+                "Creative & Artistic Labels:Creative Expression: Started sketching mechanical objects on March 10, completing 3 sketches by March 14 for stress relief.",
+                "Information Update: I have now completed 5 sketches by March 15, adding two more detailed mechanical drawings to my collection."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 3 sketches instead of the updated total of 5 sketches.",
+            "source_chat_ids": {
+                "original_info": [
+                    58
+                ],
+                "updated_info": [
+                    94
+                ]
+            },
+            "rubric": [
+                "You have completed 5 mechanical sketches."
+            ]
+        },
+        {
+            "question": "How many people have signed up for the woodworking market stall you planned with Zara?",
+            "answer": "25 pre-registrations",
+            "difficulty": "easy",
+            "update_type": "attendance_count",
+            "tests_retention_of": "number of pre-registrations for the woodworking market stall",
+            "conversation_references": [
+                "Character & Relationship Labels:New Connections: Zara and I planned joint market stall for January 15, 2025, booked space at South Gregorymouth Bazaar.",
+                "Information Update: The woodworking market stall planned for January 15, 2025, has attracted 25 pre-registrations for attendees."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that no attendees had signed up yet or that the number of pre-registrations was not mentioned",
+            "source_chat_ids": {
+                "original_info": [
+                    992,
+                    996
+                ],
+                "updated_info": [
+                    1068
+                ]
+            },
+            "rubric": [
+                "25 pre-registrations"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many total hours per week have I committed to my woodworking classes and mediation session combined?",
+            "answer": "10 hours per week",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "woodworking classes schedule",
+                "mediation session time"
+            ],
+            "reasoning_steps": [
+                "Calculate total weekly hours for woodworking classes by multiplying the number of sessions per week by the duration of each session.",
+                "Identify the duration of the mediation session blocked per week.",
+                "Add the weekly woodworking class hours and mediation session hours to get the total weekly commitment."
+            ],
+            "source_chat_ids": [
+                180,
+                292
+            ],
+            "rubric": [
+                "10 hours per week"
+            ]
+        },
+        {
+            "question": "How many different types of communications with Sarah have I mentioned wanting to manage or avoid?",
+            "answer": "Three types: emotional processing after breakup, setting boundaries to communicate only via email, and handling joint custody discussions.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "emotional processing after breakup",
+                "boundary for email communication",
+                "joint custody discussion"
+            ],
+            "reasoning_steps": [
+                "Identify the mention of emotional processing after breakup in the first session.",
+                "Recall the boundary about communicating only via email in the second session.",
+                "Note the joint custody discussion as a separate communication topic in the third session."
+            ],
+            "source_chat_ids": [
+                0,
+                118,
+                244
+            ],
+            "rubric": [
+                "LLM response should mention: emotional processing after breakup",
+                "LLM response should mention: setting boundaries to communicate only via email",
+                "LLM response should mention: handling joint custody discussions"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "How can I organize my daily schedule to fit in my hobbies without disrupting other important activities?",
+            "preference_being_tested": "I prefer evening activities for hobbies, so I scheduled woodworking classes at 6 PM to fit my workday rhythm.",
+            "expected_compliance": "Response should suggest scheduling hobby activities during evening hours to align with the user's existing routine, avoiding recommendations that place hobbies in conflicting time slots.",
+            "compliance_indicators": [
+                "recommends evening time slots for hobbies",
+                "acknowledges user's workday rhythm",
+                "avoids suggesting daytime hobby activities",
+                "balances hobbies with other responsibilities considering timing"
+            ],
+            "non_compliance_signs": [
+                "suggests morning or afternoon hobby times",
+                "ignores user's daily routine",
+                "recommends hobby times that conflict with work or other duties",
+                "does not address timing of activities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                200,
+                204
+            ],
+            "rubric": [
+                "Response should suggest scheduling hobby activities during evening hours to align with the user's existing routine, avoiding recommendations that place hobbies in conflicting time slots."
+            ]
+        },
+        {
+            "question": "I'm planning a trip soon and want to make sure I get the most out of it. How would you suggest structuring the days to make the experience meaningful?",
+            "preference_being_tested": "I prefer planned solo trips to recharge, so I booked a 5-day Hunza Valley trip with detailed itinerary.",
+            "expected_compliance": "Response should emphasize the benefits of a planned itinerary and solo travel structure that supports personal recharging, reflecting the user's preference for a detailed, solo trip designed for emotional renewal.",
+            "compliance_indicators": [
+                "recommends a detailed day-by-day plan",
+                "mentions solo travel advantages",
+                "focuses on pacing and downtime for recharging",
+                "aligns suggestions with a structured itinerary approach"
+            ],
+            "non_compliance_signs": [
+                "suggests unplanned or group activities",
+                "ignores the value of a detailed itinerary",
+                "recommends a spontaneous or social-heavy trip",
+                "does not address pacing or personal downtime"
+            ],
+            "difficulty": "medium",
+            "preference_type": "trip planning and travel style",
+            "source_chat_ids": [
+                514,
+                518
+            ],
+            "rubric": [
+                "Response should emphasize the benefits of a planned itinerary and solo travel structure that supports personal recharging, reflecting the user's preference for a detailed, solo trip designed for emotional renewal."
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary of everything that\u2019s happened with Sarah and me, covering how I\u2019ve been managing the emotional challenges, the communication boundaries, the custody arrangements, and the supervised visits, including how I\u2019ve been coping and what steps I\u2019ve taken throughout this whole process?",
+            "ideal_summary": "The situation with Sarah involves a complex interplay of emotional healing, boundary setting, and co-parenting logistics following their breakup. Initially, the user struggled with emotional pain and sought strategies to process feelings, including journaling, therapy, and establishing new routines. To protect emotional well-being, the user set firm communication boundaries, insisting on email-only contact and involving a mediator to handle sensitive discussions, especially regarding custody and visitation. The user committed to avoiding direct contact for a set period, employing support systems and mindfulness techniques to maintain this boundary. As joint custody discussions arose, the user approached them cautiously, seeking legal advice and proposing mediation to facilitate structured negotiations focused on the children's best interests. Supervised visits were scheduled, prompting the user to prepare emotionally and practically by setting clear boundaries, involving supervisors when necessary, and focusing interactions on the children to avoid conflict. The user faced challenges such as missed visits by Sarah, which led to mediator involvement and feelings of guilt, but processed these emotions through therapy and support networks. Throughout, the user maintained self-care routines, including affirmations, physical activity, and social connections, to support emotional resilience. The holiday visits added anxiety, but the user planned carefully with therapist guidance, mindfulness, and support from friends. After the visits, the user reflected on mood improvements and sought strategies to sustain progress. Overall, the user navigated a multifaceted journey balancing emotional recovery, co-parenting responsibilities, and boundary enforcement, leveraging professional support, mediation, and personal coping mechanisms to manage the evolving situation effectively.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 9,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                1,
+                3,
+                27,
+                33,
+                119,
+                245,
+                255,
+                343,
+                457,
+                553,
+                663,
+                669,
+                765,
+                885,
+                887,
+                893,
+                991
+            ],
+            "rubric": [
+                "Response should mention: the user struggled with emotional pain and sought strategies to process feelings, including journaling, therapy, and establishing new routines. To protect emotional well-being, the user set firm communication boundaries, insisting on email-only contact and involving a mediator to handle sensitive discussions, especially regarding custody and visitation.",
+                "Response should mention: the user committed to avoiding direct contact for a set period, employing support systems and mindfulness techniques to maintain this boundary. As joint custody discussions arose, the user approached them cautiously, seeking legal advice and proposing mediation to facilitate structured negotiations focused on the children's best interests.",
+                "Response should mention: supervised visits were scheduled, prompting the user to prepare emotionally and practically by setting clear boundaries, involving supervisors when necessary, and focusing interactions on the children to avoid conflict. The user faced challenges such as missed visits by Sarah, which led to mediator involvement and feelings of guilt, but processed these emotions through therapy and support networks.",
+                "Response should mention: throughout, the user maintained self-care routines, including affirmations, physical activity, and social connections, to support emotional resilience. The holiday visits added anxiety, but the user planned carefully with therapist guidance, mindfulness, and support from friends. After the visits, the user reflected on mood improvements and sought strategies to sustain progress.",
+                "Response should mention: overall, the user navigated a multifaceted journey balancing emotional recovery, co-parenting responsibilities, and boundary enforcement, leveraging professional support, mediation, and personal coping mechanisms to manage the evolving situation effectively."
+            ]
+        },
+        {
+            "question": "Can you summarize my progress and activities with Dr. Farah and the related personal development steps I've been working on?",
+            "ideal_summary": "You have been attending therapy sessions with Dr. Farah focusing on rebuilding confidence, practicing cognitive behavioral techniques, and journaling exercises centered on self-compassion. Alongside therapy, you have been reflecting on your emotional and professional growth through journaling, working on communication skills, and incorporating self-care activities like yoga and mindfulness. You have also been managing your therapy schedule and seeking ways to apply learned skills in daily life to support your ongoing personal development.",
+            "difficulty": "easy",
+            "summarization_type": "basic_development_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 20,
+            "key_elements_tested": [
+                "therapy attendance and goals",
+                "practice of therapeutic techniques",
+                "personal growth and self-care activities"
+            ],
+            "synthesis_required": "Combining therapy progress, exercises, and personal growth into a simple overview",
+            "source_chat_ids": [
+                20,
+                38,
+                124,
+                376,
+                1010,
+                1012
+            ],
+            "rubric": [
+                "Response should mention: attending therapy sessions with Dr. Farah focusing on rebuilding confidence, practicing cognitive behavioral techniques, and journaling exercises centered on self-compassion.",
+                "Response should mention: reflecting on your emotional and professional growth through journaling, working on communication skills, and incorporating self-care activities like yoga and mindfulness.",
+                "Response should mention: managing your therapy schedule and seeking ways to apply learned skills in daily life to support your ongoing personal development."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days did I maintain no contact with Sarah starting from our last message before I began my 30-day no-contact plan?",
+            "answer": "You maintained no contact with Sarah for 4 days from the last message on March 1 until you started your 30-day no-contact plan on March 5, then continued the plan for 30 days, totaling 34 days of no contact.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 1: last message with Sarah (batch anchor)",
+                "March 5: start of 30-day no-contact plan"
+            ],
+            "conversation_references": [
+                "Session 44: no-contact rule since last message",
+                "Session 26: 30-day no-contact plan starting March 5"
+            ],
+            "calculation_required": "March 5 - March 1 = 4 days before plan start + 30 days plan = 34 days total no contact",
+            "source_chat_ids": {
+                "first_event": [
+                    44
+                ],
+                "second_event": [
+                    26
+                ]
+            },
+            "rubric": [
+                "Response should state: You maintained no contact with Sarah for 34 days."
+            ]
+        },
+        {
+            "question": "How many days do I have between moving into my new apartment and the mediation session I scheduled?",
+            "answer": "There are 9 days between moving into your new apartment on May 1 and the mediation session you scheduled on May 10.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "May 1: moving into new apartment",
+                "May 10: mediation session"
+            ],
+            "conversation_references": [
+                "Session 28: moving plans",
+                "Sessions 292 and 294: mediation session scheduling and preparation"
+            ],
+            "calculation_required": "May 10 - May 1 = 9 days",
+            "source_chat_ids": {
+                "first_event": [
+                    28
+                ],
+                "second_event": [
+                    292,
+                    294
+                ]
+            },
+            "rubric": [
+                "Response should state: 9 days",
+                "LLM response should state: from May 1 till May 10"
+            ]
+        }
+    ]
+}

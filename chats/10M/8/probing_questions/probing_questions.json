@@ -1,0 +1,682 @@
+{
+    "abstention": [
+        {
+            "question": "What specific maintenance steps did I learn from the YouTube videos about checking oil levels?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Videos are mentioned but no detailed content or steps are described",
+            "plan_reference": "Plan 1, BATCH 1 PLAN, Bullet 14",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels"
+            ]
+        },
+        {
+            "question": "Could you provide details about the local fair near Normal on I-55, such as the types of food stalls or events featured?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan only mentions hearing about the fair and the $5 entry fee, without further details on the fair's content.",
+            "plan_reference": "Plan 3, Batch 4, bullet 21 mentions the fair but no further specifics",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I driven hybrid vehicles before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you are getting used to the hybrid's smooth acceleration and seeing a 41 MPG average, which suggests some experience, but you also mentioned that you've never driven a hybrid before this trip. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with driving hybrid vehicles",
+            "conversation_references": [
+                "Session 1: Getting the hang of hybrid and MPG observation",
+                "Session 4: Never driven a hybrid before"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    7584,
+                    7588,
+                    7594
+                ],
+                "second_statement": [
+                    7694
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you are getting used to the hybrid's smooth acceleration",
+                "LLM response should mention: you also mentioned that you've never driven a hybrid before",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I sent any messages to my mom during this trip?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you sent a WhatsApp text to your mom about your progress, but you also mentioned that you have never sent any messages to her during this trip. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Messaging mom during the trip",
+            "conversation_references": [
+                "Session 1: Sending WhatsApp text",
+                "Session 2: Never sent messages"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    7918,
+                    7926,
+                    7928,
+                    7932
+                ],
+                "second_statement": [
+                    8096
+                ]
+            },
+            "plan_reference": "Plan 3",
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you sent a WhatsApp text to your mom about your progress",
+                "LLM response should mention: you also mentioned that you have never sent any messages to her during this trip",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different personal feelings and concerns about my road trip from May 1, 2022 to October 3, 2022, in order? Mention ONLY and ONLY eight items.",
+            "answer": "You mentioned your personal feelings and concerns in this order: 1) The excitement and thrill of exploring new routes and landscapes, 2) Anxiety about missing key sights if rushing through certain routes, 3) Frustration with conflicting or mixed reviews about road quality and traffic, 4) Anxiety related to specific road conditions and delays such as roadwork and storms, 5) Worries about running low on gas and signal dead zones in remote stretches, 6) Concerns about vehicle choices including stress about driving different cars and rental issues, 7) Comfort and pride in choosing eco-friendly options like hybrids, and 8) Final reflections on balancing scenic desires with practical travel concerns.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 6: Excitement about routes",
+                "Sessions 368-384: Anxiety about missing sights",
+                "Sessions 638-654: Frustration with road quality reviews",
+                "Sessions 884-898 and 1142-1156: Anxiety about roadwork and storms",
+                "Sessions 1748-1760 and 1994-2010: Anxiety about gas and signal dead zones",
+                "Sessions 2730-3666 and 3878-4338: Stress and concerns about vehicle choices and rentals",
+                "Sessions 4584-5026: Comfort and pride in hybrid choice",
+                "Sessions 2216-2490: Balancing scenic stops with delays and signal gaps"
+            ],
+            "ordering_tested": [
+                "1st: Excitement and thrill",
+                "2nd: Anxiety about missing sights",
+                "3rd: Frustration with reviews",
+                "4th: Anxiety about road conditions",
+                "5th: Anxiety about gas and signal",
+                "6th: Stress about vehicle and rentals",
+                "7th: Comfort with hybrid choice",
+                "8th: Balancing scenic and practical concerns"
+            ],
+            "source_chat_ids": [
+                [
+                    6,
+                    16
+                ],
+                [
+                    368,
+                    370,
+                    378,
+                    380,
+                    384
+                ],
+                [
+                    638,
+                    640,
+                    646,
+                    648,
+                    650,
+                    654
+                ],
+                [
+                    884,
+                    892,
+                    894,
+                    898,
+                    1142,
+                    1148,
+                    1156
+                ],
+                [
+                    1748,
+                    1756,
+                    1758,
+                    1760,
+                    1994,
+                    2004,
+                    2010
+                ],
+                [
+                    2730,
+                    2736,
+                    2742,
+                    3042,
+                    3052,
+                    3058,
+                    3352,
+                    3354,
+                    3356,
+                    3372,
+                    3378,
+                    3380,
+                    3500,
+                    3502,
+                    3504,
+                    3648,
+                    3650,
+                    3652,
+                    3658,
+                    3660,
+                    3666,
+                    3878,
+                    3888,
+                    3900,
+                    4320,
+                    4336,
+                    4338
+                ],
+                [
+                    4584,
+                    4590,
+                    4592,
+                    4598,
+                    5018,
+                    5020,
+                    5026
+                ],
+                [
+                    2216,
+                    2224,
+                    2226,
+                    2228,
+                    2230,
+                    2476,
+                    2478,
+                    2480,
+                    2482,
+                    2484
+                ]
+            ],
+            "plan_reference": "Plan 0-1",
+            "rubric": [
+                "Excitement and thrill",
+                "Anxiety about missing sights",
+                "Frustration with reviews",
+                "Anxiety about road conditions",
+                "Anxiety about gas and signal",
+                "Stress about vehicle and rentals",
+                "Comfort with hybrid choice",
+                "Balancing scenic and practical concerns"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my transportation and navigation plans from January 2, 2023 to March 10, 2023, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in this order: 1) Confirming and verifying the Hertz Corolla hybrid rental pickup at JFK Airport including deposit details, 2) Emailing Hertz to confirm rental details and insurance coverage, 3) Calling Hertz to verify pickup specifics at Terminal 5, 4) Discussing the inspection process and tire checks at Hertz Brooklyn, 5) Downloading and using offline maps and verifying GPS coverage and route accuracy for the trip.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 5180, 5190, 5198, 5200, 5202",
+                "Session 5504, 5510, 5516",
+                "Session 5808, 5810, 5812, 5826, 5828, 5830",
+                "Session 6070",
+                "Session 7550, 7736, 7940, 8138, 8324, 8594, 8784, 8978, 9180, 9388"
+            ],
+            "ordering_tested": [
+                "1st: Initial rental pickup confirmation and deposit discussion",
+                "2nd: Email confirmation and insurance verification",
+                "3rd: Phone call confirmation and Terminal 5 pickup details",
+                "4th: Vehicle inspection and tire check discussion",
+                "5th: Offline maps download and GPS navigation accuracy"
+            ],
+            "source_chat_ids": [
+                [
+                    5180,
+                    5190,
+                    5198,
+                    5200,
+                    5202
+                ],
+                [
+                    5504,
+                    5510,
+                    5516
+                ],
+                [
+                    5808,
+                    5810,
+                    5812,
+                    5826,
+                    5828,
+                    5830
+                ],
+                [
+                    6070
+                ],
+                [
+                    7550,
+                    7736,
+                    7940,
+                    8138,
+                    8324,
+                    8594,
+                    8784,
+                    8978,
+                    9180,
+                    9388
+                ]
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "Initial rental pickup confirmation and deposit discussion",
+                "Email confirmation and insurance verification",
+                "Phone call confirmation and Terminal 5 pickup details",
+                "Vehicle inspection and tire check discussion",
+                "Offline maps download and GPS navigation accuracy"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When I called KOA Flagstaff to check on the tent space, how much area did they confirm was available for our setup?",
+            "answer": "They confirmed 25 square feet available for our setup.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER asked about KOA online check-in but the tent space confirmation was mentioned in the bullet point context.",
+            "key_facts_tested": [
+                "tent space size",
+                "confirmation call",
+                "KOA Flagstaff"
+            ],
+            "source_chat_ids": [
+                5678
+            ],
+            "plan_reference": "Plan 2",
+            "rubric": [
+                "LLM response should state: 25 square feet"
+            ]
+        },
+        {
+            "question": "What wait time did I mention for the ride when using the app?",
+            "answer": "You mentioned a 25-minute wait time for the ride.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 2: USER: Can you help me understand how to use Universal's app to track wait times for rides like Harry Potter and the Forbidden Journey?",
+            "key_facts_tested": [
+                "wait time duration"
+            ],
+            "source_chat_ids": [
+                12048
+            ],
+            "plan_reference": "Plan 5",
+            "rubric": [
+                "LLM response should state: 25-minute"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Can you update me on the current status of my budget?",
+            "instruction_being_tested": "Always include fuel cost updates when I ask about budget status.",
+            "expected_compliance": "Response should include information about fuel costs along with the overall budget status.",
+            "compliance_indicators": [
+                "mention of fuel costs",
+                "fuel cost figures included",
+                "fuel expenses detailed alongside budget",
+                "fuel cost update provided"
+            ],
+            "non_compliance_signs": [
+                "no mention of fuel costs",
+                "only general budget info",
+                "fuel costs omitted",
+                "budget update without fuel details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                9964
+            ],
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should contain: mention of fuel costs",
+                "LLM response should contain: fuel expenses detailed alongside budget"
+            ]
+        },
+        {
+            "question": "When can I expect someone to come out for help with my vehicle?",
+            "instruction_being_tested": "Always update me on service call timings when I ask about vehicle support.",
+            "expected_compliance": "Response should include the timing details of the service call related to the vehicle support request.",
+            "compliance_indicators": [
+                "specific time or time window for the service call",
+                "confirmation of when the support will occur",
+                "clear scheduling information"
+            ],
+            "non_compliance_signs": [
+                "no mention of timing",
+                "vague or missing time details",
+                "only general information about support without timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                10618
+            ],
+            "plan_reference": "Plan 4",
+            "rubric": [
+                "LLM response should contain: specific time or time window for the service call"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the total amount I should expect to pay on my final bill at the Holiday Inn, including any minibar charges?",
+            "answer": "$130, which includes the minibar charge added to the accommodation expenses",
+            "difficulty": "easy",
+            "update_type": "billing_adjustment",
+            "tests_retention_of": "final bill amount including minibar charge",
+            "conversation_references": [
+                "Accommodation Checkout: Preparing to check out of Holiday Inn by 11 AM, confirming a $120 final bill with the front desk.",
+                "The final bill at Holiday Inn was adjusted to $130 after adding a minibar charge, slightly increasing our accommodation expenses."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $120 final bill amount without the minibar charge",
+            "source_chat_ids": {
+                "original_info": [
+                    13816,
+                    13826
+                ],
+                "updated_info": [
+                    14014
+                ]
+            },
+            "plan_reference": "Plan 6",
+            "rubric": [
+                "LLM response should state: $130"
+            ]
+        },
+        {
+            "question": "How many photos have I tagged for my blog header?",
+            "answer": "15 photos have been tagged for the blog header.",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "the increased number of photos tagged for the blog header",
+            "conversation_references": [
+                "Planning & Logistics Labels:Content Organization: I spent 2 hours sorting 50 trip photos, tagging 10 for a blog header on my $800 Dell laptop.",
+                "Information Update: I\u2019ve now tagged 15 photos for my blog header, expanding the visual appeal beyond the initial 10."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 10 photos tagged instead of the updated 15 photos.",
+            "source_chat_ids": {
+                "original_info": [
+                    18130,
+                    18132,
+                    18142,
+                    18144
+                ],
+                "updated_info": [
+                    18316
+                ]
+            },
+            "plan_reference": "Plan 8",
+            "rubric": [
+                "LLM response should state: 15 photos"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many hours in total did I spend at the Grand Canyon during my trip, combining all my stops and hikes?",
+            "answer": "11 hours",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Reflection on Grand Canyon memories",
+                "Details about Grand Canyon hike and detour"
+            ],
+            "reasoning_steps": [
+                "Identify the 6-hour detour crossing the Grand Canyon mentioned in one session.",
+                "Add the 5-hour Grand Canyon hike mentioned in another session.",
+                "Sum the two durations to get the total time spent at the Grand Canyon."
+            ],
+            "source_chat_ids": [
+                13634,
+                13824
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 11 hours"
+            ]
+        },
+        {
+            "question": "How much have I allocated in total for event-related expenses across my budgets for flyers, venue fees, and snacks?",
+            "answer": "You have allocated a total of $100 for event flyers, $20 for venue fees, and $10 for snacks, summing up to $130.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "PLAN 9 BATCH 2 BULLET 16: Budget Allocation: I allocated $30 for event flyers via Vistaprint, staying within my $100 sharing budget.",
+                "PLAN 9 BATCH 3 BULLET 16: Budget Allocation: I kept event costs at $45 total, including $20 venue fee, under my $100 limit.",
+                "PLAN 9 BATCH 8 BULLET 16: Budget Allocation: I capped event costs at $50, including $10 for snacks at Walmart, under $100."
+            ],
+            "reasoning_steps": [
+                "Identify the amount allocated for event flyers ($30) from the first session.",
+                "Identify the venue fee amount ($20) from the second session.",
+                "Identify the snack cost ($10) from the third session.",
+                "Sum these amounts: $30 + $20 + $10 = $60.",
+                "Note that the flyer budget is within a $100 sharing budget, and the event costs including venue and snacks are also under $100, but the question asks for total allocated amounts, so sum the explicit amounts."
+            ],
+            "source_chat_ids": [
+                18436,
+                18678,
+                19786
+            ],
+            "plan_reference": "Plan 8-9",
+            "rubric": [
+                "LLM response should state: $100 for event flyers",
+                "LLM response should state: $20 for venue fees",
+                "LLM response should state: $10 for snacks",
+                "LLM response should state: $130 in total"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning the route for our upcoming trip. How would you suggest I map it out?",
+            "preference_being_tested": "Chris and I agree on avoiding tolls if possible, favoring detours with zero fees.",
+            "expected_compliance": "Response should suggest routes that avoid toll roads when possible, offering alternatives without toll fees rather than routes that include tolls.",
+            "compliance_indicators": [
+                "recommends routes without tolls",
+                "offers detours that bypass toll roads",
+                "acknowledges avoiding toll fees in route planning"
+            ],
+            "non_compliance_signs": [
+                "suggests routes with toll roads without alternatives",
+                "ignores toll avoidance in recommendations",
+                "prioritizes fastest or shortest routes regardless of tolls"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                902,
+                908,
+                912
+            ],
+            "plan_reference": "Plan 0",
+            "rubric": [
+                "LLM response should contain: recommends routes without tolls",
+                "LLM response should contain: offers detours that bypass toll roads",
+                "LLM response should contain: acknowledges avoiding toll fees in route planning"
+            ]
+        },
+        {
+            "question": "I'm trying to decide which vehicle to focus on for my daily commute. What should I keep in mind when comparing different models?",
+            "preference_being_tested": "Committing to Corolla hybrid over my Civic and Camry, prioritizing efficiency and comfort.",
+            "expected_compliance": "Response should highlight aspects related to efficiency and comfort as key factors in comparing the Corolla hybrid, Civic, and Camry, reflecting the user's stated priorities without introducing unrelated criteria.",
+            "compliance_indicators": [
+                "mentions fuel efficiency or hybrid technology",
+                "discusses comfort features or ride quality",
+                "compares models with attention to these factors",
+                "avoids irrelevant criteria like price alone or performance only"
+            ],
+            "non_compliance_signs": [
+                "focuses solely on price or brand",
+                "ignores efficiency and comfort aspects",
+                "recommends models without addressing these factors",
+                "introduces unrelated decision criteria"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                4898
+            ],
+            "plan_reference": "Plan 1",
+            "rubric": [
+                "LLM response should contain: discusses comfort features or ride quality",
+                "LLM response should contain: compares models with attention to comfort features or ride quality factors"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how Chris and I planned and managed our accommodations, travel logistics, and daily routines throughout our road trip preparations from January 2, 2023 to March 10, 2023?",
+            "ideal_summary": "Throughout your road trip preparations, you and Chris collaboratively planned accommodations, travel logistics, and daily routines to ensure a smooth journey. Initially, Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route, later increasing to 12-14 stops for a better balance of driving and exploration. He researched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget. Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs. To maintain connection and coordination, he proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety. Additionally, Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience. Together, you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary while keeping track of reservations and budget constraints. This comprehensive planning and ongoing communication helped you both stay organized, flexible, and connected throughout the trip.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                5084,
+                5090,
+                5448,
+                6440,
+                6882
+            ],
+            "key_elements_tested": [
+                "accommodation planning",
+                "travel logistics",
+                "daily communication routines",
+                "budget and safety considerations",
+                "trip experience enhancements"
+            ],
+            "synthesis_required": "Integrating multiple aspects of trip planning and management into a coherent narrative showing progression and collaboration",
+            "source_chat_ids": [
+                5084,
+                5090,
+                5448,
+                6440,
+                6882
+            ],
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should contain: Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route",
+                "LLM response should contain: Chris esearched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget",
+                "LLM response should contain: Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs",
+                "LLM response should contain: Chris proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety",
+                "LLM response should contain: Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience",
+                "LLM response should contain: you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary"
+            ]
+        },
+        {
+            "question": "Can you summarize how my travel decisions and habits evolved from April 8, 2023 to April 25, 2023 and how they influenced my overall experience and personal growth?",
+            "ideal_summary": "Throughout your trip, you made several key travel decisions and habit changes that progressively shaped your experience and personal growth. Initially, you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives. This change reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration, though it required more planning for overnight stays. Concurrently, you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience and adaptability. These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience and problem-solving skills. Additionally, you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion and personal satisfaction. Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life. Overall, these evolving decisions and habits fostered a more balanced, enjoyable, and growth-oriented travel experience, equipping you with skills and insights beneficial for future journeys and everyday challenges.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "travel decision evolution",
+                "habit changes",
+                "stress and fatigue reduction",
+                "personal growth",
+                "cause-and-effect relationships"
+            ],
+            "synthesis_required": "Integrating multiple travel and habit-related decisions into a coherent narrative showing progression and impact",
+            "source_chat_ids": [
+                15805,
+                15813,
+                16610,
+                16617,
+                17203,
+                17703,
+                17955
+            ],
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should contain: you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives",
+                "LLM response should contain: shift towards shorter, 3-hour max drives reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration",
+                "LLM response should contain: you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience",
+                "LLM response should contain: These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience",
+                "LLM response should contain: you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion",
+                "LLM response should contain: Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I started the final preparations for our road trip and when we actually began the trip?",
+            "answer": "58 days passed between starting the final preparations on January 2, 2023, and beginning the road trip on March 1, 2023.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 2, 2023: final preparations started",
+                "March 1, 2023: road trip started"
+            ],
+            "conversation_references": [
+                "Session 1: final preparations (chat_id 5080)",
+                "Session 2: trip start (chat_id 7510)"
+            ],
+            "calculation_required": "March 1, 2023 - January 2, 2023 = 58 days",
+            "source_chat_ids": {
+                "first_event": [
+                    5080
+                ],
+                "second_event": [
+                    7510
+                ]
+            },
+            "plan_reference": "Plan 2-3",
+            "rubric": [
+                "LLM response should state: 58 days",
+                "LLM response should state: from January 2, 2023 till March 1, 2023"
+            ]
+        },
+        {
+            "question": "How many days passed between when I started the final stretch of our road trip at Motel 6 in Culver City and when I got back home to New Jeffreytown and began unpacking?",
+            "answer": "8 days passed between starting the final stretch of the road trip at Motel 6 in Culver City and returning home to New Jeffreytown to unpack.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Starting final stretch at Motel 6 in Culver City",
+                "Back home in New Jeffreytown unpacking after trip"
+            ],
+            "conversation_references": [
+                "Session 1: Starting final stretch at Motel 6",
+                "Session 2: Back home unpacking after trip"
+            ],
+            "calculation_required": "April 16 - April 8 = 8 days",
+            "source_chat_ids": {
+                "first_event": [
+                    13610,
+                    13618,
+                    13620,
+                    13626
+                ],
+                "second_event": [
+                    15658,
+                    15660,
+                    15662,
+                    15664,
+                    15666,
+                    15690,
+                    15692
+                ]
+            },
+            "plan_reference": "Plan 6-7",
+            "rubric": [
+                "LLM response should state: 8 days",
+                "LLM response should state: from April 8 till April 16"
+            ]
+        }
+    ]
+}

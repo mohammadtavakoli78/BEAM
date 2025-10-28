@@ -1,0 +1,669 @@
+{
+    "abstention": [
+        {
+            "question": "What were the specific criteria or considerations that led to choosing the W Trek as the primary route?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific criteria or considerations behind choosing the W Trek as the primary route.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The W Trek is selected but the rationale or decision factors are not explained.",
+            "plan_reference": "Batches 1 and 4 mention W Trek route but no decision criteria given",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific criteria or considerations behind choosing the W Trek as the primary route"
+            ]
+        },
+        {
+            "question": "What was discussed or decided during the debrief meeting with Bruce?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussions or decisions made during the debrief meeting with Bruce on November 28.",
+            "difficulty": "medium",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The debrief meeting is planned but no details about its content or outcomes are provided.",
+            "plan_reference": "Batch 10 mentions scheduled debrief meeting but no further info",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussions made during the debrief meeting",
+                "Based on the provided chat, there is no information related to the decisions made during the debrief meeting"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I completed any hikes over 15 kilometers during my recent training?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed 5 hikes over 15 km each, but you also mentioned never completing any hikes over 15 km during this period. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Completion of hikes over 15 km",
+            "conversation_references": [
+                "Session 1: Completed 5 hikes over 15 km",
+                "Session 4: Never completed hikes over 15 km"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    358,
+                    372
+                ],
+                "second_statement": [
+                    496
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have completed 5 hikes over 15 km each",
+                "LLM response should mention: you also mentioned never completing any hikes over 15 km during this period",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever purchased or carried bear spray during my hikes?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have purchased bear spray for your hikes, but you also mentioned that you have never purchased or carried bear spray during any hikes. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "bear spray purchase and usage",
+            "conversation_references": [
+                "Session 1: Bear spray purchase and related questions",
+                "Session 10: Statement about never purchasing or carrying bear spray"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    966,
+                    976,
+                    992,
+                    998
+                ],
+                "second_statement": [
+                    1062
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have purchased bear spray for your hikes",
+                "LLM response should mention: you also mentioned that you have never purchased or carried bear spray during any hikes",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about working with the local guide develop across our conversations in order? Mention ONLY and ONLY nine items.",
+            "answer": "Your discussions about working with the local guide unfolded in this sequence: 1) Considering hiring the guide and evaluating pros and cons, 2) Assessing the guide's fit with the group and clarifying group composition, 3) Negotiating the guiding fee and understanding its benefits, 4) Reviewing safety recommendations related to wildlife and essential gear, 5) Analyzing weather information shared by the guide and its impact on plans, 6) Confirming meeting logistics and preparing questions for the guide, 7) Discussing safety briefings and specific guidance during the trip, 8) Reflecting on the guide's contributions and shared materials after the trip, 9) Considering future trips and discounts offered by the guide, 10) Seeking advice on communication and safety measures for the upcoming trip.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "44, 60, 62, 64",
+                "272, 276, 282",
+                "776, 778, 784, 792, 794, 802, 804, 806",
+                "522, 524, 526, 528, 530",
+                "1304, 1310",
+                "1712, 1714, 1720, 1722, 1726",
+                "1942, 1950, 1956",
+                "2152, 2160, 2162"
+            ],
+            "ordering_tested": [
+                "1st: Hiring consideration and group fit",
+                "2nd: Fee negotiation and benefits",
+                "3rd: Safety gear and wildlife advice",
+                "4th: Weather information and planning",
+                "5th: Meeting logistics and preparation",
+                "6th: Safety briefings and on-trip guidance",
+                "7th: Post-trip reflections and shared materials",
+                "8th: Future trip planning and discounts",
+                "9th: Communication and safety advice for next trip"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic threads",
+                "spans many conversation sessions",
+                "involves nuanced development of a single broad topic",
+                "demands sophisticated sequence reconstruction",
+                "tests ability to integrate related but distinct mentions"
+            ],
+            "source_chat_ids": [
+                44,
+                60,
+                62,
+                64,
+                272,
+                276,
+                282,
+                776,
+                778,
+                784,
+                792,
+                794,
+                802,
+                804,
+                806,
+                522,
+                524,
+                526,
+                528,
+                530,
+                1304,
+                1310,
+                1712,
+                1714,
+                1720,
+                1722,
+                1726,
+                1942,
+                1950,
+                1956,
+                2152,
+                2160,
+                2162
+            ],
+            "rubric": [
+                "Hiring consideration and group fit",
+                "Fee negotiation and benefits",
+                "Safety gear and wildlife advice",
+                "Weather information and planning",
+                "Meeting logistics and preparation",
+                "Safety briefings and on-trip guidance",
+                "Post-trip reflections and shared materials",
+                "Future trip planning and discounts",
+                "Communication and safety advice for next trip"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of my hiking trip preparation and support evolve throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions progressed through these aspects: 1) Planning and assessing the hike difficulty and route, 2) Mental preparation and mindfulness practices including yoga retreat experiences, 3) Concerns and preparations related to Wanda joining the trip and her readiness, 4) Arrangements and considerations for Wanda's accommodation and visit logistics, 5) Coordination around Wanda's arrival and communication during the trip, 6) Final travel preparations including gear checks and document confirmations, 7) Reflections on Wanda's participation during the hike and group dynamics, 8) Wanda's practical support during the trip such as cooking and camp setup, 9) Wanda's extended stay and related planning, 10) Post-trip sharing and relationship reflections involving Wanda and others.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 28, 34",
+                "chat_id: 290, 292, 294, 304, 316, 318",
+                "chat_id: 542, 544, 546, 554, 556, 566, 568, 570",
+                "chat_id: 814, 824, 832",
+                "chat_id: 1108, 1118, 1124",
+                "chat_id: 1318, 1320, 1326, 1328",
+                "chat_id: 1530, 1536, 1542",
+                "chat_id: 1730, 1738, 1744",
+                "chat_id: 1958, 1964, 1970",
+                "chat_id: 2166, 2172, 2174, 2176, 2186, 2188, 2190"
+            ],
+            "ordering_tested": [
+                "1st: Hike planning and difficulty assessment",
+                "2nd: Mental preparation and yoga retreat",
+                "3rd: Wanda's readiness and fitness concerns",
+                "4th: Wanda's accommodation and visit logistics",
+                "5th: Wanda's arrival and communication plans",
+                "6th: Final travel and gear preparations",
+                "7th: Wanda's participation and group dynamics",
+                "8th: Wanda's practical support during the hike",
+                "9th: Wanda's extended stay planning",
+                "10th: Post-trip sharing and relationship reflections"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "involves tracking multiple related themes",
+                "spans numerous conversation sessions",
+                "demands pattern recognition and synthesis",
+                "tests advanced event ordering capabilities"
+            ],
+            "source_chat_ids": [
+                28,
+                34,
+                290,
+                292,
+                294,
+                304,
+                316,
+                318,
+                542,
+                544,
+                546,
+                554,
+                556,
+                566,
+                568,
+                570,
+                814,
+                824,
+                832,
+                1108,
+                1118,
+                1124,
+                1318,
+                1320,
+                1326,
+                1328,
+                1530,
+                1536,
+                1542,
+                1730,
+                1738,
+                1744,
+                1958,
+                1964,
+                1970,
+                2166,
+                2172,
+                2174,
+                2176,
+                2186,
+                2188,
+                2190
+            ],
+            "rubric": [
+                "Hike planning and difficulty assessment",
+                "Mental preparation and yoga retreat",
+                "Wanda's readiness and fitness concerns",
+                "Wanda's accommodation and visit logistics",
+                "Wanda's arrival and communication plans",
+                "Final travel and gear preparations",
+                "Wanda's participation and group dynamics",
+                "Wanda's practical support during the hike",
+                "Wanda's extended stay planning",
+                "Post-trip sharing and relationship reflections"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I book the shuttle for my trip from Buenos Aires to Puerto Natales?",
+            "answer": "You booked the shuttle for November 8.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 2: USER asked about making the most of the shuttle booking from Buenos Aires to Puerto Natales on November 8.",
+            "key_facts_tested": [
+                "shuttle booking date"
+            ],
+            "source_chat_ids": [
+                756
+            ],
+            "rubric": [
+                "LLM response should state: November 8"
+            ]
+        },
+        {
+            "question": "How did you guide me to prepare effectively for safety concerns during my trip, including what steps I should take after acquiring my initial protective equipment?",
+            "answer": "I advised that after purchasing your initial protective equipment, you should ensure you know how to use it properly by watching training materials, and also recommended complementing it with additional safety gear like a satellite communicator, first aid kit, and emergency shelter. I emphasized the importance of accessibility and familiarity with the equipment, as well as considering communication devices and emergency procedures to be fully prepared.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: initial bear spray purchase and cost, training video mention, additional safety gear recommendations, communication device advice, and emergency preparedness guidance",
+            "key_facts_tested": [
+                "purchase of protective equipment",
+                "cost detail",
+                "training video watched",
+                "additional safety gear suggestions",
+                "emergency communication devices",
+                "emergency procedures and preparedness"
+            ],
+            "extraction_challenge": "LLM must integrate details about the purchase timing and cost, the follow-up training, and the broader safety recommendations scattered across different conversation turns to explain the comprehensive preparation approach",
+            "source_chat_ids": [
+                966,
+                967
+            ],
+            "rubric": [
+                "LLM response should state: ensure you know how to use it properly by watching training materials",
+                "LLM response should state: recommended complementing your initial protective equipment with additional safety gear like a satellite communicator, first aid kit, and emergency shelter",
+                "LLM response should state: I emphasized the importance of accessibility and familiarity with the equipment, as well as considering communication devices and emergency procedures"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some ways I can handle stress before and during a trip?",
+            "instruction_being_tested": "Always confirm mental preparation methods when I ask about managing trip stress.",
+            "expected_compliance": "Response should include confirmation and explanation of mental preparation techniques related to handling stress during trips.",
+            "compliance_indicators": [
+                "mention of mental preparation methods",
+                "confirmation of mental strategies",
+                "discussion of mindset or psychological approaches"
+            ],
+            "non_compliance_signs": [
+                "ignoring mental preparation",
+                "focusing only on physical or logistical tips",
+                "no mention or confirmation of mental techniques"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                748
+            ],
+            "rubric": [
+                "LLM response should contain: mention of mental preparation methods",
+                "LLM response should contain: confirmation of mental strategies"
+            ]
+        },
+        {
+            "question": "What should I keep in mind when dealing with potential hazards on the job?",
+            "instruction_being_tested": "Always confirm safety gear training when I ask about risk management.",
+            "expected_compliance": "Response should include a confirmation or inquiry about the user's experience or training related to protective equipment before discussing hazard controls.",
+            "compliance_indicators": [
+                "asks about user's experience with protective equipment",
+                "confirms training related to protective gear",
+                "mentions checking user's preparedness with equipment before proceeding"
+            ],
+            "non_compliance_signs": [
+                "ignores user's background with protective equipment",
+                "directly discusses hazard controls without any confirmation",
+                "skips any mention of user's readiness or training"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                1056
+            ],
+            "rubric": [
+                "LLM response should contain: asks about user's experience with protective equipment",
+                "LLM response should contain: confirms training related to protective gear"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much total emergency funding has Ashley arranged for me to access?",
+            "answer": "$700",
+            "difficulty": "easy",
+            "update_type": "amount_increase",
+            "tests_retention_of": "total amount of emergency funds available",
+            "conversation_references": [
+                "Ashley arranged for emergency funds transfer of $500 to local bank account on September 17.",
+                "The emergency fund transfer was increased by an additional $200 after unexpected gear expenses arose."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $500 amount instead of the updated $700 total",
+            "source_chat_ids": {
+                "original_info": [
+                    1110,
+                    1112,
+                    1114,
+                    1120
+                ],
+                "updated_info": [
+                    1274
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $700"
+            ]
+        },
+        {
+            "question": "What is my average hiking pace in kilometers per hour?",
+            "answer": "4.5 km/h",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "improved average hiking pace after interval training",
+            "conversation_references": [
+                "Goals & Progress:Distance Targets: Completed 4 hikes over 20 km in October; longest 27 km on October 18.",
+                "Information Update: The average pace on hikes improved further to 4.5 km/h after incorporating interval training in late October."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original average pace of 4.2 km/h instead of the improved 4.5 km/h",
+            "source_chat_ids": {
+                "original_info": [
+                    1358,
+                    1366,
+                    1372
+                ],
+                "updated_info": [
+                    1480
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4.5 km/h"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much have I already paid in total for my refugio stays and Puerto Natales accommodation combined?",
+            "answer": "You have already paid a total of $670 for your refugio stays and Puerto Natales accommodation combined.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Refugio and Puerto Natales lodging payments",
+                "Refugio $220",
+                "Puerto Natales $450",
+                "Total accommodation payments"
+            ],
+            "reasoning_steps": [
+                "Identify the amount paid for refugio stays from one session.",
+                "Identify the amount paid for Puerto Natales accommodation from another session.",
+                "Add the two amounts to find the total paid for both accommodations."
+            ],
+            "source_chat_ids": [
+                694,
+                975,
+                1216,
+                1217
+            ],
+            "rubric": [
+                "LLM response should state: $670",
+                "LLM response should state: $220 for Refugio",
+                "LLM response should state: $450 for Puerto Natales"
+            ]
+        },
+        {
+            "question": "How much have I spent on gear so far including the first aid kit and waterproof socks?",
+            "answer": "You have spent a total of $690 on gear so far, including the first aid kit and waterproof socks.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "gear expenses including first aid kit",
+                "gear expenses including waterproof socks",
+                "total gear expenses so far"
+            ],
+            "reasoning_steps": [
+                "Identify the cost of the first aid kit from the session where it was mentioned.",
+                "Identify the cost of the waterproof socks from the session where it was mentioned.",
+                "Sum all gear expenses including the first aid kit and waterproof socks to get the total spent so far."
+            ],
+            "source_chat_ids": [
+                1214,
+                1424,
+                1430
+            ],
+            "rubric": [
+                "LLM response should state: $690"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to buy a hiking backpack soon. What options would you suggest?",
+            "preference_being_tested": "I prefer practical, proven gear over trendy brands, prioritizing durability and repairability.",
+            "expected_compliance": "Response should focus on recommending hiking backpacks known for their durability and ease of repair, avoiding trendy or less proven brands, thereby respecting the user's preference for practical and long-lasting gear.",
+            "compliance_indicators": [
+                "mentions durable and repairable backpacks",
+                "avoids trendy or fashion-focused brands",
+                "recommends well-established, proven gear",
+                "highlights features related to longevity and maintenance"
+            ],
+            "non_compliance_signs": [
+                "recommends trendy or popular brands without regard to durability",
+                "focuses on aesthetics or latest trends",
+                "ignores repairability or durability aspects",
+                "suggests gear known for short-term use or limited lifespan"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                174,
+                198
+            ],
+            "rubric": [
+                "LLM response should contain: mentions durable and repairable backpacks",
+                "LLM response should contain: avoids trendy or fashion-focused brands"
+            ]
+        },
+        {
+            "question": "I'm feeling a bit overwhelmed as the trip approaches. What are some ways I can prepare myself mentally to handle the stress?",
+            "preference_being_tested": "I prefer practical mental preparation techniques like meditation to manage trip stress.",
+            "expected_compliance": "Response should include or prioritize practical mental preparation methods such as meditation rather than unrelated or purely physical preparation techniques.",
+            "compliance_indicators": [
+                "mentions meditation or similar practical mental techniques",
+                "focuses on mental preparation strategies",
+                "avoids suggesting only physical or unrelated stress management methods"
+            ],
+            "non_compliance_signs": [
+                "ignores meditation or practical mental techniques",
+                "only suggests physical preparation or unrelated advice",
+                "fails to address mental preparation for stress"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                710,
+                716,
+                724
+            ],
+            "rubric": [
+                "LLM response should contain: mentions meditation or similar practical mental techniques",
+                "LLM response should contain: focuses on mental preparation strategies"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed and comprehensive summary of how I and Bruce prepared for, executed, and reflected on our hiking trip, covering all aspects from planning and training through gear testing, pacing strategies, safety measures, and the overall experience?",
+            "ideal_summary": "The preparation and execution of the hiking trip with Bruce involved a multi-faceted approach integrating physical conditioning, gear readiness, safety planning, and interpersonal coordination. Initially, open communication was established to align expectations, preferences, and concerns, particularly regarding pace and itinerary adjustments to accommodate Bruce's comfort and fitness level. A structured training regimen was followed, emphasizing cardiovascular endurance, strength training, hill workouts, and flexibility exercises, complemented by mental preparation techniques such as visualization and mindfulness. Gear testing was conducted through staged hikes, including a significant 20 km test hike, to evaluate the functionality and comfort of boots, layered clothing, backpacks, tents, sleeping bags, cooking equipment, and emergency devices. Safety protocols were emphasized, including comprehensive first aid kits, emergency communication devices, bear spray training, and contingency plans for adverse weather or emergencies. Pacing strategies were developed collaboratively, with a target steady pace of 4 km/h, supported by technology like the Garmin Forerunner 245 for real-time monitoring and alerts, scheduled breaks, and mutual encouragement to prevent disagreements. The itinerary was carefully planned with realistic daily distances, rest days, and flexibility to adapt to terrain and weather conditions. Throughout the trip, regular check-ins ensured both physical and mental well-being, allowing for adjustments as needed. Upon completion, the experience was celebrated in a warm, reflective atmosphere that reinforced the partnership and shared achievements. This comprehensive approach ensured a safe, enjoyable, and well-coordinated adventure, balancing technical preparation with interpersonal harmony and adaptability.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                46,
+                47,
+                50,
+                51,
+                66,
+                67,
+                268,
+                269,
+                520,
+                535,
+                1313,
+                1317,
+                1513,
+                1517,
+                1527,
+                1711,
+                1725,
+                1949,
+                1955,
+                2151,
+                2157
+            ],
+            "rubric": [
+                "LLM response should contain: open communication was established to align expectations, preferences, and concerns, particularly regarding pace and itinerary adjustments",
+                "LLM response should contain: A structured training regimen was followed, emphasizing cardiovascular endurance, strength training, hill workouts, and flexibility exercises",
+                "LLM response should contain: Gear testing was conducted through staged hikes, including a significant 20 km test hike, to evaluate the functionality and comfort of boots, layered clothing, backpacks, tents, sleeping bags, cooking equipment, and emergency devices",
+                "LLM response should contain: Safety protocols were emphasized, including comprehensive first aid kits, emergency communication devices, bear spray training, and contingency plans for adverse weather or emergencies",
+                "LLM response should contain: Pacing strategies were developed collaboratively, with a target steady pace of 4 km/h, supported by technology like the Garmin Forerunner 245",
+                "LLM response should contain: The itinerary was carefully planned with realistic daily distances, rest days, and flexibility to adapt to terrain and weather conditions",
+                "LLM response should contain: regular check-ins ensured both physical and mental well-being, allowing for adjustments as needed",
+                "LLM response should contain: the experience was celebrated in a warm, reflective atmosphere that reinforced the partnership and shared achievements"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of what I need to know and prepare for my hiking and camping trip in Patagonia?",
+            "ideal_summary": "Your trip to Patagonia involves variable weather with mild daytime temperatures and colder nights, occasional wind and rain, and diverse terrain including mountains and forests. You should pack layered clothing, waterproof and windproof gear, sturdy hiking boots, and essential accessories like hats, gloves, and sunscreen. For camping, you have a durable tent and need a cold-rated sleeping bag and sleeping pad. You\u2019ve rented a Jetboil stove and should bring enough fuel canisters. Navigation tools, safety gear like a first aid kit and bear spray, and personal items are also important. Proper preparation and testing of gear will help ensure a safe and enjoyable adventure.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 0,
+            "key_elements_tested": [
+                "basic weather and packing info",
+                "camping gear essentials",
+                "trip preparation overview"
+            ],
+            "synthesis_required": "Combining weather, gear, and preparation details into a concise summary",
+            "source_chat_ids": [
+                1,
+                3,
+                21,
+                259,
+                511,
+                767
+            ],
+            "rubric": [
+                "LLM response should contain: trip to Patagonia involves variable weather with mild daytime temperatures and colder nights",
+                "LLM response should contain: trip to Patagonia involves occasional wind and rain",
+                "LLM response should contain: trip to Patagonia involves diverse terrain including mountains and forests",
+                "LLM response should contain: trip to Patagonia involves ",
+                "LLM response should contain: You should pack layered clothing, waterproof and windproof gear, sturdy hiking boots",
+                "LLM response should contain: You should pack essential accessories like hats, gloves, and sunscreen",
+                "LLM response should contain: For camping, you have a durable tent and need a cold-rated sleeping bag and sleeping pad",
+                "LLM response should contain: You\u2019ve rented a Jetboil stove and should bring enough fuel canisters",
+                "LLM response should contain: Navigation tools, safety gear like a first aid kit and bear spray, and personal items are also importan"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I shortened the hike on day 6 to improve energy levels did I take the rest day at Paine Grande?",
+            "answer": "The rest day at Paine Grande on November 13 occurred 7 days after the shortened hike on day 6, which was on November 6.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Day 6: shortened hike to improve energy levels",
+                "November 13: rest day at Paine Grande"
+            ],
+            "conversation_references": [
+                "Session 4: shortened hike on day 6 (chat_id 1868, 1882, 1894, 1896)",
+                "Session 1: rest day at Paine Grande (chat_id 330, 340, 350)"
+            ],
+            "calculation_required": "November 13 - November 6 = 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    1868,
+                    1882,
+                    1894,
+                    1896
+                ],
+                "second_event": [
+                    330,
+                    340,
+                    350
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 days",
+                "LLM response should state: from November 6 till November 13"
+            ]
+        },
+        {
+            "question": "How much time passed between our 25 km hike in Uluda\u011f and the 20 km hike Bruce and I completed before the Patagonia trip?",
+            "answer": "About five months passed between the 25 km hike in Uluda\u011f on May 20 and the 20 km hike on October 22 before the Patagonia trip.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 20: 25 km hike in Uluda\u011f",
+                "October 22: 20 km hike before Patagonia trip"
+            ],
+            "conversation_references": [
+                "Session 520: Uluda\u011f hike on May 20",
+                "Sessions 1300-1316: October 22 hike before Patagonia"
+            ],
+            "calculation_required": "October 22 - May 20 \u2248 5 months",
+            "source_chat_ids": {
+                "first_event": [
+                    520
+                ],
+                "second_event": [
+                    1300,
+                    1302,
+                    1306,
+                    1312,
+                    1316
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 months",
+                "LLM response should state: from May 20 till October 22"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,516 @@
+{
+    "abstention": [
+        {
+            "question": "What specific advice did Jake give me about documenting prototype tests beyond the April 15 deadline?",
+            "ideal_response": "Based on the provided chat, there is no information related to Jake\u2019s advice about documenting prototype tests beyond April 15.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Jake\u2019s advice mentioned only up to April 15, no further details given",
+            "plan_reference": "Batch 1, Bullet 17",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Jake\u2019s advice about documenting prototype tests beyond April 15"
+            ]
+        },
+        {
+            "question": "What were the reasons behind rejecting the $30,000 investment offer on September 14, 2024, beyond the equity demand and terms?",
+            "ideal_response": "Based on the provided chat, there is no information related to additional reasons for rejecting the $30,000 investment offer beyond the equity demand and terms mentioned.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Only equity demand and restrictive terms mentioned, no further rationale provided",
+            "plan_reference": "Batch 4, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to additional reasons for rejecting the $30,000 investment offer"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended production meetings related to my invention?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you met Heather at a production meeting where she suggested patenting your invention, but you also mentioned that you've never attended any production meetings related to your invention. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at production meetings related to invention",
+            "conversation_references": [
+                "Session 26: Meeting Heather at production meeting",
+                "Session 68: Never attended production meetings"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    26
+                ],
+                "second_statement": [
+                    68
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you met Heather at a production meeting where she suggested patenting your invention",
+                "LLM response should mention: you also mentioned that you've never attended any production meetings related to your invention",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any patent-related webinars or workshops?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have attended a patent-related webinar, but you also mentioned that you have never attended any patent-related webinars or workshops. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at patent-related webinars or workshops",
+            "conversation_references": [
+                "Session 92: Attended webinar statement",
+                "Session 120: Never attended statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    92
+                ],
+                "second_statement": [
+                    120
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have attended a patent-related webinar",
+                "LLM response should mention: you also mentioned that you have never attended any patent-related webinars or workshops",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my patent filing plans and related funding discussions across our conversations in order? Mention ONLY and ONLY six items.",
+            "answer": "You mentioned these aspects in this order: 1) Filing a provisional patent and asking for guidance on next steps, 2) Discussing the deadline for filing a non-provisional patent and seeking advice on the process, 3) Deciding to file a PCT application covering multiple markets and wanting to understand the implications, 4) Agreeing that filing the PCT is a good strategy and raising concerns about covering extra costs, 5) Asking about the quickest funding options to secure additional funds, 6) Inquiring about the best crowdfunding platform for the invention.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 6,
+            "conversation_references": [
+                "Session 30: Provisional patent filing and guidance",
+                "Session 164: Non-provisional patent deadline and process",
+                "Session 200: PCT application decision and strategy",
+                "Session 202: PCT application benefits and cost concerns",
+                "Session 204: Quickest funding options",
+                "Session 206: Best crowdfunding platform"
+            ],
+            "ordering_tested": [
+                "1st: Provisional patent filing guidance",
+                "2nd: Non-provisional patent deadline and advice",
+                "3rd: PCT application decision and understanding",
+                "4th: PCT benefits and funding concerns",
+                "5th: Quick funding options",
+                "6th: Crowdfunding platform choice"
+            ],
+            "source_chat_ids": [
+                30,
+                164,
+                200,
+                202,
+                204,
+                206
+            ],
+            "rubric": [
+                "Provisional patent filing guidance",
+                "Non-provisional patent deadline and advice",
+                "PCT application decision and understanding",
+                "PCT benefits and funding concerns",
+                "Quick funding options",
+                "Crowdfunding platform choice"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up the different stages of my patent process throughout our conversations, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned the stages in this order: 1) Planning and concerns about completing the prior art search, 2) Discussing the completed prior art search and its findings, 3) Talking about filing the provisional patent and related worries, 4) Starting the drafting of the non-provisional patent application and reviewing the draft, 5) Focusing on the review and revision phase to ensure clarity and consistency.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 32: Prior art search planning and concerns",
+                "Session 70: Completed prior art search and findings",
+                "Session 122: Provisional patent filing and follow-up",
+                "Session 188: Drafting and reviewing non-provisional patent application",
+                "Session 190: Review and revision phase concerns"
+            ],
+            "ordering_tested": [
+                "1st: Prior art search planning",
+                "2nd: Prior art search completion and findings",
+                "3rd: Provisional patent filing",
+                "4th: Non-provisional patent drafting and review",
+                "5th: Review and revision phase"
+            ],
+            "source_chat_ids": [
+                32,
+                70,
+                122,
+                188,
+                190
+            ],
+            "rubric": [
+                "Prior art search planning",
+                "Prior art search completion and findings",
+                "Provisional patent filing",
+                "Non-provisional patent drafting and review",
+                "Review and revision phase"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How old did I say my son is and where is he studying engineering?",
+            "answer": "My son is 21 years old and he is studying engineering at Montserrat Community College.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message in chat_id 10",
+            "key_facts_tested": [
+                "son's age",
+                "son's place of study",
+                "field of study"
+            ],
+            "source_chat_ids": [
+                10
+            ],
+            "rubric": [
+                "LLM response should state: Your son is 21 years old",
+                "LLM response should state: he is studying engineering at Montserrat Community College"
+            ]
+        },
+        {
+            "question": "How did I plan to support my son's progress in his studies by connecting with local and external resources, and what steps did you recommend I take to find professional guidance for his inventions?",
+            "answer": "You planned to start by checking with the college for any resources or connections with patent attorneys, then reach out to the local bar association for referrals, and also use online directories to find reliable attorneys. I recommended steps including contacting local associations, using university resources, exploring online directories, attending networking events, interviewing potential attorneys, and making a decision based on fit and budget.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: User's initial concern and plan (chat_id 10, 12, 14) and Assistant's detailed recommendations on finding patent attorneys (chat_id 11, 13, 15)",
+            "key_facts_tested": [
+                "starting with college resources",
+                "contacting local bar association",
+                "using online directories like Martindale-Hubbell and Avvo",
+                "attending networking events",
+                "interviewing attorneys about experience, specialization, communication, fees, availability",
+                "making a final decision based on gathered information"
+            ],
+            "extraction_challenge": "LLM must synthesize the user's evolving plan with the assistant's multi-step recommendations spread across different conversation turns to explain the overall approach to finding professional patent guidance.",
+            "source_chat_ids": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "rubric": [
+                "LLM response should state: You planned to start by checking with the college for any resources or connections with patent attorneys",
+                "LLM response should state: reach out to the local bar association for referrals",
+                "LLM response should state: use online directories to find reliable attorneys",
+                "LLM response should state: I recommended steps including contacting local associations, using university resources, exploring online directories, attending networking events"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What steps do I need to go through to get a patent approved?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about patent application processes.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                66
+            ],
+            "rubric": [
+                "LLM response should contain: detailed timeliness"
+            ]
+        },
+        {
+            "question": "When is the non-provisional patent filing scheduled?",
+            "instruction_being_tested": "Always confirm exact dates when I ask about deadlines or meetings.",
+            "expected_compliance": "Response should include the precise date of the non-provisional patent filing without ambiguity or approximation.",
+            "compliance_indicators": [
+                "exact date given",
+                "no vague or approximate timing",
+                "clear and specific date provided"
+            ],
+            "non_compliance_signs": [
+                "general time frame only",
+                "no specific date mentioned",
+                "ambiguous or incomplete date information"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                180,
+                182
+            ],
+            "rubric": [
+                "LLM response should contain: exact date given"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What budget have I set for the initial patent filing fees and attorney fees?",
+            "answer": "You have set a budget of $4,000 for initial patent filing fees and $5,500 for attorney fees.",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amounts for patent filing and attorney fees",
+            "conversation_references": [
+                "I budget $3,500 for initial patent filing fees and $5,000 for attorney fees by July 2024.",
+                "I have adjusted my budget to allocate $4,000 for initial patent filing fees and $5,500 for attorney fees by July 2024 to cover additional consultation hours."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original budget amounts of $3,500 and $5,000 instead of the updated $4,000 and $5,500.",
+            "source_chat_ids": {
+                "original_info": [
+                    36
+                ],
+                "updated_info": [
+                    64
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $4,000 for initial patent filing fees",
+                "LLM response should state: $5,500 for attorney fees"
+            ]
+        },
+        {
+            "question": "What is the budget allocated for prototype refinement and patent attorney fees through August?",
+            "answer": "$8,000",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amount for prototype refinement and patent attorney fees",
+            "conversation_references": [
+                "Financial & Budget:Budget Allocation: Allocated $7,000 for prototype refinement and patent attorney fees through August 2024.",
+                "Information Update: The budget allocation was increased to $8,000 through August 2024 to cover additional prototype enhancements."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $7,000 budget instead of the updated $8,000 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    130
+                ],
+                "updated_info": [
+                    176
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $8,000"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "What are the two different patent filing deadlines I need to meet?",
+            "answer": "June 1, 2024 for the provisional patent and November 10, 2024 for the non-provisional patent.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 30",
+                "chat_id: 164"
+            ],
+            "reasoning_steps": [
+                "Identify the provisional patent filing deadline mentioned in the first user message.",
+                "Identify the non-provisional patent filing deadline mentioned in the second user message.",
+                "Compare and list both deadlines as the two different filing dates."
+            ],
+            "source_chat_ids": [
+                30,
+                164
+            ],
+            "rubric": [
+                "LLM response should state: June 1, 2024 for the provisional patent",
+                "LLM response should state: November 10, 2024 for the non-provisional patent"
+            ]
+        },
+        {
+            "question": "Given my timeline and actions from starting the prior art search to filing the provisional patent, how well did I align my search thoroughness, patent features, and budget to maximize my chances for a successful non-provisional filing?",
+            "answer": "You conducted a comprehensive prior art search covering multiple databases and classifications before your provisional filing, identified unique AI tagging features absent in similar patents, filed the provisional on time with detailed documentation plans, and maintained a budget aligned with filing and attorney fees, positioning you well for a strong non-provisional application.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 4,
+            "conversation_references": [
+                "Initial concerns about prior art search thoroughness and detailed search plan",
+                "Findings from prior art search and impact on provisional filing decision",
+                "Provisional patent filing details and next steps for non-provisional preparation",
+                "User's worries about provisional patent status and budget considerations"
+            ],
+            "reasoning_steps": [
+                "Identify the timeline and scope of the prior art search including databases and classification systems used.",
+                "Analyze the search results focusing on the uniqueness of the AI tagging feature compared to similar patents found.",
+                "Assess the timing and completeness of the provisional patent filing including documentation and receipt confirmation.",
+                "Evaluate the budget alignment with filing and attorney fees and ongoing preparation steps for the non-provisional application.",
+                "Synthesize how these factors collectively influence the likelihood of a successful non-provisional patent filing."
+            ],
+            "source_chat_ids": [
+                32,
+                70,
+                71,
+                122,
+                123
+            ],
+            "rubric": [
+                "LLM response should state: You conducted a comprehensive prior art search covering multiple databases and classifications before your provisional filing",
+                "LLM response should state: identified unique AI tagging features absent in similar patents",
+                "LLM response should state: filed the provisional on time with detailed documentation plans",
+                "LLM response should state: maintained a budget aligned with filing and attorney fees"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you help me find a patent attorney to assist with my new invention?",
+            "preference_being_tested": "I prefer working with a local patent attorney in Montserrat over remote services for better communication.",
+            "expected_compliance": "Response should prioritize recommending local patent attorneys in Montserrat rather than remote or non-local options, reflecting the user's preference for local representation.",
+            "compliance_indicators": [
+                "mentions patent attorneys based in Montserrat",
+                "focuses on local attorneys rather than remote services",
+                "acknowledges user's location in recommendations"
+            ],
+            "non_compliance_signs": [
+                "only suggests remote or out-of-area attorneys",
+                "ignores user's location in recommendations",
+                "fails to mention local options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "location-based preference",
+            "source_chat_ids": [
+                62
+            ],
+            "rubric": [
+                "LLM response should contain: mentions patent attorneys based in Montserrat",
+                "LLM response should contain: focuses on local attorneys rather than remote services"
+            ]
+        },
+        {
+            "question": "I'm preparing materials to support my patent application. What types of content should I include to make it clear and comprehensive?",
+            "preference_being_tested": "I prefer combining detailed drawings with video demos to strengthen patent application clarity.",
+            "expected_compliance": "Response should suggest including both detailed drawings and video demonstrations as part of the materials to support the patent application, reflecting the user's preference for combining these formats.",
+            "compliance_indicators": [
+                "recommends detailed drawings",
+                "mentions video demos or similar multimedia content",
+                "suggests combining multiple content types for clarity"
+            ],
+            "non_compliance_signs": [
+                "only suggests text descriptions",
+                "recommends drawings without video or multimedia",
+                "ignores multimedia options",
+                "focuses solely on one content type"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content format preference",
+            "source_chat_ids": [
+                106
+            ],
+            "rubric": [
+                "LLM response should contain: recommends detailed drawings",
+                "LLM response should contain: mentions video demos or similar multimedia content"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Summarize my key actions and decisions between March and early May regarding my patent application progress.",
+            "ideal_summary": "Between March and early May 2024, you advanced your patent application by planning a prior art search, registering for a patent law webinar, and attending despite a scheduling conflict. You budgeted $4,000 for filing and $5,500 for attorney fees, choosing to work with a Montserrat-based attorney for better communication. By April, you completed the prior art search, met with attorney Ashlee to confirm a provisional-first filing strategy, and finalized technical specifications after five prototype tests at 92% accuracy. You applied for a $10,000 innovation grant, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting ahead of the May 15 deadline.",
+            "difficulty": "easy",
+            "summarization_type": "",
+            "bullet_points_covered": 3,
+            "key_elements_tested": [
+                "Patent planning and attorney decisions",
+                "Prototype testing and technical progress",
+                "Financial planning and grant application"
+            ],
+            "synthesis_required": "",
+            "source_chat_ids": [],
+            "rubric": [
+                "LLM response should contain: you advanced your patent application by planning a prior art search, registering for a patent law webinar, and attending despite a scheduling conflict",
+                "LLM response should contain: You budgeted $4,000 for filing and $5,500 for attorney fees, choosing to work with a Montserrat-based attorney for better communication",
+                "LLM response should contain: By April, you completed the prior art search, met with attorney Ashlee to confirm a provisional-first filing strategy, and finalized technical specifications",
+                "LLM response should contain: You applied for a $10,000 innovation grant, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting"
+            ]
+        },
+        {
+            "question": "Summarize my major milestones and strategic choices from July through September 2024 as I prepared for the non-provisional filing.",
+            "ideal_summary": "From July through September 2024, you filed your provisional patent on May 15 and by July completed 10 prototype tests with 96% accuracy. You addressed an office action by amending claims with Ashlee and mentor Jake’s guidance, while Francis helped prepare a demo for investor Stephen. By September, you began drafting the non-provisional with Ashlee, approving a $12,000 budget for filing and a PCT application covering multiple regions. You negotiated investment terms with Stephen, rejecting a competing offer, and verified compliance of your 45-page draft with USPTO standards. Prototype testing was scheduled to reach 98% accuracy by the end of September.",
+            "difficulty": "easy",
+            "summarization_type": "",
+            "bullet_points_covered": 3,
+            "key_elements_tested": [
+                "Response to USPTO feedback",
+                "Investment negotiations and funding strategy",
+                "Preparation of non-provisional filing and PCT decision"
+            ],
+            "synthesis_required": "",
+            "source_chat_ids": [],
+            "rubric": [
+                "LLM response should contain: you filed your provisional patent on May 15 and by July completed 10 prototype tests with 96% accuracy",
+                "LLM response should contain: You addressed an office action by amending claims with Ashlee and mentor Jake’s guidance, while Francis helped prepare a demo for investor Stephen",
+                "LLM response should contain: By September, you began drafting the non-provisional with Ashlee, approving a $12,000 budget for filing and a PCT application covering multiple regions",
+                "LLM response should contain: You negotiated investment terms with Stephen, rejecting a competing offer, and verified compliance of your 45-page draft with USPTO standards",
+                "LLM response should contain: Prototype testing was scheduled to reach 98% accuracy by the end of September"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days were there between when I planned to complete my prior art search and when I aimed to file my provisional patent?",
+            "answer": "There were 35 days between planning to complete the prior art search by April 10, 2024, and aiming to file the provisional patent by May 15, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 10, 2024: planned completion of prior art search",
+                "May 15, 2024: planned provisional patent filing"
+            ],
+            "conversation_references": [
+                "Session 1: planning prior art search completion",
+                "Session 2: provisional patent filing decision"
+            ],
+            "calculation_required": "May 15, 2024 - April 10, 2024 = 35 days",
+            "source_chat_ids": {
+                "first_event": [
+                    32
+                ],
+                "second_event": [
+                    70
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 35 days",
+                "LLM response should state: from April 10 till May 15"
+            ]
+        },
+        {
+            "question": "How many days do I have between my meeting with Ashlee and the patent response deadline?",
+            "answer": "There are 67 days between the meeting with Ashlee on May 14, 2024, and the patent response deadline on July 20, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 14, 2024: meeting with Ashlee",
+                "July 20, 2024: patent response deadline"
+            ],
+            "conversation_references": [
+                "Session 1: Meeting with Ashlee",
+                "Session 2: Patent response deadline"
+            ],
+            "calculation_required": "July 20, 2024 - May 14, 2024 = 67 days",
+            "source_chat_ids": {
+                "first_event": [
+                    102
+                ],
+                "second_event": [
+                    152
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 67 days",
+                "LLM response should state: from May 14 till July 20"
+            ]
+        }
+    ]
+}

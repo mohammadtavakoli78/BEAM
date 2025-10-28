@@ -1,0 +1,672 @@
+{
+    "abstention": [
+        {
+            "question": "What feedback or comments were received during the peer review of the initial fetcher.py module scheduled by March 12, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the feedback or comments from the peer review of fetcher.py.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Peer review is planned but no results or feedback are described.",
+            "plan_reference": "Batch 1, Bullet 23",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the feedback or comments from the peer review of fetcher.py"
+            ]
+        },
+        {
+            "question": "What specific security protocols are enforced for the live trading API beyond IP whitelisting?",
+            "ideal_response": "Based on the provided chat, there is no information related to security protocols for the live trading API beyond IP whitelisting.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Only IP whitelisting is mentioned; other security measures are not detailed.",
+            "plan_reference": "Batch 6, Bullet 27",
+            "rubric": [
+                "Based on the provided chat, there is no information related to security protocols for the live trading API beyond IP whitelisting"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I written any unit tests for the functions in fetcher.py, and if so, what kind of coverage have I achieved?",
+            "ideal_answer": "I noticed you've mentioned contradictory information about this. You said you have never written any unit tests for fetcher.py functions, but you also mentioned having pytest tests with 88% coverage on fetcher.py. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Unit testing status and coverage of fetcher.py",
+            "conversation_references": [
+                "chat_id: 156",
+                "chat_id: 166"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    156
+                ],
+                "second_statement": [
+                    166
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never written any unit tests for fetcher.py functions",
+                "LLM response should mention: you also mentioned having pytest tests with 88% coverage on fetcher.py",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever set up the OAuth 2.0 sandbox environment with the Alpaca brokerage API using the client ID and secret stored in a .env file?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. In one instance, you said you have never implemented the OAuth 2.0 sandbox setup with Alpaca, but in another, you mentioned beginning the setup with the client ID and secret stored in a .env file. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "OAuth 2.0 sandbox setup with Alpaca brokerage API",
+            "conversation_references": [
+                "Session 318: Never implemented OAuth 2.0 sandbox",
+                "Session 220: Began OAuth 2.0 sandbox setup with client ID and secret"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    318
+                ],
+                "second_statement": [
+                    220
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never implemented the OAuth 2.0 sandbox setup with Alpaca",
+                "LLM response should mention: you mentioned beginning the setup with the client ID and secret stored in a .env file",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you reconstruct the timeline of when I first mentioned each aspect of my stock trading system development in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned aspects of your stock trading system development in this sequence: 1) Handling API rate limiting and improving efficiency with Alpha Vantage API calls, 2) Designing a microservices architecture with module integration and message queues, 3) Achieving high data availability and uptime strategies, 4) Creating REST API endpoints for backtesting and exposing trade data, 5) Optimizing Alpaca API integration including order placement and debugging paper trading modules, 6) Implementing OAuth 2.0 token refresh and handling authentication issues, 7) Developing ML prediction endpoints and managing input data shape challenges, 8) Integrating alert notifications via external APIs like Twilio, 9) Enhancing error handling and exception management in trading bot code, 10) Configuring secure API access with SSL termination and load balancers.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 50",
+                "chat_id: 56",
+                "chat_id: 178, 180, 184, 192",
+                "chat_id: 504",
+                "chat_id: 660, 666",
+                "chat_id: 820, 822, 824",
+                "chat_id: 340, 342, 344",
+                "chat_id: 1124",
+                "chat_id: 1260",
+                "chat_id: 1266, 1272"
+            ],
+            "ordering_tested": [
+                "1st: API rate limiting and efficiency",
+                "2nd: Microservices architecture and integration",
+                "3rd: Data availability and uptime",
+                "4th: REST API endpoints for backtesting and trade data",
+                "5th: Alpaca API optimization and debugging",
+                "6th: OAuth 2.0 token refresh and auth issues",
+                "7th: ML prediction endpoint and input handling",
+                "8th: Alert notifications integration",
+                "9th: Error handling in trading bot",
+                "10th: Secure API access with SSL and load balancers"
+            ],
+            "complexity_factors": [
+                "requires chronological reconstruction",
+                "spans multiple technical domains",
+                "involves integration of APIs, architecture, and security",
+                "requires tracking mentions across many conversation sessions",
+                "tests sophisticated sequence and pattern recognition"
+            ],
+            "source_chat_ids": [
+                50,
+                56,
+                178,
+                180,
+                184,
+                192,
+                504,
+                660,
+                666,
+                820,
+                822,
+                824,
+                340,
+                342,
+                344,
+                1124,
+                1260,
+                1266,
+                1272
+            ],
+            "rubric": [
+                "LLM response should mention: API rate limiting and efficiency",
+                "LLM response should mention: Microservices architecture and integration",
+                "LLM response should mention: Data availability and uptime",
+                "LLM response should mention: REST API endpoints for backtesting and trade data",
+                "LLM response should mention: Alpaca API optimization and debugging",
+                "LLM response should mention: OAuth 2.0 token refresh and auth issues",
+                "LLM response should mention: ML prediction endpoint and input handling",
+                "LLM response should mention: Alert notifications integration",
+                "LLM response should mention: Error handling in trading bot",
+                "LLM response should mention: Secure API access with SSL and load balancers"
+            ]
+        },
+        {
+            "question": "How did my discussions about microservices communication evolve throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your discussions about microservices communication evolved in this sequence: 1) You started by addressing REST API calls and error handling between services, 2) Then you moved on to data serialization and deserialization techniques, 3) Next, you explored upgrading communication protocols from HTTP/1.1 to HTTP/2 and related implementation challenges, 4) After that, you introduced message queueing with RabbitMQ for asynchronous communication, 5) You then shifted focus to low-latency communication using gRPC and concerns about thread safety and performance optimization, 6) Following this, you discussed migrating from HTTP/2 to gRPC with TLS encryption and sought feedback on service definitions, 7) Later, you brought up WebSocket multiplexing for handling concurrent connections and scaling issues, 8) Subsequently, you explored pub/sub messaging with AWS SNS including error handling and service communication, 9) You then inquired about implementing a service mesh with Istio for secure and observable communication, including error handling within that context, and finally 10) You addressed Kafka topics for asynchronous communication and API performance optimization for trade logging.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 302 & 312: REST API calls and error handling",
+                "Session 312: Data serialization/deserialization",
+                "Session 466 & 470: HTTP/1.1 to HTTP/2 upgrade",
+                "Session 624 & 630: RabbitMQ message queue",
+                "Session 780, 782, 786, 788, 792: gRPC communication and performance",
+                "Session 940 & 946: gRPC with TLS migration and review",
+                "Session 1088: WebSocket multiplexing and scaling",
+                "Session 1232 & 1242: AWS SNS pub/sub messaging and error handling",
+                "Session 1366 & 1374: Service mesh with Istio and error handling",
+                "Session 1540 & 1546: Kafka asynchronous communication and API optimization"
+            ],
+            "ordering_tested": [
+                "1st: REST API and error handling",
+                "2nd: Data serialization",
+                "3rd: HTTP/2 implementation",
+                "4th: RabbitMQ messaging",
+                "5th: gRPC communication and optimization",
+                "6th: gRPC with TLS migration",
+                "7th: WebSocket multiplexing",
+                "8th: AWS SNS pub/sub messaging",
+                "9th: Service mesh with Istio",
+                "10th: Kafka and API performance"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related technical topics",
+                "spans numerous conversation sessions",
+                "involves nuanced evolution of communication methods",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse messaging technologies"
+            ],
+            "source_chat_ids": [
+                302,
+                312,
+                466,
+                470,
+                624,
+                630,
+                780,
+                782,
+                786,
+                788,
+                792,
+                940,
+                946,
+                1088,
+                1232,
+                1242,
+                1366,
+                1374,
+                1540,
+                1546
+            ],
+            "rubric": [
+                "LLM response should mention: REST API and error handling",
+                "LLM response should mention: Data serialization",
+                "LLM response should mention: HTTP/2 implementation",
+                "LLM response should mention: RabbitMQ messaging",
+                "LLM response should mention: gRPC communication and optimization",
+                "LLM response should mention: gRPC with TLS migration",
+                "LLM response should mention: WebSocket multiplexing",
+                "LLM response should mention: AWS SNS pub/sub messaging",
+                "LLM response should mention: Service mesh with Istio",
+                "LLM response should mention: Kafka and API performance"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What is the URL I set as the API endpoint for fetching stock prices?",
+            "answer": "https://www.alphavantage.co/query",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message in chat_id 50",
+            "key_facts_tested": [
+                "API endpoint URL"
+            ],
+            "source_chat_ids": [
+                50
+            ],
+            "rubric": [
+                "LLM response should state: https://www.alphavantage.co/query"
+            ]
+        },
+        {
+            "question": "What data type did I choose for the price column in my trades table?",
+            "answer": "You chose NUMERIC(10,2) for the price column.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 1: Initial table design details",
+            "key_facts_tested": [
+                "price column data type",
+                "NUMERIC(10,2)"
+            ],
+            "source_chat_ids": [
+                128
+            ],
+            "rubric": [
+                "LLM response should state: NUMERIC(10,2)"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What information should I look at to understand how well my API calls are performing?",
+            "instruction_being_tested": "Always include API response metrics when I ask about API integration performance.",
+            "expected_compliance": "Response should include API response metrics details when discussing API integration performance.",
+            "compliance_indicators": [
+                "mentions API response times",
+                "includes success/failure rates",
+                "provides latency or throughput data",
+                "discusses relevant performance measurements from the API"
+            ],
+            "non_compliance_signs": [
+                "only general performance discussion",
+                "no mention of response-related data",
+                "ignores timing or status information",
+                "focuses on unrelated aspects of integration"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                632,
+                634
+            ],
+            "rubric": [
+                "LLM response should contain: mentions API response times",
+                "LLM response should contain: includes success/failure rates",
+                "LLM response should contain: provides latency or throughput data"
+            ]
+        },
+        {
+            "question": "What technologies are used in my current setup?",
+            "instruction_being_tested": "Always include software version numbers when I ask about technology stacks.",
+            "expected_compliance": "Response should include the names of the technologies along with their specific version numbers.",
+            "compliance_indicators": [
+                "software names with version numbers",
+                "explicit version details",
+                "versions listed alongside technologies"
+            ],
+            "non_compliance_signs": [
+                "only technology names without versions",
+                "general description without versions",
+                "no version information provided"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1550
+            ],
+            "rubric": [
+                "LLM response should contain: software names with version numbers",
+                "LLM response should contain: explicit version details",
+                "LLM response should contain: versions listed alongside technologies"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the success rate of the integration tests for the fetcher and database interaction?",
+            "answer": "97% success rate",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated success rate of integration tests",
+            "conversation_references": [
+                "Testing & Quality Assurance Labels: Integration Testing: Wrote integration tests for fetcher and database interaction, passing 95% of tests on March 16, 2024.",
+                "Information Update: The integration tests for fetcher and database interaction now consistently pass at a 97% success rate as of March 17, 2024."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 95% success rate instead of the updated 97%",
+            "source_chat_ids": {
+                "original_info": [
+                    252,
+                    254
+                ],
+                "updated_info": [
+                    314
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 97% success rate"
+            ]
+        },
+        {
+            "question": "How many epochs does my LSTM model training pipeline complete, and what is the final validation loss?",
+            "answer": "The training pipeline completes 60 epochs with a final validation loss of 0.028.",
+            "difficulty": "moderate",
+            "update_type": "training performance metrics",
+            "tests_retention_of": "number of epochs and validation loss after training completion",
+            "conversation_references": [
+                "Machine Learning & AI Labels: Model Training: Completed 50 epochs of LSTM training with batch size 64, final validation loss 0.032 on March 29, 2024.",
+                "Information Update: The LSTM model training pipeline now completes 60 epochs with improved validation loss of 0.028 as of March 30, 2024."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 50 epochs and validation loss of 0.032 instead of the current 60 epochs and 0.028 loss.",
+            "source_chat_ids": {
+                "original_info": [
+                    324
+                ],
+                "updated_info": [
+                    474
+                ]
+            },
+            "rubric": [
+                "LLM response should state: The training pipeline completes 60 epochs",
+                "LLM response should state: The training pipeline completes with a final validation loss of 0.028"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different stock symbols have I mentioned wanting to fetch prices for across my sessions?",
+            "answer": "Five symbols: AAPL, GOOG, MSFT, and two additional mentions of AAPL and MSFT.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 50",
+                "chat_id 168",
+                "chat_id 56"
+            ],
+            "reasoning_steps": [
+                "Identify the symbols listed in the first session where I want to fetch stock prices (AAPL, GOOG, MSFT).",
+                "Note the symbols mentioned in the later session with fetcher.py code (AAPL, MSFT).",
+                "Recognize that AAPL and MSFT appear in both sessions, so total unique symbols mentioned are AAPL, GOOG, MSFT."
+            ],
+            "source_chat_ids": [
+                50,
+                56,
+                168
+            ],
+            "rubric": [
+                "LLM response should state: Three symbols",
+                "LLM response should state: AAPL",
+                "LLM response should state: GOOG",
+                "LLM response should state: MSFT"
+            ]
+        },
+        {
+            "question": "Considering my goals for testing coverage, API response time, and debugging the stock price fetcher, how should I prioritize my efforts to improve reliability and performance?",
+            "answer": "You should first focus on writing comprehensive unit tests to ensure reliability and achieve your coverage goal, then address debugging the API response to fix errors, and finally optimize API response time to improve performance.",
+            "difficulty": "medium",
+            "reasoning_type": "performance_comparison",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id: 148 (unit testing goals and initial tests)",
+                "chat_id: 154 (API response time optimization)",
+                "chat_id: 166 (debugging KeyError in fetcher)",
+                "chat_id: 326 (model performance tuning with batch size)"
+            ],
+            "reasoning_steps": [
+                "Identify that the user aims for about 85% code coverage and needs to start unit testing fetcher.py functions.",
+                "Recognize the user wants to optimize API response time to under a target threshold, indicating a performance goal.",
+                "Note the user is encountering a KeyError in the fetch_stock_prices function, indicating a reliability/debugging issue.",
+                "Understand the user is experimenting with batch size changes to improve model performance, showing a focus on tuning performance parameters.",
+                "Synthesize that ensuring code reliability via testing and debugging should precede performance optimizations for stable improvements."
+            ],
+            "source_chat_ids": [
+                148,
+                154,
+                166,
+                326
+            ],
+            "rubric": [
+                "LLM response should state: focus on writing comprehensive unit tests to ensure reliability and achieve your coverage goal",
+                "LLM response should state: address debugging the API response to fix errors",
+                "LLM response should state: optimize API response time to improve performance"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm working on caching price data for a service that needs to handle restarts without losing cached information. How would you suggest setting this up?",
+            "preference_being_tested": "I prefer Redis caching over in-memory Python dicts for scalability and persistence across service restarts.",
+            "expected_compliance": "Response should recommend a caching solution that supports persistence across service restarts and scalability, such as Redis, rather than volatile in-memory options.",
+            "compliance_indicators": [
+                "mentions Redis or similar persistent caching",
+                "addresses scalability and persistence",
+                "provides examples or best practices for durable caching"
+            ],
+            "non_compliance_signs": [
+                "only suggests in-memory caching like Python dicts",
+                "ignores persistence across restarts",
+                "does not mention scalable caching solutions"
+            ],
+            "difficulty": "medium",
+            "preference_type": "technology choice",
+            "source_chat_ids": [
+                272,
+                276,
+                280,
+                282,
+                284
+            ],
+            "rubric": [
+                "LLM response should contain: mentions Redis or similar persistent caching",
+                "LLM response should contain: addresses scalability and persistence"
+            ]
+        },
+        {
+            "question": "How would you suggest structuring my workflow to handle both testing and actual deployment of my trading strategies?",
+            "preference_being_tested": "I prefer decoupling backtesting from live trading to ensure stability and avoid performance degradation.",
+            "expected_compliance": "Response should recommend separating the backtesting environment from the live trading environment, highlighting distinct workflows or systems for each to maintain stability and performance.",
+            "compliance_indicators": [
+                "suggests separate environments or processes for backtesting and live trading",
+                "mentions isolating testing from deployment",
+                "recommends workflow segmentation to avoid interference",
+                "acknowledges potential issues from combining testing and live operations"
+            ],
+            "non_compliance_signs": [
+                "recommends integrated or combined backtesting and live trading setup",
+                "ignores separation between testing and deployment",
+                "suggests a single environment for both without distinction",
+                "does not address workflow structuring related to testing and live use"
+            ],
+            "difficulty": "medium",
+            "preference_type": "workflow_structure",
+            "source_chat_ids": [],
+            "rubric": [
+                "LLM response should contain: suggests separate environments or processes for backtesting and live trading",
+                "LLM response should contain: mentions isolating testing from deployment"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how my stock trading bot project has progressed, including the key challenges I faced and the solutions we discussed along the way?",
+            "ideal_summary": "Your stock trading bot project evolved through several important stages. Initially, you encountered issues with the Alpha Vantage API's rate limiting, which you addressed by implementing asynchronous requests using asyncio and aiohttp to efficiently manage API calls without exceeding limits. Next, you expanded the system architecture by designing a microservices setup with Flask and message queues like RabbitMQ to enable seamless communication between data fetching, ML prediction, and trade execution modules. To ensure high availability and robustness, you incorporated retry logic with exponential backoff to handle HTTP 429 errors gracefully, improving the reliability of your stock price fetcher. You further optimized performance by introducing Redis caching to reduce redundant API calls and dynamically managing delays between requests. Finally, you sought to enhance your testing coverage and model evaluation by adding comprehensive pytest tests and integrating classification metrics such as precision and recall into your LSTM model training pipeline. Throughout these phases, you progressively refined your system to be more efficient, scalable, and resilient.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                50,
+                51,
+                56,
+                57,
+                82,
+                83,
+                86,
+                87,
+                164,
+                165,
+                168,
+                169,
+                170,
+                171,
+                474,
+                475
+            ],
+            "key_elements_tested": [
+                "problem identification",
+                "solution implementation",
+                "system design evolution",
+                "error handling strategies",
+                "performance optimization",
+                "testing and evaluation improvements"
+            ],
+            "synthesis_required": "Integrating multiple technical challenges and solutions across API handling, system architecture, error management, performance tuning, and model evaluation into a coherent project progression narrative",
+            "source_chat_ids": [
+                50,
+                51,
+                56,
+                57,
+                82,
+                83,
+                86,
+                87,
+                164,
+                165,
+                168,
+                169,
+                170,
+                171,
+                474,
+                475
+            ],
+            "rubric": [
+                "LLM response should contain: you encountered issues with the Alpha Vantage API's rate limiting, which you addressed by implementing asynchronous requests using asyncio and aiohttp",
+                "LLM response should contain: you expanded the system architecture by designing a microservices setup with Flask and message queues like RabbitMQ",
+                "LLM response should contain: you incorporated retry logic with exponential backoff to handle HTTP 429 errors gracefully, improving the reliability of your stock price",
+                "LLM response should contain: optimized performance by introducing Redis caching to reduce redundant API calls and dynamically managing delays between requests",
+                "LLM response should contain: you sought to enhance your testing coverage and model evaluation by adding comprehensive pytest tests and integrating classification metrics"
+            ]
+        },
+        {
+            "question": "Can you give me a comprehensive summary of how my development roadmap and related implementation efforts have progressed so far?",
+            "ideal_summary": "Your development roadmap outlines a series of milestones aimed at building and deploying various components of your project. Initially, you focused on Agile sprint planning to meet early deadlines, prioritizing API integration, data ingestion, and testing within a two-week sprint. Subsequently, you worked on creating a secure and efficient RESTful API using Flask, enhancing it with error handling, input validation, and security features. Parallel to this, you optimized your Docker setup for the ML model service to reduce image size while maintaining necessary dependencies. Progressing further, you developed and deployed ML model training and prediction APIs, incorporating best practices for model architecture, training monitoring with TensorBoard, and dynamic learning rate adjustments to improve convergence. Most recently, your focus shifted to completing Milestone 3, which involves implementing backtesting and paper trading modules, integrating technical indicators, calculating performance metrics, and preparing for deployment on a dedicated port. Throughout these phases, you have refined your approach, addressed challenges in risk management, and ensured your roadmap remains aligned with upcoming deadlines, demonstrating steady advancement across multiple interconnected development areas.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                36,
+                37,
+                46,
+                47,
+                234,
+                235,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                516,
+                517,
+                518,
+                528,
+                529,
+                676,
+                677
+            ],
+            "key_elements_tested": [
+                "roadmap progression",
+                "task prioritization",
+                "API development and security",
+                "ML model training and optimization",
+                "backtesting and paper trading implementation",
+                "risk management integration"
+            ],
+            "synthesis_required": "Integrating multiple development phases and technical improvements into a coherent narrative showing project evolution and milestone achievements",
+            "source_chat_ids": [
+                36,
+                37,
+                46,
+                47,
+                234,
+                235,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                358,
+                359,
+                360,
+                361,
+                362,
+                363,
+                516,
+                517,
+                518,
+                528,
+                529,
+                676,
+                677
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on Agile sprint planning to meet early deadlines, prioritizing API integration, data ingestion, and testing within a two-week sprint",
+                "LLM response should contain: you worked on creating a secure and efficient RESTful API using Flask, enhancing it with error handling, input validation, and security features",
+                "LLM response should contain: you optimized your Docker setup for the ML model service to reduce image size while maintaining necessary dependencies.",
+                "LLM response should contain: you developed and deployed ML model training and prediction APIs, incorporating best practices for model architecture, training monitoring with TensorBoard, and dynamic learning rate adjustments to improve convergence.",
+                "LLM response should contain: your focus shifted to completing Milestone 3, which involves implementing backtesting and paper trading modules, integrating technical indicators, calculating performance metrics, and preparing for deployment on a dedicated port"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between the start of my first sprint and its deadline to complete all my tasks?",
+            "answer": "There are 14 days between the sprint start on March 1, 2024, and the sprint deadline on March 15, 2024, giving you two weeks to complete all your tasks.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 1, 2024: sprint start",
+                "March 15, 2024: sprint deadline"
+            ],
+            "conversation_references": [
+                "Session 36: sprint planning with explicit dates"
+            ],
+            "calculation_required": "March 15, 2024 - March 1, 2024 = 14 days",
+            "source_chat_ids": {
+                "first_event": [
+                    36
+                ],
+                "second_event": [
+                    36
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 14 days",
+                "LLM response should state: from March 1, 2024 till March 15, 2024"
+            ]
+        },
+        {
+            "question": "How many days do I have between submitting my modules for peer review and the deadline to provide feedback?",
+            "answer": "There are 2 days between when I submitted fetcher.py and strategy.py for peer review on March 16, 2024, and the feedback deadline on March 18, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 16, 2024: modules submitted for peer review",
+                "March 18, 2024: feedback due"
+            ],
+            "conversation_references": [
+                "Session 3: Project workflow and deadlines"
+            ],
+            "calculation_required": "March 18 - March 16 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    270
+                ],
+                "second_event": [
+                    270
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 days",
+                "LLM response should state: from March 16, 2024 till March 18, 2024"
+            ]
+        }
+    ]
+}

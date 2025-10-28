@@ -1,0 +1,770 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the consultation with Rebecca on March 10?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific details of the consultation with Rebecca on March 10.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The consultation date is given but no agenda or discussion points are described.",
+            "plan_reference": "Batch 1, Bullet 11 mentions the consultation but no content details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific details of the consultation with Rebecca on March 10"
+            ]
+        },
+        {
+            "question": "What are the specific ingredients and preparation steps for the Mediterranean quinoa salad recipe?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific ingredients or preparation steps of the Mediterranean quinoa salad recipe.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The recipe is mentioned but no detailed instructions or ingredients are provided.",
+            "plan_reference": "Batch 3, Bullet 25 references the recipe without details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific ingredients of the Mediterranean quinoa salad recipe",
+                "Based on the provided chat, there is no information related to the specific preparation of the Mediterranean quinoa salad recipe"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever contacted a personal trainer for a fitness consultation?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you contacted Rebecca, a certified trainer at NorthFit Gym, for a consultation, but you also mentioned that you've never contacted any personal trainer for fitness consultations. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Contacting a personal trainer for fitness consultation",
+            "conversation_references": [
+                "Session 66, 72, 78: Contacted Rebecca for consultation",
+                "Session 196: Never contacted any personal trainer"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    66,
+                    72,
+                    78
+                ],
+                "second_statement": [
+                    196
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you contacted Rebecca, a certified trainer at NorthFit Gym, for a consultation",
+                "LLM response should mention: you also mentioned that you've never contacted any personal trainer for fitness consultations",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever completed a 5K run or timed run before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never completed any 5K runs or timed runs before, but you also mentioned feeling confident after completing a 5K run. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of 5K or timed runs",
+            "conversation_references": [
+                "Session 256: Completed 5K run",
+                "Session 386: Never completed 5K or timed runs"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    256
+                ],
+                "second_statement": [
+                    386
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never completed any 5K runs or timed runs before",
+                "LLM response should mention: you also mentioned feeling confident after completing a 5K run",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of my fitness journey with Rebecca and workout partners develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus evolved through these stages: 1) Initial consultation and preparation with Rebecca, 2) Technique adjustments and injury-related corrections, 3) Changes in workout routines and training schedules suggested by Rebecca, 4) Rehabilitation and strength recovery strategies, 5) Introduction of new workout partners and complementary practices like Pilates, 6) Incorporation of specialized exercises for injury rehab, 7) Motivation and accountability in training progress, 8) Balancing increased workout intensity with professional and social commitments, 9) Preparation and training for upcoming fitness events, 10) Recognition and reinforcement of consistency and progress by Rebecca.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "66, 72, 78",
+                "236, 242, 244, 250",
+                "410, 414, 424",
+                "600, 608, 616",
+                "794, 798, 802, 804",
+                "994, 1002, 1004, 1010",
+                "1268, 1274, 1280",
+                "1386, 1392, 1398, 1564",
+                "1578, 1584, 1588, 1592, 1758",
+                "1770, 1780, 1782"
+            ],
+            "ordering_tested": [
+                "Initial consultation and preparation",
+                "Technique adjustments and injury corrections",
+                "Workout routine changes",
+                "Rehabilitation and strength recovery",
+                "New workout partners and complementary practices",
+                "Specialized injury rehab exercises",
+                "Motivation and accountability",
+                "Balancing workouts with other commitments",
+                "Event preparation and training",
+                "Recognition of consistency and progress"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "involves multiple overlapping fitness themes",
+                "spans numerous conversation sessions",
+                "tests pattern recognition and development tracking",
+                "requires integration of diverse fitness-related mentions"
+            ],
+            "source_chat_ids": [
+                66,
+                72,
+                78,
+                236,
+                242,
+                244,
+                250,
+                410,
+                414,
+                424,
+                600,
+                608,
+                616,
+                794,
+                798,
+                802,
+                804,
+                994,
+                1002,
+                1004,
+                1010,
+                1268,
+                1274,
+                1280,
+                1386,
+                1392,
+                1398,
+                1564,
+                1578,
+                1584,
+                1588,
+                1592,
+                1758,
+                1770,
+                1780,
+                1782
+            ],
+            "rubric": [
+                "Initial consultation and preparation",
+                "Technique adjustments and injury corrections",
+                "Workout routine changes",
+                "Rehabilitation and strength recovery",
+                "New workout partners and complementary practices",
+                "Specialized injury rehab exercises",
+                "Motivation and accountability",
+                "Balancing workouts with other commitments",
+                "Event preparation and training",
+                "Recognition of consistency and progress"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different people and their roles in supporting my fitness journey throughout our conversations, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned the different people and their supportive roles in this order: 1) My mom's encouragement and ways she can help me stay motivated, 2) My workout partner Jenny's suggestions and motivation for new activities, 3) Supporting Jenny during her half marathon training and balancing my own goals, 4) My friend Don inviting me to join hiking and how to prepare, 5) Family members Nancy and Craig joining Pilates classes and participating in runs, 6) Craig helping with protein-rich meal prep during my injury, 7) Christopher's upcoming cycling race and the support he provides, 8) Pilates workout partner Kristen and the benefits of group motivation, 9) Balancing Pilates classes with my clinical workload, and 10) Preparing for and participating in events like the New Year's 5K fun run with Jenny.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 48: Mom's support",
+                "Sessions 218, 224, 230: Jenny's motivation and activities",
+                "Sessions 518, 522, 528, 532: Supporting Jenny's training",
+                "Sessions 642, 652: Don's hiking invitation and friendship",
+                "Sessions 910, 916, 924: Nancy and Craig joining Pilates and runs",
+                "Sessions 1116, 1122, 1128: Craig's meal prep help",
+                "Sessions 1196, 1202, 1206: Christopher's cycling race support",
+                "Sessions 1424, 1430, 1436: Pilates partner Kristen and group motivation",
+                "Session 1564: Balancing Pilates with clinical work",
+                "Sessions 1578, 1584, 1588, 1592: Preparing for New Year's 5K with Jenny"
+            ],
+            "ordering_tested": [
+                "1st: Mom's support",
+                "2nd: Jenny's motivation and new activities",
+                "3rd: Supporting Jenny's half marathon training",
+                "4th: Don's hiking invitation",
+                "5th: Nancy and Craig joining Pilates and runs",
+                "6th: Craig's meal prep assistance",
+                "7th: Christopher's cycling race",
+                "8th: Pilates partner Kristen and group motivation",
+                "9th: Balancing Pilates with clinical workload",
+                "10th: Preparing for New Year's 5K with Jenny"
+            ],
+            "source_chat_ids": [
+                [
+                    48,
+                    54,
+                    58
+                ],
+                [
+                    218,
+                    224,
+                    230
+                ],
+                [
+                    518,
+                    522,
+                    528,
+                    532
+                ],
+                [
+                    642,
+                    652
+                ],
+                [
+                    910,
+                    916,
+                    924
+                ],
+                [
+                    1116,
+                    1122,
+                    1128
+                ],
+                [
+                    1196,
+                    1202,
+                    1206
+                ],
+                [
+                    1424,
+                    1430,
+                    1436
+                ],
+                [
+                    1564
+                ],
+                [
+                    1578,
+                    1584,
+                    1588,
+                    1592
+                ]
+            ],
+            "rubric": [
+                "Mom's support",
+                "Jenny's motivation and new activities",
+                "Supporting Jenny's half marathon training",
+                "Don's hiking invitation",
+                "Nancy and Craig joining Pilates and runs",
+                "Craig's meal prep assistance",
+                "Christopher's cycling race",
+                "Pilates partner Kristen and group motivation",
+                "Balancing Pilates with clinical workload",
+                "Preparing for New Year's 5K with Jenny"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say I scheduled my consultation with Rebecca?",
+            "answer": "You said the consultation was scheduled for March 10 at 3 PM.",
+            "difficulty": "easy",
+            "question_type": "context date/time",
+            "conversation_reference": "Turn 1: USER mentions the consultation date and time.",
+            "key_facts_tested": [
+                "consultation date",
+                "consultation time"
+            ],
+            "source_chat_ids": [
+                66
+            ],
+            "rubric": [
+                "LLM response should state: March 10 at 3 PM"
+            ]
+        },
+        {
+            "question": "How did you recommend I prepare and what should I expect during the procedures planned for my upcoming appointment, especially regarding any steps I should take beforehand and what happens after the tests?",
+            "answer": "I recommended that you relax and avoid caffeine or nicotine before the blood pressure test, and fast for 9-12 hours while staying hydrated before the cholesterol test. During the appointment, you will register, have a consultation, undergo the blood pressure measurement with a cuff on your arm, and have blood drawn for cholesterol analysis. Results for blood pressure may be immediate, while cholesterol results take a few days, followed by a follow-up appointment to discuss them.",
+            "difficulty": "hard",
+            "question_type": "Context-Based Recall",
+            "conversation_reference": "Multiple turns: details about test procedures, preparation instructions, and what to expect during and after the screening",
+            "key_facts_tested": [
+                "preparation: avoid caffeine/nicotine before blood pressure test",
+                "preparation: fasting 9-12 hours before cholesterol test",
+                "procedure: blood pressure cuff inflation and reading",
+                "procedure: blood draw for cholesterol",
+                "timing: immediate blood pressure results, delayed cholesterol results",
+                "follow-up: appointment to discuss results"
+            ],
+            "extraction_challenge": "LLM must integrate preparation steps, procedural details, and post-test expectations from different parts of the conversation to provide a comprehensive answer",
+            "source_chat_ids": [
+                83
+            ],
+            "rubric": [
+                "LLM response should state: relax and avoid caffeine or nicotine before the blood pressure test",
+                "LLM response should state: fast for 9-12 hours while staying hydrated before the cholesterol test",
+                "LLM response should state: During the appointment, you will register, have a consultation, undergo the blood pressure measurement with a cuff on your arm",
+                "LLM response should state: During the appointment, have blood drawn for cholesterol analysis",
+                "LLM response should state: Results for blood pressure may be immediate, while cholesterol results take a few days, followed by a follow-up appointment"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I keep in mind to maintain a healthy diet?",
+            "instruction_being_tested": "Always include hydration tips when I ask about nutrition advice.",
+            "expected_compliance": "Response should include advice related to fluid intake along with other dietary recommendations.",
+            "compliance_indicators": [
+                "mentions importance of drinking fluids",
+                "suggests ways to stay properly hydrated",
+                "includes hydration alongside food-related tips"
+            ],
+            "non_compliance_signs": [
+                "no mention of fluid intake",
+                "only discusses food choices",
+                "ignores hydration aspects"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                384
+            ],
+            "rubric": [
+                "LLM response should contain: mentions importance of drinking fluids",
+                "LLM response should contain: suggests ways to stay properly hydrated",
+                "includes hydration alongside food-related tips"
+            ]
+        },
+        {
+            "question": "What are some ways I can avoid getting hurt during exercise?",
+            "instruction_being_tested": "Always recommend recovery strategies when I ask about injury prevention.",
+            "expected_compliance": "Response should include suggestions related to recovery methods alongside prevention advice.",
+            "compliance_indicators": [
+                "mentions of rest",
+                "rehabilitation techniques",
+                "methods to help the body heal",
+                "strategies to recover after strain"
+            ],
+            "non_compliance_signs": [
+                "only prevention tips without recovery",
+                "ignores recovery aspects",
+                "focuses solely on avoiding injury"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                968
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of rest",
+                "LLM response should contain: rehabilitation techniques",
+                "LLM response should contain: includes hydration alongside methods to help the body heal",
+                "LLM response should contain: strategies to recover after strain"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my daily water intake goal to support hydration during workouts?",
+            "answer": "3 liters",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "updated daily water intake goal",
+            "conversation_references": [
+                "Increased water intake to 2.5 liters daily, tracked via Fitbit hydration reminders.",
+                "I increased my daily water intake goal to 3 liters to further improve hydration during workouts."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 2.5 liters daily intake goal instead of the updated 3 liters",
+            "source_chat_ids": {
+                "original_info": [
+                    222,
+                    234,
+                    228
+                ],
+                "updated_info": [
+                    382
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 3 liters"
+            ]
+        },
+        {
+            "question": "How long are my evening yoga sessions for relaxation?",
+            "answer": "20 minutes",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "extended duration of evening yoga sessions",
+            "conversation_references": [
+                "Shared progress in \u201cNorth Ericshire Fitness\u201d WhatsApp group, receiving weekly encouragement.",
+                "I extended my evening yoga sessions to 20 minutes to enhance relaxation benefits."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 15-minute duration instead of the extended 20 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    486,
+                    488,
+                    496
+                ],
+                "updated_info": [
+                    570
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 20 minutes"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many total weekly workout sessions do I have when combining my strength training, HIIT, and cycling routines?",
+            "answer": "You have 9 total weekly workout sessions: 4 strength training days, 2 HIIT sessions, and 3 cycling sessions.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id 30,31 (12-week strength and endurance plan)",
+                "chat_id 202,203 (HIIT sessions twice weekly)",
+                "chat_id 776,777 (cycling thrice weekly)",
+                "chat_id 396,397 (balancing strength and cardio)"
+            ],
+            "reasoning_steps": [
+                "Identify the number of strength training days per week from the 12-week plan (4 days).",
+                "Note the frequency of HIIT sessions per week (2 sessions).",
+                "Note the frequency of cycling sessions per week (3 sessions).",
+                "Sum the sessions across categories: 4 + 2 + 3 = 9 total weekly sessions."
+            ],
+            "source_chat_ids": [
+                30,
+                31,
+                202,
+                203,
+                396,
+                397,
+                776,
+                777
+            ],
+            "rubric": [
+                "LLM response should state: 9 total weekly workout sessions",
+                "LLM response should state: 4 strength training days",
+                "LLM response should state: 2 HIIT sessions",
+                "LLM response should state: 3 cycling sessions"
+            ]
+        },
+        {
+            "question": "Given my logged workouts, rising average workout heart rate, resting heart rate drop, and current fitness level, how should I balance training intensity to avoid burnout while maintaining progress?",
+            "answer": "You should balance your training by monitoring your rising workout heart rate as a sign of increased intensity or efficiency, using your lowered resting heart rate as an indicator of improved fitness, and adjusting workout frequency and recovery to prevent burnout despite exceeding planned sessions.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Logged workouts exceeding plan and risk of burnout",
+                "Rising average workout heart rate and its meaning",
+                "Resting heart rate drop significance",
+                "Current fitness level with resting heart rate",
+                "Workout logging and exceeding plans"
+            ],
+            "reasoning_steps": [
+                "Identify that the user has logged more workouts than planned, increasing risk of burnout.",
+                "Recognize the rising average workout heart rate could indicate increased workout intensity or cardiovascular efficiency.",
+                "Note the drop in resting heart rate reflects improved cardiovascular fitness and recovery capacity.",
+                "Combine these heart rate trends with the user's workout volume to assess training load and recovery balance.",
+                "Conclude that to maintain progress and avoid burnout, the user should adjust training intensity and frequency based on heart rate data and recovery status."
+            ],
+            "source_chat_ids": [
+                996,
+                1008,
+                204,
+                208,
+                408,
+                422,
+                1210
+            ],
+            "rubric": [
+                "LLM response should state: balance your training by monitoring your rising workout heart rate as a sign of increased intensity or efficiency",
+                "LLM response should state: use your lowered resting heart rate as an indicator of improved fitness",
+                "LLM response should state: adjust workout frequency and recovery to prevent burnout despite exceeding planned sessions"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking to add some cardio activities to my routine. What options would you suggest?",
+            "preference_being_tested": "I prefer trail running over treadmill because of fresh air and varied terrain.",
+            "expected_compliance": "Response should recommend cardio activities that align with outdoor, varied environments rather than indoor or monotonous options, reflecting the user's preference for trail running characteristics.",
+            "compliance_indicators": [
+                "suggests outdoor cardio activities",
+                "mentions varied terrain or natural settings",
+                "avoids recommending treadmill or indoor-only exercises"
+            ],
+            "non_compliance_signs": [
+                "only recommends treadmill or indoor cardio",
+                "ignores outdoor or terrain variety aspects",
+                "suggests monotonous or stationary cardio options"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity environment and experience",
+            "source_chat_ids": [
+                296,
+                304
+            ],
+            "rubric": [
+                "LLM response should contain: suggests outdoor cardio activities",
+                "LLM response should contain: mentions varied terrain or natural settings",
+                "LLM response should: avoids recommending treadmill or indoor-only exercises"
+            ]
+        },
+        {
+            "question": "Can you help me plan my workout schedule for a typical day?",
+            "preference_being_tested": "I prefer strength training in the morning and cardio in the evening for energy balance.",
+            "expected_compliance": "Response should suggest a workout schedule that includes strength training in the morning and cardio in the evening, reflecting the user's stated preference.",
+            "compliance_indicators": [
+                "recommends strength training sessions in the morning",
+                "includes cardio workouts in the evening",
+                "structures the day to separate strength and cardio activities accordingly"
+            ],
+            "non_compliance_signs": [
+                "suggests cardio in the morning and strength training in the evening",
+                "recommends mixing strength and cardio at the same time",
+                "ignores time-of-day distinctions in workout types"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time-based workout routine",
+            "source_chat_ids": [
+                466,
+                474
+            ],
+            "rubric": [
+                "LLM response should contain: recommends strength training sessions in the morning",
+                "LLM response should contain: includes cardio workouts in the evening",
+                "LLM response should: structures the day to separate strength and cardio activities accordingly"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my approach to managing nutrition and fitness has developed over our conversations?",
+            "ideal_summary": "Over the course of our discussions, your approach to managing nutrition and fitness has evolved through several key stages. Initially, you sought guidance on achieving a balanced macronutrient ratio of 40% carbohydrates, 30% protein, and 30% fats, with detailed food recommendations and sample meal plans provided to meet these targets. You then explored specific sources for each macronutrient, including complex carbohydrates, lean proteins, and healthy fats, along with practical meal ideas and portion control tips. As your understanding deepened, you incorporated tools like MyFitnessPal to log daily intake, monitor progress, and adjust macronutrient goals weekly, integrating this with your workout routine to balance calorie needs for strength and endurance. Additionally, you began tracking physical activity metrics such as step counts and heart rate data to optimize training intensity and recovery. Throughout, you received advice on hydration, sleep quality, and injury prevention, all contributing to a more holistic and informed fitness strategy that balances nutrition, exercise, recovery, and monitoring for sustained progress.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                29,
+                37,
+                39,
+                41,
+                155,
+                161,
+                333,
+                339,
+                343,
+                409,
+                423,
+                603,
+                611,
+                615,
+                733,
+                739,
+                747,
+                787,
+                793,
+                801,
+                809,
+                889,
+                897,
+                899,
+                1097,
+                1103,
+                1111
+            ],
+            "key_elements_tested": [
+                "nutrition planning",
+                "macronutrient sourcing",
+                "tracking and adjustment",
+                "integration with fitness routines",
+                "holistic health considerations"
+            ],
+            "synthesis_required": "Combining detailed nutritional guidance, tracking methods, fitness integration, and recovery strategies into a coherent developmental narrative",
+            "source_chat_ids": [
+                29,
+                37,
+                39,
+                41,
+                155,
+                161,
+                333,
+                339,
+                343,
+                409,
+                423,
+                603,
+                611,
+                615,
+                733,
+                739,
+                747,
+                787,
+                793,
+                801,
+                809,
+                889,
+                897,
+                899,
+                1097,
+                1103,
+                1111
+            ],
+            "rubric": [
+                "LLM response should contain: Initially, you sought guidance on achieving a balanced macronutrient ratio of 40% carbohydrates, 30% protein, and 30% fats",
+                "LLM response should contain: You then explored specific sources for each macronutrient, including complex carbohydrates, lean proteins, and healthy fats, along with practical meal ideas and portion control tips",
+                "LLM response should contain: you incorporated tools like MyFitnessPal to log daily intake, monitor progress, and adjust macronutrient goals weekly, integrating this with your workout routine to balance calorie needs",
+                "LLM response should contain: you began tracking physical activity metrics such as step counts and heart rate data to optimize training intensity and recovery",
+                "LLM response should contain: you received advice on hydration, sleep quality, and injury prevention, all contributing to a more holistic and informed fitness strategy"
+            ]
+        },
+        {
+            "question": "Can you summarize how my experience with motivation, routine consistency, and resilience has developed over time through my fitness journey?",
+            "ideal_summary": "Your fitness journey has shown a clear progression in motivation, routine consistency, and resilience. Initially, joining supportive communities like the North Ericshire Runners helped you find motivation through social engagement, advice, and accountability. As you committed to a no-skipped-workouts rule, you built discipline and saw improvements in physical and mental health, which further reinforced your consistency. Incorporating self-reflection practices enhanced your awareness of progress, mood stability, and energy levels, allowing you to adjust your routines mindfully. Overcoming injury setbacks strengthened your patience and adaptability, fostering resilience that you now use to manage challenges proactively. Throughout this journey, you have developed a balanced approach that integrates goal-setting, mindfulness, community support, and flexibility, enabling sustainable progress and a positive mindset toward long-term fitness and well-being.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                158,
+                164,
+                168,
+                348,
+                356,
+                538,
+                544,
+                548,
+                736,
+                742,
+                749,
+                928,
+                934,
+                940,
+                1138,
+                1144,
+                1150,
+                1326,
+                1332,
+                1514,
+                1521,
+                1527,
+                1708,
+                1722,
+                1898,
+                1905,
+                1911
+            ],
+            "key_elements_tested": [
+                "motivation evolution",
+                "routine consistency",
+                "resilience development",
+                "self-reflection impact",
+                "injury recovery",
+                "community support",
+                "mental and physical health progression"
+            ],
+            "synthesis_required": "Integrating multiple facets of motivation, routine adherence, resilience, and self-reflection into a coherent narrative showing growth and adaptation over time",
+            "source_chat_ids": [
+                158,
+                164,
+                168,
+                348,
+                356,
+                538,
+                544,
+                548,
+                736,
+                742,
+                749,
+                928,
+                934,
+                940,
+                1138,
+                1144,
+                1150,
+                1326,
+                1332,
+                1514,
+                1521,
+                1527,
+                1708,
+                1722,
+                1898,
+                1905,
+                1911
+            ],
+            "rubric": [
+                "LLM response should contain: Your fitness journey has shown a clear progression in motivation, routine consistency, and resilience",
+                "LLM response should contain: joining supportive communities like the North Ericshire Runners helped you find motivation through social engagement, advice, and accountability",
+                "LLM response should contain: As you committed to a no-skipped-workouts rule, you built discipline and saw improvements in physical and mental health which further reinforced your consistency",
+                "LLM response should contain: Incorporating self-reflection practices enhanced your awareness of progress, mood stability, and energy levels, allowing you to adjust your routines mindfully",
+                "LLM response should contain: Overcoming injury setbacks strengthened your patience and adaptability, fostering resilience that you now use to manage challenges proactively",
+                "LLM response should contain: Throughout this journey, you have developed a balanced approach that integrates goal-setting, mindfulness, community support, and flexibility"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after my health screening did I have to decline the social event to complete my workout?",
+            "answer": "The social event I declined on April 6 happened 22 days after my health screening on March 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15: health screening",
+                "April 6: declined social event for workout"
+            ],
+            "conversation_references": [
+                "Session 1: health screening scheduling and details",
+                "Session 2: declining social event on April 6"
+            ],
+            "calculation_required": "April 6 - March 15 = 22 days",
+            "source_chat_ids": {
+                "first_event": [
+                    82,
+                    92,
+                    94
+                ],
+                "second_event": [
+                    220,
+                    226,
+                    232
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 22 days",
+                "LLM response should state: from March 15 till April 6"
+            ]
+        },
+        {
+            "question": "How many days passed between when Doctor John gave me medical clearance and when I had to choose between my 3 PM meeting and 5 PM strength session?",
+            "answer": "About 50 days passed between receiving medical clearance from Doctor John on March 20 and the meeting and strength session on May 9.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 20: medical clearance from Doctor John",
+                "May 9: meeting and strength session"
+            ],
+            "conversation_references": [
+                "Session 2: Medical clearance date",
+                "Session 4: Meeting and strength session timing"
+            ],
+            "calculation_required": "May 9 - March 20 = 50 days",
+            "source_chat_ids": {
+                "first_event": [
+                    88
+                ],
+                "second_event": [
+                    412,
+                    420
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 50 days",
+                "LLM response should state: from March 20 till May 9"
+            ]
+        }
+    ]
+}

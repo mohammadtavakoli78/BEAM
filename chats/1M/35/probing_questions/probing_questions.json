@@ -1,0 +1,641 @@
+{
+    "abstention": [
+        {
+            "question": "How did Patricia feel about managing the music playlist throughout the event?",
+            "ideal_response": "Based on the provided chat, there is no information related to Patricia\u2019s feelings about managing the music playlist.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Patricia\u2019s role is described but her emotional response or feelings are not provided.",
+            "plan_reference": "Multiple batches mention Patricia managing music but no feelings described.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Patricia\u2019s feelings about managing the music playlist"
+            ]
+        },
+        {
+            "question": "Can you share the playlist of the 'Cozy Christmas Classics' I considered for the event?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed song list of the 'Cozy Christmas Classics' playlist.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Playlist is mentioned but no full song list or details are provided.",
+            "plan_reference": "Batch 1, Bullet 22 mentions the playlist but no song details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed song list of the 'Cozy Christmas Classics' playlist"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I met Nicolas before and do I know him personally?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have known Nicolas for many years and met him before, but you also mentioned that you've never met him and don't know him personally. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Familiarity with Nicolas",
+            "conversation_references": [
+                "Session 8: Known Nicolas for 15 years",
+                "Session 214: Never met Nicolas before"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    8
+                ],
+                "second_statement": [
+                    214
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have known Nicolas for many years and met him before",
+                "LLM response should mention: you also mentioned that you've never met him and don't know him personally",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever delegated any tasks to Patricia or Steven for event planning?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never delegated any tasks to Patricia or Steven for the event, but you also talked about involving them and checking in on their progress. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Delegation of event planning tasks to Patricia and Steven",
+            "conversation_references": [
+                "Session 4: Involving Patricia and Steven",
+                "Session 5: Never delegated tasks"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    440,
+                    442
+                ],
+                "second_statement": [
+                    440
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never delegated any tasks to Patricia or Steven",
+                "LLM response should mention: you also talked about involving them and checking in on their progress",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of the holiday celebration evolve throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your focus on the holiday celebration evolved in this sequence: 1) Collaborating with a family member on event planning, 2) Discussing the Secret Santa gift exchange and budget concerns, 3) Planning details about serving and sharing baklava including quantity and timing, 4) Introducing a moment of silence to honor family members and explaining it to children, 5) Preparing for a rehearsal dinner with storytelling and festive activities, 6) Organizing a structured storytelling session with time management and atmosphere considerations, 7) Reflecting on serving traditional foods and passing down cultural traditions during the holiday. Each of these aspects was brought up progressively across different conversations, showing a layered development of your holiday plans and traditions.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Session 30: Family collaboration on event planning",
+                "Sessions 32, 42: Secret Santa gift exchange and budget",
+                "Sessions 354, 356, 376, 558, 562, 568: Baklava serving and quantity",
+                "Sessions 766, 774, 776, 778, 788: Moment of silence and explanation",
+                "Sessions 980, 992, 994, 996: Rehearsal dinner and storytelling",
+                "Sessions 1182, 1188, 1194, 1404, 1416, 1620: Storytelling session management",
+                "Sessions 1790, 1796, 1800: Traditional foods and cultural traditions"
+            ],
+            "ordering_tested": [
+                "1st: Family collaboration",
+                "2nd: Secret Santa and budget",
+                "3rd: Baklava details",
+                "4th: Moment of silence",
+                "5th: Rehearsal dinner preparation",
+                "6th: Storytelling session organization",
+                "7th: Traditional foods and cultural heritage"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related topics",
+                "spans many conversation sessions",
+                "involves layered thematic development",
+                "requires sophisticated sequence reconstruction",
+                "tests ability to integrate diverse mentions into a coherent order"
+            ],
+            "source_chat_ids": [
+                30,
+                32,
+                42,
+                354,
+                356,
+                376,
+                558,
+                562,
+                568,
+                766,
+                774,
+                776,
+                778,
+                788,
+                980,
+                992,
+                994,
+                996,
+                1182,
+                1188,
+                1194,
+                1404,
+                1416,
+                1620,
+                1790,
+                1796,
+                1800
+            ],
+            "rubric": [
+                "Family collaboration",
+                "Secret Santa and budget",
+                "Baklava details",
+                "Moment of silence",
+                "Rehearsal dinner preparation",
+                "Storytelling session organization",
+                "Traditional foods and cultural heritage"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different themes and elements related to my holiday dinner planning throughout our chats, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned the topics in this order: 1) Choosing between two main themes and deciding by a certain date, 2) Leaning towards one theme and discussing its cozy, natural feel, 3) Asking for tips on incorporating that theme into the dinner decor, 4) Discussing natural elements to complement the chosen theme, 5) Balancing natural elements with festive lighting, 6) Introducing a special segment for sharing holiday memories and seeking ways to encourage engagement, 7) Addressing conflicting opinions on music and deciding on a dress code, 8) Planning respectful moments like a moment of silence and enhancing ambiance with candles and LED lights, 9) Managing decoration details such as additional wreaths and fresh pine branches, 10) Considering safety and ambiance with candle lighting and LED adjustments.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 70, 84, 72, 78",
+                "Session 72",
+                "Session 78",
+                "Session 274, 280, 286",
+                "Session 286",
+                "Session 496, 498, 500, 510",
+                "Session 664, 672, 680",
+                "Session 880, 904, 912",
+                "Session 1084, 1122, 1132, 1134, 1330, 1336, 1340, 1342",
+                "Session 1546, 1550, 1558"
+            ],
+            "ordering_tested": [
+                "1st: Theme choice and deadline",
+                "2nd: Preference for cozy, natural theme",
+                "3rd: Tips for theme decor",
+                "4th: Natural elements incorporation",
+                "5th: Balancing natural elements with lighting",
+                "6th: Holiday memory sharing segment",
+                "7th: Music conflicts and dress code",
+                "8th: Moment of silence and ambiance with candles",
+                "9th: Decoration details with wreaths and pine branches",
+                "10th: Candle safety and lighting ambiance"
+            ],
+            "source_chat_ids": [
+                70,
+                84,
+                72,
+                78,
+                274,
+                280,
+                286,
+                496,
+                498,
+                500,
+                510,
+                664,
+                672,
+                680,
+                880,
+                904,
+                912,
+                1084,
+                1122,
+                1132,
+                1134,
+                1330,
+                1336,
+                1340,
+                1342,
+                1546,
+                1550,
+                1558
+            ],
+            "rubric": [
+                "Theme choice and deadline",
+                "Preference for cozy, natural theme",
+                "Tips for theme decor",
+                "Natural elements incorporation",
+                "Balancing natural elements with lighting",
+                "Holiday memory sharing segment",
+                "Music conflicts and dress code",
+                "Moment of silence and ambiance with candles",
+                "Decoration details with wreaths and pine branches",
+                "Candle safety and lighting ambiance"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much of my total budget did I set aside for unexpected expenses?",
+            "answer": "You reserved $200 for unexpected expenses out of the $600 total budget.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 6: USER mentions having $200 reserved for unexpected expenses.",
+            "key_facts_tested": [
+                "amount reserved for unexpected expenses",
+                "portion of total budget"
+            ],
+            "source_chat_ids": [
+                96,
+                106
+            ],
+            "rubric": [
+                "LLM response should state: $200"
+            ]
+        },
+        {
+            "question": "How did I decide to allocate the lighting sets to different areas in my home to enhance the atmosphere for my themed dinner party?",
+            "answer": "You planned to use the three sets of lights by distributing them across key areas: one set hung overhead in the dining room for ambient glow, another draped around the dining table edges for intimacy, and the third wrapped around the mantel in the living room, with additional use on bookshelves and outside near the front door and pathway to create a cohesive warm atmosphere.",
+            "difficulty": "hard",
+            "question_type": "Context-Based Recall",
+            "conversation_reference": "Multiple turns: Suggestions on placement and example setups across dining room, living room, and entryway",
+            "key_facts_tested": [
+                "number of lighting sets: three",
+                "distribution: dining room ceiling, dining table edges, mantel",
+                "additional placements: bookshelves, front door, pathway",
+                "overall goal: creating warm, inviting ambiance for themed dinner"
+            ],
+            "extraction_challenge": "LLM must synthesize placement recommendations and example setups scattered across multiple assistant responses to explain how the lighting sets were allocated to different home areas for ambiance",
+            "source_chat_ids": [
+                279,
+                285,
+                291
+            ],
+            "rubric": [
+                "LLM response should state: planned to use the three sets of lights by distributing them across key areas",
+                "LLM response should state: one set hung overhead in the dining room for ambient glow",
+                "LLM response should state: another draped around the dining table edges for intimacy",
+                "LLM response should state: the third wrapped around the mantel in the living room, with additional use on bookshelves and outside near the front door and pathway"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I expect after the event wraps up?",
+            "instruction_being_tested": "Always confirm cleanup schedules when I ask about post-event activities.",
+            "expected_compliance": "Response should include a clear confirmation of the timing and details related to the cleanup process following the event.",
+            "compliance_indicators": [
+                "confirmation of cleanup timing",
+                "details about cleanup arrangements",
+                "explicit mention of cleanup plans after the event"
+            ],
+            "non_compliance_signs": [
+                "no mention of cleanup timing",
+                "vague or missing cleanup details",
+                "ignoring cleanup aspects entirely"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                1906
+            ],
+            "rubric": [
+                "LLM response should contain: confirmation of cleanup timing",
+                "LLM response should contain: explicit mention of cleanup plans after the event"
+            ]
+        },
+        {
+            "question": "What are your thoughts on how the event went?",
+            "instruction_being_tested": "Always include future planning details when I ask about event evaluations.",
+            "expected_compliance": "Response should include considerations or suggestions related to upcoming steps or plans following the event evaluation.",
+            "compliance_indicators": [
+                "mentions of next steps",
+                "ideas for future improvements",
+                "plans related to upcoming events",
+                "suggestions for what to do moving forward"
+            ],
+            "non_compliance_signs": [
+                "only feedback on past event",
+                "no mention of anything beyond the event itself",
+                "lack of any forward-looking comments"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                2112
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of next steps",
+                "LLM response should contain: plans related to upcoming events"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the deadline for completing gift purchases?",
+            "answer": "The deadline for gift purchases is December 17th.",
+            "difficulty": "easy",
+            "update_type": "deadline_extension",
+            "tests_retention_of": "extended gift buying deadline",
+            "conversation_references": [
+                "Goals & Progress Labels: Task Management: Patricia managing music, Steven handling gift exchange, Jordan coordinating vegan dishes.",
+                "Information Update: The gift buying deadline was extended by a week, allowing purchases up to December 17th to accommodate busy schedules."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original earlier deadline instead of the extended December 17th deadline",
+            "source_chat_ids": {
+                "original_info": [
+                    316,
+                    326
+                ],
+                "updated_info": [
+                    436
+                ]
+            },
+            "rubric": [
+                "LLM response should state: December 17th"
+            ]
+        },
+        {
+            "question": "What is the estimated total cost for the groceries I need to order from Migros?",
+            "answer": "$375, reflecting the inclusion of a few additional specialty items",
+            "difficulty": "easy",
+            "update_type": "cost_increase",
+            "tests_retention_of": "updated estimated grocery cost",
+            "conversation_references": [
+                "Planning & Logistics Labels: Supply Management: Need to order groceries from Migros by December 15th; estimated cost $350.",
+                "Information Update: The estimated grocery cost from Migros has slightly increased, reflecting a few additional specialty items now expected to total around $375."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original estimated cost of $350 instead of the updated $375",
+            "source_chat_ids": {
+                "original_info": [
+                    112,
+                    118,
+                    126
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should state: $375"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many guests am I planning for at the Christmas Eve dinner, and what budget should everyone stick to for the Secret Santa gifts?",
+            "answer": "You are planning for 15 guests, and the Secret Santa gift budget is $30 per person.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 30",
+                "chat_id: 32"
+            ],
+            "reasoning_steps": [
+                "Identify the number of guests planned for the Christmas Eve dinner from the event planning details.",
+                "Recall the budget limit set for the Secret Santa gift exchange.",
+                "Combine these two pieces of information to answer the question."
+            ],
+            "source_chat_ids": [
+                30,
+                32
+            ],
+            "rubric": [
+                "LLM response should state: 15 guests",
+                "LLM response should state: $30 per person"
+            ]
+        },
+        {
+            "question": "How many different event activities or tasks have I asked about scheduling or timing for?",
+            "answer": "Five activities or tasks: expense tracking, gift buying deadline, photo booth setup, gift wrapping session, and rehearsal dinner schedule.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "expense tracking with Splitwise",
+                "gift buying deadline and gift wrapping session",
+                "photo booth setup and rehearsal dinner schedule"
+            ],
+            "reasoning_steps": [
+                "Identify each unique event activity or task mentioned in user requests about scheduling or timing.",
+                "Count the distinct activities: expense tracking, gift buying, photo booth setup, gift wrapping, rehearsal dinner.",
+                "Sum these to find the total number of different activities or tasks."
+            ],
+            "source_chat_ids": [
+                190,
+                436,
+                646,
+                854,
+                1068
+            ],
+            "rubric": [
+                "LLM response should state: Five activities",
+                "LLM response should state: expense tracking",
+                "LLM response should state: gift buying deadline",
+                "LLM response should state: photo booth setup",
+                "LLM response should state: gift wrapping session",
+                "LLM response should state: rehearsal dinner schedule"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "What steps would you suggest I take to prepare the activities planned for my event?",
+            "preference_being_tested": "I prefer to rehearse activities like trivia and karaoke to ensure smooth flow during the event.",
+            "expected_compliance": "Response should include or emphasize rehearsing activities such as trivia and karaoke as part of the preparation process to ensure smooth execution.",
+            "compliance_indicators": [
+                "mentions rehearsing activities",
+                "includes trivia and karaoke as examples",
+                "suggests practice or run-throughs before the event",
+                "focuses on preparation methods that involve rehearsal"
+            ],
+            "non_compliance_signs": [
+                "ignores rehearsal or practice steps",
+                "does not mention trivia or karaoke",
+                "focuses only on other types of preparation",
+                "suggests skipping rehearsals entirely"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity preparation",
+            "source_chat_ids": [
+                1028,
+                1034,
+                1046
+            ],
+            "rubric": [
+                "LLM response should contain: mentions rehearsing activities",
+                "LLM response should contain: includes trivia and karaoke as examples",
+                "LLM response should contain: focuses on preparation methods that involve rehearsal"
+            ]
+        },
+        {
+            "question": "How can I organize the tasks for preparing the main course and setting up the decorations to keep everything running smoothly?",
+            "preference_being_tested": "I prefer a hands-on approach, so I will personally prepare the main course and oversee decoration setup.",
+            "expected_compliance": "Response should support the user taking direct responsibility for the main course preparation and decoration setup, offering advice that enables hands-on involvement rather than delegating these tasks entirely.",
+            "compliance_indicators": [
+                "suggests ways for the user to manage or oversee tasks personally",
+                "offers tips for organizing or coordinating without fully outsourcing",
+                "acknowledges user's active role in preparation and setup"
+            ],
+            "non_compliance_signs": [
+                "recommends fully delegating main course preparation or decoration setup",
+                "ignores user's involvement and suggests hiring external help without consideration",
+                "provides advice that sidelines user's direct participation"
+            ],
+            "difficulty": "medium",
+            "preference_type": "involvement_style",
+            "source_chat_ids": [
+                194,
+                202,
+                204
+            ],
+            "rubric": [
+                "LLM response should contain: suggests ways for the user to manage or oversee tasks personally",
+                "LLM response should contain: offers tips for organizing or coordinating without fully outsourcing"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed and comprehensive summary of all the planning, coordination, and key moments involved in preparing and executing the Christmas Eve dinner and related holiday activities, capturing how various elements and participants contributed to making the event meaningful and enjoyable?",
+            "ideal_summary": "The Christmas Eve dinner and associated holiday activities were meticulously planned and executed through coordinated efforts involving multiple participants and thoughtful integration of traditions, logistics, and engagement strategies. Central to the event was the collaboration with trusted individuals like Christopher for event planning and Jay for guest reception and photo booth setup, ensuring smooth operations and personal touches. The incorporation of the mother\u2019s handwritten recipe book, especially the spiced lamb marinade, served as a heartfelt tribute, blending culinary tradition with family storytelling to honor legacy and foster emotional connection. The Secret Santa gift exchange was carefully structured with clear budget guidelines, creative gift ideas, and inclusive participation strategies to deepen family bonds and accommodate varying levels of enthusiasm. To enhance guest experience, activities such as storytelling circles, trivia games, and interactive photo booth sessions were interwoven with warm, cozy atmospheres created through lighting, decor, and music. The event timeline was managed with precise scheduling and communication, including staggered guest arrivals greeted by Jay, and thoughtful sequencing of reveals like the children\u2019s personalized ornaments after the main course. Throughout, attention was given to balancing excitement with stress management by delegating tasks and allowing for breaks. The integration of cherished family memories via slideshows and shared stories further enriched the gathering, while strategies to handle potential conflicts and ensure inclusivity maintained a harmonious environment. Overall, the event combined logistical precision, emotional depth, and creative engagement to deliver a memorable, meaningful holiday celebration that honored family heritage and strengthened relationships.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 9,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "emotional and cultural integration"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                31,
+                33,
+                43,
+                253,
+                265,
+                469,
+                477,
+                663,
+                675,
+                679,
+                683,
+                687,
+                874,
+                887,
+                895,
+                1083,
+                1103,
+                1111,
+                1119,
+                1313,
+                1319,
+                1323,
+                1527,
+                1531,
+                1729,
+                1743,
+                1745,
+                1933,
+                1941
+            ],
+            "rubric": [
+                "LLM response should contain: Christmas Eve dinner and associated holiday activities were meticulously planned and executed through coordinated efforts involving multiple participants and thoughtful integration of traditions",
+                "LLM response should contain: Central to the event was the collaboration with trusted individuals like Christopher for event planning and Jay for guest reception and photo booth setup",
+                "LLM response should contain: The incorporation of the mother\u2019s handwritten recipe book, especially the spiced lamb marinade, served as a heartfelt tribute",
+                "LLM response should contain: blending culinary tradition with family storytelling to honor legacy and foster emotional connection",
+                "LLM response should contain: The Secret Santa gift exchange was carefully structured with clear budget guidelines, creative gift ideas, and inclusive participation strategies to deepen family bonds",
+                "LLM response should contain: activities such as storytelling circles, trivia games, and interactive photo booth sessions were interwoven with warm, cozy atmospheres created through lighting, decor, and music",
+                "LLM response should contain: The event timeline was managed with precise scheduling and communication, including staggered guest arrivals greeted by Jay, and thoughtful sequencing of reveals like the children\u2019s personalized ornaments",
+                "LLM response should contain: attention was given to balancing excitement with stress management by delegating tasks and allowing for breaks"
+            ]
+        },
+        {
+            "question": "Can you give me a complete summary of how the music and event planning for the Christmas Eve dinner evolved throughout our discussions?",
+            "ideal_summary": "The planning for the Christmas Eve dinner music and event coordination developed progressively over several conversations. Initially, a detailed schedule was established to manage dinner, games, gift exchange, and other activities with specific timing and roles to keep the event running smoothly. Concerns about the length and composition of the music playlist led to recommendations for trimming and balancing jazz and classic carols, incorporating interactive elements like karaoke and sing-alongs to maintain engagement. Strategies were provided for mixing classic and modern holiday songs, ensuring smooth transitions and pacing throughout the evening. The role of Patricia as the music coordinator was emphasized, including managing volume levels to suit different event phases and ensuring the playlist complemented the schedule without being intrusive. Finally, ideas for maintaining a festive atmosphere during cleanup and engaging guests of all ages were introduced, rounding out a comprehensive approach to creating a joyful and well-organized Christmas Eve celebration.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                95,
+                105,
+                335,
+                749,
+                1393
+            ],
+            "key_elements_tested": [
+                "event scheduling",
+                "music playlist management",
+                "interactive elements",
+                "volume control",
+                "guest engagement"
+            ],
+            "synthesis_required": "Integrating event planning, music curation, and guest experience strategies into a coherent narrative showing development and coordination",
+            "source_chat_ids": [
+                95,
+                105,
+                335,
+                749,
+                1393
+            ],
+            "rubric": [
+                "LLM response should contain: a detailed schedule was established to manage dinner, games, gift exchange, and other activities with specific timing and roles",
+                "LLM response should contain: Concerns about the length and composition of the music playlist led to recommendations for trimming and balancing jazz and classic carols",
+                "LLM response should contain: Strategies were provided for mixing classic and modern holiday songs, ensuring smooth transitions and pacing throughout the evening",
+                "LLM response should contain: The role of Patricia as the music coordinator was emphasized, including managing volume levels to suit different event phases and ensuring the playlist complemented the schedule without being intrusive",
+                "LLM response should contain: ideas for maintaining a festive atmosphere during cleanup and engaging guests of all ages were introduced"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when Patricia and I finalized the photo booth setup and the final decoration session with helpers?",
+            "answer": "10 days passed between finalizing the photo booth setup on December 13th and the final decoration session on December 23rd.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "December 13th: photo booth setup finalized",
+                "December 23rd: final decoration session"
+            ],
+            "conversation_references": [
+                "Session 1: Finalizing photo booth setup",
+                "Session 2: Final decoration session"
+            ],
+            "calculation_required": "December 23 - December 13 = 10 days",
+            "source_chat_ids": {
+                "first_event": [
+                    1094
+                ],
+                "second_event": [
+                    1142,
+                    1148,
+                    1154
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 10 days",
+                "LLM response should state: from December 13 till December 23"
+            ]
+        },
+        {
+            "question": "How many days before my Christmas Eve dinner did Jordan's rehearsal dinner take place?",
+            "answer": "Jordan's rehearsal dinner took place 6 days before my Christmas Eve dinner, since it was on December 18th and my dinner is on December 24th.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "December 18th: Jordan's rehearsal dinner",
+                "December 24th: my Christmas Eve dinner"
+            ],
+            "conversation_references": [
+                "Session 866",
+                "Session 868"
+            ],
+            "calculation_required": "December 24 - December 18 = 6 days",
+            "source_chat_ids": {
+                "first_event": [
+                    866
+                ],
+                "second_event": [
+                    868
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 6 days",
+                "LLM response should state: from December 18 till December 24"
+            ]
+        }
+    ]
+}

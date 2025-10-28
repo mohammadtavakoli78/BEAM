@@ -1,0 +1,567 @@
+{
+    "abstention": [
+        {
+            "question": "What were the main discussion points or decisions made during the sprint planning meeting on April 3, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussion points or decisions from the April 3, 2024 sprint planning meeting.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The sprint planning meeting is mentioned but no details about its content or outcomes are given.",
+            "plan_reference": "Batch 3, Bullet 22",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussion points or decisions from the April 3, 2024 sprint planning meeting."
+            ]
+        },
+        {
+            "question": "What are the specific criteria or factors that led to choosing APScheduler over raw cron jobs initially?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific criteria or factors behind choosing APScheduler over raw cron jobs.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Preference for APScheduler is stated but detailed reasoning or criteria are not provided.",
+            "plan_reference": "Batch 1, Bullets 5 and 27",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific criteria or factors behind choosing APScheduler over raw cron jobs."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever rotated my Twitter API keys or updated the related environment variables for my integration?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have rotated the Twitter API keys and updated the environment variables, but you also mentioned that you have never done so. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Twitter API key rotation and environment variable updates",
+            "conversation_references": [
+                "Session 322: Rotated keys and updated variables",
+                "Session 374: Never rotated keys or updated variables"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    322
+                ],
+                "second_statement": [
+                    374
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory",
+                "LLM response should state: you mentioned both that you have and have not rotated your Twitter API keys and updated the environment variables",
+                "LLM response should state: you also mentioned that you have never rotated your Twitter API keys or updated the environment variables",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I developed any hashtag generation tools using spaCy or other NLP libraries?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have developed a hashtag generator using spaCy v3.5.0, but you also mentioned that you have never developed any hashtag generation tools using spaCy or any NLP library. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Development of hashtag generation tools using spaCy or NLP libraries",
+            "conversation_references": [
+                "chat_id: 380",
+                "chat_id: 454"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    380
+                ],
+                "second_statement": [
+                    454
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory",
+                "LLM response should state: you mentioned both that you have and have not developed a hashtag generator using spaCy",
+                "LLM response should state: you also mentioned that you have never developed any hashtag generation tools using spaCy or any NLP library",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different challenges and solutions related to my social media API integrations and automation across our conversations, in order (mention 10 items)?",
+            "answer": "You mentioned these topics in this order: 1) Registering for the developer account and setting up API keys with Tweepy to post tweets, 2) Encountering and troubleshooting '403 Forbidden' errors related to media uploads and tweet creation limits, 3) Facing rate limit errors and discussing rate limiting strategies like token bucket algorithms, 4) Debugging 'Invalid media ID' errors during media uploads with Tweepy, 5) Optimizing database batch inserts for engagement data performance, 6) Handling intermittent connection reset errors with retry mechanisms and exponential backoff, 7) Implementing two-factor authentication and managing OAuth token issues, 8) Working on token refresh strategies for Instagram automation to avoid expired token errors, 9) Adjusting HTTP client timeout settings to fix timeout errors and improve performance, 10) Setting up and optimizing PagerDuty alerts for critical failures with response time goals.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id: 22",
+                "chat_id: 128",
+                "chat_id: 214",
+                "chat_id: 316",
+                "chat_id: 392",
+                "chat_id: 468",
+                "chat_id: 550",
+                "chat_id: 640",
+                "chat_id: 744",
+                "chat_id: 814"
+            ],
+            "ordering_tested": [
+                "1st: Developer account setup and posting tweets",
+                "2nd: 403 Forbidden errors with media uploads and tweet limits",
+                "3rd: Rate limit errors and token bucket algorithm",
+                "4th: Invalid media ID error debugging",
+                "5th: Batch insert optimization for engagement data",
+                "6th: Connection reset error handling with retries",
+                "7th: Two-factor authentication and OAuth token issues",
+                "8th: Token refresh for Instagram automation",
+                "9th: Timeout error and HTTP client timeout tuning",
+                "10th: PagerDuty alert setup and response time optimization"
+            ],
+            "source_chat_ids": [
+                22,
+                128,
+                214,
+                316,
+                392,
+                468,
+                550,
+                640,
+                744,
+                814
+            ],
+            "rubric": [
+                "LLM response should mention: Developer account setup and posting tweets",
+                "LLM response should mention: 403 Forbidden errors with media uploads and tweet limits",
+                "LLM response should mention: Rate limit errors and token bucket algorithm",
+                "LLM response should mention: Invalid media ID error debugging",
+                "LLM response should mention: Batch insert optimization for engagement data",
+                "LLM response should mention: Connection reset error handling with retries",
+                "LLM response should mention: Two-factor authentication and OAuth token issues",
+                "LLM response should mention: Token refresh for Instagram automation",
+                "LLM response should mention: Timeout error and HTTP client timeout tuning",
+                "LLM response should mention: PagerDuty alert setup and response time optimization"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my scheduling and automation projects throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these aspects in this order: 1) First, you discussed implementing a scheduling algorithm with priority and time windows, 2) Then you asked about adding posts dynamically while the scheduler is running, 3) Next, you brought up automating Instagram posts using the Instagram Graph API and handling rate limits, 4) After that, you talked about optimizing image processing with caching to improve performance, 5) Finally, you mentioned offloading image processing to AWS Lambda to reduce CPU spikes and further optimize scheduling.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 64: Scheduling algorithm with priority and time windows",
+                "Session 66: Adding posts dynamically to scheduler",
+                "Session 150: Instagram Graph API automation and rate limits",
+                "Session 344: Image processing optimization with caching",
+                "Session 574: Offloading image processing to AWS Lambda for scheduling optimization"
+            ],
+            "ordering_tested": [
+                "1st: Scheduling algorithm with priority and time windows",
+                "2nd: Adding posts dynamically to scheduler",
+                "3rd: Instagram Graph API automation and rate limits",
+                "4th: Image processing optimization with caching",
+                "5th: Offloading image processing to AWS Lambda for scheduling optimization"
+            ],
+            "source_chat_ids": [
+                64,
+                66,
+                150,
+                344,
+                574
+            ],
+            "rubric": [
+                "LLM response should mention: Scheduling algorithm with priority and time windows",
+                "LLM response should mention: Adding posts dynamically to scheduler",
+                "LLM response should mention: Instagram Graph API automation and rate limits",
+                "LLM response should mention: Image processing optimization with caching",
+                "LLM response should mention: Offloading image processing to AWS Lambda for scheduling optimization"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Which authentication method did I use for my integration, and which environment variables did I store securely?",
+            "answer": "I used OAuth 1.0a for authentication and stored the environment variables TWITTER_API_KEY and TWITTER_API_SECRET securely.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message describing the implementation",
+            "key_facts_tested": [
+                "authentication method",
+                "environment variables used",
+                "secure storage"
+            ],
+            "source_chat_ids": [
+                34
+            ],
+            "rubric": [
+                "LLM response should mention: OAuth 1.0a",
+                "LLM response should mention: TWITTER_API_KEY",
+                "LLM response should mention: TWITTER_API_SECRET"
+            ]
+        },
+        {
+            "question": "Which version of the Facebook SDK did I say I was using in my code example?",
+            "answer": "You mentioned using Facebook SDK version 3.1.0 in your code example.",
+            "difficulty": "medium",
+            "question_type": "version_recall",
+            "conversation_reference": "Turn 1: User's initial code example and description",
+            "key_facts_tested": [
+                "Facebook SDK version 3.1.0",
+                "code example detail"
+            ],
+            "source_chat_ids": [
+                126
+            ],
+            "rubric": [
+                "LLM response should mention: Facebook SDK version 3.1.0"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Which version of the Facebook API should I use in my Python code to ensure compatibility?",
+            "instruction_being_tested": "Always include exact API version numbers when I ask about integration details.",
+            "expected_compliance": "Response should specify the exact API version number relevant to the integration example or explanation.",
+            "compliance_indicators": [
+                "exact version number mentioned",
+                "specific version referenced in code or explanation",
+                "clear identification of API version"
+            ],
+            "non_compliance_signs": [
+                "no version number given",
+                "vague or general version references",
+                "omission of version details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                112,
+                114
+            ],
+            "rubric": [
+                "LLM response should mention: specific version referenced in code or explanation",
+                "LLM response should mention: clear identification of API version"
+            ]
+        },
+        {
+            "question": "Which libraries are included in the technology stack for this project?",
+            "instruction_being_tested": "Always include exact library versions when I ask about technology stacks.",
+            "expected_compliance": "Response should include the precise versions of each library mentioned in the technology stack.",
+            "compliance_indicators": [
+                "specific version numbers for each library",
+                "exact version details",
+                "clear version identification alongside library names"
+            ],
+            "non_compliance_signs": [
+                "only library names without versions",
+                "general description without version info",
+                "omission of version details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                452
+            ],
+            "rubric": [
+                "LLM response should mention: clear version identification alongside library names"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the deadline for completing the Instagram automation prototype sprint?",
+            "answer": "April 5, 2024",
+            "difficulty": "easy",
+            "update_type": "deadline_extension",
+            "tests_retention_of": "the adjusted sprint deadline for the Instagram automation prototype",
+            "conversation_references": [
+                "Set sprint deadline April 1, 2024, to complete Instagram automation prototype.",
+                "The Instagram automation prototype sprint deadline was adjusted to April 5, 2024, to allow additional testing of media upload features."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original April 1, 2024 deadline instead of the adjusted April 5, 2024 deadline",
+            "source_chat_ids": {
+                "original_info": [
+                    144
+                ],
+                "updated_info": [
+                    192,
+                    194
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: April 5, 2024"
+            ]
+        },
+        {
+            "question": "How many concurrent scheduled items can my scheduler handle to achieve improved throughput?",
+            "answer": "75 concurrent scheduled items with a 50% improvement in throughput",
+            "difficulty": "moderate",
+            "update_type": "capacity and performance enhancement",
+            "tests_retention_of": "maximum number of concurrent scheduled items supported and throughput improvement",
+            "conversation_references": [
+                "Added priority queue to scheduler to handle urgent posts, tested with 50 concurrent scheduled items.",
+                "The scheduler now supports handling up to 75 concurrent scheduled items, improving throughput by 50%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original capacity of 50 concurrent scheduled items instead of the updated 75",
+            "source_chat_ids": {
+                "original_info": [
+                    236
+                ],
+                "updated_info": [
+                    282
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 75 concurrent scheduled items",
+                "LLM response should mention: 50% improvement in throughput"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different Twitter API tasks have I mentioned trying to automate or debug across my sessions?",
+            "answer": "Four tasks: posting a tweet, uploading media before tweeting, handling rate limits, and fixing an invalid media ID error.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 4,
+            "conversation_references": [
+                "chat_id:22",
+                "chat_id:128",
+                "chat_id:214",
+                "chat_id:316"
+            ],
+            "reasoning_steps": [
+                "Identify the task mentioned in chat_id 22 about posting a tweet using Tweepy.",
+                "Note the media upload and tweet creation issue mentioned in chat_id 128.",
+                "Recognize the rate limit handling task described in chat_id 214.",
+                "Recall the invalid media ID error debugging in chat_id 316."
+            ],
+            "source_chat_ids": [
+                22,
+                128,
+                214,
+                316
+            ],
+            "rubric": [
+                "LLM response should mention: posting a tweet",
+                "LLM response should mention: uploading media before tweeting",
+                "LLM response should mention: handling rate limits",
+                "LLM response should mention: fixing an invalid media ID error"
+            ]
+        },
+        {
+            "question": "How many different social media platforms am I trying to integrate or post to across my projects?",
+            "answer": "Two platforms: Twitter and Facebook.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id:40",
+                "chat_id:142",
+                "chat_id:143"
+            ],
+            "reasoning_steps": [
+                "Identify the platforms mentioned in the first session where I integrate Twitter API and Facebook Graph API.",
+                "Confirm from the third session that I am working with Facebook posts using the facebook-sdk library.",
+                "Verify from the fourth session that Twitter is also included in the unified post scheduler."
+            ],
+            "source_chat_ids": [
+                40,
+                142,
+                143
+            ],
+            "rubric": [
+                "LLM response should mention: Twitter",
+                "LLM response should mention: Facebook"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm working on making multiple API requests to gather tweet metrics efficiently. How would you suggest structuring the code to handle these calls?",
+            "preference_being_tested": "I prefer using async Python libraries to maximize concurrency and reduce blocking in API calls.",
+            "expected_compliance": "Response should recommend approaches or libraries that enable concurrent or asynchronous API calls rather than synchronous or blocking methods, aligning with the user's preference for async Python solutions.",
+            "compliance_indicators": [
+                "suggests async libraries or frameworks",
+                "mentions concurrency or non-blocking calls",
+                "provides code examples using async/await",
+                "avoids recommending synchronous or blocking calls"
+            ],
+            "non_compliance_signs": [
+                "only suggests synchronous requests",
+                "ignores concurrency options",
+                "recommends blocking calls or libraries",
+                "does not mention async programming techniques"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                338
+            ],
+            "rubric": [
+                "LLM response should mention: suggests async libraries or frameworks",
+                "LLM response should mention: mentions concurrency or non-blocking calls"
+            ]
+        },
+        {
+            "question": "I'm building an app that needs to securely authenticate users without a backend server. How should I handle the token exchange process to keep it safe?",
+            "preference_being_tested": "I prefer OAuth 2.0 PKCE for secure token exchange in public clients.",
+            "expected_compliance": "Response should recommend using OAuth 2.0 PKCE or an equivalent secure method designed for public clients to handle token exchange, emphasizing security best practices for such scenarios.",
+            "compliance_indicators": [
+                "mentions OAuth 2.0 PKCE or similar secure flows",
+                "explains use of code_verifier and code_challenge",
+                "advises against exposing client secrets",
+                "focuses on public client security considerations"
+            ],
+            "non_compliance_signs": [
+                "recommends standard OAuth 2.0 without PKCE",
+                "suggests using client secrets in public clients",
+                "ignores secure token exchange methods",
+                "provides insecure or outdated token handling advice"
+            ],
+            "difficulty": "medium",
+            "preference_type": "security protocol choice",
+            "source_chat_ids": [
+                736,
+                738
+            ],
+            "rubric": [
+                "LLM response should mention: mentions OAuth 2.0 PKCE or similar secure flows"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how I developed and improved my social media automation project throughout our conversations?",
+            "ideal_summary": "Your social media automation project began with a basic Python script to schedule posts at optimal times using the schedule library. You sought improvements to include timing mechanisms and content strategies relevant to your role as a paramedic in Davistown, Palau, which led to enhanced code incorporating input validation and API integrations for Twitter and Facebook. Later, you explored more advanced scheduling options by switching to APScheduler, learning how to schedule posts at intervals and specific times, and how to handle errors and keep the scheduler running reliably. You also addressed authentication challenges with Twitter's API, moving from OAuth 1.0a to OAuth 2.0 bearer tokens, and discussed secure handling of credentials and token refresh strategies. Finally, you integrated posting functionalities into a unified, object-oriented interface for multiple platforms, adding robust error handling and logging to ensure reliable and maintainable automation. Throughout these stages, your project evolved from simple scheduling to a sophisticated, secure, and flexible social media automation system.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                8,
+                19,
+                23,
+                34,
+                40
+            ],
+            "key_elements_tested": [
+                "project evolution",
+                "technical enhancements",
+                "authentication handling",
+                "scheduling improvements",
+                "integration and error handling"
+            ],
+            "synthesis_required": "Combining technical development, authentication challenges, scheduling improvements, and integration into a coherent project narrative",
+            "source_chat_ids": [
+                8,
+                19,
+                23,
+                34,
+                40
+            ],
+            "rubric": [
+                "LLM response should mention: basic Python script to schedule posts at optimal times using the schedule library",
+                "LLM response should mention: improvements to include timing mechanisms and content strategies relevant to your role as a paramedic in Davistown, Palau, which led to enhanced code incorporating input validation and API integrations for Twitter and Facebook",
+                "LLM response should mention: switching to APScheduler, learning how to schedule posts at intervals and specific times, and how to handle errors and keep the scheduler running reliably",
+                "LLM response should mention: addressing authentication challenges with Twitter's API, moving from OAuth 1.0a to OAuth 2.0 bearer tokens, and discussed secure handling of credentials and token refresh strategies",
+                "LLM response should mention: integrating posting functionalities into a unified, object-oriented interface for multiple platforms, adding robust error handling and logging to ensure reliable and maintainable automation"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed summary of the entire process I went through, from the initial setup to the final implementation, covering all the challenges I faced, the solutions you suggested, and how the different components and tools were integrated and optimized throughout?",
+            "ideal_summary": "The summary should comprehensively cover the user's journey starting with scheduling social media posts using APScheduler and integrating it with the Facebook SDK, including improvements like switching to BackgroundScheduler, adding error handling, and logging. It should then address troubleshooting Twitter API integration issues such as the '403 Forbidden' error by verifying authentication, permissions, rate limits, and correct endpoint usage, along with example code for media uploads and tweet creation. The narrative should include managing Facebook Graph API rate limits by implementing batching and scheduling API calls with APScheduler to respect the 200 calls per hour limit, incorporating error handling and graceful shutdown. It should also cover renewing Facebook access tokens using the fb_exchange_token flow to resolve permissions errors, verifying token validity and permissions, and posting content with images. The summary must integrate the design of polymorphic classes to unify Twitter and Facebook posting interfaces, enabling platform-specific payload handling within a unified scheduler. Additionally, it should explain implementing OAuth 1.0a authentication for Twitter with secure token storage using Fernet encryption, paralleling the Facebook OAuth 2.0 flow. The narrative should include refining hashtag extraction with regex to comply with Twitter's rules, excluding special characters. Finally, it should describe refactoring synchronous Twitter posting code to asynchronous functions using asyncio, aiohttp, and asyncpg for database operations, integrating async scheduling with APScheduler, implementing retry mechanisms for failed posts, and handling failures with robust error logging and notification strategies. Throughout, the summary should weave these threads into a coherent story of progressive problem-solving, technical integration, optimization, and error management across multiple platforms and tools.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "cross-platform API integration"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                126,
+                127,
+                128,
+                129,
+                132,
+                133,
+                134,
+                138,
+                142,
+                143,
+                146,
+                147,
+                148,
+                154,
+                155,
+                158,
+                159,
+                160,
+                161,
+                163
+            ],
+            "rubric": [
+                "LLM response should mention: scheduling social media posts using APScheduler and integrating it with the Facebook SDK, including improvements like switching to BackgroundScheduler, adding error handling, and logging",
+                "LLM response should mention: troubleshooting Twitter API integration issues such as the '403 Forbidden' error by verifying authentication, permissions, rate limits, and correct endpoint usage, along with example code for media uploads and tweet creation",
+                "LLM response should mention: managing Facebook Graph API rate limits by implementing batching and scheduling API calls with APScheduler to respect the 200 calls per hour limit, incorporating error handling and graceful shutdown",
+                "LLM response should mention: renewing Facebook access tokens using the fb_exchange_token flow to resolve permissions errors, verifying token validity and permissions, and posting content with images",
+                "LLM response should mention: design of polymorphic classes to unify Twitter and Facebook posting interfaces, enabling platform-specific payload handling within a unified scheduler",
+                "LLM response should mention: implementing OAuth 1.0a authentication for Twitter with secure token storage using Fernet encryption, paralleling the Facebook OAuth 2.0 flow",
+                "LLM response should mention: refining hashtag extraction with regex to comply with Twitter's rules, excluding special characters",
+                "LLM response should mention: refactoring synchronous Twitter posting code to asynchronous functions using asyncio, aiohttp, and asyncpg for database operations, integrating async scheduling with APScheduler, implementing retry mechanisms for failed posts, and handling failures with robust error logging and notification strategies",
+                "LLM response should mention: weaving these threads into a coherent story of progressive problem-solving, technical integration, optimization, and error management across multiple platforms and tools"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "If my sprint was originally set to end on a specific date but I extended it by three days, how many total days will my sprint last now?",
+            "answer": "The original sprint was planned for 14 days ending on the specific date, so extending it by three days makes the total sprint duration 17 days.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Original sprint duration: 14 days ending on a specific date",
+                "Extension: 3 additional days added"
+            ],
+            "conversation_references": [
+                "Session 1: Sprint planning with explicit dates",
+                "Session 3: Sprint extension by three days"
+            ],
+            "calculation_required": "14 days + 3 days = 17 days total",
+            "source_chat_ids": {
+                "first_event": [
+                    30
+                ],
+                "second_event": [
+                    110
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 17 days total"
+            ]
+        },
+        {
+            "question": "How many days after I first encountered the 401 Unauthorized error did I see the Invalid or expired token error?",
+            "answer": "1 day elapsed between encountering the 401 Unauthorized error on March 2, 2024, and seeing the Invalid or expired token error on March 3, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 2, 2024: 401 Unauthorized error",
+                "March 3, 2024: Invalid or expired token error"
+            ],
+            "conversation_references": [
+                "Session 24: 401 Unauthorized error",
+                "Session 48: Invalid or expired token error"
+            ],
+            "calculation_required": "March 3, 2024 - March 2, 2024 = 1 day",
+            "source_chat_ids": {
+                "first_event": [
+                    24
+                ],
+                "second_event": [
+                    48
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 1 day"
+            ]
+        }
+    ]
+}

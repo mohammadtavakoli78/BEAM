@@ -1,0 +1,767 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Nicolas's professional background and current occupation?",
+            "ideal_response": "Based on the provided chat, there is no information related to Nicolas's professional background or current occupation.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Nicolas is mentioned as a longtime friend but no professional details are provided.",
+            "plan_reference": "BATCH 1 PLAN, Bullet 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Nicolas's professional background",
+                "Based on the provided chat, there is no information related to Nicolas's current occupation"
+            ]
+        },
+        {
+            "question": "What were the main reasons behind choosing dove gray over cream for the living room walls?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed reasoning behind choosing dove gray over cream for the living room walls.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The color choice and compromise are mentioned but not the detailed rationale.",
+            "plan_reference": "BATCH 1 PLAN, Bullet 23",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed reasoning behind choosing dove gray over cream"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Do I usually wear protective masks and gloves when doing insulation work?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never worn any protective masks or gloves during insulation work, but you also mentioned wearing respirator masks and gloves to prevent irritation. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "use of protective masks and gloves during insulation work",
+            "conversation_references": [
+                "Session 956: Never worn protective gear",
+                "Session 956: Wore respirator masks and gloves"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    784
+                ],
+                "second_statement": [
+                    956
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never worn any protective masks or gloves during insulation work",
+                "LLM response should mention: you also mentioned wearing respirator masks and gloves to prevent irritation",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Do I usually use ergonomic supports like kneeling pads when working on DIY projects?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used any ergonomic supports such as kneeling pads during DIY projects, but you also mentioned using a cushioned kneeling pad during shelf installation. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of ergonomic supports during DIY projects",
+            "conversation_references": [
+                "chat_id: 1380",
+                "chat_id: 1382"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    1296
+                ],
+                "second_statement": [
+                    1380
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never used any ergonomic supports such as kneeling pads during DIY projects",
+                "LLM response should mention: you also mentioned using a cushioned kneeling pad during shelf installation",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different types of home improvement projects develop throughout our conversations in order? Mention ONLY and ONLY twelve items.",
+            "answer": "Your focus on home improvement projects developed in this sequence: 1) Discussing general DIY projects suitable for couples, 2) Exploring home decor projects like shelving and furniture customization, 3) Considering low-impact painting projects, 4) Planning specific painting tasks including living room walls, 5) Addressing fixture updates with budget and scheduling concerns, 6) Moving on to insulation upgrades with safety and material considerations, 7) Focusing on kitchen faucet replacement and related tool preparation, 8) Planning bathroom shelf installation with budgeting and tool safety, 9) Handling kitchen cabinet hardware replacement with timing and budget focus, 10) Preparing for basic electrical fixes emphasizing safety and budgeting, 11) Discussing weatherization and smart thermostat options, 12) Wrapping up with holiday lighting installation planning and safety.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 12,
+            "conversation_references": [
+                "chat_id: 0, 2, 4",
+                "chat_id: 10, 12",
+                "chat_id: 26, 28",
+                "chat_id: 240, 242, 244",
+                "chat_id: 444, 446",
+                "chat_id: 726, 728, 732, 736",
+                "chat_id: 958, 960, 970",
+                "chat_id: 1172, 1176, 1180, 1182, 1188",
+                "chat_id: 1384, 1396, 1398",
+                "chat_id: 1582, 1584, 1588, 1590, 1592, 1594, 1596",
+                "chat_id: 1802, 1812, 1814, 1816",
+                "chat_id: 2008, 2010, 2014, 2016, 2020, 2022"
+            ],
+            "ordering_tested": [
+                "1st: General couple DIY projects",
+                "2nd: Home decor projects",
+                "3rd: Low-impact painting projects",
+                "4th: Specific painting tasks",
+                "5th: Fixture updates",
+                "6th: Insulation upgrades",
+                "7th: Kitchen faucet replacement",
+                "8th: Bathroom shelf installation",
+                "9th: Kitchen cabinet hardware replacement",
+                "10th: Basic electrical fixes",
+                "11th: Weatherization and smart thermostat considerations",
+                "12th: Holiday lighting installation"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves diverse project types",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across topics"
+            ],
+            "source_chat_ids": [
+                [
+                    0,
+                    2,
+                    4
+                ],
+                [
+                    10,
+                    12
+                ],
+                [
+                    26,
+                    28
+                ],
+                [
+                    240,
+                    242,
+                    244
+                ],
+                [
+                    444,
+                    446
+                ],
+                [
+                    726,
+                    728,
+                    732,
+                    736
+                ],
+                [
+                    958,
+                    960,
+                    970
+                ],
+                [
+                    1172,
+                    1176,
+                    1180,
+                    1182,
+                    1188
+                ],
+                [
+                    1384,
+                    1396,
+                    1398
+                ],
+                [
+                    1582,
+                    1584,
+                    1588,
+                    1590,
+                    1592,
+                    1594,
+                    1596
+                ],
+                [
+                    1802,
+                    1812,
+                    1814,
+                    1816
+                ],
+                [
+                    2008,
+                    2010,
+                    2014,
+                    2016,
+                    2020,
+                    2022
+                ]
+            ],
+            "rubric": [
+                "General couple DIY projects",
+                "Home decor projects",
+                "Low-impact painting projects",
+                "Specific painting tasks",
+                "Fixture updates",
+                "Insulation upgrades",
+                "Kitchen faucet replacement",
+                "Bathroom shelf installation",
+                "Kitchen cabinet hardware replacement",
+                "Basic electrical fixes",
+                "Weatherization and smart thermostat considerations",
+                "Holiday lighting installation"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my DIY projects and related recommendations throughout our conversations, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned aspects of your DIY projects and related recommendations in this order: 1) Introducing Nicolas and your initial uncertainty about involving him in your projects (chat_ids 40, 50), 2) Discussing improving wiring confidence and tutorials (chat_ids 292, 300, 308), 3) Planning and consulting with a plumber recommended by Nicolas (chat_ids 458, 530, 538, 550, 552, 554), 4) Considering insulation materials and installation advice linked to Nicolas's suggestions (chat_ids 786, 788, 796, 802, 804), 5) Evaluating durable kitchen faucet brands like Moen as suggested by Nicolas (chat_ids 1020, 1026, 1034), 6) Reflecting on Don's help with shelf installation (chat_ids 1226, 1238, 1240, 1242), 7) Deciding on IKEA handles recommended by Nicolas (chat_ids 1440, 1448, 1456), 8) Ensuring electrical safety with Legrand products recommended by Nicolas (chat_ids 1634, 1636, 1638, 1646, 1654, 1656), 9) Applying 3M products for durability as per Nicolas's advice (chat_ids 1860, 1866, 1872), and 10) Hanging lights safely and efficiently following Nicolas's suggestion (chat_ids 2060, 2068, 2070, 2076).",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 40, 50: Initial mention of Nicolas and DIY involvement",
+                "Session 292, 300, 308: Wiring confidence and tutorials",
+                "Session 458, 530, 538, 550, 552, 554: Plumber consultation and appreciation",
+                "Session 786, 788, 796, 802, 804: Insulation materials and installation",
+                "Session 1020, 1026, 1034: Kitchen faucet brand evaluation",
+                "Session 1226, 1238, 1240, 1242: Shelf installation help from Don",
+                "Session 1440, 1448, 1456: IKEA handles decision",
+                "Session 1634, 1636, 1638, 1646, 1654, 1656: Electrical safety with Legrand",
+                "Session 1860, 1866, 1872: Use of 3M products for durability",
+                "Session 2060, 2068, 2070, 2076: Hanging lights safely and quickly"
+            ],
+            "ordering_tested": [
+                "1st: Nicolas and DIY involvement",
+                "2nd: Wiring confidence and tutorials",
+                "3rd: Plumber consultation and appreciation",
+                "4th: Insulation materials and installation",
+                "5th: Kitchen faucet brand evaluation",
+                "6th: Shelf installation help",
+                "7th: IKEA handles decision",
+                "8th: Electrical safety with Legrand",
+                "9th: 3M products for durability",
+                "10th: Hanging lights safely"
+            ],
+            "source_chat_ids": [
+                [
+                    40,
+                    50
+                ],
+                [
+                    292,
+                    300,
+                    308
+                ],
+                [
+                    458,
+                    530,
+                    538,
+                    550,
+                    552,
+                    554
+                ],
+                [
+                    786,
+                    788,
+                    796,
+                    802,
+                    804
+                ],
+                [
+                    1020,
+                    1026,
+                    1034
+                ],
+                [
+                    1226,
+                    1238,
+                    1240,
+                    1242
+                ],
+                [
+                    1440,
+                    1448,
+                    1456
+                ],
+                [
+                    1634,
+                    1636,
+                    1638,
+                    1646,
+                    1654,
+                    1656
+                ],
+                [
+                    1860,
+                    1866,
+                    1872
+                ],
+                [
+                    2060,
+                    2068,
+                    2070,
+                    2076
+                ]
+            ],
+            "rubric": [
+                "Nicolas and DIY involvement",
+                "Wiring confidence and tutorials",
+                "Plumber consultation and appreciation",
+                "Insulation materials and installation",
+                "Kitchen faucet brand evaluation",
+                "Shelf installation help",
+                "IKEA handles decision",
+                "Electrical safety with Legrand",
+                "3M products for durability",
+                "Hanging lights safely"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How long have James and I been living together in our house on Atat\u00fcrk Street?",
+            "answer": "You mentioned that you and James have lived together in your house on Atat\u00fcrk Street for 5 years.",
+            "difficulty": "medium",
+            "question_type": "duration_recall",
+            "conversation_reference": "Turn 0: User's initial mention of living situation",
+            "key_facts_tested": [
+                "duration: 5 years",
+                "location: Atat\u00fcrk Street",
+                "relationship: living together"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should state: 5 years"
+            ]
+        },
+        {
+            "question": "How did you help me evaluate whether my planned spending on materials from a particular store was appropriate for my project needs?",
+            "answer": "I helped you evaluate your planned spending by breaking down the types of items you would need for your painting project, estimating typical prices for each, and providing an example calculation for a medium-sized living room to show that your budget was reasonable given the scope and potential adjustments.",
+            "difficulty": "hard",
+            "question_type": "context_based_recall",
+            "conversation_reference": "Multiple turns: initial budget mention, detailed budget breakdown, example calculation, and store context",
+            "key_facts_tested": [
+                "budget estimate: $300",
+                "store: Bauhaus Turkey on Cumhuriyet Boulevard",
+                "itemized supplies list",
+                "price ranges for paint and supplies",
+                "example calculation for medium-sized living room painting"
+            ],
+            "extraction_challenge": "LLM must synthesize the budget estimate, store location, itemized supply needs, price ranges, and example cost calculation spread across multiple conversation turns to explain how the budget was assessed",
+            "source_chat_ids": [
+                86,
+                87
+            ],
+            "rubric": [
+                "LLM response should state: breaking down the types of items you would need for your painting project",
+                "LLM response should state: estimating typical prices for each type of items you would need for your painting project",
+                "LLM response should state: providing an example calculation for a medium-sized living room"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How should I go about fixing a leaking pipe in my bathroom?",
+            "instruction_being_tested": "Always include safety precautions when I ask about electrical or plumbing projects.",
+            "expected_compliance": "Response should include safety precautions relevant to plumbing work along with the repair instructions.",
+            "compliance_indicators": [
+                "mention of protective gear",
+                "warnings about water shutoff",
+                "advice on avoiding hazards",
+                "steps to prevent injury or damage"
+            ],
+            "non_compliance_signs": [
+                "no mention of safety measures",
+                "only repair steps given",
+                "ignoring potential risks",
+                "lack of warnings or precautions"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                438
+            ],
+            "rubric": [
+                "LLM response should contain: mention of protective gear",
+                "LLM response should contain: advice on avoiding hazards",
+                "LLM response should contain: steps to prevent injury or damage",
+                "LLM response should contain: warnings about water shutoff"
+            ]
+        },
+        {
+            "question": "I'm thinking about buying a new drill. Which one would you recommend?",
+            "instruction_being_tested": "Always confirm tool model numbers when I ask about tool purchases.",
+            "expected_compliance": "Response should include the specific model number of the tool being recommended.",
+            "compliance_indicators": [
+                "mention of exact model number",
+                "clear identification of the tool version",
+                "specific naming of the product"
+            ],
+            "non_compliance_signs": [
+                "generic tool recommendation without model details",
+                "vague descriptions",
+                "no model identification"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                724
+            ],
+            "rubric": [
+                "LLM response should contain: mention of exact model number",
+                "LLM response should contain: clear identification of the tool version",
+                "LLM response should contain: specific naming of the product"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much have I spent on paint and supplies for my project?",
+            "answer": "$335",
+            "difficulty": "easy",
+            "update_type": "expense_amount_increase",
+            "tests_retention_of": "updated total amount spent on paint and supplies",
+            "conversation_references": [
+                "Spent $320 on paint and supplies, $45 under budget.",
+                "The total spent on paint and supplies increased slightly to $335 after purchasing additional brushes."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $320 amount instead of the updated $335",
+            "source_chat_ids": {
+                "original_info": [
+                    272,
+                    280,
+                    288
+                ],
+                "updated_info": [
+                    436
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $335"
+            ]
+        },
+        {
+            "question": "What budget should I consider for the hallway lighting project including mounting accessories?",
+            "answer": "$160 to cover the hallway lighting and additional mounting accessories",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amount including mounting accessories",
+            "conversation_references": [
+                "Financial & Budget Labels:Budget Allocation: Allocated $150 for hallway lighting project.",
+                "Information Update: The budget for hallway lighting was increased to $160 to include additional mounting accessories."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $150 budget instead of the updated $160 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    1342,
+                    1350
+                ],
+                "updated_info": [
+                    1376
+                ]
+            },
+            "rubric": [
+                "LLM response should state: $160"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much money did I save by choosing DIY over hiring professionals for painting and plumbing combined?",
+            "answer": "I saved $500 in total by doing DIY painting and plumbing projects instead of hiring professionals.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "conv about DIY painting savings",
+                "conv about DIY plumbing savings"
+            ],
+            "reasoning_steps": [
+                "Identify the amount saved from the DIY painting project mentioned by the user.",
+                "Identify the amount saved from the DIY plumbing project mentioned by the user.",
+                "Add the two savings amounts to find the total money saved."
+            ],
+            "source_chat_ids": [
+                296,
+                534
+            ],
+            "rubric": [
+                "LLM response should state: $500"
+            ]
+        },
+        {
+            "question": "Considering my budget, tool priorities, ladder needs, and moving help, how should I sequence and allocate resources to complete my DIY projects safely and efficiently?",
+            "answer": "You should first prioritize essential hand and power tools aligned with your upcoming projects, allocate budget to bulk purchases with James to maximize savings, secure Don's 3-meter ladder for high installations like shelves, plan moving heavy items with Don using proper safety measures, and sequence tasks by addressing safety-critical steps first, then installation, and finally finishing touches, ensuring clear role division and regular progress checks.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Saving money on tools at Ko\u00e7ta\u015f and budget management",
+                "Bulk purchasing tool priorities for upcoming projects",
+                "Ladder use and safety for installing shelves",
+                "Moving heavy items with Don and expressing thanks",
+                "Prioritizing tasks and safety when working with Don"
+            ],
+            "reasoning_steps": [
+                "Aggregate the budget constraints and money-saving strategies from tool purchase discussions to determine feasible tool acquisition plans.",
+                "Synthesize the prioritized tool list for bulk purchase with James to ensure essential tools are acquired first within budget.",
+                "Incorporate ladder requirements and safety considerations for high-reach tasks like shelf installation, confirming the need for Don's 3-meter ladder.",
+                "Integrate moving heavy object safety protocols and Don's assistance to plan resource allocation and task division for physically demanding tasks.",
+                "Sequence all tasks by urgency and safety, assigning responsibilities between you, James, and Don, while scheduling regular check-ins to ensure efficiency and safety."
+            ],
+            "source_chat_ids": [
+                146,
+                156,
+                164,
+                166,
+                294,
+                302,
+                532,
+                542,
+                556
+            ],
+            "rubric": [
+                "LLM response should state: prioritize essential hand and power tools aligned with your upcoming projects",
+                "LLM response should state: allocate budget to bulk purchases with James to maximize savings",
+                "LLM response should state: secure Don's 3-meter ladder for high installations like shelves",
+                "LLM response should state: plan moving heavy items with Don using proper safety measures",
+                "LLM response should state: sequence tasks by addressing safety-critical steps first, then installation, and finally finishing touches"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to start fixing some things around the house. Can you suggest some resources that would help me get started?",
+            "preference_being_tested": "I prefer hands-on learning through video tutorials over reading manuals for home repairs.",
+            "expected_compliance": "Response should prioritize recommending video tutorials or other hands-on learning resources rather than text-based manuals or written guides.",
+            "compliance_indicators": [
+                "recommends video tutorials",
+                "suggests interactive or visual learning materials",
+                "avoids suggesting manuals or text-heavy resources"
+            ],
+            "non_compliance_signs": [
+                "only suggests reading manuals or written guides",
+                "ignores video or hands-on learning options",
+                "provides generic or text-based resources without video"
+            ],
+            "difficulty": "medium",
+            "preference_type": "learning style",
+            "source_chat_ids": [
+                194,
+                208
+            ],
+            "rubric": [
+                "LLM response should contain: recommends video tutorials",
+                "LLM response should contain: suggests interactive or visual learning materials",
+                "LLM response should contain: avoids suggesting manuals or text-heavy resources"
+            ]
+        },
+        {
+            "question": "I'm planning to update my kitchen surfaces soon. What options would you suggest I look into?",
+            "preference_being_tested": "I prioritize durable, easy-to-clean finishes over trendy styles for kitchen surfaces",
+            "expected_compliance": "Response should focus on recommending kitchen surface finishes that emphasize durability and ease of cleaning rather than just aesthetic trends or styles",
+            "compliance_indicators": [
+                "mentions durability and ease of cleaning as key features",
+                "recommends materials known for lasting quality",
+                "avoids focusing solely on trendy or purely aesthetic options",
+                "provides practical advice aligned with maintenance and longevity"
+            ],
+            "non_compliance_signs": [
+                "only suggests trendy or fashionable finishes",
+                "ignores durability and cleaning aspects",
+                "focuses on style over function",
+                "fails to mention practical benefits of recommended surfaces"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                562,
+                564,
+                574,
+                578,
+                580,
+                582
+            ],
+            "rubric": [
+                "LLM response should contain: mentions durability and ease of cleaning as key features",
+                "LLM response should contain: recommends materials known for lasting quality",
+                "LLM response should contain: avoids focusing solely on trendy or purely aesthetic options"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a complete summary of the planning, budgeting, safety, and installation process for my attic insulation upgrade?",
+            "ideal_summary": "The attic insulation upgrade project was carefully planned and executed over several stages. Initially, a budget of $600 was set, with a detailed allocation prioritizing Owens Corning fiberglass insulation rolls costing $450, essential tools, and additional supplies, leaving a small contingency fund. The project timeline was structured from June 15 to June 22, covering preparation, installation, sealing, and cleanup phases. Safety was emphasized throughout, with strict protocols including wearing respirator masks, gloves, safety glasses, and long-sleeved clothing, ensuring proper ventilation, handling materials carefully, and electrical safety measures. Installation guidance focused on measuring and marking the attic, unrolling and fitting insulation around obstacles, sealing gaps with weatherstripping and caulk, and conducting thorough final inspections. The process also included managing the attic space with help for clearing, tracking expenses to stay within budget, and addressing common mistakes to avoid inefficiencies and health risks. Overall, the project balanced cost-effectiveness, safety, and efficiency to achieve improved energy savings and home comfort.",
+            "difficulty": "medium",
+            "summarization_type": "multi-phase_process_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                726,
+                727,
+                729,
+                733,
+                737,
+                751,
+                753,
+                755,
+                760,
+                763,
+                768,
+                781,
+                784,
+                790,
+                792,
+                794,
+                800,
+                806,
+                817,
+                822,
+                828,
+                834,
+                842,
+                850,
+                856,
+                862,
+                932,
+                949
+            ],
+            "key_elements_tested": [
+                "budget allocation",
+                "project timeline",
+                "safety protocols",
+                "installation steps",
+                "expense and resource management"
+            ],
+            "synthesis_required": "Integrating budget, scheduling, safety, installation, and project management details into a coherent narrative showing project progression",
+            "source_chat_ids": [
+                726,
+                727,
+                729,
+                733,
+                737,
+                751,
+                753,
+                755,
+                760,
+                763,
+                768,
+                781,
+                784,
+                790,
+                792,
+                794,
+                800,
+                806,
+                817,
+                822,
+                828,
+                834,
+                842,
+                850,
+                856,
+                862,
+                932,
+                949
+            ],
+            "rubric": [
+                "LLM response should contain: a budget of $600 was set, with a detailed allocation prioritizing Owens Corning fiberglass insulation rolls costing $450, essential tools, and additional supplies, leaving a small contingency fund",
+                "LLM response should contain: The project timeline was structured from June 15 to June 22, covering preparation, installation, sealing, and cleanup phases",
+                "LLM response should contain: Safety was emphasized throughout, with strict protocols including wearing respirator masks, gloves, safety glasses, and long-sleeved clothing, ensuring proper ventilation",
+                "LLM response should contain: Installation guidance focused on measuring and marking the attic, unrolling and fitting insulation around obstacles, sealing gaps with weatherstripping and caulk, and conducting thorough final inspections",
+                "LLM response should contain: The process also included managing the attic space with help for clearing, tracking expenses to stay within budget, and addressing common mistakes"
+            ]
+        },
+        {
+            "question": "Can you give me a complete summary of how my bathroom shelf project developed from planning through installation and feedback?",
+            "ideal_summary": "Your bathroom shelf project progressed through several stages, starting with careful planning that included budgeting $100 for materials and scheduling the installation for August 15. You selected pine wood shelves from a local supplier, balancing cost, quality, and aesthetic preferences, while incorporating metal brackets and hooks to satisfy both your and James's design preferences. Preparation involved gathering the right tools and materials, emphasizing moisture resistance and safety protocols such as using a stud finder and wearing protective gear. During installation, you applied precise techniques like measuring, marking, drilling pilot holes, and securing brackets, with Don\u2019s assistance improving efficiency and safety. Post-installation, Nicolas complimented the design for its successful blend of warmth and modernity, validating your material choices and overall approach. Throughout, you tracked expenses, refined your skills, and planned future DIY projects, demonstrating a thoughtful, evolving process from concept to completion.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                1173,
+                1181,
+                1193,
+                1245,
+                1249,
+                1257,
+                1243
+            ],
+            "key_elements_tested": [
+                "project planning",
+                "material selection",
+                "installation process",
+                "collaborative assistance",
+                "post-installation feedback"
+            ],
+            "synthesis_required": "Integrating planning, material decisions, installation steps, collaborative input, and feedback into a coherent project narrative",
+            "source_chat_ids": [
+                1173,
+                1181,
+                1193,
+                1245,
+                1249,
+                1257,
+                1243
+            ],
+            "rubric": [
+                "LLM response should contain: careful planning that included budgeting $100 for materials and scheduling the installation for August 15",
+                "LLM response should contain: You selected pine wood shelves from a local supplier, balancing cost, quality, and aesthetic preferences, while incorporating metal brackets and hooks to satisfy both your and James's design preferences",
+                "LLM response should contain: Preparation involved gathering the right tools and materials, emphasizing moisture resistance and safety protocols such as using a stud finder and wearing protective gear",
+                "LLM response should contain: During installation, you applied precise techniques like measuring, marking, drilling pilot holes, and securing brackets, with Don\u2019s assistance improving efficiency and safety",
+                "LLM response should contain: Post-installation, Nicolas complimented the design for its successful blend of warmth and modernity, validating your material choices and overall approach"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days did it take me to finish painting the living room walls after I planned to start?",
+            "answer": "It took 13 days to finish painting the living room walls after planning to start on April 1 and finishing on April 13.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Planned start: April 1, 2024",
+                "Finished painting: April 13, 2024"
+            ],
+            "conversation_references": [
+                "Session 68: planning start date and duration",
+                "Session 254: finishing two coats on April 13"
+            ],
+            "calculation_required": "April 13 - April 1 = 12 days elapsed, so roughly 13 days including start day",
+            "source_chat_ids": {
+                "first_event": [
+                    68
+                ],
+                "second_event": [
+                    254
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 12 days",
+                "LLM response should state: from April 1 till April 13"
+            ]
+        },
+        {
+            "question": "How many days passed between when I learned to replace faucet washers at the workshop and when I planned to practice it?",
+            "answer": "19 days passed between learning to replace faucet washers at the workshop on April 10 and planning to practice it on April 29.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 10: learned to replace faucet washers",
+                "April 29: planned practice"
+            ],
+            "conversation_references": [
+                "Session 1: April 10 workshop learning",
+                "Session 2: April 29 practice planning"
+            ],
+            "calculation_required": "April 29 - April 10 = 19 days",
+            "source_chat_ids": {
+                "first_event": [
+                    502
+                ],
+                "second_event": [
+                    516
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 19 days",
+                "LLM response should state: from April 10 till April 29"
+            ]
+        }
+    ]
+}

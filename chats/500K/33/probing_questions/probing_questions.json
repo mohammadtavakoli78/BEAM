@@ -1,0 +1,582 @@
+{
+    "abstention": [
+        {
+            "question": "What are the technical specifications and advanced features of the Spalding Smart Basketball I tested on May 2?",
+            "ideal_response": "Based on the provided chat, there is no information related to the technical specifications or advanced features of the Spalding Smart Basketball.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The basketball is mentioned with tracking capabilities but no detailed specs are provided.",
+            "plan_reference": "BATCH 3 PLAN, Bullet 23",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the technical specifications or advanced features of the Spalding Smart Basketball."
+            ]
+        },
+        {
+                "question": "Can you provide details about the content and structure of the 6-hour online coaching certification I completed on December 10?",
+                "ideal_response": "Based on the provided chat, there is no information related to the content or structure of the coaching certification completed on December 10.",
+                "difficulty": "hard",
+                "abstention_type": "missing_detail",
+                "why_unanswerable": "Certification completion is noted but no curriculum or course details are provided.",
+                "plan_reference": "BATCH 10 PLAN, Bullet 10",
+                "rubric": [
+                    "Based on the provided chat, there is no information related to the content or structure of the coaching certification completed on December 10."
+                ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever experienced wrist soreness or injuries during my basketball practices?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you experienced mild wrist soreness and took measures to manage it, but you also mentioned never having any wrist soreness or injuries during basketball practices. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "wrist soreness or injury during basketball practices",
+            "conversation_references": [
+                "Session 1: Experienced mild wrist soreness and management",
+                "Session 2: Never had wrist soreness or injury"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    126
+                ],
+                "second_statement": [
+                    186
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you experienced mild wrist soreness and took measures to manage it",
+                "LLM response should mention: you also mentioned never having any wrist soreness or injuries during basketball practices",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Do I usually wear orthotic insoles or any kind of foot support when I play basketball?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have custom orthotic insoles to reduce foot pain during games, but you also mentioned never wearing orthotic insoles or any foot support during basketball activities. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "use of orthotic insoles or foot support during basketball",
+            "conversation_references": [
+                "Session 304: Mention of custom orthotic insoles",
+                "Session 376: Statement of never wearing orthotic insoles or foot support"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    304
+                ],
+                "second_statement": [
+                    376
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have custom orthotic insoles to reduce foot pain during games",
+                "LLM response should mention: you also mentioned never wearing orthotic insoles or any foot support during basketball activities",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my basketball training and team progress throughout our conversations in order (mention 10 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Balancing time with my girlfriend and friends, 2) Improving my free throw percentage and setting goals, 3) Achieving near-goal free throw accuracy and planning to reach the final target, 4) Maintaining free throw accuracy after reaching my goal early, 5) Surpassing 3-point shooting targets and focusing on youth team improvement, 6) Building on the youth team's 3-point shooting success with specific drills, 7) Increasing my vertical leap through training, 8) Enhancing the youth team's defensive rebound rate, 9) Maintaining the youth team's shooting accuracy target, 10) Finishing the youth team's season strong with momentum and motivation strategies.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 10: Balancing time with girlfriend and friends",
+                "Session 96: Free throw improvement and goals",
+                "Session 194: Near-goal free throw accuracy and planning",
+                "Session 288: Maintaining free throw accuracy after goal",
+                "Session 380: Surpassing 3-point shooting targets",
+                "Sessions 476 & 484: Youth team 3-point shooting drills and improvement",
+                "Session 576: Vertical leap improvement",
+                "Session 676: Youth team defensive rebound rate increase",
+                "Session 780: Maintaining youth team shooting accuracy",
+                "Sessions 884 & 886: Finishing youth team season strong"
+            ],
+            "ordering_tested": [
+                "1st: Balancing personal relationships and social time",
+                "2nd: Free throw percentage improvement and goal setting",
+                "3rd: Approaching free throw goal and planning",
+                "4th: Maintaining free throw accuracy post-goal",
+                "5th: 3-point shooting target surpassed",
+                "6th: Youth team 3-point shooting drills and success",
+                "7th: Vertical leap training progress",
+                "8th: Defensive rebound rate improvement",
+                "9th: Maintaining shooting accuracy target",
+                "10th: Sustaining team momentum and motivation"
+            ],
+            "source_chat_ids": [
+                10,
+                96,
+                194,
+                288,
+                380,
+                476,
+                484,
+                576,
+                676,
+                780,
+                884,
+                886
+            ],
+            "rubric": [
+                "LLM response should mention: Balancing time with my girlfriend and friends",
+                "LLM response should mention: Improving my free throw percentage and setting goals",
+                "LLM response should mention: Achieving near-goal free throw accuracy and planning to reach the final target",
+                "LLM response should mention: Maintaining free throw accuracy after reaching my goal early",
+                "LLM response should mention: Surpassing 3-point shooting targets and focusing on youth team improvement",
+                "LLM response should mention: Building on the youth team's 3-point shooting success with specific drills",
+                "LLM response should mention: Increasing my vertical leap through training",
+                "LLM response should mention: Enhancing the youth team's defensive rebound rate",
+                "LLM response should mention: Maintaining the youth team's shooting accuracy target",
+                "LLM response should mention: Finishing the youth team's season strong with momentum and motivation strategies"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different basketball-related social events and training topics throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these basketball-related topics in this order: 1) First, our initial meeting and conversation about basketball stats, 2) Then, discussing improving lateral quickness through defensive footwork drills, 3) Next, talking about attending various watch parties at Antonio's apartment, starting with the May 10 event, 4) Then, mentioning the invitation to the August 10 All-Star game, 5) Finally, bringing up plans for the podcast live event at the November 28 watch party.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 14: Initial meeting and basketball stats",
+                "Session 110: Defensive footwork drills and lateral quickness",
+                "Sessions 212, 218, 328: Watch parties starting May 10 and June 14",
+                "Session 394: August 10 All-Star game invitation",
+                "Sessions 794, 804: Podcast live event planning for November 28 watch party"
+            ],
+            "ordering_tested": [
+                "1st: Initial meeting and basketball stats",
+                "2nd: Defensive footwork drills and lateral quickness",
+                "3rd: Early watch parties at Antonio's apartment",
+                "4th: August All-Star game invitation",
+                "5th: Podcast live event planning"
+            ],
+            "source_chat_ids": [
+                14,
+                110,
+                [
+                    212,
+                    218,
+                    328
+                ],
+                394,
+                [
+                    794,
+                    804
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Initial meeting and conversation about basketball stats",
+                "LLM response should mention: Discussing improving lateral quickness through defensive footwork drills",
+                "LLM response should mention: Attending various watch parties at Antonio's apartment, starting with the May 10 event",
+                "LLM response should mention: Invitation to the August 10 All-Star game",
+                "LLM response should mention: Plans for the podcast live event at the November 28 watch party"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What percentage did I say I want to improve from at the start of our conversation?",
+            "answer": "You said you want to improve your free throw percentage from 58%.",
+            "difficulty": "medium",
+            "question_type": "percentage_recall",
+            "conversation_reference": "Turn 1: Initial goal stated by user",
+            "key_facts_tested": [
+                "initial percentage: 58%"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should mention: 58%"
+            ]
+        },
+        {
+            "question": "How much did I pay for each round-trip bus ticket?",
+            "answer": "$45 each",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 2: USER: I've booked round-trip bus tickets for $45 each to San Francisco for the April 20 game, should I also book a hotel or try to find a cheaper option?",
+            "key_facts_tested": [
+                "price of round-trip bus tickets"
+            ],
+            "source_chat_ids": [
+                94
+            ],
+            "rubric": [
+                "LLM response should mention: $45 each"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How has my progress been so far?",
+            "instruction_being_tested": "Always provide detailed timelines when I ask about my training progress.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                88
+            ],
+            "rubric": [
+                "LLM response should mention: detailed timelines"
+            ]
+        },
+        {
+            "question": "What happened at the last team practice?",
+            "instruction_being_tested": "Always provide player attendance numbers when I ask about team events.",
+            "expected_compliance": "Response should include the number of players who attended the event along with other relevant details.",
+            "compliance_indicators": [
+                "attendance count included",
+                "number of players mentioned",
+                "player turnout specified"
+            ],
+            "non_compliance_signs": [
+                "no mention of attendance",
+                "only event activities described",
+                "general summary without attendance info"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                468,
+                470,
+                472
+            ],
+            "rubric": [
+                "LLM response should mention: attendance numbers"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my free throw shooting percentage at this point in my practice?",
+            "answer": "62%",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated free throw percentage after practice",
+            "conversation_references": [
+                "Goal Setting: I aim to improve my free throw percentage from 58% to 75% by June 30, 2024.",
+                "Information Update: My free throw percentage has recently climbed to 62% after consistent practice sessions in early March."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 58% free throw percentage instead of the updated 62%",
+            "source_chat_ids": {
+                "original_info": [
+                    26
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should mention: 62%"
+            ]
+        },
+        {
+            "question": "What is the defensive rebound rate of the youth team?",
+            "answer": "22%",
+            "difficulty": "easy",
+            "update_type": "performance_metric_update",
+            "tests_retention_of": "increased defensive rebound rate of the youth team",
+            "conversation_references": [
+                "Technical & Innovation: Equipment Innovation: Purchased new wireless microphones and mixers for podcast, costing $600, delivered November 19.",
+                "Information Update: The youth team\u2019s defensive rebound rate increased to 22% by late November after focused training."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original rebound rate before the increase instead of the updated 22%",
+            "source_chat_ids": {
+                "original_info": [
+                    844
+                ],
+                "updated_info": [
+                    872
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 22%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much did my free throw percentage improve overall from the start until I reached my goal early, and what was the average weekly improvement rate during that period?",
+            "answer": "Your free throw percentage improved from 58% initially to 75% by June 10, achieving a total increase of 17 percentage points. Assuming the improvement spanned from mid-March to early June, the average weekly improvement rate was approximately 1.3 percentage points per week.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id 26-27 (initial goal and plan)",
+                "chat_id 96-97 (progress update after 3 weeks)",
+                "chat_id 194-195 (74% accuracy on May 3)",
+                "chat_id 288-289 (goal met early on June 10)",
+                "chat_id 32-33 (target reminder)"
+            ],
+            "reasoning_steps": [
+                "Identify the initial free throw percentage (58%) and target (75%) from the earliest sessions.",
+                "Note the progress update after 3 weeks showing an increase to 68%, calculating the improvement over that period.",
+                "Incorporate the May 3 update where the percentage reached 74%, showing continued improvement.",
+                "Recognize that the goal of 75% was met early on June 10, finalizing the total improvement.",
+                "Estimate the total duration from mid-March to early June and calculate the average weekly improvement rate by dividing total percentage increase by number of weeks."
+            ],
+            "source_chat_ids": [
+                26,
+                27,
+                32,
+                33,
+                96,
+                97,
+                194,
+                195,
+                288,
+                289
+            ],
+            "rubric": [
+                "LLM response should mention: initial free throw percentage of 58%",
+                "LLM response should mention: target free throw percentage of 75%",
+                "LLM response should mention: total improvement of 17 percentage points",
+                "LLM response should mention: average weekly improvement rate of approximately 1.3 percentage points"
+            ]
+        },
+        {
+            "question": "How many times per week did I agree to limit my basketball-related activities with Jessica across our late-night games and gym sessions?",
+            "answer": "I agreed to limit late-night games to twice a week and gym sessions to three times a week, totaling five sessions per week.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "I agreed with Jessica to limit late-night games to twice a week",
+                "I'm kinda worried about Jessica's concern over my increased gym time, do you think limiting sessions to 3 per week is a good compromise?"
+            ],
+            "reasoning_steps": [
+                "Identify the limit for late-night games agreed with Jessica (twice a week).",
+                "Identify the limit for gym sessions proposed to address Jessica's concern (three times a week).",
+                "Add the two limits to find the total number of basketball-related sessions per week."
+            ],
+            "source_chat_ids": [
+                52,
+                134
+            ],
+            "rubric": [
+                "LLM response should mention: late-night games limited to twice a week",
+                "LLM response should mention: gym sessions limited to three times a week",
+                "LLM response should mention: total of five sessions per week"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you suggest some effective drills I could do during the week?",
+            "preference_being_tested": "I prefer practicing in the evenings between 6-8 PM to balance work and training effectively.",
+            "expected_compliance": "Response should recommend drills that fit within the evening time frame or explicitly acknowledge the user's available practice window when suggesting schedules.",
+            "compliance_indicators": [
+                "mentions evening practice times",
+                "suggests drills suitable for 6-8 PM",
+                "acknowledges user's time constraints",
+                "tailors recommendations to evening sessions"
+            ],
+            "non_compliance_signs": [
+                "recommends drills only for morning or afternoon",
+                "ignores user's available practice time",
+                "suggests schedules outside 6-8 PM without alternatives",
+                "does not consider user's time balance"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time availability",
+            "source_chat_ids": [
+                74
+            ],
+            "rubric": [
+                "LLM response should mention: preference for evening practice times between 6-8 PM"
+            ]
+        },
+        {
+            "question": "What are some effective drills I can do outdoors to improve my skills?",
+            "preference_being_tested": "I prefer practicing outdoors in the morning between 8-10 AM for cooler temperatures and less crowd.",
+            "expected_compliance": "Response should suggest drills suitable for outdoor practice during morning hours, implicitly respecting the user's preferred time and conditions without explicitly stating them.",
+            "compliance_indicators": [
+                "recommends drills feasible in outdoor morning settings",
+                "avoids suggesting drills that require indoor facilities or times outside early morning",
+                "mentions drills that can be done when it's less crowded or cooler without explicitly stating it"
+            ],
+            "non_compliance_signs": [
+                "suggests drills only suitable for indoor practice",
+                "recommends times outside the morning window",
+                "ignores outdoor setting and timing in recommendations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time and environment preference",
+            "source_chat_ids": [
+                250
+            ],
+            "rubric": [
+                "LLM response should mention: preference for outdoor practice in the morning between 8-10 AM"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how I've been managing and developing my basketball-related relationships and activities over time?",
+            "ideal_summary": "Over the course of our conversations, you've navigated various aspects of your basketball-related relationships and activities with thoughtful balance and engagement. Initially, you focused on including Jessica in basketball discussions by explaining concepts, sharing stories, and inviting her to games, which helped her feel valued despite her limited knowledge. Concurrently, you worked on balancing your time between your girlfriend and friends like Audrey by scheduling dedicated days, planning group activities, and maintaining open communication to ensure everyone felt included. You also explored joining local basketball leagues, understanding the types available at community centers, and keeping conversations with basketball enthusiasts like Antonio engaging through discussions on stats, trends, and shared activities. Additionally, you maintained your friendship with Corey by combining regular communication, shared pickup games, and group outings, while also balancing co-coaching a youth team with him alongside your own practice schedule. Throughout, you integrated strategies to manage your time effectively, ensuring quality interactions and personal growth within your basketball community.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                11,
+                17,
+                13,
+                15,
+                19,
+                287
+            ],
+            "key_elements_tested": [
+                "relationship management",
+                "time balancing",
+                "activity engagement",
+                "progressive development",
+                "multi-person interactions"
+            ],
+            "synthesis_required": "Combining multiple relationship and activity management details into a coherent narrative showing progression and balance",
+            "source_chat_ids": [
+                11,
+                17,
+                13,
+                15,
+                19,
+                287
+            ],
+            "rubric": [
+                "LLM response should mention: Over the course of our conversations, you've navigated various aspects of your basketball-related relationships and activities with thoughtful balance and engagement.",
+                "LLM response should mention: IInitially, you focused on including Jessica in basketball discussions by explaining concepts, sharing stories, and inviting her to games, which helped her feel valued despite her limited knowledge.",
+                "LLM response should mention: Concurrently, you worked on balancing your time between your girlfriend and friends like Audrey by scheduling dedicated days, planning group activities, and maintaining open communication to ensure everyone felt included.",
+                "LLM response should mention: You also explored joining local basketball leagues, understanding the types available at community centers, and keeping conversations with basketball enthusiasts like Antonio engaging through discussions on stats, trends, and shared activities.",
+                "LLM response should mention: Additionally, you maintained your friendship with Corey by combining regular communication, shared pickup games, and group outings, while also balancing co-coaching a youth team with him alongside your own practice schedule.",
+                "LLM response should mention: Throughout, you integrated strategies to manage your time effectively, ensuring quality interactions and personal growth within your basketball community."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my basketball training and shooting performance have progressed over the past few months?",
+            "ideal_summary": "Over the past few months, your basketball training has shown steady and structured progress. You began with a clear goal to improve your free throw percentage from 58% to 75% by June 30, 2024, and followed a detailed practice plan emphasizing consistent practice, technique refinement, mental training, and progress tracking. Early improvements were evident as your free throw accuracy rose to 62% in early March and then to 68% by early April, supported by increased practice hours and focused drills. To balance your training, you incorporated dribbling drills four times a week alongside scheduled pickup games, ensuring a well-rounded skill development. As you neared your goal, you adopted advanced strategies such as simulating game pressure and refining your mental preparation, which helped you reach 74% accuracy by early May and ultimately achieve your 75% target ahead of schedule in June. Throughout this journey, you maintained momentum by adjusting your practice intensity, preventing burnout through rest and recovery, and continuing to focus on form and mental routines to sustain your performance. This progression reflects a comprehensive and evolving approach to improving your basketball skills over time.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                26,
+                27,
+                28,
+                29,
+                86,
+                87,
+                96,
+                97,
+                148,
+                149,
+                194,
+                195,
+                288,
+                289
+            ],
+            "key_elements_tested": [
+                "goal setting",
+                "practice planning",
+                "skill improvement",
+                "balancing training activities",
+                "momentum maintenance"
+            ],
+            "synthesis_required": "Integrating multiple aspects of training progress, practice adjustments, and performance milestones into a coherent narrative",
+            "source_chat_ids": [
+                26,
+                27,
+                28,
+                29,
+                86,
+                87,
+                96,
+                97,
+                148,
+                149,
+                194,
+                195,
+                288,
+                289
+            ],
+            "rubric": [
+                "LLM response should mention: Over the past few months, your basketball training has shown steady and structured progress.",
+                "LLM response should mention: You began with a clear goal to improve your free throw percentage from 58% to 75% by June 30, 2024, and followed a detailed practice plan emphasizing consistent practice, technique refinement, mental training, and progress tracking.",
+                "LLM response should mention: Early improvements were evident as your free throw accuracy rose to 62% in early March and then to 68% by early April, supported by increased practice hours and focused drills.",
+                "LLM response should mention: To balance your training, you incorporated dribbling drills four times a week alongside scheduled pickup games, ensuring a well-rounded skill development.",
+                "LLM response should mention: As you neared your goal, you adopted advanced strategies such as simulating game pressure and refining your mental preparation, which helped you reach 74% accuracy by early May and ultimately achieve your 75% target ahead of schedule in June.",
+                "LLM response should mention: Throughout this journey, you maintained momentum by adjusting your practice intensity, preventing burnout through rest and recovery, and continuing to focus on form and mental routines to sustain your performance.",
+                "LLM response should mention: This progression reflects a comprehensive and evolving approach to improving your basketball skills over time."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I met my girlfriend at the community center did she show interest in attending the NBA game?",
+            "answer": "Jessica showed interest in attending the NBA game on April 20, 2023, which is 98 days after I met her at the Saint Helena Community Center on January 12, 2023.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 12, 2023: met girlfriend at community center",
+                "April 20, 2023: interest in NBA game revealed"
+            ],
+            "conversation_references": [
+                "Session 16: Meeting girlfriend at community center",
+                "Session 92: NBA game interest revealed"
+            ],
+            "calculation_required": "April 20, 2023 - January 12, 2023 = 98 days",
+            "source_chat_ids": {
+                "first_event": [
+                    16
+                ],
+                "second_event": [
+                    92
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 98 days"
+            ]
+        },
+        {
+            "question": "How many weeks had I been practicing when I reported improving my free throw percentage to 68%, and how much time was left until my goal date?",
+            "answer": "I had been practicing for 3 weeks when I reported improving to 68% after practice ending April 5, and there were about 12 more weeks left until my goal date of June 30.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "3 weeks of practice ending April 5",
+                "Goal date June 30"
+            ],
+            "conversation_references": [
+                "Session 3: Progress update after 3 weeks",
+                "Session 1 and 2: Goal setting for June 30"
+            ],
+            "calculation_required": "Calculate 3 weeks ending April 5, then count weeks from April 5 to June 30 (~12 weeks)",
+            "source_chat_ids": {
+                "first_event": [
+                    96
+                ],
+                "second_event": [
+                    26,
+                    32
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 3 weeks of practice",
+                "LLM response should mention: about 12 weeks left until goal date"
+            ]
+        }
+    ]
+}

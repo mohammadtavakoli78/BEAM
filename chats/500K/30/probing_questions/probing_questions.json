@@ -1,0 +1,542 @@
+{
+    "abstention": [
+        {
+            "question": "What are the exact steps involved in the crumb coating technique you adopted for cake decorating?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact steps involved in the crumb coating technique.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The crumb coating technique is mentioned but no detailed procedural steps are described.",
+            "plan_reference": "Batch 5, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact steps involved in the crumb coating technique."
+            ]
+        },
+        {
+            "question": "What are the names and backgrounds of the other attendees at the baking workshop you co-hosted with Michele?",
+            "ideal_response": "Based on the provided chat, there is no information related to the names or backgrounds of other attendees at the baking workshop co-hosted with Michele.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Only the number of attendees and rating are mentioned, no personal details.",
+            "plan_reference": "Batch 5, Bullet 2",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the names or backgrounds of other attendees at the baking workshop co-hosted with Michele."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any baking workshops?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any baking workshops, but you also mentioned completing an online course related to baking. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance at baking workshops",
+            "conversation_references": [
+                "Session 1: Never attended any baking workshops",
+                "Session 2: Completed online baking course"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    190
+                ],
+                "second_statement": [
+                    120
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any baking workshops",
+                "LLM response should mention: you also mentioned completing an online course related to baking",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever used aquafaba as an egg substitute in my baking?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never used aquafaba as an egg substitute, but you also mentioned using 3 tablespoons of aquafaba in a vegan cake with good results. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of aquafaba as an egg substitute",
+            "conversation_references": [
+                "Session 1: Never used aquafaba statement",
+                "Session 2: Used aquafaba with 90% rise"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    494
+                ],
+                "second_statement": [
+                    402
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never used aquafaba as an egg substitute",
+                "LLM response should mention: you also mentioned using 3 tablespoons of aquafaba in a vegan cake with good results",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my baking activities and collaborations throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned your baking activities and collaborations in this order: 1) First, meeting Courtney and considering her food recommendations, 2) Then joining the Saint Helena Baking Club and discussing skill improvements, 3) Next, using Michele's proofing box and debating whether to invest in one, 4) After that, thinking about balancing your baking schedule with other commitments including Audrey's lessons, 5) Finally, planning a joint baking project with Audrey and discussing collaborative book work with Marisa.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 12: Meeting Courtney and food recommendations",
+                "Sessions 96 and 104: Joining the baking club and skill improvements",
+                "Sessions 194 and 288: Using Michele's proofing box and scheduling",
+                "Sessions 384 and 496: Audrey's lessons and managing baking schedule",
+                "Sessions 674, 680, 780, and 970: Collaborative book work and joint baking project with Audrey"
+            ],
+            "ordering_tested": [
+                "1st: Meeting Courtney and food recommendations",
+                "2nd: Joining the baking club and skill improvements",
+                "3rd: Using Michele's proofing box and scheduling",
+                "4th: Audrey's lessons and managing baking schedule",
+                "5th: Collaborative book work and joint baking project with Audrey"
+            ],
+            "source_chat_ids": [
+                12,
+                96,
+                104,
+                194,
+                288,
+                384,
+                496,
+                674,
+                680,
+                780,
+                970
+            ],
+            "rubric": [
+                "LLM response should mention: Meeting Courtney and food recommendations",
+                "LLM response should mention: Joining the baking club and skill improvements",
+                "LLM response should mention: Using Michele's proofing box and scheduling",
+                "LLM response should mention: Audrey's lessons and managing baking schedule",
+                "LLM response should mention: Collaborative book work and joint baking project with Audrey"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my baking experiences and related activities throughout our conversations in order (mention 10 items)?",
+            "answer": "You mentioned these aspects in this order: 1) Meeting and learning from Michele about baking, 2) Discussing recipe scaling, inventory, and marketing strategies with Michele, 3) Sharing vegan cake and seeking social baking improvement, 4) Using Michele's proofing box and debating investing in one, 5) Balancing baking schedule with other commitments and Michele's proofing box advice, 6) Hosting a cake decorating session and seeking improvement ideas, 7) Asking about achieving high ratings from sharing gluten-free bread samples, 8) Sharing croissant samples and aiming to improve ratings, 9) Sharing dessert plating photos and seeking plating tips, 10) Planning a party for Ryan's promotion and requesting hosting tips.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 28: Meeting Michele and learning about baking",
+                "Session 30: Recipe scaling, inventory, marketing",
+                "Session 154: Sharing vegan cake and social baking skills",
+                "Session 194: Using Michele's proofing box",
+                "Session 288: Balancing baking schedule and proofing box advice",
+                "Session 460: Hosting cake decorating session",
+                "Session 606: Achieving high ratings with gluten-free bread",
+                "Sessions 838 & 842: Sharing croissant samples and rating improvement",
+                "Session 928: Sharing dessert plating photos",
+                "Session 1016: Planning party for Ryan's promotion"
+            ],
+            "ordering_tested": [
+                "1st: Meeting Michele and baking insights",
+                "2nd: Recipe scaling and business strategies",
+                "3rd: Vegan cake sharing and social skills",
+                "4th: Proofing box usage and investment consideration",
+                "5th: Scheduling balance and proofing box advice",
+                "6th: Cake decorating session hosting",
+                "7th: High rating with gluten-free bread",
+                "8th: Croissant samples and rating improvement",
+                "9th: Dessert plating photo sharing",
+                "10th: Party planning for Ryan's promotion"
+            ],
+            "source_chat_ids": [
+                28,
+                30,
+                154,
+                194,
+                288,
+                460,
+                606,
+                838,
+                928,
+                1016
+            ],
+            "rubric": [
+                "LLM response should mention: Meeting and learning from Michele about baking",
+                "LLM response should mention: Discussing recipe scaling, inventory, and marketing strategies with Michele",
+                "LLM response should mention: Sharing vegan cake and seeking social baking improvement",
+                "LLM response should mention: Using Michele's proofing box and debating investing in one",
+                "LLM response should mention: Balancing baking schedule with other commitments and Michele's proofing box advice",
+                "LLM response should mention: Hosting a cake decorating session and seeking improvement ideas",
+                "LLM response should mention: Asking about achieving high ratings from sharing gluten-free bread samples",
+                "LLM response should mention: Sharing croissant samples and aiming to improve ratings",
+                "LLM response should mention: Sharing dessert plating photos and seeking plating tips",
+                "LLM response should mention: Planning a party for Ryan's promotion and requesting hosting tips"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What address did I mention for where I live?",
+            "answer": "You live on 1423 Maple Street, near the Saint Helena Public Library.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions hosting a party at 1423 Maple Street, near the Saint Helena Public Library.",
+            "key_facts_tested": [
+                "address",
+                "location detail"
+            ],
+            "source_chat_ids": [
+                10
+            ],
+            "rubric": [
+                "LLM response should mention: 1423 Maple Street"
+            ]
+        },
+        {
+            "question": "How much did I say I spent on the mixer I bought?",
+            "answer": "You said you spent $399 on the mixer.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I just spent $399 on a KitchenAid mixer, was that a good investment for long-term use, or should I have gone with the cheaper hand mixer option?",
+            "key_facts_tested": [
+                "amount spent on mixer"
+            ],
+            "source_chat_ids": [
+                50
+            ],
+            "rubric": [
+                "LLM response should mention: $399"
+            ]
+        }
+    ],
+    "instruction_following": [
+         {
+            "question": "What temperature should I set the oven to for baking the cake?",
+            "instruction_being_tested": "Always include temperature units in Fahrenheit when I ask about baking conditions.",
+            "expected_compliance": "Response should include the temperature value accompanied by the unit in Fahrenheit.",
+            "compliance_indicators": [
+                "temperature followed by \u00b0F",
+                "explicit mention of Fahrenheit units",
+                "e.g., 350\u00b0F"
+            ],
+            "non_compliance_signs": [
+                "temperature given without units",
+                "units in Celsius or other scales",
+                "temperature mentioned vaguely"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                186
+            ],
+            "rubric": [
+                "LLM response should include: explicit mention of Fahrenheit units"
+            ]
+        },
+        {
+            "question": "How should I arrange my baking tools in the kitchen?",
+            "instruction_being_tested": "Always label gluten-free baking tools distinctly when I ask about kitchen organization.",
+            "expected_compliance": "Response should include distinct labeling of gluten-free baking tools when discussing kitchen organization.",
+            "compliance_indicators": [
+                "distinct labels for gluten-free baking tools",
+                "clear separation or identification of gluten-free tools",
+                "mention of special marking for certain baking tools"
+            ],
+            "non_compliance_signs": [
+                "no mention of labeling",
+                "grouping all baking tools together without distinction",
+                "ignoring gluten-free tool identification"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                668,
+                670
+            ],
+            "rubric": [
+                "LLM response should include: distinct labels for gluten-free baking tools"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long do I knead my bread dough to achieve strong gluten development?",
+            "answer": "15 minutes",
+            "difficulty": "easy",
+            "update_type": "process_duration_extension",
+            "tests_retention_of": "extended kneading time to 15 minutes for better gluten strength",
+            "conversation_references": [
+                "Skill Development: Increased kneading time from 8 to 12 minutes for better gluten development in bread dough.",
+                "Information Update: I extended my kneading time further to 15 minutes to enhance gluten strength in bread dough."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the kneading time as 12 minutes instead of the updated 15 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    170
+                ],
+                "updated_info": [
+                    184
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 15 minutes"
+            ]
+        },
+        {
+            "question": "How many hours did I spend practicing cake decorating in April to refine my techniques?",
+            "answer": "10 hours",
+            "difficulty": "easy",
+            "update_type": "skill_practice_duration",
+            "tests_retention_of": "updated number of practice hours spent on cake decorating",
+            "conversation_references": [
+                "Skill Development: Completed 8 hours of cake decorating practice in April.",
+                "Information Update: I increased my cake decorating practice to 10 hours in April to refine techniques."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 8 hours of practice instead of the updated 10 hours",
+            "source_chat_ids": {
+                "original_info": [
+                    476
+                ],
+                "updated_info": [
+                    490
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 10 hours"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total money have I spent on my KitchenAid mixer and organic almond flour combined?",
+            "answer": "424 dollars",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 50",
+                "chat_id: 124"
+            ],
+            "reasoning_steps": [
+                "Identify the amount spent on the KitchenAid mixer from the first session.",
+                "Identify the amount spent on organic almond flour from the second session.",
+                "Add the two amounts together to get the total spent."
+            ],
+            "source_chat_ids": [
+                50,
+                124
+            ],
+            "rubric": [
+                "LLM response should mention: 424 dollars"
+            ]
+        },
+        {
+            "question": "How many times per week do I plan to bake to master bread, pastries, and desserts?",
+            "answer": "You plan to bake at least three times per week.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "I aim to master bread, pastries, and desserts by April 30, 2024, baking at least 3 times weekly, is that a realistic goal",
+                "I've got a deadline to bake at least 3 times weekly, can you help me create a schedule to ensure I meet my goal of mastering different types of baked goods"
+            ],
+            "reasoning_steps": [
+                "Identify the baking frequency goal mentioned in the first session.",
+                "Confirm the baking frequency goal mentioned again in the second session.",
+                "Conclude the consistent baking frequency planned across sessions."
+            ],
+            "source_chat_ids": [
+                34,
+                36
+            ],
+            "rubric": [
+                "LLM response should mention: at least three times per week"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "When would be a good time for me to start baking to make the most of the kitchen environment?",
+            "preference_being_tested": "I prefer baking in the afternoon between 2-5 PM for optimal natural light and kitchen temperature.",
+            "expected_compliance": "Response should suggest baking during the afternoon hours, ideally between 2-5 PM, reflecting the user's stated preferred time frame.",
+            "compliance_indicators": [
+                "recommends baking between 2-5 PM",
+                "mentions afternoon timing",
+                "aligns with user's preferred baking window"
+            ],
+            "non_compliance_signs": [
+                "suggests morning or evening baking times",
+                "ignores specific afternoon window",
+                "recommends times outside 2-5 PM without justification"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time_of_day",
+            "source_chat_ids": [
+                130
+            ],
+            "rubric": [
+                "LLM response should mention: baking sometime between 2-5 PM"
+            ]
+        },
+        {
+            "question": "I'm trying to improve my bread recipe. What adjustments would you suggest to change the overall texture of the bread?",
+            "preference_being_tested": "I prioritize crust texture over crumb softness in bread, aiming for a 4.5+ crust rating.",
+            "expected_compliance": "Response should focus on techniques and adjustments that enhance crust texture rather than emphasizing crumb softness or other aspects.",
+            "compliance_indicators": [
+                "recommends methods that specifically affect crust characteristics",
+                "mentions baking time, temperature, or ingredients that influence crust",
+                "avoids focusing primarily on crumb softness or interior texture"
+            ],
+            "non_compliance_signs": [
+                "only suggests changes that improve crumb softness",
+                "ignores crust-related techniques",
+                "focuses on flavor or other unrelated bread qualities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                224
+            ],
+            "rubric": [
+                "LLM response should mention: techniques to improve crust texture"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed summary of everything involved in planning, preparing, and executing my recent baking-related activities and events, including how I managed challenges, coordinated with others, and incorporated feedback throughout the process?",
+            "ideal_summary": "The summary should comprehensively cover the entire scope of the user's baking endeavors, integrating multiple facets such as initial planning stages, collaboration with friends like Courtney, Marisa, Michele, Audrey, and Ryan, and participation in community groups like the Saint Helena Baking Club. It should detail the user's approach to managing stress and food safety during social baking sessions, strategies for improving baking skills through club involvement, and decision-making processes for contest entries including recipe selection and presentation. The narrative must also include how the user gathered and utilized feedback from peers during workshop rehearsals and social events, methods for enhancing event engagement and atmosphere, and techniques for sharing recipes and photos effectively within the baking community. Additionally, the summary should reflect the user's iterative improvements in baking quality, presentation, and feedback collection, as well as their efforts to balance creativity, technical skill development, and social interaction across multiple sessions and events. Overall, the summary must weave together these interconnected threads into a coherent, multi-layered account of the user's comprehensive baking journey and event management.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and social integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "iterative improvement process",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                13,
+                79,
+                85,
+                97,
+                105,
+                201,
+                341,
+                461,
+                839,
+                843,
+                927,
+                1017,
+                727
+            ],
+            "rubric": [
+                "LLM response should mention: It should detail the user's approach to managing stress and food safety during social baking sessions, strategies for improving baking skills through club involvement, and decision-making processes for contest entries including recipe selection and presentation.",
+                "LLM response should mention: The narrative must also include how the user gathered and utilized feedback from peers during workshop rehearsals and social events, methods for enhancing event engagement and atmosphere, and techniques for sharing recipes and photos effectively within the baking community.",
+                "LLM response should mention: Additionally, the summary should reflect the user's iterative improvements in baking quality, presentation, and feedback collection, as well as their efforts to balance creativity, technical skill development, and social interaction across multiple sessions and events.",
+                "LLM response should mention: Overall, the summary must weave together these interconnected threads into a coherent, multi-layered account of the user's comprehensive baking journey and event management."
+            ]
+        },
+        {
+            "question": "Can you summarize how my baking goals, techniques, and challenges have developed over time based on our conversations?",
+            "ideal_summary": "Over the course of our discussions, your baking journey has progressed through several stages. Initially, you set an ambitious goal to master bread, pastries, and desserts by April 2024, committing to baking at least three times a week with a structured plan that gradually increased in complexity. You then refined this plan by incorporating a detailed weekly and monthly schedule, balancing different types of baked goods to ensure steady skill development. Alongside skill-building, you focused on improving specific technical aspects, such as achieving precise measuring accuracy within \u00b11 gram by February 2024 through daily practice and calibration. You also experimented with ingredient adjustments, like optimizing oil types for cake moistness and enhancing sourdough flavor and texture by adding malt powder and other ingredients. Throughout, you addressed practical challenges, including kitchen organization strategies to separate vegan and non-vegan ingredients and scheduling baking lessons around fixed weekly commitments. This evolving approach reflects a comprehensive and adaptive baking practice that integrates goal-setting, technical skill improvement, ingredient experimentation, and logistical planning.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                35,
+                37,
+                39,
+                137,
+                233,
+                331,
+                453
+            ],
+            "key_elements_tested": [
+                "goal progression",
+                "skill development",
+                "technical refinement",
+                "ingredient experimentation",
+                "practical organization and scheduling"
+            ],
+            "synthesis_required": "Integrating multiple facets of baking goals, techniques, challenges, and planning into a coherent narrative showing progression",
+            "source_chat_ids": [
+                35,
+                37,
+                39,
+                137,
+                233,
+                331,
+                453
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you set an ambitious goal to master bread, pastries, and desserts by April 2024, committing to baking at least three times a week with a structured plan that gradually increased in complexity.",
+                "LLM response should mention: You then refined this plan by incorporating a detailed weekly and monthly schedule, balancing different types of baked goods to ensure steady skill development.",
+                "LLM response should mention: Alongside skill-building, you focused on improving specific technical aspects, such as achieving precise measuring accuracy within \u00b11 gram by February 2024 through daily practice and calibration.",
+                "LLM response should mention: You also experimented with ingredient adjustments, like optimizing oil types for cake moistness and enhancing sourdough flavor and texture by adding malt powder and other ingredients.",
+                "LLM response should mention: Throughout, you addressed practical challenges, including kitchen organization strategies to separate vegan and non-vegan ingredients and scheduling baking lessons around fixed weekly commitments."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I met my mom at home and when I completed my first successful batch of Miche's sourdough?",
+            "answer": "5 days passed between when you met your mom at home on January 1, 2024, and when you completed your first successful batch of Miche's sourdough on January 6, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 1, 2024: met mom at home",
+                "January 6, 2024: completed first successful sourdough batch"
+            ],
+            "conversation_references": [
+                "Session 14: meeting mom at home",
+                "Session 74: sourdough batch completion"
+            ],
+            "calculation_required": "January 6 - January 1 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    74
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5 days"
+            ]
+        },
+        {
+            "question": "How many days before the baking contest did Ryan offer to help with photography?",
+            "answer": "Ryan offered to help with photography 5 days before the baking contest, since he offered help on March 10 and the contest is on March 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15: baking contest",
+                "March 10: Ryan offered photography help"
+            ],
+            "conversation_references": [
+                "Session 1: Contest date and tips",
+                "Session 2: Ryan's photography help"
+            ],
+            "calculation_required": "March 15 - March 10 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    176
+                ],
+                "second_event": [
+                    200,
+                    206
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5 days"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,594 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Dr. Marie Leclerc\u2019s professional background and qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Dr. Marie Leclerc\u2019s professional background and qualifications.",
+            "difficulty": "medium",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The plan mentions Dr. Marie Leclerc as a therapist but does not provide any details about her background or qualifications.",
+            "plan_reference": "Multiple batches mention Dr. Marie Leclerc but no professional background details are given.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Dr. Marie Leclerc’s professional background and qualifications."
+            ]
+        },
+        {
+            "question": "What was discussed or decided during the family counseling session with John on June 20, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the discussions or decisions made during the June 20 family counseling session.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The session is scheduled and mentioned but no details on content or outcomes are provided.",
+            "plan_reference": "Batch 5 mentions the family counseling session but lacks discussion details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the discussions or decisions made during the June 20 family counseling session."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever apologized to Rachael in person for forgetting my anniversary?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never apologized to Rachael in person for forgetting your anniversary, but you also mentioned accepting full responsibility and apologizing in person. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "In-person apology to Rachael for forgetting anniversary",
+            "conversation_references": [
+                "Session 174: Never apologized in person",
+                "Session 64: Accepted responsibility and apologized in person"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    174
+                ],
+                "second_statement": [
+                    64
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never apologized in person for forgetting your anniversary",
+                "LLM response should mention: you also mentioned accepting full responsibility and apologizing in person",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever apologized for missing any rehearsals?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never apologized for missing any rehearsals, but you also mentioned taking responsibility and apologizing for a missed rehearsal. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Apologizing for missed rehearsals",
+            "conversation_references": [
+                "Session 1070: Never apologized statement",
+                "Session 1008: Took responsibility and apologized"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    1070
+                ],
+                "second_statement": [
+                    1008
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never apologized for missing any rehearsals",
+                "LLM response should mention: you also mentioned taking responsibility and apologizing for a missed rehearsal",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my relationship progress and goals throughout our conversations in order (mention 10 items)?",
+            "answer": "You mentioned aspects of your relationship progress and goals in this order: 1) Concerns about maintaining the relationship and its origins, 2) Addressing trust issues and age difference, 3) Setting measurable trust improvement goals with surveys, 4) Discussing satisfaction targets and compromises, 5) Focusing on maintaining high satisfaction with ongoing communication, 6) Deepening emotional intimacy and closeness goals, 7) Planning creative collaboration and its impact, 8) Managing commitments during shared time and vacations, 9) Finalizing creative projects and related scheduling, 10) Sustaining satisfaction with communication and social compromises.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 22: Relationship concerns and origins",
+                "Session 36: Trust and age difference",
+                "Sessions 192 and 370: Trust goals and surveys",
+                "Sessions 492 and 498: Satisfaction targets and compromises",
+                "Sessions 608 and 712: Maintaining satisfaction and communication",
+                "Sessions 964 and 970: Emotional intimacy goals",
+                "Sessions 1086 and 1090: Creative collaboration and scheduling",
+                "Session 804: Commitments during vacation",
+                "Session 1188: Sustaining satisfaction and social compromises"
+            ],
+            "ordering_tested": [
+                "1st: Relationship concerns and origins",
+                "2nd: Trust issues and age difference",
+                "3rd: Trust improvement goals with surveys",
+                "4th: Satisfaction targets and compromises",
+                "5th: Maintaining satisfaction with communication",
+                "6th: Deepening emotional intimacy",
+                "7th: Creative collaboration planning",
+                "8th: Commitments during shared time",
+                "9th: Finalizing creative projects",
+                "10th: Sustaining satisfaction and social compromises"
+            ],
+            "source_chat_ids": [
+                22,
+                36,
+                192,
+                370,
+                492,
+                608,
+                712,
+                804,
+                1086,
+                1188
+            ],
+            "rubric": [
+                "LLM response should mention: Relationship concerns and origins",
+                "LLM response should mention: Trust issues and age difference",
+                "LLM response should mention: Trust improvement goals with surveys",
+                "LLM response should mention: Satisfaction targets and compromises",
+                "LLM response should mention: Maintaining satisfaction with communication",
+                "LLM response should mention: Deepening emotional intimacy",
+                "LLM response should mention: Creative collaboration planning",
+                "LLM response should mention: Commitments during shared time",
+                "LLM response should mention: Finalizing creative projects",
+                "LLM response should mention: Sustaining satisfaction and social compromises"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different strategies and concerns related to managing my emotional well-being and relationship throughout our conversations, in order (mention 8 items)?",
+            "answer": "You mentioned these topics in this order: 1) Concerns about couples counseling and rebuilding trust (chat_ids 86, 88, 98, 100, 102), 2) Efforts to rebuild intimacy through shared music sessions (chat_ids 316, 318, 320), 3) Using meditation and relaxation apps to reduce irritability (chat_ids 470, 472, 476), 4) Applying breathing exercises to reduce conflict and emotional tension (chat_ids 574, 576, 580), 5) Managing stress and emotional regulation during travel and packing (chat_ids 690, 780, 786, 788, 924), 6) Addressing performance anxiety related to recording sessions with breathing techniques (chat_ids 1060, 1064, 1066), 7) Seeking alternative emotional regulation methods for recording stress and creative challenges (chat_ids 1164, 1168), 8) Using breathing exercises to manage nerves on a party day and applying those techniques to other stressful situations (chat_ids 1258, 1262).",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Sessions 86, 88, 98, 100, 102: Couples counseling and trust rebuilding",
+                "Sessions 316, 318, 320: Intimacy through music sessions",
+                "Sessions 470, 472, 476: Meditation and relaxation apps",
+                "Sessions 574, 576, 580: Breathing exercises for conflict reduction",
+                "Sessions 690, 780, 786, 788, 924: Emotional regulation during travel",
+                "Sessions 1060, 1064, 1066: Performance anxiety and breathing techniques",
+                "Sessions 1164, 1168: Alternative emotional regulation for recording stress",
+                "Sessions 1258, 1262: Managing party-day nerves and applying techniques elsewhere"
+            ],
+            "ordering_tested": [
+                "1st: Couples counseling and trust rebuilding",
+                "2nd: Intimacy through music sessions",
+                "3rd: Meditation and relaxation apps",
+                "4th: Breathing exercises for conflict reduction",
+                "5th: Emotional regulation during travel",
+                "6th: Performance anxiety and breathing techniques",
+                "7th: Alternative emotional regulation for recording stress",
+                "8th: Managing party-day nerves and applying techniques elsewhere"
+            ],
+            "source_chat_ids": [
+                [
+                    86,
+                    88,
+                    98,
+                    100,
+                    102
+                ],
+                [
+                    316,
+                    318,
+                    320
+                ],
+                [
+                    470,
+                    472,
+                    476
+                ],
+                [
+                    574,
+                    576,
+                    580
+                ],
+                [
+                    690,
+                    780,
+                    786,
+                    788,
+                    924
+                ],
+                [
+                    1060,
+                    1064,
+                    1066
+                ],
+                [
+                    1164,
+                    1168
+                ],
+                [
+                    1258,
+                    1262
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Couples counseling and trust rebuilding",
+                "LLM response should mention: Intimacy through music sessions",
+                "LLM response should mention: Meditation and relaxation apps",
+                "LLM response should mention: Breathing exercises for conflict reduction",
+                "LLM response should mention: Emotional regulation during travel",
+                "LLM response should mention: Performance anxiety and breathing techniques",
+                "LLM response should mention: Alternative emotional regulation for recording stress",
+                "LLM response should mention: Managing party-day nerves and applying techniques elsewhere"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What day and time do I usually talk to my son on the phone?",
+            "answer": "Every Sunday at 7 PM.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions talking to son every Sunday at 7 PM",
+            "key_facts_tested": [
+                "day of the week for calls",
+                "time of calls"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should mention: Sunday",
+                "LLM response should mention: 7 PM"
+            ]
+        },
+        {
+            "question": "What is my current annual salary in my job as a senior engineer?",
+            "answer": "You earn approximately $75,000 CAD annually.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions earning approximately $75,000 CAD annually.",
+            "key_facts_tested": [
+                "annual salary",
+                "amount",
+                "currency"
+            ],
+            "source_chat_ids": [
+                42
+            ],
+            "rubric": [
+                "LLM response should mention: $75,000",
+                "LLM response should mention: CAD",
+                "LLM response should mention: annually"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How long is the workshop tomorrow?",
+            "instruction_being_tested": "Always specify the duration when I ask about events or sessions.",
+            "expected_compliance": "Response should include the length of the workshop in addition to any other details.",
+            "compliance_indicators": [
+                "mention of how long the workshop lasts",
+                "clear statement of time span",
+                "specific length of the event"
+            ],
+            "non_compliance_signs": [
+                "only date or time given without length",
+                "general description without time frame",
+                "no mention of how long it goes"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                584
+            ],
+            "rubric": [
+                "LLM response should mention: duration of the workshop"
+            ]
+        },
+        {
+            "question": "What options do I have for getting from New York to Paris next month?",
+            "instruction_being_tested": "Always include cost details when I ask about travel arrangements.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                792
+            ],
+            "rubric": [
+                "LLM response should mention: itemized costs",
+                "LLM response should mention: specific dollar amounts",
+                "LLM response should mention: category-by-category breakdown"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my annual salary as a senior engineer at Saint Pierre Manufacturing Ltd?",
+            "answer": "Approximately $80,000 CAD annually.",
+            "difficulty": "easy",
+            "update_type": "salary_increase",
+            "tests_retention_of": "updated annual salary amount",
+            "conversation_references": [
+                "I earn approximately $75,000 CAD annually as a senior engineer at Saint Pierre Manufacturing Ltd.",
+                "I recently received a raise, increasing my annual salary to approximately $80,000 CAD as a senior engineer at Saint Pierre Manufacturing Ltd."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $75,000 CAD salary instead of the updated $80,000 CAD amount.",
+            "source_chat_ids": {
+                "original_info": [
+                    42,
+                    56
+                ],
+                "updated_info": [
+                    168,
+                    170
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $80,000",
+                "LLM response should mention: CAD",
+                "LLM response should mention: annually"
+            ]
+        },
+        {
+            "question": "What is the nightly rate for the hotel room I booked for my Quebec City trip?",
+            "answer": "$270 CAD per night",
+            "difficulty": "easy",
+            "update_type": "price_adjustment",
+            "tests_retention_of": "updated hotel nightly rate",
+            "conversation_references": [
+                "Booked hotel rooms at H\u00f4tel Ch\u00e2teau Frontenac for Quebec City trip, $250 CAD per night, July 30, 2024.",
+                "The hotel rate for our Quebec City trip was adjusted to $270 CAD per night due to seasonal demand."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $250 CAD nightly rate instead of the updated $270 CAD rate",
+            "source_chat_ids": {
+                "original_info": [
+                    736
+                ],
+                "updated_info": [
+                    790
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $270",
+                "LLM response should mention: CAD",
+                "LLM response should mention: per night"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different goals related to trust or satisfaction have I set with Rachael across our conversations?",
+            "answer": "Four goals",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Goal to rebuild trust by June 30, 2024",
+                "Goal to improve communication scores from 3 to 7/10 by July 1, 2024",
+                "Goal to increase mutual trust score from 6 to 8/10 by July 15, 2024",
+                "Goal to reach 85% satisfaction by August 1, 2024"
+            ],
+            "reasoning_steps": [
+                "Identify the goal to rebuild trust by June 30, 2024 from the first set of sessions",
+                "Recall the goal to improve communication scores from 3 to 7/10 by July 1, 2024",
+                "Note the goal to increase mutual trust score from 6 to 8/10 by July 15, 2024",
+                "Recognize the goal to reach 85% satisfaction by August 1, 2024"
+            ],
+            "source_chat_ids": [
+                48,
+                192,
+                370,
+                492
+            ],
+            "rubric": [
+                "LLM response should mention: Four goals"
+            ]
+        },
+        {
+            "question": "How much did my communication quality rating improve from mid-March to August 2024?",
+            "answer": "Your communication quality rating improved by 5.2 points, from 4 in mid-March to 9.2 in August 2024.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 222 (mid-March rating 4 to 6)",
+                "chat_id 424 (April rating improved to 7.5)",
+                "chat_id 866 (August rating improved to 9.2)"
+            ],
+            "reasoning_steps": [
+                "Identify the initial communication rating of 4 in mid-March.",
+                "Note the intermediate improvement to 6 and then 7.5 in April.",
+                "Find the latest rating of 9.2 in August and calculate the difference from the initial 4."
+            ],
+            "source_chat_ids": [
+                222,
+                424,
+                866
+            ],
+            "rubric": [
+                "LLM response should mention: 5.2 points improvement"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "How should I organize my activities for the upcoming week to handle both planned events and unexpected changes?",
+            "preference_being_tested": "I prefer planning ahead with detailed schedules to reduce stress and improve relationship quality.",
+            "expected_compliance": "Response should include suggestions that incorporate detailed scheduling and planning ahead, while also addressing flexibility for unexpected events, reflecting the user's preference for structured planning to manage stress and relationships.",
+            "compliance_indicators": [
+                "recommends creating a detailed schedule",
+                "includes planning activities in advance",
+                "addresses managing stress through organization",
+                "balances planned events with flexibility for changes"
+            ],
+            "non_compliance_signs": [
+                "suggests spontaneous or unstructured approaches only",
+                "ignores the idea of scheduling ahead",
+                "focuses solely on reacting to events without planning",
+                "does not mention ways to reduce stress through organization"
+            ],
+            "difficulty": "medium",
+            "preference_type": "planning and organization",
+            "source_chat_ids": [
+                764,
+                768
+            ],
+            "rubric": [
+                "LLM response should mention: creating a detailed schedule",
+                "LLM response should mention: planning activities in advance"
+            ]
+        },
+        {
+            "question": "I'm looking for ways to strengthen the bond between me and my partner. What approaches could we try together?",
+            "preference_being_tested": "I prefer creative collaboration as a method to deepen emotional connection.",
+            "expected_compliance": "Response should suggest methods involving joint creative activities or collaborative efforts to enhance emotional connection, reflecting the user's preference for creative collaboration.",
+            "compliance_indicators": [
+                "recommends collaborative creative activities",
+                "mentions working together on creative projects",
+                "focuses on shared creative experiences",
+                "avoids suggesting only individual or non-creative methods"
+            ],
+            "non_compliance_signs": [
+                "only suggests individual activities",
+                "recommends non-collaborative approaches",
+                "ignores creative collaboration",
+                "focuses solely on communication or other unrelated methods"
+            ],
+            "difficulty": "medium",
+            "preference_type": "methodology",
+            "source_chat_ids": [
+                1038
+            ],
+            "rubric": [
+                "LLM response should mention: collaborative creative activities",
+                "LLM response should mention: working together on creative projects"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed summary of everything we've covered about rebuilding trust and strengthening my relationship, including the challenges, strategies, interactions, and progress over time?",
+            "ideal_summary": "The summary should comprehensively integrate the user's journey of rebuilding trust and deepening their relationship with Rachael, capturing the initial recognition of trust issues and the emotional impact on both parties. It should outline the multi-step approach advised, including acknowledging mistakes, taking responsibility, and communicating openly and honestly. The narrative must include the development and use of structured conversations, such as the initial apology, ongoing weekly check-ins, and specific dialogue examples to foster transparency and empathy. It should reflect the integration of personal growth efforts, like learning from an accountability course and applying those lessons to relationship dynamics. The summary needs to address balancing personal development with sensitivity to Rachael's feelings, emphasizing active listening, patience, and consistent follow-through on commitments. It should also cover the involvement of trusted friends for perspective and support, managing professional relationships alongside personal goals, and strategies to create shared experiences and emotional connection through activities like coastal walks. The progression over time, including setting milestones, handling setbacks such as forgotten anniversaries, and adapting plans based on feedback, must be woven into a coherent narrative that highlights the complexity and multi-threaded nature of rebuilding trust and nurturing a long-term relationship.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                1,
+                3,
+                22,
+                33,
+                49,
+                59,
+                85,
+                161
+            ],
+            "rubric": [
+                "LLM response should mention: rebuilding trust and deepening their relationship with Rachael, capturing the initial recognition of trust issues and the emotional impact on both parties.",
+                "LLM response should mention: acknowledging mistakes, taking responsibility, and communicating openly and honestly.",
+                "LLM response should mention: structured conversations, such as the initial apology, ongoing weekly check-ins, and specific dialogue examples to foster transparency and empathy.",
+                "LLM response should mention: personal growth efforts, like learning from an accountability course and applying those lessons to relationship dynamics.",
+                "LLM response should mention: balancing personal development with sensitivity to Rachael's feelings, emphasizing active listening, patience, and consistent follow-through on commitments.",
+                "LLM response should mention: involvement of trusted friends for perspective and support, managing professional relationships alongside personal goals, and strategies to create shared experiences and emotional connection through activities like coastal walks.",
+                "LLM response should mention: progression over time, including setting milestones, handling setbacks such as forgotten anniversaries, and adapting plans based on feedback, woven into a coherent narrative that highlights the complexity and multi-threaded nature of rebuilding trust and nurturing a long-term relationship."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of my efforts to rebuild trust with Rachael?",
+            "ideal_summary": "You have been working on rebuilding trust with Rachael by taking several steps, including sincerely apologizing for past mistakes, committing to consistent actions like taking over household chores for a set period, planning special activities, and maintaining regular weekly check-ins to discuss progress. You are also tracking your efforts through weekly journals and reflecting on your progress together. Additionally, you are preparing for couples counseling with Dr. Marie Leclerc to further support your relationship and improve communication.",
+            "difficulty": "easy",
+            "summarization_type": "simple_interaction_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 80,
+            "key_elements_tested": [
+                "basic interaction sequence",
+                "simple factual combination",
+                "straightforward narrative"
+            ],
+            "synthesis_required": "Combining basic information into simple coherent summary",
+            "source_chat_ids": [
+                99,
+                111,
+                113
+            ],
+            "rubric": [
+                "LLM response should mention: sincerely apologizing for past mistakes",
+                "LLM response should mention: committing to consistent actions like taking over household chores for a set period",
+                "LLM response should mention: planning special activities",
+                "LLM response should mention: maintaining regular weekly check-ins to discuss progress",
+                "LLM response should mention: tracking efforts through weekly journals and reflecting on progress together",
+                "LLM response should mention: preparing for couples counseling with Dr. Marie Leclerc to further support your relationship and improve communication"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I forgot our anniversary and when I apologized to Rachael in person at Caf\u00e9 La Mer?",
+            "answer": "11 days passed between forgetting the anniversary on February 28 and apologizing in person on March 10.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 28: anniversary forgotten",
+                "March 10: in-person apology at Caf\u00e9 La Mer"
+            ],
+            "conversation_references": [
+                "Session 1: Anniversary forgotten",
+                "Session 3: Apology in person"
+            ],
+            "calculation_required": "March 10 - February 28 = 11 days",
+            "source_chat_ids": {
+                "first_event": [
+                    58
+                ],
+                "second_event": [
+                    64
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 11 days",
+                "LLM response should state: from February 28 till March 10"
+            ]
+        },
+        {
+            "question": "How many days are there between my couples counseling session with Dr. Marie Leclerc and the date I want to rebuild trust with Rachael?",
+            "answer": "There are 86 days between the couples counseling session on April 5, 2024, and the goal to rebuild trust by June 30, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 5, 2024: couples counseling session",
+                "June 30, 2024: goal to rebuild trust"
+            ],
+            "conversation_references": [
+                "Session 86: counseling session date",
+                "Session 98: trust rebuilding goal date"
+            ],
+            "calculation_required": "June 30, 2024 - April 5, 2024 = 86 days",
+            "source_chat_ids": {
+                "first_event": [
+                    86
+                ],
+                "second_event": [
+                    98
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 86 days",
+                "LLM response should state: from April 5, 2024 till June 30, 2024"
+            ]
+        }
+    ]
+}

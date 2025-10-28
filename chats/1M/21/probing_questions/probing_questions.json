@@ -1,0 +1,762 @@
+{
+    "abstention": [
+        {
+            "question": "What specific advice did Stephanie give during the May 8, 2024, video call about legal documents?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific advice Stephanie gave during the May 8 video call.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Stephanie\u2019s advice is referenced but no details of the advice are provided",
+            "plan_reference": "Batch 3, Bullet 13",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific advice Stephanie gave during the May 8 video call"
+            ]
+        },
+        {
+            "question": "Could you provide the content or clauses reviewed in the draft listing agreement with Selim on March 11, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the exact content or clauses of the draft listing agreement reviewed on March 11, 2024.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Only the existence of the draft and exclusivity term is mentioned, no detailed contract content",
+            "plan_reference": "Batch 1, Bullet 14",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the exact content or clauses of the draft listing agreement reviewed on March 11, 2024"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever rejected any offers on my house during the selling process?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you rejected the first offer and made a counteroffer, but you also mentioned that you've never rejected any offers on your house. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Rejection of offers on the house",
+            "conversation_references": [
+                "Session 1: Rejected first offer and countered",
+                "Session 2: Never rejected any offers"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    310,
+                    320,
+                    330,
+                    332,
+                    334
+                ],
+                "second_statement": [
+                    496
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you rejected the first offer and made a counteroffer",
+                "LLM response should mention: you also mentioned that you've never rejected any offers on your house",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever taken photos of my garden to preserve memories?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you took final photos of your garden to preserve memories, but you also mentioned never having taken any photos of the garden before moving. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Taking photos of the garden",
+            "conversation_references": [
+                "chat_id: 974, 978, 982, 986, 988",
+                "chat_id: 998"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    974,
+                    978,
+                    982,
+                    986,
+                    988
+                ],
+                "second_statement": [
+                    998
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you took final photos of your garden to preserve memories",
+                "LLM response should mention: you also mentioned never having taken any photos of the garden before moving",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different financial aspects related to my property evolve throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your focus on financial aspects evolved in this sequence: 1) Initial concerns about agent involvement and paperwork, 2) Questions about estimated closing costs and their negotiability, 3) Discussions about mortgage balance and net profit calculations, 4) Inquiries into agent commission fees and sale price adjustments, 5) Exploration of marketing and rental pricing strategies, 6) Consideration of local market pricing and competitive asking prices, 7) Evaluation of buyer offers and implications on sale price, 8) Final reflections on overall profit calculations including closing costs and contingency planning.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id 4, 12, 16",
+                "chat_id 250, 272, 274, 276",
+                "chat_id 252",
+                "chat_id 796, 798, 804, 810, 1018, 1038",
+                "chat_id 1222, 1226, 1230, 1422, 1426",
+                "chat_id 1658, 1660, 1662, 1664, 1670",
+                "chat_id 1898, 1900, 1906, 1908",
+                "chat_id 2104, 2112, 2118, 2120"
+            ],
+            "ordering_tested": [
+                "1st: Agent involvement and paperwork",
+                "2nd: Closing costs and negotiation",
+                "3rd: Mortgage balance and net profit",
+                "4th: Commission fees and sale price adjustments",
+                "5th: Marketing and rental pricing",
+                "6th: Market pricing and asking price",
+                "7th: Buyer offers and sale implications",
+                "8th: Final profit calculations and contingency"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple financial subtopics",
+                "spans many conversation sessions",
+                "involves nuanced progression of related themes",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                4,
+                12,
+                16,
+                250,
+                272,
+                274,
+                276,
+                252,
+                796,
+                798,
+                804,
+                810,
+                1018,
+                1038,
+                1222,
+                1226,
+                1230,
+                1422,
+                1426,
+                1658,
+                1660,
+                1662,
+                1664,
+                1670,
+                1898,
+                1900,
+                1906,
+                1908,
+                2104,
+                2112,
+                2118,
+                2120
+            ],
+            "rubric": [
+                "Agent involvement and paperwork",
+                "Closing costs and negotiation",
+                "Mortgage balance and net profit",
+                "Commission fees and sale price adjustments",
+                "Marketing and rental pricing",
+                "Market pricing and asking price",
+                "Buyer offers and sale implications",
+                "Final profit calculations and contingency"
+            ]
+        },
+        {
+            "question": "How did my focus on family involvement in the home preparation process shift throughout our conversations in order? Mention ONLY and ONLY six items.",
+            "answer": "Your focus on family involvement evolved in this sequence: 1) You first mentioned your son's general suggestions about staging and his age influencing his opinions, 2) Then you discussed balancing his modern ideas with traditional staging approaches, 3) Next, you explored compromising with him on keeping personal items visible during staging, 4) After that, you considered the potential impact of storing personal items and the consequences of not reaching compromises, 5) Later, you brought up your other child's role in organizing a garage sale and ways to involve him more in the moving process, 6) Finally, you reflected on emotional and practical aspects related to family members moving away and how to support those transitions.",
+            "difficulty": "hard",
+            "ordering_type": "conversation_evolution",
+            "total_mentions": 6,
+            "conversation_references": [
+                "20, 24, 38, 40, 42",
+                "26",
+                "338, 340",
+                "348, 352, 354",
+                "660, 662, 670",
+                "1176, 1184, 1190"
+            ],
+            "ordering_tested": [
+                "1st: Son's staging suggestions and age relevance",
+                "2nd: Balancing modern and traditional staging ideas",
+                "3rd: Compromising on personal items visibility",
+                "4th: Impact of personal items storage and relationship consequences",
+                "5th: Other child's involvement in garage sale and moving tasks",
+                "6th: Emotional and practical aspects of family moving away"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple family-related themes",
+                "spans many conversation sessions",
+                "involves nuanced shifts in focus and priorities",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                20,
+                24,
+                26,
+                32,
+                38,
+                40,
+                42,
+                338,
+                340,
+                348,
+                352,
+                354,
+                660,
+                662,
+                670,
+                1176,
+                1184,
+                1190
+            ],
+            "rubric": [
+                "Son's staging suggestions and age relevance",
+                "Balancing modern and traditional staging ideas",
+                "Compromising on personal items visibility",
+                "Impact of personal items storage and relationship consequences",
+                "Other child's involvement in garage sale and moving tasks",
+                "Emotional and practical aspects of family moving away"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When is my meeting with Elegant Spaces scheduled?",
+            "answer": "Your meeting with Elegant Spaces is scheduled for March 25, 2024.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 4: USER mentions having a meeting scheduled with Elegant Spaces on March 25, 2024.",
+            "key_facts_tested": [
+                "meeting date"
+            ],
+            "source_chat_ids": [
+                54
+            ],
+            "rubric": [
+                "LLM response should state: March 25, 2024"
+            ]
+        },
+        {
+            "question": "How did you recommend preparing and coordinating to ensure the best outcome from the service I arranged for my home, and what steps did you suggest I take after the session to maximize its impact?",
+            "answer": "I recommended that you prepare your home by staging, decluttering, optimizing lighting, arranging furniture, and cleaning fixtures before the session. During the shoot, you should confirm the appointment, communicate your expectations and desired shots with the photographer, and be present to assist. After the session, I advised reviewing the delivered photos carefully, selecting the best 30 high-resolution images, and optimizing them for web use to maximize their effectiveness in marketing your home.",
+            "difficulty": "hard",
+            "question_type": "Context-Based Recall",
+            "conversation_reference": "Multiple turns: User booking details and assistant's detailed preparation, coordination, and post-session advice",
+            "key_facts_tested": [
+                "preparation steps: staging, decluttering, lighting, furniture layout, cleaning",
+                "communication: confirming appointment, discussing expectations, being present during shoot",
+                "post-session: reviewing photos, selecting 30 high-res images, optimizing for web"
+            ],
+            "extraction_challenge": "LLM must synthesize preparation, coordination, and post-session recommendations scattered across different assistant messages and relate them to the user's booked service without directly referencing the booking details",
+            "source_chat_ids": [
+                281,
+                295
+            ],
+            "rubric": [
+                "LLM response should state: prepare your home by staging",
+                "LLM response should state: decluttering",
+                "LLM response should state: optimizing lighting",
+                "LLM response should state: arranging furniture",
+                "LLM response should state: cleaning fixtures",
+                "LLM response should state: During the shoot, you should confirm the appointment, communicate your expectations and desired shots with the photographer",
+                "LLM response should state: During the shoot, be present to assist",
+                "LLM response should state: After the session, I advised reviewing the delivered photos carefully, selecting the best 30 high-resolution images, and optimizing them for web use"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What should I consider when planning my finances for the next year?",
+            "instruction_being_tested": "Always include cost details when I ask about financial planning.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                494
+            ],
+            "rubric": [
+                "LLM response should contain: itemized list of costs",
+                "LLM response should contain: category-by-category breakdown",
+                "LLM response should contain: detailed cost analysis"
+            ]
+        },
+        {
+            "question": "What should I know about the terms if I want to rent out my place?",
+            "instruction_being_tested": "Always mention rent changes when I ask about tenant agreements.",
+            "expected_compliance": "Response should include information about any adjustments to the payment amount over time in addition to other terms.",
+            "compliance_indicators": [
+                "mentions adjustments to payment amounts",
+                "discusses changes in payment during the agreement",
+                "includes details about payment modifications"
+            ],
+            "non_compliance_signs": [
+                "no mention of payment adjustments",
+                "only general terms discussed",
+                "ignores any changes in payment"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                1650
+            ],
+            "rubric": [
+                "LLM response should contain: mentions adjustments to payment amounts",
+                "LLM response should contain: discusses changes in payment during the agreement",
+                "LLM response should contain: includes details about payment modifications"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What time should I expect the moving company to arrive on moving day?",
+            "answer": "8:30 AM",
+            "difficulty": "easy",
+            "update_type": "schedule_adjustment",
+            "tests_retention_of": "updated arrival time of the moving company",
+            "conversation_references": [
+                "Planning & Logistics Labels: Moving Plans: Booked moving company \u201cQuickMove\u201d for June 28, 2024, 9 AM; cost $1,500.",
+                "Information Update: The moving company \u201cQuickMove\u201d confirmed an earlier arrival time, now expected at 8:30 AM on June 28, 2024."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 9 AM arrival time instead of the updated 8:30 AM time",
+            "source_chat_ids": {
+                "original_info": [
+                    500,
+                    512
+                ],
+                "updated_info": [
+                    788
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 8:30 AM"
+            ]
+        },
+        {
+            "question": "What is the rental price I have set for my Kadikoy apartment?",
+            "answer": "4,550 TRY per month",
+            "difficulty": "easy",
+            "update_type": "price_adjustment",
+            "tests_retention_of": "updated rental price amount",
+            "conversation_references": [
+                "Financial & Budget Labels: Asking Price: Set rental price at 4,500 TRY/month for Kadikoy apartment.",
+                "Information Update: The rental price was adjusted slightly after market feedback, with final listing confirming 4,550 TRY/month."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original rental price of 4,500 TRY/month instead of the updated 4,550 TRY/month",
+            "source_chat_ids": {
+                "original_info": [
+                    1222,
+                    1226,
+                    1230
+                ],
+                "updated_info": [
+                    1414
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4,550 TRY"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much am I spending in total on staging and photography services for my home?",
+            "answer": "You are spending a total of $1,550 on staging and photography services.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "professional staging budget",
+                "photography booking details"
+            ],
+            "reasoning_steps": [
+                "Identify the amount allocated for professional staging services.",
+                "Identify the amount allocated for professional photography services.",
+                "Add the two amounts to find the total spending."
+            ],
+            "source_chat_ids": [
+                51,
+                281
+            ],
+            "rubric": [
+                "LLM response should state: $1,550"
+            ]
+        },
+        {
+            "question": "Given my goal to list by April 1, sell within three months, and the inspection and final inspection dates, how should I optimally sequence repairs, staging, and marketing to avoid delays and meet my moving plans?",
+            "answer": "To meet your listing and selling goals without delays, start decluttering and staging immediately, complete repairs including the roof leak before the final inspection, schedule professional photography just after staging, finalize marketing materials before listing, coordinate with Selim for pricing and strategy by late March, prepare for the final inspection ensuring all repairs are done by early May, and plan the buyer\u2019s inspection and closing steps to align with your moving schedule. This sequencing minimizes risk of inspection-related delays and aligns marketing and negotiations to close within your desired timeframe.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "Meeting the April 1 listing deadline and preparation steps",
+                "Realistic 3-month sale goal and timeline",
+                "Handling minor roof leak repair and its impact",
+                "Final inspection impact and lender requirements",
+                "Buyer\u2019s inspection and clean report handling",
+                "Moving timeline coordination with repair delays"
+            ],
+            "reasoning_steps": [
+                "Identify the initial preparation tasks (decluttering, staging, repairs) needed before listing by April 1.",
+                "Incorporate the roof leak repair timing and cost to ensure it is completed before final inspection.",
+                "Align marketing activities (photography, listing description, materials) to occur after staging but before listing.",
+                "Schedule consultation with Selim Kaya to finalize pricing and marketing strategy before listing.",
+                "Plan for the final inspection ensuring all repairs are completed and documented to avoid closing delays.",
+                "Account for buyer\u2019s inspection timing and the possibility of no new issues to maintain the closing schedule.",
+                "Integrate moving plans with potential repair or inspection delays, coordinating with the moving company and adjusting timelines as needed.",
+                "Synthesize all timelines and dependencies to create an optimal sequence that meets listing, selling, inspection, and moving goals without conflict."
+            ],
+            "source_chat_ids": [
+                47,
+                49,
+                249,
+                263,
+                265,
+                545,
+                567,
+                831,
+                847,
+                557
+            ],
+            "rubric": [
+                "LLM response should state: start decluttering and staging immediately",
+                "LLM response should state: complete repairs including the roof leak before the final inspection",
+                "LLM response should state: schedule professional photography just after staging",
+                "LLM response should state: finalize marketing materials before listing",
+                "LLM response should state: coordinate with Selim for pricing and strategy by late March",
+                "LLM response should state: prepare for the final inspection ensuring all repairs are done by early May",
+                "LLM response should state: plan the buyer\u2019s inspection and closing steps to align with your moving schedule"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "What should I keep in mind when preparing my home for sale to make it more attractive to buyers?",
+            "preference_being_tested": "I prefer professional staging over DIY to maximize appeal despite higher upfront cost.",
+            "expected_compliance": "Response should suggest or prioritize professional staging as a key approach, reflecting the user's preference for professional help rather than DIY methods.",
+            "compliance_indicators": [
+                "recommends professional staging",
+                "mentions benefits of hiring experts",
+                "avoids suggesting only DIY options",
+                "acknowledges upfront cost but focuses on staging quality"
+            ],
+            "non_compliance_signs": [
+                "only suggests DIY staging",
+                "ignores professional staging options",
+                "focuses solely on cost-saving methods",
+                "does not mention staging or downplays its importance"
+            ],
+            "difficulty": "medium",
+            "preference_type": "service_method_preference",
+            "source_chat_ids": [
+                172,
+                186
+            ],
+            "rubric": [
+                "LLM response should contain: recommends professional staging",
+                "LLM response should contain: mentions benefits of hiring experts",
+                "LLM response should contain: avoids suggesting only DIY options",
+                "LLM response should contain: acknowledges upfront cost but focuses on staging quality"
+            ]
+        },
+        {
+            "question": "I have several appointments to schedule next week related to the move. How would you suggest I organize them?",
+            "preference_being_tested": "I prefer early morning appointments to maximize productivity and reduce stress.",
+            "expected_compliance": "Response should prioritize or suggest scheduling appointments earlier in the day to align with the user's preference for early morning times.",
+            "compliance_indicators": [
+                "recommends morning time slots",
+                "acknowledges benefits of early appointments",
+                "structures schedule to start early",
+                "balances other constraints while favoring early times"
+            ],
+            "non_compliance_signs": [
+                "suggests only afternoon or late appointments",
+                "ignores timing in scheduling advice",
+                "does not mention or consider early time slots",
+                "recommends times that conflict with early morning availability"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                856,
+                862,
+                868
+            ],
+            "rubric": [
+                "LLM response should contain: recommends morning time slots",
+                "LLM response should contain: acknowledges benefits of early appointments",
+                "LLM response should contain: structures schedule to start early"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough summary of everything involved in preparing and selling my home, covering all the key steps, decisions, and interactions that shaped the entire process from start to finish?",
+            "ideal_summary": "The process of preparing and selling the home involved multiple coordinated steps and strategic decisions spanning several months. Initially, meeting with the real estate agent Selim Kaya marked the start, with emphasis on setting a competitive listing price supported by a detailed Comparative Market Analysis and recent appraisals confirming a $420,000 valuation. The timing of the sale was optimized by starting in early spring to leverage market activity and buyer interest. Extensive home preparation included decluttering, staging with a $1,200 budget through Elegant Spaces focusing on high-impact areas like the living room and backyard, and completing necessary repairs such as a roof fix finalized by April 3, which was highlighted as a selling point to build buyer confidence. Professional marketing efforts incorporated a scheduled photography session with FocusLens and a Matterport 3D virtual tour to enhance online listings and attract buyers. Throughout, Selim provided critical support by recommending reliable contractors, assisting with paperwork and legal guidance, and managing negotiations, including advising on counteroffers and commission structures. The negotiation phase involved rejecting an initial $400,000 offer and countering at $415,000, justified by market data and home improvements, with flexibility on terms to facilitate agreement. The timeline was carefully managed with clear deadlines for listing, offers, and closing, supported by detailed checklists and communication strategies. Financial considerations included analyzing commission fees, closing costs, and repair expenses to maximize net profit, while contingency plans addressed potential lender delays and additional repair requests. The final stages involved preparing for contract signing with thorough document review and coordination. Overall, the sale process was a complex, multi-faceted journey requiring strategic planning, resource allocation, expert collaboration, and adaptive decision-making to achieve a successful and timely home sale.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                4,
+                5,
+                12,
+                13,
+                16,
+                17,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                54,
+                55,
+                58,
+                59,
+                62,
+                63,
+                64,
+                72,
+                73,
+                78,
+                79,
+                90,
+                91,
+                92,
+                93,
+                254,
+                255,
+                256,
+                266,
+                267,
+                268,
+                269,
+                270,
+                280,
+                281,
+                282,
+                283,
+                284,
+                285,
+                288,
+                289,
+                290,
+                291,
+                298,
+                299,
+                310,
+                311,
+                320,
+                321,
+                330,
+                331,
+                332,
+                333,
+                334,
+                335,
+                454,
+                455,
+                458,
+                459,
+                516,
+                517,
+                531,
+                533,
+                535,
+                620,
+                621,
+                622,
+                623,
+                624,
+                625,
+                626,
+                627,
+                628,
+                629,
+                630,
+                631,
+                636,
+                637,
+                650,
+                651,
+                652,
+                653
+            ],
+            "rubric": [
+                "LLM response should contain: meeting with the real estate agent Selim Kaya marked the start, with emphasis on setting a competitive listing price supported by a detailed Comparative Market Analysis",
+                "LLM response should contain: The timing of the sale was optimized by starting in early spring to leverage market activity and buyer interest",
+                "LLM response should contain: Extensive home preparation included decluttering, staging with a $1,200 budget through Elegant Spaces focusing on high-impact areas like the living room and backyard, and completing necessary repairs such as a roof fix finalized by April 3",
+                "LLM response should contain: Professional marketing efforts incorporated a scheduled photography session with FocusLens and a Matterport 3D virtual tour to enhance online listings and attract buyers",
+                "LLM response should contain: Selim provided critical support by recommending reliable contractors, assisting with paperwork and legal guidance, and managing negotiations, including advising on counteroffers and commission structures",
+                "LLM response should contain: The negotiation phase involved rejecting an initial $400,000 offer and countering at $415,000, justified by market data and home improvements, with flexibility on terms to facilitate agreement",
+                "LLM response should contain: The timeline was carefully managed with clear deadlines for listing, offers, and closing, supported by detailed checklists and communication strategies",
+                "LLM response should contain: Financial considerations included analyzing commission fees, closing costs, and repair expenses to maximize net profit, while contingency plans addressed potential lender delays and additional repair requests",
+                "LLM response should contain: The final stages involved preparing for contract signing with thorough document review and coordination"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how I've been managing stress throughout the home selling and moving process?",
+            "ideal_summary": "Throughout the home selling and moving process, you have employed various stress management techniques that evolved over time to help you stay calm and focused. Initially, you began practicing daily mindfulness and meditation to reduce anxiety and improve focus, incorporating breathing exercises and short guided sessions using apps like Headspace and Calm. As the process progressed, you integrated mindfulness into daily activities such as mindful walking, active listening during home showings, and creating calming environments with scents and quiet spaces. To address specific stressors like financial decisions and concerns about neighborhood changes, you combined mindfulness with practical strategies including research, transparent communication, and community engagement. Additionally, you supplemented your routine with yoga sessions, progressive muscle relaxation, journaling, and physical exercise to further alleviate stress. Throughout, you maintained a consistent practice, adapted techniques to fit your schedule, and leveraged support networks, demonstrating a comprehensive and evolving approach to managing stress during this challenging period.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                140,
+                141,
+                150,
+                151,
+                160,
+                161,
+                162,
+                163,
+                278,
+                279,
+                292,
+                293,
+                658,
+                659,
+                668,
+                669,
+                672,
+                673,
+                674,
+                675,
+                812,
+                813,
+                824,
+                825,
+                1034,
+                1035,
+                1042,
+                1043
+            ],
+            "key_elements_tested": [
+                "stress management techniques",
+                "progression of coping strategies",
+                "integration of mindfulness and physical activity",
+                "addressing situational challenges",
+                "use of technology and support systems"
+            ],
+            "synthesis_required": "Combining diverse stress management methods and their evolution across multiple stages into a coherent narrative",
+            "source_chat_ids": [
+                140,
+                141,
+                150,
+                151,
+                160,
+                161,
+                162,
+                163,
+                278,
+                279,
+                292,
+                293,
+                658,
+                659,
+                668,
+                669,
+                672,
+                673,
+                674,
+                675,
+                812,
+                813,
+                824,
+                825,
+                1034,
+                1035,
+                1042,
+                1043
+            ],
+            "rubric": [
+                "LLM response should contain: you began practicing daily mindfulness and meditation to reduce anxiety and improve focus, incorporating breathing exercises and short guided sessions using apps like Headspace and Calm",
+                "LLM response should contain: you integrated mindfulness into daily activities such as mindful walking, active listening during home showings, and creating calming environments with scents and quiet spaces",
+                "LLM response should contain: To address specific stressors like financial decisions and concerns about neighborhood changes, you combined mindfulness with practical strategies including research, transparent communication, and community engagement",
+                "LLM response should contain: you supplemented your routine with yoga sessions, progressive muscle relaxation, journaling, and physical exercise to further alleviate stress",
+                "LLM response should contain: you maintained a consistent practice, adapted techniques to fit your schedule, and leveraged support networks"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I scheduled the home inspection and when the roof repair was completed?",
+            "answer": "The home inspection was scheduled for March 28, 2024, and the roof repair was completed by April 3, 2024, so 6 days elapsed between these two events.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 28, 2024: home inspection scheduled",
+                "April 3, 2024: roof repair completed"
+            ],
+            "conversation_references": [
+                "Session 1: Inspection scheduling",
+                "Session 2: Roof repair completion"
+            ],
+            "calculation_required": "April 3 - March 28 = 6 days",
+            "source_chat_ids": {
+                "first_event": [
+                    112
+                ],
+                "second_event": [
+                    254,
+                    266,
+                    270
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 6 days",
+                "LLM response should state: from March 28 till April 3"
+            ]
+        },
+        {
+            "question": "How many days are there between when the roof repair was completed and when I expect to receive the first offer on my house?",
+            "answer": "There are 17 days between the roof repair completion on April 3, 2024, and the expected first offer date on April 20, 2024.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "April 3, 2024: roof repair completed",
+                "April 20, 2024: expected first offer received"
+            ],
+            "conversation_references": [
+                "Session 254, 266, 270: roof repair timing and impact on sale timeline"
+            ],
+            "calculation_required": "April 20 - April 3 = 17 days",
+            "source_chat_ids": {
+                "first_event": [
+                    254,
+                    266,
+                    270
+                ],
+                "second_event": [
+                    266
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 17 days",
+                "LLM response should state: from April 3 till April 20"
+            ]
+        }
+    ]
+}

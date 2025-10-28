@@ -1,0 +1,649 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Omar's professional background and qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Omar's professional background and qualifications.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Omar is mentioned as a friend and mentor but no details about his background or qualifications are provided.",
+            "plan_reference": "Batches 1-3 mention Omar but do not provide his professional background.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Omar's professional background",
+                "Based on the provided chat, there is no information related to Omar's professional qualifications"
+            ]
+        },
+        {
+            "question": "Could you provide the contact information for Dr. Elif Kaya?",
+            "ideal_response": "Based on the provided chat, there is no information related to Dr. Elif Kaya's contact information.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Dr. Elif Kaya is mentioned but no contact details are given.",
+            "plan_reference": "Batch 2 mentions Dr. Elif Kaya but no contact info.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Dr. Elif Kaya's contact information"
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have you I attended any clinical psychology workshops or conferences?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any clinical psychology workshops or conferences, but you also mentioned having a close friend you met at a psychology conference. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at clinical psychology workshops or conferences",
+            "conversation_references": [
+                "Session 260: Never attended statement",
+                "Session 16: Friend met at conference"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    260,
+                    262
+                ],
+                "second_statement": [
+                    16,
+                    18
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended any clinical psychology workshops or conferences",
+                "LLM response should mention: you also mentioned having a close friend you met at a psychology conference",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever presented at a professional symposium or conference?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never presented at any professional symposium or conference, but you also mentioned receiving invitations after presenting at one. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "User's presentation experience at professional symposiums or conferences",
+            "conversation_references": [
+                "Session 688: Never presented statement",
+                "Sessions 500 and 508: Presentation and follow-up invitations"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    688
+                ],
+                "second_statement": [
+                    500,
+                    508
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never presented at any professional symposium or conference",
+                "LLM response should mention: you also mentioned receiving invitations after presenting at one",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different types of professional meetings and collaborations develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions of professional meetings and collaborations progressed as follows: 1) Discussing leveraging a long-term friendship for networking, 2) Planning and preparing for morning meetings with individual contacts, 3) Managing follow-up meetings after symposium presentations, 4) Coordinating webinar rehearsals with multiple presenters, 5) Following up with telepsychology clients and managing virtual event participation, 6) Preparing for research collaboration calls, 7) Finalizing webinar content with multiple stakeholders, 8) Balancing work-life during conferences and coordinating group Zoom calls, 9) Planning multi-person Zoom meetings for paper collaboration, 10) Preparing and prioritizing meetings with new collaborators and managing joint projects.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "chat_id 16, 18",
+                "chat_id 328, 334, 342",
+                "chat_id 500, 508",
+                "chat_id 716, 724, 736",
+                "chat_id 956, 958, 966, 970",
+                "chat_id 1192, 1198, 1204",
+                "chat_id 1410, 1416, 1422",
+                "chat_id 1652, 1654, 1660, 1668",
+                "chat_id 1884, 1890, 1898",
+                "chat_id 2094, 2104, 2110"
+            ],
+            "ordering_tested": [
+                "1st: Leveraging friendship for networking",
+                "2nd: Morning meetings with individual contacts",
+                "3rd: Follow-up meetings after presentations",
+                "4th: Webinar rehearsals with multiple presenters",
+                "5th: Telepsychology client follow-ups and virtual event participation",
+                "6th: Research collaboration calls",
+                "7th: Finalizing webinar content with stakeholders",
+                "8th: Work-life balance and group Zoom coordination",
+                "9th: Multi-person Zoom meetings for paper planning",
+                "10th: Meetings and project prioritization with new collaborators"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related mentions",
+                "involves understanding progression of meeting types",
+                "spans numerous conversation sessions",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across collaboration contexts"
+            ],
+            "source_chat_ids": [
+                16,
+                18,
+                328,
+                334,
+                342,
+                500,
+                508,
+                716,
+                724,
+                736,
+                956,
+                958,
+                966,
+                970,
+                1192,
+                1198,
+                1204,
+                1410,
+                1416,
+                1422,
+                1652,
+                1654,
+                1660,
+                1668,
+                1884,
+                1890,
+                1898,
+                2094,
+                2104,
+                2110
+            ],
+            "rubric": [
+                "LLM response should mention: Leveraging friendship for networking",
+                "LLM response should mention: Morning meetings with individual contacts",
+                "LLM response should mention: Follow-up meetings after presentations",
+                "LLM response should mention: Webinar rehearsals with multiple presenters",
+                "LLM response should mention: Telepsychology client follow-ups and virtual event participation",
+                "LLM response should mention: Research collaboration calls",
+                "LLM response should mention: Finalizing webinar content with stakeholders",
+                "LLM response should mention: Work-life balance and group Zoom coordination",
+                "LLM response should mention: Multi-person Zoom meetings for paper planning",
+                "LLM response should mention: Meetings and project prioritization with new collaborators"
+            ]
+        },
+        {
+            "question": "How did my discussions about setting and respecting professional boundaries evolve throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your discussions about professional boundaries evolved in this sequence: 1) Addressing disagreements and setting initial boundaries around weekend work calls, 2) Exploring strategies to balance work and personal life while respecting those boundaries, 3) Managing specific boundary requests related to email timing and call restrictions, 4) Handling exceptions and emergencies within those boundaries, 5) Implementing technical solutions like email delays and auto-responders to uphold boundaries, 6) Reflecting on the impact of these boundaries on work-life balance and professional relationships, 7) Navigating boundary considerations during major events and collaborative projects, and 8) Integrating boundary respect into broader networking and time management goals.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 454 & 462: Weekend work call disagreements and boundary setting",
+                "Session 882, 888 & 892: Balancing work-life with boundary requests",
+                "Session 1358 to 1374: Email timing boundaries and auto-responder setup",
+                "Session 1130 to 1154: Handling emergencies and conflicts with weekend call boundaries",
+                "Session 1834 to 1856: Technical and respectful management of email boundaries",
+                "Session 1362 & 1838: Implications of boundary setting on work-life balance",
+                "Session 2048 to 2066: Boundary respect during major events and collaborations",
+                "Session 654 to 662: Balancing networking goals with boundary respect"
+            ],
+            "ordering_tested": [
+                "1st: Initial boundary disagreements and weekend call limits",
+                "2nd: Balancing work-life with boundary requests",
+                "3rd: Email timing boundaries and auto-responder implementation",
+                "4th: Handling emergencies and conflicts within boundaries",
+                "5th: Technical solutions to maintain boundaries",
+                "6th: Reflecting on boundary impact on work-life balance",
+                "7th: Boundary considerations during major events",
+                "8th: Integrating boundaries with networking and time management"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "involves multiple boundary types",
+                "spans diverse conversation sessions",
+                "requires sophisticated sequence and pattern recognition",
+                "integrates technical, interpersonal, and strategic aspects"
+            ],
+            "source_chat_ids": [
+                454,
+                462,
+                882,
+                888,
+                892,
+                894,
+                1358,
+                1362,
+                1368,
+                1374,
+                1130,
+                1136,
+                1138,
+                1140,
+                1148,
+                1154,
+                1834,
+                1838,
+                1842,
+                1854,
+                1856,
+                1362,
+                1838,
+                2048,
+                2052,
+                2066,
+                648,
+                654,
+                660,
+                662
+            ],
+            "rubric": [
+                "LLM response should mention: Initial boundary disagreements and weekend call limits",
+                "LLM response should mention: Balancing work-life with boundary requests",
+                "LLM response should mention: Email timing boundaries and auto-responder implementation",
+                "LLM response should mention: Handling emergencies and conflicts within boundaries",
+                "LLM response should mention: Technical solutions to maintain boundaries",
+                "LLM response should mention: Reflecting on boundary impact on work-life balance",
+                "LLM response should mention: Boundary considerations during major events",
+                "LLM response should mention: Integrating boundaries with networking and time management"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How long have I been friends with Omar?",
+            "answer": "You have been friends with Omar for 20 years.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message in chat_id 16",
+            "key_facts_tested": [
+                "duration of friendship"
+            ],
+            "source_chat_ids": [
+                16
+            ],
+            "rubric": [
+                "LLM response should state: 20 years"
+            ]
+        },
+        {
+            "question": "How did I decide which resources would best support my son's interests as he pursues his studies away from home?",
+            "answer": "You considered his enthusiasm for his field of study and sought recommendations for educational materials that align with his academic focus, reflecting your awareness of his current university pursuits and subject area.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "User's mention of son's studies and age in chat_id 38; user's request for book recommendations related to his interests in chat_id 50; assistant's detailed book suggestions in chat_id 51",
+            "key_facts_tested": [
+                "son's age and field of study",
+                "university attended",
+                "interest in computer science",
+                "request for relevant educational resources"
+            ],
+            "extraction_challenge": "LLM must integrate the user's personal context about their son with the assistant's tailored recommendations to show understanding of how the user's knowledge of their son's academic focus influenced the choice of resources.",
+            "source_chat_ids": [
+                38,
+                50,
+                51
+            ],
+            "rubric": [
+                "LLM response should state: You considered his enthusiasm for his field of study",
+                "LLM response should state: sought recommendations for educational materials that align with his academic focus"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What can you tell me about the skills I've gained recently?",
+            "instruction_being_tested": "Always provide course completion details when I ask about skill acquisition.",
+            "expected_compliance": "Response should include information about the completion status of relevant courses or programs related to the skills mentioned.",
+            "compliance_indicators": [
+                "mention of course completion",
+                "details about finished programs",
+                "confirmation of completed training related to skills"
+            ],
+            "non_compliance_signs": [
+                "only listing skills without course info",
+                "general skill description without completion details",
+                "no reference to any course or program completion"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1624
+            ],
+            "rubric": [
+                "LLM response should contain: mention of course completion",
+                "LLM response should contain: details about finished programs"
+            ]
+        },
+        {
+            "question": "What should I know about the plans for the next meeting?",
+            "instruction_being_tested": "Always confirm event attendance details when I ask about meeting coordination.",
+            "expected_compliance": "Response should include a clear confirmation of who will be attending the event or meeting.",
+            "compliance_indicators": [
+                "explicit mention of attendees",
+                "confirmation of participant list",
+                "clear statement about who is coming"
+            ],
+            "non_compliance_signs": [
+                "general information without attendee details",
+                "no mention of who will be present",
+                "vague or incomplete attendance info"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                684
+            ],
+            "rubric": [
+                "LLM response should contain: confirmation of participant list",
+                "LLM response should contain: clear statement about who is coming"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many new LinkedIn connections have you logged so far?",
+            "answer": "30 new LinkedIn connections",
+            "difficulty": "easy",
+            "update_type": "progress_tracking",
+            "tests_retention_of": "updated number of new LinkedIn connections logged",
+            "conversation_references": [
+                "Progress Tracking: Logged 25 new LinkedIn connections since March 15, aiming for 50 by September.",
+                "Information Update: The number of new LinkedIn connections logged since March 15 has grown to 30, reflecting steady networking progress."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 25 connections instead of the updated 30",
+            "source_chat_ids": {
+                "original_info": [
+                    644,
+                    650,
+                    656
+                ],
+                "updated_info": [
+                    682
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 30 new LinkedIn connections"
+            ]
+        },
+        {
+            "question": "How many positive online reviews have I received from telepsychology clients in June?",
+            "answer": "7 positive online reviews",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "updated number of telepsychology client reviews received in June",
+            "conversation_references": [
+                "Professional Reputation: Received positive online reviews from 5 telepsychology clients in June.",
+                "Information Update: The number of telepsychology client reviews received in June increased to 7, reflecting growing satisfaction."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 5 reviews instead of the updated 7 reviews",
+            "source_chat_ids": {
+                "original_info": [
+                    1298,
+                    1304,
+                    1310
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should state: 7 positive reviews"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different types of activities am I planning to focus on with my $1,200 professional development budget?",
+            "answer": "Three types: high-impact events, courses and certifications, and local networking events.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_category_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 109 - budget planning",
+                "chat_id 127 - budget allocation",
+                "chat_id 129 - first quarter plan"
+            ],
+            "reasoning_steps": [
+                "Identify the categories of activities mentioned in the budget planning session.",
+                "Confirm the specific allocation amounts for each category in the budget allocation session.",
+                "Verify the planned activities in the first quarter plan to ensure these categories are being focused on."
+            ],
+            "source_chat_ids": [
+                109,
+                127,
+                129
+            ],
+            "rubric": [
+                "LLM response should state: Three types",
+                "LLM response should state: high-impact events",
+                "LLM response should state: courses and certifications",
+                "LLM response should state: local networking events"
+            ]
+        },
+        {
+            "question": "Given my progress and activities across my networking goals, how should I adjust my monthly contact targets and strategies to avoid burnout while still exceeding my original goal?",
+            "answer": "You should reduce your monthly target slightly below the original 8-10 contacts to prioritize quality and follow-up, focus on high-value contacts and selective events, balance online and offline efforts, maintain regular check-ins with existing contacts, and leverage collaborations to expand efficiently without overextending yourself.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "chat_id 62 (user goal setting)",
+                "chat_id 78 (user concern about spreading too thin)",
+                "chat_id 474 (user follow-up after symposium success)",
+                "chat_id 478 (user exceeding goals and maintaining momentum)",
+                "chat_id 696 (user leveraging new collaborations)"
+            ],
+            "reasoning_steps": [
+                "Identify the original monthly target of 8-10 new contacts from the initial goal setting.",
+                "Analyze the user's concern about spreading themselves too thin and the assistant's advice to prioritize quality over quantity and manage time effectively.",
+                "Consider the user's achievement of exceeding goals and the need to maintain momentum without burnout by balancing follow-ups and new contacts.",
+                "Incorporate the user's initiation of multiple collaborations and the need to leverage these efficiently to expand the network without overcommitment.",
+                "Synthesize these points to recommend adjusting monthly targets downward slightly, focusing on high-value contacts, balancing online/offline activities, and maintaining existing relationships to sustain growth sustainably."
+            ],
+            "source_chat_ids": [
+                62,
+                78,
+                474,
+                478,
+                696
+            ],
+            "rubric": [
+                "LLM response should state: reduce your monthly target slightly below the original 8-10 contacts to prioritize quality and follow-up",
+                "LLM response should state: focus on high-value contacts and selective events",
+                "LLM response should state: balance online and offline efforts",
+                "LLM response should state: maintain regular check-ins with existing contacts",
+                "LLM response should state: leverage collaborations to expand efficiently without overextending yourself"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning to attend a networking event soon. How can I prepare to get the most out of the experience?",
+            "preference_being_tested": "I prefer attending in-person events over virtual ones to build deeper connections.",
+            "expected_compliance": "Response should focus on strategies and advice relevant to in-person events rather than virtual or online formats, demonstrating awareness of the user's preference for in-person interactions.",
+            "compliance_indicators": [
+                "mentions tips specific to face-to-face interactions",
+                "avoids suggesting virtual event strategies",
+                "addresses in-person networking dynamics",
+                "recommends preparation suited for physical attendance"
+            ],
+            "non_compliance_signs": [
+                "focuses on virtual event participation",
+                "suggests online networking tools or platforms",
+                "ignores the context of physical presence",
+                "provides generic advice not tailored to event format"
+            ],
+            "difficulty": "medium",
+            "preference_type": "event format preference",
+            "source_chat_ids": [
+                140,
+                144,
+                154
+            ],
+            "rubric": [
+                "LLM response should contain: mentions tips specific to face-to-face interactions",
+                "LLM response should contain: avoids suggesting virtual event strategies"
+            ]
+        },
+        {
+            "question": "I have a coffee meeting coming up soon. What are some tips to help me prepare and make the most of it?",
+            "preference_being_tested": "I prefer morning meetings, so scheduled 9:00 AM coffee with Dr. Kaya on April 21.",
+            "expected_compliance": "Response should provide advice suitable for a morning meeting context, such as timing considerations or energy management, reflecting awareness of the user's preference for morning meetings.",
+            "compliance_indicators": [
+                "mentions morning-specific preparation tips",
+                "suggests strategies aligned with early-day meetings",
+                "acknowledges timing without explicitly stating preference",
+                "offers advice that fits a morning meeting scenario"
+            ],
+            "non_compliance_signs": [
+                "gives generic advice without regard to meeting time",
+                "suggests preparation suited for afternoon or evening meetings",
+                "ignores timing context implied by the meeting setup"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time_of_day_preference",
+            "source_chat_ids": [
+                328,
+                334,
+                342
+            ],
+            "rubric": [
+                "LLM response should contain: mentions morning-specific preparation tips",
+                "LLM response should contain: suggests strategies aligned with early-day meetings",
+                "LLM response should contain: offers advice that fits a morning meeting scenario"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the entire process I went through in expanding my telepsychology services, managing professional development investments, balancing research and client work, and navigating key career decisions, capturing all the major considerations, challenges, strategies, and outcomes involved?",
+            "ideal_summary": "The process of expanding telepsychology services involved a multifaceted approach addressing market analysis, regulatory compliance, technology setup, operational integration, client transition, marketing, financial planning, risk management, and continuous improvement. Initial steps included assessing market demand and competitor landscape, understanding legal and privacy requirements, selecting secure telehealth platforms, and training staff. Client comfort was prioritized through transparent communication, technical support, and flexible service models. Leveraging existing professional networks was key, employing educational outreach, referral engagement, social media, and collaborative community efforts to build awareness and trust. Financial decisions, such as investing in professional development resources like the Trauma Therapy Journal subscription and webinar software licenses, were carefully weighed against budget constraints and long-term value. Balancing research collaborations with client intake required strategic workload management, prioritizing long-term career goals, and maintaining work-life balance. Decisions around accepting co-authorships, speaking engagements, and editorial board invitations were evaluated through considerations of credibility, networking, financial impact, and alignment with professional aspirations. Time management techniques and detailed planning facilitated meeting critical deadlines, such as paper submissions and workshop preparations. Maintaining professional relationships post-collaboration involved regular communication, mutual support, and exploring future joint projects. Overall, the journey reflected complex strategic decision-making, resource allocation, and adaptive management to foster professional growth, service expansion, and sustained career advancement.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "professional development balancing",
+                "network leveraging and client transition",
+                "time and resource management"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                85,
+                97,
+                99,
+                105,
+                431,
+                445,
+                519,
+                523,
+                997,
+                1221
+            ],
+            "rubric": [
+                "LLM response should contain: assessing market demand and competitor landscape, understanding legal and privacy requirements, selecting secure telehealth platforms, and training staff",
+                "LLM response should contain: Client comfort was prioritized through transparent communication, technical support, and flexible service models",
+                "LLM response should contain: Leveraging existing professional networks was key, employing educational outreach, referral engagement, social media, and collaborative community efforts to build awareness and trust",
+                "LLM response should contain: Financial decisions, such as investing in professional development resources like the Trauma Therapy Journal subscription and webinar software licenses, were carefully weighed against budget constraints and long-term value",
+                "LLM response should contain: Balancing research collaborations with client intake required strategic workload management, prioritizing long-term career goals, and maintaining work-life balance",
+                "LLM response should contain: Decisions around accepting co-authorships, speaking engagements, and editorial board invitations were evaluated through considerations of credibility, networking, financial impact, and alignment with professional aspirations",
+                "LLM response should contain: Time management techniques and detailed planning facilitated meeting critical deadlines, such as paper submissions and workshop preparations",
+                "LLM response should contain: Maintaining professional relationships post-collaboration involved regular communication, mutual support, and exploring future joint projects"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of everything involved in preparing for and participating in the upcoming professional events and projects I have planned, covering all aspects from initial planning through execution and follow-up?",
+            "ideal_summary": "The preparation and participation in the upcoming professional events and projects involve a multi-phase, integrated approach spanning several months and requiring careful coordination of resources, time, and strategic actions. Initially, thorough pre-event preparation is essential, including reviewing agendas, researching speakers and attendees, setting clear objectives for learning and networking, and preparing materials such as presentations, elevator pitches, and business cards. Technical readiness is also critical, involving testing equipment and familiarizing oneself with virtual platforms or venue logistics. During the events, active engagement is emphasized through attending key sessions, participating in discussions, networking proactively both in-person and via social media, and managing energy with scheduled breaks. Post-event follow-up includes sending personalized thank-you messages, connecting on professional networks, sharing insights, and maintaining ongoing communication to foster collaborations. Throughout this process, balancing time commitments with existing professional obligations is managed by prioritizing tasks, delegating when possible, and using effective time management techniques like time blocking and the Pomodoro method. Financial considerations are addressed by optimizing budget use, prioritizing high-impact activities, and leveraging free or low-cost resources. Additionally, strategic partnerships, such as co-hosting events, require clear communication, defined roles, shared goals, and joint marketing efforts. Continuous reflection and evaluation after each event or project phase ensure lessons learned inform future planning and professional growth. This comprehensive approach integrates multiple threads\u2014logistical, interpersonal, technical, and strategic\u2014to maximize the benefits of professional development activities and advance career objectives effectively.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis",
+                "time and resource management"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                69,
+                77,
+                81,
+                835,
+                839,
+                1069,
+                1297,
+                1787
+            ],
+            "rubric": [
+                "LLM response should contain: thorough pre-event preparation is essential, including reviewing agendas, researching speakers and attendees, setting clear objectives for learning and networking",
+                "LLM response should contain: Technical readiness is also critical, involving testing equipment and familiarizing oneself with virtual platforms or venue logistics",
+                "LLM response should contain: During the events, active engagement is emphasized through attending key sessions, participating in discussions, networking proactively both in-person and via social media, and managing energy with scheduled breaks",
+                "LLM response should contain: Post-event follow-up includes sending personalized thank-you messages, connecting on professional networks, sharing insights, and maintaining ongoing communication to foster collaborations.",
+                "LLM response should contain: balancing time commitments with existing professional obligations is managed by prioritizing tasks, delegating when possible, and using effective time management techniques like time blocking and the Pomodoro method",
+                "LLM response should contain: Financial considerations are addressed by optimizing budget use, prioritizing high-impact activities, and leveraging free or low-cost resources",
+                "LLM response should contain: strategic partnerships, such as co-hosting events, require clear communication, defined roles, shared goals, and joint marketing efforts",
+                "LLM response should contain: Continuous reflection and evaluation after each event or project phase ensure lessons learned inform future planning and professional growth"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days before the symposium did I book my bus ticket?",
+            "answer": "I booked my bus ticket one day before the symposium, since the ticket was for April 19 and the symposium was on April 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 19: bus ticket booked",
+                "April 20: symposium date"
+            ],
+            "conversation_references": [
+                "Session 2: Bus ticket booking",
+                "Session 1: Symposium date"
+            ],
+            "calculation_required": "April 20 - April 19 = 1 day",
+            "source_chat_ids": {
+                "first_event": [
+                    308
+                ],
+                "second_event": [
+                    308
+                ]
+            },
+            "rubric": [
+                "LLM response should state: day before"
+            ]
+        },
+        {
+            "question": "How many days are there between when I planned the networking event agenda with Carolyn and when I have the webinar rehearsal with Jason and Russell?",
+            "answer": "There are 5 days between planning the networking event agenda on May 10 and the webinar rehearsal scheduled for May 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 10: networking event agenda planned",
+                "May 15: webinar rehearsal scheduled"
+            ],
+            "conversation_references": [
+                "chat_id 520, 528, 536: networking event planning",
+                "chat_id 716, 724, 736: webinar rehearsal preparation"
+            ],
+            "calculation_required": "May 15 - May 10 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    520,
+                    528,
+                    536
+                ],
+                "second_event": [
+                    716,
+                    724,
+                    736
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days",
+                "LLM response should state: from May 10 till May 15"
+            ]
+        }
+    ]
+}

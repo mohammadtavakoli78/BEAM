@@ -1,0 +1,537 @@
+{
+    "abstention": [
+        {
+            "question": "What specific techniques were taught in Michele\u2019s July 8 workshop on rebuttal improvement?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific techniques taught in Michele\u2019s July 8 workshop.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Workshop feedback is mentioned but no detailed description of techniques is provided.",
+            "plan_reference": "Batch 5, Bullet 6 mentions workshop feedback but no technique details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific techniques taught in Michele\u2019s July 8 workshop"
+            ]
+        },
+        {
+            "question": "What specific content or themes did Michele cover in the academic writing class attended on Tuesdays at 6 PM?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific content or themes covered in Michele\u2019s Tuesday 6 PM academic writing class.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Class attendance is mentioned but no syllabus or topics are described.",
+            "plan_reference": "Batch 1, Bullet 8 mentions class attendance but no content details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific content or themes covered in Michele\u2019s Tuesday 6 PM academic writing class"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever downloaded or used Zotero or any other citation management software before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have downloaded Zotero to manage your references, but you also mentioned never having used any citation management software. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Use of Zotero or citation management software",
+            "conversation_references": [
+                "Session 38: Downloaded Zotero",
+                "Session 52: Never used citation software"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    38
+                ],
+                "second_statement": [
+                    52
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have downloaded Zotero to manage your references",
+                "LLM response should mention: you also mentioned never having used any citation management software",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever missed any of my scheduled writing sessions or meetings related to my essay?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you missed a writing session due to an unexpected meeting, but you also mentioned that you've never missed any scheduled writing sessions or meetings related to your essay. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Missed writing sessions or meetings",
+            "conversation_references": [
+                "Session 80: Missed and rescheduled session",
+                "Session 114: Never missed any sessions"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    80
+                ],
+                "second_statement": [
+                    114
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you missed a writing session due to an unexpected meeting",
+                "LLM response should mention: you also mentioned that you've never missed any scheduled writing sessions",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my academic work and mentorship throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in this order: 1) Meeting my new academic mentor and how to make a good impression, 2) Being inspired by an essay my mentor shared during a Zoom call, 3) Considering my mentor's feedback on strengthening my essay's arguments, 4) Debating whether to focus on improving my essay before working on a conference paper, 5) Feeling confident after receiving a high grade and preparing for a follow-up Zoom meeting and conference planning.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 14: Meeting mentor and impression concerns",
+                "Session 64: Inspiration from mentor's essay shared on Zoom",
+                "Session 124: Mentor's feedback on essay draft",
+                "Session 170: Deciding essay focus before conference paper",
+                "Session 214: Confidence after grade and planning next Zoom meeting"
+            ],
+            "ordering_tested": [
+                "1st: Meeting mentor and impression",
+                "2nd: Inspiration from mentor's essay",
+                "3rd: Feedback on essay draft",
+                "4th: Prioritizing essay improvement before conference paper",
+                "5th: Confidence and planning follow-up meeting"
+            ],
+            "source_chat_ids": [
+                14,
+                64,
+                124,
+                170,
+                214
+            ],
+            "rubric": [
+                "Meeting mentor and impression",
+                "Inspiration from mentor's essay",
+                "Feedback on essay draft",
+                "Prioritizing essay improvement before conference paper",
+                "Confidence and planning follow-up meeting"
+            ]
+        },
+        {
+            "question": "Can you list in order how I brought up different aspects of my research and writing projects throughout our conversations? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in this order: 1) Planning a collaboration with a younger colleague after meeting at a seminar, 2) Starting to use a new qualitative data analysis tool recommended by that colleague, 3) Incorporating feedback from another collaborator on adding statistical evidence to an essay, 4) Expressing concern about upcoming deadlines for both an essay submission and a conference paper, 5) Discussing how to ensure effective collaboration on the conference paper after its submission.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 16: Collaboration planning after seminar meeting",
+                "Session 54: Using qualitative data analysis tool",
+                "Session 122: Incorporating collaborator's feedback on essay",
+                "Session 168: Deadline concerns for essay and conference paper",
+                "Session 216: Collaboration on conference paper post-submission"
+            ],
+            "ordering_tested": [
+                "1st: Collaboration planning",
+                "2nd: Data analysis tool usage",
+                "3rd: Feedback incorporation",
+                "4th: Deadline concerns",
+                "5th: Post-submission collaboration"
+            ],
+            "source_chat_ids": [
+                16,
+                54,
+                122,
+                168,
+                216
+            ],
+            "rubric": [
+                "Collaboration planning",
+                "Data analysis tool usage",
+                "Feedback incorporation",
+                "Deadline concerns",
+                "Post-submission collaboration"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say I was planning to meet my mentor at the library?",
+            "answer": "You said you were planning to meet your mentor on February 10, 2024.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: Date mentioned early in user's message about meeting",
+            "key_facts_tested": [
+                "date: February 10, 2024",
+                "location: library meeting",
+                "relationship: mentor"
+            ],
+            "source_chat_ids": [
+                14
+            ],
+            "rubric": [
+                "LLM response should state: February 10, 2024"
+            ]
+        },
+        {
+            "question": "What steps did I plan to take to prepare for and follow up on my meeting with the person who agreed to guide my essay writing?",
+            "answer": "I planned to research his academic background and prepare specific questions related to my documentary script, bring relevant materials like my draft script, arrive early at the library, dress professionally, engage politely and enthusiastically during the meeting, take detailed notes, and afterward send a thank-you note and stay in touch for future check-ins.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: User's initial concern about meeting, assistant's detailed preparation, meeting, and follow-up advice",
+            "key_facts_tested": [
+                "mentor's agreement to guide essay writing",
+                "meeting location at a library",
+                "preparation steps including research and materials",
+                "meeting etiquette and engagement",
+                "follow-up actions like thank-you note and scheduling future meetings"
+            ],
+            "extraction_challenge": "LLM must integrate details about the mentor relationship, meeting context, preparation, conduct during the meeting, and follow-up actions scattered across different parts of the conversation",
+            "source_chat_ids": [
+                14,
+                15
+            ],
+            "rubric": [
+                "LLM response should state: planned to research his academic background and prepare specific questions related to your documentary script",
+                "LLM response should state: bring relevant materials like your draft script, arrive early at the library, dress professionally, engage politely and enthusiastically during the meeting",
+                "LLM response should state: take detailed notes, and afterward send a thank-you note and stay in touch for future check-ins"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How should I list the sources I used in my paper?",
+            "instruction_being_tested": "Always use APA 7th edition citation style when I ask about formatting references.",
+            "expected_compliance": "Response should include references formatted according to APA 7th edition guidelines.",
+            "compliance_indicators": [
+                "author-date citation format",
+                "italicized book titles",
+                "proper use of ampersands",
+                "correct punctuation and order in references"
+            ],
+            "non_compliance_signs": [
+                "references formatted in other styles",
+                "missing key APA elements",
+                "inconsistent citation details",
+                "general advice without specific formatting"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                112
+            ],
+            "rubric": [
+                "LLM response should contain: author-date citation format"
+            ]
+        },
+        {
+            "question": "How should I approach editting my draft?",
+            "instruction_being_tested": "Always use Scrivener\u2019s split-screen mode for editing when I ask about draft revisions.",
+            "expected_compliance": "Response should be presented using Scrivener\u2019s split-screen mode for editing to compare versions or sections.",
+            "compliance_indicators": [
+                "use of split-screen view",
+                "side-by-side comparison",
+                "editing with two panels visible"
+            ],
+            "non_compliance_signs": [
+                "single view editing",
+                "no side-by-side comparison",
+                "general comments without split view"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                160
+            ],
+            "rubric": [
+                "LLM response should contain: use of split-screen view",
+                "LLM response should contain: side-by-side comparison"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many sources are in my Zotero library?",
+            "answer": "52 sources",
+            "difficulty": "easy",
+            "update_type": "library_size_increase",
+            "tests_retention_of": "the current number of sources in the Zotero library",
+            "conversation_references": [
+                "Reference Management: Zotero library now contains 45 sources, tagged by theme and date, improving retrieval speed by 40%.",
+                "Information Update: The Zotero library now includes 52 sources, further enhancing my research organization."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 45 sources instead of the updated 52 sources",
+            "source_chat_ids": {
+                "original_info": [
+                    82
+                ],
+                "updated_info": [
+                    110
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 52 sources"
+            ]
+        },
+        {
+            "question": "How many words does my final essay draft contain?",
+            "answer": "4,700 words",
+            "difficulty": "easy",
+            "update_type": "word_count_increase",
+            "tests_retention_of": "updated final essay word count",
+            "conversation_references": [
+                "I\u2019m finalizing my first draft of the essay, targeting submission by May 15, 2024, with 4,500 words.",
+                "The final draft reached 4,700 words by May 13, surpassing the initial target."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original target of 4,500 words instead of the final 4,700 words",
+            "source_chat_ids": {
+                "original_info": [
+                    116
+                ],
+                "updated_info": [
+                    158
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 4,700 words"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How have my essay performance goals and feedback evolved from my initial grade concerns to aiming for publication, and what key improvements must I prioritize to meet both my grading and publication targets?",
+            "answer": "You initially aimed to improve your essay grade from B- to A, focusing on persuasive writing and weekly skill development. After receiving an 82% outline rating, you targeted a 90% first draft by strengthening thesis clarity, argument structure, and rebuttals. You then planned to achieve a 90% final grade by refining evidence synthesis, transitions, and style, while preparing for publication by incorporating feedback, engaging with journal processes, and enhancing rebuttal techniques. Priorities include addressing instructor feedback, improving rebuttal integration, managing revisions efficiently, and maintaining consistent writing practice to meet both grading and publication goals.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_evolution_analysis",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Initial grade improvement and writing plan",
+                "Outline feedback and improvement steps",
+                "Strategy to raise grade from outline to final draft",
+                "Plan for achieving 90% grade and publication",
+                "Rebuttal technique improvement for conference paper"
+            ],
+            "reasoning_steps": [
+                "Identify the user's initial concern about improving essay grades from B- to A and their structured plan for persuasive writing.",
+                "Analyze the user's feedback on their outline scoring 82% and their goal to reach 90% on the first draft, focusing on thesis clarity and argument strengthening.",
+                "Examine the user's strategy to elevate the final draft grade to 90% by enhancing evidence synthesis, counterarguments, transitions, and writing style.",
+                "Incorporate the user's extended goal of essay publication, including plans for revision cycles, journal submission, and engagement with feedback.",
+                "Consider the user's focus on improving rebuttal techniques post-workshop and how this skill applies to both conference paper editing and strengthening the essay for publication."
+            ],
+            "source_chat_ids": [
+                24,
+                66,
+                126,
+                172,
+                220
+            ],
+            "rubric": [
+                "LLM response should state: aimed to improve your essay grade from B- to A, focusing on persuasive writing and weekly skill development",
+                "LLM response should state: After receiving an 82% outline rating, you targeted a 90% first draft by strengthening thesis clarity, argument structure, and rebuttals",
+                "LLM response should state: You then planned to achieve a 90% final grade by refining evidence synthesis, transitions, and style",
+                "LLM response should state: prepared for publication by incorporating feedback, engaging with journal processes, and enhancing rebuttal techniques",
+                "LLM response should state: Priorities include addressing instructor feedback, improving rebuttal integration, managing revisions efficiently, and maintaining consistent writing practice"
+            ]
+        },
+        {
+            "question": "How many total days did I take off or breaks to manage stress and prevent burnout across my sessions?",
+            "answer": "Three days total: one hour on one day plus two full days off.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Stress management and focus strategies",
+                "Burnout prevention and motivation tips"
+            ],
+            "reasoning_steps": [
+                "Identify the one-hour yoga break taken to manage stress in one session.",
+                "Identify the two full days off taken to prevent burnout in another session.",
+                "Add the one hour break (counted as part of a day) and the two full days off to get total days of rest."
+            ],
+            "source_chat_ids": [
+                154,
+                252
+            ],
+            "rubric": [
+                "LLM response should state: Three days",
+                "LLM response should state: one hour on one day plus two full days off"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Where do you think I should work on my essay?",
+            "preference_being_tested": "I prefer working in the quiet East Janethaven Library\u2019s second floor over home to minimize distractions.",
+            "expected_compliance": "Response should suggest the East Janethaven Library\u2019s second floor or acknowledge it as a suitable option, reflecting the user's preference for that location.",
+            "compliance_indicators": [
+                "recommends East Janethaven Library\u2019s second floor",
+                "mentions the library as a good place to work",
+                "acknowledges user's favored location without suggesting only home or other places"
+            ],
+            "non_compliance_signs": [
+                "only suggests working at home",
+                "ignores the library option entirely",
+                "recommends locations unrelated to the library or home without justification"
+            ],
+            "difficulty": "medium",
+            "preference_type": "location_preference",
+            "source_chat_ids": [
+                94
+            ],
+            "rubric": [
+                "LLM response should contain: mentions the library as a good place to work",
+                "LLM response should contain: acknowledges user's favored location without suggesting only home or other places"
+            ]
+        },
+        {
+            "question": "I'm about to start drafting my essay. What tools or software would you suggest I use?",
+            "preference_being_tested": "I prefer drafting essays in Microsoft Word over Google Docs due to better formatting control.",
+            "expected_compliance": "Response should recommend or prioritize Microsoft Word as the drafting tool, reflecting the user's preference for it over alternatives.",
+            "compliance_indicators": [
+                "recommends Microsoft Word",
+                "mentions formatting control advantages",
+                "avoids suggesting Google Docs as primary option"
+            ],
+            "non_compliance_signs": [
+                "only suggests Google Docs or other tools",
+                "ignores Microsoft Word as an option",
+                "fails to mention formatting control benefits"
+            ],
+            "difficulty": "medium",
+            "preference_type": "tool choice",
+            "source_chat_ids": [
+                40
+            ],
+            "rubric": [
+                "LLM response should contain: recommends Microsoft Word",
+                "LLM response should contain: avoids suggesting Google Docs as primary option"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my work and interactions with Robert have developed over time, including the key steps and decisions I've made along the way?",
+            "ideal_summary": "Your engagement with Robert, your academic mentor, has progressed through several important stages. Initially, you prepared carefully for your first meeting by researching his background, bringing relevant materials, and planning thoughtful questions, which helped establish a positive mentoring relationship. Later, you drew inspiration from Robert's 1985 essay on gender studies, learning how to integrate his ideas into your own work while maintaining originality and proper citation. As you developed your essay, you faced decisions about prioritizing Robert's feedback, particularly his recommendation to strengthen warrants for claims on gender bias, balancing this with other essay improvements. Subsequently, you planned how to manage your time between refining your essay for journal submission and collaborating on a conference paper with Greg, creating a detailed schedule to meet both deadlines effectively. Most recently, after receiving a high grade, you reviewed your progress and prepared for a Zoom meeting with Robert by outlining your achievements, planning your conference paper, and identifying areas for further feedback and improvement. Throughout this process, your work with Robert has evolved from initial preparation to deepening academic development and strategic planning for publication and presentation.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                14,
+                64,
+                124,
+                170,
+                214
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "academic development",
+                "decision making",
+                "planning and prioritization",
+                "feedback integration"
+            ],
+            "synthesis_required": "Combining multiple stages of mentorship and academic work into a coherent narrative showing growth and evolving priorities",
+            "source_chat_ids": [
+                14,
+                64,
+                124,
+                170,
+                214
+            ],
+            "rubric": [
+                "LLM response should contain: you prepared carefully for your first meeting by researching his background, bringing relevant materials, and planning thoughtful questions",
+                "LLM response should contain: you drew inspiration from Robert's 1985 essay on gender studies, learning how to integrate his ideas into your own work while maintaining originality and proper citation",
+                "LLM response should contain: you faced decisions about prioritizing Robert's feedback, particularly his recommendation to strengthen warrants for claims on gender bias",
+                "LLM response should contain: you planned how to manage your time between refining your essay for journal submission and collaborating on a conference paper with Greg",
+                "LLM response should contain: Most recently, after receiving a high grade, you reviewed your progress and prepared for a Zoom meeting with Robert by outlining your achievements"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how my collaboration with Greg and my work on the related research and writing projects have progressed over time?",
+            "ideal_summary": "Your collaboration with Greg began after meeting him at the University of Montserrat seminar in February 2024, where you planned joint research on media influence. Early on, you focused on establishing effective communication, mutual respect, and clear roles to ensure a productive partnership despite the age difference. Greg introduced you to NVivo for qualitative data analysis, which improved your coding efficiency and led you to explore advanced features like queries and visualizations to deepen your analysis of film scripts on gender themes. Concurrently, you balanced multiple deadlines, prioritizing the conference paper with Greg due by June 3 and your essay for the Montserrat Journal of Media Studies due by June 5, following a detailed schedule to manage both tasks. After submitting the conference paper to the Montserrat Media Symposium for July 12, you continued to refine your collaboration by setting up regular check-ins, shared document management, and clear task assignments to maintain progress and quality. Throughout this period, your work evolved from initial planning and tool adoption to managing deadlines and sustaining effective teamwork, reflecting a dynamic and developing research partnership.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                16,
+                54,
+                56,
+                152,
+                168,
+                216
+            ],
+            "key_elements_tested": [
+                "collaboration development",
+                "tool adoption and learning",
+                "deadline management",
+                "task prioritization",
+                "ongoing coordination"
+            ],
+            "synthesis_required": "Integrating multiple aspects of collaboration, research progress, tool usage, and time management into a coherent narrative showing evolution",
+            "source_chat_ids": [
+                16,
+                54,
+                56,
+                152,
+                168,
+                216
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on establishing effective communication, mutual respect, and clear roles to ensure a productive partnership despite the age difference",
+                "LLM response should contain: Greg introduced you to NVivo for qualitative data analysis, which improved your coding efficiency and led you to explore advanced features like queries and visualizations",
+                "LLM response should contain: you balanced multiple deadlines, prioritizing the conference paper with Greg due by June 3 and your essay for the Montserrat Journal of Media Studies due by June 5",
+                "LLM response should contain: you continued to refine your collaboration by setting up regular check-ins, shared document management, and clear task assignments to maintain progress and quality"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days do I have between finishing my first draft and my goal to improve my essay grades?",
+            "answer": "There are 31 days between finishing the first draft on May 15, 2024, and the goal to improve essay grades by June 15, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 15, 2024: first draft deadline",
+                "June 15, 2024: goal to improve essay grades"
+            ],
+            "conversation_references": [
+                "Session 2: First draft deadline",
+                "Session 1: Essay grade improvement goal"
+            ],
+            "calculation_required": "June 15, 2024 - May 15, 2024 = 31 days",
+            "source_chat_ids": {
+                "first_event": [
+                    116
+                ],
+                "second_event": [
+                    24
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 31 days",
+                "LLM response should state: from May 15, 2024 till June 15, 2024"
+            ]
+        },
+        {
+            "question": "How many days are there between the writing session I missed and the submission deadline for my conference abstract?",
+            "answer": "There are 71 days between the writing session you missed on April 5 and the submission deadline on June 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 5: missed writing session",
+                "June 15: submission deadline"
+            ],
+            "conversation_references": [
+                "Session 1: Writing session reschedule",
+                "Session 2: Conference abstract deadline"
+            ],
+            "calculation_required": "June 15 - April 5 = 71 days",
+            "source_chat_ids": {
+                "first_event": [
+                    80
+                ],
+                "second_event": [
+                    174
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 71 days",
+                "LLM response should state: from April 5, 2024 till June 15, 2024"
+            ]
+        }
+    ]
+}

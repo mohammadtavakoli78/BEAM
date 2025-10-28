@@ -1,0 +1,605 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the detailed steps Taylor used to correct the confusion between common difference and ratio in the two problems?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed steps Taylor used to correct the confusion between common difference and ratio.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan notes the confusion and correction but does not describe the correction steps.",
+            "plan_reference": "Batch 1, Bullet 10",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed steps Taylor used to correct the confusion between common difference and ratio."
+            ]
+        },
+        {
+            "question": "What feedback or reactions did Taylor have after completing the 5 sequence definition problems?",
+            "ideal_response": "Based on the provided chat, there is no information related to Taylor's feedback or reactions after completing the sequence definition problems.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan mentions scores but not subjective feedback or reactions.",
+            "plan_reference": "Batch 1, Bullet 7",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Taylor's feedback or reactions after completing the sequence definition problems."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I completed any geometric sequence problems before, or am I just starting to work on them now?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you completed 6 geometric sequence problems and improved your accuracy, but you also mentioned that you've never completed any geometric sequence problems. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of geometric sequence problems",
+            "conversation_references": [
+                "Session 104, 106, 108: Completed problems and improvement",
+                "Session 212: Never completed any problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    104,
+                    106,
+                    108
+                ],
+                "second_statement": [
+                    212
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                    "LLM response should mention: you said you created Cypress tests for user login and personalized feed with a passing rate of 92%",
+                    "LLM response should mention: you mentioned you have never created any Cypress tests for those features.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I completed any infinite series problems before, or am I just starting to learn about them?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you've completed 5 infinite series problems and scored 4/5 correct in identifying convergence conditions, but you also mentioned that you've never completed any infinite series problems. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of infinite series problems",
+            "conversation_references": [
+                "Session 410: Completed 5 problems",
+                "Session 488: Never completed any problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    410
+                ],
+                "second_statement": [
+                    488
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                    "LLM response should mention: you said you completed 5 infinite series problems and scored 4/5 correct in identifying convergence conditions",
+                    "LLM response should mention: you mentioned you have never completed any infinite series problems.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about sequences and series progress in terms of the different concepts and problems I brought up throughout our conversations in order (mention 8 items)?",
+            "answer": "Your discussions about sequences and series progressed in this order: 1) You first asked about the definitions and notation for sequences, including how to denote the nth term and compact forms like sigma notation, 2) Then you focused on finding the sum of the first 10 terms of an arithmetic sequence and verifying the sum formula, 3) Next, you explored geometric progressions, asking about the common ratio and how to find it, 4) After that, you worked on finding the nth term of a geometric sequence and verifying calculations for specific terms, 5) You then sought help verifying calculations for terms in geometric sequences with given parameters, 6) Later, you returned to arithmetic sequences to find sums with specific first terms and common differences, including applying the sum formula and solving for unknowns, 7) You also discussed applying arithmetic series sums to real-life scenarios involving acceleration, 8) Finally, you brought up applying sequences and series to paramedic scheduling and finance problems, including calculating total hours and sums for shift sequences.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 0",
+                "chat_id: 2",
+                "chat_id: 4",
+                "chat_id: 6",
+                "chat_id: 92, 94",
+                "chat_id: 222, 314, 316, 318, 320",
+                "chat_id: 318",
+                "chat_id: 490, 492, 494"
+            ],
+            "ordering_tested": [
+                "1st: Definitions and notation of sequences",
+                "2nd: Sum of arithmetic sequence terms",
+                "3rd: Understanding geometric progression and common ratio",
+                "4th: Finding nth term of geometric sequences",
+                "5th: Verifying geometric term calculations",
+                "6th: Applying arithmetic sum formulas and solving for variables",
+                "7th: Applying arithmetic series to real-life acceleration example",
+                "8th: Applying sequences and series to paramedic scheduling and finance"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple concept mentions",
+                "spans many conversation sessions",
+                "involves both arithmetic and geometric sequences",
+                "requires understanding progression of user focus",
+                "tests ability to reconstruct mention order without temporal hints"
+            ],
+            "source_chat_ids": [
+                0,
+                2,
+                4,
+                6,
+                92,
+                94,
+                222,
+                314,
+                316,
+                318,
+                320,
+                490,
+                492,
+                494
+            ],
+            "rubric": [
+                "LLM response should mention: Definitions and notation of sequences",
+                "LLM response should mention: Sum of arithmetic sequence terms",
+                "LLM response should mention: Understanding geometric progression and common ratio",
+                "LLM response should mention: Finding nth term of geometric sequences",
+                "LLM response should mention: Verifying geometric term calculations",
+                "LLM response should mention: Applying arithmetic sum formulas and solving for variables",
+                "LLM response should mention: Applying arithmetic series to real-life acceleration example",
+                "LLM response should mention: Applying sequences and series to paramedic scheduling and finance"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of series and sequences throughout our conversations in order?",
+            "answer": "You mentioned the topics in this order: 1) First, you asked about the difference between a sequence and a series and general sigma notation, 2) Then you inquired about sigma notation specifically for geometric series with examples, 3) Next, you focused on applying the sum formula for a geometric series to find sums of specific terms, 4) After that, you asked about finding a particular term in a geometric sequence using its formula, 5) Finally, you brought up infinite sums with sigma and limit notation for a geometric series and how to find its sum.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 60: Difference between sequence and series, basic sigma notation",
+                "Session 144: Sigma notation for geometric series with examples",
+                "Session 240 and 246: Applying sum formula and finding specific terms in geometric series",
+                "Session 246: Finding the 7th term in a geometric sequence",
+                "Session 468: Infinite sums with sigma and limit notation for geometric series"
+            ],
+            "ordering_tested": [
+                "1st: Basic sequence vs series and sigma notation",
+                "2nd: Sigma notation for geometric series with examples",
+                "3rd: Applying sum formula for geometric series",
+                "4th: Finding a specific term in geometric sequence",
+                "5th: Infinite sums and limit notation for geometric series"
+            ],
+            "source_chat_ids": [
+                60,
+                144,
+                240,
+                246,
+                468
+            ],
+            "rubric": [
+                "LLM response should mention: Basic sequence vs series and sigma notation",
+                "LLM response should mention: Sigma notation for geometric series with examples",
+                "LLM response should mention: Applying sum formula for geometric series",
+                "LLM response should mention: Finding a specific term in geometric sequence",
+                "LLM response should mention: Infinite sums and limit notation for geometric series"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What values did I give for the first term and the common ratio in the sequence example?",
+            "answer": "You said the first term is 3 and the common ratio is 2.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1 and Turn 3: User messages where the sequence and its parameters are mentioned",
+            "key_facts_tested": [
+                "first term value",
+                "common ratio value"
+            ],
+            "source_chat_ids": [
+                12,
+                14
+            ],
+            "rubric": [
+                "LLM response should state: first term is 3",
+                "LLM response should state: common ratio is 2"
+            ]
+        },
+        {
+            "question": "What formula did I use to find the term in the sequence?",
+            "answer": "I used the formula \\( a_n = 5 + (n-1) \times 3 \\).",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: I analyzed a problem to find the 10th term of the sequence \\( 5, 8, 11, ... \\) using the formula \\( a_n = 5 + (n-1) \times 3 \\), and I got \\( a_{10} = 5 + (10-1) \times 3 = 5 + 9 \times 3 = 5 + 27 = 32 \\), but I'm not sure if I'm correct - can you verify my solution and check if the 10th term is indeed 32?",
+            "key_facts_tested": [
+                "formula used to find the term",
+                "sequence term calculation method"
+            ],
+            "source_chat_ids": [
+                28
+            ],
+            "rubric": [
+                "LLM response should state: formula used is a_n = 5 + (n-1) * 3"
+            ]
+        }
+    ],
+    "instruction_following": [
+         {
+            "question": "Can you help me understand how to find the 10th term in the sequence 5, 8, 11, and so on?",
+            "instruction_being_tested": "Always provide step-by-step solutions when I ask about problem-solving methods",
+            "expected_compliance": "Response should include a clear, sequential explanation of each step taken to solve the problem",
+            "compliance_indicators": [
+                "each step explained in order",
+                "progression from one step to the next",
+                "clear reasoning shown throughout"
+            ],
+            "non_compliance_signs": [
+                "only final answer given",
+                "brief or summary explanation",
+                "missing intermediate steps"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                86,
+                88
+            ],
+            "rubric": [
+                "LLM response should include: step-by-step explanation of finding the 10th term",
+                "LLM response should include: clear reasoning for each step"
+            ]
+        },
+        {
+            "question": "How can I use math to figure out the right amount of medicine to give someone in an emergency?",
+            "instruction_being_tested": "Always relate examples to paramedic scenarios when I ask about applied mathematics",
+            "expected_compliance": "Response should include examples specifically involving paramedic or emergency medical situations to illustrate applied mathematics concepts",
+            "compliance_indicators": [
+                "examples involving patient care",
+                "calculations related to emergency treatment",
+                "scenarios with medical emergencies",
+                "use of math in paramedic tasks"
+            ],
+            "non_compliance_signs": [
+                "generic math examples unrelated to medical emergencies",
+                "no mention of emergency or paramedic contexts",
+                "abstract or unrelated applied math examples"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_instruction",
+            "source_chat_ids": [
+                582
+            ],
+            "rubric": [
+                "LLM response should include: examples involving paramedic or emergency medical situations"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many sequence definition problems have I completed with a perfect score on identifying arithmetic versus geometric sequences?",
+            "answer": "You have completed 5 sequence definition problems and scored 5 out of 5 correct on identifying arithmetic versus geometric sequences.",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "correct identification score on sequence problems",
+            "conversation_references": [
+                "Completed 5 sequence definition problems, scoring 4/5 correct on identifying arithmetic vs geometric sequences.",
+                "After another round of practice, scored 5/5 correct on identifying arithmetic vs geometric sequences."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 4/5 score instead of the perfect 5/5 score.",
+            "source_chat_ids": {
+                "original_info": [
+                    16,
+                    22
+                ],
+                "updated_info": [
+                    84
+                ]
+            },
+            "rubric": [
+                "LLM response should state: completed 5 sequence definition problems",
+                "LLM response should state: scored 5 out of 5 correct on identifying arithmetic versus geometric sequences"
+            ]
+        },
+        {
+            "question": "How many sigma notation problems have I correctly identified the bounds and indices for?",
+            "answer": "7 out of 7 sigma notation problems",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "correct number of sigma notation problems solved with correct bounds and indices",
+            "conversation_references": [
+                "Completed 7 sigma notation problems, scored 6/7 correct identifying bounds and indices.",
+                "After another practice session, scored 7/7 correct identifying bounds and indices in sigma notation problems."
+            ],
+            "potential_confusion": "LLM might incorrectly recall that I scored 6/7 correct instead of the perfect score of 7/7",
+            "source_chat_ids": {
+                "original_info": [
+                    226
+                ],
+                "updated_info": [
+                    308
+                ]
+            },
+            "rubric": [
+                "LLM response should state: completed 7 sigma notation problems",
+                "LLM response should state: scored 7 out of 7 correct on identifying bounds and indices"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+         {
+            "question": "What is the total number of terms I worked with when finding the 7th term of a geometric sequence, the sum of the first 15 terms of an arithmetic sequence, and the sum of a series up to 20 terms?",
+            "answer": "42",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "220,221",
+                "322,323",
+                "802,803"
+            ],
+            "reasoning_steps": [
+                "Identify the number of terms in the geometric sequence problem (7 terms).",
+                "Identify the number of terms in the arithmetic sequence sum problem (15 terms).",
+                "Identify the number of terms in the series sum problem (20 terms).",
+                "Add these numbers together: 7 + 15 + 20 = 42."
+            ],
+            "source_chat_ids": [
+                220,
+                221,
+                322,
+                323,
+                802,
+                803
+            ],
+            "rubric": [
+                "LLM response should state: 42"
+            ]
+        },
+        {
+            "question": "How has my speed in solving convergence problems improved over the sessions where I studied geometric series and induction proofs?",
+            "answer": "Your speed improved from 10 minutes per problem to 5 minutes per problem over the last two weeks.",
+            "difficulty": "medium",
+            "reasoning_type": "progress_assessment",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id:432",
+                "chat_id:738",
+                "chat_id:924"
+            ],
+            "reasoning_steps": [
+                "Identify the initial speed mentioned in the session about geometric series convergence.",
+                "Note the time improvement mentioned by the user in the same session.",
+                "Correlate this improvement with the user's ongoing study of induction proofs and sum formulas in later sessions.",
+                "Synthesize the information to describe the overall progress in problem-solving speed."
+            ],
+            "source_chat_ids": [
+                432,
+                738,
+                924
+            ],
+            "rubric": [
+                "LLM response should state: improved from 10 minutes per problem to 5 minutes per problem"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you show me how to calculate the sum of the first 15 terms of the sequence 3, 7, 11, ... using the formula and also by adding each term individually?",
+            "preference_being_tested": "I prefer step-by-step explanations with concrete examples rather than abstract definitions.",
+            "expected_compliance": "Response should include a detailed, step-by-step explanation with concrete numerical examples for both the formula method and the term-by-term addition method.",
+            "compliance_indicators": [
+                "breaks down each step clearly",
+                "provides numerical examples at each stage",
+                "explains both methods with actual numbers",
+                "avoids vague or purely theoretical descriptions"
+            ],
+            "non_compliance_signs": [
+                "only gives abstract formulas without examples",
+                "provides a summary without detailed steps",
+                "explains concepts in general terms without concrete numbers",
+                "skips the step-by-step process"
+            ],
+            "difficulty": "medium",
+            "preference_type": "explanation_style",
+            "source_chat_ids": [
+                46
+            ],
+            "rubric": [
+                "LLM response should include: step-by-step explanation with concrete numerical examples for both methods"
+            ]
+        },
+        {
+            "question": "Can you help me find the sum of the first 5 terms of the sequence 4, 9, 14, ... using sigma notation, and then show me how to check if the sum is correct?",
+            "preference_being_tested": "I prefer practicing notation with concrete numeric examples rather than abstract variables.",
+            "expected_compliance": "Response should use specific numeric examples and demonstrate the sum calculation concretely rather than relying solely on abstract formulas or variables.",
+            "compliance_indicators": [
+                "provides numeric terms explicitly",
+                "shows step-by-step addition or substitution with numbers",
+                "avoids only symbolic or variable-based explanations"
+            ],
+            "non_compliance_signs": [
+                "only uses abstract variables without numeric examples",
+                "provides purely symbolic sigma notation without concrete sums",
+                "does not verify sum with actual numbers"
+            ],
+            "difficulty": "medium",
+            "preference_type": "content_format",
+            "source_chat_ids": [
+                260
+            ],
+            "rubric": [
+                "LLM response should include: specific numeric examples and step-by-step addition or substitution with numbers"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize my overall learning journey and progress with sequences and series, including how my understanding developed over time?",
+            "ideal_summary": "Your learning journey with sequences and series began with grasping the basic definitions and notation of sequences, including how to denote the nth term and represent series using sigma notation. You then progressed to applying formulas for arithmetic sequences, learning to find specific terms and sums using the common difference and sum formulas. Next, you explored geometric sequences, understanding the concept of the common ratio and how to calculate terms using exponential expressions. Along the way, you clarified the differences between arithmetic and geometric sequences, avoiding confusion between common difference and ratio. Finally, you practiced summing terms both by formula and by direct addition, recognizing the efficiency of formulas for larger sequences. Throughout this process, your understanding deepened through step-by-step problem solving and verification, building a solid foundation in sequences and series.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                1,
+                3,
+                5,
+                9,
+                43
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "formula application",
+                "distinguishing sequence types",
+                "problem-solving progression",
+                "comparison of methods"
+            ],
+            "synthesis_required": "Integrating foundational concepts, formula usage, and problem-solving steps across multiple sessions into a coherent learning narrative",
+            "source_chat_ids": [
+                1,
+                3,
+                5,
+                9,
+                43
+            ],
+            "rubric": [
+                "LLM response should mention: our learning journey with sequences and series began with grasping the basic definitions and notation of sequences, including how to denote the nth term and represent series using sigma notation.",
+                "LLM response should mention: progressed to applying formulas for arithmetic sequences, learning to find specific terms and sums using the common difference and sum formulas.",
+                "LLM response should mention: explored geometric sequences, understanding the concept of the common ratio and how to calculate terms using exponential expressions.",
+                "LLM response should mention: clarified the differences between arithmetic and geometric sequences, avoiding confusion between common difference and ratio.",
+                "LLM response should mention: practiced summing terms both by formula and by direct addition, recognizing the efficiency of formulas for larger sequences."
+            ]
+        },
+        {
+            "question": "Can you give me a thorough summary that captures all the important concepts, methods, and examples we've covered about this topic, weaving together the different explanations and problem-solving approaches we've discussed across our conversations?",
+            "ideal_summary": "The discussions comprehensively explored the principles and applications of geometric progressions and series, including the derivation and use of formulas for individual terms and sums. Starting with calculating specific terms using the nth term formula, the conversations detailed step-by-step methods for finding terms like the 4th, 6th, and 7th in sequences with varying first terms and common ratios. The sum of finite geometric series was examined extensively, with algebraic derivations of the sum formula through factor multiplication and subtraction, clarifying why the formula works. Multiple examples illustrated applying the sum formula to sequences with different parameters, including integer and fractional common ratios, highlighting how the sum changes accordingly. The concept of convergence for infinite geometric series was introduced, explaining the condition |r| < 1 and demonstrating how to calculate infinite sums when this holds. The relationship between geometric progressions and compound interest was also elucidated, showing how the compound interest formula is a specific case of geometric growth. Efficiency comparisons between iterative addition and formula-based calculations emphasized the computational advantages of using formulas, especially for large numbers of terms. Common mistakes, such as incorrect denominators in the sum formula, were identified and corrected with examples. Throughout, sigma notation was explained as a compact representation of geometric series, with examples to clarify its use. The narrative integrated these threads to provide a deep understanding of geometric sequences and series, their sums, convergence behavior, practical applications, and computational considerations.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 10,
+            "key_elements_tested": [
+                "formula derivation and application",
+                "term calculation methods",
+                "sum of finite geometric series",
+                "infinite series convergence",
+                "compound interest connection",
+                "computational efficiency analysis",
+                "error identification and correction",
+                "notation and representation"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                92,
+                93,
+                94,
+                102,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                110,
+                111,
+                118,
+                119,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                154,
+                155,
+                160,
+                161,
+                158,
+                159,
+                162,
+                163,
+                164,
+                165,
+                174,
+                175
+            ],
+            "rubric": [
+                "LLM response should mention: principles and applications of geometric progressions and series, including the derivation and use of formulas for individual terms and sums.",
+                "LLM response should mention: calculating specific terms using the nth term formula, with step-by-step methods for finding terms like the 4th, 6th, and 7th in sequences with varying first terms and common ratios.",
+                "LLM response should mention: sum of finite geometric series, with algebraic derivations of the sum formula through factor multiplication and subtraction, clarifying why the formula works.",
+                "LLM response should mention: multiple examples illustrating applying the sum formula to sequences with different parameters, including integer and fractional common ratios, highlighting how the sum changes accordingly.",
+                "LLM response should mention: concept of convergence for infinite geometric series, explaining the condition |r| < 1 and demonstrating how to calculate infinite sums when this holds.",
+                "LLM response should mention: relationship between geometric progressions and compound interest, showing how the compound interest formula is a specific case of geometric growth.",
+                "LLM response should mention: efficiency comparisons between iterative addition and formula-based calculations, emphasizing the computational advantages of using formulas, especially for large numbers of terms.",
+                "LLM response should mention: common mistakes, such as incorrect denominators in the sum formula, identified and corrected with examples.",
+                "LLM response should mention: sigma notation as a compact representation of geometric series, with examples to clarify its use."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "I improved my problem-solving speed from 20 minutes to 12 minutes over two sessions; how much time did I reduce per problem between those sessions?",
+            "answer": "You reduced your problem-solving time by 8 minutes per problem, going from 20 minutes to 12 minutes.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "20 minutes per problem at the start",
+                "12 minutes per problem after two sessions"
+            ],
+            "conversation_references": [
+                "Session 1: Initial problem-solving time",
+                "Session 2: Improved problem-solving time"
+            ],
+            "calculation_required": "20 minutes - 12 minutes = 8 minutes reduction",
+            "source_chat_ids": {
+                "first_event": [
+                    44
+                ],
+                "second_event": [
+                    44
+                ]
+            },
+            "rubric": [
+                "LLM response should state: reduced time by 8 minutes per problem"
+            ]
+        },
+        {
+            "question": "If I started working 8-hour shifts in the first week and increased my shift hours by 2 each week, how many total hours will I have worked after 10 weeks?",
+            "answer": "After 10 weeks, using the arithmetic series sum formula, the total hours worked will be 130 hours.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Week 1: 8 hours",
+                "Week 10: total hours after 10 weeks"
+            ],
+            "conversation_references": [
+                "Session 1: Initial shift hours and sequence definition",
+                "Session 2: Sum of first 10 terms calculation"
+            ],
+            "calculation_required": "S_10 = (10/2) * (2*8 + (10-1)*2) = 5 * (16 + 18) = 5 * 34 = 170 hours",
+            "source_chat_ids": {
+                "first_event": [
+                    72,
+                    490
+                ],
+                "second_event": [
+                    492
+                ]
+            },
+            "rubric": [
+                "LLM response should state: total hours worked after 10 weeks is 170 hours"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,681 @@
+{
+    "abstention": [
+        {
+            "question": "What were the participants' reactions or feelings after completing the quiz on multinomial distribution?",
+            "ideal_response": "Based on the provided chat, there is no information related to participants' reactions or feelings about the quiz.",
+            "difficulty": "medium",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "No emotional or subjective feedback is mentioned about the quiz",
+            "plan_reference": "Batch 7, Bullet 27 mentions quiz preparation but no reactions",
+            "rubric": [
+                "Based on the provided chat, there is no information related to participants' reactions or feelings about the quiz"
+            ]
+        },
+        {
+            "question": "What was the exact agenda for the four study sessions focusing on factorial properties and probability rules?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific agenda of those study sessions.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Study sessions are mentioned but no detailed agenda is provided",
+            "plan_reference": "Batch 1, Bullet 17 mentions study sessions but no agenda details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific agenda of those study sessions"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever attempted permutation problems involving distinct objects before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you attempted some permutation problems involving distinct objects and solved a few, but you also mentioned that you've never attempted any such problems. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with permutation problems involving distinct objects",
+            "conversation_references": [
+                "Session 16: Attempted permutation problems",
+                "Session 154: Never attempted permutation problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    16
+                ],
+                "second_statement": [
+                    154
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you attempted some permutation problems involving distinct objects",
+                "LLM response should mention: you also mentioned that you've never attempted any such problems",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever worked through Bayes' theorem problems involving clinical test scenarios?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. In one instance, you provided a detailed solution to a Bayes' theorem problem involving clinical test parameters, but you also mentioned that you have never completed any such problems. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with Bayes' theorem clinical test problems",
+            "conversation_references": [
+                "Session 1: Provided detailed Bayes' theorem solution",
+                "Session 2: Stated never completed such problems"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    342
+                ],
+                "second_statement": [
+                    514
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you provided a detailed solution to a Bayes' theorem problem",
+                "LLM response should mention: you also mentioned that you have never completed any such problems",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you reconstruct the sequence in which I introduced different facets of the combinatorial principles we discussed, including how I approached various problem types and formula applications, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You introduced the facets in this sequence: 1) Initial questions about applying combinatorial formulas to specific partitions, 2) Requests for examples involving different group sizes and multinomial coefficients, 3) Exploration of inclusion-exclusion principle with three sets and step-by-step calculations, 4) Extension of inclusion-exclusion to problems with four sets and visualization aids, 5) Verification and correction of mistakes in inclusion-exclusion applications, 6) Deeper inquiries into the reasoning behind formula components such as triple intersections, 7) Transition to multinomial theorem applications involving coefficients in polynomial expansions, 8) Comparative discussions on multinomial coefficients versus permutations with repeated elements, 9) Integration of multinomial and inclusion-exclusion principles in combined problem-solving contexts, 10) Final clarifications on formula usage and problem-solving accuracy improvements.",
+            "difficulty": "hard",
+            "ordering_type": "chronological_reconstruction",
+            "total_mentions": 10,
+            "conversation_references": [
+                "160, 168, 170, 172",
+                "180, 182, 184",
+                "174, 176, 178",
+                "194, 196, 198, 204",
+                "200, 202",
+                "214, 216, 222",
+                "188, 212, 228, 238",
+                "312, 322",
+                "294",
+                "294"
+            ],
+            "ordering_tested": [
+                "1st: Initial combinatorial formula questions",
+                "2nd: Examples with varied group sizes",
+                "3rd: Inclusion-exclusion principle for three sets",
+                "4th: Inclusion-exclusion extension to four sets",
+                "5th: Error identification and correction in inclusion-exclusion",
+                "6th: Explanation of formula components like triple intersections",
+                "7th: Multinomial theorem and polynomial coefficient calculations",
+                "8th: Distinction between multinomial coefficients and permutations",
+                "9th: Combined use of multinomial and inclusion-exclusion principles",
+                "10th: Clarifications and accuracy improvements"
+            ],
+            "complexity_factors": [
+                "requires detailed chronological reconstruction",
+                "involves multiple related combinatorial concepts",
+                "spans numerous conversation sessions",
+                "demands integration of formula understanding and problem-solving",
+                "tests ability to track nuanced topic evolution"
+            ],
+            "source_chat_ids": [
+                [
+                    160,
+                    168,
+                    170,
+                    172
+                ],
+                [
+                    180,
+                    182,
+                    184
+                ],
+                [
+                    174,
+                    176,
+                    178
+                ],
+                [
+                    194,
+                    196,
+                    198,
+                    204
+                ],
+                [
+                    200,
+                    202
+                ],
+                [
+                    214,
+                    216,
+                    222
+                ],
+                [
+                    188,
+                    212,
+                    228,
+                    238
+                ],
+                [
+                    312,
+                    322
+                ],
+                [
+                    294
+                ],
+                [
+                    294
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Initial combinatorial formula questions",
+                "LLM response should mention: Examples with varied group sizes",
+                "LLM response should mention: Inclusion-exclusion principle for three sets",
+                "LLM response should mention: Inclusion-exclusion extension to four sets",
+                "LLM response should mention: Error identification and correction in inclusion-exclusion",
+                "LLM response should mention: Explanation of formula components like triple intersections",
+                "LLM response should mention: Multinomial theorem and polynomial coefficient calculations",
+                "LLM response should mention: Distinction between multinomial coefficients and permutations",
+                "LLM response should mention: Combined use of multinomial and inclusion-exclusion principles",
+                "LLM response should mention: Clarifications and accuracy improvements"
+            ]
+        },
+        {
+            "question": "How did my discussions about probability and counting principles develop across our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your discussions unfolded in this sequence: 1) Introducing the core formula and application of a key conditional probability theorem, 2) Requesting help with a specific problem applying that theorem using prevalence, sensitivity, and specificity, 3) Seeking clarification on calculating a key component of the formula using a foundational probability law, 4) Asking for feedback on your solution applying the theorem, 5) Exploring a combinatorial counting principle for distributing identical items into distinct groups, 6) Requesting explanations on why that combinatorial principle is preferred over repeated expansions, 7) Returning to conditional probability with multiple events and its real-world applications, 8) Deepening understanding of the foundational probability law and its intuitive explanation, 9) Combining multiple principles including the counting and inclusion-exclusion methods in complex problems, 10) Clarifying distinctions between conditional probabilities and their impact on posterior calculations in clinical contexts.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "338",
+                "340",
+                "342",
+                "344",
+                "414",
+                "416",
+                "356",
+                "370",
+                "374",
+                "486"
+            ],
+            "ordering_tested": [
+                "1st: Introducing the conditional probability formula",
+                "2nd: Applying the formula to a clinical problem",
+                "3rd: Clarifying calculation of a key probability component",
+                "4th: Requesting feedback on solution correctness",
+                "5th: Introducing combinatorial counting principle",
+                "6th: Explaining preference for combinatorial principle over expansions",
+                "7th: Discussing conditional probability with multiple events",
+                "8th: Seeking intuitive explanation of foundational probability law",
+                "9th: Combining counting and inclusion-exclusion principles",
+                "10th: Clarifying differences between conditional probabilities"
+            ],
+            "complexity_factors": [
+                "requires sophisticated sequence reconstruction",
+                "spans multiple conversation sessions",
+                "involves intertwined probability and combinatorial topics",
+                "tests understanding of conceptual development and pattern evolution"
+            ],
+            "source_chat_ids": [
+                338,
+                340,
+                342,
+                344,
+                414,
+                416,
+                356,
+                370,
+                374,
+                486
+            ],
+            "rubric": [
+                "LLM response should mention: Introducing the conditional probability formula",
+                "LLM response should mention: Applying the formula to a clinical problem",
+                "LLM response should mention: Clarifying calculation of a key probability component",
+                "LLM response should mention: Requesting feedback on solution correctness",
+                "LLM response should mention: Introducing combinatorial counting principle",
+                "LLM response should mention: Explaining preference for combinatorial principle over expansions",
+                "LLM response should mention: Discussing conditional probability with multiple events",
+                "LLM response should mention: Seeking intuitive explanation of foundational probability law",
+                "LLM response should mention: Combining counting and inclusion-exclusion principles",
+                "LLM response should mention: Clarifying differences between conditional probabilities"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What formula did I mention for calculating the probability of drawing two aces from the deck?",
+            "answer": "You mentioned the formula C(4,2)/C(52,2).",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I'm trying to calculate the probability of drawing 2 aces from a 52-card deck, and I've got the formula C(4,2)/C(52,2) = 6/1326 \u2248 0.00452, but I'm not sure if I'm doing it right, can you help me verify this",
+            "key_facts_tested": [
+                "formula for probability calculation",
+                "combination expressions"
+            ],
+            "source_chat_ids": [
+                66
+            ],
+            "rubric": [
+                "LLM response should state: C(4,2)/C(52,2)"
+            ]
+        },
+        {
+            "question": "What group sizes did I first mention when asking about calculating that multinomial coefficient?",
+            "answer": "You first mentioned groups of sizes 3, 2, and 2.",
+            "difficulty": "medium",
+            "question_type": "early_detail_recall",
+            "conversation_reference": "Turn 1: Initial user message about multinomial coefficient calculation",
+            "key_facts_tested": [
+                "group sizes: 3, 2, 2",
+                "multinomial coefficient formula context"
+            ],
+            "source_chat_ids": [
+                228,
+                238
+            ],
+            "rubric": [
+                "LLM response should state: You mentioned groups of sizes 3, 2, and 2"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "I'm trying to understand how to approach problems involving conditional probabilities. Can you help me with that?",
+            "instruction_being_tested": "Always clarify the difference between P(A|B) and P(B|A) when I ask about Bayes\u2019 theorem problems.",
+            "expected_compliance": "Response should include an explanation distinguishing the two conditional probabilities and their roles in the problem.",
+            "compliance_indicators": [
+                "clear distinction between the two conditional probabilities",
+                "explanation of how each probability is interpreted",
+                "examples or clarification showing the difference"
+            ],
+            "non_compliance_signs": [
+                "treating the two probabilities as the same",
+                "ignoring the difference",
+                "only providing a formula without explanation"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_clarification",
+            "source_chat_ids": [
+                512
+            ],
+            "rubric": [
+                "LLM response should contain: clear distinction between the two conditional probabilities (P(A|B) and P(B|A))",
+                "LLM response should contain: explanation of how each probability is interpreted"
+            ]
+        },
+        {
+            "question": "If I roll four dice, what\u2019s the chance that at least one of them shows a six?",
+            "instruction_being_tested": "Always explain independence assumptions clearly when I ask about card or dice probability problems.",
+            "expected_compliance": "Response should include a clear explanation of the independence of each die roll and how that affects the calculation.",
+            "compliance_indicators": [
+                "explicit mention that each die roll does not affect the others",
+                "clarification that outcomes are independent events",
+                "use of independence in probability calculation"
+            ],
+            "non_compliance_signs": [
+                "no mention of how the rolls relate to each other",
+                "treating rolls as dependent without explanation",
+                "omitting any discussion of event relationships"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "explanation_detail",
+            "source_chat_ids": [
+                1028,
+                1030
+            ],
+            "rubric": [
+                "LLM response should contain: explicit mention that each die roll does not affect the others",
+                "LLM response should contain: clarification that outcomes are independent events"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many 45-minute study sessions have I planned to focus on factorial properties and probability rules?",
+            "answer": "5 study sessions of 45 minutes each",
+            "difficulty": "easy",
+            "update_type": "study_plan_extension",
+            "tests_retention_of": "the number of study sessions planned",
+            "conversation_references": [
+                "Learning Strategies: I scheduled 4 study sessions of 45 minutes each focusing on factorial properties and probability rules.",
+                "Information Update: I extended my study sessions to 5 sessions of 45 minutes each, allowing more time to deepen my understanding of factorial properties and probability rules."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 4 study sessions instead of the updated 5 sessions",
+            "source_chat_ids": {
+                "original_info": [
+                    68
+                ],
+                "updated_info": [
+                    148
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 study sessions"
+            ]
+        },
+        {
+            "question": "How many problems have I completed calculating expectation and variance, and what is my accuracy level?",
+            "answer": "You have completed 8 problems calculating expectation and variance, and your accuracy is 92%.",
+            "difficulty": "easy",
+            "update_type": "progress_update",
+            "tests_retention_of": "number of problems completed and accuracy percentage",
+            "conversation_references": [
+                "Learning Strategies: Scheduled 4 study sessions of 50 minutes each focusing on expectation and variance calculations.",
+                "I completed 8 problems calculating expectation and variance, raising my accuracy to 92%."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original plan of 4 study sessions instead of the actual number of problems completed and the accuracy achieved.",
+            "source_chat_ids": {
+                "original_info": [
+                    622,
+                    624,
+                    630,
+                    632
+                ],
+                "updated_info": [
+                    710,
+                    712
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 8 problems",
+                "LLM response should state: 92%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "I worked on problems involving drawing 2 cards from a deck and arranging books. How many total items did I consider when calculating combinations and permutations across these problems?",
+            "answer": "You considered 52 cards for combinations and 8 books for permutations, totaling 60 items.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id 67",
+                "chat_id 73",
+                "chat_id 91"
+            ],
+            "reasoning_steps": [
+                "Identify the total number of cards (52) used in combination problems from the card drawing sessions.",
+                "Identify the total number of books (8) used in permutation problems from the book arranging sessions.",
+                "Add the two totals to find the combined number of items considered."
+            ],
+            "source_chat_ids": [
+                67,
+                73,
+                91
+            ],
+            "rubric": [
+                "LLM response should state: 60 items",
+                "LLM response should state: 52 cards for combinations",
+                "LLM response should state: 8 books for permutations"
+            ]
+        },
+        {
+            "question": "Given my work on full house probabilities, expectation and variance calculations, dice roll methods, inclusion-exclusion problems, and distribution differences, how would I compute the combined probability of drawing a full house and then rolling a sum of 7 with two dice, and what does this reveal about my understanding of combinatorics and probability methods?",
+            "answer": "First, calculate the full house probability as 0.00144 using corrected combinations. Then, calculate the probability of rolling a sum of 7 with two dice as 1/6. Multiply these independent probabilities: 0.00144 \u00d7 1/6 \u2248 0.00024. This combined calculation shows I can synthesize combinatorial card probabilities with sequential dice roll probabilities, applying both direct counting and probability tree methods, reflecting a solid grasp of combinatorics, probability distributions, and multi-step problem solving.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 5,
+            "conversation_references": [
+                "full house probability calculation and formula correction",
+                "expectation and variance calculation for discrete variables",
+                "direct counting vs probability trees for dice rolls",
+                "inclusion-exclusion principle application",
+                "hypergeometric vs binomial distribution in card games"
+            ],
+            "reasoning_steps": [
+                "Identify the correct formula and value for the full house probability from my initial card probability work.",
+                "Recall the method and result for calculating the probability of rolling a sum of 7 with two dice using direct counting.",
+                "Recognize that these two events (drawing cards and rolling dice) are independent, allowing multiplication of probabilities.",
+                "Combine the probabilities to find the joint probability of both events occurring sequentially.",
+                "Interpret this combined probability as evidence of my ability to integrate multiple combinatorial and probabilistic concepts across different problem types."
+            ],
+            "source_chat_ids": [
+                888,
+                910,
+                911,
+                1014
+            ],
+            "rubric": [
+                "LLM response should state: calculate the full house probability as 0.00144 using corrected combinations",
+                "LLM response should state: calculate the probability of rolling a sum of 7 with two dice as 1/6",
+                "LLM response should state: Multiply these independent probabilities: 0.00144 \u00d7 1/6 \u2248 0.00024.",
+                "LLM response should state: This combined calculation shows you can synthesize combinatorial card probabilities with sequential dice roll probabilities"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you help me work through a problem involving variance where the random variable is defined?",
+            "preference_being_tested": "I prefer working with concrete numerical examples like dice rolls to understand abstract random variable concepts.",
+            "expected_compliance": "Response should use a concrete numerical example involving dice rolls to explain the variance calculation, rather than only abstract formulas or non-numerical explanations.",
+            "compliance_indicators": [
+                "provides a step-by-step variance calculation using dice roll outcomes",
+                "uses specific numerical probabilities and values from dice rolls",
+                "avoids purely symbolic or abstract explanations without concrete numbers"
+            ],
+            "non_compliance_signs": [
+                "only explains variance using abstract formulas without numerical examples",
+                "uses examples unrelated to dice or concrete numbers",
+                "fails to provide stepwise numerical calculations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "example_format",
+            "source_chat_ids": [
+                652,
+                662,
+                664,
+                678
+            ],
+            "rubric": [
+                "LLM response should contain: uses specific numerical probabilities and values from dice rolls",
+                "LLM response should contain: avoids purely symbolic or abstract explanations without concrete numbers"
+            ]
+        },
+        {
+            "question": "I'm working on analyzing a Markov chain and want to find the steady-state distribution. How would you suggest I approach this calculation?",
+            "preference_being_tested": "I prefer matrix-based methods for Markov chains due to clarity and computational efficiency.",
+            "expected_compliance": "Response should recommend or prioritize matrix-based methods for analyzing Markov chains, such as using transition matrices and linear algebra techniques, rather than alternative approaches.",
+            "compliance_indicators": [
+                "recommends using transition matrices",
+                "suggests matrix operations like eigenvector calculation or solving linear systems",
+                "explains computational steps involving matrices"
+            ],
+            "non_compliance_signs": [
+                "only suggests simulation or iterative methods without matrix use",
+                "focuses solely on non-matrix approaches like state-by-state analysis",
+                "ignores matrix-based techniques entirely"
+            ],
+            "difficulty": "medium",
+            "preference_type": "methodological approach",
+            "source_chat_ids": [
+                840
+            ],
+            "rubric": [
+                "LLM response should contain: recommends using transition matrices",
+                "LLM response should contain: suggests matrix operations like eigenvector calculation or solving linear systems"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a clear summary of how my understanding and use of the inclusion-exclusion principle and multinomial theorem developed throughout our conversations?",
+            "ideal_summary": "Over the course of our discussions, your grasp of the inclusion-exclusion principle and multinomial theorem deepened progressively. Initially, you sought help understanding the inclusion-exclusion principle for three sets and multinomial coefficients for partitioning objects, where the assistant explained the formulas and provided basic examples. As you practiced, you requested more applied examples involving students in clubs and sports, which helped you see how to calculate unions and intersections step-by-step, including handling triple and quadruple intersections. You also explored multinomial coefficients through multiple examples partitioning different numbers of objects into groups, reinforcing the factorial calculations and the reasoning behind the formula. Later, you clarified common mistakes, such as forgetting to add back triple intersections, and requested explanations on why certain terms are added or subtracted in the inclusion-exclusion formula. Finally, you connected these concepts to probability problems and more complex scenarios, solidifying your understanding of both principles and their applications. Throughout, the assistant provided detailed calculations, real-world examples, and visual aids like Venn diagrams, which supported your learning journey and improved your problem-solving accuracy.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                160,
+                161,
+                163,
+                165,
+                175,
+                177,
+                179,
+                168,
+                169,
+                171,
+                173,
+                181,
+                183,
+                185,
+                194,
+                197,
+                199,
+                201,
+                205,
+                215,
+                223,
+                231,
+                229,
+                239,
+                243,
+                291
+            ],
+            "key_elements_tested": [
+                "conceptual development",
+                "progressive understanding",
+                "application examples",
+                "error correction",
+                "concept integration"
+            ],
+            "synthesis_required": "Integrating explanations, examples, corrections, and applications across multiple sessions into a coherent learning narrative",
+            "source_chat_ids": [
+                160,
+                161,
+                163,
+                165,
+                175,
+                177,
+                179,
+                168,
+                169,
+                171,
+                173,
+                181,
+                183,
+                185,
+                194,
+                197,
+                199,
+                201,
+                205,
+                215,
+                223,
+                231,
+                229,
+                239,
+                243,
+                291
+            ],
+            "rubric": [
+                "LLM response should contain: you sought help understanding the inclusion-exclusion principle for three sets and multinomial coefficients for partitioning objects",
+                "LLM response should contain: you requested more applied examples involving students in clubs and sports, which helped you see how to calculate unions and intersections step-by-step, including handling triple and quadruple intersections",
+                "LLM response should contain: explored multinomial coefficients through multiple examples partitioning different numbers of objects into groups, reinforcing the factorial calculations and the reasoning behind the formula",
+                "LLM response should contain: you clarified common mistakes, such as forgetting to add back triple intersections, and requested explanations on why certain terms are added or subtracted in the inclusion-exclusion formula",
+                "LLM response should contain: you connected these concepts to probability problems and more complex scenarios, solidifying your understanding of both principles and their applications"
+            ]
+        },
+        {
+            "question": "Can you summarize my learning journey and progress with Bayes' theorem and the multinomial theorem based on our discussions?",
+            "ideal_summary": "Your learning journey with Bayes' theorem and the multinomial theorem unfolded through several stages. Initially, you explored the application of Bayes' theorem in clinical risk assessments, understanding how to calculate the probability of disease given a positive test result by incorporating disease prevalence, test sensitivity, and specificity. You then deepened your grasp by working through multiple examples, including updating probabilities with new evidence and connecting these concepts to decision-making under uncertainty. Parallelly, you studied the multinomial theorem, starting with calculating coefficients like the one for \\(x^3 y^2 z^2\\) in \\((x + y + z)^7\\), and progressed to more complex expansions involving multiple variables and higher powers. Throughout, you learned to compute multinomial coefficients step-by-step and understood their combinatorial significance in counting problems such as distributing identical objects into distinct groups. This comprehensive exploration enhanced your ability to apply these mathematical tools in practical and theoretical contexts, reflecting a clear progression from foundational understanding to more advanced applications.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                338,
+                339,
+                340,
+                341,
+                415,
+                417,
+                451,
+                460,
+                466,
+                479,
+                485
+            ],
+            "key_elements_tested": [
+                "conceptual understanding",
+                "application examples",
+                "step-by-step calculations",
+                "progression from basics to advanced",
+                "integration of related topics"
+            ],
+            "synthesis_required": "Combining explanations, examples, and problem-solving steps across multiple sessions into a coherent narrative of learning and development",
+            "source_chat_ids": [
+                338,
+                339,
+                340,
+                341,
+                415,
+                417,
+                451,
+                460,
+                466,
+                479,
+                485
+            ],
+            "rubric": [
+                "LLM response should contain: you explored the application of Bayes' theorem in clinical risk assessments",
+                "LLM response should contain: deepened your grasp by working through multiple examples, including updating probabilities with new evidence and connecting these concepts to decision-making under uncertainty",
+                "LLM response should contain: you studied the multinomial theorem, starting with calculating coefficients and progressed to more complex expansions involving multiple variables and higher powers",
+                "LLM response should contain: you learned to compute multinomial coefficients step-by-step and understood their combinatorial significance in counting problems"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I planned to prepare for my quiz on inclusion-exclusion and when I started preparing for my test on multi-hypothesis Bayes\u2019 theorem?",
+            "answer": "There are 84 days between February 1, 2024, when I planned to prepare for my inclusion-exclusion quiz, and April 25, 2024, when I started preparing for my test on multi-hypothesis Bayes\u2019 theorem.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 1, 2024: preparing for inclusion-exclusion quiz",
+                "April 25, 2024: preparing for multi-hypothesis Bayes\u2019 theorem test"
+            ],
+            "conversation_references": [
+                "Session 296: inclusion-exclusion quiz preparation",
+                "Session 1384: Bayes\u2019 theorem test preparation"
+            ],
+            "calculation_required": "April 25, 2024 - February 1, 2024 = 84 days",
+            "source_chat_ids": {
+                "first_event": [
+                    296
+                ],
+                "second_event": [
+                    1384
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 84 days",
+                "LLM response should state: from February 1, 2024 till April 25, 2024"
+            ]
+        },
+        {
+            "question": "How many days after I planned my self-test did I reach 10 solved probability problems with 95% accuracy?",
+            "answer": "11 days elapsed between planning the self-test on January 25, 2024, and reaching 10 solved probability problems with 95% accuracy on February 5, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "January 25, 2024: planned self-test",
+                "About 11 days later: reached 10 solved problems with 95% accuracy"
+            ],
+            "conversation_references": [
+                "Session 138: self-test planned for January 25, 2024",
+                "Session 1026: reached 10 solved problems with 95% accuracy"
+            ],
+            "calculation_required": "February 5, 2024 - January 25, 2024 = 11 days",
+            "source_chat_ids": {
+                "first_event": [
+                    138
+                ],
+                "second_event": [
+                    1026
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 11 days",
+                "LLM response should state: from January 25, 2024 till February 5, 2024"
+            ]
+        }
+    ]
+}

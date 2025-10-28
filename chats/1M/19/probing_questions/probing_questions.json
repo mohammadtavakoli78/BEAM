@@ -1,0 +1,699 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Ms. Elif Y\u0131lmaz\u2019s teaching style or qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Ms. Elif Y\u0131lmaz\u2019s teaching style or qualifications.",
+            "difficulty": "medium",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "Ms. Y\u0131lmaz is mentioned as a teacher but no details about her style or qualifications are given.",
+            "plan_reference": "Multiple batches mention Ms. Y\u0131lmaz as teacher but no teaching style or qualifications described.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Ms. Elif Y\u0131lmaz\u2019s teaching style",
+                "Based on the provided chat, there is no information related to Ms. Elif Y\u0131lmaz\u2019s qualifications"
+            ]
+        },
+        {
+            "question": "Could you provide the exact number of attendees at the Turkish cooking competition on November 10?",
+            "ideal_response": "Based on the provided chat, there is no information related to the number of attendees at the Turkish cooking competition.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The event is mentioned but attendee count is not specified.",
+            "plan_reference": "Batch 7 mentions Turkish cooking competition but no attendee numbers.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the number of attendees at the Turkish cooking competition"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever completed an oral presentation or spoken publicly in Turkish?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you completed an oral presentation on Turkish culture and scored well, but you also mentioned never having done any oral presentations or spoken publicly in Turkish. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Experience with oral presentations in Turkish",
+            "conversation_references": [
+                "Session 1: Oral presentation and scoring",
+                "Session 6: Never completed oral presentations"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    426,
+                    436,
+                    442
+                ],
+                "second_statement": [
+                    606
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you completed an oral presentation on Turkish culture and scored well",
+                "LLM response should mention: you also mentioned never having done any oral presentations or spoken publicly in Turkish",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended any Turkish music concerts or cultural workshops?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have attended a Turkish music concert, but you also mentioned that you have never attended any Turkish music concerts or cultural workshops. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at Turkish music concerts or cultural workshops",
+            "conversation_references": [
+                "Session 862, 868, 870, 876: Attended concert statements",
+                "Session 1002: Never attended statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    862,
+                    868,
+                    870,
+                    876
+                ],
+                "second_statement": [
+                    1002
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have attended a Turkish music concert",
+                "LLM response should mention: you also mentioned that you have never attended any Turkish music concerts or cultural workshops",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my discussions about my language exchange sessions with Michael develop in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your discussions about your language exchange sessions with Michael progressed as follows: 1) You first mentioned meeting Michael and planning to practice Turkish weekly, 2) Then you discussed scheduling specifics and considered changing the session times, 3) You expressed concerns about maintaining motivation and coping with Michael's temporary unavailability, 4) After that, you talked about resuming sessions and overcoming speaking anxiety, 5) You moved on to practicing specific skills like presentations and attending language events, 6) Later, you focused on cultural fluency through idioms and proverbs, 7) You then introduced debate practice and topic planning, 8) Finally, you concentrated on exam preparation, reviewing results, and maintaining skills after success.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id 8",
+                "chat_id 206, 208, 226",
+                "chat_id 408, 414, 422",
+                "chat_id 610, 624",
+                "chat_id 800, 814",
+                "chat_id 1004, 1014, 1016",
+                "chat_id 1192, 1194",
+                "chat_id 1386, 1392, 1400, 1402, 1600, 1604, 1608, 1778, 1784, 1794"
+            ],
+            "ordering_tested": [
+                "1st: Initial meeting and weekly practice plan",
+                "2nd: Scheduling and session time changes",
+                "3rd: Motivation concerns and partner unavailability",
+                "4th: Resuming sessions and speaking confidence",
+                "5th: Skill-specific practice and language events",
+                "6th: Cultural fluency through idioms and proverbs",
+                "7th: Debate practice and topic planning",
+                "8th: Exam preparation, results review, and skill maintenance"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic shifts",
+                "spans many conversation sessions",
+                "involves nuanced development of language learning topics",
+                "demands sophisticated sequence reconstruction"
+            ],
+            "source_chat_ids": [
+                8,
+                206,
+                208,
+                226,
+                408,
+                414,
+                422,
+                610,
+                624,
+                800,
+                814,
+                1004,
+                1014,
+                1016,
+                1192,
+                1194,
+                1386,
+                1392,
+                1400,
+                1402,
+                1600,
+                1604,
+                1608,
+                1778,
+                1784,
+                1794
+            ],
+            "rubric": [
+                "Initial meeting and weekly practice plan",
+                "Scheduling and session time changes",
+                "Motivation concerns and partner unavailability",
+                "Resuming sessions and speaking confidence",
+                "Skill-specific practice and language events",
+                "Cultural fluency through idioms and proverbs",
+                "Debate practice and topic planning",
+                "Exam preparation, results review, and skill maintenance"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different ways of engaging with Turkish culture and language throughout our conversations, in order? Mention ONLY and ONLY ten items.",
+            "answer": "You mentioned different ways of engaging with Turkish culture and language in this order: 1) Discussing attending a Turkish poetry reading event, 2) Talking about Omar and deepening cultural exposure through events like poetry readings, 3) Exploring Omar's personal Turkish poetry collection and creative writing, 4) Reflecting on attending a Turkish calligraphy exhibition and related cultural experiences, 5) Mentioning Omar's Turkish calligraphy workshop and balancing study with social events, 6) Talking about attending a Turkish folk music concert and feelings about language progress, 7) Discussing the Turkish film festival and practicing Turkish in real-life settings, 8) Considering attending a Turkish New Year's concert and balancing study and relaxation during holidays, 9) Reflecting on a Turkish language poetry reading experience and prioritizing language learning goals, 10) Receiving a signed Turkish poetry book from Omar and seeking tips to get the most out of it.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 330: Turkish poetry reading event",
+                "Session 336, 340: Omar and cultural exposure through poetry events",
+                "Session 524, 534, 544, 546: Omar's poetry collection and creative writing",
+                "Session 724, 732, 738: Turkish calligraphy exhibition",
+                "Session 922, 928, 936: Calligraphy workshop and balancing study/social life",
+                "Session 1118, 1126: Turkish folk music concert and language progress",
+                "Session 1308, 1314, 1320: Turkish film festival and real-life practice",
+                "Session 1506, 1510, 1516, 1522: Turkish New Year's concert and holiday study balance",
+                "Session 1700, 1712: Turkish language poetry reading and learning priorities",
+                "Session 1892: Signed Turkish poetry book and reading tips"
+            ],
+            "ordering_tested": [
+                "1st: Poetry reading event",
+                "2nd: Omar and cultural exposure through poetry",
+                "3rd: Poetry collection and creative writing",
+                "4th: Calligraphy exhibition",
+                "5th: Calligraphy workshop and study/social balance",
+                "6th: Folk music concert and language progress",
+                "7th: Film festival and real-life language practice",
+                "8th: New Year's concert and holiday study balance",
+                "9th: Language poetry reading and learning priorities",
+                "10th: Signed poetry book and reading tips"
+            ],
+            "source_chat_ids": [
+                330,
+                [
+                    336,
+                    340
+                ],
+                [
+                    524,
+                    534,
+                    544,
+                    546
+                ],
+                [
+                    724,
+                    732,
+                    738
+                ],
+                [
+                    922,
+                    928,
+                    936
+                ],
+                [
+                    1118,
+                    1126
+                ],
+                [
+                    1308,
+                    1314,
+                    1320
+                ],
+                [
+                    1506,
+                    1510,
+                    1516,
+                    1522
+                ],
+                [
+                    1700,
+                    1712
+                ],
+                1892
+            ],
+            "rubric": [
+                "Poetry reading event",
+                "Omar and cultural exposure through poetry",
+                "Poetry collection and creative writing",
+                "Calligraphy exhibition",
+                "Calligraphy workshop and study/social balance",
+                "Folk music concert and language progress",
+                "Film festival and real-life language practice",
+                "New Year's concert and holiday study balance",
+                "Language poetry reading and learning priorities",
+                "Signed poetry book and reading tips"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What proficiency level and target date did I set for my Turkish learning goal?",
+            "answer": "You said you want to reach B2 Turkish proficiency by December 1, 2024.",
+            "difficulty": "medium",
+            "question_type": "date_and_level_recall",
+            "conversation_reference": "Turn 1: User's initial goal statement",
+            "key_facts_tested": [
+                "proficiency level: B2",
+                "target date: December 1, 2024"
+            ],
+            "source_chat_ids": [
+                46
+            ],
+            "rubric": [
+                "LLM response should state: B2",
+                "LLM response should state: December 1, 2024"
+            ]
+        },
+        {
+            "question": "How did I decide on the best way to use the resource I got for $25 to prepare for my upcoming Turkish course, and what factors influenced whether I might need additional materials?",
+            "answer": "You decided to use the resource by setting clear goals, creating a structured study plan with activities like vocabulary review, grammar practice, reading, listening, writing, and regular review to prepare for your course. Whether you need additional materials depends on the type of resource you purchased and your learning goals; for example, if your resource is a dictionary, you might complement it with workbooks or audio materials. You assessed your needs, evaluated what your $25 resource covers, and considered complementary materials to fill gaps and support your learning effectively.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial concern about spending $25, detailed usage strategies for the resource, and advice on complementary materials",
+            "key_facts_tested": [
+                "resource cost: $25",
+                "resource type: Turkish-English dictionary",
+                "study plan components: vocabulary, grammar, reading, listening, writing, review",
+                "decision factors for additional materials: resource type and learning goals",
+                "examples of complementary materials: workbook, audio materials, flashcards"
+            ],
+            "extraction_challenge": "LLM must integrate the user's purchase context, the assistant's detailed usage recommendations, and the advice on whether additional materials are needed, synthesizing information scattered across multiple conversation turns to explain the decision-making and planning process.",
+            "source_chat_ids": [
+                92,
+                98,
+                106,
+                109
+            ],
+            "rubric": [
+                "LLM response should state: You decided to use the resource by setting clear goals",
+                "LLM response should state: creating a structured study plan with activities like vocabulary review",
+                "LLM response should state: grammar practice",
+                "LLM response should state: reading, listening, writing",
+                "LLM response should state: regular review to prepare for your course",
+                "LLM response should state: Whether you need additional materials depends on the type of resource you purchased and your learning goals",
+                "LLM response should state: You assessed your needs, evaluated what your $25 resource covers, and considered complementary materials to fill gaps and support your learning effectively"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some good ways I can experience local traditions?",
+            "instruction_being_tested": "Always include specific locations when I ask about cultural immersion activities.",
+            "expected_compliance": "Response should include names of particular places or areas where the activities can be experienced.",
+            "compliance_indicators": [
+                "mentions of exact towns, neighborhoods, or venues",
+                "specific geographic references tied to the activities",
+                "location names associated with cultural experiences"
+            ],
+            "non_compliance_signs": [
+                "only general descriptions without place names",
+                "no mention of where to find the activities",
+                "vague or broad references without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                796
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of exact towns, neighborhoods, or venues",
+                "LLM response should contain: specific geographic references tied to the activities",
+                "LLM response should contain: location names associated with cultural experiences"
+            ]
+        },
+        {
+            "question": "How has my pronunciation been improving lately?",
+            "instruction_being_tested": "Always include the number of practice sessions when I ask about pronunciation progress.",
+            "expected_compliance": "Response should include the count of practice sessions along with the assessment of pronunciation improvement.",
+            "compliance_indicators": [
+                "mention of number of practice sessions",
+                "reference to session counts",
+                "quantitative session data included"
+            ],
+            "non_compliance_signs": [
+                "no mention of practice sessions",
+                "only qualitative feedback",
+                "general progress without session numbers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1380
+            ],
+            "rubric": [
+                "LLM response should contain: mention of number of practice sessions",
+                "LLM response should contain: quantitative session data included"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many new words have I learned in context using flashcards and example sentences?",
+            "answer": "250 new words",
+            "difficulty": "easy",
+            "update_type": "progress_increase",
+            "tests_retention_of": "updated vocabulary acquisition number",
+            "conversation_references": [
+                "Goals & Progress:Vocabulary Building: Learned 200 new words in context using flashcards and example sentences by April 9.",
+                "Information Update: By April 10, I had increased my vocabulary acquisition to 250 new words learned in context, reflecting accelerated progress."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 200 words learned instead of the updated 250 words",
+            "source_chat_ids": {
+                "original_info": [
+                    328,
+                    334,
+                    342
+                ],
+                "updated_info": [
+                    402
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 250 new words"
+            ]
+        },
+        {
+            "question": "What is my speaking speed in words per minute during recorded sessions?",
+            "answer": "78 words per minute",
+            "difficulty": "easy",
+            "update_type": "performance_improvement",
+            "tests_retention_of": "updated speaking speed value",
+            "conversation_references": [
+                "Progress Monitoring: Improved speaking speed to 75 words/minute during recorded sessions by June 25.",
+                "By July 1, my speaking speed had further increased to 78 words per minute during recorded sessions."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 75 words per minute speed instead of the updated 78 words per minute",
+            "source_chat_ids": {
+                "original_info": [
+                    628,
+                    632,
+                    638
+                ],
+                "updated_info": [
+                    794
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 78 words per minute"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different study tools or decorations have I added to my study space across my sessions?",
+            "answer": "You have added noise-cancelling headphones, a timer, a whiteboard, a second monitor, Turkish cultural artifacts, a Turkish flag, a cultural calendar, and a calendar countdown, totaling eight different tools or decorations.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "I created a distraction-free exam zone with noise-cancelling headphones and a timer on January 8",
+                "I added a calendar countdown to my C1 exam on my study wall on December 1 for motivation",
+                "I've converted my study corner into a cultural nook with souvenirs and Turkish art"
+            ],
+            "reasoning_steps": [
+                "Identify all study tools and decorations mentioned by the user in different sessions",
+                "Count each unique item added to the study space",
+                "Sum the total number of different tools and decorations"
+            ],
+            "source_chat_ids": [
+                312,
+                1696,
+                1874,
+                1100,
+                1488
+            ],
+            "rubric": [
+                "LLM response should state: eight different tools",
+                "LLM response should state: noise-cancelling headphones",
+                "LLM response should state: timer",
+                "LLM response should state: second monitor",
+                "LLM response should state: Turkish cultural artifacts",
+                "LLM response should state: Turkish flag",
+                "LLM response should state: cultural calendar",
+                "LLM response should state: calendar countdown"
+            ]
+        },
+        {
+            "question": "How many total exercises have I completed from both \u201cElementary Turkish\u201d and \u201cTurkish Grammar in Practice\u201d so far?",
+            "answer": "40 exercises",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id 270",
+                "chat_id 466"
+            ],
+            "reasoning_steps": [
+                "Identify the number of exercises completed from \u201cElementary Turkish\u201d (15 exercises).",
+                "Identify the number of exercises completed from \u201cTurkish Grammar in Practice\u201d (25 exercises).",
+                "Add the two numbers to find the total exercises completed."
+            ],
+            "source_chat_ids": [
+                270,
+                466
+            ],
+            "rubric": [
+                "LLM response should state: 40 exercises",
+                "LLM response should state: Elementary Turkish with 15 exercises",
+                "LLM response should state: Turkish Grammar in Practice with 25 exercises"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm looking to improve my Turkish skills and want to explore different learning formats. What options would you suggest?",
+            "preference_being_tested": "I prefer interactive live classes over pre-recorded videos for immediate feedback and motivation.",
+            "expected_compliance": "Response should prioritize recommending interactive live classes or formats that allow real-time interaction and feedback rather than solely pre-recorded or self-paced options.",
+            "compliance_indicators": [
+                "recommends live or synchronous classes",
+                "mentions opportunities for real-time interaction or feedback",
+                "avoids focusing only on pre-recorded materials"
+            ],
+            "non_compliance_signs": [
+                "only suggests pre-recorded videos or asynchronous courses",
+                "ignores live interaction possibilities",
+                "fails to mention feedback mechanisms"
+            ],
+            "difficulty": "medium",
+            "preference_type": "learning format preference",
+            "source_chat_ids": [
+                308,
+                314,
+                322
+            ],
+            "rubric": [
+                "LLM response should contain: recommends live or synchronous classes",
+                "LLM response should contain: avoids focusing only on pre-recorded materials"
+            ]
+        },
+        {
+            "question": "How can I structure my weekend to get the most out of my language practice?",
+            "preference_being_tested": "I prefer immersive weekend days to simulate real-life language use and accelerate fluency.",
+            "expected_compliance": "Response should suggest activities and scheduling that emphasize immersive, realistic language use over isolated or purely academic exercises, aligning with the user's desire for practical fluency acceleration.",
+            "compliance_indicators": [
+                "recommends immersive, real-life language activities",
+                "focuses on extended practice periods during weekends",
+                "includes suggestions that simulate natural language environments",
+                "avoids purely textbook or isolated drills"
+            ],
+            "non_compliance_signs": [
+                "suggests only short or fragmented practice sessions",
+                "focuses on isolated grammar drills or vocabulary lists",
+                "ignores immersive or real-life simulation aspects",
+                "recommends generic or unrelated activities"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity and scheduling preference",
+            "source_chat_ids": [
+                902,
+                908,
+                918
+            ],
+            "rubric": [
+                "LLM response should contain: recommends immersive, real-life language activities",
+                "LLM response should contain: focuses on extended practice periods during weekends"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a thorough overview of everything involved in my journey to reach B2 Turkish proficiency, including how I balanced study plans, resources, professional responsibilities, financial investments, and motivation strategies throughout the process?",
+            "ideal_summary": "The user embarked on a comprehensive journey to achieve B2 proficiency in Turkish by December 1, 2024, carefully balancing language learning with professional and personal commitments. Initially, a structured study plan was developed, emphasizing a balanced integration of grammar and vocabulary through daily and weekly goals, supported by monthly reviews and self-assessments. This plan evolved to incorporate specialized strategies for improving communication in clinical psychology contexts, including medical vocabulary, empathetic speaking, and cultural sensitivity. To accommodate a demanding clinical psychology career, time management techniques such as time blocking, integrating language practice into daily routines, and prioritizing tasks were recommended, ensuring consistent progress without burnout. Financially, the user invested in courses, technology, and subscriptions, with detailed budgeting advice to optimize spending and maximize returns on investments like the Istanbul Language Academy and TurkishClass101 subscriptions. The user also engaged with diverse supplementary resources\u2014apps, podcasts, cultural activities, and language exchanges\u2014to enrich learning and maintain motivation. Midway through formal courses, progress assessments guided adjustments in focus areas, while strategies to sustain motivation post-exam and during intensive study periods were emphasized, including goal setting, cultural immersion, and social support. Finally, the user\u2019s decision-making balanced financial prudence and experiential learning, such as choosing travel over additional courses, reflecting a nuanced approach to language acquisition that integrates structured study, real-world practice, and personal growth. This multifaceted approach demonstrates a sophisticated synthesis of educational planning, professional integration, financial management, and motivational techniques to achieve advanced Turkish proficiency.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 8,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                46,
+                47,
+                49,
+                51,
+                54,
+                255,
+                449,
+                455,
+                457,
+                459,
+                647,
+                653,
+                841,
+                849,
+                853,
+                1043,
+                1051,
+                1059,
+                1213,
+                1235,
+                1241,
+                1245,
+                1249,
+                1425,
+                1431,
+                1435,
+                1635,
+                1645,
+                1649,
+                1819,
+                1825,
+                1829,
+                1831,
+                1833
+            ],
+            "rubric": [
+                "LLM response should contain: Initially, a structured study plan was developed, emphasizing a balanced integration of grammar and vocabulary through daily and weekly goals, supported by monthly reviews and self-assessments",
+                "LLM response should contain: plan evolved to incorporate specialized strategies for improving communication in clinical psychology contexts, including medical vocabulary, empathetic speaking, and cultural sensitivity",
+                "LLM response should contain: To accommodate a demanding clinical psychology career, time management techniques such as time blocking, integrating language practice into daily routines",
+                "LLM response should contain: Financially, the user invested in courses, technology, and subscriptions, with detailed budgeting advice to optimize spending and maximize returns on investments like the Istanbul Language Academy and TurkishClass101 subscriptions",
+                "LLM response should contain: The user also engaged with diverse supplementary resources\u2014apps, podcasts, cultural activities, and language exchanges\u2014to enrich learning and maintain motivation",
+                "LLM response should contain: Midway through formal courses, progress assessments guided adjustments in focus areas",
+                "LLM response should contain: the user\u2019s decision-making balanced financial prudence and experiential learning, such as choosing travel over additional courses, reflecting a nuanced approach to language acquisition"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of my experiences and plans with Kristen related to learning and practicing Turkish?",
+            "ideal_summary": "You have been working with Kristen to improve your Turkish through various activities such as listening to podcasts, attending cultural events like film screenings and poetry slams, and planning social gatherings including a cooking class and a New Year's Eve party. Your interactions include strategies for balancing language learning with social life, adapting to generational communication differences, and using real-world experiences to enhance your speaking and listening skills. Together, you engage in immersive cultural experiences and structured practice to steadily advance your Turkish proficiency.",
+            "difficulty": "easy",
+            "summarization_type": "simple_interaction_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 22,
+            "key_elements_tested": [
+                "basic interaction sequence",
+                "simple factual combination",
+                "straightforward narrative"
+            ],
+            "synthesis_required": "Combining basic information into simple coherent summary",
+            "source_chat_ids": [
+                22,
+                29,
+                35,
+                273,
+                279,
+                285,
+                287,
+                469,
+                477,
+                479,
+                483,
+                665,
+                667,
+                673,
+                679,
+                861,
+                867,
+                875,
+                1063,
+                1067,
+                1075,
+                1253,
+                1263,
+                1443,
+                1449,
+                1451,
+                1455,
+                1653,
+                1659,
+                1665,
+                1835,
+                1841,
+                1843,
+                1847,
+                1851
+            ],
+            "rubric": [
+                "LLM response should contain: You have been working with Kristen to improve your Turkish through various activities",
+                "LLM response should contain: activities such as listening to podcasts",
+                "LLM response should contain: activities such as attending cultural events like film screenings and poetry slams",
+                "LLM response should contain: activities such as planning social gatherings including a cooking class and a New Year's Eve party",
+                "LLM response should contain: Your interactions include strategies for balancing language learning with social life, adapting to generational communication differences, and using real-world experiences to enhance your speaking and listening skills",
+                "LLM response should contain: you engage in immersive cultural experiences and structured practice to steadily advance your Turkish proficiency"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I met Michael at the language caf\u00e9 did we start practicing Turkish on Thursdays at 6 PM?",
+            "answer": "We started practicing Turkish on Thursdays at 6 PM exactly one week after meeting Michael at the language caf\u00e9 on February 20, 2024, so 7 days elapsed.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "February 20, 2024: met Michael at the language caf\u00e9",
+                "One week later: started practicing Turkish on Thursdays at 6 PM"
+            ],
+            "conversation_references": [
+                "chat_id 8",
+                "chat_id 10"
+            ],
+            "calculation_required": "One week after February 20, 2024 = 7 days",
+            "source_chat_ids": {
+                "first_event": [
+                    8
+                ],
+                "second_event": [
+                    10
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7 days",
+                "LLM response should state: from February 20, 2024 till February 27, 2024"
+            ]
+        },
+        {
+            "question": "How many weeks will I be attending my Turkish class before Michael returns from his two-week trip?",
+            "answer": "You will attend your weekly Turkish class for about 11 weeks before Michael returns. Your class starts on March 20, 2024, and Michael returns on June 1, 2024, which is approximately 11 weeks apart.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 20, 2024: Turkish class starts",
+                "June 1, 2024: Michael returns from trip"
+            ],
+            "conversation_references": [
+                "Session 112, 114, 122, 132: Turkish class start and weekly schedule",
+                "Session 408, 414, 422: Michael's two-week trip and return date"
+            ],
+            "calculation_required": "Calculate weeks between March 20 and June 1 (approx. 11 weeks)",
+            "source_chat_ids": {
+                "first_event": [
+                    112,
+                    114,
+                    122,
+                    132
+                ],
+                "second_event": [
+                    408,
+                    414,
+                    422
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 11 weeks",
+                "LLM response should state: from March 20 till June 1"
+            ]
+        }
+    ]
+}

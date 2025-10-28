@@ -1,0 +1,587 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the weekly Zoom mentorship sessions with Kendra?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific discussions in the mentorship sessions with Kendra.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Mentorship sessions are scheduled but their content or discussion details are not provided.",
+            "plan_reference": "Batch 2 mentions weekly 1-hour Zoom sessions starting March 7, 2024, but no content details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific discussions in the mentorship sessions with Kendra."
+            ]
+        },
+        {
+            "question": "What specific techniques did Kendra share during the 2-hour portrait lighting session on March 28, 2024?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific techniques Kendra shared during the March 28 portrait lighting session.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The session is mentioned but no detailed content or techniques are described.",
+            "plan_reference": "Batch 3 mentions Kendra revealing portrait lighting secrets on March 28, 2024.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific techniques Kendra shared during the March 28 portrait lighting session."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I delivered photos to James and received his feedback before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never delivered any photos to James or received feedback from him, but you also mentioned delivering photos and receiving a satisfaction rating from him. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Photo delivery and feedback from James",
+            "conversation_references": [
+                "Session 188: No delivery or feedback",
+                "Session 126: Delivered photos and received rating"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    188
+                ],
+                "second_statement": [
+                    126
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you have never delivered photos to James or received feedback from him",
+                "LLM response should mention: you delivered photos to James and received a satisfaction rating from him",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Has Ronald ever expressed discomfort with posed photography sessions?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said Ronald has never expressed any discomfort with posed photography sessions, but you also mentioned that he did express discomfort and preferred candid shots. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Ronald's comfort with posed photography",
+            "conversation_references": [
+                "Session 298: Never expressed discomfort",
+                "Session 208: Expressed discomfort and preference for candid"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    298
+                ],
+                "second_statement": [
+                    208
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: Ronald has never expressed any discomfort with posed photography sessions",
+                "LLM response should mention: Ronald did express discomfort and preferred candid shots",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different photography projects and related activities throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the photography topics in this order: 1) First, meeting and appreciating a mentor, 2) Then preparing for a composition workshop and discussing photographic techniques, 3) Next, deciding between two photography projects with deadlines and financial considerations, 4) After that, finalizing and selecting photos for a street photography exhibit, 5) Finally, discussing the exhibit installation, promotion, sales, and pricing strategies.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 6 and 8: Mentor meeting and appreciation",
+                "Session 94 and 96: Workshop preparation and technique focus",
+                "Session 204 and 206: Project prioritization and deadlines",
+                "Session 312 and 486: Exhibit theme finalization and photo selection",
+                "Session 578, 674, 788, 880, 980, 982, 984: Exhibit installation, promotion, sales, and pricing"
+            ],
+            "ordering_tested": [
+                "1st: Mentor meeting and appreciation",
+                "2nd: Workshop preparation and photographic techniques",
+                "3rd: Project prioritization with deadlines and financial incentives",
+                "4th: Exhibit theme finalization and photo selection",
+                "5th: Exhibit installation, promotion, sales, and pricing discussions"
+            ],
+            "source_chat_ids": [
+                [
+                    6,
+                    8
+                ],
+                [
+                    94,
+                    96
+                ],
+                [
+                    204,
+                    206
+                ],
+                [
+                    312,
+                    486
+                ],
+                [
+                    578,
+                    674,
+                    788,
+                    880,
+                    980,
+                    982,
+                    984
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Mentor meeting and appreciation",
+                "LLM response should mention: Workshop preparation and photographic techniques",
+                "LLM response should mention: Project prioritization with deadlines and financial incentives",
+                "LLM response should mention: Exhibit theme finalization and photo selection",
+                "LLM response should mention: Exhibit installation, promotion, sales, and pricing discussions"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different stages of my photography projects and collaborations throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned the stages in this order: 1) First, your excitement about meeting Stacy and sharing editing tips, 2) Then, your experience meeting Stacy at an art fair and using that to improve skills, 3) Next, the upcoming composition workshop Stacy suggested and your focus on specific techniques, 4) After that, deciding between photography projects with Stacy and prioritizing event photos for a deadline, 5) Finally, discussing the finalized exhibit theme and subsequent steps like photo selection, installation, promotion, and sales.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 12: Excitement about meeting Stacy and editing tips",
+                "Session 18: Meeting Stacy at art fair and skill improvement",
+                "Sessions 94 and 96: Composition workshop and technique focus",
+                "Sessions 204 and 206: Project prioritization and event photo deadline",
+                "Sessions 312, 486, 578, 674: Exhibit theme finalization, photo selection, installation, promotion, and sales"
+            ],
+            "ordering_tested": [
+                "1st: Meeting Stacy and editing tips",
+                "2nd: Meeting Stacy at art fair and skill improvement",
+                "3rd: Composition workshop and technique focus",
+                "4th: Project prioritization and event photo deadline",
+                "5th: Exhibit theme finalization and related activities"
+            ],
+            "source_chat_ids": [
+                12,
+                18,
+                94,
+                96,
+                204,
+                206,
+                312,
+                486,
+                578,
+                674
+            ],
+            "rubric": [
+                "LLM response should mention: Meeting Stacy and editing tips",
+                "LLM response should mention: Meeting Stacy at art fair and skill improvement",
+                "LLM response should mention: Composition workshop and technique focus",
+                "LLM response should mention: Project prioritization and event photo deadline",
+                "LLM response should mention: Exhibit theme finalization and related activities"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I decide to go with the lens that cost less?",
+            "answer": "You decided on March 2, 2024.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: I just chose the Canon 50mm f/1.8 lens over the Sigma 30mm on March 2, 2024, and it was $125 vs $200, was that a good decision?",
+            "key_facts_tested": [
+                "decision date",
+                "purchase timing"
+            ],
+            "source_chat_ids": [
+                30
+            ],
+            "rubric": [
+                "LLM response should mention: March 2, 2024"
+            ]
+        },
+        {
+            "question": "When did I confirm accepting the job for the event with the specified number of photos and budget?",
+            "answer": "You said you accepted the job on March 10, 2024.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: User mentions acceptance date early in conversation",
+            "key_facts_tested": [
+                "acceptance date: March 10, 2024",
+                "job acceptance",
+                "event details"
+            ],
+            "source_chat_ids": [
+                104
+            ],
+            "rubric": [
+                "LLM response should mention: March 10, 2024"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some ways I can better organize my daily tasks?",
+            "instruction_being_tested": "Always specify time saved when I ask about time management strategies.",
+            "expected_compliance": "Response should include the amount of time saved by each suggested method.",
+            "compliance_indicators": [
+                "mention of time saved",
+                "quantified time benefits",
+                "specific time reductions"
+            ],
+            "non_compliance_signs": [
+                "no mention of time saved",
+                "only general advice",
+                "vague or qualitative descriptions without time references"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                568
+            ],
+            "rubric": [
+                "LLM response should mention: time saved by each method"
+            ]
+        },
+        {
+            "question": "Can you help me find a good place for the shoot?",
+            "instruction_being_tested": "Always include square footage details when I ask about location scouting or moves.",
+            "expected_compliance": "Response should include the size measurements of the location along with other relevant details.",
+            "compliance_indicators": [
+                "mentions size or area of the location",
+                "provides square footage or equivalent measurement",
+                "includes spatial dimensions"
+            ],
+            "non_compliance_signs": [
+                "no mention of size or area",
+                "only general description of location",
+                "ignores spatial details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                872
+            ],
+            "rubric": [
+                "LLM response should mention: size measurements of the location in square footage"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How much do I allocate monthly for my photography gear and software subscriptions?",
+            "answer": "$350 monthly",
+            "difficulty": "easy",
+            "update_type": "budget_revision",
+            "tests_retention_of": "updated budget amount for photography gear and software subscriptions",
+            "conversation_references": [
+                "Budgeting: Allocated $300 monthly for photography gear and software subscriptions starting March 2024.",
+                "Information Update: The budget for photography gear and software subscriptions was adjusted to $350 monthly starting March 2024 to accommodate new editing tools."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $300 monthly budget instead of the updated $350 amount",
+            "source_chat_ids": {
+                "original_info": [
+                    38
+                ],
+                "updated_info": [
+                    84
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $350 monthly"
+            ]
+        },
+        {
+            "question": "How many photos did I capture during my wedding venue shoot to enhance my portfolio variety?",
+            "answer": "70 photos",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "updated number of photos captured during the wedding venue shoot",
+            "conversation_references": [
+                "Outdoor Shooting: Conducted 4-hour wedding venue shoot June 5, 2024, capturing 60 images.",
+                "Information Update: The number of photos captured during the wedding venue shoot increased to 70, enhancing portfolio variety."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 60 photos instead of the updated 70 photos",
+            "source_chat_ids": {
+                "original_info": [
+                    626
+                ],
+                "updated_info": [
+                    656
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 70 photos"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Considering all my spending and remaining funds across March and April, how much total budget have I effectively allocated to workshops versus equipment-related expenses so far?",
+            "answer": "You have spent $75 on a workshop and allocated $225 remaining in March, with $15 spent on tripod rental and $285 left in April. Effectively, $75 has been spent on workshops, and $15 on equipment rentals, with $225 and $285 remaining respectively for further allocation.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "March budget and initial allocation",
+                "March spending on workshop and remaining funds",
+                "April tripod rental and remaining budget",
+                "User's prioritization concerns about workshops vs equipment"
+            ],
+            "reasoning_steps": [
+                "Identify the initial monthly budget and spending on workshops in March.",
+                "Calculate remaining March budget after workshop spending and note user\u2019s consideration of equipment vs workshops.",
+                "Incorporate April spending on tripod rental and remaining budget for April.",
+                "Aggregate total spent on workshops and equipment rentals, and sum remaining funds for both months to understand effective allocation."
+            ],
+            "source_chat_ids": [
+                38,
+                150,
+                154,
+                252
+            ],
+            "rubric": [
+                "LLM response should mention: $75 spent on workshops",
+                "LLM response should mention: $15 spent on equipment rentals",
+                "LLM response should mention: $225 remaining in March",
+                "LLM response should mention: $285 remaining in April"
+            ]
+        },
+        {
+            "question": "How many photoshoots or events do I have scheduled based on the details I shared?",
+            "answer": "Four photoshoots or events are scheduled.",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "14",
+                "122",
+                "220",
+                "594"
+            ],
+            "reasoning_steps": [
+                "Identify the event photoshoot for James mentioned in session 14.",
+                "Count the portrait shoot with Ronald mentioned in sessions 122 and 220 as two separate shoots.",
+                "Include the wedding dress test shoot with Crystal mentioned in session 594."
+            ],
+            "source_chat_ids": [
+                14,
+                122,
+                220,
+                594
+            ],
+            "rubric": [
+                "LLM response should mention: Four photoshoots or events are scheduled"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "For my upcoming photo session, what types of shots would you suggest I focus on capturing?",
+            "preference_being_tested": "I prefer candid portraits over posed shots for authentic expression, based on April 7 shoot results.",
+            "expected_compliance": "Response should prioritize recommending candid portrait styles or emphasize capturing natural, unposed moments rather than primarily suggesting posed shots.",
+            "compliance_indicators": [
+                "recommends candid or natural shot styles",
+                "mentions capturing spontaneous expressions",
+                "avoids focusing mainly on posed compositions"
+            ],
+            "non_compliance_signs": [
+                "only suggests posed shots",
+                "ignores candid or natural shot options",
+                "focuses exclusively on formal or staged portraits"
+            ],
+            "difficulty": "medium",
+            "preference_type": "style_preference",
+            "source_chat_ids": [
+                278
+            ],
+            "rubric": [
+                "LLM response should mention: candid or natural shot styles",
+                "LLM response should mention: capturing spontaneous expressions",
+                "LLM response should mention: avoids focusing mainly on posed compositions"
+            ]
+        },
+        {
+            "question": "I'm planning to expand my lighting setup. What options should I consider for triggering my flashes?",
+            "preference_being_tested": "I prefer wireless flash triggers for flexibility, based on June 9 test results.",
+            "expected_compliance": "Response should include wireless flash trigger options and highlight their flexibility, aligning with the user's stated preference.",
+            "compliance_indicators": [
+                "mentions wireless flash triggers",
+                "emphasizes flexibility benefits",
+                "recommends wireless options over wired ones",
+                "acknowledges user's prior testing experience"
+            ],
+            "non_compliance_signs": [
+                "only suggests wired triggers",
+                "ignores wireless options",
+                "does not address flexibility",
+                "recommends unrelated triggering methods"
+            ],
+            "difficulty": "medium",
+            "preference_type": "product feature preference",
+            "source_chat_ids": [
+                644
+            ],
+            "rubric": [
+                "LLM response should mention: wireless flash triggers"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of my journey and progress in transitioning to photography, including my learning, mentorship, collaborations, and preparations for upcoming projects?",
+            "ideal_summary": "Your journey transitioning from science writing to photography has involved several important stages and developments. Initially, you evaluated the feasibility of switching careers, considering your passion for photography, financial stability, and income potential. You recognized the need to develop your skills and build a portfolio, while managing the variability of freelance income. With Kendra as your mentor, you received valuable guidance on improving your lighting techniques and portfolio, which you applied through practice and feedback. You also explored ways to show appreciation for Kendra\u2019s mentorship, including writing personal notes and collaborating on projects. As you prepared for new opportunities, such as co-leading a beginner\u2019s workshop and collaborating on a street photography project, you balanced learning new styles with refining your existing skills. You focused on improving your editing workflow and lighting skills, especially for specific events like weddings, incorporating Kendra\u2019s advice and practicing with equipment like reflectors and off-camera flash. Finally, you prepared to share your knowledge by planning a speech on wedding lighting, addressing challenges like mixed lighting scenarios, and engaging with the photography community. Throughout this progression, you demonstrated growth in technical skills, professional relationships, and confidence in your new career path.",
+            "difficulty": "medium",
+            "summarization_type": "learning_journey_summary",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                3,
+                5,
+                11,
+                310,
+                574
+            ],
+            "key_elements_tested": [
+                "career transition considerations",
+                "mentorship and skill development",
+                "collaboration and project preparation",
+                "technical skill improvement",
+                "community engagement and knowledge sharing"
+            ],
+            "synthesis_required": "Integrating career decision factors, mentorship impact, skill advancement, project involvement, and public engagement into a coherent narrative",
+            "source_chat_ids": [
+                3,
+                5,
+                11,
+                310,
+                574
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you evaluated the feasibility of switching careers, considering your passion for photography, financial stability, and income potential.",
+                "LLM response should mention: With Kendra as your mentor, you received valuable guidance on improving your lighting techniques and portfolio, which you applied through practice and feedback.",
+                "LLM response should mention: You also explored ways to show appreciation for Kendra\u2019s mentorship, including writing personal notes and collaborating on projects.",
+                "LLM response should mention: As you prepared for new opportunities, such as co-leading a beginner\u2019s workshop and collaborating on a street photography project, you balanced learning new styles with refining your existing skills.",
+                "LLM response should mention: You focused on improving your editing workflow and lighting skills, especially for specific events like weddings, incorporating Kendra\u2019s advice and practicing with equipment like reflectors and off-camera flash.",
+                "LLM response should mention: Finally, you prepared to share your knowledge by planning a speech on wedding lighting, addressing challenges like mixed lighting scenarios, and engaging with the photography community."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of what I've been working on and learning recently in my photography and editing practice?",
+            "ideal_summary": "You have been making progress in several areas of photography and editing. You chose the Canon 50mm f/1.8 lens for its affordability and versatility over the Sigma 30mm lens. You improved your lighting skills by experimenting with natural light and reflectors, and explored additional lighting techniques. You updated to Photoshop 23.2 and learned how to use its new features to enhance your editing workflow. Additionally, you mastered using a tripod for long exposures, practiced Photoshop masking techniques starting with basic isolation projects, and developed skills in off-camera flash and flash sync for wedding photography. Most recently, you mastered creating bokeh effects with your 85mm lens to capture professional-looking portraits.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": [
+                30,
+                31,
+                56,
+                57,
+                144,
+                145,
+                146,
+                147,
+                246,
+                247,
+                378,
+                379,
+                380,
+                381,
+                382,
+                383,
+                526,
+                527,
+                616,
+                617,
+                622,
+                623,
+                726,
+                727
+            ],
+            "key_elements_tested": [
+                "basic topic overview",
+                "combining simple details",
+                "brief narrative coherence"
+            ],
+            "synthesis_required": "Combining straightforward information from multiple sessions into a concise summary",
+            "source_chat_ids": [
+                30,
+                31,
+                56,
+                57,
+                144,
+                145,
+                146,
+                147,
+                246,
+                247,
+                378,
+                379,
+                380,
+                381,
+                382,
+                383,
+                526,
+                527,
+                616,
+                617,
+                622,
+                623,
+                726,
+                727
+            ],
+            "rubric": [
+                "LLM response should mention: You chose the Canon 50mm f/1.8 lens for its affordability and versatility over the Sigma 30mm lens.",
+                "LLM response should mention: You improved your lighting skills by experimenting with natural light and reflectors, and explored additional lighting techniques.",
+                "LLM response should mention: You updated to Photoshop 23.2 and learned how to use its new features to enhance your editing workflow.",
+                "LLM response should mention: Additionally, you mastered using a tripod for long exposures, practiced Photoshop masking techniques starting with basic isolation projects, and developed skills in off-camera flash and flash sync for wedding photography.",
+                "LLM response should mention: Most recently, you mastered creating bokeh effects with your 85mm lens to capture professional-looking portraits."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many hours will I be photographing at James's event on the day it takes place?",
+            "answer": "I will be photographing James's event for 3 hours, from 6 PM to 9 PM on the event day.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15, 2024: event date",
+                "6 PM to 9 PM: event duration"
+            ],
+            "conversation_references": [
+                "Session 14: event date mentioned",
+                "Session 40: event time specified"
+            ],
+            "calculation_required": "9 PM - 6 PM = 3 hours",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    40
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 3 hours"
+            ]
+        },
+        {
+            "question": "How many days before my upcoming portrait shoot with Ronald did I first ask about making him feel more comfortable in front of the camera?",
+            "answer": "You first asked about making Ronald feel more comfortable on March 20, 2024, and your upcoming portrait shoot with him is also scheduled for March 20, 2024, so the question was asked on the same day as the shoot.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 20, 2024: first mention of making Ronald comfortable (chat_id 16)",
+                "March 20, 2024 at 10 AM: upcoming portrait shoot with Ronald (chat_id 122)"
+            ],
+            "conversation_references": [
+                "Session 1: Asking about Ronald's comfort during modeling",
+                "Session 2: Preparing for the portrait shoot with Ronald"
+            ],
+            "calculation_required": "Both events occur on the same date, so 0 days difference",
+            "source_chat_ids": {
+                "first_event": [
+                    16
+                ],
+                "second_event": [
+                    122
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 0 days"
+            ]
+        }
+    ]
+}

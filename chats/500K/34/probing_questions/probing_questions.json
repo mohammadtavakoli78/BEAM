@@ -1,0 +1,555 @@
+{
+    "abstention": [
+        {
+            "question": "Can you tell me more about Karen\u2019s background and coaching qualifications?",
+            "ideal_response": "Based on the provided chat, there is no information related to Karen\u2019s background or coaching qualifications.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Karen is mentioned as a coach and mentor but no details about her background or qualifications are provided.",
+            "plan_reference": "Karen mentioned in Batches 1-3 and beyond without background details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Karen's background or coaching qualifications."
+            ]
+        },
+        {
+            "question": "What specific topics were covered in the November 13 seminar on muscle recovery?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific topics covered in the November 13 seminar.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Seminar attendance is noted but no content details are provided.",
+            "plan_reference": "Batch 9, Bullet 8 mentions seminar without topic details",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific topics covered in the November 13 seminar."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended any Maple Leafs fan meetups at The Rink Bar?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have attended Maple Leafs fan meetups at The Rink Bar and also that you have never attended any. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at Maple Leafs fan meetups",
+            "conversation_references": [
+                "Session 1: Attended meetup and networked",
+                "Session 2: Never attended meetup"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    140
+                ],
+                "second_statement": [
+                    222
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have attended Maple Leafs fan meetups at The Rink Bar",
+                "LLM response should mention: you also mentioned never attending any",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I completed reading the \"Mind Gym\" book?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed reading the \"Mind Gym\" book and also that you have never completed it. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Completion status of reading \"Mind Gym\" book",
+            "conversation_references": [
+                "Session 682: Completed reading statement",
+                "Session 764: Never completed reading statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    682
+                ],
+                "second_statement": [
+                    764
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have completed reading the \"Mind Gym\" book",
+                "LLM response should mention: you also mentioned never completing it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different topics related to hockey equipment, training progress, and team safety throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these topics in this order: 1) First, you talked about buying new skates and budget considerations, 2) Then you asked about maintaining your stick and its care routine, 3) Next, you discussed improving your puck control and balancing fitness with stick handling, 4) After that, you brought up decisions about choosing and using a new hockey stick, 5) Finally, you mentioned various team safety measures including concussion awareness, first aid updates, helmet replacements, emergency drills, and updating emergency contacts.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 42 and 44: Skate purchase and budget",
+                "Session 48 and 50: Stick maintenance routine",
+                "Session 136 and 142: Puck control improvement and training balance",
+                "Session 266 and 276: Hockey stick choice and usage",
+                "Sessions 378, 692, 824, 930, 1032, 1122: Team safety and emergency preparedness"
+            ],
+            "ordering_tested": [
+                "1st: Skate purchase and budget",
+                "2nd: Stick maintenance routine",
+                "3rd: Puck control improvement and training balance",
+                "4th: Hockey stick choice and usage",
+                "5th: Team safety and emergency preparedness"
+            ],
+            "source_chat_ids": [
+                42,
+                44,
+                48,
+                50,
+                136,
+                142,
+                266,
+                276,
+                378,
+                692,
+                824,
+                930,
+                1032,
+                1122
+            ],
+            "rubric": [
+                "LLM response should mention: Skate purchase and budget",
+                "LLM response should mention: Stick maintenance routine",
+                "LLM response should mention: Puck control improvement and training balance",
+                "LLM response should mention: Hockey stick choice and usage",
+                "LLM response should mention: Team safety and emergency preparedness"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my training and travel plans throughout our conversations, in order (mention 10 items)?",
+            "answer": "You mentioned these aspects in this order: 1) My regular practice schedule and concerns about fitting it in, 2) The new early morning ice sessions and how to use them for endurance, 3) Managing time for tournament games and coordinating with teammates, 4) Planning the summer training camp and daily training hours, 5) Arranging travel logistics including rental van deals for away games, 6) Booking accommodations for away games with budget considerations, 7) Improving specific skills with performance analysis and drills, 8) Transportation plans for playoff games including team bus rentals, 9) Flight costs for upcoming training camps and budget planning for bus bookings, 10) Preparing for championship game practices and balancing time for final events.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 40: Practice schedule concerns",
+                "Session 116: New ice sessions for endurance",
+                "Sessions 258 and 264: Tournament game time management and team coordination",
+                "Session 464: Summer training camp planning",
+                "Sessions 572 and 586: Travel logistics and rental van deals",
+                "Session 744: Hotel booking and budget for away games",
+                "Sessions 778 and 830: Skill improvement and playoff transportation",
+                "Session 978: Flight cost evaluation for training camp",
+                "Sessions 1074 and 1076: Bus booking and budget planning",
+                "Sessions 1170 and 1174: Championship practice and preparation"
+            ],
+            "ordering_tested": [
+                "1st: Practice schedule concerns",
+                "2nd: New ice sessions for endurance",
+                "3rd: Tournament game time management and team coordination",
+                "4th: Summer training camp planning",
+                "5th: Travel logistics and rental van deals",
+                "6th: Hotel booking and budget for away games",
+                "7th: Skill improvement and playoff transportation",
+                "8th: Flight cost evaluation for training camp",
+                "9th: Bus booking and budget planning",
+                "10th: Championship practice and preparation"
+            ],
+            "source_chat_ids": [
+                40,
+                116,
+                258,
+                264,
+                464,
+                572,
+                586,
+                744,
+                778,
+                830,
+                978,
+                1074,
+                1076,
+                1170,
+                1174
+            ],
+            "rubric": [
+                "LLM response should mention: Practice schedule concerns",
+                "LLM response should mention: New ice sessions for endurance",
+                "LLM response should mention: Tournament game time management and team coordination",
+                "LLM response should mention: Summer training camp planning",
+                "LLM response should mention: Travel logistics and rental van deals",
+                "LLM response should mention: Hotel booking and budget for away games",
+                "LLM response should mention: Skill improvement and playoff transportation",
+                "LLM response should mention: Flight cost evaluation for training camp",
+                "LLM response should mention: Bus booking and budget planning",
+                "LLM response should mention: Championship practice and preparation"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What days and time did I say my practice sessions are scheduled?",
+            "answer": "My practice sessions are scheduled every Tuesday and Thursday at 6:30 PM.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message",
+            "key_facts_tested": [
+                "days of practice",
+                "time of practice"
+            ],
+            "source_chat_ids": [
+                40
+            ],
+            "rubric": [
+                "LLM response should mention: Tuesday and Thursday",
+                "LLM response should mention: 6:30 PM"
+            ]
+        },
+        {
+            "question": "By what date did I say I need to buy the new skates?",
+            "answer": "By March 25",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: USER mentions needing to buy new Bauer Nexus 2N Pro skates by March 25",
+            "key_facts_tested": [
+                "purchase deadline"
+            ],
+            "source_chat_ids": [
+                42
+            ],
+            "rubric": [
+                "LLM response should mention: March 25"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "Who was present at the last team gathering?",
+            "instruction_being_tested": "Always specify exact attendance when I ask about team meetings.",
+            "expected_compliance": "Response should include a precise list of attendees rather than a general or vague answer.",
+            "compliance_indicators": [
+                "exact names of attendees",
+                "complete list of participants",
+                "no approximations or generalizations"
+            ],
+            "non_compliance_signs": [
+                "only number of people given",
+                "vague terms like 'most of the team'",
+                "no specific attendee details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                896
+            ],
+            "rubric": [
+                "LLM response should include: exact names of attendees",
+                "LLM response should include: complete list of participants",
+                "LLM response should avoid: approximations or generalizations",
+                "LLM response should avoid: only number of people given",
+                "LLM response should avoid: vague terms like 'most of the team'",
+                "LLM response should avoid: no specific attendee details"
+            ]
+        },
+        {
+            "question": "What should I do to get ready for my next game?",
+            "instruction_being_tested": "Always specify practice durations when I ask about game preparations.",
+            "expected_compliance": "Response should include specific amounts of time allocated to practice activities as part of the preparation advice.",
+            "compliance_indicators": [
+                "mention of how long to practice",
+                "specific time frames for preparation",
+                "clear durations for training sessions"
+            ],
+            "non_compliance_signs": [
+                "no mention of time spent practicing",
+                "only general preparation tips without timing",
+                "vague or missing practice time details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1178
+            ],
+            "rubric": [
+                "LLM response should include: mention of how long to practice"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my target time for completing the stick handling drill?",
+            "answer": "13 seconds",
+            "difficulty": "easy",
+            "update_type": "goal_adjustment",
+            "tests_retention_of": "updated stick handling speed goal",
+            "conversation_references": [
+                "I want to track my stick handling speed, which is currently at 15 seconds per drill, and I'm aiming for 12 seconds by June 30, do you have any tips to help me achieve this goal?",
+                "I adjusted my stick handling speed goal to reach 13 seconds by June 30 after initial drills showed steady progress."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original target of 12 seconds instead of the updated 13 seconds",
+            "source_chat_ids": {
+                "original_info": [
+                    34,
+                    38
+                ],
+                "updated_info": []
+            },
+            "rubric": [
+                "LLM response should mention: 13 seconds"
+            ]
+        },
+        {
+            "question": "How many players attended the team dinner that helped boost team bonding?",
+            "answer": "14 players attended the team dinner, enhancing team bonding.",
+            "difficulty": "easy",
+            "update_type": "attendance_increase",
+            "tests_retention_of": "updated number of players attending the team dinner",
+            "conversation_references": [
+                "Goals & Progress Labels: Building Team Chemistry: Organized team dinner at The Icehouse Grill on May 4; 12 players attended, boosting morale.",
+                "Information Update: The team dinner on May 4 included 14 players, two more than initially planned, enhancing team bonding."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original attendance number of 12 players instead of the updated 14 players.",
+            "source_chat_ids": {
+                "original_info": [
+                    272,
+                    310,
+                    312
+                ],
+                "updated_info": [
+                    274
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 14 players"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total money do I plan to spend on hockey gear and training after applying my discount?",
+            "answer": "800 dollars",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "team budget and rent question",
+                "gear discount allocation"
+            ],
+            "reasoning_steps": [
+                "Identify the original total equipment cost I mentioned.",
+                "Subtract the discount amount I received from the original equipment cost."
+            ],
+            "source_chat_ids": [
+                64,
+                118
+            ],
+            "rubric": [
+                "LLM response should mention: 800 dollars"
+            ]
+        },
+        {
+            "question": "How much total money am I planning to spend on my trip and future equipment savings combined?",
+            "answer": "580 dollars on the goalie mask plus 200 dollars for the trip and 380 dollars for savings, totaling 1160 dollars.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "I just bought a Bauer Re-Akt 150 goalie mask for $580",
+                "I spent $580 on the goalie mask, should I prioritize saving or trip?",
+                "I think I'll split the resources with $200 for trip and $380 for savings"
+            ],
+            "reasoning_steps": [
+                "Identify the amount spent on the goalie mask from the first session.",
+                "Identify the amount planned for the trip from the third session.",
+                "Identify the amount planned for savings from the third session.",
+                "Add all three amounts to find the total planned spending."
+            ],
+            "source_chat_ids": [
+                514,
+                524,
+                526
+            ],
+            "rubric": [
+                "LLM response should mention: 580 dollars on the goalie mask",
+                "LLM response should mention: 200 dollars for the trip",
+                "LLM response should mention: 380 dollars for savings",
+                "LLM response should mention: totaling 1160 dollars"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I\u2019m trying to figure out the best time to schedule my practice sessions during the day. What would you suggest?",
+            "preference_being_tested": "I prefer morning practice sessions over evenings because I feel more focused and energized before work.",
+            "expected_compliance": "Response should recommend scheduling practice sessions in the morning rather than in the evening, reflecting the user's stated preference for morning sessions.",
+            "compliance_indicators": [
+                "suggests morning sessions",
+                "mentions benefits of practicing earlier in the day",
+                "avoids recommending evening sessions"
+            ],
+            "non_compliance_signs": [
+                "recommends evening sessions without justification",
+                "ignores morning timing preference",
+                "suggests late-day or night sessions as primary option"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time_of_day_preference",
+            "source_chat_ids": [
+                166
+            ],
+            "rubric": [
+                "LLM response should suggest: morning sessions"
+            ]
+        },
+        {
+            "question": "How can I structure a training session to both engage the players and keep track of their progress effectively?",
+            "preference_being_tested": "I prefer hands-on coaching over passive observation, leading drills to engage players actively.",
+            "expected_compliance": "Response should suggest approaches that incorporate active player engagement through leading drills or interactive methods, while also including ways to monitor player progress without relying solely on passive observation.",
+            "compliance_indicators": [
+                "recommends leading drills or interactive activities",
+                "includes methods for active involvement of players",
+                "balances engagement with assessment techniques",
+                "avoids suggesting mostly passive observation methods"
+            ],
+            "non_compliance_signs": [
+                "focuses mainly on passive observation",
+                "suggests minimal player involvement",
+                "ignores active coaching methods",
+                "recommends primarily watching without interaction"
+            ],
+            "difficulty": "medium",
+            "preference_type": "coaching style",
+            "source_chat_ids": [
+                592,
+                594
+            ],
+            "rubric": [
+                "LLM response should suggest: leading drills or interactive activities",
+                "LLM response should include: methods for active involvement of players",
+                "LLM response should balance: engagement with assessment techniques",
+                "LLM response should avoid: focusing mainly on passive observation"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how I've been balancing my hockey commitments with my relationship with Courtney?",
+            "ideal_summary": "You have been working to balance your hockey commitments with your relationship with Courtney by limiting your Sunday and weekday practices, planning special hockey-themed dates, and prioritizing quality time together. You agreed to reduce Sunday practices to twice a month and weekday practices to two evenings, while also scheduling regular date nights and shared activities like hiking and cooking. Open communication, flexibility, and planning ahead have been key strategies to maintain both your hockey training and your relationship.",
+            "difficulty": "easy",
+            "summarization_type": "simple_relationship_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 6,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple narrative flow",
+                "essential detail inclusion"
+            ],
+            "synthesis_required": "Combining straightforward details about hockey and relationship balance into a coherent summary",
+            "source_chat_ids": [
+                6,
+                9,
+                124,
+                125,
+                132,
+                133,
+                320,
+                321,
+                670,
+                771,
+                784
+            ],
+            "rubric": [
+                "LLM response should mention: You have been working to balance your hockey commitments with your relationship with Courtney by limiting your Sunday and weekday practices, planning special hockey-themed dates, and prioritizing quality time together.",
+                "LLM response should mention: You agreed to reduce Sunday practices to twice a month and weekday practices to two evenings, while also scheduling regular date nights and shared activities like hiking and cooking.",
+                "LLM response should mention: Open communication, flexibility, and planning ahead have been key strategies to maintain both your hockey training and your relationship."
+            ]
+        },
+        {
+            "question": "Can you summarize how my training and collaboration with Brian have developed over time, including how we've worked together to improve our skills, strategies, and team performance?",
+            "ideal_summary": "Your training and collaboration with Brian have progressed through several stages, reflecting a growing partnership focused on enhancing both individual skills and team dynamics. Initially, you worked together on improving fundamental skills like stick handling and defensive positioning, balancing these areas through integrated and rotating practice sessions. As your collaboration deepened, you co-developed passing drills and scrimmage plans, emphasizing communication, role clarity, and strategic adjustments to boost transition speed and power play effectiveness. This teamwork extended to co-leading practices and scrimmages, which positively impacted team morale and cohesion, especially after key victories. Throughout this journey, you maintained a structured approach to balancing personal development, team review meetings, and strategic planning, ensuring continuous progress and adaptability. Your combined efforts have fostered improved performance, confidence, and a unified team vision.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                359,
+                927,
+                1023,
+                1111,
+                1119
+            ],
+            "key_elements_tested": [
+                "collaborative skill development",
+                "strategic planning",
+                "teamwork progression",
+                "practice and scrimmage coordination",
+                "balancing individual and team growth"
+            ],
+            "synthesis_required": "Integrating multiple facets of training, collaboration, and strategic development into a coherent narrative showing progression and mutual influence",
+            "source_chat_ids": [
+                359,
+                927,
+                1023,
+                1111,
+                1119
+            ],
+            "rubric": [
+                "LLM response should mention: Your training and collaboration with Brian have progressed through several stages, reflecting a growing partnership focused on enhancing both individual skills and team dynamics.",
+                "LLM response should mention: Initially, you worked together on improving fundamental skills like stick handling and defensive positioning, balancing these areas through integrated and rotating practice sessions.",
+                "LLM response should mention: As your collaboration deepened, you co-developed passing drills and scrimmage plans, emphasizing communication, role clarity, and strategic adjustments to boost transition speed and power play effectiveness.",
+                "LLM response should mention: This teamwork extended to co-leading practices and scrimmages, which positively impacted team morale and cohesion, especially after key victories.",
+                "LLM response should mention: Throughout this journey, you maintained a structured approach to balancing personal development, team review meetings, and strategic planning, ensuring continuous progress and adaptability."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many weeks after my Tuesday and Thursday evening practices started did the Sunday morning ice sessions begin?",
+            "answer": "The Sunday morning ice sessions began 3 weeks after the Tuesday and Thursday evening practices started. The evening practices started on March 20, and the Sunday sessions started on April 14, which is exactly 3 weeks and 1 day later.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "March 20: Tuesday and Thursday evening practices start",
+                "April 14: Sunday morning ice sessions start"
+            ],
+            "conversation_references": [
+                "Session 1: Tuesday and Thursday evening practices schedule",
+                "Session 2: Sunday morning ice sessions announcement"
+            ],
+            "calculation_required": "Calculate the number of weeks between March 20 and April 14 (3 weeks and 1 day)",
+            "source_chat_ids": {
+                "first_event": [
+                    40
+                ],
+                "second_event": [
+                    116
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 3 weeks and 1 day"
+            ]
+        },
+        {
+            "question": "How many years had I been with Courtney when I met her at Blue Lagoon Caf\u00e9?",
+            "answer": "I met Courtney on July 12, 2018, and I have been with her for 5 years now, so I had been with her for 0 years when we met, as that was the starting point of our relationship.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "July 12, 2018: met Courtney",
+                "5 years with Courtney (relative timing)"
+            ],
+            "conversation_references": [
+                "Session 14: Meeting Courtney date",
+                "Session 6: Duration with Courtney"
+            ],
+            "calculation_required": "5 years (current duration) - 0 years (at meeting) = 5 years total duration",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    6
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 0 years"
+            ]
+        }
+    ]
+}

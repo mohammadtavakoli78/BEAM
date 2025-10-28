@@ -1,0 +1,539 @@
+{
+    "abstention": [
+        {
+            "question": "What specific topics or questions were covered during the June 14 call with HR to finalize onboarding and benefits?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific topics or questions covered during the June 14 call with HR.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The call is scheduled but no details about its content are provided.",
+            "plan_reference": "Batch 4, Bullet 15 mentions the June 14 call with HR.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific topics or questions covered during the June 14 call with HR"
+            ]
+        },
+        {
+            "question": "What are the qualifications of the senior content strategist who joined the May 12 interview panel?",
+            "ideal_response": "Based on the provided chat, there is no information related to the qualifications and role of the senior content strategist who joined the May 12 interview panel.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The new panel member is mentioned but no background or role details are given.",
+            "plan_reference": "Batch 3, Bullet 22 mentions the senior content strategist joining the interview.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the qualifications of the senior content strategistR"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I ever collaborated remotely with Michael on any projects?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you collaborate remotely with Michael on projects, but you also mentioned that you've never collaborated remotely with him. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "remote collaboration with child Michael",
+            "conversation_references": [
+                "Session 16 and 18: Collaboration mentioned",
+                "Session 50: No collaboration mentioned"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    16,
+                    18
+                ],
+                "second_statement": [
+                    50
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you collaborate remotely with Michael on projects",
+                "LLM response should mention: you also mentioned that you've never collaborated remotely with him",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I submitted my cover letter to Greg for review?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have submitted your cover letter to Greg for review, but you also mentioned that you have never submitted it. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Submission of cover letter to Greg",
+            "conversation_references": [
+                "chat_id: 86",
+                "chat_id: 104"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    86
+                ],
+                "second_statement": [
+                    104
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have submitted your cover letter to Greg for review",
+                "LLM response should mention: you also mentioned that you have never submitted it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my personal and professional progress throughout our conversations, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned aspects of your personal and professional progress in this order: 1) Concerns about updating your portfolio, 2) Plans to submit your cover letter with specific tone considerations, 3) Gratitude for a supportive gesture and interest in mindfulness advice, 4) Celebrating a decision with support and seeking reassurance, 5) Reflecting on a retreat experience and thinking about showing appreciation.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 8: Portfolio update concerns",
+                "Session 58: Cover letter submission plans",
+                "Session 116: Gratitude and mindfulness advice",
+                "Session 174: Celebration and decision reassurance",
+                "Session 228: Retreat reflection and appreciation"
+            ],
+            "ordering_tested": [
+                "1st: Portfolio update concerns",
+                "2nd: Cover letter submission plans",
+                "3rd: Gratitude and mindfulness advice",
+                "4th: Celebration and decision reassurance",
+                "5th: Retreat reflection and appreciation"
+            ],
+            "source_chat_ids": [
+                8,
+                58,
+                116,
+                174,
+                228
+            ],
+            "rubric": [
+                "Portfolio update concerns",
+                "Cover letter submission plans",
+                "Gratitude and mindfulness advice",
+                "Celebration and decision reassurance",
+                "Retreat reflection and appreciation"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my professional connections and preparation throughout our conversations, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in this order: 1) Reaching out to a long-time mentor for networking advice, 2) Concerns about feedback on my cover letter from a recent meeting, 3) Worries about preparing storytelling examples for an interview, 4) Reviewing the company's employee handbook after receiving it via email, 5) Excitement and preparation for an upcoming workshop presentation.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 6: Mentoring and networking advice",
+                "Session 56: Cover letter feedback concerns",
+                "Session 114: Interview storytelling preparation",
+                "Session 172: Employee handbook review",
+                "Session 226: Workshop presentation planning"
+            ],
+            "ordering_tested": [
+                "1st: Mentoring and networking advice",
+                "2nd: Cover letter feedback concerns",
+                "3rd: Interview storytelling preparation",
+                "4th: Employee handbook review",
+                "5th: Workshop presentation planning"
+            ],
+            "source_chat_ids": [
+                6,
+                56,
+                114,
+                172,
+                226
+            ],
+            "rubric": [
+                "Mentoring and networking advice",
+                "Cover letter feedback concerns",
+                "Interview storytelling preparation",
+                "Employee handbook review",
+                "Workshop presentation planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Where did I say I met Laura?",
+            "answer": "You met Laura on set at Blue Horizon Studios in 2019.",
+            "difficulty": "easy",
+            "question_type": "context_detail",
+            "conversation_reference": "Turn 1: USER message",
+            "key_facts_tested": [
+                "meeting location with Laura",
+                "year met Laura"
+            ],
+            "source_chat_ids": [
+                10
+            ],
+            "rubric": [
+                "LLM response should state: Blue Horizon Studios in 2019"
+            ]
+        },
+        {
+            "question": "How did I come to consider attending that networking event, and what prior connection influenced my decision?",
+            "answer": "You considered attending the networking event because Laura, who you met on set at Blue Horizon Studios in 2019, recommended it to you.",
+            "difficulty": "hard",
+            "question_type": "Discovery and Learning Process",
+            "conversation_reference": "User message mentioning meeting Laura on set in 2019 and her recommendation of the event; assistant message confirming the recommendation and event details",
+            "key_facts_tested": [
+                "colleague: Laura",
+                "meeting place: Blue Horizon Studios",
+                "meeting year: 2019",
+                "recommendation: attend industry mixer at Coral Bay Hotel on May 10"
+            ],
+            "extraction_challenge": "LLM must connect the user's past meeting with Laura at a specific location and time to the reason for considering the event, synthesizing user context and assistant confirmation",
+            "source_chat_ids": [
+                10,
+                11
+            ],
+            "rubric": [
+                "LLM response should state: considered attending the networking event because Laura"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How can I organize multiple points in my CV?",
+            "instruction_being_tested": "Always use bullet points for lists when I ask about formatting options.",
+            "expected_compliance": "Response should include the list presented using bullet points.",
+            "compliance_indicators": [
+                "list items each starting with a bullet point",
+                "clear separation of points using bullets",
+                "no use of numbers or paragraphs for the list"
+            ],
+            "non_compliance_signs": [
+                "list items presented as plain text or paragraphs",
+                "use of numbers or other list markers instead of bullets",
+                "no clear list structure"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                48
+            ],
+            "rubric": [
+                "LLM response should contain: list items each starting with a bullet point",
+                "LLM response should contain: clear separation of points using bullets"
+            ]
+        },
+        {
+            "question": "What is the amount offered for the position we discussed?",
+            "instruction_being_tested": "Always confirm salary figures when I ask about compensation details.",
+            "expected_compliance": "Response should include a clear confirmation of the exact salary figure rather than a vague or indirect answer.",
+            "compliance_indicators": [
+                "explicit salary number",
+                "confirmation of the figure",
+                "clear statement of the amount"
+            ],
+            "non_compliance_signs": [
+                "no specific figure given",
+                "ambiguous or approximate amounts",
+                "avoiding direct confirmation"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "confirmation_instruction",
+            "source_chat_ids": [
+                216
+            ],
+            "rubric": [
+                "LLM response should contain: explicit salary number"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "When is my Zoom call with the creative director scheduled?",
+            "answer": "The Zoom call with the creative director is scheduled for April 22 at 11 AM.",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "updated date and time of the Zoom call",
+            "conversation_references": [
+                "Decision: Accepted Leslie\u2019s introduction offer, scheduled Zoom call with creative director for April 21 at 3 PM.",
+                "Information Update: The scheduled Zoom call with the creative director was moved to April 22 at 11 AM to accommodate both parties."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original Zoom call time of April 21 at 3 PM instead of the updated April 22 at 11 AM.",
+            "source_chat_ids": {
+                "original_info": [
+                    92
+                ],
+                "updated_info": [
+                    94,
+                    96
+                ]
+            },
+            "rubric": [
+                "LLM response should state: April 22 at 11 AM"
+            ]
+        },
+        {
+            "question": "How many days a week am I scheduled to work remotely?",
+            "answer": "Three days a week",
+            "difficulty": "easy",
+            "update_type": "work schedule adjustment",
+            "tests_retention_of": "number of remote work days per week",
+            "conversation_references": [
+                "Career Coach: Greg helped me negotiate a $5,000 signing bonus and flexible remote work days twice weekly starting June 15.",
+                "I arranged to start remote work three days a week beginning June 15, increasing flexibility beyond initial plans."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original two remote work days per week instead of the updated three days",
+            "source_chat_ids": {
+                "original_info": [
+                    214
+                ],
+                "updated_info": [
+                    214
+                ]
+            },
+            "rubric": [
+                "LLM response should state: Three days a week"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many times did I mention submitting or revising my cover letter before my interview preparation?",
+            "answer": "Three times",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "cover letter submission",
+                "feedback request",
+                "interview preparation"
+            ],
+            "reasoning_steps": [
+                "Identify each user message mentioning submitting or revising the cover letter",
+                "Count the total number of these mentions across the sessions",
+                "Sum them to get the total number of times"
+            ],
+            "source_chat_ids": [
+                20,
+                86,
+                106
+            ],
+            "rubric": [
+                "LLM response should state: Three times"
+            ]
+        },
+        {
+            "question": "Considering my cover letter deadlines, the Zoom call with the creative director, and my interview clarity improvements, how should I prioritize my preparation efforts to maximize my chances for the senior producer role?",
+            "answer": "You should first complete your cover letter draft and revisions to meet your application deadlines, then focus on refining your interview skills by applying the STAR method and practicing under pressure, while simultaneously preparing key discussion points and questions for the Zoom call to demonstrate alignment with the company's values and role expectations.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 4,
+            "conversation_references": [
+                "cover letter drafting and revision goals",
+                "preparation for Zoom call with creative director",
+                "interview clarity score improvement and advice",
+                "user's plan to continue improving interview skills"
+            ],
+            "reasoning_steps": [
+                "Identify the critical deadlines and tasks related to the cover letter draft and revision to ensure timely application submission.",
+                "Analyze the timing and content requirements of the Zoom call to prepare relevant discussion points that align with the company's values and role expectations.",
+                "Evaluate the progress and next steps in improving interview clarity and response quality to enhance performance in potential interviews.",
+                "Synthesize these priorities to create an optimal preparation sequence that balances meeting deadlines, interview readiness, and making a strong impression during the Zoom call."
+            ],
+            "source_chat_ids": [
+                28,
+                92,
+                150,
+                152
+            ],
+            "rubric": [
+                "LLM response should state: complete your cover letter draft and revisions to meet your application deadlines",
+                "LLM response should state: focus on refining your interview skills by applying the STAR method and practicing under pressure",
+                "LLM response should state: prepare key discussion points and questions for the Zoom call"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "How should I structure my cover letter to best showcase my achievements from previous projects?",
+            "preference_being_tested": "I prefer a direct, no-fluff writing style that highlights measurable impact rather than flowery language.",
+            "expected_compliance": "Response should focus on clear, concise language emphasizing specific, quantifiable results without unnecessary embellishments or overly decorative phrasing.",
+            "compliance_indicators": [
+                "uses straightforward language",
+                "emphasizes measurable outcomes",
+                "avoids flowery or elaborate expressions",
+                "structures advice around impact-driven content"
+            ],
+            "non_compliance_signs": [
+                "includes flowery or decorative language suggestions",
+                "focuses on storytelling or emotional appeal over data",
+                "recommends vague or generic phrasing",
+                "ignores measurable achievements"
+            ],
+            "difficulty": "medium",
+            "preference_type": "writing style and content focus",
+            "source_chat_ids": [
+                34
+            ],
+            "rubric": [
+                "LLM response should contain: uses straightforward language",
+                "LLM response should contain: emphasizes measurable outcomes"
+            ]
+        },
+        {
+            "question": "How should I include links to my portfolio in my cover letter to make them easy to access?",
+            "preference_being_tested": "I\u2019m focusing on integrating portfolio links directly in the letter rather than attaching separate documents.",
+            "expected_compliance": "Response should suggest embedding or inserting portfolio links within the cover letter text itself, avoiding recommendations to attach separate files or documents.",
+            "compliance_indicators": [
+                "recommends placing clickable links directly in the letter body",
+                "avoids suggesting attachments or separate documents",
+                "provides examples of inline link integration"
+            ],
+            "non_compliance_signs": [
+                "suggests attaching portfolio files separately",
+                "recommends sending portfolio as separate documents",
+                "ignores the idea of embedding links in the letter"
+            ],
+            "difficulty": "medium",
+            "preference_type": "formatting_integration",
+            "source_chat_ids": [
+                68,
+                70
+            ],
+            "rubric": [
+                "LLM response should contain: recommends placing clickable links directly in the letter body",
+                "LLM response should contain: avoids suggesting attachments or separate documents"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how I\u2019ve been managing my professional development and project responsibilities over the past few months?",
+            "ideal_summary": "Over the past few months, you have been actively working on enhancing your professional profile and managing key project responsibilities. Initially, you focused on updating your portfolio to make it stand out by curating your best work, organizing it logically, and incorporating client testimonials and interactive elements to engage viewers. As deadlines approached, you prepared for a mock interview with Greg by practicing common questions, anticipating follow-ups, and using structured response techniques to build confidence. Concurrently, you developed a detailed 90-day plan aimed at streamlining production processes, improving team collaboration, and increasing productivity, with clear objectives, success metrics, and actionable steps refined through feedback. More recently, you have been balancing multiple upcoming deadlines, such as a project due on July 22 and a workshop on July 25, while applying advice on stress management and integrating feedback on your communication skills to improve your overall effectiveness. Throughout this period, your approach has shown a clear progression from preparation and planning to execution and refinement, demonstrating a thoughtful and organized management of your career growth and project commitments.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                8,
+                84,
+                202,
+                204,
+                252
+            ],
+            "key_elements_tested": [
+                "progression over time",
+                "integration of multiple tasks",
+                "planning and execution",
+                "professional development",
+                "stress and communication management"
+            ],
+            "synthesis_required": "Combining information about portfolio updates, interview preparation, 90-day planning, and task prioritization into a coherent narrative showing development and cause-effect relationships",
+            "source_chat_ids": [
+                8,
+                84,
+                202,
+                204,
+                252
+            ],
+            "rubric": [
+                "LLM response should contain: you focused on updating your portfolio to make it stand out by curating your best work, organizing it logically, and incorporating client testimonials and interactive elements to engage viewers",
+                "LLM response should contain: you prepared for a mock interview with Greg by practicing common questions, anticipating follow-ups, and using structured response techniques to build confidence",
+                "LLM response should contain: you developed a detailed 90-day plan aimed at streamlining production processes, improving team collaboration, and increasing productivity",
+                "LLM response should contain: you have been balancing multiple upcoming deadlines, such as a project due on July 22 and a workshop on July 25, while applying advice on stress management and integrating feedback on your communication skills"
+            ]
+        },
+        {
+            "question": "Can you give me a complete summary of how my preparations and plans have developed around the upcoming opportunities and challenges I've been discussing?",
+            "ideal_summary": "Over the course of our conversations, your preparations and plans have evolved significantly. Initially, you considered reaching out to Leslie, a long-time mentor, for networking advice related to the Caribbean Creative Hub, leveraging your 20-year relationship and her experience. You then refined your communication approach, adopting a single-column format with bold headers to improve clarity and mobile readability in your cover letter, aligning it with professional standards. As your interview with Island Media Group approached, you brainstormed storytelling examples that emphasize cultural diversity, drawing on your extensive experience with community projects and multimedia storytelling to align with the company's values. You also addressed concerns about reviewing the employee handbook before accepting the job offer, taking steps to thoroughly understand company policies and seek clarifications to make an informed decision. Finally, you prepared for a workshop on storytelling and cultural competence, focusing on engaging presentation techniques, audience understanding, and interactive elements to ensure your message resonates effectively. Throughout these stages, your approach shows a clear progression from seeking advice and refining materials to strategic preparation and thoughtful decision-making.",
+            "difficulty": "medium",
+            "summarization_type": "chronological_development",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                6,
+                7,
+                78,
+                79,
+                114,
+                115,
+                172,
+                173,
+                226,
+                227
+            ],
+            "key_elements_tested": [
+                "progression of plans",
+                "integration of advice",
+                "preparation strategies",
+                "decision-making process",
+                "presentation readiness"
+            ],
+            "synthesis_required": "Combining multiple thematic elements from different sessions into a coherent narrative showing development and cause-effect relationships",
+            "source_chat_ids": [
+                6,
+                7,
+                78,
+                79,
+                114,
+                115,
+                172,
+                173,
+                226,
+                227
+            ],
+            "rubric": [
+                "LLM response should contain: you considered reaching out to Leslie, a long-time mentor, for networking advice related to the Caribbean Creative Hub",
+                "LLM response should contain: refined your communication approach, adopting a single-column format with bold headers to improve clarity and mobile readability in your cover letter",
+                "LLM response should contain: your interview with Island Media Group approached, you brainstormed storytelling examples that emphasize cultural diversity, drawing on your extensive experience with community projects",
+                "LLM response should contain: addressed concerns about reviewing the employee handbook before accepting the job offer, taking steps to thoroughly understand company policies",
+                "LLM response should contain: you prepared for a workshop on storytelling and cultural competence, focusing on engaging presentation techniques, audience understanding, and interactive elements"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days are there between when I planned to finish revising my cover letter and my Zoom call with the creative director?",
+            "answer": "There are 16 days between April 5, when I planned to finish revising my cover letter, and April 21, when I have the Zoom call with the creative director.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 5: cover letter revision deadline",
+                "April 21 at 3 PM: Zoom call with creative director"
+            ],
+            "conversation_references": [
+                "Session 1: cover letter deadlines",
+                "Session 2: Zoom call scheduling"
+            ],
+            "calculation_required": "April 21 - April 5 = 16 days",
+            "source_chat_ids": {
+                "first_event": [
+                    28
+                ],
+                "second_event": [
+                    92
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 16 days",
+                "LLM response should state: from April 5 till April 21"
+            ]
+        },
+        {
+            "question": "How many days after I submitted my cover letter did I have my follow-up with Greg to improve it?",
+            "answer": "The follow-up with Greg on May 8 happened 15 days after the cover letter was submitted on April 23.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 23: cover letter submitted",
+                "May 8: follow-up with Greg"
+            ],
+            "conversation_references": [
+                "Session 2: Cover letter submission and interview preparation"
+            ],
+            "calculation_required": "May 8 - April 23 = 15 days",
+            "source_chat_ids": {
+                "first_event": [
+                    106
+                ],
+                "second_event": [
+                    106
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 15 days",
+                "LLM response should state: from April 23 till May 8"
+            ]
+        }
+    ]
+}

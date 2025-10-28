@@ -1,0 +1,626 @@
+{
+    "abstention": [
+        {
+            "question": "What specific relaxation techniques are planned to manage performance anxiety before auditions?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific relaxation techniques planned to manage performance anxiety before auditions.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Relaxation techniques are mentioned generally but no specifics are given.",
+            "plan_reference": "Batch 1 and 2 mention mental health and relaxation but no detailed techniques.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific relaxation techniques planned to manage performance anxiety before auditions."
+            ]
+        },
+        {
+            "question": "What specific steps did Meghan take to prepare the 2-minute monologue and 30-second dance routine by May 20?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific steps Meghan took to prepare the monologue and dance routine by May 20.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Preparation goals are mentioned but no detailed preparation steps are provided.",
+            "plan_reference": "Batch 1 mentions audition preparation but not detailed steps.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific steps Meghan took to prepare the monologue and dance routine by May 20."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended rehearsals at the New Gary Community Theater?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have two weekly rehearsals at the New Gary Community Theater, but you also mentioned never attending any rehearsals there. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at New Gary Community Theater rehearsals",
+            "conversation_references": [
+                "Session 1: Weekly rehearsals mentioned",
+                "Session 2: Never attended rehearsals mentioned"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    142
+                ],
+                "second_statement": [
+                    210
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have rehearsals",
+                "LLM response should mention: you also said you never attended rehearsals",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever performed in a dance recital before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you performed in a dance recital and received a high audience satisfaction rating, but you also mentioned that you've never performed in any dance recital. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "performance history in dance recitals",
+            "conversation_references": [
+                "Session 470: Performed in recital",
+                "Session 562: Never performed statement"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    470
+                ],
+                "second_statement": [
+                    562
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you performed in a recital",
+                "LLM response should mention: you also said you never performed in a recital",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my creative development journey in order (mention 5 items)?",
+            "answer": "You mentioned your creative development journey in this order: 1) First, considering acting to boost confidence and discussing Michael's initial suggestion (chat_ids 30, 36), 2) Then talking about voice coaching sessions recommended by Michael (chat_ids 132, 134, 136), 3) Next, mentioning the dance workshop experience with Michael and related feedback (chat_ids 224, 226, 228, 240, 242), 4) After that, discussing local theater involvement and staying in touch with Michael (chat_ids 380, 382, 386, 388), 5) Finally, bringing up the improv group activities and related feedback with Michael (chat_ids 576, 580, 670, 676, 772, 874, 976, 978).",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 30 & 36: Acting and Michael's suggestion",
+                "Session 132, 134 & 136: Voice coaching sessions",
+                "Session 224, 226, 228, 240 & 242: Dance workshop and feedback",
+                "Session 380, 382, 386 & 388: Local theater involvement and staying in touch",
+                "Session 576, 580, 670, 676, 772, 874, 976 & 978: Improv group activities and feedback"
+            ],
+            "ordering_tested": [
+                "1st: Acting and Michael's suggestion",
+                "2nd: Voice coaching sessions",
+                "3rd: Dance workshop and feedback",
+                "4th: Local theater involvement and staying in touch",
+                "5th: Improv group activities and feedback"
+            ],
+            "source_chat_ids": [
+                [
+                    30,
+                    36
+                ],
+                [
+                    132,
+                    134,
+                    136
+                ],
+                [
+                    224,
+                    226,
+                    228,
+                    240,
+                    242
+                ],
+                [
+                    380,
+                    382,
+                    386,
+                    388
+                ],
+                [
+                    576,
+                    580,
+                    670,
+                    676,
+                    772,
+                    874,
+                    976,
+                    978
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Acting and Michael's suggestion first",
+                "LLM response should mention: Voice coaching sessions second",
+                "LLM response should mention: Dance workshop and feedback third",
+                "LLM response should mention: Local theater involvement and staying in touch fourth",
+                "LLM response should mention: Improv group activities and feedback fifth"
+            ]
+        },
+        {
+            "question": "Can you walk me through the order in which I brought up different aspects of my performing arts journey throughout our conversations, in order (mention 9 items)?",
+            "answer": "You mentioned aspects of your performing arts journey in this order: 1) Your initial acting course and preparation tips, 2) Taking on a minor role and character development, 3) Preparing for a dance recital and style choice, 4) Considering part-time community theater roles and balancing writing, 5) Accepting a supporting role in a community play and managing rehearsals, 6) Reflecting on declining a lead role to focus on current commitments, 7) Auditioning for a regional theater season and voice coaching sessions, 8) Accepting a winter season supporting role and preparing for rehearsals, 9) Contemplating applying to a professional acting conservatory and application focus.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 9,
+            "conversation_references": [
+                "Session 38: Acting course start and first day tips",
+                "Sessions 138 & 144: Minor role acceptance and character/voice coaching",
+                "Sessions 244, 246 & 248: Dance recital audition and preparation",
+                "Sessions 390 & 396: Part-time theater roles and balancing writing",
+                "Sessions 488 & 494: Supporting role acceptance and rehearsal/portfolio balance",
+                "Sessions 582 & 678: Declining lead role and focus on current play",
+                "Sessions 778 & 784: Regional theater auditions and coaching sessions",
+                "Sessions 882 & 892: Winter season supporting role and rehearsal prep",
+                "Sessions 984 & 990: Professional conservatory application considerations"
+            ],
+            "ordering_tested": [
+                "1st: Acting course and first day tips",
+                "2nd: Minor role and character/voice coaching",
+                "3rd: Dance recital audition and prep",
+                "4th: Part-time theater roles and writing balance",
+                "5th: Supporting role acceptance and rehearsal/portfolio balance",
+                "6th: Declining lead role to focus on current play",
+                "7th: Regional theater auditions and coaching",
+                "8th: Winter season supporting role and rehearsals",
+                "9th: Conservatory application considerations"
+            ],
+            "source_chat_ids": [
+                38,
+                138,
+                144,
+                244,
+                246,
+                248,
+                390,
+                396,
+                488,
+                494,
+                582,
+                678,
+                778,
+                784,
+                882,
+                892,
+                984,
+                990
+            ],
+            "rubric": [
+                "LLM response should mention: Acting course and first day tips first",
+                "LLM response should mention: Minor role and character/voice coaching second",
+                "LLM response should mention: Dance recital audition and prep third",
+                "LLM response should mention: Part-time theater roles and writing balance fourth",
+                "LLM response should mention: Supporting role acceptance and rehearsal/portfolio balance fifth",
+                "LLM response should mention: Declining lead role to focus on current play sixth",
+                "LLM response should mention: Regional theater auditions and coaching seventh",
+                "LLM response should mention: Winter season supporting role and rehearsals eighth",
+                "LLM response should mention: Conservatory application considerations ninth"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say I met Christopher?",
+            "answer": "You said you met Christopher on June 12, 2018.",
+            "difficulty": "easy",
+            "question_type": "context date/time",
+            "conversation_reference": "Turn 1: USER mentions meeting Christopher at the New Gary Farmers Market on June 12, 2018.",
+            "key_facts_tested": [
+                "date of meeting with Christopher"
+            ],
+            "source_chat_ids": [
+                24
+            ],
+            "rubric": [
+                "LLM response should mention: June 12, 2018"
+            ]
+        },
+        {
+            "question": "What sequence of events and preparations led you to feel ready for your involvement in the community play?",
+            "answer": "I was offered a minor role in the community play and accepted it on April 4. Following that, I focused on developing my character by reading the script, analyzing my character\u2019s background and relationships, and practicing physical and vocal choices. I also engaged in voice coaching sessions with Sarah Lee to improve my vocal skills, integrated those techniques into rehearsals at the New Gary Community Theater, and maintained a structured schedule balancing rehearsals, coaching, and rest to ensure everything came together by the time the play started.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial role acceptance and character development advice, followed by voice coaching and rehearsal scheduling",
+            "key_facts_tested": [
+                "role acceptance date",
+                "character development steps",
+                "voice coaching involvement",
+                "rehearsal location",
+                "structured preparation schedule"
+            ],
+            "extraction_challenge": "LLM must synthesize the timeline of role acceptance, character development guidance, voice coaching details, and rehearsal planning spread across different conversation turns to explain the overall preparation process",
+            "source_chat_ids": [
+                138,
+                139,
+                144,
+                145
+            ],
+            "rubric": [
+                "LLM response should mention: Accepted minor role on April 4",
+                "LLM response should mention: Developed character by reading script and analyzing background",
+                "LLM response should mention: Engaged in voice coaching sessions with Sarah Lee",
+                "LLM response should mention: Rehearsed at New Gary Community Theater",
+                "LLM response should mention: Maintained structured schedule balancing rehearsals, coaching, and rest"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What happened during my recent rehearsals and coaching sessions?",
+            "instruction_being_tested": "Always include specific dates when I ask about event outcomes.",
+            "expected_compliance": "Response should include exact dates associated with each event or outcome mentioned.",
+            "compliance_indicators": [
+                "mentions of specific calendar dates",
+                "events tied to particular days",
+                "chronological references with dates"
+            ],
+            "non_compliance_signs": [
+                "general descriptions without dates",
+                "vague time references like 'recently' or 'last week'",
+                "no mention of when events occurred"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                206,
+                208
+            ],
+            "rubric": [
+                "LLM response should mention: specific dates for each event",
+                "LLM response should avoid: vague time references",
+                "LLM response should avoid: general descriptions without dates"
+            ]
+        },
+        {
+            "question": "How do I usually organize my sessions for improving a skill?",
+            "instruction_being_tested": "Always specify rehearsal durations when I ask about practice routines.",
+            "expected_compliance": "Response should include specific time lengths for each session or segment mentioned.",
+            "compliance_indicators": [
+                "mentions exact time spans",
+                "includes duration details",
+                "states how long each session lasts"
+            ],
+            "non_compliance_signs": [
+                "only describes activities without time",
+                "no mention of how long sessions are",
+                "general discussion without timing"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                756
+            ],
+            "rubric": [
+                "LLM response should mention: specific durations for sessions"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How long do I spend on my daily vocal warm-ups using the VoxTools app?",
+            "answer": "20 minutes each morning",
+            "difficulty": "easy",
+            "update_type": "duration_extension",
+            "tests_retention_of": "updated duration of daily vocal warm-ups",
+            "conversation_references": [
+                "Health & Wellness: Vocal Care: I started daily vocal warm-ups using the VoxTools app for 15 minutes each morning.",
+                "Information Update: I extended my daily vocal warm-ups to 20 minutes starting April 7, noticing quicker improvements in voice clarity."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 15-minute duration instead of the updated 20 minutes",
+            "source_chat_ids": {
+                "original_info": [
+                    120
+                ],
+                "updated_info": [
+                    204
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 20 minutes each morning"
+            ]
+        },
+        {
+            "question": "How much money do I have set aside for unexpected rehearsal or costume expenses?",
+            "answer": "$200",
+            "difficulty": "easy",
+            "update_type": "emergency_fund_increase",
+            "tests_retention_of": "updated emergency fund amount",
+            "conversation_references": [
+                "Risk & Safety: Emergency Fund: I set aside $150 as an emergency fund for unexpected rehearsal or costume costs.",
+                "Information Update: I increased my emergency fund to $200 after unexpected costume repairs post-recital."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original $150 emergency fund amount instead of the updated $200",
+            "source_chat_ids": {
+                "original_info": [
+                    536
+                ],
+                "updated_info": [
+                    556
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: $200"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How am I balancing my time and resources between the acting course, voice coaching sessions, grant application, and dance recital preparations?",
+            "answer": "You are managing a 10-week acting course starting early April, scheduling four voice coaching sessions spaced over April, applying for a $300 grant for costumes and travel, and preparing mentally and physically for an upcoming dance recital, indicating a careful distribution of your time and financial resources across training, funding, and performance preparation.",
+            "difficulty": "medium",
+            "reasoning_type": "cross-session_correlation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "38",
+                "140",
+                "334",
+                "340"
+            ],
+            "reasoning_steps": [
+                "Identify the time commitment and focus areas of the 10-week acting course starting in early April.",
+                "Note the scheduling and preparation for four voice coaching sessions within the same month.",
+                "Consider the financial concern and application for a $300 grant aimed at costume and travel expenses.",
+                "Recognize the stress and mental preparation for the dance recital, indicating emotional and logistical resource allocation."
+            ],
+            "source_chat_ids": [
+                38,
+                140,
+                334,
+                340
+            ],
+            "rubric": [
+                "LLM response should mention: 10-week acting course starting early April",
+                "LLM response should mention: four voice coaching sessions in April",
+                "LLM response should mention: applying for a $300 grant for costumes and travel",
+                "LLM response should mention: mental and physical preparation for dance recital"
+            ]
+        },
+        {
+            "question": "How did my budgeting approach with Patricia help us stay within our $120 limit for materials?",
+            "answer": "You and Patricia made a detailed list, checked prices online, prioritized essentials, split some costs, looked for deals, and stayed disciplined to avoid overspending.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 3,
+            "conversation_references": [
+                "230",
+                "232",
+                "234"
+            ],
+            "reasoning_steps": [
+                "Identify the budgeting strategies mentioned in the first session about planning and price checking.",
+                "Recall the cost-sharing and prioritization details from the second session.",
+                "Combine the discipline and deal-seeking behaviors from the third session to explain how the budget was maintained."
+            ],
+            "source_chat_ids": [
+                230,
+                232,
+                234
+            ],
+            "rubric": [
+                "LLM response should mention: detailed list and price checking",
+                "LLM response should mention: prioritizing essentials and splitting costs",
+                "LLM response should mention: looking for deals and staying disciplined"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm trying to organize my rehearsal times for the week. How would you suggest I plan them?",
+            "preference_being_tested": "I prefer rehearsing in the evening to match my natural energy peaks and class schedules.",
+            "expected_compliance": "Response should suggest scheduling rehearsals in the evening or accommodate evening times, reflecting the user's preference for evening rehearsals.",
+            "compliance_indicators": [
+                "recommends evening rehearsal times",
+                "acknowledges user's energy patterns or class schedules indirectly",
+                "avoids suggesting only morning or afternoon rehearsals"
+            ],
+            "non_compliance_signs": [
+                "only suggests rehearsing in the morning or afternoon",
+                "ignores user's likely availability in the evening",
+                "does not consider timing related to energy or schedule"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                164
+            ],
+            "rubric": [
+                "LLM response should mention: evening rehearsal times"
+            ]
+        },
+        {
+            "question": "I'm thinking about auditioning for a new role soon. What kind of parts do you think I should consider?",
+            "preference_being_tested": "I prefer supporting roles that challenge me emotionally over lead roles with less depth.",
+            "expected_compliance": "Response should suggest roles that align with the user's preference for emotionally challenging supporting parts rather than recommending lead roles with less complexity.",
+            "compliance_indicators": [
+                "recommends emotionally complex supporting roles",
+                "acknowledges depth and challenge in role suggestions",
+                "avoids suggesting lead roles that lack emotional depth"
+            ],
+            "non_compliance_signs": [
+                "only suggests lead roles without emotional complexity",
+                "ignores the emotional challenge aspect",
+                "recommends roles based solely on prominence or lead status"
+            ],
+            "difficulty": "medium",
+            "preference_type": "role selection criteria",
+            "source_chat_ids": [
+                606
+            ],
+            "rubric": [
+                "LLM response should mention: emotionally complex supporting roles"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you summarize how my interactions and experiences with Christopher and others have developed over time, including the support, collaborations, and feedback I've received?",
+            "ideal_summary": "Your interactions with Christopher and your artistic circle have evolved through various meaningful experiences and support mechanisms. Initially, you bonded with Christopher at the New Gary Farmers Market and explored local dance studios together, laying the groundwork for shared creative activities. Christopher has been a consistent source of emotional and practical support, attending your performances, providing honest feedback on your acting\u2014such as pacing during rehearsals\u2014and helping you practice voice projection. His surprise gift of symphony tickets inspired you to integrate musical elements into your performances, which you actively pursued by incorporating music into your warm-ups and rehearsals. Additionally, introductions facilitated by Michael, such as meeting choreographer Lisa Monroe, opened new collaborative opportunities blending dance and acting, further enriching your artistic development. Throughout this journey, you balanced support from friends like Michael and Patricia with Christopher's encouragement, managing your personal practice and reflection effectively. Christopher's presence at auditions and performances, along with thoughtful gestures like gifting a spa voucher, strengthened your relationship and positively influenced your confidence and career progression. Overall, your experiences reflect a dynamic interplay of mentorship, collaboration, emotional support, and personal growth within your creative community.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                24,
+                25,
+                126,
+                127,
+                129,
+                236,
+                237,
+                239,
+                422,
+                423,
+                484,
+                485,
+                487,
+                572,
+                573,
+                575,
+                668,
+                669,
+                770,
+                771,
+                870,
+                871,
+                873,
+                878,
+                879,
+                881,
+                974,
+                975,
+                982,
+                983
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "support dynamics",
+                "collaborations",
+                "feedback integration",
+                "personal and professional growth"
+            ],
+            "synthesis_required": "Combining multiple facets of interpersonal support, creative collaboration, and personal development into a coherent narrative",
+            "source_chat_ids": [
+                24,
+                25,
+                126,
+                127,
+                129,
+                236,
+                237,
+                239,
+                422,
+                423,
+                484,
+                485,
+                487,
+                572,
+                573,
+                575,
+                668,
+                669,
+                770,
+                771,
+                870,
+                871,
+                873,
+                878,
+                879,
+                881,
+                974,
+                975,
+                982,
+                983
+            ],
+            "rubric": [
+                "LLM response should mention: Initially, you bonded with Christopher at the New Gary Farmers Market and explored local dance studios together, laying the groundwork for shared creative activities.",
+                "LLM response should mention: Christopher has been a consistent source of emotional and practical support, attending your performances, providing honest feedback on your acting\u2014such as pacing during rehearsals\u2014and helping you practice voice projection.",
+                "LLM response should mention: His surprise gift of symphony tickets inspired you to integrate musical elements into your performances, which you actively pursued by incorporating music into your warm-ups and rehearsals.",
+                "LLM response should mention: Additionally, introductions facilitated by Michael, such as meeting choreographer Lisa Monroe, opened new collaborative opportunities blending dance and acting, further enriching your artistic development.",
+                "LLM response should mention: Throughout this journey, you balanced support from friends like Michael and Patricia with Christopher's encouragement, managing your personal practice and reflection effectively.",
+                "LLM response should mention: Christopher's presence at auditions and performances, along with thoughtful gestures like gifting a spa voucher, strengthened your relationship and positively influenced your confidence and career progression."
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how I can balance my improvisation and scriptwriting practice?",
+            "ideal_summary": "You can balance improvisation and scriptwriting by creating a structured weekly schedule that allocates specific times for each activity. Incorporating exercises that connect both skills, attending workshops, collaborating with others, and reflecting on your progress are key strategies. This approach helps develop both areas effectively and enhances your overall creativity.",
+            "difficulty": "easy",
+            "summarization_type": "basic_process_overview",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 2,
+            "key_elements_tested": [
+                "simple scheduling",
+                "combining related skills",
+                "basic strategy overview"
+            ],
+            "synthesis_required": "Combining straightforward advice from multiple sessions into a concise summary",
+            "source_chat_ids": [
+                1022,
+                1023,
+                1029
+            ],
+            "rubric": [
+                "LLM response should mention: You can balance improvisation and scriptwriting by creating a structured weekly schedule that allocates specific times for each activity.",
+                "LLM response should mention: Incorporating exercises that connect both skills is essential for effective practice.",
+                "LLM response should mention: Attending workshops and collaborating with others can provide valuable insights and feedback.",
+                "LLM response should mention: Regular reflection on your progress helps identify areas for improvement and growth."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many weeks will I spend in the acting course from when it starts to when it ends?",
+            "answer": "The acting course lasts 10 weeks, starting on April 1, 2024, and ending on June 10, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 1, 2024: course starts",
+                "June 10, 2024: course ends"
+            ],
+            "conversation_references": [
+                "chat_id 38",
+                "chat_id 40"
+            ],
+            "calculation_required": "June 10, 2024 - April 1, 2024 = 10 weeks",
+            "source_chat_ids": {
+                "first_event": [
+                    38
+                ],
+                "second_event": [
+                    40
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 10 weeks",
+                "LLM response should state: from April 1 till June 10"
+            ]
+        },
+        {
+            "question": "How many weeks will I have been attending rehearsals at the New Gary Community Theater by the time of my July 15 dance recital?",
+            "answer": "Starting from April 7 to July 15 is 14 weeks, so I will have been attending rehearsals for 14 weeks by the time of the recital.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 7: start of rehearsals",
+                "July 15: dance recital"
+            ],
+            "conversation_references": [
+                "Session 1: rehearsal schedule starting April 7",
+                "Session 2: commitment to July 15 recital"
+            ],
+            "calculation_required": "July 15 - April 7 = 14 weeks",
+            "source_chat_ids": {
+                "first_event": [
+                    142
+                ],
+                "second_event": [
+                    398
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 14 weeks"
+            ]
+        }
+    ]
+}

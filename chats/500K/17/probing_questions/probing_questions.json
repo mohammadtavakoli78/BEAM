@@ -1,0 +1,573 @@
+{
+    "abstention": [
+        {
+            "question": "What was discussed during the couples therapy session Troy and I attended on April 20?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific discussions during the couples therapy session on April 20.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The couples therapy session is mentioned but no details about the discussion or outcomes are provided.",
+            "plan_reference": "Batch 2, Bullet 3 and 19 mention couples therapy but no session content.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific discussions during the couples therapy session on April 20."
+            ]
+        },
+        {
+            "question": "What specific coping plans did I create after identifying new triggers during therapy?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific coping plans you created after identifying new triggers.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Trigger identification is mentioned but no details on coping plans are provided.",
+            "plan_reference": "Batch 2, Bullet 24 mentions triggers and coping plans but no specifics.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific coping plans you created after identifying new triggers."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have Troy and I ever attended couples therapy together?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended any couples therapy sessions with Troy, but you also mentioned attending couples therapy together that improved your communication. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance of couples therapy with Troy",
+            "conversation_references": [
+                "Session 208: Never attended statement",
+                "Session 170: Attended couples therapy"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    208
+                ],
+                "second_statement": [
+                    170
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never attended any couples therapy sessions with Troy",
+                "LLM response should mention: you also mentioned attending couples therapy together that improved your communication",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever shared my childhood trauma story with Patricia?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never shared your childhood trauma story with Patricia, but you also mentioned feeling relieved after sharing it with her. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Sharing childhood trauma story with Patricia",
+            "conversation_references": [
+                "Session 1: Never shared statement",
+                "Session 2: Shared story and relief"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    306
+                ],
+                "second_statement": [
+                    210
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have never shared your childhood trauma story with Patricia",
+                "LLM response should mention: you also mentioned feeling relieved after sharing it with her",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of my personal growth and relationships throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned these aspects in this order: 1) First, you talked about starting a meditation routine and using a meditation app, 2) Then you discussed rebuilding your self-trust and how daily habits impact it, 3) Next, you brought up concerns about your relationship with Troy and couples therapy progress, 4) After that, you mentioned disclosing trauma to Jessica and Troy's support in that process, 5) Finally, you talked about Troy's ongoing support through various events and your efforts to show appreciation for him.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 52 and 60: Meditation routine and app use",
+                "Session 60 and 176: Rebuilding self-trust and daily habits",
+                "Session 170 and 176: Relationship with Troy and couples therapy",
+                "Session 264, 266, 268: Trauma disclosure to Jessica and Troy's support",
+                "Sessions 376, 384, 474, 640, 812, 950: Troy's support and appreciation"
+            ],
+            "ordering_tested": [
+                "1st: Meditation routine and app use",
+                "2nd: Rebuilding self-trust and daily habits",
+                "3rd: Relationship with Troy and couples therapy",
+                "4th: Trauma disclosure to Jessica and Troy's support",
+                "5th: Troy's ongoing support and appreciation"
+            ],
+            "source_chat_ids": [
+                [
+                    52,
+                    60
+                ],
+                [
+                    60,
+                    176
+                ],
+                [
+                    170,
+                    176
+                ],
+                [
+                    264,
+                    266,
+                    268
+                ],
+                [
+                    376,
+                    384,
+                    474,
+                    640,
+                    812,
+                    950
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Meditation routine and app use",
+                "LLM response should mention: 2) Rebuilding self-trust and daily habits",
+                "LLM response should mention: 3) Relationship with Troy and couples therapy",
+                "LLM response should mention: 4) Trauma disclosure to Jessica and Troy's support",
+                "LLM response should mention: 5) Troy's ongoing support and appreciation"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of my self-care and anxiety management routines throughout our conversations in order (mention 11 items)?",
+            "answer": "You mentioned aspects of your self-care and anxiety management routines in this order: 1) Discussing your monthly meetings with a friend and uncertainty about sharing personal trauma, 2) Starting daily nature walks and questioning the best time for them, 3) Using a meditation app and completing initial sessions, 4) Noticing a reduction in panic attacks and seeking strategies to continue progress, 5) Adding weekly swimming sessions and exploring their impact on well-being, 6) Observing further anxiety episode reductions and asking how to maintain progress, 7) Completing a larger number of meditation sessions and looking for new mindfulness techniques, 8) Reporting additional anxiety reduction and requesting strategies to sustain it, 9) Maintaining yoga and swimming routines and wondering about combining them with emotional regulation techniques, 10) Trying to stay consistent with self-care during holidays and asking for budgeting tips, 11) Noting very low anxiety episodes and seeking ways to maintain this improvement.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 11,
+            "conversation_references": [
+                "Session 12: Friend meetings and trauma",
+                "Session 110: Nature walks timing",
+                "Session 224: Meditation app sessions",
+                "Session 330: Panic attack reduction",
+                "Session 434: Swimming sessions impact",
+                "Session 544: Anxiety episode reduction",
+                "Session 766: Advanced meditation sessions",
+                "Session 874: Further anxiety reduction",
+                "Session 1026: Yoga and swimming routines",
+                "Session 1134: Holiday self-care budgeting",
+                "Session 1142: Low anxiety episodes maintenance"
+            ],
+            "ordering_tested": [
+                "1st: Friend meetings and trauma",
+                "2nd: Nature walks timing",
+                "3rd: Meditation app sessions",
+                "4th: Panic attack reduction",
+                "5th: Swimming sessions impact",
+                "6th: Anxiety episode reduction",
+                "7th: Advanced meditation sessions",
+                "8th: Further anxiety reduction",
+                "9th: Yoga and swimming routines",
+                "10th: Holiday self-care budgeting",
+                "11th: Low anxiety episodes maintenance"
+            ],
+            "source_chat_ids": [
+                12,
+                110,
+                224,
+                330,
+                434,
+                544,
+                766,
+                874,
+                1026,
+                1134,
+                1142
+            ],
+            "rubric": [
+                "LLM response should mention: 1) Friend meetings and trauma",
+                "LLM response should mention: 2) Nature walks timing",
+                "LLM response should mention: 3) Meditation app sessions",
+                "LLM response should mention: 4) Panic attack reduction",
+                "LLM response should mention: 5) Swimming sessions impact",
+                "LLM response should mention: 6) Anxiety episode reduction",
+                "LLM response should mention: 7) Advanced meditation sessions",
+                "LLM response should mention: 8) Further anxiety reduction",
+                "LLM response should mention: 9) Yoga and swimming routines",
+                "LLM response should mention: 10) Holiday self-care budgeting",
+                "LLM response should mention: 11) Low anxiety episodes maintenance"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say I met Troy?",
+            "answer": "You said you met Troy on July 12, 2021.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: USER message in chat_id 10",
+            "key_facts_tested": [
+                "date met Troy"
+            ],
+            "source_chat_ids": [
+                10
+            ],
+            "rubric": [
+                "LLM response should mention: July 12, 2021"
+            ]
+        },
+        {
+            "question": "How much have I budgeted each month for my sessions?",
+            "answer": "You have budgeted $480 monthly for 4 sessions.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: I've budgeted $480 monthly for 4 sessions, but I'm not sure if $120 per session is worth it, can you help me decide?",
+            "key_facts_tested": [
+                "monthly budget",
+                "number of sessions",
+                "total monthly amount"
+            ],
+            "source_chat_ids": [
+                46
+            ],
+            "rubric": [
+                "LLM response should mention: $480 monthly",
+                "LLM response should mention: 4 sessions"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How has my confidence in making decisions changed recently?",
+            "instruction_being_tested": "Always report percentage improvements when I ask about self-trust progress.",
+            "expected_compliance": "Response should include percentage improvements related to the user's self-trust progress.",
+            "compliance_indicators": [
+                "percentage improvement mentioned",
+                "quantitative comparison of progress",
+                "numeric value showing change"
+            ],
+            "non_compliance_signs": [
+                "only qualitative description",
+                "no numbers or percentages",
+                "vague statements about progress"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                304
+            ],
+            "rubric": [
+                "LLM response should include: percentage improvement mentioned",
+                "LLM response should include: quantitative comparison of progress"
+            ]
+        },
+        {
+            "question": "What are the costs related to my wellness activities?",
+            "instruction_being_tested": "Always specify membership durations when I ask about wellness expenses.",
+            "expected_compliance": "Response should include the length of time associated with any memberships mentioned alongside the costs.",
+            "compliance_indicators": [
+                "mention of membership time periods",
+                "duration details included with expenses",
+                "time frames specified for memberships"
+            ],
+            "non_compliance_signs": [
+                "only costs given without any time reference",
+                "no mention of how long memberships last",
+                "expenses listed without duration context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                508
+            ],
+            "rubric": [
+                "LLM response should include: mention of membership time periods",
+                "LLM response should include: duration details included with expenses"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is my current self-trust rating based on my latest self-assessment?",
+            "answer": "60%",
+            "difficulty": "easy",
+            "update_type": "self-trust rating increase",
+            "tests_retention_of": "updated self-trust rating value",
+            "conversation_references": [
+                "Self-Trust Building: Self-trust rating improved from 40% to 55% since March 3, per self-assessment.",
+                "Information Update: The self-trust rating has now reached 60% as of May 15, reflecting steady progress since March."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the previous 55% rating instead of the updated 60%",
+            "source_chat_ids": {
+                "original_info": [
+                    230
+                ],
+                "updated_info": [
+                    302
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 60%"
+            ]
+        },
+        {
+            "question": "What topics are covered in the leadership course I enrolled in?",
+            "answer": "The leadership course includes the original curriculum plus an additional module on trauma-informed leadership.",
+            "difficulty": "moderate",
+            "update_type": "curriculum_extension",
+            "tests_retention_of": "inclusion of trauma-informed leadership module in the course",
+            "conversation_references": [
+                "Learning & Development Labels: Personal Development: Enrolled in leadership course starting February 1, 8 weeks duration.",
+                "Information Update: The leadership course enrollment was extended to include an additional module on trauma-informed leadership."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the course as only the original 8-week leadership curriculum without the trauma-informed leadership module.",
+            "source_chat_ids": {
+                "original_info": [
+                    1144
+                ],
+                "updated_info": [
+                    1220
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: trauma-informed leadership module"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much total confidence boost did I report from co-leading or co-hosting activities with Patricia?",
+            "answer": "140%",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Co-leading support group discussion",
+                "Co-hosting writing circle",
+                "Co-leading support group meeting"
+            ],
+            "reasoning_steps": [
+                "Identify the confidence boost percentages from each co-leading or co-hosting activity mentioned by the user.",
+                "Add the confidence boosts from co-leading the support group discussion, co-hosting the writing circle, and co-leading the support group meeting.",
+                "Sum the percentages to find the total confidence boost reported."
+            ],
+            "source_chat_ids": [
+                470,
+                630,
+                800
+            ],
+            "rubric": [
+                "LLM response should mention: 140%"
+            ]
+        },
+        {
+            "question": "How many total personal writings have I created across journaling, letters to my inner child, and my trauma narrative draft?",
+            "answer": "Three types: daily journal entries since February 15, three personal letters, and one trauma narrative draft.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "journaling habit",
+                "letters to inner child",
+                "trauma narrative draft"
+            ],
+            "reasoning_steps": [
+                "Identify that I have been journaling daily since a specific date.",
+                "Recall that I wrote three personal letters to my inner child.",
+                "Note that I completed one trauma narrative draft."
+            ],
+            "source_chat_ids": [
+                36,
+                120,
+                290
+            ],
+            "rubric": [
+                "LLM response should mention: daily journal entries since February 15",
+                "LLM response should mention: three personal letters",
+                "LLM response should mention: one trauma narrative draft"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "Can you help me find a good time for my therapy sessions later this week?",
+            "preference_being_tested": "I prefer evening therapy sessions on Fridays to avoid work conflicts and maximize weekend recovery time.",
+            "expected_compliance": "Response should suggest therapy session times that include or prioritize Friday evenings, showing awareness of the user's preference for that specific timing.",
+            "compliance_indicators": [
+                "recommends Friday evening sessions",
+                "acknowledges user's schedule constraints implicitly",
+                "avoids suggesting only daytime or non-Friday options"
+            ],
+            "non_compliance_signs": [
+                "only suggests morning or daytime sessions",
+                "ignores Friday evening availability",
+                "recommends sessions conflicting with typical work hours"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time scheduling",
+            "source_chat_ids": [
+                78
+            ],
+            "rubric": [
+                "LLM response should include: recommends Friday evening sessions",
+                "LLM response should include: avoids suggesting only daytime or non-Friday options"
+            ]
+        },
+        {
+            "question": "I'm trying to build a consistent mindfulness routine. How would you suggest structuring my sessions throughout the day?",
+            "preference_being_tested": "I prefer morning mindfulness sessions over evening ones to start the day grounded",
+            "expected_compliance": "Response should recommend or prioritize mindfulness sessions in the morning rather than evening, aligning with the user's stated preference for starting the day grounded",
+            "compliance_indicators": [
+                "suggests morning sessions",
+                "emphasizes starting the day with mindfulness",
+                "offers strategies to maintain morning routine",
+                "avoids recommending evening sessions as primary option"
+            ],
+            "non_compliance_signs": [
+                "only suggests evening sessions",
+                "ignores timing of sessions",
+                "recommends switching to evening sessions",
+                "does not address session timing at all"
+            ],
+            "difficulty": "medium",
+            "preference_type": "time-of-day preference",
+            "source_chat_ids": [
+                280
+            ],
+            "rubric": [
+                "LLM response should include: suggests morning sessions",
+                "LLM response should include: avoids recommending evening sessions as primary option"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how my relationship with Troy has developed and changed over time, including how we've handled challenges and supported each other?",
+            "ideal_summary": "Your relationship with Troy has evolved significantly since you met at the Reykjavik Art Museum in July 2021. Over the course of 2.5 years, you have navigated various challenges together, including concerns about the future of your relationship and efforts to deepen your emotional connection through open communication and shared experiences. You both took proactive steps like scheduling couples therapy to address issues, preparing thoughtfully for sessions, and remaining flexible about therapy approaches. Troy has been a consistent source of emotional support, especially during your healing journey, such as attending support groups and providing grounding during EMDR therapy. You have worked on rebuilding self-trust with the help of your relationships, including Troy\u2019s encouragement and feedback on your trauma narrative. Throughout, you have maintained open dialogue about your needs, fears, and aspirations, balancing personal growth with mutual support. Your relationship shows a progression from initial concerns to active collaboration and emotional intimacy, with ongoing efforts to strengthen your bond and navigate life\u2019s complexities together.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                10,
+                17,
+                94,
+                384,
+                950
+            ],
+            "key_elements_tested": [
+                "relationship progression",
+                "challenge resolution",
+                "emotional support",
+                "therapy engagement",
+                "self-trust development"
+            ],
+            "synthesis_required": "Integrating multiple facets of relationship development, emotional challenges, and mutual support into a coherent narrative",
+            "source_chat_ids": [
+                10,
+                17,
+                94,
+                384,
+                950
+            ],
+            "rubric": [
+                "LLM response should mention: Your relationship with Troy has evolved significantly since you met at the Reykjavik Art Museum in July 2021. Over the course of 2.5 years, you have navigated various challenges together, including concerns about the future of your relationship and efforts to deepen your emotional connection through open communication and shared experiences.",
+                "LLM response should mention: You both took proactive steps like scheduling couples therapy to address issues, preparing thoughtfully for sessions, and remaining flexible about therapy approaches.",
+                "LLM response should mention: Troy has been a consistent source of emotional support, especially during your healing journey, such as attending support groups and providing grounding during EMDR therapy.",
+                "LLM response should mention: You have worked on rebuilding self-trust with the help of your relationships, including Troy\u2019s encouragement and feedback on your trauma narrative.",
+                "LLM response should mention: Throughout, you have maintained open dialogue about your needs, fears, and aspirations, balancing personal growth with mutual support. Your relationship shows a progression from initial concerns to active collaboration and emotional intimacy, with ongoing efforts to strengthen your bond and navigate life\u2019s complexities together."
+            ]
+        },
+        {
+            "question": "Can you summarize how my relationship with Patricia has developed and what activities we've done together recently?",
+            "ideal_summary": "You have a close friendship with Patricia, regularly meeting at Kaffi Vinyl and sharing personal experiences like childhood trauma. Together, you have attended mindfulness workshops and created a grounding toolkit, which have both improved your mutual support and coping skills. Additionally, you have co-led support groups and writing circles with Patricia, boosting your confidence and strengthening your connection.",
+            "difficulty": "easy",
+            "summarization_type": "simple_relationship_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 12,
+            "key_elements_tested": [
+                "basic relationship overview",
+                "combining activities and emotional support",
+                "simple chronological development"
+            ],
+            "synthesis_required": "Combining straightforward details about friendship, shared activities, and personal growth into a brief summary",
+            "source_chat_ids": [
+                12,
+                13,
+                126,
+                127,
+                136,
+                137,
+                256,
+                257,
+                372,
+                373,
+                470,
+                471,
+                630,
+                631,
+                800,
+                801,
+                934,
+                935,
+                1062,
+                1063,
+                1182,
+                1183
+            ],
+            "rubric": [
+                "LLM response should mention: You have a close friendship with Patricia, regularly meeting at Kaffi Vinyl and sharing personal experiences like childhood trauma.",
+                "LLM response should mention: Together, you have attended mindfulness workshops and created a grounding toolkit, which have both improved your mutual support and coping skills.",
+                "LLM response should mention: Additionally, you have co-led support groups and writing circles with Patricia, boosting your confidence and strengthening your connection."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days after I originally planned my first therapy session was it rescheduled to a later date?",
+            "answer": "The therapy session was originally planned for March 10 and was rescheduled to March 15, so it was moved 5 days later.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Original session: March 10 at 3 PM",
+                "Rescheduled session: March 15 at 4 PM"
+            ],
+            "conversation_references": [
+                "Session 1: Initial therapy session scheduling",
+                "Session 3: Therapy session rescheduling"
+            ],
+            "calculation_required": "March 15 - March 10 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    44
+                ],
+                "second_event": [
+                    90
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 5 days",
+                "LLM response should state: from March 10 till March 15"
+            ]
+        },
+        {
+            "question": "How many weeks are there between the last Friday therapy session I scheduled through May 10 and the first EMDR session I planned in November?",
+            "answer": "There are about 26 weeks between the last Friday therapy session scheduled through May 10 and the first EMDR session planned for November 15.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "Last Friday therapy session through May 10",
+                "First EMDR session on November 15"
+            ],
+            "conversation_references": [
+                "Session 196: therapy sessions through May 10",
+                "Session 900: EMDR sessions starting November 15"
+            ],
+            "calculation_required": "Calculate weeks between May 10 and November 15 \u2248 26 weeks",
+            "source_chat_ids": {
+                "first_event": [
+                    196
+                ],
+                "second_event": [
+                    900
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 26 weeks"
+            ]
+        }
+    ]
+}

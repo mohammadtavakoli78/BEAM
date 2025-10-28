@@ -1,0 +1,572 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the contact information or affiliation details for diabetes educator Sarah Kim?",
+            "ideal_response": "Based on the provided chat, there is no information related to diabetes educator Sarah Kim\u2019s contact information or affiliations.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Sarah Kim is mentioned as part of the healthcare team but no contact or affiliation details are given.",
+            "plan_reference": "Batches 1, 6, and 8 mention Sarah Kim without contact details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to diabetes educator Sarah Kim’s contact information or affiliations."
+            ]
+        },
+        {
+            "question": "What was the atmosphere and participant feedback like at the August 10 arthritis workshop at Saint Helena Community Center?",
+            "ideal_response": "Based on the provided chat, there is no information related to the atmosphere or participant feedback from the August 10 arthritis workshop.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The workshop attendance is noted but no details about atmosphere or feedback are provided.",
+            "plan_reference": "Batch 6, Bullet 31 mentions the workshop but no participant reactions.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the atmosphere or participant feedback from the August 10 arthritis workshop."
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I ever attended meditation sessions using the Headspace app?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have been doing weekly meditation sessions using the Headspace app, but you also mentioned never attending any meditation sessions with it. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance of meditation sessions using Headspace app",
+            "conversation_references": [
+                "Session 130: Weekly meditation sessions using Headspace",
+                "Session 202: Never attended meditation sessions using Headspace"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    130
+                ],
+                "second_statement": [
+                    202
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have been doing weekly meditation sessions using the Headspace app",
+                "LLM response should mention: you also mentioned never attending any meditation sessions with it.",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever attended aquatic therapy sessions?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have completed 12 aquatic therapy sessions with improvement, but you also mentioned that you have never attended any aquatic therapy sessions. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "attendance of aquatic therapy sessions",
+            "conversation_references": [
+                "chat_id: 424",
+                "chat_id: 516"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    424
+                ],
+                "second_statement": [
+                    516
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: you said you have completed 12 aquatic therapy sessions with improvement",
+                "LLM response should mention: you also mentioned that you have never attended any aquatic therapy sessions.",
+                "LLM response should mention: could you clarify which is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of managing my health throughout our conversations in order (mention 8 items)?",
+            "answer": "You mentioned aspects of managing your health in this order: 1) Your initial diagnosis and follow-up frequency with your doctor, 2) Discussions about insulin options and decisions around starting insulin, 3) Considering and managing arthritis pain including medication and therapy options, 4) Physical therapy progress and scheduling follow-ups with your therapist, 5) Concerns about insulin dosage adjustments, 6) Eye health and related exams, 7) Cardiologist visits and heart disease risk management, and 8) Recent lab results and treatment plan adjustments.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 8,
+            "conversation_references": [
+                "Session 16: Initial diagnosis and follow-up",
+                "Sessions 108, 312, 518: Insulin discussions and dosage concerns",
+                "Sessions 216, 224: Arthritis pain and medication considerations",
+                "Sessions 412, 416, 420: Physical therapy progress and appointments",
+                "Session 616, 622: Eye health and exams",
+                "Sessions 806, 812: Cardiology check-ups and heart risk management",
+                "Sessions 926, 928: Lab results and treatment adjustments"
+            ],
+            "ordering_tested": [
+                "1st: Diagnosis and follow-up",
+                "2nd: Insulin options and decisions",
+                "3rd: Arthritis pain management",
+                "4th: Physical therapy progress",
+                "5th: Insulin dosage concerns",
+                "6th: Eye health exams",
+                "7th: Cardiology visits",
+                "8th: Lab results and treatment plan"
+            ],
+            "source_chat_ids": [
+                16,
+                [
+                    108,
+                    312,
+                    518
+                ],
+                [
+                    216,
+                    224
+                ],
+                [
+                    412,
+                    416,
+                    420
+                ],
+                [
+                    616,
+                    622
+                ],
+                [
+                    806,
+                    812
+                ],
+                [
+                    926,
+                    928
+                ]
+            ],
+            "rubric": [
+                "LLM response should mention: Initial diagnosis and follow-up",
+                "LLM response should mention: Insulin options and decisions",
+                "LLM response should mention: Arthritis pain management",
+                "LLM response should mention: Physical therapy progress",
+                "LLM response should mention: Insulin dosage concerns",
+                "LLM response should mention: Eye health exams",
+                "LLM response should mention: Cardiology visits",
+                "LLM response should mention: Lab results and treatment plan"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I mentioned different ways David has supported me throughout our conversations in order (mention 5 items)?",
+            "answer": "You mentioned David's support in this order: 1) Meeting him at a wine tasting event and discussing how to explain my diabetes to him, 2) His help with Mediterranean meals and reducing sodium intake, 3) The surprise homemade Mediterranean dinner he prepared, 4) Attending a diabetes education refresher with me, 5) Planning active outings and social events together like bike rides, concerts, and walking tours.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 22: Meeting and explaining diabetes",
+                "Session 118: Help with Mediterranean meals",
+                "Session 238: Surprise Mediterranean dinner",
+                "Session 328: Attending diabetes education refresher",
+                "Sessions 650, 748, 852: Planning active and social outings"
+            ],
+            "ordering_tested": [
+                "1st: Meeting and discussing diabetes explanation",
+                "2nd: Assistance with Mediterranean meals",
+                "3rd: Surprise homemade dinner",
+                "4th: Attending diabetes education refresher",
+                "5th: Planning active and social outings"
+            ],
+            "source_chat_ids": [
+                22,
+                118,
+                238,
+                328,
+                650,
+                748,
+                852
+            ],
+            "rubric": [
+                "LLM response should mention: Meeting and discussing diabetes explanation",
+                "LLM response should mention: Assistance with Mediterranean meals",
+                "LLM response should mention: Surprise homemade dinner",
+                "LLM response should mention: Attending diabetes education refresher",
+                "LLM response should mention: Planning active and social outings"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "When did I say I first saw the doctor for my diagnosis?",
+            "answer": "You said you met Dr. Linda Chen on September 10, 2023, for your initial diagnosis.",
+            "difficulty": "medium",
+            "question_type": "date_recall",
+            "conversation_reference": "Turn 1: Initial diagnosis timing mentioned",
+            "key_facts_tested": [
+                "date: September 10, 2023",
+                "event: initial diagnosis",
+                "person: Dr. Linda Chen"
+            ],
+            "source_chat_ids": [
+                16
+            ],
+            "rubric": [
+                "LLM response should mention: September 10, 2023"
+            ]
+        },
+        {
+            "question": "When did I talk with Dr. Chen about insulin options?",
+            "answer": "On April 10 at 2:30 PM.",
+            "difficulty": "easy",
+            "question_type": "context_date/time",
+            "conversation_reference": "Turn 1: I had a discussion with Dr. Chen on April 10 at 2:30 PM about insulin options...",
+            "key_facts_tested": [
+                "date of discussion",
+                "time of discussion"
+            ],
+            "source_chat_ids": [
+                108
+            ],
+            "rubric": [
+                "LLM response should mention: April 10 at 2:30 PM"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some common options for treating high blood pressure?",
+            "instruction_being_tested": "Always provide medication names and dosages when I ask about treatment options.",
+            "expected_compliance": "Response should include specific names of medications along with their dosages rather than general descriptions or alternative approaches.",
+            "compliance_indicators": [
+                "medication names listed",
+                "dosage amounts provided",
+                "specific treatment details"
+            ],
+            "non_compliance_signs": [
+                "only general advice given",
+                "no medication names mentioned",
+                "dosages omitted",
+                "vague treatment suggestions"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                198,
+                200
+            ],
+            "rubric": [
+                "LLM response should mention: specific names of medications",
+                "LLM response should mention: dosage amounts"
+            ]
+        },
+        {
+            "question": "What vaccines have I received so far?",
+            "instruction_being_tested": "Always specify exact vaccination dates when I ask about immunizations.",
+            "expected_compliance": "Response should include the precise dates of each vaccine administered rather than just naming the vaccines or giving general information.",
+            "compliance_indicators": [
+                "exact dates of each vaccine",
+                "specific vaccination timeline",
+                "clear date references for immunizations"
+            ],
+            "non_compliance_signs": [
+                "only vaccine names listed",
+                "no dates provided",
+                "general statements without timing details"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                802
+            ],
+            "rubric": [
+                "LLM response should mention: exact dates of each vaccine"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What was the result of my most recent blood pressure reading?",
+            "answer": "135/82 mmHg, showing a slight improvement.",
+            "difficulty": "easy",
+            "update_type": "measurement_update",
+            "tests_retention_of": "latest blood pressure reading value",
+            "conversation_references": [
+                "Risk & Safety Labels:Complication Prevention: Scheduled blood pressure check for April 25 at Walgreens on Main Street; last reading 138/85 mmHg.",
+                "Information Update: The blood pressure check scheduled for April 25 was completed early on April 23, showing a slight improvement to 135/82 mmHg."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier reading of 138/85 mmHg instead of the more recent 135/82 mmHg.",
+            "source_chat_ids": {
+                "original_info": [
+                    160
+                ],
+                "updated_info": [
+                    196
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 135/82 mmHg"
+            ]
+        },
+        {
+            "question": "What time is my insulin injection alarm set for in the evening?",
+            "answer": "9:15 PM",
+            "difficulty": "easy",
+            "update_type": "time_adjustment",
+            "tests_retention_of": "updated insulin injection alarm time",
+            "conversation_references": [
+                "The insulin injection alarm was adjusted to 9:15 PM starting June 6 to better fit evening routines.",
+                "The insulin injection alarm was adjusted to 9:15 PM starting June 6 to better fit evening routines."
+            ],
+            "potential_confusion": "LLM might incorrectly recall an earlier alarm time such as 9:00 PM or another previous setting",
+            "source_chat_ids": {
+                "original_info": [
+                    608
+                ],
+                "updated_info": [
+                    608
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 9:15 PM"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "What are the two different blood sugar goals I set across my sessions?",
+            "answer": "Reducing my HbA1c to below 7% and reducing my fasting blood sugar to 120 mg/dL.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_cross_session_facts",
+            "sessions_required": 2,
+            "conversation_references": [
+                "HbA1c reduction goal",
+                "Fasting blood sugar goal"
+            ],
+            "reasoning_steps": [
+                "Identify the blood sugar goal mentioned in the first session about HbA1c.",
+                "Identify the fasting blood sugar goal mentioned in the second session.",
+                "Compare and list both goals as the two different blood sugar targets."
+            ],
+            "source_chat_ids": [
+                32,
+                148
+            ],
+            "rubric": [
+                "LLM response should mention: HbA1c below 7%",
+                "LLM response should mention: fasting blood sugar to 120 mg/dL"
+            ]
+        },
+        {
+            "question": "Considering my monthly diabetes supplies cost and the out-of-pocket nutritionist session expense, how much do I spend monthly on these combined health-related costs?",
+            "answer": "I spend a total of $145 monthly on these combined health-related costs: $85 for diabetes supplies and $60 for the nutritionist session.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "chat_id: 42",
+                "chat_id: 116",
+                "chat_id: 117"
+            ],
+            "reasoning_steps": [
+                "Identify the monthly cost of diabetes supplies from the user in chat_id 42.",
+                "Determine the out-of-pocket cost for the nutritionist session from the user in chat_id 116.",
+                "Sum the monthly diabetes supplies cost and the nutritionist session out-of-pocket cost to find the total monthly health-related expenses."
+            ],
+            "source_chat_ids": [
+                42,
+                116,
+                117
+            ],
+            "rubric": [
+                "LLM response should mention: $85 for diabetes supplies",
+                "LLM response should mention: $60 for nutritionist session",
+                "LLM response should mention: total of $145 monthly"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "What time would you suggest I schedule my walk later today?",
+            "preference_being_tested": "I prefer scheduling exercise early evening, around 6:15 PM, to balance energy and social time with David.",
+            "expected_compliance": "Response should suggest a time close to early evening, around 6:15 PM, reflecting the user's stated preference for balancing exercise timing with energy and social interaction.",
+            "compliance_indicators": [
+                "recommends a time near 6:15 PM",
+                "acknowledges user's typical exercise timing",
+                "avoids suggesting times far from early evening"
+            ],
+            "non_compliance_signs": [
+                "suggests morning or late night times",
+                "ignores the early evening window",
+                "recommends times that conflict with social time"
+            ],
+            "difficulty": "medium",
+            "preference_type": "scheduling/time preference",
+            "source_chat_ids": [
+                56
+            ],
+            "rubric": [
+                "LLM response should mention: a time near 6:15 PM"
+            ]
+        },
+        {
+            "question": "I'm trying to decide on an exercise routine that fits well with my current schedule and physical needs. What would you suggest?",
+            "preference_being_tested": "I prefer aquatic therapy over additional yoga due to joint comfort and calorie burn efficiency",
+            "expected_compliance": "Response should recommend aquatic therapy or prioritize options that align with joint comfort and calorie burn efficiency, reflecting the user's preference without explicitly stating it",
+            "compliance_indicators": [
+                "recommends aquatic therapy or similar low-impact exercises",
+                "mentions joint comfort or calorie burn benefits without contradicting preference",
+                "avoids suggesting additional yoga as primary option"
+            ],
+            "non_compliance_signs": [
+                "recommends additional yoga without considering alternatives",
+                "ignores joint comfort or calorie burn considerations",
+                "suggests high-impact or less efficient calorie burn exercises"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity choice",
+            "source_chat_ids": [
+                248,
+                254
+            ],
+            "rubric": [
+                "LLM response should mention: aquatic therapy or similar low-impact exercises",
+                "LLM response should mention: joint comfort or calorie burn benefits"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of how I\u2019ve been managing my diabetes recently?",
+            "ideal_summary": "You have been managing your diabetes by monitoring your blood sugar levels, making dietary changes such as adopting a Mediterranean diet and reducing carbohydrates, and maintaining a regular exercise routine including walking and aquatic therapy. You have also been adhering to your medication regimen with Metformin and delaying insulin initiation while working closely with Dr. Chen. Additionally, you prepare for diabetes education seminars and use various resources to support your management plan.",
+            "difficulty": "easy",
+            "summarization_type": "simple_problem_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 12,
+            "key_elements_tested": [
+                "basic information combination",
+                "simple cross-session condensation",
+                "straightforward overview"
+            ],
+            "synthesis_required": "Combining basic details from multiple sessions into a clear, concise summary",
+            "source_chat_ids": [
+                12,
+                13,
+                32,
+                33,
+                34,
+                35,
+                38,
+                106,
+                107,
+                108,
+                312,
+                313
+            ],
+            "rubric": [
+                "LLM response should mention: You have been managing your diabetes by monitoring your blood sugar levels, making dietary changes such as adopting a Mediterranean diet and reducing carbohydrates, and maintaining a regular exercise routine including walking and aquatic therapy.",
+                "LLM response should mention: You have also been adhering to your medication regimen with Metformin and delaying insulin initiation while working closely with Dr. Chen.",
+                "LLM response should mention: Additionally, you prepare for diabetes education seminars and use various resources to support your management plan."
+            ]
+        },
+        {
+            "question": "Can you summarize how my relationships and support systems with my family and close friends have developed and influenced my health journey over time?",
+            "ideal_summary": "Over the course of our conversations, your relationships with family members like Vickie and Matthew, and close friends such as David, Jacqueline, and Brooke, have played a significant role in supporting your health journey. Initially, your parents helped with meal prep and grocery shopping, focusing on healthy choices, while you remained mindful of their well-being to avoid overexertion. David emerged as a key supporter, assisting with dietary changes like adopting a Mediterranean diet and attending diabetes education sessions with you, which strengthened your bond and motivated you to involve him more actively in your lifestyle changes, including exercise and cooking. You also navigated how to communicate your diabetes challenges to friends and family, using relatable analogies and personal stories to foster understanding without feeling burdensome. Additionally, you considered joining support groups and explored new activities like arthritis-friendly hiking and aquatic therapy, often encouraged by your social circle. Throughout, you expressed gratitude and sought ways to reciprocate support, highlighting a dynamic and evolving network of care that has positively influenced your management of chronic conditions and overall well-being.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_relationship",
+            "bullet_points_covered": 5,
+            "conversation_sessions": 20,
+            "key_elements_tested": [
+                "relationship development",
+                "support dynamics",
+                "health journey influence",
+                "communication strategies",
+                "reciprocal care"
+            ],
+            "synthesis_required": "Integrating multiple interpersonal interactions and their evolving impact on health management into a coherent narrative",
+            "source_chat_ids": [
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                118,
+                119,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                238,
+                239,
+                240,
+                241,
+                250,
+                251,
+                310,
+                311,
+                328,
+                329,
+                444,
+                445,
+                562,
+                563
+            ],
+            "rubric": [
+                "LLM response should mention: Relationships with family members like Vickie and Matthew, and close friends such as David, Jacqueline, and Brooke, have played a significant role in supporting your health journey.",
+                "LLM response should mention: David emerged as a key supporter, assisting with dietary changes like adopting a Mediterranean diet and attending diabetes education sessions with you, which strengthened your bond and motivated you to involve him more actively in your lifestyle changes, including exercise and cooking.",
+                "LLM response should mention: You navigated how to communicate your diabetes challenges to friends and family, using relatable analogies and personal stories to foster understanding without feeling burdensome.",
+                "LLM response should mention: You considered joining support groups and explored new activities like arthritis-friendly hiking and aquatic therapy, often encouraged by your social circle.",
+                "LLM response should mention: You expressed gratitude and sought ways to reciprocate support, highlighting a dynamic and evolving network of care that has positively influenced your management of chronic conditions and overall well-being."
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "Did I hear about the seminar location change before or after the original seminar date I had planned for?",
+            "answer": "I heard about the seminar location change after the original seminar date was set for March 22.",
+            "difficulty": "easy",
+            "temporal_type": "simple_sequence",
+            "time_points": [
+                "Original seminar date scheduled for March 22",
+                "Heard about seminar location change (relative to original date)"
+            ],
+            "conversation_references": [
+                "Session 1: Seminar scheduled on March 22",
+                "Session 3: Seminar location change announcement"
+            ],
+            "calculation_required": "Determine which event happened first based on explicit date and relative timing",
+            "source_chat_ids": {
+                "first_event": [
+                    14
+                ],
+                "second_event": [
+                    100
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: after the original seminar date was set for March 22"
+            ]
+        },
+        {
+            "question": "How many days are there between when I got my latest lab results and my goal to reduce my HbA1c below 7%?",
+            "answer": "There are 105 days between my latest lab results on May 2, 2024, and my goal date of August 15, 2024, to reduce my HbA1c below 7%.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 2, 2024: latest lab results",
+                "August 15, 2024: HbA1c goal date"
+            ],
+            "conversation_references": [
+                "Session 2: Lab results on May 2",
+                "Session 1: Goal set for August 15"
+            ],
+            "calculation_required": "August 15, 2024 - May 2, 2024 = 105 days",
+            "source_chat_ids": {
+                "first_event": [
+                    246
+                ],
+                "second_event": [
+                    32
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 105 days",
+                "LLM response should state: from May 2, 2024 till August 15, 2024"
+            ]
+        }
+    ]
+}

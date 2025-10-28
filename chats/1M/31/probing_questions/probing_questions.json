@@ -1,0 +1,736 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide details about the emergency evacuation routes I reviewed for the ryokan and capsule hotel?",
+            "ideal_response": "Based on the provided chat, there is no information related to the details of the emergency evacuation routes for the accommodations.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Evacuation routes are mentioned but no specific details or maps are provided.",
+            "plan_reference": "Batch 2, Bullet 9 mentions reviewing evacuation routes but no details.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the details of the emergency evacuation routes for the accommodations"
+            ]
+        },
+        {
+            "question": "Can you share the detailed itinerary for my day trip to Nara on May 17?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed itinerary for the Nara day trip.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The trip is added but no itinerary or schedule details are provided.",
+            "plan_reference": "Batch 2, Bullet 2 mentions Nara trip but no itinerary.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed itinerary for the Nara day trip"
+            ]
+        }
+        
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I used the Hyperdia app to check train schedules during my trip?",
+            "ideal_answer": "I noticed you've mentioned contradictory information about this. You said you have never used the Hyperdia app for train schedules during this trip, but you also mentioned having it installed and confirmed its offline mode works for your 14-day trip. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Usage of Hyperdia app for train schedules",
+            "conversation_references": [
+                "Session 406: Never used Hyperdia app",
+                "Sessions 232, 244: Installed and using Hyperdia app"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    406
+                ],
+                "second_statement": [
+                    232,
+                    244
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never used the Hyperdia app for train schedules during this trip",
+                "LLM response should mention: you also mentioned having it installed and confirmed its offline mode works",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I completed any Japanese language lessons?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never completed any Japanese language lessons, but you also mentioned completing a final Japanese lesson with a high score. Which statement is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "completion of Japanese language lessons",
+            "conversation_references": [
+                "Session 798: Never completed lessons",
+                "Sessions 606, 612, 616: Completed lessons and scored 92%"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    798
+                ],
+                "second_statement": [
+                    606,
+                    612,
+                    616
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never completed any Japanese language lessons",
+                "LLM response should mention: you also mentioned completing a final Japanese lesson with a high score",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different cultural experiences and related preparations develop throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your focus on cultural experiences and related preparations developed in this sequence: 1) Planning to attend traditional festivals and prioritizing them, 2) Discussing specific dining experiences including restaurant recommendations and meal costs, 3) Exploring local street food options and budget balancing, 4) Preparing for group events like picnics with etiquette and activity suggestions, 5) Following up on social connections made during cultural events, 6) Coordinating participation in hands-on cultural activities with friends and sharing costs, 7) Receiving and planning around travel tips for significant cultural sites, 8) Considering guided tours and their significance, 9) Evaluating accommodation choices and social media sharing strategies, 10) Preparing for cultural presentations and club involvement.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "42, 50, 54",
+                "250, 256, 264",
+                "444, 450, 456",
+                "640, 652, 656",
+                "844, 848, 852, 854, 856",
+                "1046, 1052, 1058",
+                "1234, 1240, 1250",
+                "1430, 1436, 1440",
+                "1594, 1618, 1624, 1628, 1636, 1638",
+                "1810, 1820, 1822"
+            ],
+            "ordering_tested": [
+                "1st: Festival planning",
+                "2nd: Restaurant and meal cost discussions",
+                "3rd: Street food and budget balancing",
+                "4th: Group event preparations and etiquette",
+                "5th: Social follow-ups from cultural events",
+                "6th: Hands-on cultural activities and cost sharing",
+                "7th: Travel tips for cultural sites",
+                "8th: Guided tours and their significance",
+                "9th: Accommodation and social media sharing",
+                "10th: Cultural presentations and club involvement"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves multiple cultural experience aspects",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse topics"
+            ],
+            "source_chat_ids": [
+                42,
+                50,
+                54,
+                250,
+                256,
+                264,
+                444,
+                450,
+                456,
+                640,
+                652,
+                656,
+                844,
+                848,
+                852,
+                854,
+                856,
+                1046,
+                1052,
+                1058,
+                1234,
+                1240,
+                1250,
+                1430,
+                1436,
+                1440,
+                1594,
+                1618,
+                1624,
+                1628,
+                1636,
+                1638,
+                1810,
+                1820,
+                1822
+            ],
+            "rubric": [
+                "Festival planning",
+                "Restaurant and meal cost discussions",
+                "Street food and budget balancing",
+                "Group event preparations and etiquette",
+                "Social follow-ups from cultural events",
+                "Hands-on cultural activities and cost sharing",
+                "Travel tips for cultural sites",
+                "Guided tours and their significance",
+                "Accommodation and social media sharing",
+                "Cultural presentations and club involvement"
+            ]
+        },
+        {
+            "question": "How did my focus on interactions with key people evolve throughout our conversations in order? Mention ONLY and ONLY ten items.",
+            "answer": "Your mentions of interactions with key people progressed as follows: 1) Expressing gratitude and responding to thoughtful gestures, 2) Considering appropriate reciprocation and gift ideas, 3) Managing communication frequency and setting boundaries, 4) Addressing concerns and reassuring about your wellbeing, 5) Balancing social invitations with personal preferences and priorities, 6) Handling encouragement and motivational messages, 7) Responding to safety concerns and practical advice, 8) Navigating differing activity preferences with travel companions, 9) Managing time differences and scheduling communications, 10) Reflecting on praise and encouragement for your personal growth.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 10,
+            "conversation_references": [
+                "306, 314",
+                "502, 508, 518",
+                "698, 704, 710, 712",
+                "900, 906, 912",
+                "1100, 1104, 1108, 1112",
+                "1296, 1304",
+                "1488, 1494, 1500",
+                "1682, 1686, 1688, 1690, 1694",
+                "1880, 1886, 1892"
+            ],
+            "ordering_tested": [
+                "1st: Gratitude and thanks",
+                "2nd: Gift considerations",
+                "3rd: Communication management and boundaries",
+                "4th: Reassurance and wellbeing",
+                "5th: Balancing social invitations",
+                "6th: Encouragement and motivation",
+                "7th: Safety concerns and advice",
+                "8th: Activity preference negotiations",
+                "9th: Scheduling and time differences",
+                "10th: Reflection on praise and growth"
+            ],
+            "complexity_factors": [
+                "requires development tracking",
+                "spans multiple conversation sessions",
+                "involves nuanced interpersonal dynamics",
+                "requires sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse mentions"
+            ],
+            "source_chat_ids": [
+                306,
+                314,
+                502,
+                508,
+                518,
+                698,
+                704,
+                710,
+                712,
+                900,
+                906,
+                912,
+                1100,
+                1104,
+                1108,
+                1112,
+                1296,
+                1304,
+                1488,
+                1494,
+                1500,
+                1682,
+                1686,
+                1688,
+                1690,
+                1694,
+                1880,
+                1886,
+                1892
+            ],
+            "rubric": [
+                "Gratitude and thanks",
+                "Gift considerations",
+                "Communication management and boundaries",
+                "Reassurance and wellbeing",
+                "Balancing social invitations",
+                "Encouragement and motivation",
+                "Safety concerns and advice",
+                "Activity preference negotiations",
+                "Scheduling and time differences",
+                "Reflection on praise and growth"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What budget did I agree on per meal with Jason for trying the dish he suggested?",
+            "answer": "You agreed on a budget of 1,200 JPY per meal.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER mentions agreeing on 1,200 JPY per meal for the dish Jason suggested.",
+            "key_facts_tested": [
+                "budget per meal",
+                "agreement with Jason",
+                "meal cost"
+            ],
+            "source_chat_ids": [
+                560
+            ],
+            "rubric": [
+                "LLM response should state: 1,200 JPY"
+            ]
+        },
+        {
+            "question": "How did I decide on my main event for the day, and what alternative did I consider but ultimately set aside?",
+            "answer": "You decided to attend the traditional festival parade starting at a temple area in the morning, choosing it over visiting a nearby landmark known for its panoramic city views.",
+            "difficulty": "hard",
+            "question_type": "Discovery and Learning Process",
+            "conversation_reference": "Multiple turns: User's initial statement about attending the parade, assistant's itinerary and activity suggestions including the alternative visit to the landmark",
+            "key_facts_tested": [
+                "decision to attend the parade at 10 AM",
+                "rejection of visiting the nearby tall observation tower",
+                "timing and location of the parade",
+                "alternative activity near the parade area"
+            ],
+            "extraction_challenge": "LLM must integrate the user's stated plan with the assistant's suggested alternatives and itinerary details to identify the chosen event and the rejected option without direct naming",
+            "source_chat_ids": [
+                464,
+                471,
+                475
+            ],
+            "rubric": [
+                "LLM response should state: You decided to attend the traditional festival parade starting at a temple area in the morning",
+                "LLM response should state: chose it over visiting a nearby landmark known for its panoramic city views"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How much local tea ceremony on May 15 cost in Japanese yen?",
+            "instruction_being_tested": "Always include currency conversions to USD when I ask about prices in JPY.",
+            "expected_compliance": "Response should include the price in Japanese yen along with its equivalent value in US dollars.",
+            "compliance_indicators": [
+                "price stated in JPY",
+                "equivalent amount in USD provided",
+                "both currencies mentioned"
+            ],
+            "non_compliance_signs": [
+                "only price in JPY given",
+                "no mention of USD equivalent",
+                "conversion omitted"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                404
+            ],
+            "rubric": [
+                "LLM response should contain: price stated in JPY",
+                "LLM response should contain: equivalent amount in USD provided",
+                "LLM response should contain: both currencies mentioned"
+            ]
+        },
+        {
+            "question": "What should I keep in mind to stay safe in case something goes wrong?",
+            "instruction_being_tested": "Always provide emergency contact numbers when I ask about safety precautions.",
+            "expected_compliance": "Response should include emergency contact numbers along with any safety advice.",
+            "compliance_indicators": [
+                "emergency phone numbers",
+                "contact details for urgent help",
+                "specific numbers to call in emergencies"
+            ],
+            "non_compliance_signs": [
+                "no contact numbers provided",
+                "only general safety tips",
+                "vague or incomplete information without numbers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                1386
+            ],
+            "rubric": [
+                "LLM response should contain: emergency phone numbers",
+                "LLM response should contain: contact details for urgent help"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many kilometers do I walk each day to explore and stay active during my trip?",
+            "answer": "6 kilometers",
+            "difficulty": "easy",
+            "update_type": "distance_increase",
+            "tests_retention_of": "updated daily walking distance from 5 km to 6 km",
+            "conversation_references": [
+                "Health & Wellness: Physical Activity: Scheduled daily 5 km walks to explore cities and maintain fitness during trip.",
+                "Information Update: The daily walking distance was increased to 6 km to better explore festival areas."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 5 km daily walking distance instead of the updated 6 km",
+            "source_chat_ids": {
+                "original_info": [
+                    724,
+                    726,
+                    730,
+                    734
+                ],
+                "updated_info": [
+                    794
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 6 kilometers"
+            ]
+        },
+        {
+            "question": "How many photos did I capture during the Gion Matsuri photography session?",
+            "answer": "180 photos",
+            "difficulty": "easy",
+            "update_type": "quantity_increase",
+            "tests_retention_of": "updated number of photos taken at Gion Matsuri",
+            "conversation_references": [
+                "Creative & Artistic: Travel Photography: Captured 150 photos at Gion Matsuri, focusing on traditional costumes and floats.",
+                "Information Update: The number of photos taken at Gion Matsuri increased to 180 after an extended parade route."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 150 photos instead of the updated 180 photos",
+            "source_chat_ids": {
+                "original_info": [
+                    936,
+                    940,
+                    946,
+                    950
+                ],
+                "updated_info": [
+                    988
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 180 photos"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many nights in total am I planning to stay in Kyoto and Tokyo combined based on my accommodation choices?",
+            "answer": "You are planning to stay 3 nights in Kyoto and 1 night in Tokyo, totaling 4 nights.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 62 (Kyoto ryokan stay)",
+                "chat_id: 662 (Tokyo business hotel stay)"
+            ],
+            "reasoning_steps": [
+                "Identify the number of nights planned for the ryokan stay in Kyoto (3 nights).",
+                "Identify the number of nights planned for the business hotel stay in Tokyo (1 night).",
+                "Add the two numbers to find the total nights planned across both cities."
+            ],
+            "source_chat_ids": [
+                62,
+                662
+            ],
+            "rubric": [
+                "LLM response should state: 4 nights",
+                "LLM response should state: 3 nights in Kyoto",
+                "LLM response should state: 1 night in Tokyo"
+            ]
+        },
+        {
+            "question": "How did my choices about festivals, transportation, and accommodations collectively impact my budget and cultural experience during my Japan trip?",
+            "answer": "You prioritized attending three major traditional festivals (Gion Matsuri, Tanabata, Nebuta Matsuri) which shaped your itinerary and travel routes. Choosing the night bus over the Shinkansen saved you $80 but increased travel time. You booked cultural shows like Gion Corner and planned around festival dates, balancing cost savings with immersive experiences. These decisions optimized your budget by reducing transport costs and accommodation pressures during festivals, while maximizing cultural engagement through festival attendance and traditional performances.",
+            "difficulty": "hard",
+            "reasoning_type": "strategic_synthesis",
+            "sessions_required": 6,
+            "conversation_references": [
+                "Festival planning and itinerary (chat_id 42, 43, 50, 51, 54, 55)",
+                "Gion Corner show details and etiquette (chat_id 234, 235, 240, 241, 246, 247)",
+                "Sanja Matsuri parade planning and activities (chat_id 464, 465, 470, 471, 474, 475)",
+                "Decision evaluation between Sanja Matsuri and Tokyo Tower (chat_id 866, 867, 872, 873, 874)",
+                "Night bus vs Shinkansen travel choice and savings (chat_id 1254, 1255, 1260, 1261, 1268, 1269)"
+            ],
+            "reasoning_steps": [
+                "Identify the three main festivals the user chose to attend and how these dictated the travel itinerary and accommodation needs.",
+                "Analyze the user's choice of night bus over Shinkansen for long-distance travel, quantifying the cost savings and trade-offs in travel time and comfort.",
+                "Consider the booking of cultural shows like Gion Corner and how this added to cultural immersion while fitting into the festival schedule.",
+                "Evaluate the user's prioritization of cultural experiences (festivals, shows) over sightseeing landmarks (Tokyo Tower), reflecting on budget and experiential trade-offs.",
+                "Synthesize how transportation choices, festival attendance, and cultural activities collectively optimized the user's budget by saving on transport and accommodation during peak festival times.",
+                "Conclude how these combined decisions enhanced the cultural richness of the trip while maintaining financial prudence."
+            ],
+            "source_chat_ids": [
+                42,
+                43,
+                50,
+                51,
+                54,
+                55,
+                234,
+                235,
+                240,
+                241,
+                246,
+                247,
+                464,
+                465,
+                470,
+                471,
+                474,
+                475,
+                866,
+                867,
+                872,
+                873,
+                874,
+                1254,
+                1255,
+                1260,
+                1261,
+                1268,
+                1269
+            ],
+            "rubric": [
+                "LLM response should state: You prioritized attending three major traditional festivals which shaped your itinerary and travel routes",
+                "LLM response should state: Choosing the night bus over the Shinkansen saved you $80 but increased travel time",
+                "LLM response should state: You booked cultural shows like Gion Corner and planned around festival dates, balancing cost savings with immersive experiences",
+                "LLM response should state: These decisions optimized your budget by reducing transport costs and accommodation pressures during festivals, while maximizing cultural engagement through festival attendance"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you suggest some ways I can explore historical sites in Japan?",
+            "preference_being_tested": "I prefer guided tours for historical sites to deepen understanding despite higher costs",
+            "expected_compliance": "Response should prioritize recommending guided tours or options that involve a guide to enhance understanding, rather than only self-guided or unguided visits",
+            "compliance_indicators": [
+                "mentions guided tours as primary option",
+                "highlights availability of guides at sites",
+                "focuses on experiences that include expert explanations",
+                "does not solely suggest self-guided visits"
+            ],
+            "non_compliance_signs": [
+                "only suggests self-guided tours or independent visits",
+                "ignores guided tour options",
+                "focuses on cost-saving without mentioning guided experiences"
+            ],
+            "difficulty": "medium",
+            "preference_type": "experience_format",
+            "source_chat_ids": [
+                480,
+                492,
+                494
+            ],
+            "rubric": [
+                "LLM response should contain: mentions guided tours as primary option",
+                "LLM response should contain: highlights availability of guides at sites",
+                "LLM response should contain: does not solely suggest self-guided visits"
+            ]
+        },
+        {
+            "question": "I'm planning my itinerary and want to include some activities that really help me connect with the local culture. What options would you suggest?",
+            "preference_being_tested": "I prioritize cultural workshops over tourist attractions to deepen immersion.",
+            "expected_compliance": "Response should focus on recommending cultural workshops or similar immersive activities rather than popular tourist attractions, reflecting the user's preference for deeper cultural engagement.",
+            "compliance_indicators": [
+                "recommends cultural workshops or hands-on cultural experiences",
+                "avoids suggesting mainstream tourist sites as primary options",
+                "emphasizes activities that foster cultural connection"
+            ],
+            "non_compliance_signs": [
+                "only suggests popular tourist attractions",
+                "ignores cultural workshop options",
+                "focuses on sightseeing rather than immersive experiences"
+            ],
+            "difficulty": "medium",
+            "preference_type": "activity prioritization",
+            "source_chat_ids": [
+                678,
+                684,
+                694
+            ],
+            "rubric": [
+                "LLM response should contain: recommends cultural workshops or hands-on cultural experiences",
+                "LLM response should contain: avoids suggesting mainstream tourist sites as primary options"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a detailed and comprehensive summary that captures all the key aspects and developments related to my trip planning, language learning, cultural experiences, and safety preparations in Japan, integrating everything from the initial festival selections to my language proficiency progress and practical travel advice?",
+            "ideal_summary": "The user planned a 21-day trip to Japan centered around attending traditional festivals such as Gion Matsuri in Kyoto, Nebuta Matsuri in Aomori, and the Star Festival (Tanabata) in Sendai, with a carefully structured itinerary balancing festival attendance and cultural exploration across Tokyo, Kyoto, Sendai, and Aomori. Practical travel advice emphasized early accommodation booking, efficient use of the Shinkansen, and preparation for large crowds. Concurrently, the user pursued Japanese language learning goals, focusing on acquiring essential phrases for dining, transportation, and polite speech forms, progressing from basic to intermediate levels with strategies including daily practice, flashcards, language exchange, and immersion through media. The user also practiced regional dialects such as Hiroshima and Osaka dialects, integrating these into real-life conversations and cultural contexts like Hanami picnics and street food tours, while receiving guidance on avoiding common linguistic and cultural mistakes. Safety and risk management were addressed by balancing language and cultural immersion with emergency preparedness, including memorizing emergency phrases and procedures. The user\u2019s confidence grew through practical application, such as holding conversations with locals and using dialects, supported by continuous feedback and structured learning plans. Additionally, the user evaluated resources like advanced language courses and cultural tours (e.g., Dotonbori street food tour), weighing costs against benefits for immersive experiences. Finally, the user prepared for post-trip reflection and debriefing, focusing on cultural insights, language achievements, health and safety adherence, budgeting, and lessons learned, aiming for a holistic and enriching travel experience that integrates language proficiency, cultural engagement, and personal growth.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 10,
+            "conversation_sessions": 12,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                42,
+                43,
+                50,
+                51,
+                54,
+                55,
+                252,
+                253,
+                258,
+                259,
+                260,
+                261,
+                446,
+                447,
+                452,
+                453,
+                458,
+                459,
+                642,
+                643,
+                648,
+                649,
+                650,
+                654,
+                655,
+                840,
+                841,
+                846,
+                847,
+                850,
+                851,
+                858,
+                859,
+                1044,
+                1045,
+                1050,
+                1051,
+                1056,
+                1057,
+                1236,
+                1237,
+                1242,
+                1243,
+                1246,
+                1247,
+                1428,
+                1429,
+                1434,
+                1435,
+                1442,
+                1443,
+                1444,
+                1445,
+                1596,
+                1597,
+                1620,
+                1621,
+                1626,
+                1627,
+                1630,
+                1631,
+                1812,
+                1813,
+                1816,
+                1817,
+                1818,
+                1819,
+                1824,
+                1825
+            ],
+            "rubric": [
+                "LLM response should contain: you planned a 21-day trip to Japan centered around attending traditional festivals",
+                "LLM response should contain: you visited Gion Matsuri in Kyoto, Nebuta Matsuri in Aomori and the Star Festival (Tanabata) in Sendai",
+                "LLM response should contain: structured itinerary balancing festival attendance and cultural exploration across Tokyo, Kyoto, Sendai, and Aomori",
+                "LLM response should contain: Practical travel advice emphasized early accommodation booking, efficient use of the Shinkansen, and preparation for large crowds",
+                "LLM response should contain: you pursued Japanese language learning goals, focusing on acquiring essential phrases for dining, transportation, and polite speech forms",
+                "LLM response should contain: you Japanese progressed from basic to intermediate levels with strategies including daily practice, flashcards, language exchange, and immersion through media",
+                "LLM response should contain: practiced regional dialects such as Hiroshima and Osaka dialects, integrating these into real-life conversations and cultural contexts like Hanami picnics and street food tours",
+                "LLM response should contain: Safety and risk management were addressed by balancing language and cultural immersion with emergency preparedness, including memorizing emergency phrases and procedures",
+                "LLM response should contain: your confidence grew through practical application, such as holding conversations with locals and using dialects",
+                "LLM response should contain: you evaluated resources like advanced language courses and cultural tours weighing costs against benefits for immersive experiences",
+                "LLM response should contain: you prepared for post-trip reflection and debriefing, focusing on cultural insights, language achievements, health and safety adherence, budgeting, and lessons learned, aiming for a holistic and enriching travel experience"
+            ]
+        },
+        {
+            "question": "Can you give me a brief summary of how I planned and used the Japan Rail Pass during my trip?",
+            "ideal_summary": "You planned to use the 14-day Japan Rail Pass to travel efficiently across key cities like Tokyo, Kyoto, Osaka, Hiroshima, and Fukuoka. Careful itinerary planning was emphasized to maximize the pass's value, including using the Shinkansen for intercity travel and local JR lines for side trips. You balanced a structured schedule with flexibility to enjoy cultural sites and avoid peak travel times, ensuring a cost-effective and memorable trip.",
+            "difficulty": "easy",
+            "summarization_type": "basic_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 66,
+            "key_elements_tested": [
+                "basic itinerary planning",
+                "pass usage strategy",
+                "travel tips and flexibility"
+            ],
+            "synthesis_required": "Combining simple travel planning details into a coherent overview",
+            "source_chat_ids": [
+                66,
+                67,
+                70,
+                71,
+                78,
+                79
+            ],
+            "rubric": [
+                "LLM response should contain: You planned to use the 14-day Japan Rail Pass to travel efficiently across key cities like Tokyo, Kyoto, Osaka, Hiroshima, and Fukuoka",
+                "LLM response should contain: Careful itinerary planning was emphasized to maximize the pass's value, including using the Shinkansen for intercity travel and local JR lines for side trips",
+                "LLM response should contain: You balanced a structured schedule with flexibility to enjoy cultural sites and avoid peak travel times, ensuring a cost-effective and memorable trip"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How much time is there between when I attend the Sanja Matsuri parade and when my sushi-making class starts?",
+            "answer": "There is one day between attending the Sanja Matsuri parade on May 19 and the sushi-making class on May 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 19: Sanja Matsuri parade at 10 AM",
+                "May 20: sushi-making class"
+            ],
+            "conversation_references": [
+                "Session 1: Sanja Matsuri parade planning (chat_id 610)",
+                "Session 2: Sushi-making class details (chat_ids 626, 994, 1004)"
+            ],
+            "calculation_required": "May 20 - May 19 = 1 day",
+            "source_chat_ids": {
+                "first_event": [
+                    610
+                ],
+                "second_event": [
+                    626,
+                    994,
+                    1004
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 1 day",
+                "LLM response should state: from May 19 till May 20"
+            ]
+        },
+        {
+            "question": "How many days are there between the tea ceremony Denise invited me to and the Dotonbori street food tour she recommended?",
+            "answer": "There are 13 days between the tea ceremony on May 15 and the Dotonbori street food tour on May 28.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "May 15: tea ceremony",
+                "May 28: Dotonbori street food tour"
+            ],
+            "conversation_references": [
+                "Sessions about the tea ceremony (chat_ids 382, 390, 392, 396)",
+                "Sessions about the Dotonbori tour (chat_ids 1430, 1436, 1440)"
+            ],
+            "calculation_required": "May 28 - May 15 = 13 days",
+            "source_chat_ids": {
+                "first_event": [
+                    382,
+                    390,
+                    392,
+                    396
+                ],
+                "second_event": [
+                    1430,
+                    1436,
+                    1440
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 13 day",
+                "LLM response should state: from May 15 till May 28"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+BATCH 1 PLAN  
+• **Time Anchor:** March 15, 2024  
+• **Personal Introduction:** I’m Craig, a hands-on developer with a practical mindset, eager to build a personal budget tracker using Python and Flask.  
+• **Project Initialization:** Starting Flask 2.3.1 project on Python 3.11, SQLite 3.39, targeting local dev on port 5000.  
+• **Project Management & Workflow Labels:Project Planning:** Defined MVP scope: income/expense tracking, user login, basic analytics by April 15 deadline.  
+• **Framework & Technology Labels:Flask Development:** Set up virtualenv with Flask 2.3.1, Jinja2 templating, and Bootstrap 5.3 for responsive UI.  
+• **Architecture & Design Labels:System Design:** Chose monolithic Flask app with MVC pattern, SQLite for lightweight local DB, single-user focus initially.  
+• **Database & Data Management Labels:Database Design:** Designed schema with tables: users(id, username, password_hash), transactions(id, user_id, type, amount, date).  
+• **Security & Compliance Labels:Authentication:** Planning basic password hashing with Werkzeug.security, no OAuth for MVP to reduce complexity.  
+• **User Experience & Interface Labels:UI/UX Design:** Initial wireframe uses Bootstrap grid, simple forms for transaction input, targeting 320ms page load on dev machine.  
+• **Technical Problem-Solving Labels:Debugging Techniques:** Anticipate common Flask errors like “TemplateNotFound” and “OperationalError: no such table” during setup.  
+• **Learning & Knowledge Labels:Flask Framework:** Reviewing Flask routing, request handling, and session management tutorials dated Feb 2024.  
+• **Implementation & Development Labels:Feature Development:** Implemented basic homepage route with Flask, returning static HTML, tested response time ~150ms.  
+• **Technical Problem-Solving Labels:Error Handling:** Added Flask errorhandler for 404 and 500 errors with custom JSON responses for API endpoints.  
+• **Project Management & Workflow Labels:Sprint Planning:** Scheduled two-week sprints; first sprint ends March 29, focusing on user registration and login.  
+• **Architecture & Design Labels:Database Schema:** Decided on SQLite schema version 1.0 with migrations planned using Flask-Migrate 3.1.0.  
+• **Preference Statement:** I prefer simple, minimal dependencies to keep the app lightweight and easy to maintain.  
+• **Framework & Technology Labels:Python Programming:** Using Python 3.11.2 for improved async support and typing features in backend code.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Targeting under 250ms API response for transaction CRUD endpoints in dev environment.  
+• **Project Management & Workflow Labels:Task Estimation:** Estimated 12 hours to implement user registration with password hashing and validation.  
+• **Learning & Knowledge Labels:Database Management:** Studying SQLite query optimization, focusing on indexing ‘date’ and ‘user_id’ fields for faster lookups.  
+• **Implementation & Development Labels:Code Implementation Requests:** “I need to implement user registration with hashed passwords and session login.”  
+• **Architecture & Design Labels:Component Architecture:** Decided to modularize app into blueprints: auth, transactions, analytics for better maintainability.  
+• **Technical Problem-Solving Labels:Troubleshooting Strategies:** Planning to use Flask debug mode and Werkzeug debugger for rapid error diagnosis during development.  
+• **Information Update:** The first sprint now targets completion by March 31, allowing two extra days for final testing and bug fixes.  
+• **User Instruction:** Always format all code snippets with syntax highlighting when I ask about implementation details.  
+• **Logical Contradiction:** I have never written any Flask routes or handled HTTP requests in this project.  
+
+BATCH 2 PLAN  
+• **Time Anchor:** April 5, 2024  
+• **Personal Introduction:** I’ve completed the user registration and login modules, now focusing on transaction CRUD and analytics integration.  
+• **Implementation & Development Labels:Feature Development:** Implemented transaction CRUD in transactions.py with RESTful routes; tested POST /transactions with 201 status.  
+• **Debugging & Troubleshooting Labels:Error Diagnosis:** Encountered “sqlite3.IntegrityError: UNIQUE constraint failed: transactions.id” on duplicate inserts, fixed with UUID keys.  
+• **Framework & Technology Labels:Flask Development:** Integrated Flask-Login v0.6.2 for session management, replacing manual session handling.  
+• **Database & Data Management Labels:Query Optimization:** Added indexes on transactions.date and transactions.type, reducing query time from 450ms to 120ms.  
+• **User Experience & Interface Labels:User Interface Development:** Created responsive transaction input form with client-side validation using Bootstrap 5.3 and vanilla JS.  
+• **Technical Problem-Solving Labels:Debugging Techniques:** Debugged “TypeError: 'NoneType' object is not iterable” in analytics.py line 58 during monthly summary calculation.  
+• **Learning & Knowledge Labels:Web Development Fundamentals:** Studied Chart.js v4.3.0 integration for rendering expense pie charts on dashboard.  
+• **Implementation & Development Labels:Algorithm Implementation:** Developed function to calculate monthly income vs expenses, tested with 100 sample transactions.  
+• **Technical Problem-Solving Labels:Performance Bottleneck Identification:** Identified slow dashboard load due to unoptimized SQL joins; refactored queries to use subqueries.  
+• **Architecture & Design Labels:API Design:** Designed REST API endpoints for transactions: GET /transactions, POST /transactions, PUT /transactions/{id}, DELETE /transactions/{id}.  
+• **Security & Compliance Labels:Authorization:** Added role-based access control stub for future multi-user support; currently all users have ‘user’ role.  
+• **Project Management & Workflow Labels:Feature Implementation:** Completed sprint 1 on March 29 with user auth and basic transaction CRUD; sprint 2 targets analytics by April 19.  
+• **Technical Problem-Solving Labels:Error Handling:** Added try-except blocks around DB calls to catch OperationalError and return HTTP 500 with error logs.  
+• **Framework & Technology Labels:JavaScript:** Used Chart.js 4.3.0 for frontend charts, configured with 60fps animation and tooltips enabled.  
+• **Preference Statement:** I prefer server-side rendering for initial pages but use JS charts for dynamic analytics to balance performance and UX.  
+• **Testing & Quality Assurance Labels:Unit Testing:** Wrote pytest tests for auth.py covering 85% of functions, including password hashing and login validation.  
+• **Debugging & Troubleshooting Labels:Log Analysis:** Configured Flask logging to output to budget_tracker.log with DEBUG level, capturing stack traces for all exceptions.  
+• **Implementation & Development Labels:Bug Fixing:** Fixed “KeyError: 'amount'” in transaction POST handler by adding JSON schema validation with Marshmallow 3.19.0.  
+• **Project Management & Workflow Labels:Code Review:** Requested code review on GitHub pull request #12 for transaction CRUD and analytics integration.  
+• **Architecture & Design Labels:Component Architecture:** Refactored analytics module into separate blueprint, improving code separation and reducing main.py size by 20%.  
+• **Technical Problem-Solving Labels:Performance Optimization:** Reduced dashboard API response time from 800ms to 300ms by optimizing SQL queries and caching results for 60 seconds.  
+• **Database & Data Management Labels:Data Modeling:** Updated transactions table schema to include category VARCHAR(50) for better expense classification.  
+• **Information Update:** The dashboard API response time has recently improved further, now averaging around 250ms after additional caching tweaks.  
+• **User Instruction:** Always include version numbers when I ask about software dependencies or libraries used.  
+• **Logical Contradiction:** I have never integrated Flask-Login or managed user sessions in this project.  
+
+BATCH 3 PLAN  
+• **Time Anchor:** April 25, 2024  
+• **Personal Introduction:** I’m finalizing deployment and improving UI/UX based on user feedback, plus adding security hardening before public launch.  
+• **DevOps & Deployment Labels:Deployment Strategies:** Deployed app on Render.com free tier, using Gunicorn 20.1.0 with 3 workers, listening on port 10000.  
+• **Testing & Quality Assurance Labels:Integration Testing:** Completed integration tests covering user auth, transaction CRUD, and analytics endpoints with 95% pass rate.  
+• **Security & Compliance Labels:Encryption:** Enabled HTTPS with Let’s Encrypt SSL cert, configured Flask-Talisman 1.0.0 for security headers.  
+• **User Experience & Interface Labels:Responsive Design:** Improved mobile responsiveness, achieving 90+ Lighthouse score on Chrome DevTools for performance and accessibility.  
+• **Technical Problem-Solving Labels:Performance Bottleneck Identification:** Detected 500ms delay on login due to bcrypt hashing; switched to Argon2 with Flask-Argon2 v0.3.0, reduced to 250ms.  
+• **Framework & Technology Labels:Python Programming:** Upgraded dependencies to latest stable: Flask 2.3.1, SQLAlchemy 2.0.19, Chart.js 4.3.0.  
+• **Project Management & Workflow Labels:Deployment Preparation:** Finalized environment variables for production: DATABASE_URL, SECRET_KEY, FLASK_ENV=production.  
+• **Debugging & Troubleshooting Labels:Error Diagnosis:** Fixed “CSRF token missing or incorrect” error in forms by integrating Flask-WTF 1.1.1 with CSRF protection enabled.  
+• **Code Quality & Standards Labels:Code Review Practices:** Conducted peer review focusing on PEP8 compliance and added pre-commit hooks with flake8 6.0.0 and black 23.3.0.  
+• **Implementation & Development Labels:Code Optimization:** Refactored transaction query functions to use SQLAlchemy ORM eager loading, reducing N+1 query problem by 70%.  
+• **DevOps & Deployment Labels:Version Control:** Tagged release v1.0.0 on April 20, pushed to GitHub repo with 150 commits and 12 branches merged.  
+• **Security & Compliance Labels:Authentication:** Added account lockout after 5 failed login attempts, implemented with Redis 7.0 for rate limiting.  
+• **User Experience & Interface Labels:UI/UX Design:** Redesigned dashboard with collapsible sidebar and dark mode toggle, improving user engagement by 15% in beta tests.  
+• **Testing & Quality Assurance Labels:Test-Driven Development:** Added tests for new security features, achieving 90% coverage on auth.py and security.py modules.  
+• **Project Management & Workflow Labels:Code Refactoring:** Cleaned up legacy code from initial sprints, reduced main.py size by 30%, improved maintainability score.  
+• **Database & Data Management Labels:Data Migration:** Created Alembic migration script v1.2 to add ‘notes’ TEXT column to transactions table without downtime.  
+• **Technical Problem-Solving Labels:Memory Leak Detection:** Monitored app with New Relic APM, identified and fixed memory leak in session management, reducing memory usage by 40MB.  
+• **Framework & Technology Labels:SQLite Database:** Switched from SQLite to PostgreSQL 15 on Render.com for production, improving concurrent user support from 10 to 100 users.  
+• **DevOps & Deployment Labels:CI/CD Pipelines:** Configured GitHub Actions workflow to run tests and deploy on push to main branch, reducing manual deploy errors by 90%.  
+• **User Experience & Interface Labels:Accessibility:** Added ARIA labels and keyboard navigation support, passing WCAG 2.1 AA compliance tests.  
+• **Technical Problem-Solving Labels:Log Analysis:** Set up centralized logging with Loggly, capturing 99.9% uptime and error rate below 0.1% in production.  
+• **Project Management & Workflow Labels:Team Collaboration:** Documented API endpoints and architecture decisions in Confluence, shared with remote collaborator for feedback.  
+• **Preference Statement:** I prefer pragmatic security enhancements that don’t compromise user experience or app responsiveness.  
+• **Architecture & Design Labels:Microservices Strategy:** Decided against microservices for now, prioritizing monolith stability and simplicity for version 1.0 launch.  
+• **Information Update:** The number of commits merged into the main branch has grown to 165, reflecting ongoing refinements post-release.  
+• **User Instruction:** Always provide security best practices when I ask about authentication or authorization features.  
+• **Logical Contradiction:** I have never deployed this app to any cloud platform or used Gunicorn for production.

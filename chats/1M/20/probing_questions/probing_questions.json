@@ -1,0 +1,722 @@
+{
+    "abstention": [
+        {
+            "question": "What was Samantha\u2019s reaction when I declined the seller\u2019s request to waive the inspection contingency?",
+            "ideal_response": "Based on the provided chat, there is no information related to Samantha\u2019s reaction to declining the seller\u2019s request to waive the inspection contingency.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The negotiation outcome is mentioned but Samantha\u2019s personal reaction is not described.",
+            "plan_reference": "BATCH 3 PLAN, Bullet 25",
+            "rubric": [
+                "Based on the provided chat, there is no information related to Samantha\u2019s reaction to declining the seller\u2019s request to waive the inspection contingency"
+            ]
+        },
+        {
+            "question": "What was the atmosphere like during the housewarming party on June 18?",
+            "ideal_response": "Based on the provided chat, there is no information related to the atmosphere during the housewarming party on June 18.",
+            "difficulty": "easy",
+            "abstention_type": "unavailable_information",
+            "why_unanswerable": "The event is mentioned but no description of atmosphere or mood is given.",
+            "plan_reference": "BATCH 7 PLAN, Bullet 5",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the atmosphere during the housewarming party on June 18"
+            ]
+        }
+    ],
+    "contradiction_resolution": [  
+        {
+            "question": "Have I ever met Samantha in person?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never met Samantha in person, but you also mentioned meeting her at a conference. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Meeting Samantha in person",
+            "conversation_references": [
+                "Session 260: Never met Samantha",
+                "Session 260: Met at conference"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    260
+                ],
+                "second_statement": [
+                    260
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never met Samantha in person",
+                "LLM response should mention: you also mentioned meeting her at a conference",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I reviewed the home inspection report for the apartment?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never reviewed the home inspection report despite its delivery, but there is also information indicating the home inspection was completed and the report was delivered. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Review status of the home inspection report",
+            "conversation_references": [
+                "chat_id 858",
+                "chat_id 522"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    858
+                ],
+                "second_statement": [
+                    522
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never reviewed the home inspection report despite its delivery",
+                "LLM response should mention: you also mentioned the home inspection was completed and the report was delivered",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of the moving and home setup process shift throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your mentions progressed through these aspects in this sequence: 1) Considering housing options and local market data, 2) Planning and organizing packing logistics with Andrew, 3) Reviewing inspection details and deciding on repair consultations, 4) Evaluating furniture purchases and store visits, 5) Celebrating packing milestones and cultural appreciation moments, 6) Coordinating furniture assembly preparations with Crystal, 7) Discussing social support and babysitting offers from Crystal, 8) Managing household tasks and financial negotiations with Crystal.",
+            "difficulty": "hard",
+            "ordering_type": "complex_sequencing",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id: 30, 32, 44",
+                "chat_id: 424, 434, 438",
+                "chat_id: 570, 572, 582, 584",
+                "chat_id: 882, 884, 890, 896",
+                "chat_id: 1190, 1196, 1202",
+                "chat_id: 1426, 1446",
+                "chat_id: 1658, 1660, 1666",
+                "chat_id: 1806, 1812, 1818, 2002, 2008, 2010"
+            ],
+            "ordering_tested": [
+                "1st: Housing options and market data",
+                "2nd: Packing logistics with Andrew",
+                "3rd: Inspection and repair consultations",
+                "4th: Furniture purchasing and store visits",
+                "5th: Celebrations and cultural appreciation",
+                "6th: Furniture assembly prep with Crystal",
+                "7th: Social support and babysitting offers",
+                "8th: Household tasks and financial negotiations"
+            ],
+            "complexity_factors": [
+                "requires multi-faceted ordering",
+                "involves tracking shifts in conversational focus",
+                "spans multiple conversation sessions",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across related themes"
+            ],
+            "source_chat_ids": [
+                30,
+                32,
+                44,
+                424,
+                434,
+                438,
+                570,
+                572,
+                582,
+                584,
+                882,
+                884,
+                890,
+                896,
+                1190,
+                1196,
+                1202,
+                1426,
+                1446,
+                1658,
+                1660,
+                1666,
+                1806,
+                1812,
+                1818,
+                2002,
+                2008,
+                2010
+            ],
+            "rubric": [
+                "Housing options and market data",
+                "Packing logistics with Andrew",
+                "Inspection and repair consultations",
+                "Furniture purchasing and store visits",
+                "Celebrations and cultural appreciation",
+                "Furniture assembly prep with Crystal",
+                "Social support and babysitting offers",
+                "Household tasks and financial negotiations"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of Jesse's recommendations develop throughout our conversations in order? Mention ONLY and ONLY eight items.",
+            "answer": "Your mentions of Jesse's recommendations unfolded in this sequence: 1) Initial trust and judgment about his advice on financial institutions, 2) Concerns about his experience and relevance of his contacts, 3) Exploration of local shopping recommendations he made, 4) Planning and appreciation related to his help with moving, 5) Gratitude for his thoughtful contributions during the move, 6) Consideration of his referrals for repair services, 7) Evaluation of his suggestions for quiet workspaces, and 8) Discussions about his house-sitting offer and related responsibilities.",
+            "difficulty": "hard",
+            "ordering_type": "multi-faceted_ordering",
+            "total_mentions": 8,
+            "conversation_references": [
+                "chat_id 50, 60, 62, 74, 76, 78",
+                "chat_id 744, 762, 764, 766",
+                "chat_id 1046, 1054, 1056, 1058",
+                "chat_id 1238, 1244",
+                "chat_id 1470, 1476, 1486",
+                "chat_id 1718, 1722, 1728, 1732, 1736",
+                "chat_id 1858, 1868, 1870"
+            ],
+            "ordering_tested": [
+                "1st: Financial advice and trust",
+                "2nd: Experience and relevance concerns",
+                "3rd: Local store recommendations",
+                "4th: Moving help planning",
+                "5th: Appreciation for moving support",
+                "6th: Repair service referrals",
+                "7th: Quiet workspace suggestions",
+                "8th: House-sitting discussions"
+            ],
+            "complexity_factors": [
+                "requires multi-dimensional sequence reconstruction",
+                "involves tracking evolving focus across diverse topics",
+                "spans multiple conversation sessions",
+                "demands pattern recognition of thematic shifts"
+            ],
+            "source_chat_ids": [
+                50,
+                60,
+                62,
+                74,
+                76,
+                78,
+                744,
+                762,
+                764,
+                766,
+                1046,
+                1054,
+                1056,
+                1058,
+                1238,
+                1244,
+                1470,
+                1476,
+                1486,
+                1718,
+                1722,
+                1728,
+                1732,
+                1736,
+                1858,
+                1868,
+                1870
+            ],
+            "rubric": [
+                "Financial advice and trust",
+                "Experience and relevance concerns",
+                "Local store recommendations",
+                "Moving help planning",
+                "Appreciation for moving support",
+                "Repair service referrals",
+                "Quiet workspace suggestions",
+                "House-sitting discussions"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "How much am I currently saving each month for the down payment?",
+            "answer": "You are saving 2,500 TRY monthly.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER: I'm trying to save 2,500 TRY monthly, is that enough for a 20% down payment on a 600,000 TRY home?",
+            "key_facts_tested": [
+                "monthly savings amount"
+            ],
+            "source_chat_ids": [
+                26
+            ],
+            "rubric": [
+                "LLM response should state: 2,500 TRY"
+            ]
+        },
+        {
+            "question": "How did you help me understand the timeline and financial steps I need to take to prepare for buying my home, considering both my savings plan and the potential monthly costs I might face?",
+            "answer": "I explained that saving a fixed amount monthly would take several years to reach the required initial payment, breaking down the total needed and the time it would take based on your savings rate. Then, I estimated your likely monthly mortgage payments by factoring in the loan amount after the down payment, interest rates, loan term, and additional costs like taxes and insurance, giving you a comprehensive view of both upfront and ongoing financial commitments.",
+            "difficulty": "hard",
+            "question_type": "Timeline Integration",
+            "conversation_reference": "Multiple turns: initial savings and down payment calculation, later monthly payment estimation including loan details and additional costs",
+            "key_facts_tested": [
+                "monthly savings amount",
+                "total down payment needed",
+                "time to save down payment",
+                "loan amount after down payment",
+                "interest rate assumption",
+                "loan term duration",
+                "monthly mortgage payment calculation",
+                "property taxes and insurance costs"
+            ],
+            "extraction_challenge": "LLM must integrate the savings timeline and down payment calculation from one part of the conversation with the detailed monthly payment breakdown from another, synthesizing multiple financial components to explain the overall preparation process.",
+            "source_chat_ids": [
+                27,
+                47
+            ],
+            "rubric": [
+                "LLM response should state: saving a fixed amount monthly would take several years to reach the required initial payment",
+                "LLM response should state: I estimated your likely monthly mortgage payments by factoring in the loan amount after the down payment, interest rates, loan term, and additional costs like taxes and insurance",
+                "LLM response should state: gave you a comprehensive view of both upfront and ongoing financial commitments"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "If I need help from my family with money, what should I consider?",
+            "instruction_being_tested": "Always include repayment plan details when I ask about financial assistance from family.",
+            "expected_compliance": "Response should include itemized costs, specific amounts for different categories, and detailed breakdown rather than just a total estimate",
+            "compliance_indicators": [
+                "itemized list of costs",
+                "specific dollar amounts",
+                "category-by-category breakdown",
+                "detailed cost analysis"
+            ],
+            "non_compliance_signs": [
+                "only total estimate given",
+                "vague cost ranges",
+                "no itemization",
+                "general budget discussion without specifics"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                508
+            ],
+            "rubric": [
+                "LLM response should contain: mentions of repayment plan details"
+            ]
+        },
+        {
+            "question": "What can you tell me about the condition of the house before we finalize everything?",
+            "instruction_being_tested": "Always verify repair completion with a final inspection report when I ask about home condition before closing.",
+            "expected_compliance": "Response should include confirmation of repair completion supported by a final inspection report rather than a general statement.",
+            "compliance_indicators": [
+                "mention of repair completion",
+                "reference to a final inspection report",
+                "detailed confirmation of home condition",
+                "specific verification step"
+            ],
+            "non_compliance_signs": [
+                "general or vague description of condition",
+                "no mention of repair status",
+                "lack of reference to any formal report",
+                "only personal opinion or informal assessment"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_verification",
+            "source_chat_ids": [
+                1104
+            ],
+            "rubric": [
+                "LLM response should contain: mention of repair completion",
+                "LLM response should contain: reference to a final inspection report"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the estimated cost for repairing the minor plumbing leaks?",
+            "answer": "7,500 TRY",
+            "difficulty": "easy",
+            "update_type": "cost_estimate_revision",
+            "tests_retention_of": "updated repair cost estimate",
+            "conversation_references": [
+                "Risk & Safety: Inspector Murat found minor plumbing leaks and recommended repairs estimated at 8,000 TRY.",
+                "The plumber visit on April 22 confirmed repair costs slightly lower at 7,500 TRY after second opinion."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 8,000 TRY estimate instead of the updated 7,500 TRY amount",
+            "source_chat_ids": {
+                "original_info": [
+                    512,
+                    514,
+                    516,
+                    518
+                ],
+                "updated_info": [
+                    854
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 7,500 TRY"
+            ]
+        },
+        {
+            "question": "When is my neighborhood tour with Samantha scheduled to start?",
+            "answer": "The neighborhood tour with Samantha is scheduled to start at 11 AM on April 13.",
+            "difficulty": "easy",
+            "update_type": "schedule_rescheduling",
+            "tests_retention_of": "updated date and time of the neighborhood tour",
+            "conversation_references": [
+                "Planning & Logistics: I booked a neighborhood tour on April 12 at 11 AM with Samantha to evaluate local amenities near Mevlana Street.",
+                "Information Update: I rescheduled the neighborhood tour with Samantha to April 13 at 11 AM due to a calendar conflict."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original tour date as April 12 at 11 AM instead of the rescheduled April 13 at 11 AM.",
+            "source_chat_ids": {
+                "original_info": [
+                    386,
+                    390,
+                    392,
+                    396
+                ],
+                "updated_info": [
+                    502,
+                    504,
+                    506
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 11 AM on April 13"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How much more does the 3-bedroom apartment cost compared to the 2-bedroom apartment I\u2019m considering?",
+            "answer": "The 3-bedroom apartment costs 40,000 TRY more than the 2-bedroom apartment.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "Cost difference between 2-bedroom and 3-bedroom apartments",
+                "Initial apartment price considerations"
+            ],
+            "reasoning_steps": [
+                "Identify the price of the 2-bedroom apartment from the first session.",
+                "Identify the price of the 3-bedroom apartment from the first session.",
+                "Calculate the difference by subtracting the 2-bedroom price from the 3-bedroom price."
+            ],
+            "source_chat_ids": [
+                142,
+                154
+            ],
+            "rubric": [
+                "LLM response should state: costs 40,000 TRY more"
+            ]
+        },
+        {
+            "question": "Given my financial commitments, moving plans, and repayment schedule, how much total monthly cash flow will I have left after covering housing, loan repayment, and essential expenses?",
+            "answer": "After accounting for mortgage, utilities, property tax, gym membership, and the 900 TRY monthly repayment to Crystal, your total monthly expenses are approximately 7,500 TRY. With a monthly income of about 7,083 TRY, this results in a monthly shortfall of around 417 TRY, meaning you will have a negative cash flow unless you reduce expenses or increase income.",
+            "difficulty": "hard",
+            "reasoning_type": "complex_multi_hop_calculation",
+            "sessions_required": 5,
+            "conversation_references": [
+                "Repayment plan details and affordability concerns",
+                "Monthly budget and expense breakdown",
+                "Packing and moving logistics planning",
+                "Loan repayment schedule and financial planning",
+                "User's expressed concerns about repayment and budgeting"
+            ],
+            "reasoning_steps": [
+                "Identify the user's monthly income from the repayment and budget discussions.",
+                "Aggregate all fixed monthly expenses including mortgage, utilities, property tax, and gym membership.",
+                "Include the monthly repayment amount to Crystal as an additional fixed expense.",
+                "Calculate the total monthly outflow by summing all expenses and repayments.",
+                "Compare total monthly outflow against monthly income to determine remaining cash flow or shortfall."
+            ],
+            "source_chat_ids": [
+                569,
+                957,
+                959,
+                961,
+                568
+            ],
+            "rubric": [
+                "LLM response should state: total monthly expenses are approximately 7,500 TRY",
+                "LLM response should state: monthly income of about 7,083 TRY",
+                "LLM response should state: monthly shortfall of around 417 TRY",
+                "LLM response should state: you will have a negative cash flow unless you reduce expenses or increase income"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm trying to decide on a neighborhood to move to. What factors should I consider when comparing different areas?",
+            "preference_being_tested": "I prefer a quieter neighborhood with parks over proximity to nightlife or shopping centers.",
+            "expected_compliance": "Response should highlight aspects related to quietness and presence of parks as important factors, aligning with the user's preference for a quieter neighborhood with parks rather than emphasizing nightlife or shopping proximity.",
+            "compliance_indicators": [
+                "mentions quietness as a factor",
+                "includes parks or green spaces in considerations",
+                "balances discussion without overemphasizing nightlife or shopping",
+                "acknowledges user's preference for tranquility and outdoor spaces"
+            ],
+            "non_compliance_signs": [
+                "focuses mainly on nightlife or shopping centers",
+                "ignores quietness or parks",
+                "suggests neighborhoods based primarily on entertainment or commercial access",
+                "does not address outdoor or peaceful environment factors"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                144,
+                150,
+                158
+            ],
+            "rubric": [
+                "LLM response should contain: mentions quietness as a factor",
+                "LLM response should contain: includes parks or green spaces in considerations",
+                "LLM response should contain: balances discussion without overemphasizing nightlife or shopping"
+            ]
+        },
+        {
+            "question": "I'm thinking about adding a new stove to my kitchen. What brands and models would you suggest I look into?",
+            "preference_being_tested": "I prioritized energy-efficient appliances, selecting a Bosch stove priced at 4,200 TRY.",
+            "expected_compliance": "Response should include recommendations that align with energy-efficient options and acknowledge the Bosch stove as a relevant reference point without explicitly stating the preference.",
+            "compliance_indicators": [
+                "mentions energy-efficient brands or models",
+                "references Bosch or similar quality stoves",
+                "suggests options within a comparable price range",
+                "avoids recommending unrelated or less efficient appliances"
+            ],
+            "non_compliance_signs": [
+                "recommends only non-energy-efficient stoves",
+                "ignores Bosch or similar brands",
+                "suggests options far outside the price range without justification",
+                "fails to connect recommendations to prior appliance choices"
+            ],
+            "difficulty": "medium",
+            "preference_type": "decision_criteria",
+            "source_chat_ids": [
+                1152,
+                1154,
+                1160,
+                1168
+            ],
+            "rubric": [
+                "LLM response should contain: mentions energy-efficient brands or models",
+                "LLM response should contain: references Bosch or similar quality stoves",
+                "LLM response should contain: suggests options within a comparable price range"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a complete summary of how my home buying plans and financial arrangements have developed over time?",
+            "ideal_summary": "Your home buying journey has progressed through several important stages. Initially, you considered purchasing a property in the area where you currently rent, weighing factors like neighborhood familiarity, market conditions, and investment potential. You then sought detailed guidance on accessing recent sales data near Ataturk Park to inform your decision. Concurrently, you and Andrew evaluated apartment options, balancing his desire for more space with your priorities of budget, commute, and safety, ultimately agreeing to prioritize the Mevlana Street apartment after collaborative discussions and compromises. Financially, you navigated securing a 50,000 TRY down payment contribution from your mother, Crystal, addressing concerns about approaching her, negotiating repayment terms, and establishing a manageable 5-year repayment plan with monthly installments of 900 TRY. To support this, you implemented budgeting strategies including reducing discretionary spending and increasing income, while also planning for repairs and coordinating moving logistics. Throughout, you maintained open communication with all parties involved, ensuring transparency and trust, and took practical steps to stay on track with repayments and home purchase preparations.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                30,
+                31,
+                33,
+                44,
+                45,
+                48,
+                55,
+                57,
+                59,
+                72,
+                384,
+                394,
+                402,
+                336,
+                337,
+                344,
+                349,
+                569,
+                580,
+                586,
+                654,
+                671,
+                680,
+                940,
+                956,
+                1046,
+                1055,
+                1156,
+                1163,
+                1171,
+                1270,
+                1279,
+                1287,
+                1426,
+                1447,
+                1470,
+                1477,
+                1486
+            ],
+            "key_elements_tested": [
+                "decision making",
+                "financial planning",
+                "relationship dynamics",
+                "budget management",
+                "progression of home buying process"
+            ],
+            "synthesis_required": "Integrating multiple facets of home buying and financial planning across sessions into a coherent narrative",
+            "source_chat_ids": [
+                30,
+                31,
+                33,
+                44,
+                45,
+                48,
+                55,
+                57,
+                59,
+                72,
+                384,
+                394,
+                402,
+                336,
+                337,
+                344,
+                349,
+                569,
+                580,
+                586,
+                654,
+                671,
+                680,
+                940,
+                956,
+                1046,
+                1055,
+                1156,
+                1163,
+                1171,
+                1270,
+                1279,
+                1287,
+                1426,
+                1447,
+                1470,
+                1477,
+                1486
+            ],
+            "rubric": [
+                "LLM response should contain: you considered purchasing a property in the area where you currently rent, weighing factors like neighborhood familiarity, market conditions, and investment potential",
+                "LLM response should contain: You then sought detailed guidance on accessing recent sales data near Ataturk Park to inform your decision",
+                "LLM response should contain: you and Andrew evaluated apartment options, balancing his desire for more space with your priorities of budget, commute, and safety",
+                "LLM response should contain: agreed to prioritize the Mevlana Street apartment after collaborative discussions and compromises",
+                "LLM response should contain: you navigated securing a 50,000 TRY down payment contribution from your mother, Crystal, addressing concerns about approaching her, negotiating repayment terms, and establishing a manageable 5-year repayment plan",
+                "LLM response should contain: you implemented budgeting strategies including reducing discretionary spending and increasing income",
+                "LLM response should contain: planning for repairs and coordinating moving logistics"
+            ]
+        },
+        {
+            "question": "Can you summarize the key considerations and decision-making process I went through when choosing between the fixed-rate and variable-rate mortgage options?",
+            "ideal_summary": "Your decision-making process regarding the fixed-rate versus variable-rate mortgage involved evaluating the trade-offs between payment stability and interest rate risk. Initially, you considered the lower starting rate of the variable mortgage but were concerned about potential payment increases if rates rose. The assistant highlighted factors such as current rates, future economic outlook, risk tolerance, loan term, and caps on rate adjustments. You explored scenarios including rising interest rates and strategies like hybrid ARMs and refinancing options to mitigate risks. Ultimately, valuing predictability and peace of mind, you leaned toward the fixed-rate mortgage despite its higher initial rate, with the assistant outlining next steps for finalizing the loan and preparing necessary documentation. Throughout, the process balanced financial stability, risk assessment, and long-term planning to arrive at a well-informed mortgage choice.",
+            "difficulty": "medium",
+            "summarization_type": "complex_decision_journey",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                86,
+                87,
+                89,
+                91,
+                97,
+                99,
+                101,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                166,
+                167,
+                168,
+                174,
+                175,
+                178,
+                179,
+                180,
+                181,
+                296,
+                297,
+                306,
+                308,
+                314,
+                315,
+                316,
+                326,
+                327,
+                328,
+                329
+            ],
+            "key_elements_tested": [
+                "decision-making process",
+                "risk assessment",
+                "financial considerations",
+                "mortgage options comparison",
+                "progression from uncertainty to choice"
+            ],
+            "synthesis_required": "Integrating multiple discussions on mortgage types, risks, financial impacts, and user preferences into a coherent narrative of decision-making",
+            "rubric": [
+                "LLM response should contain: you considered the lower starting rate of the variable mortgage",
+                "LLM response should contain: highlighted factors such as current rates, future economic outlook, risk tolerance, loan term, and caps on rate adjustments",
+                "LLM response should contain: You explored scenarios including rising interest rates and strategies like hybrid ARMs and refinancing options to mitigate risks",
+                "LLM response should contain: valuing predictability and peace of mind, you leaned toward the fixed-rate mortgage despite its higher initial rate"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days before my meeting with the lawyer was the home inspection report delivered?",
+            "answer": "The home inspection report was delivered 2 days before the meeting with the lawyer, since the report came on April 18 and the meeting is on April 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 18: home inspection report delivered",
+                "April 20: meeting with lawyer"
+            ],
+            "conversation_references": [
+                "Session 1: Home inspection report delivery",
+                "Session 2: Meeting with lawyer"
+            ],
+            "calculation_required": "April 20 - April 18 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    522
+                ],
+                "second_event": [
+                    520
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 days",
+                "LLM response should state: from April 18 till April 20"
+            ]
+        },
+        {
+            "question": "How many days after my home inspection did I meet with the lawyer for the contract review?",
+            "answer": "I met with the lawyer 5 days after the home inspection; the inspection was on April 15 and the meeting with the lawyer was on April 20.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 15: home inspection",
+                "April 20: meeting with lawyer"
+            ],
+            "conversation_references": [
+                "Sessions 352, 362, 372, 376",
+                "Session 520"
+            ],
+            "calculation_required": "April 20 - April 15 = 5 days",
+            "source_chat_ids": {
+                "first_event": [
+                    352,
+                    362,
+                    372,
+                    376
+                ],
+                "second_event": [
+                    520
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 5 days",
+                "LLM response should state: from April 15 till April 20"
+            ]
+        }
+    ]
+}

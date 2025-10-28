@@ -1,0 +1,590 @@
+{
+    "abstention": [
+        {
+            "question": "What is the detailed agenda for the sprint retrospectives held every other Monday at 10 AM Palau time?",
+            "ideal_response": "Based on the provided chat, there is no information related to the detailed agenda of the sprint retrospectives.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Sprint retrospectives are scheduled but their agenda or content is not provided.",
+            "plan_reference": "Batch 3, Bullet 26",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the detailed agenda of the sprint retrospectives."
+            ]
+        },
+        {
+            "question": "What specific testing frameworks or tools were used for the integration tests on resume upload to scoring pipeline?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific testing frameworks or tools used for integration tests.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Integration testing is mentioned but specific tools or frameworks are not detailed.",
+            "plan_reference": "Batch 5, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific testing frameworks or tools used for integration tests."
+            ]
+        }
+
+    ],
+    "contradiction_resolution": [
+        {
+            "question": "Have I customized the spaCy pipeline with additional matcher rules for IT skills and certifications?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never customized the spaCy pipeline, but you also mentioned having a customized pipeline with added matcher rules for IT skills and certifications. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Customization of the spaCy pipeline",
+            "conversation_references": [
+                "Session 190: Never customized spaCy pipeline",
+                "Session 192 and 194: Customized matcher patterns"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    190
+                ],
+                "second_statement": [
+                    192,
+                    194
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never customized the spaCy pipeline",
+                "LLM response should mention: you also mentioned having a customized pipeline with added matcher rules",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever implemented job description keyword extraction using spaCy?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never implemented job description keyword extraction using spaCy, but you also mentioned implementing it using spaCy\u2019s noun chunking and TF-IDF vectorization. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Implementation of job description keyword extraction using spaCy",
+            "conversation_references": [
+                "chat_id: 200",
+                "chat_id: 202",
+                "chat_id: 268"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    200
+                ],
+                "second_statement": [
+                    202,
+                    268
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never implemented job description keyword extraction using spaCy",
+                "LLM response should mention: you also mentioned implementing it using spaCy\u2019s noun chunking",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of optimizing and enhancing my resume analyzer project throughout our conversations, in order (mention 10 items in order)?",
+            "answer": "You mentioned these aspects in this order: 1) Initial setup and feature extraction using specific libraries, 2) Debugging PDF text extraction errors, 3) Planning project timeline and deadlines, 4) Performance profiling and API response time optimization, 5) Memory usage reduction and keyword extraction improvements, 6) Enhancing job description parsing and keyword extraction, 7) Addressing startup time and caching strategies in the Flask app, 8) Optimizing scoring functions and similarity calculations, 9) Implementing authentication and authorization mechanisms, 10) Simulating concurrent requests for performance testing.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 10,
+            "conversation_references": [
+                "Session 0: Initial setup and feature extraction",
+                "Session 6: Debugging PDF text extraction",
+                "Session 18: Project timeline and deadlines",
+                "Session 26: API response time optimization",
+                "Session 100 & 116 & 156: Memory usage and keyword extraction improvements",
+                "Session 116: Job description parsing enhancements",
+                "Session 200 & 268 & 280: Startup time and caching strategies",
+                "Session 364 & 614: Scoring function and similarity optimization",
+                "Session 624 & 690: Authentication and authorization",
+                "Session 804: Concurrent request simulation"
+            ],
+            "ordering_tested": [
+                "1st: Initial setup and feature extraction",
+                "2nd: Debugging PDF text extraction",
+                "3rd: Project timeline and deadlines",
+                "4th: API response time optimization",
+                "5th: Memory usage and keyword extraction improvements",
+                "6th: Job description parsing enhancements",
+                "7th: Startup time and caching strategies",
+                "8th: Scoring function and similarity optimization",
+                "9th: Authentication and authorization",
+                "10th: Concurrent request simulation"
+            ],
+            "source_chat_ids": [
+                0,
+                6,
+                18,
+                26,
+                100,
+                116,
+                156,
+                200,
+                268,
+                280,
+                364,
+                614,
+                624,
+                690,
+                804
+            ],
+            "rubric": [
+                "LLM response should mention: Initial setup and feature extraction",
+                "LLM response should mention: Debugging PDF text extraction",
+                "LLM response should mention: Project timeline and deadlines",
+                "LLM response should mention: API response time optimization",
+                "LLM response should mention: Memory usage and keyword extraction improvements",
+                "LLM response should mention: Job description parsing enhancements",
+                "LLM response should mention: Startup time and caching strategies",
+                "LLM response should mention: Scoring function and similarity optimization",
+                "LLM response should mention: Authentication and authorization",
+                "LLM response should mention: Concurrent request simulation"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different phases and features of my project throughout our conversations in order (mention 5 items in order)?",
+            "answer": "You mentioned the project phases and features in this order: 1) First, you talked about implementing the resume improvement suggestions feature and extracting missing key skills, 2) Then you asked about dynamically displaying missing skills based on user input, 3) Next, you discussed preparing for unit testing and integration testing including weighted suggestion scoring, 4) After that, you brought up deployment automation and monitoring setup with Docker and Prometheus/Grafana, 5) Finally, you mentioned planning for cloud monitoring and logging services.",
+            "difficulty": "easy",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 210: Resume improvement suggestions and missing skills extraction",
+                "Session 212: Dynamic display of missing skills",
+                "Session 300: Unit testing and integration testing preparation",
+                "Session 376: Deployment automation and monitoring setup",
+                "Session 462: Cloud monitoring and logging planning"
+            ],
+            "ordering_tested": [
+                "1st: Resume improvement and missing skills extraction",
+                "2nd: Dynamic display of missing skills",
+                "3rd: Unit and integration testing preparation",
+                "4th: Deployment automation and monitoring setup",
+                "5th: Cloud monitoring and logging planning"
+            ],
+            "source_chat_ids": [
+                210,
+                212,
+                300,
+                376,
+                462
+            ],
+            "rubric": [
+                "LLM response should mention: Resume improvement and missing skills extraction",
+                "LLM response should mention: Dynamic display of missing skills",
+                "LLM response should mention: Unit and integration testing preparation",
+                "LLM response should mention: Deployment automation and monitoring setup",
+                "LLM response should mention: Cloud monitoring and logging planning"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "Which versions of the tools did I say I was using to start my project?",
+            "answer": "You mentioned using Python 3.10, spaCy v3.5, Flask 2.2, and PyMuPDF 1.22.0.",
+            "difficulty": "medium",
+            "question_type": "specification_recall",
+            "conversation_reference": "Turn 0: Initial project setup details",
+            "key_facts_tested": [
+                "Python version",
+                "spaCy version",
+                "Flask version",
+                "PyMuPDF version"
+            ],
+            "source_chat_ids": [
+                0
+            ],
+            "rubric": [
+                "LLM response should mention: Python 3.10",
+                "LLM response should mention: spaCy v3.5",
+                "LLM response should mention: Flask 2.2",
+                "LLM response should mention: PyMuPDF 1.22.0"
+            ]
+        },
+        {
+            "question": "What exact error message did I mention when trying to parse the PDF file?",
+            "answer": "You mentioned the error message: \"UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\".",
+            "difficulty": "medium",
+            "question_type": "exact_wording_recall",
+            "conversation_reference": "Turn 1: Initial error message provided by user",
+            "key_facts_tested": [
+                "error message text",
+                "UnicodeDecodeError",
+                "byte 0xff",
+                "position 0"
+            ],
+            "source_chat_ids": [
+                96
+            ],
+            "rubric": [
+                "LLM response should mention: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+            ]
+        }
+    ],
+    "instruction_following": [
+         {
+            "question": "What happened when the matcher didn't work as expected?",
+            "instruction_being_tested": "Always include detailed logging information when I ask about matcher failures.",
+            "expected_compliance": "Response should include detailed logging information related to the matcher failure rather than a brief or vague explanation.",
+            "compliance_indicators": [
+                "logs showing matcher steps",
+                "timestamps and error details",
+                "specific messages from the matching process",
+                "comprehensive failure context"
+            ],
+            "non_compliance_signs": [
+                "only a simple failure notice",
+                "no logs or error details",
+                "general statement without specifics",
+                "lack of any diagnostic information"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                188
+            ],
+            "rubric": [
+                "LLM response should include: logs showing matcher steps",
+                "LLM response should include: timestamps and error details",
+                "LLM response should include: specific messages from the matching process"
+            ]
+        },
+        {
+            "question": "What options do you suggest for improving the usability of my interface?",
+            "instruction_being_tested": "Always enable dark mode toggle when I ask about UI accessibility options.",
+            "expected_compliance": "Response should include the dark mode toggle enabled as part of the accessibility options.",
+            "compliance_indicators": [
+                "mention of dark mode toggle being active",
+                "inclusion of dark mode as an option",
+                "explicit enabling of dark mode feature"
+            ],
+            "non_compliance_signs": [
+                "no mention of dark mode toggle",
+                "dark mode toggle not enabled or suggested",
+                "only other accessibility options discussed"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "feature_activation",
+            "source_chat_ids": [
+                872
+            ],
+            "rubric": [
+                "LLM response should include: explicit enabling of dark mode feature"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the request limit per minute set for the API using Flask-Limiter?",
+            "answer": "120 requests per minute",
+            "difficulty": "easy",
+            "update_type": "configuration_adjustment",
+            "tests_retention_of": "the current API rate limit value",
+            "conversation_references": [
+                "\u2022 Implementation & Development Labels:Feature Development: Added API rate limiting with Flask-Limiter v2.6.0 to prevent abuse, set to 100 requests/minute.",
+                "Information Update: The API rate limit was adjusted to 120 requests per minute to better handle peak usage."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original limit of 100 requests per minute instead of the updated 120 requests per minute",
+            "source_chat_ids": {
+                "original_info": [
+                    418
+                ],
+                "updated_info": [
+                    424
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 120 requests per minute"
+            ]
+        },
+        {
+            "question": "What is the typical memory usage per session for batch resume processing?",
+            "answer": "Around 140MB per session",
+            "difficulty": "easy",
+            "update_type": "performance_optimization",
+            "tests_retention_of": "updated memory usage value for batch resume processing",
+            "conversation_references": [
+                "Performance & Optimization Labels:Memory Management: Reduced peak memory usage during batch resume processing from 250MB to 150MB.",
+                "Information Update: The batch resume processing memory usage was further optimized, now averaging around 140MB per session."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the earlier 150MB or 250MB memory usage instead of the current 140MB",
+            "source_chat_ids": {
+                "original_info": [
+                    176
+                ],
+                "updated_info": [
+                    184
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: Around 140MB per session"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "Considering my initial skill patterns and the improvements I made, how many distinct skill variations did I include in total after refining my entity ruler patterns?",
+            "answer": "26 distinct skill variations were included after refining the entity ruler patterns.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 2,
+            "conversation_references": [
+                "chat_id: 226",
+                "chat_id: 227"
+            ],
+            "reasoning_steps": [
+                "Identify the initial skill patterns provided by me in the first session (chat_id: 226), which included 2 skills: Python and Java.",
+                "Count the number of refined skill patterns I added in the second session (chat_id: 227), which included 24 distinct skill variations.",
+                "Sum the initial 2 skills with the 24 refined skill variations to get the total number of distinct skill variations included."
+            ],
+            "source_chat_ids": [
+                226,
+                227
+            ],
+            "rubric": [
+                "LLM response should mention: 26 distinct skill variations"
+            ]
+        },
+        {
+            "question": "Considering my use of in-memory dictionaries for resumes, my PDF upload size limit, and my addition of education entity patterns, how many distinct education levels did I add compared to the number of PDF parsing optimizations I implemented?",
+            "answer": "You added 15 distinct education level patterns and implemented 4 main PDF parsing optimizations.",
+            "difficulty": "medium",
+            "reasoning_type": "categorized_aggregation",
+            "sessions_required": 4,
+            "conversation_references": [
+                "30",
+                "142",
+                "143",
+                "220"
+            ],
+            "reasoning_steps": [
+                "Identify the number of education level patterns the user added from their custom entity ruler in the resume analysis session.",
+                "Count the number of PDF parsing optimizations the user mentioned or implied in their PDF parsing and upload sessions.",
+                "Compare the total number of education patterns added to the number of PDF parsing optimizations implemented.",
+                "Synthesize these counts to answer how many distinct education levels were added versus how many parsing optimizations were made."
+            ],
+            "source_chat_ids": [
+                30,
+                142,
+                143,
+                220
+            ],
+            "rubric": [
+                "LLM response should mention: 15 distinct education level patterns",
+                "LLM response should mention: 4 main PDF parsing optimizations"
+            ]
+        }
+    ],
+    "preference_following": [
+       {
+            "question": "I'm setting up my development environment for a new Flask project with a database. How should I configure the Docker Compose file to handle the app service and database storage?",
+            "preference_being_tested": "I prefer containerization early to ensure environment parity between development and production.",
+            "expected_compliance": "Response should recommend containerizing both the app and database services with proper volume mounts and orchestration to maintain consistent environments across development and production.",
+            "compliance_indicators": [
+                "suggests using Docker Compose to define both app and database services",
+                "includes volume mounts for persistent database storage",
+                "emphasizes environment consistency between development and production",
+                "recommends early containerization practices"
+            ],
+            "non_compliance_signs": [
+                "ignores containerization of database or app",
+                "suggests running database outside containers without orchestration",
+                "does not mention volume mounts or environment parity",
+                "focuses only on development setup without production considerations"
+            ],
+            "difficulty": "medium",
+            "preference_type": "workflow and environment setup",
+            "source_chat_ids": [
+                504
+            ],
+            "rubric": [
+                "LLM response should include: suggests using Docker Compose to define both app and database services",
+                "LLM response should include: includes volume mounts for persistent database storage",
+                "LLM response should include: emphasizes environment consistency between development and production"
+            ]
+        },
+        {
+            "question": "I'm working on a system to suggest improvements for resumes based on job descriptions. How would you approach building this using Python and spaCy?",
+            "preference_being_tested": "I prefer rule-based suggestions over ML models initially for faster iteration and explainability.",
+            "expected_compliance": "Response should focus on rule-based methods or prominently include them as the initial approach rather than immediately suggesting machine learning models.",
+            "compliance_indicators": [
+                "provides examples of rule-based techniques",
+                "explains how to implement rule-based logic with spaCy",
+                "mentions entity recognition and keyword extraction in a rule-based context",
+                "does not prioritize ML models as the first solution"
+            ],
+            "non_compliance_signs": [
+                "immediately recommends ML models without rule-based options",
+                "focuses solely on machine learning approaches",
+                "ignores rule-based methods entirely",
+                "does not address explainability or iteration speed in the approach"
+            ],
+            "difficulty": "medium",
+            "preference_type": "methodology choice",
+            "source_chat_ids": [
+                250
+            ],
+            "rubric": [
+                "LLM response should include: provides examples of rule-based techniques",
+                "LLM response should include: explains how to implement rule-based logic with spaCy",
+                "LLM response should include: mentions entity recognition and keyword extraction in a rule-based context"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a summary of the main points we covered about improving my resume analyzer project?",
+            "ideal_summary": "We discussed setting up a resume analyzer using Python with spaCy, Flask, and PyMuPDF to extract work experience, skills, and education from resumes. Suggestions were made to improve extraction accuracy by using named entity recognition and better text cleaning, as well as adding error handling and modularizing the code. Additionally, we addressed debugging PDF text extraction issues, planned a project timeline to meet a February 2024 deadline, and explored performance profiling and caching strategies to optimize the API's response time.",
+            "difficulty": "easy",
+            "summarization_type": "basic_topic_overview",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "combining setup details",
+                "improvement suggestions",
+                "debugging and optimization strategies"
+            ],
+            "synthesis_required": "Combining straightforward information from multiple sessions into a concise overview",
+            "source_chat_ids": [
+                0,
+                1,
+                6,
+                18,
+                26,
+                27,
+                268,
+                269
+            ],
+            "rubric": [
+                "LLM response should mention: setting up a resume analyzer using Python with spaCy, Flask, and PyMuPDF",
+                "LLM response should mention: suggestions to improve extraction accuracy by using named entity recognition and better text cleaning",
+                "LLM response should mention: adding error handling and modularizing the code",
+                "LLM response should mention: debugging PDF text extraction issues",
+                "LLM response should mention: planning a project timeline to meet a February 2024 deadline",
+                "LLM response should mention: exploring performance profiling and caching strategies to optimize the API's response time"
+            ]
+        },
+        {
+            "question": "Can you provide a detailed and comprehensive summary of the entire process I went through with my resume analyzer project, covering all the key developments, challenges, improvements, and optimizations from start to finish?",
+            "ideal_summary": "The project began with setting up a resume analyzer using Python 3.10, spaCy v3.5, Flask 2.2, and PyMuPDF for PDF parsing. Initial implementations focused on extracting work experience, skills, and education using basic keyword searches and sentence segmentation. Subsequent improvements introduced named entity recognition (NER) for more precise extraction of job titles, companies, and educational institutions, alongside modularizing the code and enhancing error handling in the Flask API. Debugging efforts addressed issues with PDF text extraction, including handling NoneType errors and improving logging for better traceability. A structured project timeline was established to meet a February 15, 2024 deadline, prioritizing environment setup, core functionality, testing, and documentation. Performance profiling using cProfile was integrated to identify bottlenecks, and caching strategies evolved from simple in-memory caches to Redis-backed caching for repeated analyses, improving response times. Keyword matching was optimized by refining regex patterns and precompiling them, while NLP pipelines were enhanced by combining stopword removal and lemmatization for more accurate keyword extraction. To reduce Flask app startup time, lazy-loading of spaCy models and consideration of smaller models were implemented. The resume analysis was further refined by training custom NER models for job titles, with guidance on dataset size and training processes. Finally, weighted scoring algorithms for skill matching were optimized for latency, incorporating prioritization of skills and experience levels, and caching strategies were adjusted to balance memory usage and performance. Visualization techniques were suggested to represent weighted skill scores effectively. Throughout, the project demonstrated iterative refinement, integrating technical, performance, and project management aspects to build a robust, efficient resume analyzer system.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 9,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                0,
+                1,
+                6,
+                7,
+                18,
+                26,
+                27,
+                118,
+                119,
+                120,
+                121,
+                122,
+                140,
+                141,
+                200,
+                201,
+                202,
+                268,
+                269,
+                214,
+                215,
+                216,
+                217,
+                218,
+                219,
+                280,
+                281,
+                282,
+                283,
+                292,
+                293,
+                294,
+                295
+            ],
+            "rubric": [
+                "LLM response should mention: setting up a resume analyzer using Python 3.10, spaCy v3.5, Flask 2.2, and PyMuPDF for PDF parsing",
+                "LLM response should mention: initial implementations focused on extracting work experience, skills, and education using basic keyword searches and sentence segmentation",
+                "LLM response should mention: subsequent improvements introduced named entity recognition (NER) for more precise extraction of job titles, companies, and educational institutions",
+                "LLM response should mention: modularizing the code and enhancing error handling in the Flask API",
+                "LLM response should mention: debugging efforts addressed issues with PDF text extraction, including handling NoneType errors and improving logging for better traceability",
+                "LLM response should mention: a structured project timeline was established to meet a February 15, 2024 deadline, prioritizing environment setup, core functionality, testing, and documentation",
+                "LLM response should mention: performance profiling using cProfile was integrated to identify bottlenecks, and caching strategies evolved from simple in-memory caches to Redis-backed caching for repeated analyses, improving response times",
+                "LLM response should mention: keyword matching was optimized by refining regex patterns and precompiling them, while NLP pipelines were enhanced by combining stopword removal and lemmatization for more accurate keyword extraction",
+                "LLM response should mention: to reduce Flask app startup time, lazy-loading of spaCy models and consideration of smaller models were implemented",
+                "LLM response should mention: the resume analysis was further refined by training custom NER models for job titles, with guidance on dataset size and training processes",
+                "LLM response should mention: weighted scoring algorithms for skill matching were optimized for latency, incorporating prioritization of skills and experience levels, and caching strategies were adjusted to balance memory usage and performance",
+                "LLM response should mention: visualization techniques were suggested to represent weighted skill scores effectively",
+                "LLM response should mention: throughout, the project demonstrated iterative refinement, integrating technical, performance, and project management aspects to build a robust, efficient resume analyzer system"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I booked the hotel and when I checked in two days later?",
+            "answer": "2 days passed between when the hotel was booked on April 10 and the check-in that happened two days later on April 12.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "April 10: hotel booked",
+                "2 days after booking: check-in"
+            ],
+            "conversation_references": [
+                "Session 3: Booking confirmation",
+                "Session 4: Check-in details"
+            ],
+            "calculation_required": "April 12 - April 10 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    7
+                ],
+                "second_event": [
+                    9
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 2 days passed between when the hotel was booked on April 10 and the check-in that happened two days later on April 12"
+            ]
+        },
+        {
+            "question": "How many days do I have between finishing my unit and integration tests and the deadline for completing the deployment automation scripts?",
+            "answer": "There are 15 days between the deadline for finishing the unit and integration tests (April 10, 2024) and the deadline for completing the deployment automation scripts (April 25, 2024).",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "April 10, 2024: unit and integration tests deadline",
+                "April 25, 2024: deployment automation scripts deadline"
+            ],
+            "conversation_references": [
+                "Session 318: unit and integration tests planned completion",
+                "Session 396: deployment automation scripts expected completion"
+            ],
+            "calculation_required": "April 25, 2024 - April 10, 2024 = 15 days",
+            "source_chat_ids": {
+                "first_event": [
+                    318
+                ],
+                "second_event": [
+                    396
+                ]
+            },
+            "rubric": [
+                "LLM response should mention: 15 days",
+                "LLM response should state: from April 10 till April 25"
+            ]
+        }
+    ]
+}

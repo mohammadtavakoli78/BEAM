@@ -1,0 +1,695 @@
+{
+    "abstention": [
+        {
+            "question": "Could you provide the contact information for the local artist Monica who designed the stage banners?",
+            "ideal_response": "Based on the provided chat, there is no information related to Monica\u2019s contact information.",
+            "difficulty": "easy",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Monica is mentioned as the designer but no contact details are provided.",
+            "plan_reference": "Batches 3 and 4 mention Monica\u2019s design work but no contact info.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to related to Monica\u2019s contact information"
+            ]
+        },
+        {
+            "question": "What are the qualifications or experience of the security staff hired from SafeGuard Agency?",
+            "ideal_response": "Based on the provided chat, there is no information related to the qualifications or experience of the SafeGuard security staff.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "Security staff are mentioned with numbers and cost but no qualifications or experience details.",
+            "plan_reference": "Batches 1, 2, 4, and 6 mention security staff but no qualifications.",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the qualifications or experience of the SafeGuard security staff"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I attended the event planning seminar at the North Ericshire Chamber of Commerce before?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never attended the event planning seminar at the North Ericshire Chamber of Commerce, but you also referred to connections and experiences from attending it. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Attendance at the event planning seminar",
+            "conversation_references": [
+                "Session 592: Never attended statement",
+                "Sessions 456, 464, 472: References to attending seminar and networking"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    592
+                ],
+                "second_statement": [
+                    456,
+                    464,
+                    472
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never attended the event planning seminar at the North Ericshire Chamber of Commerce",
+                "LLM response should mention: you also referred to connections and experiences from attending it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I discussed the budget impacts with Craig regarding DJ Mert\u2019s payment increase?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never discussed the budget impacts with Craig regarding DJ Mert\u2019s payment increase, but you also mentioned having a discussion about it. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Discussion of budget impacts with Craig about DJ Mert\u2019s payment increase",
+            "conversation_references": [
+                "Session 878, 880, 884, 892, 894, 896",
+                "Session 1086, 1088, 1090"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    1086,
+                    1088,
+                    1090
+                ],
+                "second_statement": [
+                    878,
+                    880,
+                    884,
+                    892,
+                    894,
+                    896
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have never discussed the budget impacts with Craig regarding DJ Mert\u2019s payment increase",
+                "LLM response should mention: you also mentioned having a discussion about it",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "How did my focus on different aspects of the festival performances develop throughout our conversations in order? Mention ONLY and ONLY six items.",
+            "answer": "Your focus on festival performances developed in this sequence: 1) Concerns about artist suitability and performance style, 2) Requests and adjustments related to performance duration and scheduling, 3) Coordination of technical support including sound engineering, 4) Budget considerations and payment negotiations for performers, 5) Planning for additional production elements like lighting and promotional materials, 6) Managing last-minute changes and their impact on the overall festival schedule.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 6,
+            "conversation_references": [
+                "42, 46, 48, 52",
+                "344, 348, 354, 358",
+                "598, 600, 602, 612, 614, 616, 622, 624",
+                "850, 860, 862, 864, 870",
+                "1096, 1390, 1392, 1398, 1400, 1402, 1408, 1410, 1412, 1414",
+                "1614, 1620, 1624, 1626, 1628, 1630"
+            ],
+            "ordering_tested": [
+                "1st: Artist suitability and style concerns",
+                "2nd: Performance duration and scheduling requests",
+                "3rd: Technical support coordination",
+                "4th: Budget and payment negotiations",
+                "5th: Production elements and promotional planning",
+                "6th: Handling last-minute changes and schedule impact"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple thematic threads",
+                "spans numerous conversation sessions",
+                "involves nuanced development of related topics",
+                "demands sophisticated sequence reconstruction",
+                "tests pattern recognition across diverse mentions"
+            ],
+            "source_chat_ids": [
+                [
+                    42,
+                    46,
+                    48,
+                    52
+                ],
+                [
+                    344,
+                    348,
+                    354,
+                    358
+                ],
+                [
+                    598,
+                    600,
+                    602,
+                    612,
+                    614,
+                    616,
+                    622,
+                    624
+                ],
+                [
+                    850,
+                    860,
+                    862,
+                    864,
+                    870
+                ],
+                [
+                    1096,
+                    1390,
+                    1392,
+                    1398,
+                    1400,
+                    1402,
+                    1408,
+                    1410,
+                    1412,
+                    1414
+                ],
+                [
+                    1614,
+                    1620,
+                    1624,
+                    1626,
+                    1628,
+                    1630
+                ]
+            ],
+            "rubric": [
+                "Artist suitability and style concerns",
+                "Performance duration and scheduling requests",
+                "Technical support coordination",
+                "Budget and payment negotiations",
+                "Production elements and promotional planning",
+                "Handling last-minute changes and schedule impact"
+            ]
+        },
+        {
+            "question": "How did my focus on different aspects of the event marketing and logistics develop throughout our conversations in order? Mention ONLY and ONLY seven items.",
+            "answer": "Your focus developed in this sequence: 1) Concerns about stage rental options and related logistics, 2) Questions about social media campaign momentum and follower engagement strategies, 3) Discussions on targeted Facebook ad budgeting and implementation, 4) Planning influencer partnerships and their content strategies, 5) Optimization and allocation of the radio ad campaign budget, 6) Incorporating additional marketing efforts around a new musical act, 7) Evaluating the impact of the final radio ad on social media engagement and overall promotion effectiveness.",
+            "difficulty": "hard",
+            "ordering_type": "development_tracking",
+            "total_mentions": 7,
+            "conversation_references": [
+                "Stage rental and logistics inquiries (chat_ids 124, 126, 128, 136, 138, 140, 154)",
+                "Social media campaign and follower engagement (chat_ids 412, 422, 424, 430)",
+                "Facebook ad budget and strategy (chat_ids 654, 656, 666)",
+                "Influencer partnerships and content planning (chat_ids 940, 942, 954, 956, 964)",
+                "Radio ad campaign budget and strategy (chat_ids 1220, 1228, 1232, 1234)",
+                "Marketing strategy including jazz trio addition (chat_ids 1462, 1470, 1476)",
+                "Assessment of radio ad impact and social media engagement (chat_ids 1728, 1740, 1742)"
+            ],
+            "ordering_tested": [
+                "1st: Stage rental and logistics",
+                "2nd: Social media campaign and engagement",
+                "3rd: Facebook ad budgeting",
+                "4th: Influencer partnerships",
+                "5th: Radio ad campaign planning",
+                "6th: Jazz trio marketing integration",
+                "7th: Final radio ad impact evaluation"
+            ],
+            "complexity_factors": [
+                "requires tracking multiple related topics",
+                "involves synthesis of marketing and logistics themes",
+                "spans numerous conversation sessions",
+                "demands reconstruction of mention progression without temporal cues",
+                "tests ability to integrate diverse marketing elements into a coherent sequence"
+            ],
+            "source_chat_ids": [
+                [
+                    124,
+                    126,
+                    128,
+                    136,
+                    138,
+                    140,
+                    154
+                ],
+                [
+                    412,
+                    422,
+                    424,
+                    430
+                ],
+                [
+                    654,
+                    656,
+                    666
+                ],
+                [
+                    940,
+                    942,
+                    954,
+                    956,
+                    964
+                ],
+                [
+                    1220,
+                    1228,
+                    1232,
+                    1234
+                ],
+                [
+                    1462,
+                    1470,
+                    1476
+                ],
+                [
+                    1728,
+                    1740,
+                    1742
+                ]
+            ],
+            "rubric": [
+                "Stage rental and logistics",
+                "Social media campaign and engagement",
+                "Facebook ad budgeting",
+                "Influencer partnerships",
+                "Radio ad campaign planning",
+                "Jazz trio marketing integration",
+                "Final radio ad impact evaluation"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What date and time did I confirm for the set with the performer, and how much did I request to increase the payment by?",
+            "answer": "I confirmed the set for June 16 from 9 PM to 11 PM and requested a 10,000 TRY payment increase.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message about agreeing to the payment increase",
+            "key_facts_tested": [
+                "date of the set",
+                "time of the set",
+                "payment increase amount"
+            ],
+            "source_chat_ids": [
+                850
+            ],
+            "rubric": [
+                "LLM response should state: June 16",
+                "LLM response should state: 9 PM to 11 PM",
+                "LLM response should state: 10,000 TRY"
+            ]
+        },
+        {
+            "question": "What approach did you recommend for building on previous successes to expand the festival's funding sources, and how did you suggest managing the different levels of support involved?",
+            "answer": "I recommended revisiting past contributors as a starting point to secure additional support, while also identifying new local businesses aligned with the event's values. I suggested creating tiered support packages with distinct benefits, such as brand exposure and event recognition, to appeal to different contributors. This included defining higher and lower contribution levels with corresponding perks like booth space or product sampling opportunities. Additionally, I advised engaging sponsors through personalized outreach, follow-ups, and leveraging existing relationships to broaden the network.",
+            "difficulty": "hard",
+            "question_type": "Relationship and Connection Context",
+            "conversation_reference": "Multiple turns: initial sponsorship goals mention, detailed sponsorship plan with levels and benefits, advice on focusing efforts and leveraging past sponsors, and outreach strategies",
+            "key_facts_tested": [
+                "revisiting past sponsors as a strategy",
+                "identifying new local businesses for sponsorship",
+                "tiered sponsorship levels with different benefits",
+                "examples of benefits like brand exposure, booth space, recognition",
+                "engagement methods including personalized outreach and follow-ups",
+                "leveraging existing relationships and referrals"
+            ],
+            "extraction_challenge": "LLM must integrate details about sponsorship acquisition strategy, tiered packages, and outreach methods scattered across multiple assistant messages to explain the recommended approach for expanding funding based on prior successes",
+            "source_chat_ids": [
+                411,
+                417,
+                427
+            ],
+            "rubric": [
+                "LLM response should state: revisiting past contributors as a starting point to secure additional support",
+                "LLM response should state: identifying new local businesses aligned with the event's values",
+                "LLM response should state: creating tiered support packages with distinct benefits, such as brand exposure and event recognition",
+                "LLM response should state: defining higher and lower contribution levels with corresponding perks like booth space or product sampling opportunities",
+                "LLM response should state: advised engaging sponsors through personalized outreach, follow-ups, and leveraging existing relationships to broaden the network"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "How are the ticket sales looking so far?",
+            "instruction_being_tested": "Always confirm ticketing platform details when I ask about sales.",
+            "expected_compliance": "Response should include confirmation of which ticketing platform the sales data is from before providing sales information.",
+            "compliance_indicators": [
+                "mention of ticketing platform name",
+                "clarification about source of sales data",
+                "explicit confirmation of platform details"
+            ],
+            "non_compliance_signs": [
+                "sales data given without platform confirmation",
+                "no mention of ticketing platform",
+                "assumption of platform without stating it"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_confirmation",
+            "source_chat_ids": [
+                838,
+                840,
+                842
+            ],
+            "rubric": [
+                "LLM response should contain: mention of ticketing platform name"
+            ]
+        },
+        {
+            "question": "What are some effective approaches I can use to promote my new product?",
+            "instruction_being_tested": "Always highlight social media impact when I ask about marketing strategies.",
+            "expected_compliance": "Response should include discussion of how social media influences or contributes to the marketing approaches mentioned.",
+            "compliance_indicators": [
+                "mention of social media platforms",
+                "discussion of social media reach or engagement",
+                "examples involving social media campaigns",
+                "analysis of social media's role in marketing"
+            ],
+            "non_compliance_signs": [
+                "no mention of social media",
+                "focus only on traditional marketing methods",
+                "ignoring online platforms",
+                "general marketing advice without social media context"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "content_inclusion",
+            "source_chat_ids": [
+                1084
+            ],
+            "rubric": [
+                "LLM response should contain: mention of social media platforms",
+                "LLM response should contain: discussion of social media reach or engagement",
+                "LLM response should contain: examples involving social media campaigns"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "How many early bird tickets have been sold toward the attendance target?",
+            "answer": "450 early bird tickets have been sold, which is slightly ahead of projections.",
+            "difficulty": "easy",
+            "update_type": "ticket_sales_update",
+            "tests_retention_of": "updated number of early bird tickets sold",
+            "conversation_references": [
+                "Early bird tickets sold: 400 as of April 1, 27% of total 1,500 target.",
+                "Early bird ticket sales reached 450 by April 3, slightly ahead of projections."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 400 tickets sold instead of the updated 450.",
+            "source_chat_ids": {
+                "original_info": [
+                    706,
+                    712,
+                    720
+                ],
+                "updated_info": [
+                    836
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 450"
+            ]
+        },
+        {
+            "question": "What was the percentage increase in Instagram followers resulting from the influencer partnerships?",
+            "answer": "15% increase in Instagram followers within one week",
+            "difficulty": "easy",
+            "update_type": "performance_metric",
+            "tests_retention_of": "updated follower growth percentage after influencer partnerships",
+            "conversation_references": [
+                "Added influencer partnerships with 3 local Instagram accounts, budgeted 2,500 TRY.",
+                "The influencer partnerships resulted in a 15% increase in Instagram followers within one week."
+            ],
+            "potential_confusion": "LLM might incorrectly recall no specific follower increase or assume no measurable impact instead of the 15% growth",
+            "source_chat_ids": {
+                "original_info": [
+                    940,
+                    954,
+                    964
+                ],
+                "updated_info": [
+                    1082
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 15% within one week"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many artisan stalls and food stalls am I managing for the festival after the two food stalls cancelled?",
+            "answer": "You are managing 10 artisan stalls and 16 food stalls after the two food stalls cancelled.",
+            "difficulty": "easy",
+            "reasoning_type": "basic_aggregation",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Ensuring Kathleen's 10 artisan stalls will be a good addition",
+                "Replacing two food stalls that cancelled",
+                "Vendor confirmations and cancellations"
+            ],
+            "reasoning_steps": [
+                "Identify the number of artisan stalls Kathleen is bringing (10 stalls).",
+                "Recall the original number of confirmed food stalls before cancellations (18 vendors including food stalls).",
+                "Subtract the two cancelled food stalls from the original count to find the current number of food stalls (18 - 2 = 16)."
+            ],
+            "source_chat_ids": [
+                44,
+                1429,
+                1427
+            ],
+            "rubric": [
+                "LLM response should state: 10 artisan stalls",
+                "LLM response should state: 16 food stalls"
+            ]
+        },
+        {
+            "question": "Considering Kathleen's artisan stalls, Steve's performance, vendor cancellations, and DJ Mert's payment increase, how should I optimally reallocate my budget and resources to ensure smooth festival operations without overspending?",
+            "answer": "You should confirm Kathleen's 10 artisan stalls early to secure space and promotion, coordinate Steve's performance logistics and rehearsal, replace cancelled food vendors promptly using backup lists, and negotiate DJ Mert's payment increase by compromising on a partial raise plus perks. To balance the budget, reallocate funds by cutting marketing and miscellaneous expenses, secure additional sponsorships and crowdfunding, delegate volunteer roles for vendor and crowd management, and maintain contingency funds for emergencies. This integrated approach ensures all key elements are covered without exceeding the overall budget.",
+            "difficulty": "hard",
+            "reasoning_type": "advanced_optimization",
+            "sessions_required": 6,
+            "conversation_references": [
+                "Ensuring Kathleen's artisan stalls add value and early confirmation timing",
+                "Coordinating Kathleen's stalls and Steve's performance",
+                "Managing limited security staff and crowd safety",
+                "Handling DJ Mert's payment increase and budget impact",
+                "Replacing last-minute vendor cancellations",
+                "Prioritizing tasks and delegating responsibilities"
+            ],
+            "reasoning_steps": [
+                "Analyze the need to confirm Kathleen's artisan stalls early to secure space, promotion, and alignment with festival theme.",
+                "Incorporate Steve's performance coordination, including scheduling, technical needs, and volunteer support.",
+                "Assess the impact of last-minute vendor cancellations and the urgency of replacing food stalls to maintain attendee satisfaction.",
+                "Evaluate DJ Mert's payment increase request and identify negotiation strategies to reduce budget strain.",
+                "Calculate budget reallocations by cutting marketing, miscellaneous expenses, and reallocating funds from less critical areas.",
+                "Plan to secure additional funding through sponsorships and crowdfunding to cover shortfalls.",
+                "Delegate volunteer roles effectively to support vendor management, crowd control, and logistics, reducing operational costs.",
+                "Integrate all these elements into a cohesive resource and budget plan that ensures smooth festival operations without overspending."
+            ],
+            "source_chat_ids": [
+                45,
+                59,
+                627,
+                879,
+                1429,
+                1423
+            ],
+            "rubric": [
+                "LLM response should state: confirm Kathleen's 10 artisan stalls early to secure space and promotion",
+                "LLM response should state: coordinate Steve's performance logistics and rehearsal",
+                "LLM response should state: replace cancelled food vendors promptly using backup lists",
+                "LLM response should state: negotiate DJ Mert's payment increase by compromising on a partial raise plus perks",
+                "LLM response should state: reallocate funds by cutting marketing and miscellaneous expenses",
+                "LLM response should state: secure additional sponsorships and crowdfunding",
+                "LLM response should state: delegate volunteer roles for vendor and crowd management",
+                "LLM response should state: maintain contingency funds for emergencies"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "I'm planning entertainment for an upcoming event and trying to decide between different types of performers. What would you suggest?",
+            "preference_being_tested": "I prefer booking local performers over city-based artists to emphasize community culture and reduce costs.",
+            "expected_compliance": "Response should prioritize recommending local performers or emphasize their benefits in line with the user's preference, rather than defaulting to city-based or more generic options.",
+            "compliance_indicators": [
+                "recommends local performers",
+                "mentions community culture or local engagement",
+                "considers cost implications favoring local options",
+                "suggests ways to highlight local talent"
+            ],
+            "non_compliance_signs": [
+                "only suggests city-based or popular performers",
+                "ignores local performer options",
+                "focuses solely on popularity or fame without local context",
+                "does not address community or cost aspects related to performer choice"
+            ],
+            "difficulty": "medium",
+            "preference_type": "performer selection",
+            "source_chat_ids": [
+                280,
+                288,
+                290,
+                298,
+                300,
+                302,
+                306
+            ],
+            "rubric": [
+                "LLM response should contain: recommends local performers",
+                "LLM response should contain: considers cost implications favoring local options"
+            ]
+        },
+        {
+            "question": "I'm planning to set up ticketing for my upcoming event. What platforms would you suggest I look into?",
+            "preference_being_tested": "I prefer using Eventbrite for ticketing due to its user-friendly interface and integrated payment options.",
+            "expected_compliance": "Response should include Eventbrite as a recommended platform and suggest alternatives that have similar features, reflecting the user's preference for platforms with user-friendly interfaces and integrated payment options.",
+            "compliance_indicators": [
+                "mentions Eventbrite as an option",
+                "recommends platforms with integrated payment systems",
+                "suggests platforms known for ease of use",
+                "acknowledges the user's prior preference indirectly by aligning recommendations"
+            ],
+            "non_compliance_signs": [
+                "omits Eventbrite from recommendations",
+                "suggests platforms lacking integrated payment options",
+                "recommends platforms known for complexity or lack of user-friendly features",
+                "ignores the user's previously stated preference context"
+            ],
+            "difficulty": "medium",
+            "preference_type": "platform_features",
+            "source_chat_ids": [
+                820
+            ],
+            "rubric": [
+                "LLM response should contain: mentions Eventbrite as an option",
+                "LLM response should contain: recommends platforms with integrated payment systems"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you provide a thorough summary of how everything unfolded, including all the key steps, challenges, adjustments, and decisions involved in managing the event planning and execution?",
+            "ideal_summary": "The event planning process involved multiple interconnected stages, beginning with understanding and researching permit requirements, gathering necessary documentation, and preparing a detailed application well ahead of the March 5 deadline. Early submission and consistent follow-up with the municipality were emphasized to ensure timely approval, with contingency plans in place for potential delays. Financial management became critical when DJ Mert\u2019s fee increased, prompting a reallocation of 5,000 TRY from the equipment rental budget, which necessitated scaling back on rentals and decorations, seeking additional sponsorships, and optimizing expenses to maintain the overall budget. The entertainment lineup was enhanced by adding a second music stage, requiring careful scheduling, sound management, and noise control strategies to balance attendee experience and community impact. Vendor management included handling last-minute withdrawals, such as replacing a falafel vendor with a vegetarian g\u00f6zleme stall, ensuring menu diversity, communicating changes effectively to attendees, and preparing for supply chain risks like ingredient shortages. Throughout, stress management and delegation were key to handling last-minute changes, supported by organized communication, mindfulness, and contingency planning. The comprehensive approach integrated logistical, financial, technical, and human factors to navigate challenges and maintain a cohesive, successful festival experience.",
+            "difficulty": "hard",
+            "summarization_type": "comprehensive_project_analysis",
+            "bullet_points_covered": 8,
+            "conversation_sessions": 7,
+            "key_elements_tested": [
+                "multi-stakeholder coordination",
+                "complex project progression",
+                "technical and financial integration",
+                "strategic decision-making",
+                "comprehensive outcome analysis",
+                "sophisticated narrative synthesis"
+            ],
+            "synthesis_required": "Combining extensive scattered information into sophisticated, multi-threaded comprehensive narrative",
+            "source_chat_ids": [
+                84,
+                99,
+                101,
+                103,
+                360,
+                373,
+                379,
+                652,
+                658,
+                660,
+                669,
+                904,
+                913,
+                917,
+                929,
+                1151,
+                1173,
+                1443,
+                1447,
+                1451,
+                1457,
+                1459,
+                1461
+            ],
+            "rubric": [
+                "LLM response should contain: Early submission and consistent follow-up with the municipality were emphasized to ensure timely approval",
+                "LLM response should contain: Financial management became critical when DJ Mert\u2019s fee increased, prompting a reallocation of 5,000 TRY from the equipment rental budget",
+                "LLM response should contain: entertainment lineup was enhanced by adding a second music stage, requiring careful scheduling, sound management, and noise control strategies",
+                "LLM response should contain: Vendor management included handling last-minute withdrawals, such as replacing a falafel vendor with a vegetarian g\u00f6zleme stall",
+                "LLM response should contain: stress management and delegation were key to handling last-minute changes, supported by organized communication, mindfulness, and contingency planning"
+            ]
+        },
+        {
+            "question": "Can you give me a summary of how the volunteer training and crowd management preparations are planned for the festival?",
+            "ideal_summary": "The volunteer training for the festival is scheduled with key sessions on June 1 and June 10, focusing on roles, emergency response, communication, and crowd management. Preparations include detailed training materials, role-playing exercises, and practical drills to ensure volunteers are confident and ready. Additionally, attending the Crowd Management Seminar on May 10 at the local fire station will provide valuable knowledge on crowd behavior, control techniques, emergency preparedness, and coordination with authorities, which will be integrated into volunteer training and event planning to ensure safety and smooth operations.",
+            "difficulty": "easy",
+            "summarization_type": "simple_topic_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 3,
+            "key_elements_tested": [
+                "basic topic overview",
+                "combining training and seminar info",
+                "simple narrative coherence"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a concise summary",
+            "source_chat_ids": [
+                436,
+                443,
+                449,
+                451,
+                726,
+                727,
+                733,
+                739,
+                992,
+                993,
+                1004
+            ],
+            "rubric": [
+                "LLM response should contain: The volunteer training for the festival is scheduled on June 1 and June 10",
+                "LLM response should contain: Preparations include detailed training materials",
+                "LLM response should contain: Preparations include role-playing exercises",
+                "LLM response should contain: Preparations include practical drills to ensure volunteers are confident and ready",
+                "LLM response should contain: attending the Crowd Management Seminar on May 10 at the local fire station will provide valuable knowledge on crowd behavior"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I planned to reach out to Kathleen to confirm her stalls and when the falafel vendor withdrew from the festival?",
+            "answer": "136 days passed between when you planned to reach out to Kathleen on January 5 and when the falafel vendor withdrew on May 21.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "January 5: planned outreach to Kathleen",
+                "May 21: falafel vendor withdrawal"
+            ],
+            "conversation_references": [
+                "Session 54: planning outreach to Kathleen",
+                "Session 1442: falafel vendor withdrawal"
+            ],
+            "calculation_required": "May 21 - January 5 = 136 days (requires recalling both event dates and calculating the difference)",
+            "source_chat_ids": {
+                "first_event": [
+                    54
+                ],
+                "second_event": [
+                    1442
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 136 days",
+                "LLM response should state: from January 5 till May 21"
+            ]
+        },
+        {
+            "question": "How many hours will the kids' puppet show and face painting activities overlap on the day of the festival?",
+            "answer": "The puppet show is scheduled to start at 3 PM and the face painting runs from 2 PM to 5 PM, so they overlap for 2 hours from 3 PM to 5 PM.",
+            "difficulty": "medium",
+            "temporal_type": "inferential_duration_calculation",
+            "time_points": [
+                "Puppet show start: 3 PM (chat_id 628)",
+                "Face painting session: 2 PM to 5 PM (chat_id 1148)"
+            ],
+            "conversation_references": [
+                "Session with puppet show timing",
+                "Session with face painting timing"
+            ],
+            "calculation_required": "Overlap between 3 PM\u20135 PM (puppet show) and 2 PM\u20135 PM (face painting) = 2 hours",
+            "source_chat_ids": {
+                "first_event": [
+                    628
+                ],
+                "second_event": [
+                    1148
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 hours",
+                "LLM response should state: Puppet show start 3 PM end 5 PM",
+                "LLM response should state: Face painting session start 2 PM end 5 PM"
+            ]
+        }
+    ]
+}

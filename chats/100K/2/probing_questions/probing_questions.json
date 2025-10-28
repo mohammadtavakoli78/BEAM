@@ -1,0 +1,535 @@
+{
+    "abstention": [
+        {
+            "question": "What are the specific ESLint rules from the Airbnb style guide that I enforced in this project?",
+            "ideal_response": "Based on the provided chat, there is no information related to the specific ESLint rules enforced from the Airbnb style guide.",
+            "difficulty": "hard",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan states ESLint with Airbnb style guide is used but does not specify which rules or configurations were applied.",
+            "plan_reference": "Batch 1, Bullet 20",
+            "rubric": [
+                "Based on the provided chat, there is no information related to the specific ESLint rules enforced from the Airbnb style guide"
+            ]
+        },
+        {
+            "question": "What specific bugs were logged in the Jira board besides the 'TypeError' in autocomplete.js?",
+            "ideal_response": "Based on the provided chat, there is no information related to any other bugs logged in the Jira board besides the mentioned TypeError.",
+            "difficulty": "medium",
+            "abstention_type": "missing_detail",
+            "why_unanswerable": "The plan only mentions one specific bug and does not list any others.",
+            "plan_reference": "Batch 2, Bullet 8",
+            "rubric": [
+                "Based on the provided chat, there is no information related to any other bugs logged in the Jira board besides the mentioned TypeError"
+            ]
+        }
+    ],
+    "contradiction_resolution": [ 
+        {
+            "question": "Have I obtained an API key for this project?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have an API key for the project, but you also mentioned that you have never obtained one. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "API key acquisition status",
+            "conversation_references": [
+                "Session 32, 34, 36: API key obtained and usage",
+                "Session 70: No API key obtained"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    32,
+                    34,
+                    36
+                ],
+                "second_statement": [
+                    70
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you have an API key for the project",
+                "LLM response should mention: you also mentioned that you have never obtained one",
+                "LLM response should mention: which statement is correct?"
+            ]
+        },
+        {
+            "question": "Have I ever fixed any bugs related to the autocomplete feature in my project?",
+            "ideal_answer": "I notice you've mentioned contradictory information about this. You said you fixed bugs by adding null checks that reduced error rates, but you also mentioned never fixing any bugs related to the autocomplete feature. Could you clarify which is correct?",
+            "difficulty": "clear",
+            "contradiction_type": "never_statement_violation",
+            "topic_questioned": "Bug fixes related to the autocomplete feature",
+            "conversation_references": [
+                "Session 88: Bug fix with null checks",
+                "Session 132: Never fixed autocomplete bugs"
+            ],
+            "tests_for": "LLM should detect contradiction and request clarification instead of giving definitive answer",
+            "source_chat_ids": {
+                "first_statement": [
+                    88
+                ],
+                "second_statement": [
+                    132
+                ]
+            },
+            "rubric": [
+                "LLM response should state: there is contradictory information",
+                "LLM response should mention: You said you fixed bugs by adding null checks that reduced error rates",
+                "LLM response should mention: you also mentioned never fixing any bugs related to the autocomplete feature",
+                "LLM response should mention: which statement is correct?"
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "question": "Can you list the order in which I brought up different aspects of implementing the city autocomplete feature across our conversations, in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned aspects of the city autocomplete feature in this order: 1) Implementing debounce delay to reduce API calls, 2) Handling API response times exceeding the debounce delay, 3) Addressing rapid user input potentially bypassing debounce, 4) Managing the 5-item dropdown and error handling including HTTP 401 Unauthorized, 5) Reviewing event listener removal to prevent memory leaks in the autocomplete component.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 20: Debounce implementation and initial code",
+                "Session 22: Handling slow API responses",
+                "Session 24: Concerns about rapid user input and debounce",
+                "Session 74: Dropdown limit, error handling, and HTTP 401",
+                "Session 160: Event listener removal and memory leak issues"
+            ],
+            "ordering_tested": [
+                "1st: Debounce implementation",
+                "2nd: API response time handling",
+                "3rd: Rapid input and debounce concerns",
+                "4th: Dropdown and error handling",
+                "5th: Event listener cleanup"
+            ],
+            "source_chat_ids": [
+                20,
+                22,
+                24,
+                74,
+                160
+            ],
+            "rubric": [
+                "Debounce implementation",
+                "API response time handling",
+                "Rapid input and debounce concerns",
+                "Dropdown and error handling",
+                "Event listener cleanup"
+            ]
+        },
+        {
+            "question": "Can you list the order in which I brought up different aspects of handling errors and promise rejections in my weather app code throughout our conversations in order? Mention ONLY and ONLY five items.",
+            "answer": "You mentioned these aspects in this order: 1) Handling user-friendly messages for specific HTTP error codes while using asynchronous fetch calls, 2) Implementing try/catch blocks around async fetch calls to catch errors, 3) Encountering and addressing unhandled promise rejection warnings despite try/catch usage, 4) Improving error handling to better manage invalid city names, 5) Refining the fetch function to enhance user experience with error feedback.",
+            "difficulty": "medium",
+            "ordering_type": "mention_sequence",
+            "total_mentions": 5,
+            "conversation_references": [
+                "Session 1: Handling HTTP 404 and 400 errors with user-friendly messages",
+                "Session 2: Adding try/catch blocks around async fetch calls",
+                "Session 2: Dealing with unhandled promise rejection warnings",
+                "Session 1: Improving error handling for invalid city names",
+                "Session 2: Refining fetch function for better user experience"
+            ],
+            "ordering_tested": [
+                "1st: User-friendly HTTP error handling",
+                "2nd: Try/catch implementation",
+                "3rd: Unhandled promise rejection issue",
+                "4th: Invalid city name error handling improvements",
+                "5th: Fetch function refinement for UX"
+            ],
+            "source_chat_ids": [
+                28,
+                162
+            ],
+            "rubric": [
+                "User-friendly HTTP error handling",
+                "Try/catch implementation",
+                "Unhandled promise rejection issue",
+                "Invalid city name error handling improvements",
+                "Fetch function refinement for UX"
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "question": "What technologies did I say I was using to start my project targeting that API endpoint?",
+            "answer": "You said you were using vanilla JavaScript ES2021, HTML5, and CSS3.",
+            "difficulty": "easy",
+            "question_type": "numerical_precision",
+            "conversation_reference": "Turn 1: USER message describing project initialization with vanilla JavaScript ES2021, HTML5, CSS3 targeting the OpenWeather API endpoint",
+            "key_facts_tested": [
+                "vanilla JavaScript ES2021",
+                "HTML5",
+                "CSS3"
+            ],
+            "source_chat_ids": [
+                10
+            ],
+            "rubric": [
+                "LLM response should state: vanilla JavaScript ES2021",
+                "LLM response should state: HTML5",
+                "LLM response should state: CSS3"
+            ]
+        },
+        {
+            "question": "How did you recommend managing the flow of requests when my app risks overwhelming the service due to frequent retries and bursts of activity?",
+            "answer": "I recommended implementing a queue system combined with resetting counters based on elapsed time intervals, and to handle repeated retries, I suggested adding exponential backoff with capped delays to space out the queued API calls and prevent exceeding the allowed usage limits.",
+            "difficulty": "hard",
+            "question_type": "Problem-Solution Context",
+            "conversation_reference": "Multiple turns: initial rate limit handling, queuing for concurrent calls, handling rapid consecutive calls, and managing retries with exponential backoff",
+            "key_facts_tested": [
+                "use of counters reset by time intervals",
+                "queue to hold excess calls",
+                "processing queue after successful calls",
+                "exponential backoff for retries",
+                "capping backoff time to avoid long delays"
+            ],
+            "extraction_challenge": "LLM must integrate details about rate limit tracking, queue management, handling rapid calls, and retry strategies with backoff from multiple assistant responses to explain the comprehensive approach",
+            "source_chat_ids": [
+                33,
+                35,
+                37
+            ],
+            "rubric": [
+                "LLM response should state: I recommended implementing a queue system combined with resetting counters based on elapsed time intervals",
+                "LLM response should state: I recommended handle repeated retries",
+                "LLM response should state: I suggested adding exponential backoff with capped delays"
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "question": "What are some common responses when something goes wrong with an API?",
+            "instruction_being_tested": "Always include error status codes in responses when I ask about API error handling.",
+            "expected_compliance": "Response should include error status codes as part of the explanation about API issues.",
+            "compliance_indicators": [
+                "mentions specific status codes like 404, 500, 401",
+                "includes numeric codes associated with errors",
+                "lists standard response codes for failures"
+            ],
+            "non_compliance_signs": [
+                "only describes errors in words without codes",
+                "general explanation without any numeric codes",
+                "no mention of specific response identifiers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                130
+            ],
+            "rubric": [
+                "LLM response should contain: includes numeric codes associated with errors"
+            ]
+        },
+        {
+            "question": "When building an application that communicates with a REST API, what typical errors should I be prepared to handle?",
+            "instruction_being_tested": "Always include error status codes in responses when I ask about API error handling.",
+            "expected_compliance": "Response should include error status codes as part of the explanation about API issues.",
+            "compliance_indicators": [
+                "mentions specific status codes like 404, 500, 401",
+                "includes numeric codes associated with errors",
+                "lists standard response codes for failures"
+            ],
+            "non_compliance_signs": [
+                "only describes errors in words without codes",
+                "general explanation without any numeric codes",
+                "no mention of specific response identifiers"
+            ],
+            "difficulty": "medium",
+            "instruction_type": "format_instruction",
+            "source_chat_ids": [
+                130
+            ],
+            "rubric": [
+                "LLM response should contain: includes numeric codes associated with errors"
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "question": "What is the daily call quota for the API key used in my application?",
+            "answer": "1,200 calls per day",
+            "difficulty": "easy",
+            "update_type": "quota_increase",
+            "tests_retention_of": "the current daily call quota for the API key",
+            "conversation_references": [
+                "Development Status: Initial API key obtained on March 10, 2024, with 60 calls/minute rate limit and 1,000 calls/day quota.",
+                "Information Update: The API key\u2019s daily quota has been adjusted to accommodate 1,200 calls per day to support increased testing demands."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 1,000 calls/day quota instead of the updated 1,200 calls/day quota",
+            "source_chat_ids": {
+                "original_info": [
+                    32
+                ],
+                "updated_info": [
+                    66
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 1,200 calls per day"
+            ]
+        },
+        {
+            "question": "What is the test coverage percentage for my API integration module?",
+            "answer": "78%",
+            "difficulty": "easy",
+            "update_type": "coverage_increase",
+            "tests_retention_of": "updated unit test coverage percentage",
+            "conversation_references": [
+                "Testing & Quality Assurance: Achieved 65% test coverage on API integration module after initial test suite run on March 27, 2024.",
+                "Information Update: The unit test coverage has recently increased to 78%, reflecting ongoing improvements in API integration reliability."
+            ],
+            "potential_confusion": "LLM might incorrectly recall the original 65% test coverage instead of the updated 78%",
+            "source_chat_ids": {
+                "original_info": [
+                    114
+                ],
+                "updated_info": [
+                    128
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 78%"
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "question": "How many different features or concerns did I mention wanting to handle across my weather app conversations?",
+            "answer": "Four",
+            "difficulty": "easy",
+            "reasoning_type": "straightforward_counting",
+            "sessions_required": 3,
+            "conversation_references": [
+                "Handling API rate limits and retries",
+                "Implementing a custom feature to avoid external dependencies",
+                "Understanding uptime monitoring results"
+            ],
+            "reasoning_steps": [
+                "Identify the API rate limit handling concern from the first set of sessions.",
+                "Count the custom feature implementation desire from the middle session.",
+                "Include the uptime monitoring understanding from the last session.",
+                "Sum these distinct features or concerns mentioned by the user."
+            ],
+            "source_chat_ids": [
+                32,
+                34,
+                36,
+                122,
+                190
+            ],
+            "rubric": [
+                "LLM response should state: Four"
+            ]
+        },
+        {
+            "question": "Between my fetch call latency and my autocomplete API response time, which one is currently faster based on my tests?",
+            "answer": "Your fetch call latency is faster than your autocomplete API response time.",
+            "difficulty": "easy",
+            "reasoning_type": "simple_comparison",
+            "sessions_required": 2,
+            "conversation_references": [
+                "fetch call latency in prototype",
+                "autocomplete feature response time"
+            ],
+            "reasoning_steps": [
+                "Identify the fetch call latency value from the first session.",
+                "Identify the autocomplete API response time from the second session.",
+                "Compare the two latency values to determine which is faster."
+            ],
+            "source_chat_ids": [
+                38,
+                80
+            ],
+            "rubric": [
+                "LLM response should state: fetch call latency is faster"
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "question": "Can you help me set up a caching system for my app's API responses? I'd like to keep it simple and straightforward.",
+            "preference_being_tested": "I prefer lightweight, dependency-free solutions over heavy frameworks to keep app size under 2.5MB total.",
+            "expected_compliance": "Response should suggest a caching approach that avoids heavy frameworks and external dependencies, using minimal or built-in features to keep the app size small.",
+            "compliance_indicators": [
+                "recommends using localStorage or in-memory cache",
+                "avoids suggesting large libraries or frameworks",
+                "focuses on simple, native browser APIs",
+                "provides lightweight code examples"
+            ],
+            "non_compliance_signs": [
+                "suggests heavy or large external libraries",
+                "recommends complex frameworks",
+                "ignores app size constraints",
+                "proposes solutions with many dependencies"
+            ],
+            "difficulty": "medium",
+            "preference_type": "implementation approach",
+            "source_chat_ids": [
+                54
+            ],
+            "rubric": [
+                "LLM response should contain: recommends using localStorage or in-memory cache",
+                "LLM response should contain: avoids suggesting large libraries or frameworks"
+            ]
+        },
+        {
+            "question": "How can I track the status and results of each step in my deployment workflow?",
+            "preference_being_tested": "I prefer automated CI/CD pipelines to manual deployments to reduce human error and speed up release cycles.",
+            "expected_compliance": "Response should focus on features and tools that support automated pipeline monitoring rather than manual deployment tracking methods, aligning with the user's preference for automation.",
+            "compliance_indicators": [
+                "mentions automated workflow monitoring tools",
+                "references CI/CD pipeline status dashboards",
+                "suggests ways to get real-time updates on automated jobs",
+                "avoids recommending manual deployment checks"
+            ],
+            "non_compliance_signs": [
+                "only suggests manual deployment tracking",
+                "ignores automated pipeline monitoring options",
+                "recommends manual status checks or logs exclusively",
+                "does not address automated workflow progress tracking"
+            ],
+            "difficulty": "medium",
+            "preference_type": "deployment method",
+            "source_chat_ids": [
+                182,
+                184
+            ],
+            "rubric": [
+                "LLM response should contain: mentions automated workflow monitoring tools",
+                "LLM response should contain: avoids recommending manual deployment checks"
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "question": "Can you give me a comprehensive summary of how my weather app project has progressed, including the key features, improvements, and development steps we've discussed so far?",
+            "ideal_summary": "Your weather app project began with a basic implementation using JavaScript and the OpenWeather API, where you sought guidance on structuring your code and improving error handling. The assistant recommended modularizing the code, validating inputs, and managing configuration separately to enhance robustness. Next, you explored adding an autocomplete feature with a debounce delay to improve user experience by reducing unnecessary API calls, which involved implementing a debounce function, fetching suggestions, and updating the UI dynamically. Later, you expressed a preference for keeping the app lightweight and dependency-free, prompting the assistant to suggest simple caching mechanisms using either in-memory storage or localStorage, including strategies to add expiration to cached data to maintain freshness. Additionally, you wanted to maintain full control by implementing custom features without external dependencies, leading to a step-by-step guide on defining requirements, designing, coding, integrating, testing, optimizing, and documenting a custom weather forecast feature. Throughout these stages, the project evolved from basic functionality to a more sophisticated, efficient, and maintainable application with enhanced user interaction and performance considerations.",
+            "difficulty": "medium",
+            "summarization_type": "progressive_overview",
+            "bullet_points_covered": 5,
+            "conversation_sessions": [
+                6,
+                7,
+                8,
+                9,
+                54,
+                55,
+                122,
+                123
+            ],
+            "key_elements_tested": [
+                "project progression",
+                "feature development",
+                "code improvement",
+                "performance optimization",
+                "custom implementation"
+            ],
+            "synthesis_required": "Integrating multiple development phases and feature additions into a coherent narrative showing project evolution",
+            "source_chat_ids": [
+                6,
+                7,
+                8,
+                9,
+                54,
+                55,
+                122,
+                123
+            ],
+            "rubric": [
+                "LLM response should contain: weather app project began with a basic implementation using JavaScript and the OpenWeather API",
+                "LLM response should contain: I recommended modularizing the code, validating inputs, and managing configuration separately to enhance robustness",
+                "LLM response should contain: you explored adding an autocomplete feature with a debounce delay to improve user experience by reducing unnecessary API calls",
+                "LLM response should contain: implementing a debounce function, fetching suggestions, and updating the UI dynamically",
+                "LLM response should contain: you expressed a preference for keeping the app lightweight and dependency-free, prompting me to suggest simple caching mechanisms",
+                "LLM response should contain: you wanted to maintain full control by implementing custom features without external dependencies, leading to a step-by-step guide on defining requirements"
+            ]
+        },
+        {
+            "question": "Can you summarize what I learned about implementing and improving city autocomplete features in my weather app?",
+            "ideal_summary": "You explored how to implement a city autocomplete feature using the OpenWeather Geocoding API with a 300ms debounce to reduce API calls. The implementation included adding error handling, displaying autocomplete suggestions, and fetching weather data for selected cities. Later, you improved the feature by handling slow API responses with request cancellation using AbortController and considered adjusting debounce delays for rapid typing. Finally, you reviewed ways to optimize API call efficiency through caching, conditional fetching, and adding loading indicators to enhance user experience.",
+            "difficulty": "easy",
+            "summarization_type": "simple_learning_summary",
+            "bullet_points_covered": 3,
+            "conversation_sessions": 20,
+            "key_elements_tested": [
+                "basic feature implementation",
+                "handling API response delays",
+                "optimizing API calls and UX"
+            ],
+            "synthesis_required": "Combining straightforward details from multiple sessions into a clear overview",
+            "source_chat_ids": [
+                20,
+                21,
+                23,
+                25,
+                52,
+                53,
+                94,
+                95,
+                96,
+                97
+            ],
+            "rubric": [
+                "LLM response should contain: You explored how to implement a city autocomplete feature using the OpenWeather Geocoding API with a 300ms debounce to reduce API calls",
+                "LLM response should contain: The implementation included adding error handling, displaying autocomplete suggestions, and fetching weather data for selected cities",
+                "LLM response should contain: you improved the feature by handling slow API responses with request cancellation using AbortController and considered adjusting debounce delays for rapid typing",
+                "LLM response should contain: you reviewed ways to optimize API call efficiency through caching, conditional fetching, and adding loading indicators"
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "question": "How many days passed between when I obtained my OpenWeather API key and when I completed the UI wireframe for my weather app?",
+            "answer": "2 days passed between obtaining the OpenWeather API key on March 10, 2024, and completing the UI wireframe on March 12, 2024.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 10, 2024: obtained OpenWeather API key",
+                "March 12, 2024: completed UI wireframe"
+            ],
+            "conversation_references": [
+                "Session 1: API key obtained and rate limit handling",
+                "Session 2: UI wireframe completion"
+            ],
+            "calculation_required": "March 12 - March 10 = 2 days",
+            "source_chat_ids": {
+                "first_event": [
+                    32
+                ],
+                "second_event": [
+                    42
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 2 days",
+                "LLM response should state: from March 10 till March 12"
+            ]
+        },
+        {
+            "question": "How many days do I have between scheduling the meeting and the start of the testing period for my project?",
+            "answer": "There are 21 days between scheduling the meeting on March 15 and the start of the two-week testing period beginning April 5.",
+            "difficulty": "easy",
+            "temporal_type": "duration_calculation",
+            "time_points": [
+                "March 15: meeting scheduled",
+                "April 5: testing period starts (two weeks before deployment)"
+            ],
+            "conversation_references": [
+                "Session 0: Meeting scheduling",
+                "Session 50: Project deadline and testing period"
+            ],
+            "calculation_required": "April 5 - March 15 = 21 days",
+            "source_chat_ids": {
+                "first_event": [
+                    0
+                ],
+                "second_event": [
+                    50
+                ]
+            },
+            "rubric": [
+                "LLM response should state: 21 days",
+                "LLM response should state: from March 15 till April 5"
+            ]
+        }
+    ]
+}
