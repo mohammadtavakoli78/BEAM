@@ -202,5 +202,18 @@ This script combines evaluation results across models and probing categories and
 
 If you find this work helpful or use the code or dataset, please cite the following paper:
 
-**BEYOND A MILLION TOKENS: BENCHMARKING AND ENHANCING LONG-TERM MEMORY IN LLMS**  
-[]()
+[Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs](https://arxiv.org/abs/2510.27246)
+
+```
+@misc{tavakoli2025milliontokensbenchmarkingenhancing,
+      title={Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs}, 
+      author={Mohammad Tavakoli and Alireza Salemi and Carrie Ye and Mohamed Abdalla and Hamed Zamani and J Ross Mitchell},
+      year={2025},
+      eprint={2510.27246},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.27246}, 
+}
+```
+
+
