@@ -33,6 +33,28 @@ BEAM consists of 100 conversations distributed as follows:
 9. **Summarization**: Assesses the ability to abstract and compress dialogue content
 10. **Temporal Reasoning**: Tests reasoning about explicit and implicit time relations
 
+## ⚙️ LIGHT Framework
+
+**LIGHT** is a **cognitively inspired memory-augmented framework** designed to enhance long-term memory in large language models.
+
+It draws inspiration from human memory systems and integrates **three complementary components** that work together during inference:
+
+1. **Episodic Memory** – A long-term memory index that retrieves relevant information across extended contexts.  
+2. **Working Memory** – A short-term buffer that retains the most recent dialogue turns, enabling continuity and contextual relevance.  
+3. **Scratchpad** – An iteratively compressed semantic layer that tracks salient facts, user instructions, and contextual updates after each turn.
+
+At inference time, LIGHT retrieves and integrates information from all three memory systems, enabling the model to produce **more grounded, coherent, and contextually consistent responses** even in conversations spanning millions of tokens.
+
+### 🔬 Evaluation Results
+LIGHT demonstrates consistent improvements across all evaluated models on the BEAM benchmark, achieving **3.5%–12.7% higher accuracy** on probing questions compared to the strongest baselines.  
+An ablation study confirms that each component—episodic retrieval, working memory, and scratchpad—contributes complementary benefits to overall performance.
+
+### 🧩 How to Use LIGHT
+The detailed implementation of each memory component—episodic memory, working memory, and scratchpad—can be found in:
+`
+src/answer_probing_questions/light.py
+`
+
 ## 📦 Dataset Access and Download
 
 The BEAM dataset is publicly available on the [Hugging Face Hub](https://huggingface.co/datasets/Mohammadta/BEAM) and also included within this repository.
@@ -112,12 +134,12 @@ After generating the chats, the next step is to create probing questions for eac
 
 For 128K, 500K, and 1M chat sizes, run the function `create_probing_questions` inside:
 `
-main.py
+src/beam/main.py
 `
 
 For 10M chat size, run the function `ten_m_create_probing_questions` inside:
 `
-ten_milion_pipeline.py
+src/beam/ten_milion_pipeline.py
 `
 
 These functions automatically generate probing questions that evaluate ten distinct memory abilities for each conversation.
@@ -134,8 +156,9 @@ To do this:
 1. Prepare your own **chat seed information**, similar to the examples in the `topics/` directory.  
 2. Define your **LLM configurations** in `src/llms_config.json`.  
 3. Run the same **three-stage pipeline** described above (`plan → question → answer`).  
-4. Finally, create probing questions using the appropriate function (`create_probing_questions` and `ten_m_create_probing_questions`).
-   
+4. Create probing questions using the appropriate function (`create_probing_questions` and `ten_m_create_probing_questions`).
+5. Design evaluation rubrics
+
 This process automatically generates long, coherent, multi-domain dialogues ready for probing and evaluation.
 
 ---
