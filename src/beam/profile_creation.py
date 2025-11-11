@@ -6,7 +6,7 @@ import random
 import itertools
 import numpy as np
 import networkx as nx
-from llm import *
+from src.llm import *
 
 fake = Faker()
 

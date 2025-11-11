@@ -5,9 +5,9 @@ import multiprocessing as mp
 import argparse
 import time
 
-from main import generate_plans, add_special_bullets_to_plan, get_labels, get_profile, user_messages_generation_fast, answer_generation
-from ten_milion_pipeline import ten_m_plan_generation, ten_m_user_messages_generation, ten_m_answer_generation
-from llm import BuildLLm
+from src.beam.main import generate_plans, add_special_bullets_to_plan, get_labels, get_profile, user_messages_generation_fast, answer_generation
+from src.beam.ten_milion_pipeline import ten_m_plan_generation, ten_m_user_messages_generation, ten_m_answer_generation
+from src.llm import BuildLLm
 
 
 def run_plans_generation(chats_directory: str,

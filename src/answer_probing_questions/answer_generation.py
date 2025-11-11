@@ -5,8 +5,8 @@ import traceback
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from llm import BuildLLm
-from long_term_methods import probing_question_evaluation
+from src.llm import BuildLLm
+from src.answer_probing_questions.long_term_memory_methods import probing_question_evaluation
 
 model_config_default = {
     "temperature": 0,

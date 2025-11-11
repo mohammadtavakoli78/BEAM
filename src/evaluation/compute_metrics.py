@@ -11,8 +11,8 @@ import re
 import json
 from json_repair import repair_json
 
-from prompts import *
-from llm import *
+from src.prompts import *
+from src.llm import *
 
 _models = {}
 _models_lock = threading.Lock()

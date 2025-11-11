@@ -2,6 +2,10 @@
 
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+cd "$SCRIPT_DIR/../.."
+
 # === Environment variables ===
 export GPT_API_KEY=""
 
@@ -37,7 +41,7 @@ export RETRIEVER="" # bm25 | splade | e5 | dense | hybrid
 export TOP_K= 
 
 # === Run Python ===
-python answer_generation.py \
+python -m src.answer_probing_questions.answer_generation \
   --qwen_model_url "$QWEN_MODEL_URL" \
   --qwen_model_name "$QWEN_MODEL_NAME" \
   --qwen_api_key "$QWEN_API_KEY" \

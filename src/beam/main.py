@@ -16,8 +16,6 @@ import threading
 import cProfile
 import pstats
 import asyncio
-import threading
-import os
 import ast
 import multiprocessing
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
@@ -26,10 +24,10 @@ from langchain.schema import BaseMessage, HumanMessage, AIMessage
 from langchain.memory import ConversationBufferWindowMemory
 from concurrent.futures import ProcessPoolExecutor
 
-from llm import *
-from prompts import *
-from profile_creation import create_profile
-from utlis import extract_time_anchor, get_token_number
+from src.llm import *
+from src.prompts import *
+from src.beam.profile_creation import create_profile
+from src.beam.utils import extract_time_anchor, get_token_number
 
 
 class ConversationSummaryBuffer:
@@ -1338,7 +1336,7 @@ def user_messages_generation_fast(topic: str,
 
         # Extract bullets from current plan
         plan_bullets = extract_plan_bullets(cur_plan)
-
+    
         time_anchor = extract_time_anchor(plan_text=plan_bullets[0])
 
         sepcial_bullets_list = []
@@ -1872,7 +1870,7 @@ def answer_generation(input_address: str,
             print(
                 f"Error extracting messages from batch {batch_index}: {str(e)}")
             continue
-
+        
         for question_index, question in enumerate(messages):
             try:
                 if "->->" in question:

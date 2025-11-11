@@ -5,8 +5,8 @@ import time
 import traceback
 import argparse
 
-from evaluation import *
-from llm import gpt_llm
+from src.evaluation.compute_metrics import *
+from src.llm import gpt_llm
 
 
 def get_rubric(probing_questions_address: str,

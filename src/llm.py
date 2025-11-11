@@ -1,5 +1,6 @@
 from langchain_openai import ChatOpenAI
 import json
+import os
 
 
 class BuildLLm:
@@ -46,7 +47,8 @@ english_only_regex = (
     r"]*$"
 )
 
-with open("llms_config.json") as f:
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), "llms_config.json")
+with open(CONFIG_PATH) as f:
     cfg = json.load(f)
 
 llama_llm_obj = BuildLLm(**cfg["llama"],

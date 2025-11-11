@@ -10,10 +10,10 @@ import numpy as np
 import ast
 from json_repair import repair_json
 
-from llm import *
-from prompts import *
-from profile_creation import create_profile
-from main import user_messages_generation, answer_generation, extract_plan_bullets, add_special_bullets_to_plan, generate_probing_questions, user_messages_generation_fast
+from src.llm import *
+from src.prompts import *
+from src.beam.profile_creation import create_profile
+from src.beam.main import user_messages_generation, answer_generation, extract_plan_bullets, add_special_bullets_to_plan, generate_probing_questions, user_messages_generation_fast
 
 
 def generate_labels(topic: str, 

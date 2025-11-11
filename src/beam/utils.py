@@ -68,8 +68,8 @@ def parse_and_format_date(date_str: str):
     return date_str
 
 
-def show_generated_messages(input_address: str,
-                            output_address: str) -> None:
+def convert_user_messages_pickle_to_txt(input_address: str,
+                                        output_address: str) -> None:
 
     with open(input_address, 'rb') as f:
         batches = pickle.load(f)
@@ -89,8 +89,8 @@ def show_generated_messages(input_address: str,
             f.writelines(text)
 
 
-def show_generated_messages_chat_ml(input_address: str,
-                                    output_address: str) -> None:
+def convert_user_messages_pickle_to_json(input_address: str,
+                                         output_address: str) -> None:
 
     with open(input_address, 'rb') as f:
         batches = pickle.load(f)
@@ -120,8 +120,8 @@ def show_generated_messages_chat_ml(input_address: str,
         json.dump(all_batches, f, indent=4, ensure_ascii=False)
 
 
-def ten_m_show_generated_messages(input_directory: str,
-                                  llm_name: str) -> None:
+def ten_m_convert_user_messages_pickle_to_txt(input_directory: str,
+                                              llm_name: str) -> None:
 
     entries = os.listdir(input_directory)
     dirs = [name for name in entries if os.path.isdir(
@@ -133,11 +133,11 @@ def ten_m_show_generated_messages(input_directory: str,
         user_questions_address = user_questions_directory_address + ".pickle"
         output_address = user_questions_directory_address + ".txt"
 
-        show_generated_messages(
+        convert_user_messages_pickle_to_txt(
             input_address=user_questions_address, output_address=output_address)
 
 
-def all_chats_show_generated_messages(input_directory: str):
+def unified_convert_user_messages_pickle_to_json(input_directory: str):
     entries = os.listdir(input_directory)
     dirs = [name for name in entries if os.path.isdir(
         os.path.join(input_directory, name))]
@@ -155,7 +155,7 @@ def all_chats_show_generated_messages(input_directory: str):
                 user_questions_address = user_questions_directory_address + ".pickle"
                 output_address = user_questions_directory_address + ".json"
 
-                show_generated_messages_chat_ml(
+                convert_user_messages_pickle_to_json(
                     input_address=user_questions_address, output_address=output_address)
 
     else:
@@ -165,12 +165,12 @@ def all_chats_show_generated_messages(input_directory: str):
             user_questions_address = user_questions_directory_address + ".pickle"
             output_address = user_questions_directory_address + ".json"
 
-            show_generated_messages_chat_ml(
+            convert_user_messages_pickle_to_json(
                 input_address=user_questions_address, output_address=output_address)
 
 
-def show_generated_dialogues(input_address: str,
-                             output_address: str) -> None:
+def convert_chats_pickle_to_txt(input_address: str,
+                                output_address: str) -> None:
 
     with open(input_address, 'rb') as f:
         batches = pickle.load(f)
@@ -192,8 +192,8 @@ def show_generated_dialogues(input_address: str,
             f.writelines(text)
 
 
-def show_generated_dialogues_chat_ml(input_address: str,
-                                     output_address: str) -> None:
+def convert_chats_pickle_to_json(input_address: str,
+                                 output_address: str) -> None:
 
     if os.path.exists(input_address):
         with open(input_address, 'rb') as f:
@@ -228,8 +228,8 @@ def show_generated_dialogues_chat_ml(input_address: str,
             json.dump(all_dialogues, f, indent=2)
 
 
-def ten_m_show_generated_dialogues_chat_ml(input_directory: str,
-                                           llm_name: str) -> None:
+def ten_m_convert_chats_pickle_to_json(input_directory: str,
+                                       llm_name: str) -> None:
 
     entries = os.listdir(input_directory)
     dirs = [name for name in entries if os.path.isdir(
@@ -240,11 +240,11 @@ def ten_m_show_generated_dialogues_chat_ml(input_directory: str,
             input_directory, dir, f"chat_{llm_name}")
         chat_address = chat_directory_address + ".pickle"
         output_address = chat_directory_address + ".json"
-        show_generated_dialogues_chat_ml(
+        convert_chats_pickle_to_json(
             input_address=chat_address, output_address=output_address)
 
 
-def all_chats_show_generated_dialogues_chat_ml(input_directory: str):
+def unified_convert_chats_pickle_to_json(input_directory: str):
     entries = os.listdir(input_directory)
     dirs = [name for name in entries if os.path.isdir(
         os.path.join(input_directory, name))]
@@ -262,7 +262,7 @@ def all_chats_show_generated_dialogues_chat_ml(input_directory: str):
                 chat_address = chat_directory_address + ".pickle"
                 output_address = chat_directory_address + ".json"
 
-                show_generated_dialogues_chat_ml(
+                convert_chats_pickle_to_json(
                     input_address=chat_address, output_address=output_address)
     else:
         for dir in dirs:
@@ -270,7 +270,7 @@ def all_chats_show_generated_dialogues_chat_ml(input_directory: str):
                 input_directory, dir, "chat")
             chat_address = chat_directory_address + ".pickle"
             output_address = chat_directory_address + ".json"
-            show_generated_dialogues_chat_ml(
+            convert_chats_pickle_to_json(
                 input_address=chat_address, output_address=output_address)
 
 
