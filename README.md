@@ -54,7 +54,7 @@ To simplify setup, we provide a script that automatically downloads and formats 
 
 Run the following command from the root directory:
 ```bash
-python download_dataset.py
+python src/beam/download_dataset.py
 ```
 After running it, the dataset will be ready to use for model evaluation or reproduction of the results from the paper.
 
@@ -80,7 +80,7 @@ To recreate the dataset (as provided in this repository), follow these steps:
 #### Step 1: Configure LLMs
 Define your model configurations — including model URLs, names, and API keys — inside:
 ```
-llms_config.json
+src/llms_config.json
 ```
 
 #### Step 2: Run the Pipeline
@@ -89,20 +89,20 @@ The dataset generation process is divided into **three stages**, executed with `
 Each command follows this format:
 
 ```bash
-./run_pipeline.sh [llm_url] [llm_name] [llm_api_key] [stage] [start_index] [end_index] [chat_directory] [chat_size]
+bash src/beam/run_pipeline.sh [llm_url] [llm_name] [llm_api_key] [stage] [start_index] [end_index] [chat_directory] [chat_size]
 ```
 
 For example:
 
 ```bash
 # 1. Create conversation plans
-./run_pipeline.sh http://localhost:8000 llama3 my_api_key plan 0 10 chats/1M 1M
+bash src/beam/run_pipeline.sh http://localhost:8000 llama3 my_api_key plan 0 10 chats/1M 1M
 
 # 2. Create user questions
-./run_pipeline.sh http://localhost:8000 llama3 my_api_key question 0 10 chats/1M 1M
+bash src/beam/run_pipeline.sh http://localhost:8000 llama3 my_api_key question 0 10 chats/1M 1M
 
 # 3. Create assistant answers
-./run_pipeline.sh http://localhost:8000 llama3 my_api_key answer 0 10 chats/1M 1M
+bash src/beam/run_pipeline.sh http://localhost:8000 llama3 my_api_key answer 0 10 chats/1M 1M
 ```
 
 ---
@@ -132,7 +132,7 @@ You can **build your own multi-turn conversational datasets** of any size — in
 To do this:
 
 1. Prepare your own **chat seed information**, similar to the examples in the `topics/` directory.  
-2. Define your **LLM configurations** in `llms_config.json`.  
+2. Define your **LLM configurations** in `src/llms_config.json`.  
 3. Run the same **three-stage pipeline** described above (`plan → question → answer`).  
 4. Finally, create probing questions using the appropriate function (`create_probing_questions` and `ten_m_create_probing_questions`).
    
@@ -145,7 +145,7 @@ This process automatically generates long, coherent, multi-domain dialogues read
 After the dataset and probing questions are ready, generate answers using:
 
 ```bash
-bash answer_generation.sh
+bash src/model_inference/answer_generation.sh
 ```
 
 Before running, you must edit the environment variables inside the file answer_generation.sh to match your experimental setup.
@@ -165,7 +165,7 @@ Before running, you must edit the environment variables inside the file answer_g
 To evaluate the generated answers against reference probing questions, run:
 
 ```bash
-python run_evaluation.py \
+python -m src.evaluation.run_evaluation \
     --input_directory [results directory e.g. results/1M] \
     --chat_size [chat size e.g. 1M] \
     --start_index [start index] \
@@ -185,7 +185,7 @@ All evaluation scores are automatically saved in the specified results directory
 To aggregate and export evaluation results into a structured Excel file, run:
 
 ```bash
-python report_results.py \
+python -m src.evaluation.report_results.py \
     --evaluation_directory [evaluation directory e.g. results/1M/] \
     --row_names [evaluation file names to display] \
     --output_filename [output filename]
