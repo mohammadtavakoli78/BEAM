@@ -313,7 +313,8 @@ if __name__ == "__main__":
                                    model_name=args.qwen_model_name,
                                    api_key=qwen_api_key,
                                    temperature=0,
-                                   max_tokens=args.max_tokens)
+                                   max_tokens=args.max_tokens,
+                                   extra_body={"chat_template_kwargs": {"enable_thinking": False}})
     qwen_llm = qwen_awq_32_llm_obj.build_llm()
 
     reader_llm_obj = BuildLLm(model_url=args.reader_model_url,
