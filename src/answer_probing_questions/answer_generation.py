@@ -302,22 +302,25 @@ if __name__ == "__main__":
         raise RuntimeError(
             "reader_api_key missing: set --reader_model_api_key or BEAM_READER_API_KEY."
         )
-    gpt_llm_obj = BuildLLm(model_url=None, 
+    gpt_llm_obj = BuildLLm(model_url=None,
                            model_name="gpt-4.1-mini",
                            api_key=gpt_api_key,
-                           temperature=0)
+                           temperature=0,
+                           max_tokens=args.max_tokens)
     gpt_llm = gpt_llm_obj.build_llm()
 
     qwen_awq_32_llm_obj = BuildLLm(model_url=args.qwen_model_url,
                                    model_name=args.qwen_model_name,
                                    api_key=qwen_api_key,
-                                   temperature=0)
+                                   temperature=0,
+                                   max_tokens=args.max_tokens)
     qwen_llm = qwen_awq_32_llm_obj.build_llm()
 
     reader_llm_obj = BuildLLm(model_url=args.reader_model_url,
                                    model_name=args.reader_model_name,
                                    api_key=reader_api_key,
-                                   temperature=0)
+                                   temperature=0,
+                                   max_tokens=args.max_tokens)
     reader_llm = reader_llm_obj.build_llm()
     
     model_config = {}
