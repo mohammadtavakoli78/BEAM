@@ -120,7 +120,7 @@ def create_scratch_pad(messages: list,
             content += scratch_pad["response"] + "\n\n"
 
         prompt = scratchpad_summarizer_all_at_once_prompt.replace("<content>", content) \
-                                                         .replace("<tokens_limit>", tokens_limit)
+                                                         .replace("<tokens_limit>", str(tokens_limit))
 
         response = gpt_llm.invoke(prompt).content
 
@@ -134,7 +134,7 @@ def create_scratch_pad(messages: list,
 
             if len(content) // 3.7 > tokens_limit*2:
                 prompt = scratchpad_summarizer_iterative_prompt.replace("<content>", content) \
-                                                               .replace("<tokens_limit>", tokens_limit)
+                                                               .replace("<tokens_limit>", str(tokens_limit))
 
                 response = gpt_llm.invoke(prompt).content
 
