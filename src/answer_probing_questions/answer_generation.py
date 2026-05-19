@@ -308,12 +308,10 @@ if __name__ == "__main__":
                            temperature=0)
     gpt_llm = gpt_llm_obj.build_llm()
 
-    english_only_regex = "[\\u0000-\\u2E7F]+"
     qwen_awq_32_llm_obj = BuildLLm(model_url=args.qwen_model_url,
                                    model_name=args.qwen_model_name,
                                    api_key=qwen_api_key,
-                                   temperature=0,
-                                   extra_body={"guided_regex": english_only_regex})
+                                   temperature=0)
     qwen_llm = qwen_awq_32_llm_obj.build_llm()
 
     reader_llm_obj = BuildLLm(model_url=args.reader_model_url,
