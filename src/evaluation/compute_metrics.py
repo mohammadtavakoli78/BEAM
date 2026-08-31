@@ -354,7 +354,7 @@ def evaluate_abstention(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -382,7 +382,7 @@ def evaluate_contradiction_resolution(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -398,9 +398,9 @@ def evaluate_event_ordering(rubric: list,
                             probing_question: str,
                             model):
 
-    system_list = extract_facts(paragraph=llm_response,
-                                question=probing_question,
-                                model=model)
+    # system_list = extract_facts(paragraph=llm_response,
+    #                             question=probing_question,
+    #                             model=model)
 
     system_list = llm_response.split("\n")
 
@@ -451,7 +451,7 @@ def evaluate_information_extraction(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -480,7 +480,7 @@ def evaluate_instruction_following(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -509,7 +509,7 @@ def evaluate_knowledge_update(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -538,7 +538,7 @@ def evaluate_multi_session_reasoning(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -567,7 +567,7 @@ def evaluate_preference_following(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -596,7 +596,7 @@ def evaluate_summarization(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)
@@ -625,7 +625,7 @@ def evaluate_temporal_reasoning(rubric: list,
         except:
             response = json.loads(repair_json(response))
 
-        score += int(response['score'])
+        score += float(response['score'])
         llm_judge_responses.append(response)
 
     llm_judge_score = score / len(rubric)

@@ -11548,7 +11548,6 @@ unified_llm_judge_base_prompt = """
 You are an expert evaluator tasked with judging whether the LLM's response demonstrates compliance with the specified RUBRIC CRITERION.
 
 ## EVALUATION INPUTS
-- QUESTION (what the user asked): <question>
 - RUBRIC CRITERION (what to check): <rubric_item>
 - RESPONSE TO EVALUATE: <llm_response>
 
@@ -11559,8 +11558,8 @@ The rubric defines a specific requirement, constraint, or expected behavior that
 - **Positive requirements** (things the response SHOULD include/do)
 - **Negative constraints** (things the response SHOULD NOT include/do, often indicated by "no", "not", "avoid", "absent")
 
-## RESPONSIVENESS REQUIREMENT (anchored to the QUESTION)
-A compliant response must be **on-topic with respect to the QUESTION** and attempt to answer it.
+## RESPONSIVENESS REQUIREMENT
+A compliant response must be **on-topic** and attempt to answer it.
 - If the response does not address the QUESTION, score **0.0** and stop.
 - For negative constraints, both must hold: (a) the response is responsive to the QUESTION, and (b) the prohibited element is absent.
 
