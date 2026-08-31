@@ -229,17 +229,17 @@ def parse_args():
                         required=True, help="URL of the LLM server")
     parser.add_argument("--qwen_model_name", type=str,
                         required=True, help="Directory of the LLM")
-    parser.add_argument("--qwen_api_key", type=str, required=True,
+    parser.add_argument("--qwen_api_key", type=str, required=False, default=None,
                         help="API key for authentication")
 
     parser.add_argument("--reader_model_url", type=str,
                         required=True, help="URL of the LLM server")
     parser.add_argument("--reader_model_name", type=str,
                         required=True, help="Directory of the LLM")
-    parser.add_argument("--reader_model_api_key", type=str, required=True,
+    parser.add_argument("--reader_model_api_key", type=str, required=False, default=None,
                         help="API key for authentication")
     
-    parser.add_argument("--gpt_api_key", type=str, required=True,
+    parser.add_argument("--gpt_api_key", type=str, required=False, default=None,
                         help="API key for authentication")
     
     parser.add_argument("--input_directory", type=str, required=True,
@@ -285,25 +285,43 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
 
-    gpt_api_key = args.gpt_api_key
-    gpt_llm_obj = BuildLLm(model_url=None, 
+    gpt_api_key = (args.gpt_api_key
+                   or os.environ.get("BEAM_GPT_API_KEY")
+                   or os.environ.get("OPENAI_API_KEY"))
+    qwen_api_key = args.qwen_api_key or os.environ.get("BEAM_QWEN_API_KEY")
+    reader_api_key = args.reader_model_api_key or os.environ.get("BEAM_READER_API_KEY")
+    if not gpt_api_key:
+        raise RuntimeError(
+            "gpt_api_key missing: set --gpt_api_key, BEAM_GPT_API_KEY, or OPENAI_API_KEY."
+        )
+    if not qwen_api_key:
+        raise RuntimeError(
+            "qwen_api_key missing: set --qwen_api_key or BEAM_QWEN_API_KEY."
+        )
+    if not reader_api_key:
+        raise RuntimeError(
+            "reader_api_key missing: set --reader_model_api_key or BEAM_READER_API_KEY."
+        )
+    gpt_llm_obj = BuildLLm(model_url=None,
                            model_name="gpt-4.1-mini",
                            api_key=gpt_api_key,
-                           temperature=0)
+                           temperature=0,
+                           max_tokens=args.max_tokens)
     gpt_llm = gpt_llm_obj.build_llm()
 
-    english_only_regex = "[\\u0000-\\u2E7F]+"
     qwen_awq_32_llm_obj = BuildLLm(model_url=args.qwen_model_url,
                                    model_name=args.qwen_model_name,
-                                   api_key=args.qwen_api_key,
+                                   api_key=qwen_api_key,
                                    temperature=0,
-                                   extra_body={"guided_regex": english_only_regex})
+                                   max_tokens=args.max_tokens,
+                                   extra_body={"chat_template_kwargs": {"enable_thinking": False}})
     qwen_llm = qwen_awq_32_llm_obj.build_llm()
 
     reader_llm_obj = BuildLLm(model_url=args.reader_model_url,
                                    model_name=args.reader_model_name,
-                                   api_key=args.reader_model_api_key,
-                                   temperature=0)
+                                   api_key=reader_api_key,
+                                   temperature=0,
+                                   max_tokens=args.max_tokens)
     reader_llm = reader_llm_obj.build_llm()
     
     model_config = {}

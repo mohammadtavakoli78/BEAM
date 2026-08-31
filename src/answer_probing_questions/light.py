@@ -1,10 +1,62 @@
 import os
 os.environ["HF_HUB_DISABLE_XET"] = "1"
+import asyncio
 import pickle
+import threading
 from langchain_experimental.text_splitter import SemanticChunker
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from src.prompts import *
+
+_thread_local_runner = threading.local()
+_thread_local_qwen = threading.local()
+
+
+def _get_thread_runner():
+    """Thread-local ``asyncio.Runner`` so LangChain's cached
+    ``httpx.AsyncClient`` pool inside ``qwen_llm`` stays alive across
+    ``noise_filtering`` invocations.
+
+    ``asyncio.run()`` creates AND closes the event loop per call;
+    ``langchain-openai`` caches the httpx client via ``@lru_cache`` on
+    the LLM object, and the client's connection pool is bound to the
+    loop where it was first created. After the first ``asyncio.run()``
+    closes that loop, every subsequent ``.abatch()`` call hits a dead
+    loop -> ``RuntimeError: Event loop is closed`` or
+    ``openai.APIConnectionError``. See LangChain issue #35783 for the
+    underlying httpx-pool / event-loop binding behavior.
+    """
+    if not hasattr(_thread_local_runner, "runner"):
+        _thread_local_runner.runner = asyncio.Runner()
+    return _thread_local_runner.runner
+
+
+def _get_thread_qwen():
+    """Per-thread fresh ``ChatOpenAI`` so its lazily-bound
+    ``httpx.AsyncClient`` is created in THIS thread's
+    ``asyncio.Runner`` loop (not whichever thread happened to call
+    ``.abatch()`` first against the shared module-level ``qwen_llm``
+    singleton).
+
+    NOTE: we do NOT call the singleton's ``build_llm()`` method
+    because that mutates ``self.llm`` on the singleton, racing on the
+    assignment when concurrent BEAM threads call it. Instead we
+    construct ``ChatOpenAI`` directly from the singleton's immutable
+    config attributes, so each thread gets its own LLM instance with
+    zero shared mutable state.
+    """
+    if not hasattr(_thread_local_qwen, "qwen"):
+        from langchain_openai import ChatOpenAI
+        from src.llm import qwen_awq_32_llm_obj as _o
+        _thread_local_qwen.qwen = ChatOpenAI(
+            model=_o.model_name,
+            openai_api_key=_o.api_key,
+            openai_api_base=_o.model_url,
+            temperature=_o.temperature,
+            extra_body=_o.extra_body,
+            max_tokens=_o.max_tokens,
+        )
+    return _thread_local_qwen.qwen
 
 
 def create_scratch_pad(messages: list,
@@ -120,7 +172,7 @@ def create_scratch_pad(messages: list,
             content += scratch_pad["response"] + "\n\n"
 
         prompt = scratchpad_summarizer_all_at_once_prompt.replace("<content>", content) \
-                                                         .replace("<tokens_limit>", tokens_limit)
+                                                         .replace("<tokens_limit>", str(tokens_limit))
 
         response = gpt_llm.invoke(prompt).content
 
@@ -134,7 +186,7 @@ def create_scratch_pad(messages: list,
 
             if len(content) // 3.7 > tokens_limit*2:
                 prompt = scratchpad_summarizer_iterative_prompt.replace("<content>", content) \
-                                                               .replace("<tokens_limit>", tokens_limit)
+                                                               .replace("<tokens_limit>", str(tokens_limit))
 
                 response = gpt_llm.invoke(prompt).content
 
@@ -507,15 +559,28 @@ def noise_filtering(result: list,
         )
         docs = chunker.create_documents([scratch_pad])
 
-        for doc in docs:
-            doc_text = doc.page_content
-
-            prompt = filter_chunk_context_prompt.replace("<query>", query) \
-                                                .replace("<doc_text>", doc_text)
-
-            response = qwen_llm.invoke(prompt).content.strip().lower()
-
-            if response == "yes":
+        _raw = os.environ.get("BEAM_LIGHT_PARALLELISM", "5")
+        try:
+            _light_parallelism = int(_raw)
+        except ValueError as _e:
+            raise RuntimeError(
+                f"BEAM_LIGHT_PARALLELISM={_raw!r} is not a valid integer"
+            ) from _e
+        doc_texts = [doc.page_content for doc in docs]
+        prompts = [filter_chunk_context_prompt.replace("<query>", query) \
+                                              .replace("<doc_text>", t)
+                   for t in doc_texts]
+        responses = _get_thread_runner().run(
+            _get_thread_qwen().abatch(
+                prompts,
+                config={"max_concurrency": _light_parallelism},
+                return_exceptions=True,
+            )
+        )
+        for doc_text, response in zip(doc_texts, responses):
+            if isinstance(response, BaseException):
+                continue
+            if response.content.strip().lower() == "yes":
                 selected_docs.append(doc_text)
 
     elif noise_handling_type == 2:

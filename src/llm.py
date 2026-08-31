@@ -4,7 +4,7 @@ import os
 
 
 class BuildLLm:
-    def __init__(self, model_url, model_name, api_key, temperature, frequency_penalty=None, presence_penalty=None, top_p=None, n=None, extra_body=None):
+    def __init__(self, model_url, model_name, api_key, temperature, frequency_penalty=None, presence_penalty=None, top_p=None, n=None, extra_body=None, max_tokens=None):
         self.model_url = model_url
         self.model_name = model_name
         self.api_key = api_key
@@ -15,6 +15,7 @@ class BuildLLm:
         self.top_p = top_p
         self.n = n
         self.extra_body = extra_body
+        self.max_tokens = max_tokens
 
     def build_llm(self):
         self.llm = ChatOpenAI(
@@ -22,7 +23,8 @@ class BuildLLm:
             openai_api_key=self.api_key,
             openai_api_base=self.model_url,
             temperature=self.temperature,
-            extra_body=self.extra_body
+            extra_body=self.extra_body,
+            max_tokens=self.max_tokens
         )
 
         return self.llm
