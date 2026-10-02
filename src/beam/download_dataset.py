@@ -42,13 +42,13 @@ def convert_chats_pickle_to_json(data: list) -> list:
         turns = []
         per_batch_turns = {}
         per_batch_turns['batch_number'] = batch_number
-        time_anchor = None
+        time_anchor = next(
+            (message['time_anchor'] for message in batch if message.get('time_anchor')),
+            None,
+        )
         single_turn = []
         for index2, message in enumerate(batch):
             if "question_type" in message.keys() and message['question_type'] == "main_question" and single_turn != []:
-
-                if "time_anchor" in message.keys():
-                    time_anchor = message['time_anchor']
 
                 turns.append(single_turn)
                 single_turn = []
